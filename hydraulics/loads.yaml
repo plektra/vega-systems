@@ -1,0 +1,159 @@
+# Vega hydraulic load register
+#
+# Source of truth for per-load numbers. Context and scenarios live in requirements.md.
+# Units are in the key names; use null for unknown values.
+# Sizing calculations will read this file, so keep it valid YAML.
+#
+# Field reference
+#   in_scope:        true | false | null (undecided)
+#   criticality:     critical | high | medium | low
+#   actuator:        cylinder | motor | rotary_actuator
+#   cylinder:        force and stroke for linear actuators
+#   motor:           torque and speed for rotary actuators
+#   duty:            how long and how often the load runs
+#   control:         on_off | proportional | autopilot
+#   fail_state:      required behaviour on power or hydraulic loss
+#   source:          where the numbers came from (datasheet, calculation, estimate)
+
+schema_version: 1
+
+loads:
+  - id: STR
+    name: Steering / autopilot
+    in_scope: true
+    existing: Orbitrol 160 cm3/rev (to be confirmed) + double-acting cylinder; normal pressure < 50 bar
+    criticality: critical
+    actuator: cylinder
+    cylinder:
+      max_force_kN: null           # from max rudder torque / tiller arm
+      stroke_mm: null
+      tiller_arm_mm: null
+      hard_over_time_s: null       # hard over to hard over
+    duty:
+      continuous: true
+      run_time_min: null
+      cycles_per_hour: null
+    control: autopilot
+    fail_state: hold position, manual / emergency steering available
+    source: null
+    notes: ""
+
+  - id: BTH
+    name: Bow thruster
+    in_scope: true
+    existing: Side-Power SH240-U11, 250 mm tunnel, BAV-713 4/3 on/off valve
+    criticality: high
+    actuator: motor
+    motor:
+      thrust_kN: null
+      max_torque_Nm: null
+      max_speed_rpm: null
+      power_kW: 14.9               # hydraulic, 264 bar x 33.8 L/min
+      pressure_bar: 264            # 100 % power
+      flow_L_per_min: 33.8         # 100 % power
+      pressure_60pct_bar: 158
+      flow_60pct_L_per_min: 26.2
+    duty:
+      continuous: false
+      run_time_min: null           # max continuous run, check Side-Power manual
+      cycles_per_hour: null
+    control: on_off                # current valve is on/off; proportional is an option
+    fail_state: stop, motor freewheels (A-B-T open centre)
+    source: manufacturer data via blog 2018-11-12
+    design_pressure_bar: 250       # decided: ~90 % thrust accepted to keep 250 bar class components
+    notes: "Belt drive only reached ~160-170 bar; that was enough to turn the boat at the quay."
+
+  - id: STH
+    name: Stern thruster
+    in_scope: null
+    criticality: high
+    actuator: motor
+    motor:
+      thrust_kN: null
+      max_torque_Nm: null
+      max_speed_rpm: null
+      power_kW: null
+    duty:
+      continuous: false
+      run_time_min: null
+      cycles_per_hour: null
+    control: proportional
+    fail_state: stop
+    source: null
+    notes: ""
+
+  - id: WLS
+    name: Anchor windlass
+    in_scope: true                 # to be confirmed
+    existing: hydraulic motor already fitted; make / displacement unknown
+    criticality: high
+    actuator: motor
+    motor:
+      working_pull_kN: null
+      max_pull_kN: null
+      line_speed_m_per_min: null
+      gypsy_diameter_mm: null
+      max_torque_Nm: null
+      max_speed_rpm: null
+    duty:
+      continuous: false
+      run_time_min: null
+      cycles_per_hour: null
+    control: on_off
+    fail_state: hold load (brake / counterbalance valve)
+    source: null
+    notes: ""
+
+  - id: STB
+    name: Stabilisers
+    in_scope: null
+    criticality: medium
+    actuator: rotary_actuator
+    motor:
+      max_torque_Nm: null
+      max_speed_rpm: null
+      power_kW: null
+    duty:
+      continuous: true
+      run_time_min: null
+      cycles_per_hour: null
+    control: proportional
+    fail_state: centre and lock fins
+    source: null
+    notes: ""
+
+  - id: DAV
+    name: Tender davit / crane
+    in_scope: null
+    criticality: medium
+    actuator: cylinder
+    cylinder:
+      max_force_kN: null
+      stroke_mm: null
+      speed_mm_per_s: null
+    duty:
+      continuous: false
+      run_time_min: null
+      cycles_per_hour: null
+    control: proportional
+    fail_state: hold load (load-holding valves)
+    source: null
+    notes: ""
+
+  - id: PAS
+    name: Passerelle / swim platform
+    in_scope: null
+    criticality: low
+    actuator: cylinder
+    cylinder:
+      max_force_kN: null
+      stroke_mm: null
+      speed_mm_per_s: null
+    duty:
+      continuous: false
+      run_time_min: null
+      cycles_per_hour: null
+    control: on_off
+    fail_state: hold position
+    source: null
+    notes: ""
