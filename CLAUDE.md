@@ -64,7 +64,11 @@ decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
    omat kuvat ja piirustukset kuuluvat kansioon `<järjestelmä>/img/`.
 8. **Skannatut PDF:t:** moni datalehti on skannattu. Jos tekstin poiminta ei onnistu, renderöi sivut
    kuviksi ja lue ne, ja kerro mitkä arvot luettiin kuvista.
-9. **Turvallisuuskriittiset toiminnot** (ohjaus, ankkurointi, kuorman pito, kaikki mikä voi
+9. **Repo on julkinen** (sisältö CC BY 4.0, koodi MIT). Älä tallenna henkilötietoja
+   (puhelinnumerot, osoitteet, sähköpostit), salasanoja, verkkoavaimia, hälytyskoodeja tai muuta,
+   mitä ei haluta julkiseksi. Jos käyttäjä antaa tällaista tietoa, kerro, ettei sitä kirjata
+   repoon. Valmistajien PDF:iä ja muiden tekijänoikeuden alaisia kuvia ei tallenneta.
+10. **Turvallisuuskriittiset toiminnot** (ohjaus, ankkurointi, kuorman pito, kaikki mikä voi
    puristaa ihmisen) vaativat vikatilanteiden kuvauksen. Muistuta omistajia, että pätevän henkilön
    pitää tarkistaa ne ennen rakentamista.
 

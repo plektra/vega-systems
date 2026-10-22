@@ -48,6 +48,21 @@ Clauden kanssa selaimessa tai puhelimessa.
   **Add file → Upload files** ja lataa tiedostot sen `img/`-kansioon. Kerro sitten Claudelle.
 - **Mitään ei katoa.** Jokainen muutos jää historiaan ja on peruttavissa. Pyydä vain Claudea.
 
+## Vastuuvapaus
+
+Tämä aineisto on omistajien omia työmuistiinpanoja ja laskelmia, ei sertifioitua
+insinöörisuunnittelua. Luvut voivat olla virheellisiä tai vanhentuneita. Turvallisuuskriittiset
+järjestelmät (ohjaus, ankkurointi, kuormien pito) pitää tarkastuttaa pätevällä henkilöllä ennen
+rakentamista. Aineistoa käytetään omalla vastuulla.
+
+## Lisenssi
+
+- **Dokumentit, kuvat ja data:** [Creative Commons Nimeä 4.0 (CC BY 4.0)](LICENSE.md). Saat käyttää,
+  jakaa ja muokata, kunhan mainitset lähteen: *"Vegan omistajat, github.com/plektra"*.
+- **Ohjelmakoodi** (esim. tulevat laskentaskriptit): [MIT](LICENSES/MIT.txt).
+- **Valmistajien datalehdet ja tuotetiedot** ovat valmistajien omaisuutta. Niihin vain linkitetään,
+  eivätkä ne kuulu yllä oleviin lisensseihin.
+
 ## Liittyvät repot
 
 Veneen elektroniikka (Signal K, NMEA 2000 -nodet, ESP32-tehonjakokortit) on erillisissä repoissa
