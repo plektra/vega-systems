@@ -4,6 +4,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 
 | Tiedosto | Sisältö |
 |---|---|
+| [schematic.md](schematic.md) | **Kaavio** suunnitellusta järjestelmästä (ohjaus, apupiiri, paluu ja jäähdytys) |
 | [current-system.md](current-system.md) | Lähtötilanne, nykyinen remonttitilanne (§0), vaikutukset suunnitteluun, avoimet kysymykset |
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |

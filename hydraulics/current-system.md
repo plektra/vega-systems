@@ -191,7 +191,7 @@ suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestel
 
 ![Hydraulikaavio v3, 2018](img/hydraulics-v3-2018.png)
 
-*Kaavio v3 blogista.*
+*Kaavio v3 blogista (2018). Suunniteltu uusi kokoonpano: [schematic.md](schematic.md).*
 
 ### 3.1 Pumppujen veto (tilanne 2018)
 
