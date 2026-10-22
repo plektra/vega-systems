@@ -8,6 +8,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
 | [design/p2-pump-options.md](design/p2-pump-options.md) | Apupiirin pumpun ja PTO-kytkimen vaihtoehdot sekä arvioidut tuote-ehdokkaat |
+| [design/oil-cooling.md](design/oil-cooling.md) | Öljyn lämpökuorma ja jäähdytys (Bowman EC100) |
 | [img/](img/) | Kaaviot ja kuvat |
 
 ## Tilanne lyhyesti

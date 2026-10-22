@@ -250,7 +250,7 @@ sallittu kierrosnopeus**, koska se jää hihnavetoiseksi.
 | Säiliön kannen komponentit | Virtauksensäätöventtiilit, paluusuodatin, täyttö- ja huohotinkorkki | [blogi 2017-04-10] |
 | Paluusuodatin | Painemittarillinen; nykyisessä paikassa vaikea lukea | [blogi 2017-04-10] |
 | Putkitus | Pitkät vedot 15×2-tarkkuusteräsputkella, muuten letkut | [blogi 2017-04-01] |
-| Öljynjäähdytin | Ei kummassakaan piirissä **⚠ tarkista** | |
+| Öljynjäähdytin | Ei kummassakaan piirissä. **Varalla Bowman EC100** (pronssiset päätykannet, ex-Masson-vaihteisto, putket kunnossa), suunniteltu yhteiseen paluulinjaan, ks. [oil-cooling.md](design/oil-cooling.md) | [omistaja 2026-10-22] |
 | Päivätankki (polttoaine) | 150 l, hydraulisäiliön alla | [blogi 2017-04-19] |
 | Päätoimittaja | SixTek (hydrauliikkapumppu.fi) | [blogi 2017-04-01] |
 
@@ -298,4 +298,5 @@ Avoimet:
 - [ ] Ohjaussylinterin männän ja varren halkaisija ja iskunpituus, ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
 - [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
 - [ ] Ohjauspiirin paineenrajoitus
+- [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

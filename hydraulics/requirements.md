@@ -142,7 +142,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Ankkurivinssi | Tehon menetys ankkurin ollessa puoliksi ylhäällä | Kuorman pito (jarru / jarruventtiili) | Käsinosto |
 | Keulapotkuri | Ylikuorma / ylikuumeneminen | TBD | Paineenrajoitus, lämpösuoja |
 | Kaikki | Matala öljynpinta | Hälytys, sitten ei-kriittisten kuormien suojapysäytys | |
-| Kaikki | Korkea öljyn lämpötila | Hälytys TBD °C, pysäytys TBD °C | |
+| Kaikki | Korkea öljyn lämpötila | Varoitus ~65 °C, hälytys ~75 °C (Parker F1:n raja) | Öljynjäähdytin, kierroslukitus |
 
 - **Hätäpysäytyksen periaate:** TBD
 - **Kuormien prioriteetti** (mitkä pudotetaan ensin, kun teho ei riitä): TBD
@@ -159,7 +159,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Painobudjetti | TBD kg |
 | Putki- ja letkuvedot | Keulapotkurin A/B-linjat: 1/2" letku, asennettu (CETOP → keula). Muut TBD (laipiolävistykset, palo-osastot). |
 | Huollettavuus | TBD (suodattimet, tarkastuslasi, ilmauspisteet) |
-| Öljynjäähdytin | TBD (merivesi / pohjajäähdytin / ilma) |
+| Öljynjäähdytin | Bowman EC100 (varalla), merivesi koneen merivesipiiristä, yhteiseen paluulinjaan ohitusventtiilin kanssa; ks. [oil-cooling.md](design/oil-cooling.md) |
 
 ## 9. Öljy, puhtaus ja huolto
 
@@ -182,7 +182,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Mittaus | Paikka | Alue | Ehdotettu Signal K -polku | Hälytys / raja |
 |---|---|---|---|---|
 | Järjestelmäpaine | Pumpun lähtö | TBD bar | `hydraulics.<system>.pressure` | TBD |
-| Öljyn lämpötila | Säiliö / paluu | TBD °C | `hydraulics.<system>.temperature` | TBD |
+| Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~75 °C |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
 | PTO-kytkimen asento | Kytkin | päällä/pois | `hydraulics.<system>.clutch.engaged` | Hälytys, jos päällä yli ~1200 rpm |

@@ -326,7 +326,7 @@ kuumana**.
   tehdessä kannattaa valita 38 mm ja täysiaukkoinen palloventtiili.
 - **HV 32 -öljy.** **⚠ Tarkista** ohjauspumpun, orbitrolin ja Side-Powerin moottorin öljyvaatimukset.
 - Imupuolen parannus ei vähennä keulapotkurin käytön lämpökuormaa korkeilla kierroksilla, joten
-  kierroslukitus tarvitaan silti.
+  kierroslukitus tarvitaan silti. Lämpökuorma ja jäähdytys: [oil-cooling.md](oil-cooling.md).
 
 ## Kytkinvaihtoehdot
 
