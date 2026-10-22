@@ -237,10 +237,10 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Komponentti | Tiedot | Huomiot |
 |---|---|---|
 | Virtauksensäätö | VPR3 (Marchesini, kolmitie-etusijaventtiili), asetus 35 l/min, ylimäärä B-portista säiliöön. Suurin tulovirtaus 60 / 80 / 120 / 200 l/min (3/8" / 1/2" / 3/4" / 1"), 350 bar [datalehti VPR3] | Koko **⚠ tarkista**: 1/2" kestää vain 80 l/min |
-| Vapaakiertoventtiili | Bosch Rexroth OD15…17 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. T-haaralla VPR3:n jälkeen. | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön, jännitteellisenä pohjalaatalle |
-| Pohjalaatta | CETOP 3, 4-paikkainen. Pohjalaattaan on asennettu Bosch Rexrothin 2/2-patruunaventtiili OD15-X-17-Y-S0 (jännitteettömänä auki, solenoidiohjattu) [omistaja 2026-10-22, datalehti RE 18323-07]; todennäköisesti vapaakiertoventtiili. **⚠ Tarkista** (solenoidikela?). | 1 paikka käytössä, 3 vapaana (ankkurivinssi ym.) |
+| Vapaakiertoventtiili (keulapotkurin päälle/pois) | Bosch Rexroth OD15-X-17-Y-S0 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. **Kytkee paineen CETOP-pohjalaatalle** [omistaja 2026-10-22]. | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön; jännitteellisenä venttiili sulkeutuu ja paine menee pohjalaatalle. Ohjataan päälle aina, kun keulapotkuria käytetään kumpaan tahansa suuntaan. |
+| Pohjalaatta | CETOP 3, 4-paikkainen | 1 paikka käytössä (BAV-713), 3 vapaana (ankkurivinssi ym.) |
 | Paineenrajoitusventtiili | **Marchesini VMP 3/4"** (V0720), suoratoiminen istukkaventtiili, asetettu 250 bariin. Suurin virtaus **90 l/min**, suurin paine 350 bar. Jousi todennäköisesti 80–300 bar (vastaa aiemmin mainittua 300 baria), 50 bar / kierros [datalehti VMP, omistaja 2026-10-22] | Aiemmin kirjattu "300 bar, 80 l/min" korjattu datalehden mukaan |
-| Keulapotkurin venttiili | BAV-713 4/3-solenoidiventtiili, keskiasennossa A-B-T vapaakierto (moottori pyörii vapaasti) | |
+| Keulapotkurin suuntaventtiili | BAV-713 4/3-solenoidiventtiili pohjalaatassa, **valitsee pyörimissuunnan** [omistaja 2026-10-22]; keskiasennossa A-B-T vapaakierto (moottori pyörii vapaasti) | Datalehti puuttuu |
 | Painemittari | P-linjassa ennen pohjalaattaa | Ei näy kaaviossa |
 | Keulapotkuri | Side-Power SH240-U11 | Moottorin vuotolinja säiliöön |
 | Keulapotkurin tarve | 100 %: 264 bar × 33,8 l/min (≈ 14,9 kW hydraulista); 60 %: 158 bar × 26,2 l/min (≈ 6,9 kW) | Valmistajan tiedot [blogi 2018-11-12] |
@@ -310,7 +310,7 @@ Avoimet:
 - [ ] VPR3:n ja RPF3:n koko (kierreliitäntä): VPR3 1/2" kestäisi vain 80 l/min
 - [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
 - [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15)
-- [ ] CETOP-pohjalaatan 2/2-patruunaventtiili: vahvista, että se on solenoidiohjattu vapaakiertoventtiili (onko erillinen 2/2-venttiili VPR3:n jälkeen enää käytössä?)
+- [x] Venttiilien tehtävät: Rexrothin 2/2-patruunaventtiili kytkee paineen CETOP-pohjalaatalle, BAV-713 ohjaa suuntaa [omistaja 2026-10-22]
 - [ ] VMP:n jousialue (80–300 bar?) ja nykyinen asetus
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata
