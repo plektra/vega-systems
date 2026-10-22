@@ -142,7 +142,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Ankkurivinssi | Tehon menetys ankkurin ollessa puoliksi ylhäällä | Kuorman pito (jarru / jarruventtiili) | Käsinosto |
 | Keulapotkuri | Ylikuorma / ylikuumeneminen | TBD | Paineenrajoitus, lämpösuoja |
 | Kaikki | Matala öljynpinta | Hälytys, sitten ei-kriittisten kuormien suojapysäytys | |
-| Kaikki | Korkea öljyn lämpötila | Varoitus ~65 °C, hälytys ~75 °C (Parker F1:n raja) | Öljynjäähdytin, kierroslukitus |
+| Kaikki | Korkea öljyn lämpötila | Varoitus ~65 °C, hälytys ~70 °C (HV 32 -öljy ohenee 70 °C:n yläpuolella alle Salamin ohjauspumpun 12 cSt:n minimin; Parker F1:n raja 75 °C) | Öljynjäähdytin, kierroslukitus |
 
 - **Hätäpysäytyksen periaate:** TBD
 - **Kuormien prioriteetti** (mitkä pudotetaan ensin, kun teho ei riitä): TBD
@@ -182,7 +182,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Mittaus | Paikka | Alue | Ehdotettu Signal K -polku | Hälytys / raja |
 |---|---|---|---|---|
 | Järjestelmäpaine | Pumpun lähtö | TBD bar | `hydraulics.<system>.pressure` | TBD |
-| Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~75 °C |
+| Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~70 °C |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
 | PTO-kytkimen asento | Kytkin | päällä/pois | `hydraulics.<system>.clutch.engaged` | Hälytys, jos päällä yli ~1200 rpm |

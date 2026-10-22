@@ -249,7 +249,9 @@ irrotettiin.
 Laskelma 2026-10-22 [laskelma]: Parker F1-061 (61 cm³) PTO:lla 1:1, nykyiset venttiilit (VPR3 35 l/min,
 2/2-vapaakiertoventtiili, paineenrajoitus 250 bar), öljy ISO VG 46, säiliö 80 l ilman jäähdytintä.
 VPR3:n oletetaan olevan kolmitieventtiili, joka ohjaa ylimäärän säiliöön lähes kuormapaineessa
-(blogin kuvauksen mukaan). **⚠ Tarkista VPR3:n tyyppi ja suurin sallittu tulovirtaus.**
+(vahvistettu: Marchesini VPR3 on kolmitie-etusijaventtiili, ylimäärä B-portista [datalehti VPR3]).
+VPR3:n suurin tulovirtaus on 60 / 80 / 120 / 200 l/min koon 3/8" / 1/2" / 3/4" / 1" mukaan.
+**⚠ Tarkista asennetun VPR3:n koko**: 1800 rpm:n noin 104 l/min vaatii 3/4":n tai 1":n venttiilin.
 
 **1. Kytkin irti (normaali ajo).** P2 ei pyöri. Vain hihnavetoinen ohjauspumppu P1 on käynnissä:
 1000 rpm:llä ~19 l/min, joka menee kokonaan orbitrolille (RPF3:n raja 20 l/min); 1800 rpm:llä
@@ -501,7 +503,8 @@ kauempaa:
 - [ ] F1-061: ISO 7653 -laipan ja 8×32×36-akselin sovitus Borellin 30500:een (sovitelaippa ja -holkki)
 - [ ] F1-061: pienin sallittu imupaine (Parkerin F1-luettelo)
 - [ ] PTO:n pyörimissuunta (pumpun suunta sovitetaan siihen)
-- [ ] VPR3: tyyppi (kolmitie?) ja suurin sallittu tulovirtaus; paluusuodattimen virtausluokitus (~104 l/min 1800 rpm:llä)
+- [x] VPR3: kolmitie-etusijaventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
+- [ ] Asennetun VPR3:n koko; paluusuodattimen virtausluokitus (~104 l/min 1800 rpm:llä)
 - [ ] Ohjauspumpun, orbitrolin ja Side-Power SH240:n öljyvaatimukset (HV 32 käy?)
 - [ ] Imulinja 38 mm ja mahdollisimman lyhyt; säiliön ulosotto ja palloventtiili 38 mm, täysiaukkoinen
 - [ ] Salhydro: spline-sovite 30500:n ja ryhmän 3 pumpun väliin, vipuvoima, hinta ja toimitusaika 30501/30502 + Gr.3-laippa

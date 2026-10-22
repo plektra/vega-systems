@@ -204,24 +204,28 @@ suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestel
 
 | Pumppu | Merkki | Kierrostilavuus | Arvot (kaavio) | Tuotto koneen 800 / 1800 / 2500 rpm:llä* | Syöttää |
 |---|---|---|---|---|---|
-| P1 | Salami, hammaspyörä | 16,6 cm³/r | 250 bar, 16–40 l/min | 16,5 / 37,1 / 51,5 l/min | Ohjaus |
-| P2 | Salami, hammaspyörä (ryhmä 3) | 33,5 cm³/r | 250 bar, 30–80 l/min | 33,2 / 74,8 / 103,8 l/min | Apupiiri (liian pieni PTO:lle, ks. §0) |
+| P1 | Salami **2PE16D-P28P1** (ryhmä 2, kartioakseli 1:8, laippa P1) | 16,6 cm³/r | 250 bar jatkuva / 280 ajoittainen / 300 huippu; **max 3000 rpm**, min 400 rpm [datalehti Salami 2PE] | 16,5 / 37,1 / 51,5 l/min | Ohjaus |
+| P2 | Salami **3PB33D-P38P2**, hammaspyörä (ryhmä 3) | 33,5 cm³/r | 250 bar, 30–80 l/min | 33,2 / 74,8 / 103,8 l/min | Apupiiri (liian pieni PTO:lle, ks. §0) |
 | P3 | Vanhasta voimayksiköstä; moottori 24 V, 2,5 kW | **⚠ ei tiedossa** | | | Varaohjaus |
 
 \* Laskettu hihnavälityksellä 1:1,24 ja 100 %:n volumetrisella hyötysuhteella. Koneen 2500 rpm:llä
-pumput pyörivät noin 3100 rpm, ja molempien tuotot ylittävät kaavion arvot. **⚠ Tarkista P1:n suurin
-sallittu kierrosnopeus**, koska se jää hihnavetoiseksi.
+pumput pyörivät noin 3100 rpm. **P1:n (2PE16D) suurin sallittu kierrosnopeus on 3000 rpm**
+[datalehti Salami 2PE], eli hihnavetoisena koneen kierrokset saavat olla enintään noin **2400 rpm**.
+Tarkista koneen suurin kierrosluku 350 hv:n säädöllä; jos se on yli 2400 rpm, hihnapyörien välitystä
+kannattaa pienentää (esim. 1:1,1). Salamin 2PE-sarjan käyttöehdot: imupaine 0,7–2,5 bar absoluuttista,
+viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 800 cSt), öljy −15…+85 °C
+(NBR-tiivisteet).
 
 ### 3.3 Piiri 1 — Ohjaus
 
 | Komponentti | Tiedot | Huomiot |
 |---|---|---|
-| Virtauksensäätö | RPF3, etusijavirtaus 20 l/min, ylimäärä säiliöön | Tyhjäkäynnillä pumppu antaa ~16,5 l/min, joten kaikki menee orbitrolille |
-| Ohjausyksikkö | Orbitroli "160/4" (oletettavasti 160 cm³/r). **⚠ Tarkista** tyyppi (avoin/suljettu keskiasento, kuormantakaisinkytkentä). | |
+| Virtauksensäätö | RPF3 (Marchesini, kolmitie, ylimäärä suoraan säiliöön), asetus 20 l/min. Suurin tulovirtaus 50 l/min (3/8") tai 85 l/min (1/2"), 350 bar [datalehti RPF3]; koko **⚠ tarkista** | Tyhjäkäynnillä pumppu antaa ~16,5 l/min, joten kaikki menee orbitrolille |
+| Ohjausyksikkö | **M+S Hydraulic HKUS 160/4**: 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; **sisäänrakennettu paineenrajoitus** (asetus 80–170 bar) ja iskuventtiilit (140–220 bar); nimellisvirtaus 16 l/min; **T-linjan suurin jatkuva paine 25 bar** [datalehti HKUS] | Paluulinjan vastapaine (esim. öljynjäähdytin ja sen ohitusventtiili) pitää pysyä alle 25 barin |
 | Sylinteri | Kaksitoiminen; männän ja varren halkaisija sekä iskunpituus **⚠ ei tiedossa** | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
 | Hätäohitus | Käsiventtiili A- ja B-linjan välissä sylinterin vieressä, irrotettavaa hätäpinnaa varten | [blogi 2017-07-04] |
 | Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
-| Paineenrajoitus | **⚠ ei tiedossa** | |
+| Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus; asetusarvo **⚠ tarkista** (tehdasvaihtoehdot 80–170 bar) | [datalehti HKUS] |
 | Varasyöttö | P3 vastaventtiilin kautta RPF3:n tuloon | Suunniteltu 2017. **⚠ Tarkista**, onko asennettu. 65 A:n laturi ei jaksa syöttää sitä pitkään. |
 | Ilmaus | Ei ilmausruuveja; sylinterin liitännät sivuilla | Vaikea ilmata [blogi 2017-07-04] |
 
@@ -229,8 +233,8 @@ sallittu kierrosnopeus**, koska se jää hihnavetoiseksi.
 
 | Komponentti | Tiedot | Huomiot |
 |---|---|---|
-| Virtauksensäätö | VPR3, painekompensoitu, 35 l/min, ylimäärä säiliöön | |
-| Vapaakiertoventtiili | 2/2-solenoidiventtiili, jännitteettömänä auki, T-haaralla VPR3:n jälkeen | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön, jännitteellisenä pohjalaatalle |
+| Virtauksensäätö | VPR3 (Marchesini, kolmitie-etusijaventtiili), asetus 35 l/min, ylimäärä B-portista säiliöön. Suurin tulovirtaus 60 / 80 / 120 / 200 l/min (3/8" / 1/2" / 3/4" / 1"), 350 bar [datalehti VPR3] | Koko **⚠ tarkista**: 1/2" kestää vain 80 l/min |
+| Vapaakiertoventtiili | Bosch Rexroth OD15…17 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. T-haaralla VPR3:n jälkeen. | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön, jännitteellisenä pohjalaatalle |
 | Pohjalaatta | CETOP 3, 4-paikkainen, paineenrajoitus asetettu 250 bariin. **Paineenrajoitusventtiili enintään 300 bar, 80 l/min** [omistaja 2026-10-22]. | 1 paikka käytössä, 3 vapaana (ankkurivinssi ym.) |
 | Keulapotkurin venttiili | BAV-713 4/3-solenoidiventtiili, keskiasennossa A-B-T vapaakierto (moottori pyörii vapaasti) | |
 | Painemittari | P-linjassa ennen pohjalaattaa | Ei näy kaaviossa |
@@ -243,7 +247,7 @@ sallittu kierrosnopeus**, koska se jää hihnavetoiseksi.
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Säiliö | Flowfit 100 l, teräs, 50×50×5-kulmarautakannakkeilla kaariin | [blogi 2017-04-01] |
+| Säiliö | Flowfit 100 l, saumaton teräs (Flowfit Weldless Steel Tanks, tyyppi A/B/C **⚠ tarkista**), 50×50×5-kulmarautakannakkeilla kaariin | [blogi 2017-04-01], [datalehti Flowfit] |
 | Öljymäärä | 80 l | [blogi 2017-07-04] |
 | Öljyn tyyppi ja luokka | **⚠ ei tiedossa** | |
 | Imulinjat | Suunnitelma 2017: 2 × 1" (konepumput) ja 1 × 3/4" (sähköpumppu), kussakin palloventtiili. **2026: P2:n ulosotto on 32 mm:n letkun kokoinen.** | [blogi 2017-04-10], [omistaja 2026-10-22] |
@@ -297,6 +301,9 @@ Avoimet:
 - [ ] Onko sähköinen varapumppu kytketty?
 - [ ] Ohjaussylinterin männän ja varren halkaisija ja iskunpituus, ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
 - [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
-- [ ] Ohjauspiirin paineenrajoitus
+- [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
+- [ ] Orbitrolin paineenrajoituksen asetusarvo
+- [ ] VPR3:n ja RPF3:n koko (kierreliitäntä): VPR3 1/2" kestäisi vain 80 l/min
+- [ ] P1:n kierrosraja 3000 rpm: hihnavälityksellä 1:1,24 koneen kierrokset enintään noin 2400 rpm; tarkista koneen suurin kierrosluku 350 hv:n säädöllä
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

@@ -163,7 +163,12 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 ## Valvonta
 
 - **Öljyn lämpötila-anturi** säiliöön tai paluulinjaan Signal K:hon: varoitus noin 65 °C, hälytys
-  noin 75 °C. Ensimmäisen kauden mittaukset näyttävät todelliset lämpötilat.
+  noin 70 °C. Raja tulee ohjauspumpusta: Salamin 2PE vaatii vähintään 12 cSt, ja HV 32 ohenee
+  sen alle noin 70 °C:n yläpuolella (Parker F1:n oma raja on 75 °C). Ensimmäisen kauden mittaukset
+  näyttävät todelliset lämpötilat.
+- **Paluulinjan vastapaine** (jäähdytin, ohitusventtiili, suodatin) pitää pysyä alle 25 barin, joka
+  on orbitrolin (HKUS 160/4) T-linjan suurin jatkuva paine. 3–4 barin ohitusventtiilillä tämä täyttyy
+  reilusti.
 - **Kierroslukitus** (ks. [requirements.md §10.2](../requirements.md)): kytkin päälle vain alle noin
   1000 rpm:ssä; sen yli keulapotkurin venttiili estetään ja vapaakiertoventtiili avataan; hälytys,
   jos kytkin on päällä yli noin 1200 rpm:ssä.
