@@ -9,6 +9,7 @@ viitata toisiinsa.
 | [vessel/](vessel/) | Yhteiset tiedot: alus, kone, vaihteisto, sähköjärjestelmän perustiedot |
 | [hydraulics/](hydraulics/) | Ohjaus, keulapotkuri, ankkurivinssi: nykytila, vaatimukset, selvitykset |
 | [electrics/](electrics/) | Akut, lataus, tehonjako, linkit valvonta- ja ohjauselektroniikkaan |
+| [datasheets/](datasheets/) | Hakemisto komponenttien datalehdistä: linkit ja tärkeimmät arvot |
 | [decisions.md](decisions.md) | Kaikki tähän asti tehdyt päätökset perusteluineen |
 | [CLAUDE.md](CLAUDE.md) | Clauden työskentelyohjeet (myös ihmisten luettavissa) |
 

@@ -27,6 +27,6 @@ description: Kirjaa uudet tiedot, mittaukset, kuvat, hinnat tai datalehtiarvot V
    työntövoimasta 88 %:n sijaan."
 5. **Datalehtilinkin kohdalla** lue se, myös skannatut PDF:t (renderöi sivut kuviksi, jos tekstin
    poiminta ei onnistu). Kirjaa tärkeimmät arvot URL:n kanssa ja tarkista ne nykyistä suunnitelmaa
-   vasten.
+   vasten. Lisää datalehti myös hakemistoon `datasheets/README.md`.
 6. **Kerro käyttäjälle** hänen kielellään mitä kirjasit, minne, ja mitä siitä seuraa. Jos hän on
    valmis, ehdota `/save`.

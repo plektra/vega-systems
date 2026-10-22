@@ -33,6 +33,7 @@ ei ohjelmistosta: Markdownia, YAML-dataa ja myöhemmin pieniä laskentaskriptej�
 vessel/       yhteiset tiedot (alus, kone, vaihteisto, sähköjärjestelmän perustiedot) — yksi totuuden lähde
 hydraulics/   current-system.md, requirements.md, loads.yaml, design/, img/
 electrics/    current-system.md, … (sama rakenne kuin hydraulics)
+datasheets/   datalehtien hakemisto (linkit ja arvot; ei valmistajien PDF:iä)
 decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
 ```
 
@@ -60,8 +61,10 @@ decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
    päivitä ne asianomaisiin dokumentteihin.
 6. **Yksiköt:** SI, lisäksi bar, l/min, cm³ (kierrostilavuus), Nm, kW, °C, mm. Muunna vain, kun
    datalehdessä on muita yksiköitä.
-7. **Tuotelinkit:** linkitä datalehdet URL:lla, älä tallenna valmistajien PDF:iä repoon. Omistajien
-   omat kuvat ja piirustukset kuuluvat kansioon `<järjestelmä>/img/`.
+7. **Datalehdet:** kirjaa jokainen käytetty datalehti, käyttöohje tai tuotesivu hakemistoon
+   `datasheets/README.md` (linkki, tärkeimmät arvot, missä käytetään). Älä tallenna valmistajien
+   PDF:iä repoon; omat kopiot kuuluvat git-ignoroituun kansioon `datasheets/local/`. Omistajien omat
+   kuvat ja piirustukset kuuluvat kansioon `<järjestelmä>/img/`.
 8. **Skannatut PDF:t:** moni datalehti on skannattu. Jos tekstin poiminta ei onnistu, renderöi sivut
    kuviksi ja lue ne, ja kerro mitkä arvot luettiin kuvista.
 9. **Repo on julkinen** (sisältö CC BY 4.0, koodi MIT). Älä tallenna henkilötietoja
