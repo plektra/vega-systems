@@ -109,13 +109,41 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
    kytkin päällä virtaus olisi noin 125 l/min, ja ylimäärä kulkee ohitusventtiilin kautta.
 2. **Ohitusventtiili** (takaiskuventtiili) jäähdyttimen rinnalle, avautuu noin 3–4 barissa. Suojaa
    jäähdytintä kylmältä, paksulta öljyltä ja virtapiikeiltä.
-3. **Merivesi** koneen merivesipiiristä, sarjaan muiden jäähdyttimien kanssa. EC100 (3-vetoinen)
-   tarvitsee 25–50 l/min. **⚠ Tarkista**, riittääkö koneen merivesipumpun tuotto tyhjäkäynnillä, ja
-   vetojen määrä tyyppikilvestä.
+3. **Merivesi** koneen merivesipiiristä **rinnakkaishaarana, jonka virtaus on rajoitettu**, ks.
+   [Merivesi](#merivesi). EC100 (3-vetoinen) tarvitsee 25–50 l/min.
 4. **Liian kylmä öljy:** 5-asteinen merivesi voi keväällä pitää öljyn kylmänä. Tarvittaessa
    merivesipuolelle käsiventtiili tai öljypuolelle termostaattinen ohitus (ohittaa jäähdyttimen alle
    noin 40–45 °C:ssa).
 5. **Sinkkianodi** tarkistetaan ja vaihdetaan tarvittaessa ennen käyttöönottoa.
+
+## Merivesi
+
+Koneen merivesipumppu tuottaa noin **70 l/min 650 rpm:llä** [omistaja 2026-10-22]. Jos tuotto
+kasvaa kierrosten suhteessa, se on noin 75 l/min tyhjäkäynnillä (700 rpm), noin 110 l/min 1000 rpm:llä
+ja noin 190 l/min 1800 rpm:llä [laskelma].
+
+**Koko merivesivirtaus ei voi kulkea EC100:n läpi**, jos se on 3-vetoinen: suurin sallittu
+merivesivirtaus on silloin 50 l/min (2 m/s; ylitys kuluttaa putkia eroosiolla). 2-vetoisella raja on
+80 l/min ja 1-vetoisella 170 l/min, joten sarjakytkentä ei riitä millään versiolla 1800 rpm:llä.
+**⚠ Tarkista vetojen määrä tyyppikilvestä.**
+
+**Ratkaisu: EC100 rinnakkaishaaraan, jonka virtaus rajoitetaan.**
+
+- Haara otetaan merivesilinjasta ja palautetaan siihen **ennen koneen lämmönvaihdinta**. Koko
+  merivesi kulkee silti koneen jäähdytyksen kautta, joten koneen jäähdytys ei heikkene. Hydrauliikan
+  lämpö nostaa meriveden lämpötilaa vain noin 1–2 °C (8 kW, 70 l/min).
+- Haaran virtaus rajoitetaan joko
+  - **vakiovirtausventtiilillä** (merivettä kestävä pronssinen virtauksenrajoitin, esim. noin
+    30–40 l/min): virtaus pysyy sopivana kaikilla kierroksilla; tai
+  - **käsiventtiilillä tai kuristuslaipalla**, joka säädetään niin, että virtaus on suurimmilla
+    käyttökierroksilla enintään noin 50 l/min. Tyhjäkäynnillä virtaus jää silloin noin 20 l/min:iin,
+    mikä on alle 3-vetoisen suositellun minimin (25 l/min) ja heikentää tehoa jonkin verran. Kylmällä
+    merivedellä teho riittää silti tavallisiin kuormiin.
+- Haaran rinnalle päälinjaan tarvitaan pieni painehäviö (esim. venttiili tai kuristus), jotta osa
+  virtauksesta ohjautuu haaraan. EC100:n painehäviö on noin 0,05 bar 25 l/min:llä ja noin 0,19 bar
+  50 l/min:llä.
+- Jos Advance 300:n öljynjäähdytin on samassa merivesipiirissä, sen tarve pitää huomioida
+  samalla. **⚠ Tarkista.**
 
 ## Valvonta
 
@@ -128,7 +156,9 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
 ## Avoimet kysymykset
 
 - [ ] EC100:n tyyppikilven koko koodi (vetojen määrä)
-- [ ] Koneen merivesipumpun tuotto tyhjäkäynnillä; riittääkö se vaihteiston jäähdyttimelle ja EC100:lle
+- [x] Koneen merivesipumpun tuotto: noin 70 l/min 650 rpm:llä [omistaja 2026-10-22]
+- [ ] Onko 650 rpm koneen vai pumpun kierrosluku; tuotto suuremmilla kierroksilla
+- [ ] Rinnakkaishaaran virtauksenrajoitus: vakiovirtausventtiili vai säädettävä venttiili
 - [ ] Uuden vaihteiston (Advance 300) oma öljynjäähdytys: käyttääkö se samaa merivesipiiriä
 - [ ] Paluulinjojen yhdistäminen ja ohitusventtiilin valinta
 - [ ] Tarvitaanko termostaattinen ohitus kylmän meriveden aikaan
