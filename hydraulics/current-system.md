@@ -280,9 +280,18 @@ Asennusohjeen mukaan, kun käytössä ei ole Sleipnerin omaa hydraulijärjestelm
 | Vuotolinja säiliöön (1/4" BSP, pakollinen) | Olemassa ✅ |
 | Ohjaukseen Sleipnerin S-Link-järjestelmä | **Poikkeaa:** Vegalla oma ohjaus solenoidiventtiileillä. Voi vaikuttaa takuuseen; toiminnallisesti tavallinen ratkaisu. |
 
-Moottorin suurinta sallittua painetta ohjeessa ei ilmoiteta suoraan. Saman sarjan pienemmät moottorit
-(U8, U10) on taulukossa ajettu 275 bariin asti, joten se on todennäköinen yläraja **⚠ vahvista
-Sleipneriltä**.
+Moottorin suurinta sallittua painetta ei ilmoiteta suoraan. Asennus- ja käyttöohjeen taulukoissa
+U-sarjan moottorit on kuitenkin kaikkialla rajattu **274–275 bariin**: SH240:n U8 ja U10 sekä isomman
+SH320:n **U11** (sama moottori kuin Vegalla) saavuttavat suurimman työntövoimansa 274 barissa
+[ohje Sleipner 2746 35 2025, ohje Sleipner 6572 6 2025]. U11:n yläraja on siis käytännössä noin
+**275 bar** **⚠ vahvista Sleipneriltä**. 280 barin paineenrajoituksella moottorille jäisi linjahäviöiden
+jälkeen noin 260–265 bar, eli rajan alle.
+
+**Huolto ennen jokaista kautta** [ohje Sleipner 6572 6 2025]: tarkista vuodot keulapotkurin ympäriltä,
+potkurien ja tunnelin kunto ja kiinnitys, puhdista kasvusto, maalaa potkurit ja vaihteisto
+antifouling-maalilla (ei anodia, tiivisteitä eikä akselia), **vaihda anodi** joka kausi tai kun puolet
+on kulunut, ja tarkista vaihteiston öljysäiliön (EP 90) öljynpinta. Vastakkain pyörivissä malleissa on
+vasen- ja oikeakätinen potkuri.
 
 ## 4. Tunnetut ongelmat ja opit
 
@@ -325,7 +334,7 @@ Avoimet:
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
 - [ ] BAV-713:n kelojen jännite (12 vai 24 VDC)
 - [ ] Keulapotkurin iskuventtiilit (Sleipnerin vaatimus): A/B-iskuventtiililohko ja asetus
-- [ ] U11-moottorin suurin sallittu paine (todennäköisesti 275 bar) Sleipneriltä
+- [ ] U11-moottorin suurin sallittu paine: ohjeiden taulukoiden perusteella noin 275 bar; vahvista Sleipneriltä
 - [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
 - [ ] Onko sähköinen varapumppu kytketty?
