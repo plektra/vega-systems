@@ -16,9 +16,11 @@
      300 bar huippu), joka antaa 700 rpm:n tyhjäkäynnillä noin 88 % työntövoimasta. Halvin, sopii
      kaikkiin nykyisiin osiin, ja kytkin poistaa suurimman tehottomuuden. 51 cm³ on VNK3-sarjan
      suurin koko, joka on 250 bar jatkuva; 60 cm³ on vain 200 bar.
-  2. **Kannattaa pyytää tarjous: C**, ~45–47 cm³:n vinoakselimäntäpumppu (kuorma-auton PTO-pumppu),
-     mieluiten käytetty. Jos se ei maksa paljon enempää kuin A, se on hiljaisempi, häviöt ovat
-     pienemmät, ja täyteen työntövoimaan voi myöhemmin päästä nostamalla paineenrajoitusta.
+  2. **Varteenotettava ehdokas: C**, vinoakselimäntäpumppu (kuorma-auton PTO- tai kippipumppu).
+     **Käytetty Parker F1-061 on myynnissä 100 eurolla** (ks.
+     [Ehdokas: Parker F1-061](#ehdokas-parker-f1-061-käytettynä-torifi)). Noin 60 cm³ ja 350 bar
+     jatkuva: 250 barissa sama ~88 % kuin A:lla, ja 280 barissa noin 99 % työntövoima, kun venttiilien
+     ja keulapotkurimoottorin painearvot on varmistettu.
   3. **E harkitaan uudelleen** vain, jos keulapotkurin tai vinssin proportionaalinen ohjaus tai
      useat samanaikaiset kuormat tulevat vaatimuksiksi.
 - **Flowfitin 43 cm³:n kokoonpano ei enää sovi:** 700 rpm:llä se antaisi vain noin 67 %
@@ -191,6 +193,40 @@ Työntövoima-arviot **700 rpm:n tyhjäkäynnillä**, lämmin öljy:
 - **80 l/min riittää.** Paineenrajoitus on VPR3:n (35 l/min) jälkeen, joten se ei koskaan näe pumpun
   koko tuottoa.
 
+## Ehdokas: Parker F1-061 käytettynä (tori.fi)
+
+Ilmoitus: <https://www.tori.fi/recommerce/forsale/item/45212646>, hinta **100 €** (tarkistettu
+2026-10-22). Ilmoituksen teksti: *"Hyväkuntoinen vähän käytetty mäntäpumppu. Pyörimissuunta helppo
+vaihtaa. Mukaan holkki akseliin jolla helppo rakentaa veto. Parker mäntäpumppu / kippipumppu."*
+Sijaintia, kuvia ja tyyppikilven tietoja ei saatu ilmoituksesta.
+
+Parker F1 -sarja on vinoakselimäntäpumppu kuorma-autojen PTO-käyttöön: jatkuva paine 350 bar
+(SAE) / 400 bar (ISO), kierrosnopeus enintään noin 2600 rpm 350 barissa
+([Parker F1](https://ph.parker.com/us/en/axial-piston-fixed-pumps-series-f1)).
+
+| Tarkistus | Arvio (oletus ~60 cm³, volumetrinen hyötysuhde 95 %, mekaaninen 95 %) [laskelma] |
+|---|---|
+| Kierrostilavuus | noin 60 cm³ **⚠ tarkista** tyyppikilvestä |
+| Tuotto 700 rpm:n tyhjäkäynnillä | noin 40 l/min, enemmän kuin keulapotkurin 33,8 l/min ✅ |
+| Työntövoima, paineenrajoitus 250 bar | noin 88 % (paine rajoittaa) |
+| Työntövoima, paineenrajoitus 280 bar | **noin 99 %**; pumppu kestää tämän reilusti ✅ |
+| Momentti 250 / 280 barissa | noin 250 / 280 Nm: Borelli 30500 (580 Nm) ja PTO (420 Nm) riittävät; Flowfit/Borelli 30300 (185 Nm) ei |
+| Lämpö | Ylimääräiset ~6–8 l/min menevät paineenrajoituksen yli, noin 3 kW lisälämpöä vain keulapotkurin käytön ajan; lyhyissä jaksoissa harmitonta |
+| Pyörimissuunta | Myyjän mukaan helppo vaihtaa, joten sen saa sopimaan PTO:n suuntaan ✅ |
+| Kierrosnopeus | Kytkin irti yli ~1000–1200 rpm:n (kuten muillakin vaihtoehdoilla); 2500 rpm on silti alle sarjan rajan |
+| Imupaine | 32 mm:n imulinjalla noin −0,18 bar 5 °C:n öljyllä. **⚠ Tarkista F1:n pienin sallittu imupaine.** |
+| Vuotolinja | **⚠ Tarkista datalehdestä**, tarvitaanko erillinen vuotolinja säiliöön |
+| Kiinnitys | Kuorma-automallissa tyypillisesti ISO 7653 -laippa ja hammasakseli, joka ei sovi suoraan Borellin 30500:n toisioon (48×44, SAE-/ryhmälaipat). Tarvitaan sovitelaippa ja -holkki tai muu ratkaisu. Myyjän mainitsema holkki voi helpottaa. **⚠ Selvitä.** |
+
+**Arvio:** 100 eurolla kannattaa ostaa, jos tyyppikilpi ja kunto ovat kunnossa. Pumppu antaa
+250 barissa saman tuloksen kuin 51 cm³:n hammaspyöräpumppu ja mahdollistaa myöhemmin lähes täyden
+työntövoiman nostamalla paineenrajoitusta noin 280 bariin.
+
+**Kysy myyjältä:**
+- tyyppikilven koko koodi (esim. "F1-061-R-…"): kierrostilavuus, pyörimissuunta, akseli- ja laippatyyppi;
+- mikä holkki on (mitat, kiila vai hammastus);
+- vuotaako akselitiiviste, onko akselilla välystä, miksi pumppu irrotettiin ja kuinka paljon se on ollut käytössä.
+
 ## Kytkinvaihtoehdot
 
 ### Flowfit ZZ009520: ryhmän 3 mekaaninen kytkin- ja pumppukokoonpano, 43 cm³
@@ -359,6 +395,8 @@ kauempaa:
 ## Avoimet kysymykset
 
 - [ ] Vahvista tyhjäkäynti mittaamalla (omistajan mukaan ~700 rpm; ratkaisee pumpun koon)
+- [ ] Parker F1-061 (tori.fi, 100 €): tyyppikilven koodi, holkin mitat, kunto; ostopäätös
+- [ ] F1-061: vuotolinjan tarve, pienin sallittu imupaine, laipan ja akselin sovitus Borellin 30500:een
 - [ ] Salhydro: spline-sovite 30500:n ja ryhmän 3 pumpun väliin, vipuvoima, hinta ja toimitusaika 30501/30502 + Gr.3-laippa
 - [ ] PTO:n pyörimissuunta (30501 vai 30502)
 - [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)

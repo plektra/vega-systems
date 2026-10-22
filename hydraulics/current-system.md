@@ -281,7 +281,7 @@ Ratkaistut:
 Avoimet:
 
 - [ ] Koneen tyhjäkäynti: omistajan mukaan noin 700 rpm [omistaja 2026-10-22]; **vahvista mittaamalla** ennen pumpun ostoa
-- [ ] P2:n koko: **51 cm³** 700 rpm:n tyhjäkäynnillä (33,5 cm³:n Salami on liian pieni)
+- [ ] P2:n koko: **51 cm³** hammaspyöräpumppu 700 rpm:n tyhjäkäynnillä (33,5 cm³:n Salami on liian pieni), tai käytetty Parker F1-061 -vinoakselipumppu (~60 cm³, tori.fi 100 €), ks. [p2-pump-options.md](design/p2-pump-options.md#ehdokas-parker-f1-061-käytettynä-torifi)
 - [ ] PTO-kytkin: Borelli 30501/30502 (51 cm³:n pumppu vaatii noin 225 Nm, joten 185 Nm:n 30300 ei riitä); spline-sovite, vipuvoima, hinta
 - [ ] HRC 150: nimellismomentti, suurin reikä ja napatyyppi 48 mm:lle ja kytkimen akselille (luettelo)
 - [ ] Valitun pumpun pienin sallittu imupaine (datalehti)
