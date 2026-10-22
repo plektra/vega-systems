@@ -45,7 +45,7 @@ loads:
     criticality: high
     actuator: motor
     motor:
-      thrust_kN: 2.16              # 220 kg kevyt käyttö; raskas käyttö 200 kg (1.96 kN)
+      thrust_kN: 2.35              # 240 kg kevyt käyttö; raskas käyttö 220 kg (asennusohje 2025)
       max_torque_Nm: null
       max_speed_rpm: null
       power_kW: 14.9               # hydraulinen, 264 bar x 33,8 l/min
@@ -56,13 +56,13 @@ loads:
       pressure_80pct_bar: 211
       flow_80pct_L_per_min: 30.2
     duty:
-      continuous: false
-      run_time_min: null           # luettelossa ei käyttöjaksorajaa; hydraulinen SH tarkoitettu pitkiin jaksoihin
+      continuous: true             # asennusohje: "Maximum Operation Time: Continuous"
+      run_time_min: null           # ei rajaa; käytännön raja öljyn lämpötila
       cycles_per_hour: null
     control: on_off                # nykyinen venttiili on on/off; proportionaalinen on mahdollinen
     fail_state: pysähtyy, moottori pyörii vapaasti (A-B-T-vapaakierto)
     design_pressure_bar: 250       # päätetty: ~90 % työntövoima hyväksytty, 250 barin komponentit
-    source: Side-Power SH Series product specification v1.0.0 2017
+    source: Sleipner asennusohje 2746 35 2025; Side-Power SH Series product specification v1.0.0 2017
     notes: "Hihnavedolla saavutettiin vain ~160-170 bar; se riitti kääntämään aluksen laiturissa."
 
   - id: STH

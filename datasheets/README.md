@@ -44,7 +44,7 @@ käyttöohjeista ja tuotesivuista.
 
 | Komponentti | Dokumentti | Tärkeimmät tiedot | Käytetään |
 |---|---|---|---|
-| Side-Power SH240/250TC-U11 -keulapotkuri | [Side-Power, tuotesivu](https://side-power.com/produkt/20443/sh240/); omistajien datalehti `sh-spec-sheet-v1-0-0-2017-lr-qvktgqi.pdf` | Ks. omistajien datalehdet. **⚠ Moottorin U11 suurin sallittu paine ja öljyvaatimukset puuttuvat** (käyttö- ja asennusohje). | [current-system](../hydraulics/current-system.md) |
+| Side-Power SH240/250TC-U11 -keulapotkuri | [Side-Power, tuotesivu](https://side-power.com/produkt/20443/sh240/); omistajien datalehti `sh-spec-sheet-v1-0-0-2017-lr-qvktgqi.pdf` | Ks. omistajien datalehdet. Asennusohje ks. omistajien datalehdet. **⚠ Moottorin U11 suurin sallittu paine ei ilmoitettu suoraan.** | [current-system](../hydraulics/current-system.md) |
 | **Bowman EC100 -öljynjäähdytin** | [Bowman, EC Series Product Profile](https://ej-bowman.com/wp-content/uploads/2023/05/EC-Series-Product-Profile.pdf) (*kuvana*) | Öljy ≤ 92 l/min; 0,44 bar / 60 l/min; 4–10 kW esitteen ehdoilla; merivesi 3-vetoinen 25–50 l/min; 3/4" BSP | [oil-cooling](../hydraulics/design/oil-cooling.md#bowman-ec100--jäähdytin-omistajilla-varalla) |
 | BAV-713 | ks. omistajien datalehdet (`Teollisuusventtiilit.pdf`) | 60 l/min, 350 bar; painehäviö puuttuu | [current-system §3.4](../hydraulics/current-system.md) |
 | HRC 150 -joustokytkin | — | **⚠ Datalehti puuttuu** (nimellismomentti, suurin reikä napatyypeittäin) | [current-system](../hydraulics/current-system.md) |
@@ -66,6 +66,7 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 | `cetop-3-manifolds-ng6-with-relief-valve.pdf` | **Flowfit CETOP 3 / NG6 -rinnakkaispohjalaatta**, 4-paikkainen (apupiiri) | Rinnankytketty, paineenrajoitusventtiilin kavitetti (P→T) ja mittariliitäntä; P ja T 1/2" BSP, A ja B 3/8" BSP, G 1/4" BSP; 4 paikkaa: pituus 247,7 mm, 8,21 kg; materiaali teräs [omistaja 2026-10-22]. **Painearvoa ei ilmoitettu.** (*kuvana*) | [current-system §3.4](../hydraulics/current-system.md) |
 | `Teollisuusventtiilit.pdf` | Fluiconnecto (Manuli) -luettelo "Teollisuusventtiilit", s. 238–254 (Atos- ja fluiconnecto-venttiilit) | **BAV-IC3-713** (s. 239): suoraan ohjattu 4/3, NG6 / CETOP 03, keskiasento A-B-T yhdistetty / P suljettu; **60 l/min, 350 bar**; kelat BAV-SPC3 12/24 VDC; pituus 214 mm. Painehäviökäyrää ei ole. (*kuvana*) | [current-system §3.4](../hydraulics/current-system.md) |
 | `sh-spec-sheet-v1-0-0-2017-lr-qvktgqi.pdf` | **Side-Power SH Series Product Specification v1.0.0 (2017)**, keulapotkuri SH240/250TC-U11 | Työntövoima 220 kg kevyt / 200 kg raskas käyttö; 14,9 kW; tunneli 250 mm; kaksi vastakkain pyörivää potkuria; vaihteisto pronssia, EP 90 -öljykylpy; joustokytkin. U11: 60 % 26,2 l/min × 158 bar, 80 % 30,2 × 211, 100 % 33,8 × 264. Ei käyttöjaksorajaa. Moottorin suurinta painetta ei ilmoitettu. | [current-system §3.4](../hydraulics/current-system.md), [loads.yaml](../hydraulics/loads.yaml) |
+| `im-sh-100160240-2746-35-2025.pdf` | **Sleipner SH100/160/240 -asennusohje** 2746 35 2025 | SH240: työntövoima **240 kg kevyt / 220 kg raskas käyttö**, 14,9 kW, käyttöaika jatkuva. Vaatimukset: öljynsuodatin, öljynjäähdytin (öljy < 75 °C, suositus 40–60 °C), venttiilin virtaus- ja painerajat keulapotkurin rajoissa, **iskuventtiilit 10–15 % maksimipaineen yläpuolelle**, ohjaus S-Linkillä. U11: A/B 3/4" BSP, vuotolinja 1/4" BSP pakollinen. U8/U10 taulukossa 275 bariin. | [current-system §3.6](../hydraulics/current-system.md) |
 | `hyd_tank.pdf` | Flowfit Weldless Steel Tanks -luettelo (säiliö) | Saumattomat terässäiliöt 6–… l; 100 l tyypit A, B ja C (s. 14–16) | [current-system §3.5](../hydraulics/current-system.md) |
 | `tukilaakeri_25604-4.pdf` | Tukilaakeri 25604-4 (hihnavedon tukilaakeri, luettelo "Supporti") | Pumppuun laipoitettava tukilaakeri hihna- tai ketjuvedon säteiskuormille, hammastettu puolikytkin; käyttöikä 3500 h 1500 rpm:llä; rasva DIN 51502 MPF 1K-20 | [current-system §3.1](../hydraulics/current-system.md) (P1:n hihnaveto) |
 
@@ -74,7 +75,8 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 - [ ] Advance 300 -merivaihteen käyttöohje (PTO, jäähdytys)
 - [ ] Parker F1 -luettelo (pienin sallittu imupaine, tarkka kierrostilavuus)
 - [x] Side-Power SH -sarjan tuote-esite (suorituskyky)
-- [ ] Side-Power SH240 -käyttö- ja asennusohje (moottorin U11 suurin paine, öljyvaatimukset)
+- [x] Sleipner SH240 -asennusohje (2025)
+- [ ] U11-moottorin suurin sallittu paine (ei ohjeessa suoraan)
 - [x] VPR3, RPF3, 2/2-vapaakiertoventtiili, orbitroli, ohjauspumppu (omistajien datalehdet)
 - [x] Paineenrajoitusventtiili (Marchesini VMP 3/4")
 - [x] CETOP 3 -pohjalaatta (Flowfit NG6, 4-paikkainen)

@@ -142,10 +142,12 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Ankkurivinssi | Tehon menetys ankkurin ollessa puoliksi ylhäällä | Kuorman pito (jarru / jarruventtiili) | Käsinosto |
 | Keulapotkuri | Ylikuorma / ylikuumeneminen | TBD | Paineenrajoitus, lämpösuoja |
 | Kaikki | Matala öljynpinta | Hälytys, sitten ei-kriittisten kuormien suojapysäytys | |
-| Kaikki | Korkea öljyn lämpötila | Varoitus ~65 °C, hälytys ~70 °C (HV 32 -öljy ohenee 70 °C:n yläpuolella alle Salamin ohjauspumpun 12 cSt:n minimin; Parker F1:n raja 75 °C) | Öljynjäähdytin, kierroslukitus |
+| Kaikki | Korkea öljyn lämpötila | Suositeltu käyttölämpötila 40–60 °C (Sleipner); varoitus ~65 °C, hälytys ~70 °C (HV 32 -öljy ohenee 70 °C:n yläpuolella alle Salamin ohjauspumpun 12 cSt:n minimin; Parker F1:n raja 75 °C) | Öljynjäähdytin, kierroslukitus |
 
 - **Hätäpysäytyksen periaate:** TBD
 - **Kuormien prioriteetti** (mitkä pudotetaan ensin, kun teho ei riitä): TBD
+- **Keulapotkurin iskuventtiilit:** Sleipner suosittelee vahvasti iskuventtiilejä 10–15 % valitun
+  maksimipaineen yläpuolelle (suojaa, jos potkurit jumittuvat) [ohje Sleipner 2746 35 2025]. Lisättävä.
 - **Paineenrajoitus / suurin järjestelmäpaine:** apupiiri 250 bar (päätetty; ~90 %:n keulapotkuriteho
   hyväksytty kustannussyistä). Ohjauspiiri TBD.
 - **Suojaus tahattomalta liikkeeltä:** TBD

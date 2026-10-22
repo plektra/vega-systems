@@ -125,14 +125,14 @@
 
    | Öljyn lämpötila | Potkurin kierrosnopeus | Työntövoima | Teho |
    |---|---|---|---|
-   | 5 °C | ~86 % | ~74 % (~160 kg) | ~64 % |
-   | 20 °C | ~92 % | ~84 % (~185 kg) | ~77 % |
-   | 40 °C | ~94 % | ~88 % (~195 kg) | ~82 % |
+   | 5 °C | ~86 % | ~74 % (~180 kg) | ~64 % |
+   | 20 °C | ~92 % | ~84 % (~200 kg) | ~77 % |
+   | 40 °C | ~94 % | ~88 % (~210 kg) | ~82 % |
 
    *Oletukset: noin 6 barin häviö venttiilin kummallakin reitillä (P→A ja B→T), mitatut
    letkupituudet ja noin 1,5 bar paluusuodattimessa. 4–10 barin venttiilihäviöillä lämmin tulos on
-   85–89 %. **⚠ Hanki BAV-713:n painehäviökäyrä** tarkentamaan tätä.* Kilot on laskettu Side-Powerin
-   ilmoittamasta 220 kg:n suurimmasta työntövoimasta.
+   85–89 %. **⚠ Hanki BAV-713:n painehäviökäyrä** tarkentamaan tätä.* Kilot on laskettu asennusohjeen
+   240 kg:n suurimmasta työntövoimasta (kevyt käyttö).
 
    **Malli vahvistettu valmistajan taulukolla:** Side-Powerin mukaan 80 %:n työntövoimaan tarvitaan
    30,2 l/min ja 211 bar, eli virtaus 89 % ja paine 80 % täydestä. Tämä vastaa tässä käytettyä oletusta,
@@ -247,8 +247,8 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Paineenrajoitusventtiili | **Marchesini VMP 3/4"** (V0720), suoratoiminen istukkaventtiili, asetettu 250 bariin. Suurin virtaus **90 l/min**, suurin paine 350 bar. Jousi todennäköisesti 80–300 bar (vastaa aiemmin mainittua 300 baria), 50 bar / kierros [datalehti VMP, omistaja 2026-10-22] | Aiemmin kirjattu "300 bar, 80 l/min" korjattu datalehden mukaan |
 | Keulapotkurin suuntaventtiili | **fluiconnecto (Manuli) BAV-IC3-713**, suoraan ohjattu 4/3-solenoidiventtiili, NG6 / CETOP 03, pohjalaatassa; **valitsee pyörimissuunnan** [omistaja 2026-10-22]. Keskiasennossa A, B ja T yhdistetty, P suljettu (moottori pyörii vapaasti). Suurin virtaus **60 l/min**, suurin paine **350 bar**; kelat BAV-SPC3, 12 tai 24 VDC (**⚠ tarkista** jännite) [datalehti fluiconnecto, Teollisuusventtiilit s. 239] | Painehäviökäyrää ei ole luettelossa |
 | Painemittari | P-linjassa ennen pohjalaattaa | Ei näy kaaviossa |
-| Keulapotkuri | **Side-Power SH240/250TC-U11**: 250 mm:n tunneli, kaksi vastakkain pyörivää potkuria, hydraulimoottori U11. Työntövoima enintään **220 kg** (kevyt käyttö) / **200 kg** (raskas käyttö), hydraulinen teho enintään 14,9 kW; veneen koko 13–23 m. Vaihteisto pronssia, öljykylpy omasta säiliöstä (vaihteistoöljy EP 90); joustokytkin moottorin ja vetoakselin välissä suojaa jumiutumiselta [datalehti Side-Power SH Series v1.0.0 2017] | Moottorin vuotolinja säiliöön |
-| Keulapotkurin tarve (U11) | 60 %: 26,2 l/min × 158 bar · 80 %: 30,2 l/min × 211 bar · **100 %: 33,8 l/min × 264 bar** (≈ 14,9 kW hydraulista) [datalehti Side-Power SH Series v1.0.0 2017] | Prosentit ovat osuus suurimmasta työntövoimasta (100 % ≈ 220 kg) |
+| Keulapotkuri | **Side-Power SH240/250TC-U11**: 250 mm:n tunneli, kaksi vastakkain pyörivää potkuria, hydraulimoottori U11. Työntövoima enintään **240 kg** (kevyt käyttö) / **220 kg** (raskas käyttö) [ohje Sleipner 2746 35 2025]; vanhemmassa esitteessä 220 / 200 kg. Hydraulinen teho 14,9 kW, **käyttöaika jatkuva**. Vaihteisto pronssia, öljykylpy omasta säiliöstä (EP 90, säiliö vesilinjan yläpuolelle); joustokytkin moottorin ja vetoakselin välissä. U11:n liitännät: A ja B 3/4" BSP, **vuotolinja 1/4" BSP pakollinen** (ylempi vuotoliitäntä; moottorin kotelo täytetään öljyllä ennen käynnistystä). Vain suorakierteiset liittimet, mieluiten pehmeätiivisteiset; ei kierreteippiä tai -tiivistettä. | Moottorin vuotolinja säiliöön |
+| Keulapotkurin tarve (U11) | 60 %: 26,2 l/min × 158 bar · 80 %: 30,2 l/min × 211 bar · **100 %: 33,8 l/min × 264 bar** (≈ 14,9 kW hydraulista) [datalehti Side-Power SH Series v1.0.0 2017] | Prosentit ovat osuus suurimmasta työntövoimasta (100 % ≈ 240 kg asennusohjeen mukaan) |
 | Saavutettu (hihnaveto) | ~160–170 bar, mikä riitti kääntämään aluksen laiturissa | [blogi 2018-11-12] |
 | Ankkurivinssi | Hydraulimoottori olemassa; tiedot **⚠ ei tiedossa**, ei vielä kytketty (2018) | [blogi 2017-04-01] |
 
@@ -266,6 +266,23 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Öljynjäähdytin | Ei kummassakaan piirissä. **Varalla Bowman EC100** (pronssiset päätykannet, ex-Masson-vaihteisto, putket kunnossa), suunniteltu yhteiseen paluulinjaan, ks. [oil-cooling.md](design/oil-cooling.md) | [omistaja 2026-10-22] |
 | Päivätankki (polttoaine) | 150 l, hydraulisäiliön alla | [blogi 2017-04-19] |
 | Päätoimittaja | SixTek (hydrauliikkapumppu.fi) | [blogi 2017-04-01] |
+
+### 3.6 Valmistajan vaatimukset keulapotkurin hydrauliikalle [ohje Sleipner 2746 35 2025]
+
+Asennusohjeen mukaan, kun käytössä ei ole Sleipnerin omaa hydraulijärjestelmää:
+
+| Vaatimus | Vegan tilanne |
+|---|---|
+| Öljynsuodatin | Paluusuodatin on olemassa ✅ |
+| **Öljynjäähdytin niin, että öljy pysyy alle 75 °C:n**; suositeltu käyttölämpötila **40–60 °C** | Suunnitteilla Bowman EC100, ks. [oil-cooling.md](design/oil-cooling.md) |
+| Venttiilin virtaus- ja painerajat keulapotkurin rajoissa | VPR3 35 l/min ja VMP 250 bar; U11:n 100 %: 33,8 l/min ja 264 bar ✅ |
+| **Iskuventtiilit (shock valve) 10–15 % valitun maksimipaineen yläpuolelle**, suojaamaan järjestelmää, jos potkurit jumittuvat | **Puuttuu.** BAV-713:ssa ei ole iskuventtiileitä. Lisättävä esim. A/B-linjojen ristiinkytketty iskuventtiililohko (CETOP 3 -välilevy). |
+| Vuotolinja säiliöön (1/4" BSP, pakollinen) | Olemassa ✅ |
+| Ohjaukseen Sleipnerin S-Link-järjestelmä | **Poikkeaa:** Vegalla oma ohjaus solenoidiventtiileillä. Voi vaikuttaa takuuseen; toiminnallisesti tavallinen ratkaisu. |
+
+Moottorin suurinta sallittua painetta ohjeessa ei ilmoiteta suoraan. Saman sarjan pienemmät moottorit
+(U8, U10) on taulukossa ajettu 275 bariin asti, joten se on todennäköinen yläraja **⚠ vahvista
+Sleipneriltä**.
 
 ## 4. Tunnetut ongelmat ja opit
 
@@ -307,6 +324,8 @@ Avoimet:
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
 - [ ] BAV-713:n kelojen jännite (12 vai 24 VDC)
+- [ ] Keulapotkurin iskuventtiilit (Sleipnerin vaatimus): A/B-iskuventtiililohko ja asetus
+- [ ] U11-moottorin suurin sallittu paine (todennäköisesti 275 bar) Sleipneriltä
 - [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
 - [ ] Onko sähköinen varapumppu kytketty?
