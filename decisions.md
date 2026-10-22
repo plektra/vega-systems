@@ -1,12 +1,13 @@
-# Decision log
+# Päätösloki
 
-Decisions that have been made, newest first. Each one says what was decided, why, and where the
-details are. To change a decision, add a new row that replaces the old one. Don't delete rows.
+Tehdyt päätökset, uusin ensin. Jokaisessa kerrotaan mitä päätettiin, miksi, ja missä on lisätietoa.
+Kun päätös muuttuu, lisää uusi rivi, joka korvaa vanhan. Älä poista rivejä.
 
-| Date | System | Decision | Why | Details |
+| Päivä | Järjestelmä | Päätös | Miksi | Lisätiedot |
 |---|---|---|---|---|
-| 2026-10-22 | Hydraulics | Suction line for the PTO pump is 32 mm, ~3 m, with the tank ~1 m above the pump | Keeps pump inlet pressure within about −0.2 bar down to ~5 °C oil | [current-system §0 item 10](hydraulics/current-system.md) |
-| 2026-10-21 | Hydraulics | Auxiliary circuit relief stays in the **250 bar class**; about 90 % thruster thrust is accepted | Cost: standard 250 bar pumps and valves | [current-system §0](hydraulics/current-system.md), [p2-pump-options](hydraulics/design/p2-pump-options.md) |
-| 2026-10-21 | Hydraulics | PTO pump drive: Ø48 PTO shaft → HRC 150 coupling → clutch → pump, with the clutch and pump on their own hull mount | The PTO has a plain keyed shaft and no clutch; keeps side load off the PTO | [current-system §0](hydraulics/current-system.md) |
-| 2026-10-21 | Hydraulics | Steering pump (16.6 cm³) on the front belt drive; auxiliary pump on the Advance 300 gearbox PTO | The belts slipped under thruster load in 2018; the PTO is rated ≈ 420 Nm | [current-system §0](hydraulics/current-system.md) |
-| 2017-04 | Hydraulics | Two separate circuits: steering only, and everything else | Steering must not be affected by other loads | [blog 2017-04-01](https://plektra.github.io) |
+| 2026-10-22 | Kaikki | Repon dokumentit kirjoitetaan suomeksi; tiedosto- ja kansionimet, YAML-avaimet ja commit-viestit englanniksi | Omistajat, toimittajat ja apulaiset ovat suomenkielisiä; tunnisteet pysyvät vakaina | [CLAUDE.md](CLAUDE.md) |
+| 2026-10-22 | Hydrauliikka | PTO-pumpun imulinja on 32 mm, ~3 m, ja säiliö on ~1 m pumpun yläpuolella | Imupaine pysyy noin −0,2 barin sisällä noin 5 °C:een asti | [current-system §0 kohta 10](hydraulics/current-system.md) |
+| 2026-10-21 | Hydrauliikka | Apupiirin paineenrajoitus pysyy **250 barin luokassa**; noin 90 %:n keulapotkurin työntövoima hyväksytään | Kustannukset: vakio-250 barin pumput ja venttiilit | [current-system §0](hydraulics/current-system.md), [p2-pump-options](hydraulics/design/p2-pump-options.md) |
+| 2026-10-21 | Hydrauliikka | PTO-pumpun veto: Ø48 PTO-akseli → HRC 150 -joustokytkin → kytkin → pumppu; kytkin ja pumppu omalla runkoalustallaan | PTO:ssa on sileä kiila-akseli eikä kytkintä; PTO:lle ei tule sivukuormaa | [current-system §0](hydraulics/current-system.md) |
+| 2026-10-21 | Hydrauliikka | Ohjauspumppu (16,6 cm³) etupään hihnavetoon; apupiirin pumppu Advance 300:n PTO:lle | Hihnat luistivat keulapotkurin kuormalla 2018; PTO kestää ≈ 420 Nm | [current-system §0](hydraulics/current-system.md) |
+| 2017-04 | Hydrauliikka | Kaksi erillistä piiriä: pelkkä ohjaus, ja kaikki muu | Muut kuormat eivät saa vaikuttaa ohjaukseen | [blogi 2017-04-01](https://plektra.github.io) |

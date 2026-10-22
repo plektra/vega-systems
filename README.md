@@ -1,53 +1,55 @@
-# Vega systems
+# Vegan järjestelmät
 
-Design and documentation for the systems of **Vega**, a 1912 steel tug being refitted for leisure
-use. One repository holds every system, so the systems can reference each other.
+**Vegan** järjestelmien suunnittelu ja dokumentaatio. Vega on vuonna 1912 rakennettu teräshinaaja,
+jota kunnostetaan vapaa-ajan käyttöön. Kaikki järjestelmät ovat samassa repossa, jotta ne voivat
+viitata toisiinsa.
 
-| Folder | What's in it |
+| Kansio | Sisältö |
 |---|---|
-| [vessel/](vessel/) | Shared facts: vessel particulars, engine, gearbox, electrical basics |
-| [hydraulics/](hydraulics/) | Steering, bow thruster, windlass: current system, requirements, design studies |
-| [electrics/](electrics/) | Batteries, charging, distribution, links to the monitoring and control electronics |
-| [decisions.md](decisions.md) | Every decision made so far, and why |
-| [CLAUDE.md](CLAUDE.md) | Working rules for Claude. Humans can read it too. |
+| [vessel/](vessel/) | Yhteiset tiedot: alus, kone, vaihteisto, sähköjärjestelmän perustiedot |
+| [hydraulics/](hydraulics/) | Ohjaus, keulapotkuri, ankkurivinssi: nykytila, vaatimukset, selvitykset |
+| [electrics/](electrics/) | Akut, lataus, tehonjako, linkit valvonta- ja ohjauselektroniikkaan |
+| [decisions.md](decisions.md) | Kaikki tähän asti tehdyt päätökset perusteluineen |
+| [CLAUDE.md](CLAUDE.md) | Clauden työskentelyohjeet (myös ihmisten luettavissa) |
 
-## How to contribute without knowing git
+## Näin osallistut ilman git-osaamista
 
-You don't need git, a terminal or any developer tools. Everything works by chatting with Claude in
-the browser or on your phone.
+Et tarvitse gitiä, komentoriviä etkä muitakaan kehitystyökaluja. Kaikki onnistuu keskustelemalla
+Clauden kanssa selaimessa tai puhelimessa.
 
-### One-time setup
+### Kerran tehtävät
 
-1. Create a free account at [github.com](https://github.com) and ask Lari to invite you to this
-   repository.
-2. Open [claude.ai/code](https://claude.ai/code), or **Code** in the Claude mobile app, and connect
-   your GitHub account when asked.
-3. Choose this repository.
+1. Luo ilmainen tunnus osoitteessa [github.com](https://github.com) ja pyydä Laria kutsumaan sinut
+   tähän repoon.
+2. Avaa [claude.ai/code](https://claude.ai/code) tai Claude-mobiilisovelluksessa **Code**, ja yhdistä
+   GitHub-tunnuksesi pyydettäessä.
+3. Valitse tämä repo.
 
-### Every time
+### Joka kerta
 
-1. **Start a new session** for each topic, e.g. "steering cylinder measurements" or "battery bank".
-2. **Talk normally**, in Finnish or English. For example:
-   - *"I measured the steering cylinder: bore 63 mm, rod 32 mm, stroke 250 mm."*
-   - *"What's still open on the hydraulics?"* (or type `/open-questions`)
-   - *"We decided to buy the Borelli 30502 clutch."* (or `/log-decision`)
-   - *"Compare these two pumps: <link>"*
-3. **When you're done, say "save"** (or "tallenna", or type `/save`). Claude saves your changes and
-   creates a *pull request*: a proposed change that waits for approval. You get a link.
-4. **Approve it:** open the link and press **Merge pull request**. Lari can do this too. Until it's
-   merged, the change isn't part of the main documents.
+1. **Aloita uusi istunto** jokaiselle aiheelle, esim. "ohjaussylinterin mitat" tai "akusto".
+2. **Kirjoita normaalisti**, suomeksi tai englanniksi. Esimerkiksi:
+   - *"Mittasin ohjaussylinterin: männän halkaisija 63 mm, varsi 32 mm, isku 250 mm."*
+   - *"Mitä hydrauliikassa on vielä auki?"* (tai `/open-questions`)
+   - *"Päätettiin ostaa Borellin 30502-kytkin."* (tai `/log-decision`)
+   - *"Vertaa näitä kahta pumppua: <linkki>"*
+3. **Kun olet valmis, sano "tallenna"** (tai `/save`). Claude tallentaa muutoksesi ja tekee
+   *pull requestin* eli muutosehdotuksen, joka odottaa hyväksyntää. Saat linkin.
+4. **Hyväksy:** avaa linkki ja paina **Merge pull request**. Myös Lari voi tehdä sen. Ennen
+   hyväksyntää muutos ei ole osa päädokumentteja.
 
-### Tips
+### Vinkkejä
 
-- **One topic per session** keeps changes small and avoids clashes when two people edit at once.
-- **Claude records where every number came from.** Say whether you measured it, read it from a
-  datasheet, or are guessing.
-- **Photos and PDFs:** on the GitHub website, open the system's folder, choose
-  **Add file → Upload files**, and upload into its `img/` folder. Then tell Claude about them.
-- **Nothing is lost.** Every change is kept in the history and can be undone. Just ask Claude.
+- **Yksi aihe per istunto** pitää muutokset pieninä, eikä kahden ihmisen yhtäaikainen työ mene
+  ristiin.
+- **Claude kirjaa jokaisen luvun lähteen.** Kerro, mittasitko itse, luitko datalehdestä vai
+  arvaatko.
+- **Kuvat ja PDF:t:** avaa GitHubin verkkosivulla järjestelmän kansio, valitse
+  **Add file → Upload files** ja lataa tiedostot sen `img/`-kansioon. Kerro sitten Claudelle.
+- **Mitään ei katoa.** Jokainen muutos jää historiaan ja on peruttavissa. Pyydä vain Claudea.
 
-## Related repositories
+## Liittyvät repot
 
-The onboard electronics (Signal K, NMEA 2000 nodes, ESP32 power distribution boards) live in
-separate repositories under [github.com/plektra](https://github.com/plektra). See
+Veneen elektroniikka (Signal K, NMEA 2000 -nodet, ESP32-tehonjakokortit) on erillisissä repoissa
+osoitteessa [github.com/plektra](https://github.com/plektra). Ks.
 [electrics/current-system.md](electrics/current-system.md).

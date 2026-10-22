@@ -1,11 +1,11 @@
-## In plain words
+## Selkokielellä
 
-<!-- What changed and why, a few bullets anyone can approve from a phone. -->
+<!-- Mitä muuttui ja miksi, muutama kohta, jonka voi hyväksyä puhelimella. -->
 
-## Numbers that changed
+## Muuttuneet luvut
 
-<!-- old → new, with source. Delete this section if nothing changed. -->
+<!-- vanha → uusi, lähteineen. Poista tämä osio, jos lukuja ei muuttunut. -->
 
-## New open questions
+## Uudet avoimet kysymykset
 
-<!-- Anything this change raised that still needs checking. Delete if none. -->
+<!-- Mitä tästä muutoksesta jäi tarkistettavaksi. Poista, jos ei mitään. -->

@@ -1,52 +1,53 @@
-# Vega — Current Electrical System (as-built baseline)
+# Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Status:** Skeleton, started 2026-10-22. Only the facts below are known so far, mostly from the
-> 2017 blog. Items marked **⚠ verify** need checking on board. Add to this as information comes in.
+> **Tila:** Runko, aloitettu 2026-10-22. Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
-## 1. DC system
+## 1. DC-järjestelmä
 
-| Item | Value | Source |
+| Kohde | Arvo | Lähde |
 |---|---|---|
-| System voltage | 24 V **⚠ verify** (inferred from the 24 V emergency hydraulic pump) | [blog 2018-11-12] |
-| House batteries | 2 × (type, capacity **⚠ unknown**) | [blog 2017-04-10] |
-| Start batteries | 2 × (type, capacity **⚠ unknown**) | [blog 2017-04-10] |
-| Battery location | Hung below the deck on the starboard side of the engine room | [blog 2017-04-10] |
-| Engine alternator | 65 A | [blog 2017-07-04] |
-| Charging from shore | **⚠ unknown** | |
+| Järjestelmäjännite | 24 V **⚠ tarkista** (päätelty 24 V:n hydrauliikan varapumpusta) | [blogi 2018-11-12] |
+| Käyttöakut | 2 kpl (tyyppi ja kapasiteetti **⚠ ei tiedossa**) | [blogi 2017-04-10] |
+| Käynnistysakut | 2 kpl (tyyppi ja kapasiteetti **⚠ ei tiedossa**) | [blogi 2017-04-10] |
+| Akkujen sijainti | Kannen alla telineessä konehuoneen styyrpuurin puolella | [blogi 2017-04-10] |
+| Koneen laturi | 65 A | [blogi 2017-07-04] |
+| Lataus maasähköstä | **⚠ ei tiedossa** | |
 
-## 2. AC system
+## 2. AC-järjestelmä
 
-| Item | Value | Source |
+| Kohde | Arvo | Lähde |
 |---|---|---|
-| Generator | Space reserved on the port side of the engine room; **⚠ verify** whether one is installed | [blog 2017-04-19] |
-| Shore power | **⚠ unknown** | |
-| Inverter | **⚠ unknown** | |
+| Generaattori | Tila varattu konehuoneen paapuurin puolelle; **⚠ tarkista**, onko asennettu | [blogi 2017-04-19] |
+| Maasähkö | **⚠ ei tiedossa** | |
+| Invertteri | **⚠ ei tiedossa** | |
 
-## 3. Large DC loads
+## 3. Suuret DC-kuormat
 
-| Load | Power / current | Notes | Source |
+| Kuorma | Teho / virta | Huomiot | Lähde |
 |---|---|---|---|
-| Emergency hydraulic pump (steering backup) | 2.5 kW, 24 V (~100+ A) | The 65 A alternator can't sustain it for long | [blog 2017-07-04] |
-| Bow thruster | — | Hydraulic, driven from the gearbox PTO; no electrical load except its valve solenoids | [blog 2018-11-12] |
+| Hydrauliikan varapumppu (ohjauksen vara) | 2,5 kW, 24 V (~100 A tai yli) | 65 A:n laturi ei jaksa syöttää sitä pitkään | [blogi 2017-07-04] |
+| PTO-kytkimen toimilaite (suunnitteilla) | **⚠ ei tiedossa** | Jos mekaaninen kytkin ohjataan 24 V:n toimilaitteella | [hydraulics/design/p2-pump-options.md](../hydraulics/design/p2-pump-options.md) |
+| Keulapotkuri | — | Hydraulinen, PTO-vetoinen; sähkökuormana vain venttiilien solenoidit | [blogi 2018-11-12] |
 
-## 4. Monitoring, networking and power distribution
+## 4. Valvonta, verkot ja tehonjako
 
-The electronics are developed in separate repositories under
-[github.com/plektra](https://github.com/plektra). They may be moved into this monorepo later.
+Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
+[github.com/plektra](https://github.com/plektra). Ne voidaan myöhemmin siirtää tähän repoon.
 
-| Item | Repository / location | Notes |
+| Kohde | Repo / sijainti | Huomiot |
 |---|---|---|
-| Signal K server | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Data hub; Grafana dashboards |
-| NMEA 2000 nodes | `plektra/vega-n2k-node1` … `node3`, `vega-n2k-node-bootstrap` | ESP32-based N2K nodes |
-| Power distribution (PDM) | `ESP32-PDM`, `ESP32-PDM-v1/v2/4x4/base` (KiCad) | ESP32 power distribution modules; candidates for driving hydraulic solenoids and the PTO clutch actuator |
-| Provisioning | `plektra/vega-ansible` | Configuration of the onboard computers |
-| Other | `yarrboard-hardware`, `frothfet`, `esp32-can-hat`, `SH-ESP32-hardware` | Related hardware projects |
+| Signal K -palvelin | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Tietokeskus; Grafana-näkymät |
+| NMEA 2000 -nodet | `plektra/vega-n2k-node1` … `node3`, `vega-n2k-node-bootstrap` | ESP32-pohjaiset N2K-nodet |
+| Tehonjako (PDM) | `ESP32-PDM`, `ESP32-PDM-v1/v2/4x4/base` (KiCad) | ESP32-tehonjakomoduulit; ehdokkaita hydrauliikan solenoidien ja PTO-kytkimen toimilaitteen ohjaukseen |
+| Asennusautomaatio | `plektra/vega-ansible` | Veneen tietokoneiden konfigurointi |
+| Muut | `yarrboard-hardware`, `frothfet`, `esp32-can-hat`, `SH-ESP32-hardware` | Liittyviä laitteistoprojekteja |
 
-## 5. Open questions
+## 5. Avoimet kysymykset
 
-- [ ] Confirm the 24 V DC system voltage
-- [ ] Battery types and capacities (house and start)
-- [ ] Charging sources: alternator(s), shore charger, solar
-- [ ] Generator and shore power: installed or planned?
-- [ ] Main switchboard and distribution layout
-- [ ] Which hydraulic functions need electrical control (solenoid valves, PTO clutch actuator, sensors), and from which PDM outputs
+- [ ] Vahvista 24 V:n DC-jännite
+- [ ] Akkujen tyypit ja kapasiteetit (käyttö ja käynnistys)
+- [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit
+- [ ] Generaattori ja maasähkö: asennettu vai suunnitteilla?
+- [ ] Pääkeskus ja jakelun rakenne
+- [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä

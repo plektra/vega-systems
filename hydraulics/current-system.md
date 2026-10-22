@@ -1,322 +1,295 @@
-# Vega — Current Hydraulic System (as-built baseline)
+# Vega — hydrauliikan nykytila (lähtötilanne)
 
-> **Status:** Reconstructed from the Plektra blog (2016–2021), plus an owner update in October 2026
-> (see §0). Items marked **⚠ verify** need checking on board.
+> **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
+> (ks. §0). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
-> **The hydraulic system is fully disassembled right now** (October 2026). Sections 3.1–3.5 describe
-> the last assembled configuration (2017–2018). Some of those parts will be reused.
+> **Hydraulijärjestelmä on tällä hetkellä kokonaan purettuna** (lokakuu 2026). Luvut 3.1–3.5
+> kuvaavat viimeisintä koottua kokoonpanoa (2017–2018). Osa niiden osista käytetään uudelleen.
+>
+> Lähteet: `[blogi VVVV-KK-PP]` viittaa blogikirjoituksiin (`plektra.github.io/_posts/`),
+> `[omistaja VVVV-KK-PP]` omistajien antamiin tietoihin.
 
-## 0. Current status (owner update, 2026-10-21)
+## 0. Nykytilanne (omistajien päivitys 2026-10-21)
 
-| Item | Status |
+| Kohde | Tila |
 |---|---|
-| Gearbox | Advance 300 is **fitted and aligned** to the propeller shaft, with a new shaft bearing block |
-| Main engine | Being remounted and aligned to the gearbox |
-| Hydraulics | **All disassembled**, both pumps removed. Nothing will be reassembled until the engine is aligned. |
-| Planned: steering pump | Small fixed-displacement pump (P1, 16.6 cm³) goes back on the front of the engine, driven by the two belts as before. **Dedicated to steering only.** |
-| Planned: auxiliary pump | Large pump **driven directly from the Advance 300 PTO** |
-| Advance 300 PTO | **1:1 ratio, driven from the input shaft** (turns whenever the engine runs, in gear or neutral). **No clutch** built in. Rated **0.044 kW/rpm**, which is a constant torque limit of **≈ 420 Nm** (35 kW at 800 rpm, 110 kW at 2500 rpm). Output is a **plain 48 mm keyed shaft**, with no pump flange. |
-| Planned: PTO drive line | PTO shaft → **flexible HRC 150 coupling** → clutch → P2. The clutch and pump sit on **their own mount fixed to the hull**, so the PTO shaft carries no overhung weight or side load. |
-| Planned: PTO clutch | A clutch between the coupling and P2, so the pump only turns when needed. Type not chosen yet. |
-| Thruster hoses | **Mostly done:** 1/2" **SAE 100R2AT / EN 853** hoses, rated 300 bar per owner, from the CETOP valves to the bow thruster. A and B lines are **8.5 m each**. |
-| P2 pressure line | 3/4" hose from the pump to the valves. The move to the PTO needs **3–4 m** of hose. |
-| P2 suction line | **32 mm ID** hose (≈ 1-1/4", DN32), about **3 m** to the new pump position; tank oil level about 1 m above the pump inlet |
-| Auxiliary return line | 3/4" hose, **< 0.5 m**, from the valve block to the tank (through the return filter) |
-| Decision: system pressure | **Keep the 250 bar class.** About 90 % thruster power is accepted to keep costs down. |
+| Vaihteisto | Advance 300 on **asennettu ja linjattu** potkuriakseliin, ja akselille on uusi laakeripukki |
+| Pääkone | Asennetaan takaisin ja linjataan vaihteistoon |
+| Hydrauliikka | **Kokonaan purettu**, molemmat pumput irrotettu. Mitään ei kootaan ennen kuin kone on linjattu. |
+| Suunnitelma: ohjauspumppu | Pieni vakiotilavuuspumppu (P1, 16,6 cm³) palaa koneen etupäähän, kahden kiilahihnan vetämänä kuten ennenkin. **Vain ohjaukselle.** |
+| Suunnitelma: apupiirin pumppu | Iso pumppu **suoraan Advance 300:n voimanulosotosta (PTO)** |
+| Advance 300:n PTO | **Välitys 1:1, käyttö ensiöakselilta** (pyörii aina kun kone käy, myös vapaalla). **Ei omaa kytkintä.** Nimellisteho **0,044 kW/rpm**, eli vakiomomenttiraja **≈ 420 Nm** (35 kW 800 rpm:llä, 110 kW 2500 rpm:llä). Ulostulo on **sileä Ø48 mm:n kiila-akseli** ilman pumppulaippaa. |
+| Suunnitelma: PTO-voimansiirto | PTO-akseli → **HRC 150 -joustokytkin** → kytkin → P2. Kytkin ja pumppu ovat **omalla, runkoon kiinnitetyllä alustalla**, joten PTO-akselille ei tule pumpun painoa eikä sivukuormaa. |
+| Suunnitelma: PTO-kytkin | Kytkin joustokytkimen ja P2:n väliin, jotta pumppu pyörii vain tarvittaessa. Ehdokas: Borelli 30500 -sarja, ks. [p2-pump-options.md](design/p2-pump-options.md). |
+| Keulapotkurin letkut | **Pääosin valmiit:** 1/2" **SAE 100R2AT / EN 853** -letkut, omistajien mukaan 300 bar, CETOP-venttiileiltä keulapotkurille. A- ja B-linjat **8,5 m kumpikin**. |
+| P2:n painelinja | 3/4" letku pumpulta venttiileille. PTO-sijoitus vaatii **3–4 m** letkua. |
+| P2:n imulinja | **32 mm:n sisähalkaisija** (≈ 1-1/4", DN32), noin **3 m** uudelle pumpun paikalle. Säiliön öljypinta on noin 1 m pumpun imuaukon yläpuolella. |
+| Apupiirin paluulinja | 3/4" letku, **< 0,5 m**, venttiililohkolta säiliöön (paluusuodattimen kautta) |
+| Päätös: järjestelmäpaine | **Pysytään 250 barin luokassa.** Noin 90 %:n keulapotkuriteho hyväksytään kustannusten vuoksi. |
 
-### Planned drive configuration
+### Suunniteltu voimansiirto
 
 ```
-                 ┌── twin V-belts, 1:1.24 ── P1 16.6 cm³ ── steering circuit (Orbitrol + cylinder)
+                 ┌── 2 kiilahihnaa, 1:1,24 ── P1 16,6 cm³ ── ohjauspiiri (orbitroli + sylinteri)
  CAT 3126B ──────┤
-  (front)        │
-                 └── flywheel ── Advance 300 ── propeller shaft
+  (etupää)       │
+                 └── vauhtipyörä ── Advance 300 ── potkuriakseli
                                     │
-                                    └── PTO 1:1, Ø48 keyed ── HRC 150 ── clutch ── P2 (size ⚠) ── auxiliary circuit
-                                                                 └──── own hull mount ────┘
-                                                                                    (thruster, windlass, …)
+                                    └── PTO 1:1, Ø48 kiila ── HRC 150 ── kytkin ── P2 (koko ⚠) ── apupiiri
+                                                                └──── oma runkoalusta ────┘   (keulapotkuri, ankkurivinssi, …)
 ```
 
-### What this means for the design
+### Mitä tämä tarkoittaa suunnittelulle
 
-1. **P1 on the belts is a sound choice.** Steering runs at low pressure (normally < 50 bar), about
-   15 L/min at idle. The belts carried this load without trouble in 2017–2018.
-2. **The existing 33.5 cm³ pump is too small for the 1:1 PTO.** At 800 rpm idle it gives about
-   25 L/min (92 % volumetric efficiency). That falls short of the 26.2 L/min the thruster needs for
-   60 % power, and well short of the 33.8 L/min for 100 %. The 2018 blog post already noted that a
-   1:1 drive would mean buying new pumps.
+1. **P1 hihnavetoisena on hyvä ratkaisu.** Ohjaus toimii pienellä paineella (normaalisti < 50 bar),
+   noin 15 l/min tyhjäkäynnillä. Hihnat kantoivat tämän kuorman ongelmitta 2017–2018.
+2. **Nykyinen 33,5 cm³:n pumppu on liian pieni 1:1-PTO:lle.** 800 rpm:n tyhjäkäynnillä se antaa noin
+   25 l/min (volumetrinen hyötysuhde 92 %). Se jää alle keulapotkurin 60 %:n tehon tarpeen
+   (26,2 l/min) ja selvästi alle 100 %:n tarpeen (33,8 l/min). Blogissa todettiin jo 2018, että
+   1:1-veto tarkoittaa uusia pumppuja.
 
-   | Idle rpm (PTO 1:1) | Displacement needed for 33.8 L/min | Flow at 2500 rpm | Torque at 264 bar |
+   | Tyhjäkäynti (PTO 1:1) | Kierrostilavuus 33,8 l/min:lle | Tuotto 2500 rpm:llä | Momentti 264 barilla |
    |---|---|---|---|
-   | 800 | **46 cm³** | 106 L/min | 214 Nm |
-   | 900 | 41 cm³ | 94 L/min | 190 Nm |
-   | 1000 | 37 cm³ | 85 L/min | 172 Nm |
+   | 800 rpm | **46 cm³** | 106 l/min | 214 Nm |
+   | 900 rpm | 41 cm³ | 94 l/min | 190 Nm |
+   | 1000 rpm | 37 cm³ | 85 l/min | 172 Nm |
 
-   *Assumes 92 % volumetric and 90 % mechanical efficiency. These are first estimates; the sizing
-   library will replace them.*
-3. **The input-shaft PTO turns in neutral.** That's what harbour thruster use needs.
-4. **The PTO rating is about twice what's needed.** 0.044 kW/rpm works out to about 420 Nm. A 46 cm³
-   pump at 264 bar needs about 215 Nm (51 %), or 18 kW of shaft power at 800 rpm. Even a 300 bar
-   relief setting only needs 244 Nm (58 %), so pressure spikes have headroom.
-5. **System pressure: 250 bar class, ~90 % thrust target (decided).** Full thruster power would
-   need 264 bar at the motor plus line losses. The owner accepts roughly 90 % thrust to keep the
-   pump and valves in the common 250 bar class and save cost. With the actual line lengths, a
-   250 bar relief gives about 85–89 % thrust when warm; see item 9.
-6. **The planned clutch deals with heat while cruising.** Without it, a ~46 cm³ pump would push
-   about 106 L/min at 2500 rpm through the flow control all the time, which is roughly 1 kW or more
-   of heat with no cooler. With the clutch disengaged, P2 doesn't turn at all.
-7. **Requirements for the clutch (first draft):**
-   - **Torque rating.** The steady load is about 215 Nm at 264 bar with a 46 cm³ pump. A gear pump
-     with a relief valve gives pressure peaks, so plan for a service factor of about 1.5–2, i.e. a
-     clutch rated for roughly **320–430 Nm**. The PTO limit is about 420 Nm, so a clutch rated for
-     around 320–420 Nm fits under it, and anything much above the PTO rating adds nothing.
-   - **Engagement.** Engage only at idle. An interlock on engine rpm (from N2K / Signal K) could
-     block engagement above about 1000 rpm.
-   - **Engage with the pump unloaded.** Keep the existing normally-open 2/2 unloading valve. Engage
-     the clutch with the valve open (pump flowing freely to tank), then close the valve. This cuts
-     the shock on the clutch, the PTO and the pump shaft.
-   - **Type.** The PTO is a bare keyed shaft and the assembly sits on its own mount, so the clutch
-     has to be a **shaft-to-shaft unit**, not one that bolts to an SAE pump flange. Typical options:
-     - an electromagnetic shaft clutch in its own bearing housing, with a pump bracket on the
-       output side;
-     - a short jackshaft in two bearings carrying an electromagnetic clutch, with the pump on an
-       SAE-flange bracket at the end;
-     - a stand-alone hydraulic or mechanical "clutch PTO" unit, which has a shaft input and an SAE
-       pump pad output.
-   - **Control.** An electromagnetic clutch draws current and needs an output channel, which an
-     ESP32 PDM channel could provide.
-   - **Coupling sizing.** Check the HRC 150 element and hub against the 48 mm bore, the PTO shaft's
-     key, and torque. As far as I recall, HRC 150 is rated around 600 Nm nominal, which would be
-     enough, and its maximum bore depends on the hub type (F/H taper-lock vs B). **⚠ Verify both
-     in the manufacturer's catalogue.**
-   - **Alignment.** The gearbox is rigidly mounted to the hull (blog 2021-02-08), and so is the new
-     clutch/pump mount. So the HRC only has to take up small installation misalignment and the
-     hull flexing, not engine movement. Align the clutch input to the PTO shaft within the
-     coupling's allowed offset and angle, and recheck after sea trials.
-   - **Space.** The coupling, clutch, bearing housing and pump in a row add length. Check this
-     against the hull, the gearbox and the propeller shaft bearing.
-8. **The existing 1/2" thruster hoses are adequate.** At 33.8 L/min the oil moves at about
-   4.5 m/s in a 12.7 mm bore, inside the usual 3–6 m/s guideline for pressure lines. Estimated
-   pressure loss per metre of hose (straight hose only, ISO VG 46 assumed):
+   *Oletukset: volumetrinen hyötysuhde 92 %, mekaaninen 90 %. Ensimmäisiä arvioita.* **Tyhjäkäynnin
+   todellinen kierrosluku voi olla 650–700 rpm**, jolloin tarvitaan isompi pumppu, ks.
+   [p2-pump-options.md](design/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
+3. **Ensiöakselin PTO pyörii vapaalla.** Juuri sitä keulapotkurin satamakäyttö vaatii.
+4. **PTO:n nimellisarvo on noin kaksinkertainen tarpeeseen nähden.** 0,044 kW/rpm vastaa noin
+   420 Nm. 46 cm³:n pumppu 264 barilla tarvitsee noin 215 Nm (51 %), eli 18 kW akselitehoa
+   800 rpm:llä. Jopa 300 barin paineenrajoitus vaatii vain 244 Nm (58 %), joten painepiikeille jää
+   varaa.
+5. **Järjestelmäpaine: 250 barin luokka, tavoite ~90 % työntövoimasta (päätetty).** Täysi teho
+   vaatisi moottorilla 264 bar plus linjahäviöt. Omistajat hyväksyvät noin 90 %:n työntövoiman,
+   jotta pumppu ja venttiilit voidaan valita yleisestä 250 barin luokasta. Todellisilla
+   letkupituuksilla 250 barin paineenrajoitus antaa lämpimänä noin 85–89 %, ks. kohta 9.
+6. **Kytkin estää öljyn lämpenemisen ajon aikana.** Ilman sitä ~46 cm³:n pumppu pumppaisi
+   2500 rpm:llä noin 106 l/min jatkuvasti virtauksensäätöventtiilin läpi, mikä tuottaa noin 1 kW tai
+   enemmän lämpöä, eikä öljynjäähdytintä ole. Kun kytkin on irti, P2 ei pyöri lainkaan.
+7. **Kytkimen vaatimukset:**
+   - **Momentti.** Jatkuva kuorma on noin 190–225 Nm 250 barilla (43–51 cm³). Hammaspyöräpumppu ja
+     paineenrajoitusventtiili aiheuttavat painepiikkejä, joten kytkimessä pitää olla selvästi
+     varaa. Kytkintä, joka on PTO:n omaa 420 Nm:ä paljon vahvempi, ei tarvita. Vertailu ehdokkaista
+     on tiedostossa [p2-pump-options.md](design/p2-pump-options.md).
+   - **Kytkentä.** Vain tyhjäkäynnillä. Kierroslukulukitus (N2K / Signal K) voi estää kytkennän
+     noin 1000 rpm:n yläpuolella.
+   - **Kytke pumppu kuormittamattomana.** Pidetään nykyinen jännitteettömänä auki oleva
+     2/2-vapaakiertoventtiili. Kytkin kytketään venttiilin ollessa auki (pumppu kierrättää vapaasti
+     säiliöön), ja venttiili suljetaan vasta sitten. Tämä vähentää kytkimen, PTO:n ja pumpun
+     akselin iskukuormaa.
+   - **Tyyppi.** PTO on sileä kiila-akseli ja kokoonpano on omalla alustallaan, joten kytkimen pitää
+     olla **akselilta akselille** -tyyppinen, ei pumppulaippaan pultattava. Sähkömagneettiset
+     vaihtoehdot on selvitetty tiedostossa [p2-pump-options.md](design/p2-pump-options.md).
+   - **Ohjaus.** Mekaaninen vipukytkin voidaan kauko-ohjata push-pull-vaijerilla tai 24 V:n
+     toimilaitteella, ja asennon voi tunnistaa rajakytkimellä (ESP32 PDM, Signal K).
+   - **Joustokytkimen mitoitus.** Tarkista HRC 150:n elementti ja navat 48 mm:n reiälle, PTO-akselin
+     kiilalle ja momentille. Muistini mukaan HRC 150:n nimellismomentti on noin 600 Nm, mikä
+     riittäisi, ja suurin reikä riippuu napatyypistä (F/H taper-lock vai B). **⚠ Tarkista molemmat
+     valmistajan luettelosta.**
+   - **Linjaus.** Vaihteisto on kiinnitetty jäykästi runkoon [blogi 2021-02-08], kuten myös uusi
+     kytkin- ja pumppualusta. HRC:n tarvitsee siis ottaa vastaan vain pienet asennusvirheet ja
+     rungon joustot, ei koneen liikkeitä. Linjaa kytkimen ensiöakseli PTO-akseliin joustokytkimen
+     sallimien säteis- ja kulmavirheiden sisään, ja tarkista uudelleen koeajon jälkeen.
+   - **Tila.** Joustokytkin, kytkin ja pumppu peräkkäin vievät pituutta. Tarkista tila suhteessa
+     runkoon, vaihteistoon ja potkuriakselin laakeriin.
+8. **Nykyiset 1/2":n keulapotkuriletkut riittävät.** 33,8 l/min:llä öljyn nopeus 12,7 mm:n letkussa on
+   noin 4,5 m/s, eli painelinjojen tavanomaisen 3–6 m/s:n ohjearvon sisällä. Arvioitu painehäviö
+   letkumetriä kohden (vain suora letku, oletuksena ISO VG 46):
 
-   | Oil temperature | Viscosity | Loss per metre | Loss for 2 × 8.5 m (A + B lines) |
+   | Öljyn lämpötila | Viskositeetti | Häviö / metri | Häviö 2 × 8,5 m (A + B) |
    |---|---|---|---|
-   | 5 °C (cold start) | ~380 cSt | ~2.9 bar | ~50 bar |
-   | 20 °C | ~130 cSt | ~1.0 bar | ~17 bar |
-   | 40 °C | 46 cSt | ~0.35 bar | ~6 bar |
-   | 60 °C | ~21 cSt | ~0.30 bar | ~5 bar |
+   | 5 °C (kylmäkäynnistys) | ~380 cSt | ~2,9 bar | ~50 bar |
+   | 20 °C | ~130 cSt | ~1,0 bar | ~17 bar |
+   | 40 °C | 46 cSt | ~0,35 bar | ~6 bar |
+   | 60 °C | ~21 cSt | ~0,30 bar | ~5 bar |
 
-   *Straight hose only; fittings add a little more.* The hoses are SAE 100R2AT / EN 853. The
-   standard's minimum working pressure for 1/2" (-08) is about 275 bar (4000 psi), and the owner
-   reports 300 bar for this hose. Either way it's above the 250 bar relief setting.
-   - **The return line (3/4", < 0.5 m) is negligible:** under 0.3 bar even with cold oil. The return
-     filter will be the main loss on the tank side.
-   - **The P2 pressure line (3/4", 3–4 m) is not a concern.** At 37 L/min (idle) the oil moves at
-     about 2.2 m/s and loses under 1 bar when warm. At 106 L/min (2500 rpm, clutch engaged) it's
-     about 6 m/s and 1.5–2.5 bar, which is acceptable.
-   - **Use hose rather than tube for long thruster runs.** The 15×2 precision tube used elsewhere
-     has an 11 mm bore. At this flow that's about 5.9 m/s and roughly twice the loss of the hose.
-9. **Expected thruster thrust is about 85–89 % when the oil is warm, slightly under the 90 % target.**
-   The relief valve caps pressure at the manifold at 250 bar. Losses in the valve, hoses and return
-   line come out of that, so the motor gets less. Propeller torque rises with the square of speed,
-   so the thruster settles at a lower speed, and the excess flow goes over the relief valve.
+   *Vain suora letku; liittimet lisäävät hieman.* Letkut ovat SAE 100R2AT / EN 853. Standardin
+   vähimmäistyöpaine 1/2":lle (-08) on noin 275 bar (4000 psi), ja omistajien mukaan näiden letkujen
+   merkintä on 300 bar. Kummin tahansa se on yli 250 barin paineenrajoituksen.
+   - **Paluulinjan (3/4", < 0,5 m) häviö on merkityksetön:** alle 0,3 bar kylmälläkin öljyllä.
+     Säiliön puolella suurin häviö on paluusuodatin.
+   - **P2:n painelinja (3/4", 3–4 m) ei ole ongelma.** 37 l/min:llä (tyhjäkäynti) nopeus on noin
+     2,2 m/s ja häviö alle 1 bar lämpimänä. 106 l/min:llä (2500 rpm, kytkin päällä) nopeus on noin
+     6 m/s ja häviö 1,5–2,5 bar, mikä on hyväksyttävää.
+   - **Käytä pitkissä keulapotkurilinjoissa letkua, älä putkea.** Muualla käytetyn 15×2-tarkkuusputken
+     sisähalkaisija on 11 mm. Tällä virtauksella nopeus olisi noin 5,9 m/s ja häviö noin kaksinkertainen
+     letkuun verrattuna.
+9. **Keulapotkurin odotettu työntövoima lämpimällä öljyllä on noin 85–89 %, hieman alle 90 %:n
+   tavoitteen.** Paineenrajoitusventtiili rajaa paineen pohjalaatalla 250 bariin. Venttiilin,
+   letkujen ja paluulinjan häviöt vähennetään siitä, joten moottori saa vähemmän. Potkurin momentti
+   kasvaa nopeuden neliössä, joten potkuri asettuu hieman pienemmälle kierrosnopeudelle ja ylimääräinen
+   virtaus menee paineenrajoituksen yli.
 
-   | Oil temperature | Propeller speed | Thrust | Power |
+   | Öljyn lämpötila | Potkurin kierrosnopeus | Työntövoima | Teho |
    |---|---|---|---|
    | 5 °C | ~86 % | ~74 % | ~64 % |
    | 20 °C | ~92 % | ~84 % | ~77 % |
    | 40 °C | ~94 % | ~88 % | ~82 % |
 
-   *Assumes about 6 bar loss per valve path (P→A and B→T), the measured line lengths, and about
-   1.5 bar for the return filter. With 4–10 bar per valve path the warm result ranges from 85 to 89 %. **⚠ Get the
-   BAV-713 pressure-drop curve** to tighten this.*
+   *Oletukset: noin 6 barin häviö venttiilin kummallakin reitillä (P→A ja B→T), mitatut
+   letkupituudet ja noin 1,5 bar paluusuodattimessa. 4–10 barin venttiilihäviöillä lämmin tulos on
+   85–89 %. **⚠ Hanki BAV-713:n painehäviökäyrä** tarkentamaan tätä.*
 
-   The cheapest way to reach a true ~90 % is to set the relief to about **260–265 bar**, provided
-   the new pump and the CETOP valves are rated for it. The hoses (300 bar) already are. Check this
-   when choosing the pump; many gear pumps are rated around 250 bar continuous and 280 bar peak.
-10. **P2 suction line: the owner confirmed 32 mm ID (≈ 1-1/4"), which is adequate.** Use the 1-1/4"
-   column in the inlet-pressure table below. The 1" analysis is kept for reference.
+   Täyden ~90 %:n saavuttaminen vaatii korkeamman paineenrajoituksen ja enemmän virtausta
+   tyhjäkäynnillä, ks. [p2-pump-options.md](design/p2-pump-options.md#paineenrajoituksen-nostaminen-yli-250-barin).
+10. **P2:n imulinja: omistajat vahvistivat 32 mm:n sisähalkaisijan (≈ 1-1/4"), mikä riittää.**
+    Säiliön ulosotto on samaa kokoa, joten linjassa ei ole 1":n kuristusta. Arvioitu paine pumpun
+    imuaukolla, kun säiliön öljypinta on noin 1 m pumpun yläpuolella (+0,085 bar) ja liitinhäviöt
+    ovat noin K = 2,5 (säiliön ulosotto, palloventtiili, kulmat):
 
-   *Original analysis, which assumed a 1" (3 m) line: fine when warm but marginal with cold oil.* Oil moves at
-   about 1.2 m/s at idle (46 cm³, 800 rpm), which is at the usual ~1.2 m/s limit for suction.
-   Estimated hose loss alone, before the tank outlet, ball valve and fittings:
+    | Öljyn lämpötila | 1" 800 rpm | 1" 1000 rpm | **32 mm 800 rpm** | **32 mm 1000 rpm** |
+    |---|---|---|---|---|
+    | 5 °C | −0,53 bar | −0,69 bar | **−0,17 bar** | **−0,23 bar** |
+    | 15 °C | −0,22 bar | −0,30 bar | −0,04 bar | −0,07 bar |
+    | 20 °C | −0,14 bar | −0,20 bar | −0,01 bar | −0,03 bar |
+    | 40 °C | 0,00 bar | −0,03 bar | +0,05 bar | +0,04 bar |
 
-   | Oil temperature | 800 rpm (37 L/min) | 1000 rpm (46 L/min) | 1200 rpm (55 L/min) |
-   |---|---|---|---|
-   | 5 °C | ~0.60 bar | ~0.75 bar | ~0.90 bar |
-   | 20 °C | ~0.21 bar | ~0.26 bar | ~0.31 bar |
-   | 40 °C | ~0.07 bar | ~0.09 bar | ~0.11 bar |
+    *1":n sarakkeet on jätetty vertailuksi.* Hammaspyöräpumput vaativat yleensä, että imupaine on
+    vähintään noin −0,2…−0,3 bar (ylipaine). **Tarkista valitun pumpun datalehdestä.** 32 mm:n linja
+    pysyy tämän sisällä noin 5 °C:een asti. Kylmänä kannattaa silti kytkeä pumppu tyhjäkäynnillä.
+    Lähtö satamasta on kriittisin tilanne: keulapotkuria tarvitaan heti käynnistyksen jälkeen, kun
+    öljy on konehuoneen lämpöistä. HV-luokan öljy antaa lisää marginaalia.
 
-   Gear pumps typically need inlet pressure no lower than about −0.2 to −0.3 bar gauge. **Check the
-   chosen pump's datasheet.** With cold oil the hose alone takes more than that, so cold starts
-   risk cavitation, which is noisy and wears the pump. Ways to reduce the risk, cheapest first:
-   - **Flooded suction:** keep the tank oil level above the pump inlet. Each metre of head gives
-     about +0.085 bar.
-   - **Use 1-1/4" suction hose.** Laminar loss scales with 1/D⁴, so this cuts the loss to about 40 %
-     (≈ 0.25 bar at 5 °C, idle). The tank muffs are 1", so it needs an adapter at the tank or a
-     larger muff.
-   - **Choose a higher-VI or thinner oil** (HV 32/46 multigrade). This mainly helps cold starts.
-   - **Operating rule:** don't engage the clutch, or hold off running the thruster hard, until the
-     oil has warmed.
+    2500 rpm:llä virtaus olisi niin suuri, että kytkimen pitää silti irrota automaattisesti noin
+    1000–1200 rpm:n yläpuolella.
+11. **Jos konetta kierretään kytkimen ollessa päällä,** pumpun tuotto kasvaa kierrosten mukana (noin
+    106 l/min 2500 rpm:llä). Virtauksensäätöventtiilin ja paluulinjan pitää kestää se, tai kytkimen
+    pitää irrota automaattisesti tietyn kierrosluvun yläpuolella. Tarkista VPR3:n suurin sallittu
+    tulovirtaus (säädetty 35 l/min).
 
-   **With the tank oil level about 1 m above the pump inlet (owner, 2026-10-21)**, the tank adds about
-   +0.085 bar. Estimated pump inlet pressure, including about K = 2.5 of fitting losses (tank outlet,
-   ball valve, elbows):
+## 1–2. Alus ja voimansiirto
 
-   | Oil temperature | 1" at 800 rpm | 1" at 1000 rpm | 1-1/4" at 800 rpm | 1-1/4" at 1000 rpm |
-   |---|---|---|---|---|
-   | 5 °C | −0.53 bar | −0.69 bar | −0.17 bar | −0.23 bar |
-   | 15 °C | −0.22 bar | −0.30 bar | −0.04 bar | −0.07 bar |
-   | 20 °C | −0.14 bar | −0.20 bar | −0.01 bar | −0.03 bar |
-   | 40 °C | 0.00 bar | −0.03 bar | +0.05 bar | +0.04 bar |
+Siirretty yhteiseen [alustiedostoon](../vessel/README.md), jossa on myös muiden järjestelmien
+tarvitsemat sähköjärjestelmän perustiedot.
 
-   **Departure is the critical case.** The thruster is needed right after the engine starts, when
-   the oil is at engine room temperature. With the clutch disengaged, only the steering circuit
-   warms the shared tank. On a Finnish summer day (15–20 °C), 1" sits right at the typical −0.2 bar
-   limit. In spring and autumn it's well below. **Recommendation:** make the new 3 m suction hose
-   **1-1/4"**, since it's being made anyway. That keeps the inlet within about −0.2 bar down to about
-   5 °C. Adding HV-grade oil gives more margin.
+## 3. Hydraulijärjestelmän yleiskuvaus
 
-   At 2500 rpm the flow would reach about 3.5 m/s in a 1" line, so the clutch should still disengage
-   automatically above roughly 1000–1200 rpm.
-11. **If the engine is revved while the clutch is engaged,** pump flow rises with rpm (about 106 L/min
-   at 2500 rpm). The flow control valve and the return line must handle that, or the clutch must be
-   disengaged automatically above a set rpm. Check the rated inlet flow of the VPR3 (35 L/min
-   regulated).
->
-> Sources are cited as `[blog YYYY-MM-DD]` and refer to posts in `plektra.github.io/_posts/`.
+Alkuperäinen "traktorijärjestelmä" (hihnavetoinen pumppu omalla säiliöllään, orbitroli,
+suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestelmällä**
+[blogi 2017-04-01]:
 
-## 1–2. Vessel and power train
+- **Piiri 1 — Ohjaus:** pieni pumppu → etusijavirtauksen säätö → orbitroli → ohjaussylinteri.
+  Piirissä on tarkoituksella vain peräsin, turvallisuussyistä.
+- **Piiri 2 — Apupiiri:** iso pumppu → virtauksensäätö → vapaakiertoventtiili → CETOP 3 -pohjalaatta
+  → keulapotkuri (myöhemmin myös ankkurivinssi ja muut kuormat).
+- **Varajärjestelmä:** 24 V:n sähköpumppu, joka syöttää ohjauspiiriä vastaventtiilin kautta.
+- **Vaihteiston kytkinhydrauliikka** on erillinen piiri, eikä se kuulu tähän.
 
-Moved to the shared [vessel overview](../vessel/README.md), which also covers the electrical basics
-used by other systems.
+![Hydraulikaavio v3, 2018](img/hydraulics-v3-2018.png)
 
-## 3. Hydraulic system overview
+*Kaavio v3 blogista.*
 
-The original "tractor" system (belt-driven pump with integral tank, Orbitrol, directional valve
-and a leaking cylinder) was replaced in 2017 by a **two-circuit design** [blog 2017-04-01]:
+### 3.1 Pumppujen veto (tilanne 2018)
 
-- **Circuit 1 — Steering:** small pump → priority flow control → Orbitrol → steering cylinder.
-  Only the rudder is on this circuit, by design, for safety.
-- **Circuit 2 — Auxiliary:** large pump → flow control → unloading valve → CETOP 3 manifold →
-  bow thruster (and later the windlass and other loads).
-- **Emergency:** 24 V electric pump, which feeds the steering circuit through a check valve.
-- **Gearbox clutch hydraulics** are a separate circuit and out of scope here.
-
-![Hydraulic schematic v3, 2018](img/hydraulics-v3-2018.png)
-
-*Schematic v3 from the blog (Finnish labels: virtauksensäätö = flow control,
-suuntaventtiili = directional valve, pohjalaatta = subplate, paineenrajoitus = relief valve).*
-
-### 3.1 Pump drive (as of 2018)
-
-| Item | Value | Source |
+| Kohde | Arvo | Lähde |
 |---|---|---|
-| Drive | V-belts (Optibelt Super X-Power) from the crankshaft, through a support bearing unit to two tandem pumps | [blog 2017-07-04] |
-| Pulley / ratio | 180 mm pulley; engine:pump = 1:1.24 | [blog 2017-07-04] |
-| Pump mounting | 10 mm steel bracket bolted to the engine block, 10.9 bolts | [blog 2017-07-04] |
-| **Known limitation** | Belts slip above **~160 bar** on the auxiliary pump (~9 kW). Not safe for continuous use. | [blog 2018-11-12] |
-| Planned fix (2018) | Pumps moved to the front of the engine on a cardan shaft (1:1), so new pumps would be needed | [blog 2018-11-12] |
-| Planned fix (2021) | Drive the large pump from the PTO on the new gearbox | [blog 2021-02-08] |
-| Decision (2026) | P1 on the front belts (steering only); P2 on the gearbox PTO. The front cardan idea has been dropped. | owner 2026-10-21 |
+| Veto | Kiilahihnat (Optibelt Super X-Power) kampiakselilta tukilaakeriyksikön kautta kahdelle peräkkäiselle pumpulle | [blogi 2017-07-04] |
+| Hihnapyörä / välitys | 180 mm:n hihnapyörä; kone:pumppu = 1:1,24 | [blogi 2017-07-04] |
+| Pumppujen kiinnitys | 10 mm:n teräskannake pultattuna koneeseen, 10.9-pultit | [blogi 2017-07-04] |
+| **Tunnettu rajoitus** | Hihnat luistavat apupumpulla yli **~160 barin** (~9 kW). Ei turvallinen jatkuvaan käyttöön. | [blogi 2018-11-12] |
+| Suunniteltu korjaus (2018) | Pumput koneen eteen kardaaniakselilla (1:1), mikä vaatisi uudet pumput | [blogi 2018-11-12] |
+| Suunniteltu korjaus (2021) | Iso pumppu uuden vaihteiston PTO:lle | [blogi 2021-02-08] |
+| Päätös (2026) | P1 etupään hihnoille (vain ohjaus), P2 vaihteiston PTO:lle. Etupään kardaaniajatuksesta luovuttiin. | [omistaja 2026-10-21] |
 
-### 3.2 Pumps
+### 3.2 Pumput
 
-| Pump | Make | Displacement | Rating (schematic) | Flow @ 800 / 1800 / 2500 rpm engine* | Feeds |
+| Pumppu | Merkki | Kierrostilavuus | Arvot (kaavio) | Tuotto koneen 800 / 1800 / 2500 rpm:llä* | Syöttää |
 |---|---|---|---|---|---|
-| P1 | Salami, gear | 16.6 cm³/rev | 250 bar, 16–40 L/min | 16.5 / 37.1 / 51.5 L/min | Steering |
-| P2 | Salami, gear (group 3) | 33.5 cm³/rev | 250 bar, 30–80 L/min | 33.2 / 74.8 / 103.8 L/min | Auxiliary |
-| P3 | Recovered from an old power pack; motor 24 V, 2.5 kW | **⚠ unknown** | | | Emergency steering |
+| P1 | Salami, hammaspyörä | 16,6 cm³/r | 250 bar, 16–40 l/min | 16,5 / 37,1 / 51,5 l/min | Ohjaus |
+| P2 | Salami, hammaspyörä (ryhmä 3) | 33,5 cm³/r | 250 bar, 30–80 l/min | 33,2 / 74,8 / 103,8 l/min | Apupiiri (liian pieni PTO:lle, ks. §0) |
+| P3 | Vanhasta voimayksiköstä; moottori 24 V, 2,5 kW | **⚠ ei tiedossa** | | | Varaohjaus |
 
-\* Calculated with the 1:1.24 belt ratio and 100 % volumetric efficiency. At 2500 rpm engine speed
-the pumps turn at ~3100 rpm, and both flows are above the ratings on the schematic.
-**⚠ Check the pumps' maximum allowed speed** if the belt drive is still in use.
+\* Laskettu hihnavälityksellä 1:1,24 ja 100 %:n volumetrisella hyötysuhteella. Koneen 2500 rpm:llä
+pumput pyörivät noin 3100 rpm, ja molempien tuotot ylittävät kaavion arvot. **⚠ Tarkista P1:n suurin
+sallittu kierrosnopeus**, koska se jää hihnavetoiseksi.
 
-### 3.3 Circuit 1 — Steering
+### 3.3 Piiri 1 — Ohjaus
 
-| Component | Spec | Notes |
+| Komponentti | Tiedot | Huomiot |
 |---|---|---|
-| Flow control | RPF3, priority flow 20 L/min, excess to tank | At idle the pump gives ~16.5 L/min, so all of it reaches the Orbitrol |
-| Steering unit | Orbitrol "160/4" (presumably 160 cm³/rev) **⚠ verify** type (open/closed centre, load reaction) | |
-| Cylinder | Double-acting; bore / rod / stroke **⚠ unknown** | Fitted to the original hole near the rudder stock. Doesn't quite reach hard over to port, and the hole is slightly oversized. Might be replaced with a longer cylinder [blog 2017-07-04] |
-| Emergency bypass | Hand valve across A–B at the cylinder, for steering with a removable emergency tiller | [blog 2017-07-04] |
-| Working pressure | Normally < 50 bar | [blog 2017-07-04] |
-| Relief setting | **⚠ unknown** | |
-| Emergency supply | P3 via check valve into the RPF3 inlet | Planned in 2017. **⚠ verify** it's installed. The 65 A alternator can't sustain it for long. |
-| Bleeding | No bleed screws; cylinder ports face sideways | Hard to bleed [blog 2017-07-04] |
+| Virtauksensäätö | RPF3, etusijavirtaus 20 l/min, ylimäärä säiliöön | Tyhjäkäynnillä pumppu antaa ~16,5 l/min, joten kaikki menee orbitrolille |
+| Ohjausyksikkö | Orbitroli "160/4" (oletettavasti 160 cm³/r). **⚠ Tarkista** tyyppi (avoin/suljettu keskiasento, kuormantakaisinkytkentä). | |
+| Sylinteri | Kaksitoiminen; männän ja varren halkaisija sekä iskunpituus **⚠ ei tiedossa** | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
+| Hätäohitus | Käsiventtiili A- ja B-linjan välissä sylinterin vieressä, irrotettavaa hätäpinnaa varten | [blogi 2017-07-04] |
+| Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
+| Paineenrajoitus | **⚠ ei tiedossa** | |
+| Varasyöttö | P3 vastaventtiilin kautta RPF3:n tuloon | Suunniteltu 2017. **⚠ Tarkista**, onko asennettu. 65 A:n laturi ei jaksa syöttää sitä pitkään. |
+| Ilmaus | Ei ilmausruuveja; sylinterin liitännät sivuilla | Vaikea ilmata [blogi 2017-07-04] |
 
-### 3.4 Circuit 2 — Auxiliary
+### 3.4 Piiri 2 — Apupiiri
 
-| Component | Spec | Notes |
+| Komponentti | Tiedot | Huomiot |
 |---|---|---|
-| Flow control | VPR3, pressure-compensated, 35 L/min, excess to tank | |
-| Unloading valve | 2/2 solenoid, normally open, teed after the VPR3 | De-energised means P2 flow goes to tank at low pressure. Energised means flow goes to the manifold. |
-| Manifold | CETOP 3, 4-station subplate, relief valve set to 250 bar. **Relief valve rated up to 300 bar, 80 L/min** (owner 2026-10-22). | 1 station used, 3 spare (windlass etc.) |
-| Thruster valve | BAV-713 4/3 solenoid, A-B-T open centre (motor freewheels in neutral) | |
-| Pressure gauge | P-line before the subplate | Not shown on the schematic |
-| Bow thruster | Side-Power SH240-U11 | Motor case drain goes to tank |
-| Thruster demand | 100 %: 264 bar × 33.8 L/min (≈ 14.9 kW hydraulic); 60 %: 158 bar × 26.2 L/min (≈ 6.9 kW) | Manufacturer data [blog 2018-11-12] |
-| Achieved (belt drive) | ~160–170 bar, which was enough to turn the boat at the quay | [blog 2018-11-12] |
-| Windlass | Has a hydraulic motor; specs **⚠ unknown**, not yet connected (2018) | [blog 2017-04-01] |
+| Virtauksensäätö | VPR3, painekompensoitu, 35 l/min, ylimäärä säiliöön | |
+| Vapaakiertoventtiili | 2/2-solenoidiventtiili, jännitteettömänä auki, T-haaralla VPR3:n jälkeen | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön, jännitteellisenä pohjalaatalle |
+| Pohjalaatta | CETOP 3, 4-paikkainen, paineenrajoitus asetettu 250 bariin. **Paineenrajoitusventtiili enintään 300 bar, 80 l/min** [omistaja 2026-10-22]. | 1 paikka käytössä, 3 vapaana (ankkurivinssi ym.) |
+| Keulapotkurin venttiili | BAV-713 4/3-solenoidiventtiili, keskiasennossa A-B-T vapaakierto (moottori pyörii vapaasti) | |
+| Painemittari | P-linjassa ennen pohjalaattaa | Ei näy kaaviossa |
+| Keulapotkuri | Side-Power SH240-U11 | Moottorin vuotolinja säiliöön |
+| Keulapotkurin tarve | 100 %: 264 bar × 33,8 l/min (≈ 14,9 kW hydraulista); 60 %: 158 bar × 26,2 l/min (≈ 6,9 kW) | Valmistajan tiedot [blogi 2018-11-12] |
+| Saavutettu (hihnaveto) | ~160–170 bar, mikä riitti kääntämään aluksen laiturissa | [blogi 2018-11-12] |
+| Ankkurivinssi | Hydraulimoottori olemassa; tiedot **⚠ ei tiedossa**, ei vielä kytketty (2018) | [blogi 2017-04-01] |
 
-### 3.5 Reservoir, fluid and piping
+### 3.5 Säiliö, öljy ja putkisto
 
-| Item | Value | Source |
+| Kohde | Arvo | Lähde |
 |---|---|---|
-| Reservoir | Flowfit 100 L steel, mounted on 50×50×5 angle brackets on the frames | [blog 2017-04-01] |
-| Oil fill | 80 L | [blog 2017-07-04] |
-| Oil type / grade | **⚠ unknown** | |
-| Suction lines | 2017 plan: 2 × 1" (engine pumps) and 1 × 3/4" (electric pump), each with a ball valve. **2026: the P2 outlet matches its 32 mm hose.** | [blog 2017-04-10], owner 2026-10-21 |
-| Tank-top components | Flow control valves, return filter, filler/breather cap | [blog 2017-04-10] |
-| Return filter | Has a pressure gauge; it's hard to read in its current position | [blog 2017-04-10] |
-| Hard piping | 15×2 precision steel tube for long runs, hoses elsewhere | [blog 2017-04-01] |
-| Oil cooler | None in either circuit **⚠ verify** | |
-| Daily fuel tank | 150 L, located below the hydraulic reservoir | [blog 2017-04-19] |
-| Main supplier | SixTek (hydrauliikkapumppu.fi) | [blog 2017-04-01] |
+| Säiliö | Flowfit 100 l, teräs, 50×50×5-kulmarautakannakkeilla kaariin | [blogi 2017-04-01] |
+| Öljymäärä | 80 l | [blogi 2017-07-04] |
+| Öljyn tyyppi ja luokka | **⚠ ei tiedossa** | |
+| Imulinjat | Suunnitelma 2017: 2 × 1" (konepumput) ja 1 × 3/4" (sähköpumppu), kussakin palloventtiili. **2026: P2:n ulosotto on 32 mm:n letkun kokoinen.** | [blogi 2017-04-10], [omistaja 2026-10-22] |
+| Säiliön kannen komponentit | Virtauksensäätöventtiilit, paluusuodatin, täyttö- ja huohotinkorkki | [blogi 2017-04-10] |
+| Paluusuodatin | Painemittarillinen; nykyisessä paikassa vaikea lukea | [blogi 2017-04-10] |
+| Putkitus | Pitkät vedot 15×2-tarkkuusteräsputkella, muuten letkut | [blogi 2017-04-01] |
+| Öljynjäähdytin | Ei kummassakaan piirissä **⚠ tarkista** | |
+| Päivätankki (polttoaine) | 150 l, hydraulisäiliön alla | [blogi 2017-04-19] |
+| Päätoimittaja | SixTek (hydrauliikkapumppu.fi) | [blogi 2017-04-01] |
 
-## 4. Known issues and lessons learned
+## 4. Tunnetut ongelmat ja opit
 
-1. **The belt drive can't carry full thruster power.** It slips at about 160 bar, while the
-   thruster needs about 15 kW at 264 bar. This is the main reason to redesign the drive.
-2. **Fixed-displacement pumps on a variable-speed engine.** Flow scales with engine rpm, and the
-   excess is throttled to tank. That wastes power and heats the oil, and there's no cooler.
-3. **Steering cylinder geometry.** It doesn't reach hard over to port, and the mounting hole is
-   oversized.
-4. **Bleeding is difficult.** There are no bleed points, and the cylinder ports face sideways.
-5. **Emergency electric pump.** A 2.5 kW motor at 24 V draws roughly 100+ A, which the 65 A
-   alternator can't sustain.
-6. **Return filter gauge** is in a poor position for reading.
+1. **Hihnaveto ei kanna keulapotkurin täyttä tehoa.** Hihnat luistavat noin 160 barissa, kun
+   keulapotkuri tarvitsee noin 15 kW 264 barilla. Tämä on pääsyy voimansiirron uusimiseen.
+2. **Vakiotilavuuspumput vaihtelevalla kierrosluvulla.** Tuotto seuraa koneen kierroksia, ja ylimäärä
+   kuristetaan säiliöön. Se tuhlaa tehoa ja lämmittää öljyä, eikä jäähdytintä ole.
+3. **Ohjaussylinterin geometria.** Ei yllä paapuurin ääriasentoon, ja kiinnitysreikä on väljä.
+4. **Ilmaus on hankalaa.** Ilmauspisteitä ei ole, ja sylinterin liitännät ovat sivuilla.
+5. **Sähköinen varapumppu.** 2,5 kW:n moottori ottaa 24 V:lla noin 100 A tai enemmän, mitä 65 A:n
+   laturi ei jaksa.
+6. **Paluusuodattimen painemittari** on huonosti luettavassa paikassa.
 
-## 5. Open questions (current state, 2026)
+## 5. Avoimet kysymykset
 
-- [x] Pump drive: P1 on the front belts, P2 on the gearbox PTO (planned; all disassembled now)
-- [x] Advance 300 installed and aligned
-- [x] Advance 300 PTO: 1:1, input shaft (turns in neutral), no clutch built in
-- [x] Advance 300 PTO rating: 0.044 kW/rpm (≈ 420 Nm)
-- [x] Advance 300 PTO output: Ø48 mm keyed shaft, no flange; HRC 150 coupling to a hull-mounted clutch + pump
-- [x] Thruster pressure: 250 bar class, ~90 % thrust accepted
-- [ ] HRC 150: torque rating, maximum bore and hub type for 48 mm (catalogue)
-- [x] Thruster hoses: 1/2", 300 bar, A and B 8.5 m each
-- [x] P2 pressure line: 3/4" hose, 3–4 m
-- [x] P2 suction line: 1", about 3 m
-- [x] Return line from the CETOP T port to the tank: 3/4", < 0.5 m
-- [x] Tank oil level about 1 m above the P2 inlet (flooded suction)
-- [x] Suction hose: 32 mm ID (≈ 1-1/4"), adequate per item 10
-- [x] Suction connection at the tank: outlet matches the 32 mm hose (no 1" restriction)
-- [ ] Chosen pump's minimum inlet pressure (datasheet)
-- [ ] Hydraulic oil grade (HV 32/46 recommended)
-- [ ] BAV-713 pressure drop at ~34 L/min (P→A, B→T)
-- [ ] Relief: stay at 250 bar (~85–89 % thrust) or ~260–265 bar (~90 %) if the pump and valves allow
-- [ ] Clutch: shaft-to-shaft electromagnetic vs jackshaft + clutch vs stand-alone clutch PTO unit
-- [ ] PTO clutch: type (electromagnetic / hydraulic), torque rating, mounting space
-- [ ] P2: new pump of about 40–46 cm³ (the 33.5 cm³ Salami is too small at 1:1; see §0)
-- [ ] Engine idle rpm after the refit, and whether a raised "thruster idle" is acceptable
-- [ ] Is the windlass connected? What are its motor make, model and displacement?
-- [ ] Is the emergency electric pump connected?
-- [ ] Steering cylinder bore / rod / stroke, tiller arm length, rudder area and type
-- [ ] Orbitrol model (open/closed centre, load-reacting?) and any autopilot
-- [ ] Relief settings on circuit 1
-- [ ] Hydraulic oil type and grade
-- [ ] DC system voltage, house bank capacity, generator
-- [ ] Any changes since 2021 that the blog doesn't cover
-- [ ] What's wrong with the current system or missing from it, i.e. why redesign now?
+Ratkaistut:
+
+- [x] Pumppujen veto: P1 etupään hihnoille, P2 vaihteiston PTO:lle (suunniteltu; nyt purettuna)
+- [x] Advance 300 asennettu ja linjattu
+- [x] Advance 300:n PTO: 1:1, ensiöakseli (pyörii vapaalla), ei omaa kytkintä
+- [x] Advance 300:n PTO:n nimellisarvo: 0,044 kW/rpm (≈ 420 Nm)
+- [x] PTO:n ulostulo: Ø48 mm:n kiila-akseli ilman laippaa; HRC 150 -joustokytkin runkoon kiinnitetylle kytkimelle ja pumpulle
+- [x] Keulapotkurin paine: 250 barin luokka, ~90 % hyväksytty
+- [x] Keulapotkurin letkut: 1/2", 300 bar, A ja B 8,5 m kumpikin
+- [x] P2:n painelinja: 3/4" letku, 3–4 m
+- [x] P2:n imulinja: 32 mm, noin 3 m, säiliön ulosotto samaa kokoa
+- [x] Paluulinja CETOP:n T-liitännästä säiliöön: 3/4", < 0,5 m
+- [x] Säiliön öljypinta noin 1 m P2:n imuaukon yläpuolella
+- [x] Pohjalaatan paineenrajoitusventtiili: enintään 300 bar, 80 l/min
+
+Avoimet:
+
+- [ ] **Koneen todellinen tyhjäkäyntikierrosluku** (ratkaisee pumpun koon, ks. [vessel/README.md](../vessel/README.md#tyhjäkäyntikierrokset))
+- [ ] P2:n koko: 43–51 cm³ tyhjäkäynnin mukaan (33,5 cm³:n Salami on liian pieni)
+- [ ] PTO-kytkin: Borelli 30501/30502 (suositus) vai 30300 230 barilla; spline-sovite, vipuvoima, hinta
+- [ ] HRC 150: nimellismomentti, suurin reikä ja napatyyppi 48 mm:lle ja kytkimen akselille (luettelo)
+- [ ] Valitun pumpun pienin sallittu imupaine (datalehti)
+- [ ] Hydrauliöljyn tyyppi ja luokka (suositus HV 32/46)
+- [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T)
+- [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
+- [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
+- [ ] Onko sähköinen varapumppu kytketty?
+- [ ] Ohjaussylinterin männän ja varren halkaisija ja iskunpituus, ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
+- [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
+- [ ] Ohjauspiirin paineenrajoitus
+- [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

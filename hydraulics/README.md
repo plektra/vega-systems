@@ -1,24 +1,25 @@
-# Hydraulics
+# Hydrauliikka
 
-Steering, bow thruster, windlass and future hydraulic loads.
+Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 
-| File | What it is |
+| Tiedosto | Sisältö |
 |---|---|
-| [current-system.md](current-system.md) | As-built baseline, current refit status (§0), design implications, open questions |
-| [requirements.md](requirements.md) | Requirements template, partly filled in |
-| [loads.yaml](loads.yaml) | Load register: numbers for each hydraulic load (machine-readable) |
-| [design/p2-pump-options.md](design/p2-pump-options.md) | Auxiliary pump and PTO clutch options, with candidate products evaluated |
-| [img/](img/) | Schematics and photos |
+| [current-system.md](current-system.md) | Lähtötilanne, nykyinen remonttitilanne (§0), vaikutukset suunnitteluun, avoimet kysymykset |
+| [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
+| [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
+| [design/p2-pump-options.md](design/p2-pump-options.md) | Apupiirin pumpun ja PTO-kytkimen vaihtoehdot sekä arvioidut tuote-ehdokkaat |
+| [img/](img/) | Kaaviot ja kuvat |
 
-## Current state in one paragraph
+## Tilanne lyhyesti
 
-Everything hydraulic is disassembled while the engine is realigned to the new Advance 300 gearbox.
-The plan has two circuits:
-- **Steering:** a 16.6 cm³ gear pump, belt-driven from the front of the engine, feeding the
-  Orbitrol and steering cylinder.
-- **Auxiliary:** a new group-3 gear pump driven from the gearbox PTO through an HRC coupling and a
-  mechanical clutch, feeding the bow thruster (and later the windlass) through the CETOP 3 manifold.
-  Relief at 250 bar, about 90 % thrust accepted.
+Kaikki hydrauliikka on purettuna, kun konetta linjataan uuteen Advance 300 -vaihteistoon.
+Suunnitelmassa on kaksi piiriä:
 
-The clutch choice (Borelli 30500 recommended) and the pump size (43–51 cm³) depend on the engine's
-real idle speed.
+- **Ohjaus:** 16,6 cm³:n hammaspyöräpumppu koneen etupäästä hihnavedolla, syöttää orbitrolia ja
+  ohjaussylinteriä.
+- **Apupiiri:** uusi ryhmän 3 hammaspyöräpumppu vaihteiston PTO:lta HRC-joustokytkimen ja
+  mekaanisen kytkimen kautta, syöttää keulapotkuria (myöhemmin myös ankkurivinssiä) CETOP 3
+  -pohjalaatan kautta. Paineenrajoitus 250 bar, noin 90 %:n työntövoima hyväksytty.
+
+Kytkimen valinta (suositus Borelli 30500) ja pumpun koko (43–51 cm³) riippuvat koneen todellisesta
+tyhjäkäyntikierrosluvusta.

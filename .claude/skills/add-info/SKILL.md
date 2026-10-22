@@ -1,31 +1,32 @@
 ---
 name: add-info
-description: Record new facts, measurements, photos, prices or datasheet values about Vega's systems in the right documents. Use when the user reports something they measured, read, bought, changed on board, or found in a datasheet or link.
+description: Kirjaa uudet tiedot, mittaukset, kuvat, hinnat tai datalehtiarvot Vegan järjestelmistä oikeisiin dokumentteihin. Käytä, kun käyttäjä kertoo jotain, minkä on mitannut, lukenut, ostanut, muuttanut veneellä tai löytänyt datalehdestä tai linkistä.
 ---
 
-# Add new information
+# Lisää uutta tietoa
 
-1. **Work out what the information is about** (which system, which component) and **where it came
-   from**:
-   - the owner measured or saw it → `[owner YYYY-MM-DD]` with today's date;
-   - a datasheet or web page → `[datasheet <name>]` with the URL;
-   - an estimate → say so.
+1. **Selvitä mitä tieto koskee** (järjestelmä, komponentti) ja **mistä se on peräisin**:
+   - omistaja mittasi tai näki → `[omistaja VVVV-KK-PP]` tämän päivän päivämäärällä;
+   - datalehti tai verkkosivu → `[datalehti <nimi>]` ja URL;
+   - arvio → sano se.
 
-   If the source or unit isn't clear, ask one short question.
-2. **Find every place it belongs.** Search the repo for the component and related terms. Usually:
-   - `<system>/current-system.md`: tables, the status section, open-question checklist;
-   - `vessel/README.md` if other systems use it too (engine, gearbox, voltages, dimensions);
-   - `<system>/loads.yaml` for load numbers (keep it valid YAML);
-   - `<system>/requirements.md` and `<system>/design/*.md` where the value feeds a calculation or
-     comparison.
-3. **Update them.** Replace `⚠ unknown` or `⚠ verify` with the value and source. Tick answered
-   questions `[x]`. Update the status date.
-4. **Check the consequences.** If the new value changes an earlier calculation, conclusion or
-   recommendation, recalculate (state your assumptions), update the text, and tell the user plainly
-   what changed. Example: "The idle is 700 rpm, not 800, so the 43 cm³ pump now gives about 67 %
-   thrust instead of 88 %."
-5. **For a datasheet link,** read it, including scanned PDFs (render the pages to images if text
-   extraction fails). Record the key ratings with the URL, and check them against the current
-   design.
-6. **Summarise for the user** in their language: what you recorded, where, and any consequences. If
-   they're finished, suggest `/save`.
+   Jos lähde tai yksikkö on epäselvä, kysy yksi lyhyt kysymys.
+2. **Etsi kaikki paikat, joihin tieto kuuluu.** Hae repoa komponentin nimellä ja siihen liittyvillä
+   sanoilla. Yleensä:
+   - `<järjestelmä>/current-system.md`: taulukot, tilannekatsaus, avointen kysymysten lista;
+   - `vessel/README.md`, jos muutkin järjestelmät käyttävät tietoa (kone, vaihteisto, jännitteet,
+     mitat);
+   - `<järjestelmä>/loads.yaml` kuormien luvuille (pidä validina YAML:na, avaimet englanniksi);
+   - `<järjestelmä>/requirements.md` ja `<järjestelmä>/design/*.md`, jos arvo vaikuttaa laskelmaan
+     tai vertailuun.
+3. **Päivitä ne** suomeksi. Korvaa `⚠ ei tiedossa` tai `⚠ tarkista` arvolla ja lähteellä. Rastita
+   vastatut kysymykset `[x]`. Päivitä tilan päivämäärä.
+4. **Tarkista seuraukset.** Jos uusi arvo muuttaa aiempaa laskelmaa, johtopäätöstä tai suositusta,
+   laske uudelleen (kerro oletukset), päivitä teksti ja kerro käyttäjälle selvästi mikä muuttui.
+   Esimerkki: "Tyhjäkäynti on 700 rpm eikä 800, joten 43 cm³:n pumppu antaa nyt noin 67 %
+   työntövoimasta 88 %:n sijaan."
+5. **Datalehtilinkin kohdalla** lue se, myös skannatut PDF:t (renderöi sivut kuviksi, jos tekstin
+   poiminta ei onnistu). Kirjaa tärkeimmät arvot URL:n kanssa ja tarkista ne nykyistä suunnitelmaa
+   vasten.
+6. **Kerro käyttäjälle** hänen kielellään mitä kirjasit, minne, ja mitä siitä seuraa. Jos hän on
+   valmis, ehdota `/save`.

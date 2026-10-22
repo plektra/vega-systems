@@ -1,11 +1,10 @@
-# Electrics
+# Sähköjärjestelmä
 
-DC and AC power, batteries, charging, distribution, and the links to the monitoring and control
-electronics.
+DC ja AC, akut, lataus, tehonjako sekä linkit valvonta- ja ohjauselektroniikkaan.
 
-| File | What it is |
+| Tiedosto | Sisältö |
 |---|---|
-| [current-system.md](current-system.md) | What's known about the electrical system, the related repositories, and open questions |
+| [current-system.md](current-system.md) | Mitä sähköjärjestelmästä tiedetään, liittyvät repot ja avoimet kysymykset |
 
-Still to come, as the work starts: `requirements.md` (loads, charging, power budget) and `design/`
-notes. Use [hydraulics/](../hydraulics/) as the model for layout.
+Tulossa työn edetessä: `requirements.md` (kuormat, lataus, energiatase) ja `design/`-selvitykset.
+Mallia rakenteeseen voi katsoa [hydraulics/](../hydraulics/)-kansiosta.

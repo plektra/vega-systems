@@ -1,228 +1,229 @@
-# Vega Hydraulic System — Requirements
+# Vega — hydraulijärjestelmän vaatimukset
 
-> **Status:** Draft template. Fill in `TBD` fields and delete guidance notes (lines starting with `>`)
-> once each section is settled.
+> **Tila:** Pohja, osittain täytetty. Täydennä `TBD`-kohdat ja poista ohjetekstit (rivit, jotka
+> alkavat `>`), kun kukin luku on selvä.
 >
-> The load register in [`loads.yaml`](loads.yaml) is the source of truth for per-load numbers.
-> This document holds the context, scenarios and constraints around them.
+> Kuormarekisteri [`loads.yaml`](loads.yaml) on kuormakohtaisten lukujen ensisijainen lähde. Tämä
+> dokumentti kuvaa niiden ympärillä olevat tilanteet, ehdot ja rajoitteet.
 
-| Field | Value |
+| Kenttä | Arvo |
 |---|---|
-| Document owner | TBD |
-| Revision | 0.1 |
-| Last updated | TBD |
+| Vastuuhenkilö | TBD |
+| Versio | 0.1 |
+| Päivitetty | TBD |
 
 ---
 
-## 1. Scope and goals
+## 1. Laajuus ja tavoitteet
 
-> One paragraph: what the hydraulic system is for, what is explicitly out of scope, and what
-> "done" means (learning exercise, concept design, build-ready design).
+> Yksi kappale: mihin hydraulijärjestelmää käytetään, mikä on rajattu pois, ja mitä "valmis"
+> tarkoittaa (konsepti, yksityiskohtainen suunnitelma, rakennusvalmis).
 
-- **Purpose:** TBD
-- **In scope:** TBD
-- **Out of scope:** TBD
-- **Deliverable:** TBD (concept / detailed design / build-ready)
-- **New build or retrofit:** Retrofit / redesign of the existing two-circuit system. The baseline is in
+- **Tarkoitus:** TBD
+- **Kuuluu laajuuteen:** TBD
+- **Ei kuulu laajuuteen:** TBD
+- **Lopputulos:** TBD (konsepti / yksityiskohtainen / rakennusvalmis)
+- **Uusi vai muutos:** Nykyisen kahden piirin järjestelmän uudistus. Lähtötilanne on tiedostossa
   [current-system.md](current-system.md).
 
-## 2. Vessel particulars
+## 2. Aluksen tiedot
 
-| Parameter | Value | Unit | Notes |
+Perustiedot ovat tiedostossa [vessel/README.md](../vessel/README.md). Tähän kootaan hydrauliikan
+mitoitukseen vaikuttavat arvot.
+
+| Parametri | Arvo | Yksikkö | Huomiot |
 |---|---|---|---|
-| Vessel type | Steel tug (1912), leisure use | | See [current-system.md](current-system.md) |
-| Length overall (LOA) | 16.15 | m | |
-| Length of waterline (LWL) | TBD | m | |
-| Beam | 4.16 | m | |
-| Draft | 1.97 | m | |
-| Displacement (loaded) | TBD | t | |
-| Max speed | TBD | kn | Drives rudder torque |
-| Cruising speed | TBD | kn | |
-| ISO 12217 design category | TBD | | A / B / C / D |
-| Classification / flag regime | TBD | | Recreational, commercial, class society |
-| Operating area | Gulf of Finland (Helsinki); has also operated on Saimaa | | Brackish and fresh water |
-| Crew / operating mode | TBD | | Short-handed? Shapes automation and alarm needs |
+| Alustyyppi | Teräshinaaja (1912), vapaa-ajan käyttö | | |
+| Kokonaispituus | 16,15 | m | |
+| Vesilinjan pituus | TBD | m | |
+| Leveys | 4,16 | m | |
+| Syväys | 1,97 | m | |
+| Uppouma (lastattuna) | TBD | t | |
+| Suurin nopeus | TBD | kn | Vaikuttaa peräsimen momenttiin |
+| Matkanopeus | TBD | kn | |
+| ISO 12217 -suunnitteluluokka | TBD | | A / B / C / D |
+| Luokitus / lippuvaltion säännöt | TBD | | Vapaa-ajan, kaupallinen, luokituslaitos |
+| Toiminta-alue | Suomenlahti (Helsinki); ollut myös Saimaalla | | Murtovesi ja makea vesi |
+| Miehistö / käyttötapa | TBD | | Pienellä miehistöllä? Vaikuttaa automaatioon ja hälytyksiin |
 
-### 2.1 Rudder data (if steering is in scope)
+### 2.1 Peräsimen tiedot
 
-| Parameter | Value | Unit |
+| Parametri | Arvo | Yksikkö |
 |---|---|---|
-| Number of rudders | 1 | |
-| Rudder area (each) | TBD | m² |
-| Rudder type | TBD | spade / skeg-hung / balanced |
-| Balance ratio | TBD | % |
-| Max rudder angle (hard over) | TBD | ° each side |
-| Required hard-over to hard-over time | TBD | s |
-| Rudder stock diameter | TBD | mm |
-| Max rudder torque (calculated or from builder) | TBD | kNm |
+| Peräsimien määrä | 1 | |
+| Peräsimen pinta-ala | TBD | m² |
+| Peräsimen tyyppi | TBD | lapa / kölin varassa / tasapainotettu |
+| Tasapainotussuhde | TBD | % |
+| Suurin peräsinkulma | TBD | ° kumpaankin suuntaan |
+| Vaadittu aika ääriasennosta toiseen | TBD | s |
+| Peräsinakselin halkaisija | TBD | mm |
+| Peräsimen suurin momentti (laskettu tai rakentajalta) | TBD | kNm |
 
-## 3. Operating environment
+## 3. Käyttöympäristö
 
-| Parameter | Min | Max | Unit | Notes |
+| Parametri | Min | Max | Yksikkö | Huomiot |
 |---|---|---|---|---|
-| Engine room ambient temperature | TBD | TBD | °C | |
-| Seawater temperature | TBD | TBD | °C | Cooling capacity for oil coolers |
-| Static heel | | TBD | ° | Reservoir suction must stay covered |
-| Dynamic roll | | TBD | ° | |
-| Trim | TBD | TBD | ° | |
-| Vibration / shock | | TBD | | Mounting and hose selection |
-| Max noise in accommodation | | TBD | dB(A) | Power pack placement and isolation |
+| Konehuoneen lämpötila | TBD | TBD | °C | |
+| Meriveden lämpötila | TBD | TBD | °C | Öljynjäähdyttimen kapasiteetti |
+| Staattinen kallistus | | TBD | ° | Säiliön imuaukon pitää pysyä öljyn alla |
+| Dynaaminen keinunta | | TBD | ° | |
+| Trimmi | TBD | TBD | ° | |
+| Tärinä / iskut | | TBD | | Kiinnitysten ja letkujen valinta |
+| Suurin melu asuintiloissa | | TBD | dB(A) | Voimayksikön sijoitus ja eristys |
 
-## 4. Power sources
+## 4. Tehonlähteet
 
-> List every possible source of hydraulic power. The architecture choice (engine PTO vs electric
-> power pack vs both) depends heavily on this section.
+> Kaikki mahdolliset hydraulitehon lähteet. Arkkitehtuurin valinta (koneen PTO, sähköinen
+> voimayksikkö vai molemmat) riippuu tästä luvusta.
 
-### 4.1 Main engine(s) / PTO
+### 4.1 Pääkone ja voimanulosotot
 
-| Parameter | Value | Unit |
+| Parametri | Arvo | Yksikkö |
 |---|---|---|
-| Engine make / model | Caterpillar 3126B, 420 hp | |
-| Number of engines | 1 | |
-| Idle / max rpm | ~800 / ~2500 (cruise ~1800) | rpm |
-| PTO available (front crank / gearbox / SAE pad) | Front crank belts → steering pump P1 (good for low power only; slipped above ~9 kW). Advance 300 gearbox PTO → auxiliary pump P2. | |
-| Gearbox PTO ratio / max torque / clutched? | 1:1 / 0.044 kW/rpm ≈ 420 Nm / no clutch built in; separate clutch planned between PTO and pump | – / Nm / – |
-| Gearbox PTO turns in neutral? | yes (driven from the input shaft) | |
-| PTO max torque / power | TBD | Nm / kW |
-| Is hydraulic power needed with engine(s) off? | TBD | yes / no — anchoring under sail, harbour |
+| Koneen merkki ja malli | Caterpillar 3126B, 420 hv | |
+| Koneiden määrä | 1 | |
+| Tyhjäkäynti / suurin | ~800 (**ei mitattu, voi olla 650–700**) / ~2500 (matka ~1800) | rpm |
+| Käytettävissä olevat voimanulosotot | Etupään hihnat → ohjauspumppu P1 (vain pienelle teholle; luisti yli ~9 kW:lla). Advance 300:n PTO → apupiirin pumppu P2. | |
+| Vaihteiston PTO: välitys / suurin momentti / kytkin | 1:1 / 0,044 kW/rpm ≈ 420 Nm / ei omaa kytkintä; erillinen kytkin suunniteltu PTO:n ja pumpun väliin | – / Nm / – |
+| Pyöriikö vaihteiston PTO vapaalla? | kyllä (ensiöakselilta) | |
+| Tarvitaanko hydrauliikkaa koneen ollessa sammutettuna? | TBD | kyllä / ei: ankkurointi, satama |
 
-### 4.2 Electrical
+### 4.2 Sähköjärjestelmä
 
-| Parameter | Value | Unit |
+Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
+
+| Parametri | Arvo | Yksikkö |
 |---|---|---|
-| DC system voltage | 24 (to be confirmed) | V |
-| Engine alternator | 65 | A |
-| House bank capacity | TBD | Ah |
-| Max continuous DC draw available for hydraulics | TBD | A |
-| Generator (AC) | TBD | kVA, V, Hz |
-| Shore power | TBD | A, V, Hz |
+| DC-jännite | 24 (vahvistamatta) | V |
+| Koneen laturi | 65 | A |
+| Käyttöakuston kapasiteetti | TBD | Ah |
+| Hydrauliikalle käytettävissä oleva jatkuva DC-virta | TBD | A |
+| Generaattori (AC) | TBD | kVA, V, Hz |
+| Maasähkö | TBD | A, V, Hz |
 
-## 5. Hydraulic loads (summary)
+## 5. Hydrauliset kuormat (yhteenveto)
 
-> Detailed numbers live in [`loads.yaml`](loads.yaml). Keep this table as a quick overview.
+> Tarkat luvut ovat tiedostossa [`loads.yaml`](loads.yaml). Tämä taulukko on pikakatsaus.
 
-| ID | Function | In scope | Criticality | Notes |
+| ID | Toiminto | Laajuudessa | Kriittisyys | Huomiot |
 |---|---|---|---|---|
-| STR | Steering / autopilot | yes | critical | Existing: Orbitrol + cylinder, dedicated circuit |
-| BTH | Bow thruster | yes | high | Existing: Side-Power SH240-U11, 264 bar × 33.8 L/min |
-| STH | Stern thruster | TBD | high | |
-| WLS | Anchor windlass | yes (to be confirmed) | high | Existing hydraulic motor, specs unknown |
-| CAP | Capstan / warping winch | TBD | medium | |
-| STB | Stabilisers (fins / gyro) | TBD | medium | |
-| DAV | Tender davit / crane | TBD | medium | |
-| PAS | Passerelle / swim platform | TBD | low | |
-| SWL | Sail winches / furlers | TBD | medium | Sailing vessels |
-| KEL | Lifting keel / centreboard | TBD | high | |
-| EXISTING | Existing equipment to integrate | TBD | | Retrofit only |
+| STR | Ohjaus / autopilotti | kyllä | kriittinen | Nykyinen: orbitroli + sylinteri, oma piiri |
+| BTH | Keulapotkuri | kyllä | korkea | Nykyinen: Side-Power SH240-U11, 264 bar × 33,8 l/min |
+| STH | Peräpotkuri | TBD | korkea | |
+| WLS | Ankkurivinssi | kyllä (vahvistamatta) | korkea | Hydraulimoottori olemassa, tiedot puuttuvat |
+| CAP | Spiira / kiinnitysvinssi | TBD | keskitaso | |
+| STB | Vakaimet | TBD | keskitaso | |
+| DAV | Jollan daavitti / nosturi | TBD | keskitaso | |
+| PAS | Maihinnousuramppi / uimataso | TBD | matala | |
+| EXISTING | Muut integroitavat laitteet | TBD | | |
 
-## 6. Operating scenarios (simultaneity)
+## 6. Käyttötilanteet (samanaikaisuus)
 
-> Pump sizing is set by the worst *realistic* combination of loads, not the sum of all of them.
-> List the scenarios and which loads run at the same time in each.
+> Pumpun mitoituksen ratkaisee pahin *realistinen* kuormien yhdistelmä, ei kaikkien summa.
 
-| Scenario | Description | Simultaneous loads | Duration | Engine running? |
+| Tilanne | Kuvaus | Samanaikaiset kuormat | Kesto | Kone käy? |
 |---|---|---|---|---|
-| S1 Harbour manoeuvring | Docking, tight turns | STR, BTH, STH | TBD | TBD |
-| S2 Anchoring | Dropping / recovering anchor | WLS, STR, BTH | TBD | TBD |
-| S3 Passage | Long-duration steering at sea | STR, STB | hours | TBD |
-| S4 Tender launch | At anchor | DAV | TBD | TBD |
-| S5 Emergency | Main power source lost | STR (minimum) | TBD | no |
+| S1 Satamamanööverit | Laituriin tulo, ahtaat käännökset | STR, BTH | TBD | kyllä |
+| S2 Ankkurointi | Ankkurin lasku ja nosto | WLS, STR, BTH | TBD | TBD |
+| S3 Matka-ajo | Pitkäkestoinen ohjaus | STR | tunteja | kyllä |
+| S4 Hätätilanne | Päätehonlähde menetetty | STR (vähintään) | TBD | ei |
 
-**Design-driving scenario:** TBD
+**Mitoittava tilanne:** TBD (todennäköisesti S1 tai S2)
 
-## 7. Safety, redundancy and failure behaviour
+## 7. Turvallisuus, varmennus ja vikatilanteet
 
-> For each critical function, decide what happens when the pump, power source, a hose or the
-> controller fails. This is the part where human engineering judgement matters most.
+> Päätä jokaiselle kriittiselle toiminnolle, mitä tapahtuu, kun pumppu, tehonlähde, letku tai
+> ohjaus pettää. Tässä kohdassa ihmisen insinöörinharkinta on tärkeintä.
 
-| Function | Failure | Required behaviour | Backup means |
+| Toiminto | Vika | Vaadittu toiminta | Varakeino |
 |---|---|---|---|
-| Steering | Hydraulic pump / power loss | TBD | Emergency tiller / second pump / manual helm pump |
-| Steering | Hose / fitting rupture | TBD | Isolation valves, separate circuits |
-| Windlass | Power loss with anchor partly up | Hold load (brake / counterbalance valve) | Manual recovery |
-| Thrusters | Overload / overheating | TBD | Relief valve, thermal cut-out |
-| All | Low oil level | Alarm, then protective shutdown of non-critical loads | |
-| All | High oil temperature | Alarm at TBD °C, shutdown at TBD °C | |
+| Ohjaus | Pumpun tai tehon menetys | TBD | Hätäpinna / sähköinen varapumppu / orbitroli käsipumppuna |
+| Ohjaus | Letkun tai liittimen repeämä | TBD | Sulkuventtiilit, erilliset piirit |
+| Ankkurivinssi | Tehon menetys ankkurin ollessa puoliksi ylhäällä | Kuorman pito (jarru / jarruventtiili) | Käsinosto |
+| Keulapotkuri | Ylikuorma / ylikuumeneminen | TBD | Paineenrajoitus, lämpösuoja |
+| Kaikki | Matala öljynpinta | Hälytys, sitten ei-kriittisten kuormien suojapysäytys | |
+| Kaikki | Korkea öljyn lämpötila | Hälytys TBD °C, pysäytys TBD °C | |
 
-- **Emergency stop philosophy:** TBD
-- **Load priority** (which loads get shed first when demand exceeds supply): TBD
-- **Relief / max system pressure:** Auxiliary circuit 250 bar (decided; ~90 % thruster power accepted for
-  cost). Steering circuit TBD.
-- **Protection against unintended movement** (davit, passerelle, keel): TBD
+- **Hätäpysäytyksen periaate:** TBD
+- **Kuormien prioriteetti** (mitkä pudotetaan ensin, kun teho ei riitä): TBD
+- **Paineenrajoitus / suurin järjestelmäpaine:** apupiiri 250 bar (päätetty; ~90 %:n keulapotkuriteho
+  hyväksytty kustannussyistä). Ohjauspiiri TBD.
+- **Suojaus tahattomalta liikkeeltä:** TBD
 
-## 8. Installation constraints
+## 8. Asennuksen rajoitteet
 
-| Item | Constraint |
+| Kohde | Rajoite |
 |---|---|
-| Space for power unit / reservoir | TBD (location, L×W×H) |
-| Reservoir location relative to pumps | TBD (flooded suction preferred) |
-| Weight budget | TBD kg |
-| Pipe / hose routing | Thruster A/B lines: 1/2" hose, already installed (CETOP → bow). Rest TBD (bulkhead penetrations, fire zones). |
-| Access for service | TBD (filters, sight glass, bleed points) |
-| Oil cooler | TBD (seawater / keel cooler / air) |
+| Tila voimayksikölle / säiliölle | TBD (paikka, P×L×K) |
+| Säiliön sijainti suhteessa pumppuihin | Säiliön öljypinta noin 1 m P2:n imuaukon yläpuolella |
+| Painobudjetti | TBD kg |
+| Putki- ja letkuvedot | Keulapotkurin A/B-linjat: 1/2" letku, asennettu (CETOP → keula). Muut TBD (laipiolävistykset, palo-osastot). |
+| Huollettavuus | TBD (suodattimet, tarkastuslasi, ilmauspisteet) |
+| Öljynjäähdytin | TBD (merivesi / pohjajäähdytin / ilma) |
 
-## 9. Fluid, cleanliness and maintenance
+## 9. Öljy, puhtaus ja huolto
 
-| Item | Requirement |
+| Kohde | Vaatimus |
 |---|---|
-| Fluid type | TBD (mineral HLP / HVLP, or environmentally acceptable HEES per ISO 15380) |
-| Viscosity grade | TBD (ISO VG 32 / 46) |
-| Target cleanliness | TBD (ISO 4406 code, set by the most sensitive component) |
-| Filtration | TBD (return / pressure / offline) |
-| Service interval | TBD |
-| Spill containment | TBD |
+| Öljytyyppi | TBD (mineraali HLP / HVLP, tai ympäristöystävällinen HEES, ISO 15380) |
+| Viskositeettiluokka | TBD (ISO VG 32 / 46; HV-luokka suositeltava kylmäkäynnistysten vuoksi) |
+| Puhtaustavoite | TBD (ISO 4406 -koodi herkimmän komponentin mukaan) |
+| Suodatus | TBD (paluu / paine / sivuvirta) |
+| Huoltoväli | TBD |
+| Vuotojen keräys | TBD |
 
-## 10. Monitoring, control and integration
+## 10. Valvonta, ohjaus ja integrointi
 
-> Integration with the existing Vega stack: Signal K server, NMEA 2000 nodes and ESP32 PDM
-> boards. Signal K has no standard hydraulics paths, so the paths below are a proposal.
+> Integrointi Vegan nykyiseen järjestelmään: Signal K -palvelin, NMEA 2000 -nodet ja ESP32
+> PDM -kortit. Signal K:ssa ei ole vakiopolkuja hydrauliikalle, joten alla olevat polut ovat ehdotus.
 
-### 10.1 Sensors
+### 10.1 Anturit
 
-| Measurement | Location | Range | Proposed Signal K path | Alarm / limit |
+| Mittaus | Paikka | Alue | Ehdotettu Signal K -polku | Hälytys / raja |
 |---|---|---|---|---|
-| System pressure | Pump outlet | TBD bar | `hydraulics.<system>.pressure` | TBD |
-| Oil temperature | Reservoir / return | TBD °C | `hydraulics.<system>.temperature` | TBD |
-| Oil level | Reservoir | % | `hydraulics.<system>.level` | TBD |
-| Filter differential pressure | Return filter | switch / bar | `hydraulics.<system>.filter.clogged` | TBD |
-| Pump running / hours | Power pack | bool / h | `hydraulics.<system>.pump.runTime` | |
-| Rudder angle | Rudder stock | ± ° | `steering.rudderAngle` (standard) | |
+| Järjestelmäpaine | Pumpun lähtö | TBD bar | `hydraulics.<system>.pressure` | TBD |
+| Öljyn lämpötila | Säiliö / paluu | TBD °C | `hydraulics.<system>.temperature` | TBD |
+| Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
+| Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
+| PTO-kytkimen asento | Kytkin | päällä/pois | `hydraulics.<system>.clutch.engaged` | Hälytys, jos päällä yli ~1000 rpm |
+| Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
-### 10.2 Control
+### 10.2 Ohjaus
 
-- **Control interfaces:** TBD (helm stations, wireless remotes, MFD, autopilot)
-- **Control electronics:** TBD (proportional valve drivers, ESP32 PDM outputs, CAN/N2K)
-- **Autopilot interface:** TBD (autopilot make, reversing pump vs solenoid valve drive)
-- **Interlocks:** TBD (e.g. no windlass with chain locker hatch open, no passerelle underway)
+- **Ohjauspaikat:** TBD (ohjauspisteet, langattomat kaukosäätimet, MFD, autopilotti)
+- **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja kytkimen toimilaitteelle, CAN/N2K)
+- **Autopilotin liitäntä:** TBD (autopilotin merkki, suunnanvaihtopumppu vai solenoidiventtiiliohjaus)
+- **Lukitukset:** PTO-kytkimen kytkentä vain tyhjäkäynnillä ja vapaakiertoventtiilin ollessa auki. Muut TBD.
 
-## 11. Standards and regulations
+## 11. Standardit ja määräykset
 
-> Tick the ones that apply. Check the current edition of each before relying on it.
+> Rastita soveltuvat. Tarkista kunkin voimassa oleva painos ennen kuin luotat siihen.
 
-- [ ] ISO 10592 — Small craft: hydraulic steering systems
-- [ ] ISO 4413 — Hydraulic fluid power: general rules and safety requirements
-- [ ] ISO 1219-1 / -2 — Fluid power graphical symbols and circuit diagrams
-- [ ] ISO 4406 — Hydraulic fluid cleanliness coding
-- [ ] ISO 15380 — Environmentally acceptable hydraulic fluids
-- [ ] ISO 10133 / ISO 13297 — Small craft DC / AC electrical systems
-- [ ] Recreational Craft Directive 2013/53/EU (if CE marked)
-- [ ] Class society rules: TBD
-- [ ] Flag state / commercial code: TBD
-- [ ] Manufacturer installation requirements for selected equipment
+- [ ] ISO 10592 — Pienalukset: hydrauliset ohjausjärjestelmät
+- [ ] ISO 4413 — Hydraulinen voimansiirto: yleiset säännöt ja turvallisuusvaatimukset
+- [ ] ISO 1219-1 / -2 — Fluidivoimansiirron piirrosmerkit ja kaaviot
+- [ ] ISO 4406 — Hydrauliöljyn puhtauskoodit
+- [ ] ISO 15380 — Ympäristöystävälliset hydraulinesteet
+- [ ] ISO 10133 / ISO 13297 — Pienalusten DC- ja AC-sähköjärjestelmät
+- [ ] Huvivenedirektiivi 2013/53/EU (jos CE-merkitty)
+- [ ] Luokituslaitoksen säännöt: TBD
+- [ ] Lippuvaltion / kaupallisen liikenteen säännöt: TBD
+- [ ] Valittujen laitteiden valmistajien asennusohjeet
 
-## 12. Verification and acceptance
+## 12. Todentaminen ja hyväksyntä
 
-| Requirement | Verification method | Acceptance criterion |
+| Vaatimus | Todentamistapa | Hyväksymiskriteeri |
 |---|---|---|
-| Hard-over to hard-over time | Sea trial | ≤ TBD s at max speed |
-| Windlass recovery speed | Harbour test | ≥ TBD m/min at working load |
-| Thruster continuous run | Harbour test | TBD min without exceeding TBD °C |
-| Max oil temperature (design scenario) | Simulation, then trial | ≤ TBD °C |
-| Pressure test | Bench / installed | TBD × max working pressure for TBD min |
-| Noise in accommodation | Measurement | ≤ TBD dB(A) |
+| Aika ääriasennosta toiseen | Koeajo | ≤ TBD s suurimmalla nopeudella |
+| Ankkurivinssin nostonopeus | Satamakoe | ≥ TBD m/min työkuormalla |
+| Keulapotkurin jatkuva käyttö | Satamakoe | TBD min ilman että öljy ylittää TBD °C |
+| Öljyn suurin lämpötila (mitoittava tilanne) | Laskelma, sitten koe | ≤ TBD °C |
+| Painekoe | Penkissä / asennettuna | TBD × suurin työpaine, TBD min |
+| Melu asuintiloissa | Mittaus | ≤ TBD dB(A) |
 
-## 13. Assumptions and open questions
+## 13. Oletukset ja avoimet kysymykset
 
-| # | Item | Type | Owner | Status |
+| # | Kohde | Tyyppi | Vastuu | Tila |
 |---|---|---|---|---|
-| 1 | Vessel type, size and loads still to be confirmed | question | | open |
+| 1 | Peräsimen ja ohjaussylinterin mitat | kysymys | | avoin |
+| 2 | Koneen todellinen tyhjäkäynti | mittaus | | avoin |

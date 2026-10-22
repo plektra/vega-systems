@@ -1,88 +1,101 @@
-# Working on the Vega systems repository
+# Ohjeet Vegan järjestelmärepossa työskentelyyn
 
-This repository documents and designs the systems of Vega, a 1912 steel tug (16.15 m) being
-refitted by two owners. It's documentation and engineering, not software: Markdown, YAML data and,
-later, small calculation scripts.
+Tämä repo dokumentoi ja suunnittelee Vegan järjestelmät. Vega on vuonna 1912 rakennettu
+teräshinaaja (16,15 m), jota kaksi omistajaa kunnostaa. Kyse on dokumentaatiosta ja suunnittelusta,
+ei ohjelmistosta: Markdownia, YAML-dataa ja myöhemmin pieniä laskentaskriptejä.
 
-## Who you're working with
+## Kenen kanssa työskentelet
 
-- **Contributors may not know git or development tools.** Many sessions come from Claude Code on
-  the web or mobile. Handle all git work for them. Explain what you did in one plain sentence, with
-  no jargon ("I saved your changes and opened a pull request: <link>").
-- **Reply in the language the user writes in** (often Finnish). **Write repository files in English**
-  so they stay consistent.
-- **The owners decide.** Recommend clearly, but record their decisions as made, including trade-offs
-  they accept, e.g. "about 90 % thrust accepted for cost".
-- **Cost matters.** Prefer solutions that reuse existing parts, and say when a cheaper option is good
-  enough.
+- **Osallistujat eivät välttämättä osaa gitiä tai kehitystyökaluja.** Moni istunto tulee Claude
+  Coden verkko- tai mobiiliversiosta. Hoida kaikki git-työ heidän puolestaan ja kerro tekemisistäsi
+  yhdellä selkeällä lauseella ilman ammattisanastoa ("Tallensin muutoksesi ja tein
+  muutosehdotuksen: <linkki>").
+- **Vastaa sillä kielellä, jolla käyttäjä kirjoittaa** (yleensä suomi).
+- **Omistajat päättävät.** Suosittele selkeästi, mutta kirjaa heidän päätöksensä sellaisinaan,
+  myös hyväksytyt kompromissit (esim. "noin 90 %:n työntövoima hyväksytty kustannussyistä").
+- **Kustannuksilla on väliä.** Suosi ratkaisuja, joissa käytetään olemassa olevia osia, ja kerro,
+  kun halvempi vaihtoehto riittää.
 
-## Repository layout
+## Kieli
+
+- **Dokumenttien sisältö kirjoitetaan suomeksi:** tekstit, taulukot, päätösloki, pull requestien
+  kuvaukset. Käytä vakiintunutta suomalaista hydrauliikka- ja venesanastoa (paineenrajoitusventtiili,
+  virtauksensäätöventtiili, orbitroli, voimanulosotto/PTO, styyrpuuri, paapuuri).
+- **Englanniksi pidetään:** tiedosto- ja kansionimet, YAML-avaimet (`pressure_bar`), commit-viestit,
+  haaroiden nimet sekä tuotenimet ja osanumerot. Ne ovat tunnisteita, ja niiden pitää pysyä vakaina.
+- **Lainaukset** datalehdistä voi jättää alkuperäiskielelle, kunhan merkitys selitetään suomeksi.
+- **Desimaalierotin on pilkku** tekstissä ja taulukoissa (16,6 cm³), mutta YAML-arvoissa piste
+  (16.6).
+
+## Repon rakenne
 
 ```
-vessel/       shared facts (particulars, engine, gearbox, electrical basics). Single source of truth.
+vessel/       yhteiset tiedot (alus, kone, vaihteisto, sähköjärjestelmän perustiedot) — yksi totuuden lähde
 hydraulics/   current-system.md, requirements.md, loads.yaml, design/, img/
-electrics/    current-system.md, … (same pattern as hydraulics)
-decisions.md  decision log for all systems, newest first
+electrics/    current-system.md, … (sama rakenne kuin hydraulics)
+decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
 ```
 
-- **A new system** (e.g. `fuel/`, `water/`, `ventilation/`, `heating/`) gets its own folder, laid out
-  like `hydraulics/`: README.md, current-system.md, then requirements and design notes as needed.
-  Add it to the root README table.
-- **A fact used by more than one system** goes in `vessel/README.md`. System docs link to it rather
-  than copying it.
-- **Option studies and comparisons** go in `<system>/design/<topic>.md`.
+- **Uusi järjestelmä** (esim. `fuel/`, `water/`, `ventilation/`, `heating/`) saa oman kansionsa
+  samalla rakenteella kuin `hydraulics/`: README.md, current-system.md, sitten vaatimukset ja
+  selvitykset tarpeen mukaan. Lisää se juuren README:n taulukkoon.
+- **Usean järjestelmän tarvitsema tieto** kuuluu tiedostoon `vessel/README.md`. Järjestelmien
+  dokumentit linkittävät siihen eivätkä kopioi sitä.
+- **Vaihtoehtoselvitykset ja vertailut** kuuluvat kansioon `<järjestelmä>/design/<aihe>.md`.
 
-## Documentation rules
+## Dokumentointisäännöt
 
-1. **Cite every fact's source** in a Source column or inline: `[owner YYYY-MM-DD]` (told by an owner),
-   `[blog YYYY-MM-DD]` (plektra.github.io), `[datasheet <product>]` with a URL, or `[calc]` for your
-   own calculation.
-2. **Never invent numbers.** Mark unknown values `**⚠ unknown**` and uncertain ones `**⚠ verify**`. If
-   you estimate, say it's an estimate and list the assumptions (oil grade, efficiencies, lengths).
-3. **When new information arrives,** update every place it affects: the system doc, `vessel/` if it's
-   shared, `loads.yaml`, requirements, design notes and open-question checklists (tick `[x]` when
-   answered). Update the doc's status line and date.
-4. **Check earlier conclusions against new facts.** If a new fact invalidates an earlier calculation
-   or recommendation, fix it and say so plainly. Don't leave stale numbers behind.
-5. **Record decisions** in `decisions.md` (date, system, decision, why, link), and reflect them in the
-   affected docs.
-6. **Units:** SI with bar, L/min, cm³ (displacement), Nm, kW, °C, mm. Give conversions only where a
-   datasheet uses other units.
-7. **Product links:** link datasheets by URL. Don't commit vendor PDFs. Owners' own photos and
-   drawings go in `<system>/img/`.
-8. **Scanned PDFs:** many datasheets are scans. If text extraction fails, render the pages to images
-   and read them, then say which values were read visually.
-9. **Safety-critical functions** (steering, anchoring, load holding, anything that can trap a person)
-   need explicit failure-mode notes. Remind the owners that a qualified person should review them
-   before building.
+1. **Merkitse jokaisen tiedon lähde** Lähde-sarakkeeseen tai tekstiin: `[omistaja VVVV-KK-PP]`
+   (omistajan kertoma), `[blogi VVVV-KK-PP]` (plektra.github.io), `[datalehti <tuote>]` ja URL, tai
+   `[laskelma]` omalle laskelmalle.
+2. **Älä koskaan keksi lukuja.** Merkitse tuntematon arvo `**⚠ ei tiedossa**` ja epävarma
+   `**⚠ tarkista**`. Jos arvioit, sano että kyse on arviosta, ja kirjaa oletukset (öljyluokka,
+   hyötysuhteet, pituudet).
+3. **Kun uutta tietoa tulee,** päivitä kaikki kohdat, joihin se vaikuttaa: järjestelmän dokumentti,
+   `vessel/` jos tieto on yhteistä, `loads.yaml`, vaatimukset, selvitykset ja avointen kysymysten
+   listat (rastita `[x]`, kun vastattu). Päivitä dokumentin tila ja päivämäärä.
+4. **Tarkista aiemmat johtopäätökset uutta tietoa vasten.** Jos uusi tieto kumoaa aiemman
+   laskelman tai suosituksen, korjaa se ja kerro siitä selvästi. Älä jätä vanhentuneita lukuja.
+5. **Kirjaa päätökset** tiedostoon `decisions.md` (päivä, järjestelmä, päätös, perustelu, linkki) ja
+   päivitä ne asianomaisiin dokumentteihin.
+6. **Yksiköt:** SI, lisäksi bar, l/min, cm³ (kierrostilavuus), Nm, kW, °C, mm. Muunna vain, kun
+   datalehdessä on muita yksiköitä.
+7. **Tuotelinkit:** linkitä datalehdet URL:lla, älä tallenna valmistajien PDF:iä repoon. Omistajien
+   omat kuvat ja piirustukset kuuluvat kansioon `<järjestelmä>/img/`.
+8. **Skannatut PDF:t:** moni datalehti on skannattu. Jos tekstin poiminta ei onnistu, renderöi sivut
+   kuviksi ja lue ne, ja kerro mitkä arvot luettiin kuvista.
+9. **Turvallisuuskriittiset toiminnot** (ohjaus, ankkurointi, kuorman pito, kaikki mikä voi
+   puristaa ihmisen) vaativat vikatilanteiden kuvauksen. Muistuta omistajia, että pätevän henkilön
+   pitää tarkistaa ne ennen rakentamista.
 
-## Engineering assumptions in use
+## Käytössä olevat laskentaoletukset
 
-These apply unless a doc says otherwise. Change them here if the owners decide differently.
+Nämä ovat voimassa, ellei dokumentissa toisin sanota. Muuta niitä tähän, jos omistajat päättävät
+toisin.
 
-- Hydraulic oil ISO VG 46 (grade not yet confirmed); density 870 kg/m³.
-- Gear pump volumetric efficiency 92 %, mechanical efficiency 90 %.
-- Engine idle 800 rpm per the 2018 blog. **Not yet measured; could be 650–700 rpm.** See
+- Hydrauliöljy ISO VG 46 (luokka vahvistamatta); tiheys 870 kg/m³.
+- Hammaspyöräpumpun volumetrinen hyötysuhde 92 %, mekaaninen 90 %.
+- Koneen tyhjäkäynti 800 rpm vuoden 2018 blogin mukaan. **Ei mitattu, voi olla 650–700 rpm**, ks.
   `vessel/README.md`.
 
-## Git workflow (do this for the user)
+## Git-työnkulku (tee käyttäjän puolesta)
 
-- **Never commit directly to `main`.** Work on a branch; Claude Code on the web already gives each
-  session one.
-- **Start from the latest `main`.** If the branch is behind, update it before editing.
-- **Keep commits and pull requests small,** one topic each. Write commit messages and PR descriptions
-  in English. Start the PR description with a plain-language summary that a non-technical owner can
-  approve from a phone.
-- **Never force-push.** Never delete or overwrite someone else's content without asking.
-- **If there's a merge conflict, keep both people's information** and ask the user only when the two
-  versions contradict each other.
-- When the user says "save", "tallenna" or "done", use the `/save` skill.
+- **Älä koskaan committaa suoraan `main`-haaraan.** Työskentele haarassa; Claude Coden
+  verkkoversio antaa jokaiselle istunnolle oman haaran.
+- **Aloita uusimmasta `main`-haarasta.** Jos haara on jäljessä, päivitä se ennen muokkauksia.
+- **Pidä commitit ja pull requestit pieninä,** yksi aihe kerrallaan. Commit-viestit englanniksi.
+  Pull requestin kuvaus suomeksi, alkaen selkokielisestä yhteenvedosta, jonka omistaja voi hyväksyä
+  puhelimella.
+- **Älä koskaan tee force-pushia.** Älä poista tai ylikirjoita toisen sisältöä kysymättä.
+- **Jos tulee yhdistämiskonflikti, säilytä molempien tiedot.** Kysy käyttäjältä vain, jos versiot
+  ovat ristiriidassa keskenään.
+- Kun käyttäjä sanoo "tallenna", "valmis", "save" tai "done", käytä `/save`-taitoa.
 
-## Skills in this repository
+## Repon taidot (skills)
 
-| Skill | Use it when the user… |
+| Taito | Käytä, kun käyttäjä… |
 |---|---|
-| `/save` | wants to save or finish: commits, pushes and opens a pull request |
-| `/add-info` | gives new facts, measurements, photos or datasheet values |
-| `/log-decision` | says something has been decided |
-| `/open-questions` | asks what's still open or missing, or what to do next |
+| `/save` | haluaa tallentaa tai lopettaa: commit, push ja pull request |
+| `/add-info` | kertoo uusia tietoja, mittauksia, kuvia tai datalehtiarvoja |
+| `/log-decision` | kertoo, että jotain on päätetty |
+| `/open-questions` | kysyy, mikä on vielä auki tai puuttuu, tai mitä tehdä seuraavaksi |

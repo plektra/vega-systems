@@ -1,70 +1,70 @@
-# Vega hydraulic load register
+# Vegan hydrauliikan kuormarekisteri
 #
-# Source of truth for per-load numbers. Context and scenarios live in requirements.md.
-# Units are in the key names; use null for unknown values.
-# Sizing calculations will read this file, so keep it valid YAML.
+# Kuormakohtaisten lukujen ensisijainen lähde. Taustat ja käyttötilanteet: requirements.md.
+# Avaimet (kenttien nimet) ovat englanniksi, koska laskentaskriptit lukevat niitä; yksiköt ovat
+# avaimen nimessä. Tuntematon arvo = null. Pidä tiedosto validina YAML:na.
 #
-# Field reference
-#   in_scope:        true | false | null (undecided)
-#   criticality:     critical | high | medium | low
-#   actuator:        cylinder | motor | rotary_actuator
-#   cylinder:        force and stroke for linear actuators
-#   motor:           torque and speed for rotary actuators
-#   duty:            how long and how often the load runs
-#   control:         on_off | proportional | autopilot
-#   fail_state:      required behaviour on power or hydraulic loss
-#   source:          where the numbers came from (datasheet, calculation, estimate)
+# Kenttien selitykset
+#   in_scope:     true | false | null (ei päätetty)
+#   criticality:  critical | high | medium | low
+#   actuator:     cylinder | motor | rotary_actuator
+#   cylinder:     lineaaritoimilaitteen voima ja isku
+#   motor:        pyörivän toimilaitteen momentti ja nopeus
+#   duty:         kuinka kauan ja kuinka usein kuorma on käytössä
+#   control:      on_off | proportional | autopilot
+#   fail_state:   vaadittu toiminta tehon tai hydrauliikan menetyksessä
+#   source:       mistä luvut ovat peräisin (datalehti, laskelma, arvio)
 
 schema_version: 1
 
 loads:
   - id: STR
-    name: Steering / autopilot
+    name: Ohjaus / autopilotti
     in_scope: true
-    existing: Orbitrol 160 cm3/rev (to be confirmed) + double-acting cylinder; normal pressure < 50 bar
+    existing: Orbitroli 160 cm3/r (vahvistamatta) + kaksitoiminen sylinteri; normaali paine < 50 bar
     criticality: critical
     actuator: cylinder
     cylinder:
-      max_force_kN: null           # from max rudder torque / tiller arm
+      max_force_kN: null           # peräsimen suurin momentti / ohjausvarren pituus
       stroke_mm: null
       tiller_arm_mm: null
-      hard_over_time_s: null       # hard over to hard over
+      hard_over_time_s: null       # ääriasennosta toiseen
     duty:
       continuous: true
       run_time_min: null
       cycles_per_hour: null
     control: autopilot
-    fail_state: hold position, manual / emergency steering available
+    fail_state: pitää asennon; käsi- tai hätäohjaus käytettävissä
     source: null
     notes: ""
 
   - id: BTH
-    name: Bow thruster
+    name: Keulapotkuri
     in_scope: true
-    existing: Side-Power SH240-U11, 250 mm tunnel, BAV-713 4/3 on/off valve
+    existing: Side-Power SH240-U11, 250 mm tunneli, BAV-713 4/3 on/off-venttiili
     criticality: high
     actuator: motor
     motor:
       thrust_kN: null
       max_torque_Nm: null
       max_speed_rpm: null
-      power_kW: 14.9               # hydraulic, 264 bar x 33.8 L/min
-      pressure_bar: 264            # 100 % power
-      flow_L_per_min: 33.8         # 100 % power
+      power_kW: 14.9               # hydraulinen, 264 bar x 33,8 l/min
+      pressure_bar: 264            # 100 % teho
+      flow_L_per_min: 33.8         # 100 % teho
       pressure_60pct_bar: 158
       flow_60pct_L_per_min: 26.2
     duty:
       continuous: false
-      run_time_min: null           # max continuous run, check Side-Power manual
+      run_time_min: null           # suurin yhtäjaksoinen käyttö, tarkista Side-Powerin ohjeesta
       cycles_per_hour: null
-    control: on_off                # current valve is on/off; proportional is an option
-    fail_state: stop, motor freewheels (A-B-T open centre)
-    source: manufacturer data via blog 2018-11-12
-    design_pressure_bar: 250       # decided: ~90 % thrust accepted to keep 250 bar class components
-    notes: "Belt drive only reached ~160-170 bar; that was enough to turn the boat at the quay."
+    control: on_off                # nykyinen venttiili on on/off; proportionaalinen on mahdollinen
+    fail_state: pysähtyy, moottori pyörii vapaasti (A-B-T-vapaakierto)
+    design_pressure_bar: 250       # päätetty: ~90 % työntövoima hyväksytty, 250 barin komponentit
+    source: valmistajan tiedot, blogi 2018-11-12
+    notes: "Hihnavedolla saavutettiin vain ~160-170 bar; se riitti kääntämään aluksen laiturissa."
 
   - id: STH
-    name: Stern thruster
+    name: Peräpotkuri
     in_scope: null
     criticality: high
     actuator: motor
@@ -78,14 +78,14 @@ loads:
       run_time_min: null
       cycles_per_hour: null
     control: proportional
-    fail_state: stop
+    fail_state: pysähtyy
     source: null
     notes: ""
 
   - id: WLS
-    name: Anchor windlass
-    in_scope: true                 # to be confirmed
-    existing: hydraulic motor already fitted; make / displacement unknown
+    name: Ankkurivinssi
+    in_scope: true                 # vahvistamatta
+    existing: hydraulimoottori asennettu; merkki ja kierrostilavuus eivät tiedossa
     criticality: high
     actuator: motor
     motor:
@@ -100,12 +100,12 @@ loads:
       run_time_min: null
       cycles_per_hour: null
     control: on_off
-    fail_state: hold load (brake / counterbalance valve)
+    fail_state: pitää kuorman (jarru / jarruventtiili)
     source: null
     notes: ""
 
   - id: STB
-    name: Stabilisers
+    name: Vakaimet
     in_scope: null
     criticality: medium
     actuator: rotary_actuator
@@ -118,12 +118,12 @@ loads:
       run_time_min: null
       cycles_per_hour: null
     control: proportional
-    fail_state: centre and lock fins
+    fail_state: evät keskelle ja lukitus
     source: null
     notes: ""
 
   - id: DAV
-    name: Tender davit / crane
+    name: Jollan daavitti / nosturi
     in_scope: null
     criticality: medium
     actuator: cylinder
@@ -136,12 +136,12 @@ loads:
       run_time_min: null
       cycles_per_hour: null
     control: proportional
-    fail_state: hold load (load-holding valves)
+    fail_state: pitää kuorman (kuormanpitoventtiilit)
     source: null
     notes: ""
 
   - id: PAS
-    name: Passerelle / swim platform
+    name: Maihinnousuramppi / uimataso
     in_scope: null
     criticality: low
     actuator: cylinder
@@ -154,6 +154,6 @@ loads:
       run_time_min: null
       cycles_per_hour: null
     control: on_off
-    fail_state: hold position
+    fail_state: pitää asennon
     source: null
     notes: ""

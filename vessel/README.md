@@ -1,66 +1,66 @@
-# Vega — Vessel overview
+# Vega — alustiedot
 
-Shared facts that more than one system depends on. System-specific details live in each system's
-folder (e.g. [hydraulics](../hydraulics/), [electrics](../electrics/)).
+Usean järjestelmän tarvitsemat yhteiset tiedot. Järjestelmäkohtaiset tiedot ovat kunkin
+järjestelmän kansiossa ([hydraulics](../hydraulics/), [electrics](../electrics/)).
 
-Sources: `[perustiedot]` and `[blog YYYY-MM-DD]` refer to the Plektra blog
-(<https://plektra.github.io>, repo `plektra/plektra.github.io`); `[owner YYYY-MM-DD]` is information
-given directly by the owners.
+Lähteet: `[perustiedot]` ja `[blogi VVVV-KK-PP]` viittaavat Plektra-blogiin
+(<https://plektra.github.io>, repo `plektra/plektra.github.io`); `[omistaja VVVV-KK-PP]` on
+omistajien suoraan antama tieto.
 
-## Vessel
+## Alus
 
-| Parameter | Value | Source |
+| Parametri | Arvo | Lähde |
 |---|---|---|
-| Name | Vega | |
-| Type | Steel-hulled tug, converted to leisure use | [perustiedot] |
-| Builder / year | Borgå Mekaniska Verkstad, 1912 | [perustiedot] |
-| Length | 16.15 m | [perustiedot] |
-| Beam | 4.16 m | [perustiedot] |
-| Draft | 1.97 m | [perustiedot] |
-| Displacement | **⚠ unknown** | |
-| Home port | Laivalahti, Helsinki (has also operated on Saimaa) | [perustiedot], [blog 2017-07-04] |
-| Helm | Single wheel, centre of the bridge | [blog 2017-04-19] |
-| Rudder | Single rudder; dimensions **⚠ unknown** | |
-| Bow thruster | Side-Power SH240-U11 (hydraulic), 250 mm tunnel, installed 2017 | [blog 2018-11-12] |
+| Nimi | Vega | |
+| Tyyppi | Teräsrunkoinen hinaaja, muutettu vapaa-ajan käyttöön | [perustiedot] |
+| Rakentaja / vuosi | Borgå Mekaniska Verkstad, 1912 | [perustiedot] |
+| Pituus | 16,15 m | [perustiedot] |
+| Leveys | 4,16 m | [perustiedot] |
+| Syväys | 1,97 m | [perustiedot] |
+| Uppouma | **⚠ ei tiedossa** | |
+| Kotisatama | Laivalahti, Helsinki (ollut myös Saimaalla) | [perustiedot], [blogi 2017-07-04] |
+| Ohjauspaikka | Yksi ruori, komentosillan keskellä | [blogi 2017-04-19] |
+| Peräsin | Yksi peräsin; mitat **⚠ ei tiedossa** | |
+| Keulapotkuri | Side-Power SH240-U11 (hydraulinen), 250 mm:n tunneli, asennettu 2017 | [blogi 2018-11-12] |
 
-## Power train
+## Voimansiirto
 
-| Item | Value | Source |
+| Kohde | Arvo | Lähde |
 |---|---|---|
-| Main engine | Caterpillar 3126B, 420 hp, installed 2012 | [perustiedot] |
-| Engine speed range | Idle (see below) – ~2500 rpm, cruise ~1800 rpm | [blog 2018-11-12] |
-| Flywheel / housing | SAE 11-1/2 flywheel, probably SAE #3 housing, with an adapter to SAE 14 | [blog 2021-02-08] |
-| Gearbox (original) | Masson RSD200 (1976), removed | [blog 2019-01-24] |
-| Gearbox | Advance 300, ~5.4:1, **installed and aligned** (2026) | [blog 2021-02-08], [owner 2026-10-21] |
-| Gearbox PTO | 1:1, driven from the input shaft (turns in neutral), no built-in clutch, rated 0.044 kW/rpm (≈ 420 Nm), Ø48 mm keyed shaft | [owner 2026-10-21] |
-| Shaft bearing | New bearing block for the propeller shaft | [owner 2026-10-21] |
-| Engine status | Being remounted and aligned to the gearbox (October 2026) | [owner 2026-10-21] |
-| Engine mounting | Gearbox and engine both rigidly mounted to the hull | [blog 2021-02-08] |
-| Propeller | Right-handed | [blog 2019-01-24] |
+| Pääkone | Caterpillar 3126B, 420 hv, asennettu 2012 | [perustiedot] |
+| Kierrosalue | Tyhjäkäynti (ks. alla) – ~2500 rpm, matka ~1800 rpm | [blogi 2018-11-12] |
+| Vauhtipyörä / kytkinkoppa | SAE 11-1/2 -vauhtipyörä, luultavasti SAE #3 -koppa, sovitelaippa SAE 14:ään | [blogi 2021-02-08] |
+| Vaihteisto (alkuperäinen) | Masson RSD200 (1976), poistettu | [blogi 2019-01-24] |
+| Vaihteisto | Advance 300, ~5,4:1, **asennettu ja linjattu** (2026) | [blogi 2021-02-08], [omistaja 2026-10-21] |
+| Vaihteiston PTO | 1:1, ensiöakselilta (pyörii vapaalla), ei omaa kytkintä, 0,044 kW/rpm (≈ 420 Nm), Ø48 mm:n kiila-akseli | [omistaja 2026-10-21] |
+| Akselin laakeri | Uusi laakeripukki potkuriakselille | [omistaja 2026-10-21] |
+| Koneen tilanne | Asennetaan takaisin ja linjataan vaihteistoon (lokakuu 2026) | [omistaja 2026-10-21] |
+| Koneen kiinnitys | Sekä vaihteisto että kone jäykästi runkoon | [blogi 2021-02-08] |
+| Potkuri | Oikeakätinen | [blogi 2019-01-24] |
 
-### Engine idle speed
+### Tyhjäkäyntikierrokset
 
-The blog quotes about 800 rpm idle [blog 2018-11-12]. **There's no official 3126B marine low-idle
-figure among the sources found online** (searched 2026-10-22):
+Blogin mukaan tyhjäkäynti on noin 800 rpm [blogi 2018-11-12]. **Virallista 3126B:n merikäytön
+tyhjäkäyntiarvoa ei löytynyt verkosta** (haettu 2026-10-22):
 
-- A 3126B spec sheet on Scribd shows **700 rpm low idle**, but it's unclear which rating that applies
-  to. ([source](https://www.scribd.com/document/832207648/3126B))
-- An owner of twin 3126B marine engines reports idle at **about 680 rpm**, dropping to about 540 rpm
-  with a "low-RPM" switch. ([source](https://forums.ybw.com/threads/low-rpm-toggle-switch.584153))
-- Other Cat marine engines have a **programmable low idle of 550–750 rpm**, set in the ECM with the
-  Cat ET service tool.
-  ([source](https://www.cat.com/en_US/products/new/power-systems/marine-power-systems/commercial-propulsion-engines/18408926.html))
+- Scribdissä olevassa 3126B:n esitteessä on **700 rpm**, mutta on epäselvää, mihin teholuokkaan se
+  liittyy. ([lähde](https://www.scribd.com/document/832207648/3126B))
+- Kahden 3126B:n omistaja kertoo tyhjäkäynnin olevan **noin 680 rpm**, ja "low-RPM"-kytkimellä noin
+  540 rpm. ([lähde](https://forums.ybw.com/threads/low-rpm-toggle-switch.584153))
+- Muissa Caterpillarin merimoottoreissa tyhjäkäynti on **ohjelmoitavissa 550–750 rpm:iin**
+  moottorinohjaimesta Cat ET -huoltotyökalulla.
+  ([lähde](https://www.cat.com/en_US/products/new/power-systems/marine-power-systems/commercial-propulsion-engines/18408926.html))
 
-**⚠ Measure the actual idle once the engine is running**, e.g. from the engine data in Signal K.
-Pump sizing on the PTO depends on it directly; see
-[hydraulics/design/p2-pump-options.md](../hydraulics/design/p2-pump-options.md). A Cat dealer can
-probably raise the programmed low idle if needed.
+**⚠ Mittaa todellinen tyhjäkäynti, kun kone käy**, esim. Signal K:n moottoritiedoista. PTO-pumpun
+mitoitus riippuu siitä suoraan, ks.
+[hydraulics/design/p2-pump-options.md](../hydraulics/design/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
+Caterpillar-huolto voi todennäköisesti nostaa ohjelmoitua tyhjäkäyntiä tarvittaessa.
 
-## Electrical basics
+## Sähköjärjestelmän perustiedot
 
-Details in [electrics/current-system.md](../electrics/current-system.md).
+Tarkemmin: [electrics/current-system.md](../electrics/current-system.md).
 
-| Item | Value | Source |
+| Kohde | Arvo | Lähde |
 |---|---|---|
-| DC system voltage | 24 V (inferred from the 24 V emergency pump) **⚠ verify** | [blog 2018-11-12] |
-| Engine alternator | 65 A | [blog 2017-07-04] |
+| DC-jännite | 24 V (päätelty 24 V:n hydrauliikan varapumpusta) **⚠ tarkista** | [blogi 2018-11-12] |
+| Koneen laturi | 65 A | [blogi 2017-07-04] |

@@ -1,223 +1,149 @@
-# P2 (auxiliary circuit) pump options
+# Apupiirin pumppu (P2) ja PTO-kytkin — vaihtoehdot
 
-> **Status:** Option study, draft 2026-10-21. No decision yet.
-> Context: [current-system.md §0](../current-system.md). Prices are rough indications only; get
-> quotes before deciding.
+> **Tila:** Vaihtoehtoselvitys, päivitetty 2026-10-22. Ei vielä päätöstä.
+> Tausta: [current-system.md §0](../current-system.md). Hinnat ovat karkeita suuntaa-antavia
+> arvioita; pyydä tarjoukset ennen päätöstä.
 
-## Fixed constraints
+## Yhteenveto ja alustava suositus
 
-| Constraint | Value |
+- **Kytkin:** Borelli **30501 tai 30502** (sarja 30500, yhteen suuntaan pyörivä PTO:n
+  pyörimissuunnan mukaan), ryhmän 3 pumppulaipalla, toimittaja Salhydro. Nimellismomentti 580 Nm,
+  joten paineenrajoitus voi olla 250 barissa reilulla marginaalilla. Varavaihtoehto: Flowfitin /
+  Borellin 30300-kokoonpano ja paineenrajoitus noin 230 bariin. Kauko-ohjaukseen push-pull-vaijeri
+  tai toimilaite ja rajakytkin.
+- **Pumppu:**
+  1. **Oletus: A**, ryhmän 3 hammaspyöräpumppu, **koko tyhjäkäynnin mukaan: 43 cm³ (800 rpm) …
+     51 cm³ (700 rpm)**. Halvin, sopii kaikkiin nykyisiin osiin, ja kytkin poistaa suurimman
+     tehottomuuden.
+  2. **Kannattaa pyytää tarjous: C**, ~45–47 cm³:n vinoakselimäntäpumppu (kuorma-auton PTO-pumppu),
+     mieluiten käytetty. Jos se ei maksa paljon enempää kuin A, se on hiljaisempi, häviöt ovat
+     pienemmät, ja täyteen työntövoimaan voi myöhemmin päästä nostamalla paineenrajoitusta.
+  3. **E harkitaan uudelleen** vain, jos keulapotkurin tai vinssin proportionaalinen ohjaus tai
+     useat samanaikaiset kuormat tulevat vaatimuksiksi.
+- **Ennen ostoja:** mittaa koneen todellinen tyhjäkäynti ja selvitä Salhydrolta spline-sovite
+  ryhmän 3 pumpulle.
+
+## Kiinteät reunaehdot
+
+| Reunaehto | Arvo |
 |---|---|
-| Drive | Advance 300 PTO, 1:1 from the input shaft, Ø48 keyed, HRC 150 coupling, clutch, pump on its own hull mount |
-| PTO torque limit | ≈ 420 Nm (0.044 kW/rpm) |
-| Engine speed while thrusting | ~800 rpm idle (clutch interlocked off above ~1000–1200 rpm) |
-| Design load | Side-Power SH240: 264 bar × 33.8 L/min at 100 %. Accepted: ~90 % thrust. |
-| Pressure class | 250 bar (cost decision); hoses rated 300 bar |
-| Future loads | Windlass (motor fitted, specs unknown), 3 spare CETOP 3 stations |
-| Suction | 32 mm, 3 m, tank about 1 m above the inlet |
+| Veto | Advance 300:n PTO, 1:1 ensiöakselilta, Ø48 kiila-akseli, HRC 150 -joustokytkin, kytkin, pumppu omalla runkoalustalla |
+| PTO:n momenttiraja | ≈ 420 Nm (0,044 kW/rpm) |
+| Koneen kierrokset keulapotkuria käytettäessä | Tyhjäkäynti, ~800 rpm (ei mitattu, voi olla 650–700); kytkin lukittu pois yli ~1000–1200 rpm:n |
+| Mitoittava kuorma | Side-Power SH240: 264 bar × 33,8 l/min (100 %). Hyväksytty: ~90 % työntövoimasta. |
+| Paineluokka | 250 bar (kustannuspäätös); letkut 300 bar, paineenrajoitusventtiili enintään 300 bar / 80 l/min |
+| Tulevat kuormat | Ankkurivinssi (moottori olemassa, tiedot puuttuvat), 3 vapaata CETOP 3 -paikkaa |
+| Imu | 32 mm, 3 m, säiliö noin 1 m imuaukon yläpuolella |
 
-## Duty cycle: why efficiency matters less than it seems
+## Käyttöjakso: miksi hyötysuhteella on vähemmän väliä kuin luulisi
 
-The clutch disconnects P2 whenever no auxiliary load is in use, so the pump only turns during
-thruster and windlass use. That's usually short bursts in harbour.
+Kytkin irrottaa P2:n aina, kun apupiirin kuormia ei käytetä, joten pumppu pyörii vain keulapotkurin
+ja ankkurivinssin käytön aikana. Yleensä se tarkoittaa lyhyitä jaksoja satamassa.
 
-Estimated heat during a thruster run with a 46 cm³ gear pump at 800 rpm, 250 bar and 40 °C oil:
+Arvioitu lämpökuorma keulapotkurin käytön aikana (46 cm³:n hammaspyöräpumppu, 800 rpm, 250 bar,
+öljy 40 °C):
 
-| Item | Value |
+| Kohde | Arvo |
 |---|---|
-| Shaft power in | ~17 kW |
-| Thruster motor output | ~11 kW |
-| Heat into the oil | **~6 kW** (pump, valves, hoses, ~2 L/min over the relief valve) |
-| Oil temperature rise, 80 L, no cooler | ~2.7 K per minute of continuous thrusting |
+| Akseliteho sisään | ~17 kW |
+| Keulapotkurimoottorin teho | ~11 kW |
+| Lämpö öljyyn | **~6 kW** (pumppu, venttiilit, letkut, ~2 l/min paineenrajoituksen yli) |
+| Öljyn lämpeneminen, 80 l, ei jäähdytintä | ~2,7 K jokaista jatkuvan käytön minuuttia kohden |
 
-Typical manoeuvring is 1–2 minutes of intermittent use, which adds about 3–5 K. That's harmless.
-A long continuous run of 5 minutes or more adds over 13 K, and the Side-Power motor has its own
-duty-cycle limits anyway. **Heat is not a reason to leave the fixed pump for thruster-only use.**
-It does become one if the windlass runs for long periods, or if loads ever run without the clutch.
+Tavallinen manööveri on 1–2 minuuttia ajoittaista käyttöä, mikä nostaa lämpötilaa noin 3–5 K. Se on
+harmitonta. Yli 5 minuutin yhtäjaksoinen käyttö nostaa yli 13 K, ja Side-Power-moottorilla on joka
+tapauksessa omat käyttöjaksorajansa. **Lämpö ei ole syy luopua vakiotilavuuspumpusta, kun
+kuormana on vain keulapotkuri.** Se voi olla syy, jos ankkurivinssi on pitkään käytössä, tai jos
+kuormia käytetään ilman kytkintä.
 
-## Options
+## Pumppuvaihtoehdot
 
-### A. External gear pump, fixed displacement, ~46 cm³ (baseline)
+### A. Ulkohammaspyöräpumppu, vakiotilavuus (perusratkaisu)
 
-The 2017 design, sized up for the 1:1 PTO.
+Vuoden 2017 ratkaisu, suurennettuna 1:1-PTO:lle.
 
-- **Pros:** cheapest option (roughly €200–500). Robust and tolerant of dirty oil. Simple and
-  easy to source in Finland (the same types as the Salami pumps). Works with the existing VPR3,
-  2/2 unloading valve and CETOP manifold unchanged.
-- **Cons:** flow is tied to rpm, with the excess throttled or sent over the relief valve. About
-  80–85 % overall efficiency. Noisier than piston pumps. Group-3 pumps are typically rated about
-  250 bar continuous and 280 bar peak, so there's no headroom above the 250 bar class.
-- **Fit:** matches the cost-managed brief. The clutch takes care of the main weakness, which is
-  wasted flow while cruising.
+- **Plussat:** halvin (noin 200–500 €). Kestävä ja sietää likaisempaa öljyä. Yksinkertainen ja helppo
+  hankkia Suomesta (samaa tyyppiä kuin Salami-pumput). Toimii nykyisen VPR3:n,
+  2/2-vapaakiertoventtiilin ja CETOP-pohjalaatan kanssa sellaisenaan.
+- **Miinukset:** tuotto sidottu kierroksiin, ylimäärä kuristetaan tai menee paineenrajoituksen yli.
+  Kokonaishyötysuhde noin 80–85 %. Äänekkäämpi kuin mäntäpumput. Ryhmän 3 pumput ovat tyypillisesti
+  250 bar jatkuva / 280–300 bar huippu, joten 250 barin luokan yli ei ole varaa.
+- **Sopivuus:** vastaa kustannustietoista linjaa. Kytkin hoitaa suurimman heikkouden eli hukkavirtauksen
+  ajon aikana.
 
-### B. Smaller gear pump (~37 cm³) plus a raised "thruster idle" of ~1000 rpm
+### B. Pienempi hammaspyöräpumppu (~37 cm³) ja korotettu "keulapotkurityhjäkäynti" ~1000 rpm
 
-- **Pros:** a cheaper and smaller pump, and less wasted flow if the clutch is ever engaged at higher
-  rpm. Lower torque (~172 Nm).
-- **Cons:** someone has to raise the engine speed before using the thruster. Forgetting gives about
-  25 % less flow, which means weaker thrust exactly when manoeuvring. Higher rpm in harbour is also
-  noisier, and the propeller pushes harder if the boat is in gear.
-- **Fit:** only worth it with an automatic rpm raise, e.g. a thruster-active signal to the engine
-  throttle. Find out whether the 3126B's electronic control has a usable input. **⚠ Check.**
+- **Plussat:** halvempi ja pienempi pumppu, vähemmän hukkavirtausta, jos kytkin on päällä
+  korkeammilla kierroksilla. Pienempi momentti (~172 Nm).
+- **Miinukset:** jonkun pitää nostaa kierroksia ennen keulapotkurin käyttöä. Unohtaminen antaa noin
+  25 % vähemmän virtausta, eli heikomman työntövoiman juuri manööverissä. Korkeammat kierrokset
+  satamassa ovat myös äänekkäämpiä, ja potkuri työntää enemmän, jos vaihde on päällä.
+- **Sopivuus:** kannattaa vain automaattisella kierrosten nostolla, esim. keulapotkurin
+  aktiivisignaali koneen kaasulle. Selvitä, onko 3126B:n elektroniikassa sopiva sisääntulo.
+  **⚠ Tarkista.**
 
-### C. Bent-axis piston pump, fixed displacement (truck PTO pump)
+### C. Vinoakselimäntäpumppu, vakiotilavuus (kuorma-auton PTO-pumppu)
 
-Typical makes: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc and similar, in sizes around 40–47 cm³.
+Tyypillisiä merkkejä: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc ym., kokoluokka noin 40–47 cm³.
 
-- **Pros:** about 90–95 % efficient, quiet, compact, designed for PTO duty. Rated about
-  **350–400 bar**, so it can run the relief at 265–280 bar and give ~100 % thrust without being
-  stressed. Widely available second-hand from the truck and crane market. 47 cm³ at 280 bar is about
-  230 Nm, which is fine for the PTO.
-- **Cons:** costs more than a gear pump (roughly €700–1500 new). Needs cleaner oil (target about ISO
-  4406 18/16/13). Mounting flanges are usually ISO 7653 truck pattern, so it needs an adapter plate on
-  the hull mount. Still fixed displacement, so the flow-versus-rpm behaviour is the same as A.
-- **Before raising pressure, check:** the CETOP valves' P/A/B ratings, the BAV-713 rating, and the
-  Side-Power motor's maximum pressure. The hoses (300 bar) are fine.
-- **Fit:** the best upgrade if you want full thrust and lower losses without changing the circuit.
+- **Plussat:** hyötysuhde noin 90–95 %, hiljainen, kompakti, tehty PTO-käyttöön. Paineluokka noin
+  **350–400 bar**, joten paineenrajoitus voisi olla 265–280 bar ja työntövoima ~100 % ilman että
+  pumppu rasittuu. Paljon käytettyjä tarjolla kuorma-auto- ja nosturipuolelta. 47 cm³ 280 barilla on
+  noin 230 Nm, mikä sopii PTO:lle.
+- **Miinukset:** kalliimpi kuin hammaspyöräpumppu (noin 700–1500 € uutena). Vaatii puhtaampaa öljyä
+  (tavoite noin ISO 4406 18/16/13). Laippa on yleensä kuorma-autojen ISO 7653 -mallia, joten
+  runkoalustalle tarvitaan sovitelevy. Edelleen vakiotilavuus, joten tuotto kierrosten suhteen
+  käyttäytyy kuten A:ssa.
+- **Ennen paineen nostoa tarkista:** CETOP-venttiilien P/A/B-arvot, BAV-713:n arvot ja Side-Power-moottorin
+  suurin paine. Letkut (300 bar) riittävät.
+- **Sopivuus:** paras päivitys, jos halutaan täysi työntövoima ja pienemmät häviöt muuttamatta piiriä.
 
-### D. Variable-displacement axial piston pump, pressure-compensated (PC)
+### D. Säätötilavuuksinen aksiaalimäntäpumppu, painekompensoitu (PC)
 
-- **Pros:** reduces its displacement to deliver only the flow being used, so nothing is dumped over
-  the relief valve and there's no throttling loss in a flow-control valve. Could eventually make the
-  VPR3 unnecessary.
-- **Cons:** costs about €1500–3000. With no flow demand it still sits at full compensator pressure
-  (250 bar), so the case drain leaks and the pump runs hot when idling. You'd still want the clutch.
-  Needs a case drain line to tank and cleaner oil. Bigger and heavier.
-- **Fit:** weak for this duty cycle. Its savings mostly come when loads run for long periods.
+- **Plussat:** pienentää tilavuuttaan niin, että tuottaa vain käytetyn virtauksen. Mitään ei mene
+  paineenrajoituksen yli, eikä virtauksensäätöventtiilissä synny kuristushäviötä. VPR3 voisi
+  jäädä tarpeettomaksi.
+- **Miinukset:** noin 1500–3000 €. Ilman virtaustarvetta pumppu on silti täydessä säätöpaineessa
+  (250 bar), joten vuotolinja vuotaa ja pumppu lämpenee tyhjäkäynnillä. Kytkin tarvitaan edelleen.
+  Vaatii vuotolinjan säiliöön ja puhtaampaa öljyä. Isompi ja painavampi.
+- **Sopivuus:** heikko tällä käyttöjaksolla. Säästöt syntyvät lähinnä pitkissä käyttöjaksoissa.
 
-### E. Load-sensing (LS) variable pump plus proportional LS valves (e.g. a sectional mobile valve)
+### E. Kuormantunteva (LS) säätöpumppu ja proportionaaliset LS-venttiilit (esim. lohkoventtiili)
 
-- **Pros:** the most capable system. The pump runs at about 20–30 bar above the highest load
-  pressure and idles at about 20–30 bar when nothing is used. **Proportional** control of the
-  thruster and windlass. Flow sharing when several loads run at once. Expandable to a davit or other
-  loads. Efficient enough to run without a clutch, although keeping it is still sensible.
-- **Cons:** the most expensive option. Pump plus LS valve bank roughly €3000–6000 or more. **Replaces
-  the existing CETOP manifold, BAV-713, VPR3 and 2/2 valve.** Needs an LS signal line, cleaner oil
-  and more complex commissioning. The Side-Power SH240 control is on/off today; proportional
-  thrust needs its own proportional valve and driver.
-- **Fit:** worth considering only if proportional control or many simultaneous loads become goals.
-  That's a scope change, not a pump swap.
+- **Plussat:** monipuolisin järjestelmä. Pumppu toimii noin 20–30 bar suurimman kuormapaineen
+  yläpuolella ja noin 20–30 barissa, kun mitään ei käytetä. Keulapotkurin ja vinssin
+  **proportionaalinen** ohjaus. Virtauksen jako, kun useita kuormia on käytössä yhtä aikaa.
+  Laajennettavissa daavittiin ym. Riittävän tehokas toimimaan ilman kytkintä, vaikka kytkin on silti
+  järkevä.
+- **Miinukset:** kallein. Pumppu ja LS-venttiilipaketti noin 3000–6000 € tai enemmän. **Korvaa
+  nykyisen CETOP-pohjalaatan, BAV-713:n, VPR3:n ja 2/2-venttiilin.** Vaatii LS-signaalilinjan,
+  puhtaamman öljyn ja vaativamman käyttöönoton. SH240:n ohjaus on nyt on/off; proportionaalinen
+  työntövoima vaatii oman proportionaaliventtiilin ja ohjaimen.
+- **Sopivuus:** harkitaan vain, jos proportionaalinen ohjaus tai monet samanaikaiset kuormat tulevat
+  tavoitteiksi. Se on laajuuden muutos, ei pelkkä pumpun vaihto.
 
-### F. Tandem gear pump (e.g. 25 + 20 cm³) with one section unloaded
+### F. Tandem-hammaspyöräpumppu (esim. 25 + 20 cm³), toinen osa vapaakierrolla
 
-- **Pros:** both sections deliver for the thruster at idle. One section can feed the windlass on its
-  own circuit, or be unloaded to tank at low pressure to cut waste. Cheap parts.
-- **Cons:** more valves and plumbing. The clutch already covers most of the efficiency benefit.
-  Longer pump assembly.
-- **Fit:** interesting only if the windlass ends up needing its own flow while the thruster runs.
+- **Plussat:** molemmat osat syöttävät keulapotkuria tyhjäkäynnillä. Toinen osa voi syöttää vinssiä
+  omana piirinään tai kierrättää matalalla paineella säiliöön. Halvat osat.
+- **Miinukset:** enemmän venttiileitä ja putkitusta. Kytkin hoitaa jo suurimman osan
+  hyötysuhdeedusta. Pidempi pumppukokonaisuus.
+- **Sopivuus:** kiinnostava vain, jos vinssi tarvitsee oman virtauksensa keulapotkurin käydessä.
 
-### Not viable: electric power pack for the thruster
+### Ei toteuttamiskelpoinen: sähköinen voimayksikkö keulapotkurille
 
-About 15 kW hydraulic is about 750 A at 24 V. That needs a dedicated AC generator or a very large
-battery bank. Hydraulic PTO drive is the reason the SH240 was chosen. (A small electric pack still
-makes sense as **emergency steering backup** at about 2.5 kW, as planned in 2017.)
+Noin 15 kW hydraulista tehoa on noin 750 A 24 voltilla. Se vaatisi oman AC-generaattorin tai erittäin
+suuren akuston. Hydraulinen PTO-veto on syy, miksi SH240 valittiin. (Pieni sähköpumppu on silti
+järkevä **ohjauksen varajärjestelmänä**, noin 2,5 kW, kuten 2017 suunniteltiin.)
 
-## Candidate under evaluation: Flowfit ZZ009520 (option A with a mechanical clutch)
+## Herkkyys tyhjäkäyntikierroksille
 
-[Group 3 Mechanical Clutch & Pump Assembly, 43cc, 77.4 L/min](https://www.flowfitonline.com/products/group-3-mechanical-clutch-pump-assembly-43cc-77-4-l-min),
-about £526 + VAT (October 2026). Data comes from the Flowfit datasheet PDF linked on the product
-page, which is a scanned 3-page PDF read visually. Items marked *(page)* come from a summary of the
-product page and weren't read verbatim.
+800 rpm:n tyhjäkäynti on vuoden 2018 blogista. Verkkolähteiden mukaan 3126B:n merikäytön
+tyhjäkäynti voi olla noin **650–700 rpm**, ja se on ohjelmoitavissa moottorinohjaimeen. Ks.
+[alustiedot](../../vessel/README.md#tyhjäkäyntikierrokset). Keulapotkurin työntövoima 250 barin
+paineenrajoituksella, lämmin öljy:
 
-| Item | Value | Source |
-|---|---|---|
-| Assembly rating | 200 bar working, 30 kW absorbed, 77.4 L/min at 1800 rpm | *(page)* |
-| Pump | VNK3 group 3 gear pump, 43 cm³, European flange | datasheet p.1 |
-| Pump pressure | **250 bar rated, 300 bar peak** | datasheet p.1 |
-| Pump speed | 2000 rated, 2800 max, 400 min rpm | datasheet p.1 |
-| Clutch | Flowfit series 30300 **mechanical clutch, lever-operated** (OFF/ON, ±10° lever travel) | datasheet p.3 |
-| Clutch rating | **Nominal torque 18.5 daNm = 185 Nm**, max 2700 rpm, max 40 kW, axial load 160 daN | datasheet p.3 |
-| Clutch input | **Ø28 j6 shaft, 8×7×40 key** (UNI 6607-69) | datasheet p.3 |
-| Clutch output | 35×31 DIN 5482 internal spline (group 3) | datasheet p.3 |
-| Clutch lubrication | SAE 90 gear oil; change after the first 60–80 h, then every 12 months or 1500 h | *(page)* |
-| Engagement | With the directional valve in the unloaded position, at no more than 1800 rpm | *(page)* |
-| Rotation | Clockwise as supplied; anticlockwise on request. Reversible clutch variants exist (30300/30311/30312). | *(page)*, datasheet p.3 |
-
-### Fit against the Vega requirements
-
-| Check | Result |
-|---|---|
-| Flow at 800 rpm idle | 43 cm³ × 800 × 0.92 ≈ **31.6 L/min** against 33.8 for 100 %. At 250 bar the flow and pressure limits happen to coincide, giving about 88 % thrust, the same as a 46 cm³ pump. **But a 43 cm³ pump is flow-limited at idle, so raising the relief above 250 bar gains nothing** (see "Raising the relief above 250 bar" below). ✅ at 250 bar |
-| Pump pressure | 250 bar rated. ✅ |
-| Pump and clutch speed | 2500 rpm engine is under the 2800 (pump) and 2700 (clutch) limits. ✅ |
-| PTO torque (420 Nm) | ✅ Large margin. |
-| **Clutch torque at the 250 bar relief** | 250 bar × 43 cm³ / 2π = 171 Nm theoretical, **~190 Nm** with 90 % mechanical efficiency. That's **at or just over the 185 Nm nominal rating.** ⚠ |
-| Clutch torque at 200 bar (Flowfit's assembly rating) | 137–152 Nm, about 80 % of nominal. This is probably why Flowfit rates the assembly at 200 bar. |
-| Coupling | HRC 150 with a 48 mm hub on the PTO and a 28 mm hub on the clutch input. Torque ≤ 190 Nm. Check that both bores fit the chosen hub types. |
-| Control | Manual lever on the unit, so engaging it means a trip to the engine room, or adding a push-pull cable or actuator. The clutch has no position feedback; a limit switch would be needed for any Signal K indication or rpm interlock. |
-
-### Thrust vs relief setting with this assembly (warm oil, 800 rpm)
-
-| Relief | Thrust | Torque at relief | vs clutch 185 Nm |
-|---|---|---|---|
-| 200 bar (Flowfit rating) | ~70 % | 137–152 Nm | ✅ within |
-| 230 bar | ~81 % | 157–175 Nm | ✅ within (≈ 95 %) |
-| 250 bar | ~88 % | 171–190 Nm | ⚠ at or just above |
-
-### Ways forward
-
-1. **Ask Flowfit** whether the 30300 clutch's 185 Nm *nominal* rating allows the short, intermittent
-   peaks of thruster duty at 250 bar. That keeps the 88 % thrust and the low price.
-2. **Set the relief to ~230 bar.** That stays within the clutch rating, gives ~81 % thrust, and needs
-   no extra cost.
-3. **Use a heavier clutch with the same pump.** Look for an electromagnetic or mechanical clutch rated
-   at 250 Nm or more. Flowfit also lists an electromagnetic clutch and pump category. That would also
-   allow remote engagement and an rpm interlock.
-4. A smaller pump such as 39 cm³ would stay within 185 Nm at 250 bar (155–172 Nm). But at 800 rpm it
-   gives only ~28.7 L/min, which makes thrust flow-limited, so it needs a ~900 rpm thruster idle. Not
-   better than option 2.
-
-## Borelli mechanical couplings (Salhydro catalogue HPFM.pdf)
-
-Source: <https://files.salhydro.fi/files/PDF/HPFM.pdf>, the Borelli "Mechanical couplings" catalogue
-(10 scanned pages, read visually). Salhydro is a Finnish distributor, so this would be sourced
-locally.
-
-**The Flowfit 30300 is a Borelli 30300.** The part numbers, drawings and ratings are identical: a
-mechanical **dog clutch** ("coupling with front teeth"), lever-operated, 185 Nm nominal.
-The catalogue also has a **larger series, 30500**, for pump groups 3.5 and 4:
-
-| Item | 30300 (Flowfit assembly) | **30500** |
-|---|---|---|
-| Nominal torque | 18.5 daNm = **185 Nm** | 58 daNm = **580 Nm** |
-| Max speed | 2700 rpm | 2700 rpm |
-| Max power | 40 kW | 60 kW |
-| Axial load | 160 daN | 260 daN |
-| Input shaft | Ø28 j6, key 8×7×40 | **Ø42 j6, key 12×8×60**, 70 mm long |
-| Output | 35×31 DIN 5482 internal spline | 48×44 DIN 5482 internal spline |
-| Pump flanges | Gr.2–3, Gr.2/3 Bosch, SAE A, SAE B | Gr.2, **Gr.3 (30401)**, Gr.3.5, Gr.4, **Gr.3 Bosch (30417)**, SAE A/B/C, others |
-| Size | ~151 mm long | ~226 mm long, Ø166 housing |
-| Versions | 30300 reversible / 30301 right / 30302 left | 30500 reversible / 30501 right / 30502 left |
-
-General rules for both series (catalogue p.3, verbatim): *"When coupling with hydraulic pumps we
-recommend to engage and disengage the pump when the directional valve is in exhaust position at a
-speed not over 1800 R.P.M. In the reversible position the max engagement and disengagement speed is
-1000 R.P.M."* Lubrication: SAE 90, changed every 12 months. Working temperature −10 to +80 °C.
-
-### Fit of the 30500 against Vega
-
-| Check | Result |
-|---|---|
-| Torque, 43–46 cm³ at 250 bar (171–215 Nm) | ✅ 580 Nm nominal, about **2.7–3×** margin. Even 300 bar peaks (about 230–245 Nm) are well inside. |
-| PTO limit (≈ 420 Nm) | The clutch is now stronger than the PTO. The **relief valve** is what protects the PTO. 250 bar × 46 cm³ ≈ 215 Nm, so that's fine. |
-| Speed and power | ✅ 2700 rpm and 60 kW, against 2500 rpm and about 18 kW |
-| Input shaft | ✅ Ø42 keyed. HRC 150 hubs would be 48 mm (PTO) and 42 mm (clutch). Check the hub types. |
-| Pump mounting | Gr.3 (30401) and Gr.3 Bosch (30417) flanges are listed, so the existing pump types fit. ⚠ **But the output spline is 48×44, larger than a group-3 pump shaft.** Ask Salhydro or Borelli which spline adapter or sleeve goes with flange 30401 or 30417 for a group-3 pump (35×31 spline or 1:8 taper). |
-| Engagement | Same rules as the 30300: unloaded, at no more than 1800 rpm (1000 rpm if reversible). Use a **right or left (non-reversible) version** to get the 1800 rpm limit. Engaging at idle with the 2/2 valve open meets either. |
-| Remote operation | Same lever as the 30300; a push-pull cable or actuator plus a limit switch still apply. The lever force isn't stated clearly (the drawing shows 631 / 472 daN, which is probably not a hand force); ask. |
-| Size | About 75 mm longer than the 30300. Check the space on the hull mount. |
-
-**It solves the 250 bar torque question.** With the 30500, the relief can stay at 250 bar
-(about 88 % thrust), with plenty of margin and no need to ask Flowfit about short peaks.
-
-## Sensitivity to engine idle speed
-
-The 800 rpm idle comes from the 2018 blog. Online sources suggest the 3126B marine low idle may be
-about **650–700 rpm**, programmable in the ECM. See the
-[vessel overview](../../vessel/README.md#engine-idle-speed). Thruster thrust at a 250 bar relief, warm
-oil:
-
-| Idle | 43 cm³ | 46 cm³ | 51 cm³ | 60 cm³ |
+| Tyhjäkäynti | 43 cm³ | 46 cm³ | 51 cm³ | 60 cm³ |
 |---|---|---|---|---|
 | 600 rpm | ~49 % | ~56 % | ~69 % | ~88 % |
 | 650 rpm | ~58 % | ~66 % | ~81 % | ~88 % |
@@ -225,156 +151,208 @@ oil:
 | 750 rpm | ~77 % | **~88 %** | ~88 % | ~88 % |
 | 800 rpm | **~88 %** | ~88 % | ~88 % | ~88 % |
 
-**If idle is about 700 rpm, the 43 cm³ pump gives only about two-thirds thrust.** A 51 cm³ pump
-covers idle down to 700 rpm. At 250 bar it needs about 225 Nm, which rules out the 185 Nm
-Borelli/Flowfit 30300 and points to the Borelli 30500. The VNK3 range has a 51 cm³ size (250 bar
-rated, 2800 rpm max). Alternatives are to have the low idle raised in the ECM, or to raise rpm by
-hand when thrusting. **⚠ Measure the real idle before buying the pump.**
+**Jos tyhjäkäynti on noin 700 rpm, 43 cm³:n pumppu antaa vain noin kaksi kolmasosaa
+työntövoimasta.** 51 cm³:n pumppu riittää 700 rpm:iin asti. Se tarvitsee 250 barilla noin 225 Nm,
+mikä sulkee pois 185 Nm:n Borelli/Flowfit 30300:n ja puoltaa Borellin 30500:aa. VNK3-sarjassa on
+51 cm³:n koko (250 bar, enintään 2800 rpm). Muut keinot: tyhjäkäynnin nosto moottorinohjaimesta tai
+kierrosten nosto käsin keulapotkuria käytettäessä. **⚠ Mittaa todellinen tyhjäkäynti ennen pumpun
+ostoa.**
 
-## Raising the relief above 250 bar
+## Paineenrajoituksen nostaminen yli 250 barin
 
-The CETOP manifold relief valve is rated **up to 300 bar and 80 L/min** (owner, 2026-10-22), and the
-hoses are 300 bar, so neither of those stops a higher setting. Thrust estimates at 800 rpm idle,
-warm oil:
+CETOP-pohjalaatan paineenrajoitusventtiili on **enintään 300 bar ja 80 l/min**
+[omistaja 2026-10-22], ja letkut ovat 300 bar, joten ne eivät estä korkeampaa asetusta.
+Työntövoima-arviot 800 rpm:n tyhjäkäynnillä, lämmin öljy:
 
-| Relief | 43 cm³ (31.6 L/min) | 46 cm³ (33.9 L/min) | 51 cm³ (37.5 L/min) | Torque, 46 cm³ |
+| Paineenrajoitus | 43 cm³ (31,6 l/min) | 46 cm³ (33,9 l/min) | 51 cm³ (37,5 l/min) | Momentti, 46 cm³ |
 |---|---|---|---|---|
 | 250 bar | ~88 % | ~88 % | ~88 % | ~203 Nm |
-| 260 bar | ~88 % (flow-limited) | ~92 % | ~92 % | ~211 Nm |
-| 270 bar | ~88 % (flow-limited) | ~95 % | ~95 % | ~220 Nm |
-| 280 bar | ~88 % (flow-limited) | ~99 % | ~99 % | ~228 Nm |
+| 260 bar | ~88 % (virtaus rajoittaa) | ~92 % | ~92 % | ~211 Nm |
+| 270 bar | ~88 % (virtaus rajoittaa) | ~95 % | ~95 % | ~220 Nm |
+| 280 bar | ~88 % (virtaus rajoittaa) | ~99 % | ~99 % | ~228 Nm |
 
-- **More pressure only helps with more flow at idle.** That means a 46–51 cm³ pump instead of 43,
-  or about 900 rpm idle while thrusting.
-- **Torque:** at most about 250 Nm (51 cm³, 280 bar). That's fine for the Borelli 30500 (580 Nm) and
-  the PTO (420 Nm), but **not** for the 30300 (185 Nm) or the Brevini IM1 (190 Nm).
-- **What still limits the pressure:**
-  - **Pump:** the VNK3 group 3 (43 and 51 cm³) is rated 250 bar continuous and 300 bar peak.
-    Running at 260–280 bar means relying on its peak rating during thruster bursts. Ask whether the
-    peak rating covers intermittent duty, or choose a pump rated for 280 bar continuous.
-  - **Valves:** the BAV-713 thruster valve and the CETOP subplate. CETOP 3 parts are often rated
-    315–350 bar, but **⚠ verify**.
-  - **Thruster motor:** the Side-Power SH240 hydraulic motor's maximum pressure. **⚠ verify.**
-- **The 80 L/min rating is fine.** The relief sits after the VPR3 (35 L/min), so it never sees full
-  pump flow.
+- **Korkeampi paine auttaa vain, jos tyhjäkäynnillä on enemmän virtausta.** Se tarkoittaa 46–51 cm³:n
+  pumppua 43:n sijaan tai noin 900 rpm:ää keulapotkuria käytettäessä.
+- **Momentti:** enintään noin 250 Nm (51 cm³, 280 bar). Se sopii Borellin 30500:lle (580 Nm) ja PTO:lle
+  (420 Nm), mutta **ei** 30300:lle (185 Nm) eikä Brevinin IM1:lle (190 Nm).
+- **Mikä vielä rajoittaa painetta:**
+  - **Pumppu:** VNK3 ryhmä 3 (43 ja 51 cm³) on 250 bar jatkuva ja 300 bar huippu. 260–280 barin käyttö
+    nojaa huippuarvoon keulapotkurin käyttöjaksoissa. Kysy, kattaako huippuarvo ajoittaisen käytön,
+    tai valitse pumppu, joka on 280 bar jatkuva.
+  - **Venttiilit:** BAV-713 ja CETOP-pohjalaatta. CETOP 3 -osat ovat usein 315–350 bar, mutta
+    **⚠ tarkista**.
+  - **Keulapotkurin moottori:** Side-Power SH240:n hydraulimoottorin suurin paine. **⚠ Tarkista.**
+- **80 l/min riittää.** Paineenrajoitus on VPR3:n (35 l/min) jälkeen, joten se ei koskaan näe pumpun
+  koko tuottoa.
 
-## Brevini IM1 mechanical clutch (hydrauliikkakauppa.fi)
+## Kytkinvaihtoehdot
 
-Source: <https://www.hydrauliikkakauppa.fi/wp-content/uploads/2020/09/Mekaaninen-Irrotuskytkin-40kW-IM1.pdf>,
-the Brevini Fluid Power IM1 datasheet (2 pages, read visually). Finnish supplier.
+### Flowfit ZZ009520: ryhmän 3 mekaaninen kytkin- ja pumppukokoonpano, 43 cm³
 
-| Item | Brevini IM1 | Compared with Borelli 30300 / 30500 |
+[Group 3 Mechanical Clutch & Pump Assembly, 43cc, 77.4 L/min](https://www.flowfitonline.com/products/group-3-mechanical-clutch-pump-assembly-43cc-77-4-l-min),
+noin 526 £ + ALV (lokakuu 2026). Tiedot tuotesivulla linkitetystä Flowfitin datalehdestä
+(skannattu 3-sivuinen PDF, luettu kuvina). *(sivu)*-merkityt tiedot ovat tuotesivun tiivistelmästä,
+eikä niitä luettu sanatarkasti.
+
+| Kohde | Arvo | Lähde |
 |---|---|---|
-| Type | Manual-lever mechanical clutch, motor/engine to pump | same idea |
-| **Max torque** | **19 daNm = 190 Nm** (a *maximum*, not a nominal rating) | 30300: 185 Nm *nominal*; 30500: 580 Nm nominal |
-| Max speed | 2700 rpm | same |
-| **Max engagement speed** | **420 rpm** (300 rpm reversible), pump unloaded | 1800 rpm (1000 reversible) |
-| Input shaft | Ø28 j6, key A8×7×40, 48 mm long; radial load chart up to about 3 kN | 30300 the same Ø28; 30500 Ø42 |
-| Output | Z18 35×31 DIN 5482 spline, so a group-3 splined pump fits directly | |
-| Flanges | Gr.2–3, SAE A, SAE B | |
-| Lubrication | 0.5 L CLP 150 (ISO VG 150), changed every 12 months | SAE 90 |
-| Ordering code | IM1-C-**D**/**S**/**R**-**2/3**/SA/SB (D = clockwise, S = anticlockwise, R = reversible) | |
+| Kokoonpanon arvot | 200 bar työpaine, 30 kW, 77,4 l/min 1800 rpm:llä | *(sivu)* |
+| Pumppu | VNK3, ryhmä 3, hammaspyöräpumppu, 43 cm³, eurooppalainen laippa | datalehti s. 1 |
+| Pumpun paine | **250 bar nimellinen, 300 bar huippu** | datalehti s. 1 |
+| Pumpun kierrosnopeus | 2000 nimellinen, 2800 max, 400 min rpm | datalehti s. 1 |
+| Kytkin | Flowfit-sarja 30300, **mekaaninen, vipukäyttöinen** (OFF/ON, vivun liike ±10°) | datalehti s. 3 |
+| Kytkimen arvot | **Nimellismomentti 18,5 daNm = 185 Nm**, max 2700 rpm, max 40 kW, aksiaalikuorma 160 daN | datalehti s. 3 |
+| Kytkimen ensiö | **Ø28 j6 -akseli, kiila 8×7×40** (UNI 6607-69) | datalehti s. 3 |
+| Kytkimen toisio | 35×31 DIN 5482 -sisähammastus (ryhmä 3) | datalehti s. 3 |
+| Kytkimen voitelu | SAE 90 -vaihteistoöljy; vaihto 60–80 h jälkeen, sitten 12 kk tai 1500 h välein | *(sivu)* |
+| Kytkentä | Suuntaventtiili vapaakierrolla, enintään 1800 rpm | *(sivu)* |
+| Pyörimissuunta | Myötäpäivään vakiona; vastapäivään pyynnöstä. Molempiin suuntiin toimivia versioita on. | *(sivu)*, datalehti s. 3 |
 
-### Fit against Vega
-
-- **Engagement at 420 rpm or below means it can't be engaged with the engine running.** The 3126B
-  idles at about 800 rpm. The pump would have to be engaged **with the engine stopped**, before
-  starting, and disengaged after stopping. It couldn't be engaged on approach to a harbour or for
-  the windlass at anchor without shutting the engine down. ❌ for a thruster that's needed on
-  arrival.
-- **190 Nm max** against 171–190 Nm at 250 bar is right at the limit, with no margin for pressure
-  peaks. Similar to the 30300, but this one is a *maximum* rating, so it's actually tighter. ❌
-- **Conclusion:** no better than the Flowfit/Borelli 30300, and worse to operate. Brevini may make
-  larger sizes in the same catalogue section (the filename says "40kW", and the page is section
-  2.03). Ask the supplier for a larger size, and check its engagement speed too.
-
-## Electromagnetic clutch options (Flowfit range)
-
-Source: the Flowfit technical PDF `ECPA1.pdf`, 12 pages, scanned and read visually. Flowfit sells
-three series, all of the same design.
-
-| Series (12 V / 24 V) | Nominal torque | Static (max) torque | Dynamic torque at 500 / 1000 rpm | 24 V coil | Pulley | Weight |
-|---|---|---|---|---|---|---|
-| 30901 / 30903 | 78 Nm | 125 Nm | 85 / 70 Nm | 1.26 A, 30 W | Ø153, 2 × A-section | 5.5 kg |
-| 30929 / 30930 | 118 Nm | 140 Nm | 125 / 110 Nm | 1.26 A, 30 W | Ø153, 2 × A-section | 5.5 kg |
-| **30990 / 30991** | **160 Nm** | **210 Nm** | **145 / 120 Nm** | 1.95 A, 47 W | Ø186, 2 × A-section | 8 kg |
-
-Common to all three series:
-- **Output** is a 35×31 DIN 5482 internal spline. Flanges are available for Group 2 Bosch,
-  Group 3, Group 3 Bosch, SAE A and SAE B. The 24 V Group 3 version of the largest series is
-  **29-30993**.
-- **All data is at 20 °C.** At 120 °C performance is **20 % lower**.
-- Engagement takes 25 ms, with at least 20 s between engagements. Slipping must not last more than
-  5 s (product page).
-- Max speed 5000 rpm. All are reversible.
-- **Input is a V-belt pulley (the clutch rotor), not a shaft.** These are built for belt drive from
-  the engine crank, like truck and tractor auxiliary pumps.
-
-### Fit against Vega
-
-| Check | Result |
+| Tarkistus | Tulos |
 |---|---|
-| Torque with a 43 cm³ pump at 250 bar (171–190 Nm) | **Over the 160 Nm nominal rating** of the largest series. Under the 210 Nm static rating when cold, but at the limit of the 168 Nm hot rating (−20 %). **No better than the 185 Nm mechanical clutch.** ❌ |
-| Torque at 200–230 bar (137–175 Nm) | Above nominal from about 220 bar upward. |
-| Drive from the PTO's Ø48 keyed shaft | ❌ **No shaft input.** You'd need either (a) a belt drive from a pulley on the PTO, or (b) a custom adapter bolted to the pulley rotor, which isn't a supported configuration. A belt drive brings back the 2018 problem: two A-section belts can't carry about 17 kW at 800 rpm. |
-| Remote engagement and interlock | ✅ This is the main advantage: 24 V at about 2 A, switched from the helm or an ESP32 PDM channel, with an easy rpm interlock. |
+| Tuotto 800 rpm:n tyhjäkäynnillä | 43 cm³ × 800 × 0,92 ≈ **31,6 l/min** (100 %:lle tarvitaan 33,8). 250 barissa virtaus- ja paineraja osuvat yhteen, noin 88 % työntövoima, sama kuin 46 cm³:llä. **Virtaus kuitenkin rajoittaa, joten paineenrajoituksen nosto ei auta.** ✅ 250 barissa |
+| Pumpun paine | 250 bar nimellinen ✅ |
+| Kierrosnopeudet | Koneen 2500 rpm alittaa pumpun 2800 ja kytkimen 2700 rpm ✅ |
+| PTO:n momentti (420 Nm) | ✅ Reilu marginaali |
+| **Kytkimen momentti 250 barissa** | 250 bar × 43 cm³ / 2π = 171 Nm teoreettisesti, **~190 Nm** 90 %:n mekaanisella hyötysuhteella. **Juuri 185 Nm:n nimellisarvon kohdalla tai hieman yli.** ⚠ |
+| Kytkimen momentti 200 barissa (Flowfitin arvo) | 137–152 Nm, noin 80 % nimellisestä. Todennäköisesti syy, miksi Flowfit ilmoittaa kokoonpanolle 200 bar. |
+| Joustokytkin | HRC 150, napa 48 mm (PTO) ja 28 mm (kytkin). Momentti ≤ 190 Nm. Tarkista napatyypit. |
+| Ohjaus | Vipu kytkimessä, eli kytkentä vaatii käynnin konehuoneessa tai push-pull-vaijerin / toimilaitteen. Ei asentotietoa; Signal K -näyttöön tai kierroslukitukseen tarvitaan rajakytkin. |
 
-**Conclusion:** none of the Flowfit electromagnetic clutches suits this installation. They're
-weaker than the mechanical 30300 and designed for belt drive.
+| Paineenrajoitus | Työntövoima | Momentti | Suhteessa 185 Nm:iin |
+|---|---|---|---|
+| 200 bar (Flowfitin arvo) | ~70 % | 137–152 Nm | ✅ sisällä |
+| 230 bar | ~81 % | 157–175 Nm | ✅ sisällä (≈ 95 %) |
+| 250 bar | ~88 % | 171–190 Nm | ⚠ rajalla tai hieman yli |
 
-### Electromagnetic alternatives worth investigating (outside the Flowfit range)
+### Borellin mekaaniset kytkimet (Salhydron luettelo HPFM.pdf)
 
-- **Industrial shaft-to-shaft electromagnetic clutch modules**, i.e. a bearing-mounted clutch with an
-  input shaft and an output shaft or flange. Examples: Warner Electric, Ogura, Kendrion/INTORQ and
-  Mayr. They come in 24 V DC sizes above 250 Nm. Check the actual ratings and prices in the
-  datasheets; they're likely to cost more than the whole Flowfit assembly.
-- **Hydraulically or pneumatically actuated multi-disc PTO clutches**, as used on marine and
-  industrial power take-offs. These are robust and can be engaged remotely with a solenoid valve.
-  They're usually the most expensive option.
+Lähde: <https://files.salhydro.fi/files/PDF/HPFM.pdf>, Borellin "Mechanical couplings" -luettelo
+(10 skannattua sivua, luettu kuvina). Salhydro on suomalainen jälleenmyyjä.
 
-### Keep the mechanical clutch but add remote control
+**Flowfitin 30300 on Borellin 30300.** Osanumerot, piirustukset ja arvot ovat samat: mekaaninen
+**kynsikytkin** ("coupling with front teeth"), vipukäyttöinen, 185 Nm nimellinen. Luettelossa on myös
+**isompi sarja 30500** pumppuryhmille 3,5 ja 4:
 
-The 30300 mechanical clutch has the best torque per pound of the options found. It can be operated
-remotely with:
-- a **push-pull cable** to a lever at the helm or the engine room door (cheap, like a throttle
-  cable);
-- a **24 V linear actuator** on the lever, plus a **limit switch** for "engaged" feedback. That
-  gives an ESP32 PDM output, Signal K indication, and the rpm interlock (engage only below about
-  1000 rpm, alarm if engaged above the limit).
+| Kohde | 30300 (Flowfitin kokoonpano) | **30500** |
+|---|---|---|
+| Nimellismomentti | 18,5 daNm = **185 Nm** | 58 daNm = **580 Nm** |
+| Suurin kierrosnopeus | 2700 rpm | 2700 rpm |
+| Suurin teho | 40 kW | 60 kW |
+| Aksiaalikuorma | 160 daN | 260 daN |
+| Ensiöakseli | Ø28 j6, kiila 8×7×40 | **Ø42 j6, kiila 12×8×60**, pituus 70 mm |
+| Toisio | 35×31 DIN 5482 -sisähammastus | 48×44 DIN 5482 -sisähammastus |
+| Pumppulaipat | Gr.2–3, Gr.2/3 Bosch, SAE A, SAE B | Gr.2, **Gr.3 (30401)**, Gr.3.5, Gr.4, **Gr.3 Bosch (30417)**, SAE A/B/C, muita |
+| Koko | ~151 mm pitkä | ~226 mm pitkä, runko Ø166 |
+| Versiot | 30300 molempiin suuntiin / 30301 oikea / 30302 vasen | 30500 molempiin suuntiin / 30501 oikea / 30502 vasen |
 
-## Comparison
+Molempien sarjojen yleisohje (luettelo s. 3, sanatarkasti): *"When coupling with hydraulic pumps we
+recommend to engage and disengage the pump when the directional valve is in exhaust position at a
+speed not over 1800 R.P.M. In the reversible position the max engagement and disengagement speed is
+1000 R.P.M."* Eli kytkentä ja irrotus suuntaventtiilin ollessa vapaakierrolla, enintään 1800 rpm
+(molempiin suuntiin toimivalla 1000 rpm). Voitelu SAE 90, vaihto 12 kk välein. Käyttölämpötila
+−10…+80 °C.
 
-| | A. Gear 46 cc | B. Gear 37 cc + rpm | C. Bent-axis fixed | D. Variable PC | E. Load-sensing | F. Tandem gear |
+| Tarkistus (30500) | Tulos |
+|---|---|
+| Momentti, 43–51 cm³ 250 barissa (171–225 Nm) | ✅ 580 Nm nimellinen, noin **2,6–3-kertainen** marginaali. 300 barin huiputkin (noin 230–270 Nm) mahtuvat reilusti. |
+| PTO:n raja (≈ 420 Nm) | Kytkin on nyt PTO:ta vahvempi, joten **paineenrajoitusventtiili** suojaa PTO:ta. 250 bar × 51 cm³ ≈ 225 Nm, eli kunnossa. |
+| Kierrosnopeus ja teho | ✅ 2700 rpm ja 60 kW, tarve 2500 rpm ja noin 18–20 kW |
+| Ensiöakseli | ✅ Ø42, kiila. HRC 150 -navat 48 mm (PTO) ja 42 mm (kytkin). Tarkista napatyypit. |
+| Pumpun kiinnitys | Gr.3- (30401) ja Gr.3 Bosch (30417) -laipat löytyvät. ⚠ **Toision hammastus on kuitenkin 48×44, isompi kuin ryhmän 3 pumpun akseli.** Kysy Salhydrolta tai Borellilta, mikä sovitusholkki käy laipan 30401 tai 30417 kanssa ryhmän 3 pumpulle (35×31-hammastus tai 1:8-kartio). |
+| Kytkentä | Samat säännöt kuin 30300:ssa: kuormittamattomana, enintään 1800 rpm (molempiin suuntiin toimivalla 1000 rpm). Valitse **yhteen suuntaan toimiva versio** (oikea tai vasen), niin raja on 1800 rpm. Kytkentä tyhjäkäynnillä 2/2-venttiilin ollessa auki täyttää kummankin. |
+| Kauko-ohjaus | Sama vipu kuin 30300:ssa; push-pull-vaijeri tai toimilaite ja rajakytkin. Vipuvoimaa ei ole selvästi ilmoitettu (piirustuksessa 631 / 472 daN, mikä ei todennäköisesti ole käsivoima); kysy. |
+| Koko | Noin 75 mm pidempi kuin 30300. Tarkista tila runkoalustalla. |
+
+**30500 ratkaisee 250 barin momenttikysymyksen.** Paineenrajoitus voi pysyä 250 barissa (noin 88 %
+työntövoima) reilulla marginaalilla.
+
+### Brevini IM1 (hydrauliikkakauppa.fi)
+
+Lähde: <https://www.hydrauliikkakauppa.fi/wp-content/uploads/2020/09/Mekaaninen-Irrotuskytkin-40kW-IM1.pdf>,
+Brevini Fluid Powerin IM1-datalehti (2 sivua, luettu kuvina). Suomalainen toimittaja.
+
+| Kohde | Brevini IM1 | Vertailu Borelli 30300 / 30500 |
+|---|---|---|
+| Tyyppi | Vipukäyttöinen mekaaninen kytkin moottorin ja pumpun väliin | sama periaate |
+| **Suurin momentti** | **19 daNm = 190 Nm** (*maksimi*, ei nimellisarvo) | 30300: 185 Nm *nimellinen*; 30500: 580 Nm nimellinen |
+| Suurin kierrosnopeus | 2700 rpm | sama |
+| **Suurin kytkentänopeus** | **420 rpm** (molempiin suuntiin 300 rpm), pumppu kuormittamattomana | 1800 rpm (molempiin suuntiin 1000) |
+| Ensiöakseli | Ø28 j6, kiila A8×7×40, pituus 48 mm; säteiskuorma noin 3 kN asti | 30300 sama Ø28; 30500 Ø42 |
+| Toisio | Z18 35×31 DIN 5482, ryhmän 3 hammastettu pumppu sopii suoraan | |
+| Laipat | Gr.2–3, SAE A, SAE B | |
+| Voitelu | 0,5 l CLP 150 (ISO VG 150), vaihto 12 kk välein | SAE 90 |
+| Tilauskoodi | IM1-C-**D**/**S**/**R**-**2/3**/SA/SB (D = myötäpäivään, S = vastapäivään, R = molempiin) | |
+
+- **Kytkentä vain alle 420 rpm:ssä, eli ei koneen käydessä.** 3126B:n tyhjäkäynti on noin 650–800 rpm.
+  Pumppu pitäisi kytkeä **koneen ollessa sammutettuna** ennen käynnistystä ja irrottaa vasta
+  sammutuksen jälkeen. Kytkentä satamaan tultaessa tai vinssin käyttö ankkurissa vaatisi koneen
+  sammuttamisen. ❌
+- **190 Nm maksimi** vs. 171–190 Nm 250 barissa on aivan rajalla, eikä painepiikeille jää varaa. ❌
+- **Johtopäätös:** ei parempi kuin 30300, ja hankalampi käyttää. Breviniltä voi löytyä isompia kokoja
+  samasta luettelon osasta (tiedostonimessä "40kW", sivu on osa 2.03); kysy, ja tarkista silloin myös
+  kytkentänopeus.
+
+### Sähkömagneettiset kytkimet (Flowfitin valikoima)
+
+Lähde: Flowfitin tekninen PDF `ECPA1.pdf`, 12 sivua, skannattu ja luettu kuvina. Kolme samanrakenteista
+sarjaa:
+
+| Sarja (12 V / 24 V) | Nimellismomentti | Staattinen (max) | Dynaaminen 500 / 1000 rpm | 24 V:n kela | Hihnapyörä | Paino |
 |---|---|---|---|---|---|---|
-| Approx. pump cost | € | € | €€ | €€€ | €€€€ (with valves) | €–€€ |
-| Circuit changes | none | rpm control | adapter flange; maybe relief/valve ratings | case drain; VPR3 optional | new valve bank | extra valves |
-| Thrust at 250 bar class | ~88 % | ~88 % (if rpm raised) | ~88 %, **~100 % at 280 bar** | ~90 % | ~90 % | ~88 % |
-| Efficiency while thrusting | ~80–85 % | ~80–85 % | ~90–95 % | ~88–92 % | best | ~80–85 % |
-| Oil cleanliness needed | tolerant | tolerant | moderate | strict | strict | tolerant |
-| Proportional control | no | no | no | no | **yes** | no |
-| Fit with current brief | **good** | fair | **good** | weak | scope change | situational |
+| 30901 / 30903 | 78 Nm | 125 Nm | 85 / 70 Nm | 1,26 A, 30 W | Ø153, 2 × A | 5,5 kg |
+| 30929 / 30930 | 118 Nm | 140 Nm | 125 / 110 Nm | 1,26 A, 30 W | Ø153, 2 × A | 5,5 kg |
+| **30990 / 30991** | **160 Nm** | **210 Nm** | **145 / 120 Nm** | 1,95 A, 47 W | Ø186, 2 × A | 8 kg |
 
-## Preliminary recommendation
+- Toisio 35×31 DIN 5482 -sisähammastus; laipat Gr.2 Bosch, Gr.3, Gr.3 Bosch, SAE A ja SAE B. Isoimman
+  sarjan 24 V:n ryhmän 3 versio on **29-30993**.
+- **Kaikki arvot 20 °C:ssa.** 120 °C:ssa suorituskyky on **20 % pienempi**.
+- Kytkentä 25 ms, vähintään 20 s kytkentöjen välillä. Luisto enintään 5 s (tuotesivu).
+- Suurin kierrosnopeus 5000 rpm. Kaikki toimivat molempiin suuntiin.
+- **Ensiö on kiilahihnapyörä (kytkimen roottori), ei akseli.** Tehty hihnavetoon kampiakselilta.
 
-**Clutch (updated 2026-10-22):** Borelli **30501 or 30502** (series 30500, non-reversible to suit
-the PTO rotation) with a group-3 pump flange. It's rated 580 Nm, which allows a 250 bar relief with a
-large margin. Fallback: the Flowfit/Borelli 30300 assembly with the relief at about 230 bar. Add a
-push-pull cable or actuator with a limit switch for remote engagement.
+| Tarkistus | Tulos |
+|---|---|
+| Momentti, 43 cm³ 250 barissa (171–190 Nm) | **Yli isoimman sarjan 160 Nm:n nimellisarvon.** Kylmänä alle 210 Nm:n staattisen arvon, mutta kuumana (−20 % → 168 Nm) rajalla. **Ei parempi kuin 185 Nm:n mekaaninen kytkin.** ❌ |
+| Veto PTO:n Ø48-akselilta | ❌ **Ei akseliliitäntää.** Vaatisi hihnavedon PTO:lta tai erikoissovitteen hihnapyörään. Hihnaveto toisi takaisin vuoden 2018 ongelman: kaksi A-hihnaa ei kanna noin 17 kW 800 rpm:llä. |
+| Kauko-ohjaus ja lukitus | ✅ Tämä on pääetu: 24 V, noin 2 A, ohjattavissa ohjauspaikalta tai ESP32 PDM -kanavalta, helppo kierroslukitus. |
 
-**Pump:**
+**Johtopäätös:** mikään Flowfitin sähkömagneettisista kytkimistä ei sovi tähän. Ne ovat mekaanista
+30300:aa heikompia ja tehty hihnavetoon.
 
-1. **Default: A**, a ~46 cm³ group-3 gear pump. It's the cheapest, it works with all the parts
-   you already have, and the clutch removes the main inefficiency.
-2. **Worth a quote: C**, a ~45–47 cm³ bent-axis truck pump, ideally second-hand. If it costs not
-   much more than A, it brings lower losses, quieter running, and the option to reach full thrust
-   later by raising the relief (after checking the valve and motor ratings).
-3. **Revisit E** only if proportional thruster or windlass control, or several simultaneous loads,
-   become requirements.
+**Muita sähkömagneettisia vaihtoehtoja (selvittämättä):**
+- **Teolliset akselilta akselille -sähkömagneettikytkimet** (esim. Warner Electric, Ogura, Kendrion/INTORQ,
+  Mayr), 24 V DC, yli 250 Nm. Todennäköisesti kalliimpia kuin koko Flowfit-kokoonpano.
+- **Hydraulisesti tai pneumaattisesti ohjatut monilevy-PTO-kytkimet** (meri- ja teollisuuskäyttö).
+  Kestäviä ja kauko-ohjattavia solenoidiventtiilillä. Yleensä kallein vaihtoehto.
 
-## Open questions
+### Mekaanisen kytkimen kauko-ohjaus
 
-- [ ] Windlass motor specs and expected run time. Long runs change the heat picture.
-- [ ] Side-Power SH240 hydraulic motor maximum pressure (for option C at 265–280 bar)
-- [ ] CETOP 3 subplate, valve and BAV-713 pressure ratings
-- [ ] Does the CAT 3126B electronic control accept an external rpm-raise input? (option B)
-- [ ] Shaft and flange of the chosen pump vs the clutch output (keyed / spline, SAE A/B or ISO 7653)
+Mekaaninen kytkin on löydetyistä vaihtoehdoista edullisin momenttiinsa nähden. Sitä voi ohjata
+kauempaa:
+- **push-pull-vaijerilla** ohjauspaikalle tai konehuoneen ovelle (halpa, kuten kaasuvaijeri);
+- **24 V:n lineaaritoimilaitteella** ja **rajakytkimellä** asentotiedoksi. Se mahdollistaa ESP32 PDM
+  -ohjauksen, Signal K -näytön ja kierroslukituksen (kytkentä vain alle noin 1000 rpm:n, hälytys
+  jos päällä rajan yli).
+
+## Pumppuvaihtoehtojen vertailu
+
+| | A. Hammaspyörä 43–51 cc | B. Hammaspyörä 37 cc + kierrokset | C. Vinoakseli | D. Säätö PC | E. Kuormantunteva | F. Tandem |
+|---|---|---|---|---|---|---|
+| Pumpun hinta (suuntaa-antava) | € | € | €€ | €€€ | €€€€ (venttiileineen) | €–€€ |
+| Muutokset piiriin | ei | kierrosohjaus | sovitelaippa; ehkä venttiilien arvot | vuotolinja; VPR3 valinnainen | uusi venttiilipaketti | lisäventtiilit |
+| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~90 % | ~90 % | ~88 % |
+| Hyötysuhde käytön aikana | ~80–85 % | ~80–85 % | ~90–95 % | ~88–92 % | paras | ~80–85 % |
+| Öljyn puhtausvaatimus | sietää | sietää | kohtalainen | tiukka | tiukka | sietää |
+| Proportionaalinen ohjaus | ei | ei | ei | ei | **kyllä** | ei |
+| Sopivuus nykyiseen linjaan | **hyvä** | kohtalainen | **hyvä** | heikko | laajuuden muutos | tilanteen mukaan |
+
+## Avoimet kysymykset
+
+- [ ] Koneen todellinen tyhjäkäynti (ratkaisee pumpun koon)
+- [ ] Salhydro: spline-sovite 30500:n ja ryhmän 3 pumpun väliin, vipuvoima, hinta ja toimitusaika 30501/30502 + Gr.3-laippa
+- [ ] PTO:n pyörimissuunta (30501 vai 30502)
+- [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)
+- [ ] Side-Power SH240:n hydraulimoottorin suurin paine (jos paineenrajoitusta nostetaan)
+- [ ] CETOP 3 -pohjalaatan, venttiilien ja BAV-713:n painearvot
+- [ ] Hyväksyykö CAT 3126B:n elektroniikka ulkoisen kierrostenkorotussignaalin? (vaihtoehto B)
