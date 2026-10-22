@@ -80,9 +80,9 @@ mitoitukseen vaikuttavat arvot.
 
 | Parametri | Arvo | Yksikkö |
 |---|---|---|
-| Koneen merkki ja malli | Caterpillar 3126B, 420 hv | |
+| Koneen merkki ja malli | Caterpillar 3126B, säädetty 350 hv (**⚠ tarkista**) | |
 | Koneiden määrä | 1 | |
-| Tyhjäkäynti / suurin | ~800 (**ei mitattu, voi olla 650–700**) / ~2500 (matka ~1800) | rpm |
+| Tyhjäkäynti / suurin | ~700 (**⚠ tarkista** mittaamalla) / ~2500 (matka ~1800) | rpm |
 | Käytettävissä olevat voimanulosotot | Etupään hihnat → ohjauspumppu P1 (vain pienelle teholle; luisti yli ~9 kW:lla). Advance 300:n PTO → apupiirin pumppu P2. | |
 | Vaihteiston PTO: välitys / suurin momentti / kytkin | 1:1 / 0,044 kW/rpm ≈ 420 Nm / ei omaa kytkintä; erillinen kytkin suunniteltu PTO:n ja pumpun väliin | – / Nm / – |
 | Pyöriikö vaihteiston PTO vapaalla? | kyllä (ensiöakselilta) | |
@@ -226,4 +226,4 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | # | Kohde | Tyyppi | Vastuu | Tila |
 |---|---|---|---|---|
 | 1 | Peräsimen ja ohjaussylinterin mitat | kysymys | | avoin |
-| 2 | Koneen todellinen tyhjäkäynti | mittaus | | avoin |
+| 2 | Koneen tyhjäkäynti: omistajan mukaan noin 700 rpm, vahvistetaan mittaamalla | mittaus | | osittain |

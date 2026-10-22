@@ -21,5 +21,5 @@ Suunnitelmassa on kaksi piiriä:
   mekaanisen kytkimen kautta, syöttää keulapotkuria (myöhemmin myös ankkurivinssiä) CETOP 3
   -pohjalaatan kautta. Paineenrajoitus 250 bar, noin 90 %:n työntövoima hyväksytty.
 
-Kytkimen valinta (suositus Borelli 30500) ja pumpun koko (43–51 cm³) riippuvat koneen todellisesta
-tyhjäkäyntikierrosluvusta.
+Koneen noin 700 rpm:n tyhjäkäynnillä apupiiriin tarvitaan noin 51 cm³:n pumppu ja sen momentin
+(~225 Nm) kestävä kytkin; suositus on Borelli 30500 -sarja.

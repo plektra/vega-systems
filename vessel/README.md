@@ -27,7 +27,7 @@ omistajien suoraan antama tieto.
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Pääkone | Caterpillar 3126B, 420 hv, asennettu 2012 | [perustiedot] |
+| Pääkone | Caterpillar 3126B, asennettu 2012. Teho **säädetty 350 hv:hen** omistajan muistin mukaan (blogissa 420 hv, joka on luultavasti mallin nimellisteho) **⚠ tarkista** koneen tyyppikilvestä tai Caterpillar-huollosta | [perustiedot], [omistaja 2026-10-22] |
 | Kierrosalue | Tyhjäkäynti (ks. alla) – ~2500 rpm, matka ~1800 rpm | [blogi 2018-11-12] |
 | Vauhtipyörä / kytkinkoppa | SAE 11-1/2 -vauhtipyörä, luultavasti SAE #3 -koppa, sovitelaippa SAE 14:ään | [blogi 2021-02-08] |
 | Vaihteisto (alkuperäinen) | Masson RSD200 (1976), poistettu | [blogi 2019-01-24] |
@@ -40,8 +40,9 @@ omistajien suoraan antama tieto.
 
 ### Tyhjäkäyntikierrokset
 
-Blogin mukaan tyhjäkäynti on noin 800 rpm [blogi 2018-11-12]. **Virallista 3126B:n merikäytön
-tyhjäkäyntiarvoa ei löytynyt verkosta** (haettu 2026-10-22):
+**Tyhjäkäynti on noin 700 rpm** [omistaja 2026-10-22] (**⚠ tarkista** mittaamalla, kun kone käy).
+Vuoden 2018 blogissa mainittu noin 800 rpm oli siis yläkanttiin. 700 rpm sopii myös verkosta
+löytyneisiin tietoihin (haettu 2026-10-22):
 
 - Scribdissä olevassa 3126B:n esitteessä on **700 rpm**, mutta on epäselvää, mihin teholuokkaan se
   liittyy. ([lähde](https://www.scribd.com/document/832207648/3126B))
@@ -51,10 +52,10 @@ tyhjäkäyntiarvoa ei löytynyt verkosta** (haettu 2026-10-22):
   moottorinohjaimesta Cat ET -huoltotyökalulla.
   ([lähde](https://www.cat.com/en_US/products/new/power-systems/marine-power-systems/commercial-propulsion-engines/18408926.html))
 
-**⚠ Mittaa todellinen tyhjäkäynti, kun kone käy**, esim. Signal K:n moottoritiedoista. PTO-pumpun
-mitoitus riippuu siitä suoraan, ks.
+PTO-pumpun mitoitus riippuu tyhjäkäynnistä suoraan: 700 rpm:llä tarvitaan noin 51 cm³:n pumppu, ks.
 [hydraulics/design/p2-pump-options.md](../hydraulics/design/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
-Caterpillar-huolto voi todennäköisesti nostaa ohjelmoitua tyhjäkäyntiä tarvittaessa.
+Vahvista lukema mittaamalla, kun kone käy, esim. Signal K:n moottoritiedoista. Caterpillar-huolto
+voi todennäköisesti nostaa ohjelmoitua tyhjäkäyntiä tarvittaessa.
 
 ## Sähköjärjestelmän perustiedot
 

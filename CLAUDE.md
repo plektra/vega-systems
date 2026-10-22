@@ -79,8 +79,7 @@ toisin.
 
 - Hydrauliöljy ISO VG 46 (luokka vahvistamatta); tiheys 870 kg/m³.
 - Hammaspyöräpumpun volumetrinen hyötysuhde 92 %, mekaaninen 90 %.
-- Koneen tyhjäkäynti 800 rpm vuoden 2018 blogin mukaan. **Ei mitattu, voi olla 650–700 rpm**, ks.
-  `vessel/README.md`.
+- Koneen tyhjäkäynti 700 rpm omistajan mukaan (2026-10-22, ei vielä mitattu), ks. `vessel/README.md`.
 
 ## Git-työnkulku (tee käyttäjän puolesta)
 

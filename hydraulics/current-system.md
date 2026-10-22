@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-22: tyhjäkäynti 700 rpm, pumppusuositus 51 cm³. Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulijärjestelmä on tällä hetkellä kokonaan purettuna** (lokakuu 2026). Luvut 3.1–3.5
 > kuvaavat viimeisintä koottua kokoonpanoa (2017–2018). Osa niiden osista käytetään uudelleen.
@@ -42,32 +42,32 @@
 ### Mitä tämä tarkoittaa suunnittelulle
 
 1. **P1 hihnavetoisena on hyvä ratkaisu.** Ohjaus toimii pienellä paineella (normaalisti < 50 bar),
-   noin 15 l/min tyhjäkäynnillä. Hihnat kantoivat tämän kuorman ongelmitta 2017–2018.
-2. **Nykyinen 33,5 cm³:n pumppu on liian pieni 1:1-PTO:lle.** 800 rpm:n tyhjäkäynnillä se antaa noin
-   25 l/min (volumetrinen hyötysuhde 92 %). Se jää alle keulapotkurin 60 %:n tehon tarpeen
-   (26,2 l/min) ja selvästi alle 100 %:n tarpeen (33,8 l/min). Blogissa todettiin jo 2018, että
-   1:1-veto tarkoittaa uusia pumppuja.
+   noin 13 l/min 700 rpm:n tyhjäkäynnillä. Hihnat kantoivat tämän kuorman ongelmitta 2017–2018.
+2. **Nykyinen 33,5 cm³:n pumppu on liian pieni 1:1-PTO:lle.** 700 rpm:n tyhjäkäynnillä
+   [omistaja 2026-10-22] se antaa noin 22 l/min (volumetrinen hyötysuhde 92 %). Se jää alle
+   keulapotkurin 60 %:n tehon tarpeen (26,2 l/min) ja selvästi alle 100 %:n tarpeen (33,8 l/min).
+   Blogissa todettiin jo 2018, että 1:1-veto tarkoittaa uusia pumppuja.
 
    | Tyhjäkäynti (PTO 1:1) | Kierrostilavuus 33,8 l/min:lle | Tuotto 2500 rpm:llä | Momentti 264 barilla |
    |---|---|---|---|
-   | 800 rpm | **46 cm³** | 106 l/min | 214 Nm |
-   | 900 rpm | 41 cm³ | 94 l/min | 190 Nm |
+   | **700 rpm** (omistajan mukaan) | **52 cm³** | 120 l/min | 245 Nm |
+   | 800 rpm | 46 cm³ | 106 l/min | 214 Nm |
    | 1000 rpm | 37 cm³ | 85 l/min | 172 Nm |
 
-   *Oletukset: volumetrinen hyötysuhde 92 %, mekaaninen 90 %. Ensimmäisiä arvioita.* **Tyhjäkäynnin
-   todellinen kierrosluku voi olla 650–700 rpm**, jolloin tarvitaan isompi pumppu, ks.
+   *Oletukset: volumetrinen hyötysuhde 92 %, mekaaninen 90 %.* Käytännössä 250 barin
+   paineenrajoituksella **51 cm³:n pumppu** riittää noin 88 %:n työntövoimaan 700 rpm:llä, ks.
    [p2-pump-options.md](design/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
 3. **Ensiöakselin PTO pyörii vapaalla.** Juuri sitä keulapotkurin satamakäyttö vaatii.
-4. **PTO:n nimellisarvo on noin kaksinkertainen tarpeeseen nähden.** 0,044 kW/rpm vastaa noin
-   420 Nm. 46 cm³:n pumppu 264 barilla tarvitsee noin 215 Nm (51 %), eli 18 kW akselitehoa
-   800 rpm:llä. Jopa 300 barin paineenrajoitus vaatii vain 244 Nm (58 %), joten painepiikeille jää
-   varaa.
+4. **PTO:n nimellisarvossa on reilusti varaa.** 0,044 kW/rpm vastaa noin 420 Nm. 51 cm³:n pumppu
+   250 barilla tarvitsee noin 225 Nm (54 %), eli noin 16,5 kW akselitehoa 700 rpm:llä (PTO:n raja
+   700 rpm:llä 30,8 kW). Jopa 280 barin paineenrajoitus vaatisi vain noin 253 Nm (60 %), joten
+   painepiikeille jää varaa.
 5. **Järjestelmäpaine: 250 barin luokka, tavoite ~90 % työntövoimasta (päätetty).** Täysi teho
    vaatisi moottorilla 264 bar plus linjahäviöt. Omistajat hyväksyvät noin 90 %:n työntövoiman,
    jotta pumppu ja venttiilit voidaan valita yleisestä 250 barin luokasta. Todellisilla
    letkupituuksilla 250 barin paineenrajoitus antaa lämpimänä noin 85–89 %, ks. kohta 9.
-6. **Kytkin estää öljyn lämpenemisen ajon aikana.** Ilman sitä ~46 cm³:n pumppu pumppaisi
-   2500 rpm:llä noin 106 l/min jatkuvasti virtauksensäätöventtiilin läpi, mikä tuottaa noin 1 kW tai
+6. **Kytkin estää öljyn lämpenemisen ajon aikana.** Ilman sitä ~51 cm³:n pumppu pumppaisi
+   2500 rpm:llä noin 117 l/min jatkuvasti virtauksensäätöventtiilin läpi, mikä tuottaa noin 1 kW tai
    enemmän lämpöä, eikä öljynjäähdytintä ole. Kun kytkin on irti, P2 ei pyöri lainkaan.
 7. **Kytkimen vaatimukset:**
    - **Momentti.** Jatkuva kuorma on noin 190–225 Nm 250 barilla (43–51 cm³). Hammaspyöräpumppu ja
@@ -111,9 +111,9 @@
    merkintä on 300 bar. Kummin tahansa se on yli 250 barin paineenrajoituksen.
    - **Paluulinjan (3/4", < 0,5 m) häviö on merkityksetön:** alle 0,3 bar kylmälläkin öljyllä.
      Säiliön puolella suurin häviö on paluusuodatin.
-   - **P2:n painelinja (3/4", 3–4 m) ei ole ongelma.** 37 l/min:llä (tyhjäkäynti) nopeus on noin
-     2,2 m/s ja häviö alle 1 bar lämpimänä. 106 l/min:llä (2500 rpm, kytkin päällä) nopeus on noin
-     6 m/s ja häviö 1,5–2,5 bar, mikä on hyväksyttävää.
+   - **P2:n painelinja (3/4", 3–4 m) ei ole ongelma.** Noin 33–37 l/min:llä (tyhjäkäynti) nopeus on
+     noin 2,1 m/s ja häviö alle 1 bar lämpimänä. Noin 117 l/min:llä (2500 rpm, kytkin päällä) nopeus on noin
+     7 m/s ja häviö noin 2–3 bar, mikä on hyväksyttävää.
    - **Käytä pitkissä keulapotkurilinjoissa letkua, älä putkea.** Muualla käytetyn 15×2-tarkkuusputken
      sisähalkaisija on 11 mm. Tällä virtauksella nopeus olisi noin 5,9 m/s ja häviö noin kaksinkertainen
      letkuun verrattuna.
@@ -137,26 +137,27 @@
    tyhjäkäynnillä, ks. [p2-pump-options.md](design/p2-pump-options.md#paineenrajoituksen-nostaminen-yli-250-barin).
 10. **P2:n imulinja: omistajat vahvistivat 32 mm:n sisähalkaisijan (≈ 1-1/4"), mikä riittää.**
     Säiliön ulosotto on samaa kokoa, joten linjassa ei ole 1":n kuristusta. Arvioitu paine pumpun
-    imuaukolla, kun säiliön öljypinta on noin 1 m pumpun yläpuolella (+0,085 bar) ja liitinhäviöt
-    ovat noin K = 2,5 (säiliön ulosotto, palloventtiili, kulmat):
+    imuaukolla 51 cm³:n pumpulla, kun säiliön öljypinta on noin 1 m pumpun yläpuolella (+0,085 bar)
+    ja liitinhäviöt ovat noin K = 2,5 (säiliön ulosotto, palloventtiili, kulmat):
 
-    | Öljyn lämpötila | 1" 800 rpm | 1" 1000 rpm | **32 mm 800 rpm** | **32 mm 1000 rpm** |
-    |---|---|---|---|---|
-    | 5 °C | −0,53 bar | −0,69 bar | **−0,17 bar** | **−0,23 bar** |
-    | 15 °C | −0,22 bar | −0,30 bar | −0,04 bar | −0,07 bar |
-    | 20 °C | −0,14 bar | −0,20 bar | −0,01 bar | −0,03 bar |
-    | 40 °C | 0,00 bar | −0,03 bar | +0,05 bar | +0,04 bar |
+    | Öljyn lämpötila | 700 rpm (tyhjäkäynti) | 1000 rpm |
+    |---|---|---|
+    | 5 °C | **−0,15 bar** | −0,26 bar |
+    | 15 °C | −0,03 bar | −0,09 bar |
+    | 20 °C | 0,00 bar | −0,04 bar |
+    | 40 °C | +0,05 bar | +0,03 bar |
 
-    *1":n sarakkeet on jätetty vertailuksi.* Hammaspyöräpumput vaativat yleensä, että imupaine on
-    vähintään noin −0,2…−0,3 bar (ylipaine). **Tarkista valitun pumpun datalehdestä.** 32 mm:n linja
-    pysyy tämän sisällä noin 5 °C:een asti. Kylmänä kannattaa silti kytkeä pumppu tyhjäkäynnillä.
+    Hammaspyöräpumput vaativat yleensä, että imupaine on vähintään noin −0,2…−0,3 bar (ylipaine).
+    **Tarkista valitun pumpun datalehdestä.** 32 mm:n linja pysyy tämän sisällä tyhjäkäynnillä noin
+    5 °C:een asti. (1":n linjalla vastaava arvo olisi ollut noin −0,5 bar, joten 32 mm oli oikea
+    valinta.) Kylmänä kannattaa silti kytkeä pumppu tyhjäkäynnillä.
     Lähtö satamasta on kriittisin tilanne: keulapotkuria tarvitaan heti käynnistyksen jälkeen, kun
     öljy on konehuoneen lämpöistä. HV-luokan öljy antaa lisää marginaalia.
 
     2500 rpm:llä virtaus olisi niin suuri, että kytkimen pitää silti irrota automaattisesti noin
     1000–1200 rpm:n yläpuolella.
 11. **Jos konetta kierretään kytkimen ollessa päällä,** pumpun tuotto kasvaa kierrosten mukana (noin
-    106 l/min 2500 rpm:llä). Virtauksensäätöventtiilin ja paluulinjan pitää kestää se, tai kytkimen
+    117 l/min 2500 rpm:llä 51 cm³:n pumpulla). Virtauksensäätöventtiilin ja paluulinjan pitää kestää se, tai kytkimen
     pitää irrota automaattisesti tietyn kierrosluvun yläpuolella. Tarkista VPR3:n suurin sallittu
     tulovirtaus (säädetty 35 l/min).
 
@@ -279,9 +280,9 @@ Ratkaistut:
 
 Avoimet:
 
-- [ ] **Koneen todellinen tyhjäkäyntikierrosluku** (ratkaisee pumpun koon, ks. [vessel/README.md](../vessel/README.md#tyhjäkäyntikierrokset))
-- [ ] P2:n koko: 43–51 cm³ tyhjäkäynnin mukaan (33,5 cm³:n Salami on liian pieni)
-- [ ] PTO-kytkin: Borelli 30501/30502 (suositus) vai 30300 230 barilla; spline-sovite, vipuvoima, hinta
+- [ ] Koneen tyhjäkäynti: omistajan mukaan noin 700 rpm [omistaja 2026-10-22]; **vahvista mittaamalla** ennen pumpun ostoa
+- [ ] P2:n koko: **51 cm³** 700 rpm:n tyhjäkäynnillä (33,5 cm³:n Salami on liian pieni)
+- [ ] PTO-kytkin: Borelli 30501/30502 (51 cm³:n pumppu vaatii noin 225 Nm, joten 185 Nm:n 30300 ei riitä); spline-sovite, vipuvoima, hinta
 - [ ] HRC 150: nimellismomentti, suurin reikä ja napatyyppi 48 mm:lle ja kytkimen akselille (luettelo)
 - [ ] Valitun pumpun pienin sallittu imupaine (datalehti)
 - [ ] Hydrauliöljyn tyyppi ja luokka (suositus HV 32/46)

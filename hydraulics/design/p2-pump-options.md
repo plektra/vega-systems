@@ -1,6 +1,6 @@
 # Apupiirin pumppu (P2) ja PTO-kytkin — vaihtoehdot
 
-> **Tila:** Vaihtoehtoselvitys, päivitetty 2026-10-22. Ei vielä päätöstä.
+> **Tila:** Vaihtoehtoselvitys, päivitetty 2026-10-22 (tyhjäkäynti 700 rpm). Ei vielä päätöstä.
 > Tausta: [current-system.md §0](../current-system.md). Hinnat ovat karkeita suuntaa-antavia
 > arvioita; pyydä tarjoukset ennen päätöstä.
 
@@ -12,16 +12,19 @@
   Borellin 30300-kokoonpano ja paineenrajoitus noin 230 bariin. Kauko-ohjaukseen push-pull-vaijeri
   tai toimilaite ja rajakytkin.
 - **Pumppu:**
-  1. **Oletus: A**, ryhmän 3 hammaspyöräpumppu, **koko tyhjäkäynnin mukaan: 43 cm³ (800 rpm) …
-     51 cm³ (700 rpm)**. Halvin, sopii kaikkiin nykyisiin osiin, ja kytkin poistaa suurimman
-     tehottomuuden.
+  1. **Oletus: A**, ryhmän 3 hammaspyöräpumppu **51 cm³** (esim. VNK3-3-51, 250 bar jatkuva /
+     300 bar huippu), joka antaa 700 rpm:n tyhjäkäynnillä noin 88 % työntövoimasta. Halvin, sopii
+     kaikkiin nykyisiin osiin, ja kytkin poistaa suurimman tehottomuuden. 51 cm³ on VNK3-sarjan
+     suurin koko, joka on 250 bar jatkuva; 60 cm³ on vain 200 bar.
   2. **Kannattaa pyytää tarjous: C**, ~45–47 cm³:n vinoakselimäntäpumppu (kuorma-auton PTO-pumppu),
      mieluiten käytetty. Jos se ei maksa paljon enempää kuin A, se on hiljaisempi, häviöt ovat
      pienemmät, ja täyteen työntövoimaan voi myöhemmin päästä nostamalla paineenrajoitusta.
   3. **E harkitaan uudelleen** vain, jos keulapotkurin tai vinssin proportionaalinen ohjaus tai
      useat samanaikaiset kuormat tulevat vaatimuksiksi.
-- **Ennen ostoja:** mittaa koneen todellinen tyhjäkäynti ja selvitä Salhydrolta spline-sovite
-  ryhmän 3 pumpulle.
+- **Flowfitin 43 cm³:n kokoonpano ei enää sovi:** 700 rpm:llä se antaisi vain noin 67 %
+  työntövoimasta, eikä sen 185 Nm:n kytkin kestä 51 cm³:n pumppua 250 barissa (~225 Nm).
+- **Ennen ostoja:** vahvista tyhjäkäynti mittaamalla ja selvitä Salhydrolta spline-sovite ryhmän 3
+  pumpulle.
 
 ## Kiinteät reunaehdot
 
@@ -29,7 +32,7 @@
 |---|---|
 | Veto | Advance 300:n PTO, 1:1 ensiöakselilta, Ø48 kiila-akseli, HRC 150 -joustokytkin, kytkin, pumppu omalla runkoalustalla |
 | PTO:n momenttiraja | ≈ 420 Nm (0,044 kW/rpm) |
-| Koneen kierrokset keulapotkuria käytettäessä | Tyhjäkäynti, ~800 rpm (ei mitattu, voi olla 650–700); kytkin lukittu pois yli ~1000–1200 rpm:n |
+| Koneen kierrokset keulapotkuria käytettäessä | Tyhjäkäynti, ~700 rpm [omistaja 2026-10-22, ei mitattu]; kytkin lukittu pois yli ~1000–1200 rpm:n |
 | Mitoittava kuorma | Side-Power SH240: 264 bar × 33,8 l/min (100 %). Hyväksytty: ~90 % työntövoimasta. |
 | Paineluokka | 250 bar (kustannuspäätös); letkut 300 bar, paineenrajoitusventtiili enintään 300 bar / 80 l/min |
 | Tulevat kuormat | Ankkurivinssi (moottori olemassa, tiedot puuttuvat), 3 vapaata CETOP 3 -paikkaa |
@@ -41,7 +44,7 @@ Kytkin irrottaa P2:n aina, kun apupiirin kuormia ei käytetä, joten pumppu pyö
 ja ankkurivinssin käytön aikana. Yleensä se tarkoittaa lyhyitä jaksoja satamassa.
 
 Arvioitu lämpökuorma keulapotkurin käytön aikana (46 cm³:n hammaspyöräpumppu, 800 rpm, 250 bar,
-öljy 40 °C):
+öljy 40 °C; 51 cm³ 700 rpm:llä antaa käytännössä saman akselitehon, noin 16,5 kW):
 
 | Kohde | Arvo |
 |---|---|
@@ -138,8 +141,8 @@ järkevä **ohjauksen varajärjestelmänä**, noin 2,5 kW, kuten 2017 suunnitelt
 
 ## Herkkyys tyhjäkäyntikierroksille
 
-800 rpm:n tyhjäkäynti on vuoden 2018 blogista. Verkkolähteiden mukaan 3126B:n merikäytön
-tyhjäkäynti voi olla noin **650–700 rpm**, ja se on ohjelmoitavissa moottorinohjaimeen. Ks.
+**Tyhjäkäynti on omistajan mukaan noin 700 rpm** [omistaja 2026-10-22]; blogissa mainittu 800 rpm
+oli yläkanttiin. Tyhjäkäynti on ohjelmoitavissa moottorinohjaimeen, ks.
 [alustiedot](../../vessel/README.md#tyhjäkäyntikierrokset). Keulapotkurin työntövoima 250 barin
 paineenrajoituksella, lämmin öljy:
 
@@ -147,34 +150,37 @@ paineenrajoituksella, lämmin öljy:
 |---|---|---|---|---|
 | 600 rpm | ~49 % | ~56 % | ~69 % | ~88 % |
 | 650 rpm | ~58 % | ~66 % | ~81 % | ~88 % |
-| 700 rpm | ~67 % | ~77 % | **~88 %** | ~88 % |
-| 750 rpm | ~77 % | **~88 %** | ~88 % | ~88 % |
-| 800 rpm | **~88 %** | ~88 % | ~88 % | ~88 % |
+| **700 rpm (nykyinen)** | ~67 % | ~77 % | **~88 %** | ~88 % |
+| 750 rpm | ~77 % | ~88 % | ~88 % | ~88 % |
+| 800 rpm | ~88 % | ~88 % | ~88 % | ~88 % |
 
-**Jos tyhjäkäynti on noin 700 rpm, 43 cm³:n pumppu antaa vain noin kaksi kolmasosaa
-työntövoimasta.** 51 cm³:n pumppu riittää 700 rpm:iin asti. Se tarvitsee 250 barilla noin 225 Nm,
-mikä sulkee pois 185 Nm:n Borelli/Flowfit 30300:n ja puoltaa Borellin 30500:aa. VNK3-sarjassa on
-51 cm³:n koko (250 bar, enintään 2800 rpm). Muut keinot: tyhjäkäynnin nosto moottorinohjaimesta tai
-kierrosten nosto käsin keulapotkuria käytettäessä. **⚠ Mittaa todellinen tyhjäkäynti ennen pumpun
-ostoa.**
+**700 rpm:n tyhjäkäynnillä 43 cm³:n pumppu antaa vain noin kaksi kolmasosaa työntövoimasta.**
+51 cm³:n pumppu riittää. Se tarvitsee 250 barilla noin 225 Nm, mikä sulkee pois 185 Nm:n
+Borelli/Flowfit 30300:n ja puoltaa Borellin 30500:aa. VNK3-sarjassa on 51 cm³:n koko (250 bar
+jatkuva, 300 bar huippu, enintään 2800 rpm). VNK3:n 60 cm³ on vain 200 bar jatkuva, joten se ei sovi.
+
+Muut keinot, jos halutaan pienempi pumppu: tyhjäkäynnin nosto 800 rpm:iin moottorinohjaimesta
+(Caterpillar-huolto) tai kierrosten nosto käsin keulapotkuria käytettäessä. **⚠ Vahvista
+tyhjäkäynti mittaamalla ennen pumpun ostoa.**
 
 ## Paineenrajoituksen nostaminen yli 250 barin
 
 CETOP-pohjalaatan paineenrajoitusventtiili on **enintään 300 bar ja 80 l/min**
 [omistaja 2026-10-22], ja letkut ovat 300 bar, joten ne eivät estä korkeampaa asetusta.
-Työntövoima-arviot 800 rpm:n tyhjäkäynnillä, lämmin öljy:
+Työntövoima-arviot **700 rpm:n tyhjäkäynnillä**, lämmin öljy:
 
-| Paineenrajoitus | 43 cm³ (31,6 l/min) | 46 cm³ (33,9 l/min) | 51 cm³ (37,5 l/min) | Momentti, 46 cm³ |
+| Paineenrajoitus | 51 cm³ (32,8 l/min) | Momentti 51 cm³ | 56 cm³ (36,1 l/min) | Momentti 56 cm³ |
 |---|---|---|---|---|
-| 250 bar | ~88 % | ~88 % | ~88 % | ~203 Nm |
-| 260 bar | ~88 % (virtaus rajoittaa) | ~92 % | ~92 % | ~211 Nm |
-| 270 bar | ~88 % (virtaus rajoittaa) | ~95 % | ~95 % | ~220 Nm |
-| 280 bar | ~88 % (virtaus rajoittaa) | ~99 % | ~99 % | ~228 Nm |
+| 250 bar | ~88 % | ~225 Nm | ~88 % | ~248 Nm |
+| 260 bar | ~92 % | ~234 Nm | ~92 % | ~257 Nm |
+| 270 bar | ~94 % (virtaus rajoittaa) | ~244 Nm | ~95 % | ~267 Nm |
+| 280 bar | ~94 % (virtaus rajoittaa) | ~253 Nm | ~99 % | ~277 Nm |
 
-- **Korkeampi paine auttaa vain, jos tyhjäkäynnillä on enemmän virtausta.** Se tarkoittaa 46–51 cm³:n
-  pumppua 43:n sijaan tai noin 900 rpm:ää keulapotkuria käytettäessä.
-- **Momentti:** enintään noin 250 Nm (51 cm³, 280 bar). Se sopii Borellin 30500:lle (580 Nm) ja PTO:lle
-  (420 Nm), mutta **ei** 30300:lle (185 Nm) eikä Brevinin IM1:lle (190 Nm).
+- **51 cm³:n pumpulla 260 barin asetus nostaa työntövoiman noin 92 %:iin**, mutta sen yli virtaus
+  loppuu. Täyteen tehoon tarvittaisiin noin 56 cm³ ja 280 bar, mikä vaatii pumpun, joka on luokiteltu
+  280 bariin jatkuvasti (esim. vinoakselipumppu C).
+- **Momentti:** enintään noin 280 Nm. Se sopii Borellin 30500:lle (580 Nm) ja PTO:lle (420 Nm), mutta
+  **ei** 30300:lle (185 Nm) eikä Brevinin IM1:lle (190 Nm).
 - **Mikä vielä rajoittaa painetta:**
   - **Pumppu:** VNK3 ryhmä 3 (43 ja 51 cm³) on 250 bar jatkuva ja 300 bar huippu. 260–280 barin käyttö
     nojaa huippuarvoon keulapotkurin käyttöjaksoissa. Kysy, kattaako huippuarvo ajoittaisen käytön,
@@ -210,7 +216,7 @@ eikä niitä luettu sanatarkasti.
 
 | Tarkistus | Tulos |
 |---|---|
-| Tuotto 800 rpm:n tyhjäkäynnillä | 43 cm³ × 800 × 0,92 ≈ **31,6 l/min** (100 %:lle tarvitaan 33,8). 250 barissa virtaus- ja paineraja osuvat yhteen, noin 88 % työntövoima, sama kuin 46 cm³:llä. **Virtaus kuitenkin rajoittaa, joten paineenrajoituksen nosto ei auta.** ✅ 250 barissa |
+| Tuotto 700 rpm:n tyhjäkäynnillä | 43 cm³ × 700 × 0,92 ≈ **27,7 l/min** (100 %:lle tarvitaan 33,8). Työntövoima vain **noin 67 %**. ❌ (800 rpm:llä se olisi ollut 31,6 l/min ja ~88 %.) |
 | Pumpun paine | 250 bar nimellinen ✅ |
 | Kierrosnopeudet | Koneen 2500 rpm alittaa pumpun 2800 ja kytkimen 2700 rpm ✅ |
 | PTO:n momentti (420 Nm) | ✅ Reilu marginaali |
@@ -218,6 +224,9 @@ eikä niitä luettu sanatarkasti.
 | Kytkimen momentti 200 barissa (Flowfitin arvo) | 137–152 Nm, noin 80 % nimellisestä. Todennäköisesti syy, miksi Flowfit ilmoittaa kokoonpanolle 200 bar. |
 | Joustokytkin | HRC 150, napa 48 mm (PTO) ja 28 mm (kytkin). Momentti ≤ 190 Nm. Tarkista napatyypit. |
 | Ohjaus | Vipu kytkimessä, eli kytkentä vaatii käynnin konehuoneessa tai push-pull-vaijerin / toimilaitteen. Ei asentotietoa; Signal K -näyttöön tai kierroslukitukseen tarvitaan rajakytkin. |
+
+*Alla oleva taulukko on laskettu 800 rpm:n tyhjäkäynnillä; 700 rpm:llä 43 cm³:n pumppu jää kaikilla
+asetuksilla noin 67 %:iin.*
 
 | Paineenrajoitus | Työntövoima | Momentti | Suhteessa 185 Nm:iin |
 |---|---|---|---|
@@ -284,7 +293,7 @@ Brevini Fluid Powerin IM1-datalehti (2 sivua, luettu kuvina). Suomalainen toimit
 | Voitelu | 0,5 l CLP 150 (ISO VG 150), vaihto 12 kk välein | SAE 90 |
 | Tilauskoodi | IM1-C-**D**/**S**/**R**-**2/3**/SA/SB (D = myötäpäivään, S = vastapäivään, R = molempiin) | |
 
-- **Kytkentä vain alle 420 rpm:ssä, eli ei koneen käydessä.** 3126B:n tyhjäkäynti on noin 650–800 rpm.
+- **Kytkentä vain alle 420 rpm:ssä, eli ei koneen käydessä.** 3126B:n tyhjäkäynti on noin 700 rpm.
   Pumppu pitäisi kytkeä **koneen ollessa sammutettuna** ennen käynnistystä ja irrottaa vasta
   sammutuksen jälkeen. Kytkentä satamaan tultaessa tai vinssin käyttö ankkurissa vaatisi koneen
   sammuttamisen. ❌
@@ -349,7 +358,7 @@ kauempaa:
 
 ## Avoimet kysymykset
 
-- [ ] Koneen todellinen tyhjäkäynti (ratkaisee pumpun koon)
+- [ ] Vahvista tyhjäkäynti mittaamalla (omistajan mukaan ~700 rpm; ratkaisee pumpun koon)
 - [ ] Salhydro: spline-sovite 30500:n ja ryhmän 3 pumpun väliin, vipuvoima, hinta ja toimitusaika 30501/30502 + Gr.3-laippa
 - [ ] PTO:n pyörimissuunta (30501 vai 30502)
 - [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)
