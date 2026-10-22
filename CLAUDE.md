@@ -83,8 +83,12 @@ toisin.
 
 ## Git-työnkulku (tee käyttäjän puolesta)
 
-- **Älä koskaan committaa suoraan `main`-haaraan.** Työskentele haarassa; Claude Coden
-  verkkoversio antaa jokaiselle istunnolle oman haaran.
+- **Larin muutokset menevät suoraan `main`-haaraan** ilman pull requestia: committaa ja pushaa
+  `main`iin (tai yhdistä istunnon haara fast-forwardina `main`iin ja poista haara).
+- **Muiden muutokset menevät pull requestina.** Älä committaa niitä suoraan `main`iin; työskentele
+  haarassa (Claude Coden verkkoversio antaa jokaiselle istunnolle oman haaran).
+- **Kuka käyttäjä on:** jos `git config user.name` on Lari, tai käyttäjä kertoo olevansa Lari, toimi
+  Larin säännöllä. Jos asia on epäselvä, kysy kerran ennen tallennusta.
 - **Aloita uusimmasta `main`-haarasta.** Jos haara on jäljessä, päivitä se ennen muokkauksia.
 - **Pidä commitit ja pull requestit pieninä,** yksi aihe kerrallaan. Commit-viestit englanniksi.
   Pull requestin kuvaus suomeksi, alkaen selkokielisestä yhteenvedosta, jonka omistaja voi hyväksyä
