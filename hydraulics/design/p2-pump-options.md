@@ -36,7 +36,7 @@
 | PTO:n momenttiraja | ≈ 420 Nm (0,044 kW/rpm) |
 | Koneen kierrokset keulapotkuria käytettäessä | Tyhjäkäynti, ~700 rpm [omistaja 2026-10-22, ei mitattu]; kytkin lukittu pois yli ~1000–1200 rpm:n |
 | Mitoittava kuorma | Side-Power SH240: 264 bar × 33,8 l/min (100 %). Hyväksytty: ~90 % työntövoimasta. |
-| Paineluokka | 250 bar (kustannuspäätös); letkut 300 bar, paineenrajoitusventtiili enintään 300 bar / 80 l/min |
+| Paineluokka | 250 bar (kustannuspäätös); letkut 300 bar; paineenrajoitusventtiili Marchesini VMP 3/4": 350 bar, 90 l/min, jousi todennäköisesti 80–300 bar |
 | Tulevat kuormat | Ankkurivinssi (moottori olemassa, tiedot puuttuvat), 3 vapaata CETOP 3 -paikkaa |
 | Imu | 32 mm, 3 m, säiliö noin 1 m imuaukon yläpuolella |
 
@@ -167,8 +167,9 @@ tyhjäkäynti mittaamalla ennen pumpun ostoa.**
 
 ## Paineenrajoituksen nostaminen yli 250 barin
 
-CETOP-pohjalaatan paineenrajoitusventtiili on **enintään 300 bar ja 80 l/min**
-[omistaja 2026-10-22], ja letkut ovat 300 bar, joten ne eivät estä korkeampaa asetusta.
+Paineenrajoitusventtiili on **Marchesini VMP 3/4"**: enintään 350 bar ja 90 l/min, jousi
+todennäköisesti 80–300 bar [datalehti VMP, omistaja 2026-10-22]. Letkut ovat 300 bar, joten kumpikaan
+ei estä korkeampaa asetusta (280 bar mahtuu 80–300 barin jousialueeseen).
 Työntövoima-arviot **700 rpm:n tyhjäkäynnillä**, lämmin öljy:
 
 | Paineenrajoitus | 51 cm³ (32,8 l/min) | Momentti 51 cm³ | 56 cm³ (36,1 l/min) | Momentti 56 cm³ |
@@ -190,8 +191,8 @@ Työntövoima-arviot **700 rpm:n tyhjäkäynnillä**, lämmin öljy:
   - **Venttiilit:** BAV-713 ja CETOP-pohjalaatta. CETOP 3 -osat ovat usein 315–350 bar, mutta
     **⚠ tarkista**.
   - **Keulapotkurin moottori:** Side-Power SH240:n hydraulimoottorin suurin paine. **⚠ Tarkista.**
-- **80 l/min riittää.** Paineenrajoitus on VPR3:n (35 l/min) jälkeen, joten se ei koskaan näe pumpun
-  koko tuottoa.
+- **VMP:n 90 l/min riittää.** Paineenrajoitus on VPR3:n (35 l/min) jälkeen, joten se ei koskaan näe
+  pumpun koko tuottoa.
 
 ## Ehdokas: Parker F1-061 käytettynä (tori.fi)
 
