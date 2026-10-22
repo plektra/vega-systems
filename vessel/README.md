@@ -37,7 +37,8 @@ omistajien suoraan antama tieto.
 | Koneen tilanne | Asennetaan takaisin ja linjataan vaihteistoon (lokakuu 2026) | [omistaja 2026-10-21] |
 | Koneen kiinnitys | Sekä vaihteisto että kone jäykästi runkoon | [blogi 2021-02-08] |
 | Potkuri | Oikeakätinen | [blogi 2019-01-24] |
-| Merivesipumppu (impelleri) | Noin **70 l/min 650 rpm:llä**; suuremmilla kierroksilla suunnilleen kierrosten suhteessa enemmän (arvio ~75 l/min 700 rpm, ~110 l/min 1000 rpm, ~190 l/min 1800 rpm). **⚠ Tarkista**, onko 650 rpm koneen vai pumpun kierrosluku. | [omistaja 2026-10-22], [laskelma] |
+| Merivesipumppu (impelleri) | Koneen etupään omassa voimanulosotossa, kiinteä välitys (suhde **⚠ ei tiedossa**). Tuotto noin **70 l/min koneen 650 rpm:llä** verkkohaun mukaan, **⚠ vahvistamatta**. Kiinteällä välityksellä tuotto kasvaa suunnilleen koneen kierrosten suhteessa: arvio ~75 l/min 700 rpm, ~110 l/min 1000 rpm, ~190 l/min 1800 rpm. | [omistaja 2026-10-22, verkkohaun perusteella], [laskelma] |
+| Merivesipiirin jäähdyttimet | Pääkoneen lämmönvaihdin ja merivaihteen (Advance 300) oma öljynjäähdytin samassa merivesipiirissä | [omistaja 2026-10-22] |
 
 ### Tyhjäkäyntikierrokset
 
