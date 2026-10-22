@@ -125,13 +125,18 @@
 
    | Öljyn lämpötila | Potkurin kierrosnopeus | Työntövoima | Teho |
    |---|---|---|---|
-   | 5 °C | ~86 % | ~74 % | ~64 % |
-   | 20 °C | ~92 % | ~84 % | ~77 % |
-   | 40 °C | ~94 % | ~88 % | ~82 % |
+   | 5 °C | ~86 % | ~74 % (~160 kg) | ~64 % |
+   | 20 °C | ~92 % | ~84 % (~185 kg) | ~77 % |
+   | 40 °C | ~94 % | ~88 % (~195 kg) | ~82 % |
 
    *Oletukset: noin 6 barin häviö venttiilin kummallakin reitillä (P→A ja B→T), mitatut
    letkupituudet ja noin 1,5 bar paluusuodattimessa. 4–10 barin venttiilihäviöillä lämmin tulos on
-   85–89 %. **⚠ Hanki BAV-713:n painehäviökäyrä** tarkentamaan tätä.*
+   85–89 %. **⚠ Hanki BAV-713:n painehäviökäyrä** tarkentamaan tätä.* Kilot on laskettu Side-Powerin
+   ilmoittamasta 220 kg:n suurimmasta työntövoimasta.
+
+   **Malli vahvistettu valmistajan taulukolla:** Side-Powerin mukaan 80 %:n työntövoimaan tarvitaan
+   30,2 l/min ja 211 bar, eli virtaus 89 % ja paine 80 % täydestä. Tämä vastaa tässä käytettyä oletusta,
+   että potkurin momentti ja työntövoima kasvavat kierrosnopeuden neliössä [datalehti Side-Power SH Series v1.0.0 2017].
 
    Täyden ~90 %:n saavuttaminen vaatii korkeamman paineenrajoituksen ja enemmän virtausta
    tyhjäkäynnillä, ks. [p2-pump-options.md](design/p2-pump-options.md#paineenrajoituksen-nostaminen-yli-250-barin).
@@ -242,8 +247,8 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Paineenrajoitusventtiili | **Marchesini VMP 3/4"** (V0720), suoratoiminen istukkaventtiili, asetettu 250 bariin. Suurin virtaus **90 l/min**, suurin paine 350 bar. Jousi todennäköisesti 80–300 bar (vastaa aiemmin mainittua 300 baria), 50 bar / kierros [datalehti VMP, omistaja 2026-10-22] | Aiemmin kirjattu "300 bar, 80 l/min" korjattu datalehden mukaan |
 | Keulapotkurin suuntaventtiili | **fluiconnecto (Manuli) BAV-IC3-713**, suoraan ohjattu 4/3-solenoidiventtiili, NG6 / CETOP 03, pohjalaatassa; **valitsee pyörimissuunnan** [omistaja 2026-10-22]. Keskiasennossa A, B ja T yhdistetty, P suljettu (moottori pyörii vapaasti). Suurin virtaus **60 l/min**, suurin paine **350 bar**; kelat BAV-SPC3, 12 tai 24 VDC (**⚠ tarkista** jännite) [datalehti fluiconnecto, Teollisuusventtiilit s. 239] | Painehäviökäyrää ei ole luettelossa |
 | Painemittari | P-linjassa ennen pohjalaattaa | Ei näy kaaviossa |
-| Keulapotkuri | Side-Power SH240-U11 | Moottorin vuotolinja säiliöön |
-| Keulapotkurin tarve | 100 %: 264 bar × 33,8 l/min (≈ 14,9 kW hydraulista); 60 %: 158 bar × 26,2 l/min (≈ 6,9 kW) | Valmistajan tiedot [blogi 2018-11-12] |
+| Keulapotkuri | **Side-Power SH240/250TC-U11**: 250 mm:n tunneli, kaksi vastakkain pyörivää potkuria, hydraulimoottori U11. Työntövoima enintään **220 kg** (kevyt käyttö) / **200 kg** (raskas käyttö), hydraulinen teho enintään 14,9 kW; veneen koko 13–23 m. Vaihteisto pronssia, öljykylpy omasta säiliöstä (vaihteistoöljy EP 90); joustokytkin moottorin ja vetoakselin välissä suojaa jumiutumiselta [datalehti Side-Power SH Series v1.0.0 2017] | Moottorin vuotolinja säiliöön |
+| Keulapotkurin tarve (U11) | 60 %: 26,2 l/min × 158 bar · 80 %: 30,2 l/min × 211 bar · **100 %: 33,8 l/min × 264 bar** (≈ 14,9 kW hydraulista) [datalehti Side-Power SH Series v1.0.0 2017] | Prosentit ovat osuus suurimmasta työntövoimasta (100 % ≈ 220 kg) |
 | Saavutettu (hihnaveto) | ~160–170 bar, mikä riitti kääntämään aluksen laiturissa | [blogi 2018-11-12] |
 | Ankkurivinssi | Hydraulimoottori olemassa; tiedot **⚠ ei tiedossa**, ei vielä kytketty (2018) | [blogi 2017-04-01] |
 

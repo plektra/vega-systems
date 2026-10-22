@@ -56,8 +56,9 @@ Arvioitu lämpökuorma keulapotkurin käytön aikana (46 cm³:n hammaspyöräpum
 | Öljyn lämpeneminen, 80 l, ei jäähdytintä | ~2,7 K jokaista jatkuvan käytön minuuttia kohden |
 
 Tavallinen manööveri on 1–2 minuuttia ajoittaista käyttöä, mikä nostaa lämpötilaa noin 3–5 K. Se on
-harmitonta. Yli 5 minuutin yhtäjaksoinen käyttö nostaa yli 13 K, ja Side-Power-moottorilla on joka
-tapauksessa omat käyttöjaksorajansa. **Lämpö ei ole syy luopua vakiotilavuuspumpusta, kun
+harmitonta. Yli 5 minuutin yhtäjaksoinen käyttö nostaa yli 13 K. Side-Powerin mukaan hydraulinen SH-malli on
+tarkoitettu juuri pitkiin käyttöjaksoihin, eikä luettelossa ole käyttöjaksorajaa, joten rajan asettaa
+öljyn lämpötila. **Lämpö ei ole syy luopua vakiotilavuuspumpusta, kun
 kuormana on vain keulapotkuri.** Se voi olla syy, jos ankkurivinssi on pitkään käytössä, tai jos
 kuormia käytetään ilman kytkintä.
 
