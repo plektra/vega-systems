@@ -166,7 +166,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Kohde | Vaatimus |
 |---|---|
 | Öljytyyppi | TBD (mineraali HLP / HVLP, tai ympäristöystävällinen HEES, ISO 15380) |
-| Viskositeettiluokka | TBD (ISO VG 32 / 46; HV-luokka suositeltava kylmäkäynnistysten vuoksi) |
+| Viskositeettiluokka | Suositus **HV 32** (kylmäkäynnistykset ja PTO-pumpun imupuoli; pysyy Parker F1:n 10–400 cSt:n rajoissa), vahvistamatta |
 | Puhtaustavoite | TBD (ISO 4406 -koodi herkimmän komponentin mukaan) |
 | Suodatus | TBD (paluu / paine / sivuvirta) |
 | Huoltoväli | TBD |
@@ -185,7 +185,8 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Öljyn lämpötila | Säiliö / paluu | TBD °C | `hydraulics.<system>.temperature` | TBD |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
-| PTO-kytkimen asento | Kytkin | päällä/pois | `hydraulics.<system>.clutch.engaged` | Hälytys, jos päällä yli ~1000 rpm |
+| PTO-kytkimen asento | Kytkin | päällä/pois | `hydraulics.<system>.clutch.engaged` | Hälytys, jos päällä yli ~1200 rpm |
+| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Hälytys alle ~−0,2 bar |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
 ### 10.2 Ohjaus
@@ -193,7 +194,11 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 - **Ohjauspaikat:** TBD (ohjauspisteet, langattomat kaukosäätimet, MFD, autopilotti)
 - **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja kytkimen toimilaitteelle, CAN/N2K)
 - **Autopilotin liitäntä:** TBD (autopilotin merkki, suunnanvaihtopumppu vai solenoidiventtiiliohjaus)
-- **Lukitukset:** PTO-kytkimen kytkentä vain tyhjäkäynnillä ja vapaakiertoventtiilin ollessa auki. Muut TBD.
+- **Lukitukset:**
+  - PTO-kytkimen kytkentä vain alle noin 1000 rpm:ssä ja vapaakiertoventtiilin ollessa auki.
+  - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään ja 2/2-vapaakiertoventtiili avataan automaattisesti (rajaa lämpökuorman ~1–2 kW:iin; ks. [p2-pump-options.md](design/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)).
+  - Hälytys, jos kytkin on päällä yli noin 1200 rpm:ssä.
+  - Muut TBD.
 
 ## 11. Standardit ja määräykset
 

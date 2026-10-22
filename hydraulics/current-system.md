@@ -156,6 +156,11 @@
 
     2500 rpm:llä virtaus olisi niin suuri, että kytkimen pitää silti irrota automaattisesti noin
     1000–1200 rpm:n yläpuolella.
+
+    **Päivitys 2026-10-22:** Parker F1-061:llä (61 cm³) imuvirtaus on suurempi. **Suositus: 38 mm:n
+    imulinja mahdollisimman lyhyenä (~2 m) ja HV 32 -öljy**, jolloin imupaine pysyy noin 0 barissa
+    vielä 1000 rpm:llä ja 5 °C:ssa. Vertailu ja kierroslukuanalyysi:
+    [p2-pump-options.md](design/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu).
 11. **Jos konetta kierretään kytkimen ollessa päällä,** pumpun tuotto kasvaa kierrosten mukana (noin
     117 l/min 2500 rpm:llä 51 cm³:n pumpulla). Virtauksensäätöventtiilin ja paluulinjan pitää kestää se, tai kytkimen
     pitää irrota automaattisesti tietyn kierrosluvun yläpuolella. Tarkista VPR3:n suurin sallittu
@@ -285,7 +290,7 @@ Avoimet:
 - [ ] PTO-kytkin: Borelli 30501/30502 (51 cm³:n pumppu vaatii noin 225 Nm, joten 185 Nm:n 30300 ei riitä); spline-sovite, vipuvoima, hinta
 - [ ] HRC 150: nimellismomentti, suurin reikä ja napatyyppi 48 mm:lle ja kytkimen akselille (luettelo)
 - [ ] Valitun pumpun pienin sallittu imupaine (datalehti)
-- [ ] Hydrauliöljyn tyyppi ja luokka (suositus HV 32/46)
+- [ ] Hydrauliöljyn tyyppi ja luokka (suositus **HV 32**, ks. [p2-pump-options.md](design/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu))
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T)
 - [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
