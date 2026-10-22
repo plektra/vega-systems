@@ -46,7 +46,7 @@ käyttöohjeista ja tuotesivuista.
 |---|---|---|---|
 | Side-Power SH240-U11 -keulapotkuri | [Side-Power, tuotesivu](https://side-power.com/produkt/20443/sh240/) | 100 %: 264 bar × 33,8 l/min; 60 %: 158 bar × 26,2 l/min (blogin mukaan). **⚠ Asennusohje puuttuu** (moottorin suurin paine, käyttöjakso, öljyvaatimukset). | [current-system](../hydraulics/current-system.md) |
 | **Bowman EC100 -öljynjäähdytin** | [Bowman, EC Series Product Profile](https://ej-bowman.com/wp-content/uploads/2023/05/EC-Series-Product-Profile.pdf) (*kuvana*) | Öljy ≤ 92 l/min; 0,44 bar / 60 l/min; 4–10 kW esitteen ehdoilla; merivesi 3-vetoinen 25–50 l/min; 3/4" BSP | [oil-cooling](../hydraulics/design/oil-cooling.md#bowman-ec100--jäähdytin-omistajilla-varalla) |
-| BAV-713 | — | **⚠ Datalehti puuttuu** (painehäviö, painearvo) | [current-system](../hydraulics/current-system.md) |
+| BAV-713 | ks. omistajien datalehdet (`Teollisuusventtiilit.pdf`) | 60 l/min, 350 bar; painehäviö puuttuu | [current-system §3.4](../hydraulics/current-system.md) |
 | HRC 150 -joustokytkin | — | **⚠ Datalehti puuttuu** (nimellismomentti, suurin reikä napatyypeittäin) | [current-system](../hydraulics/current-system.md) |
 
 ## Omistajien datalehdet (`datasheets/local/`)
@@ -64,6 +64,7 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 | `patruunaventtiili-2:2.pdf` | **Bosch Rexroth OD15-X-17-Y-S0**, 2/2-patruunaventtiili, jännitteettömänä auki, esiohjattu istukka: apupiirin vapaakiertoventtiili, joka **kytkee paineen CETOP-pohjalaatalle** keulapotkuria käytettäessä [omistaja 2026-10-22] | 350 bar (koepaine 420); 2–70 l/min; viskositeetti 20–380 cSt; öljy −20…+80 °C; suodatus ISO 4406 19/17/14; kela erikseen (20 W) | [current-system §3.4](../hydraulics/current-system.md) |
 | `orbitroli-hkus_160-4.pdf` | **M+S Hydraulic HKUS 160/4** -ohjausyksikkö | 158,4 cm³/r; avoin keskiasento, ei kuormantakaisinkytkentää; sisäänrakennettu paineenrajoitus (asetus 80–170 bar) ja iskuventtiilit (140–220 bar); nimellisvirtaus 16 l/min (100 rpm); **T-linjan suurin jatkuva paine 25 bar**; liitännät G1/2 | [current-system §3.3](../hydraulics/current-system.md), [oil-cooling](../hydraulics/design/oil-cooling.md) |
 | `cetop-3-manifolds-ng6-with-relief-valve.pdf` | **Flowfit CETOP 3 / NG6 -rinnakkaispohjalaatta**, 4-paikkainen (apupiiri) | Rinnankytketty, paineenrajoitusventtiilin kavitetti (P→T) ja mittariliitäntä; P ja T 1/2" BSP, A ja B 3/8" BSP, G 1/4" BSP; 4 paikkaa: pituus 247,7 mm, 8,21 kg; materiaali teräs [omistaja 2026-10-22]. **Painearvoa ei ilmoitettu.** (*kuvana*) | [current-system §3.4](../hydraulics/current-system.md) |
+| `Teollisuusventtiilit.pdf` | Fluiconnecto (Manuli) -luettelo "Teollisuusventtiilit", s. 238–254 (Atos- ja fluiconnecto-venttiilit) | **BAV-IC3-713** (s. 239): suoraan ohjattu 4/3, NG6 / CETOP 03, keskiasento A-B-T yhdistetty / P suljettu; **60 l/min, 350 bar**; kelat BAV-SPC3 12/24 VDC; pituus 214 mm. Painehäviökäyrää ei ole. (*kuvana*) | [current-system §3.4](../hydraulics/current-system.md) |
 | `hyd_tank.pdf` | Flowfit Weldless Steel Tanks -luettelo (säiliö) | Saumattomat terässäiliöt 6–… l; 100 l tyypit A, B ja C (s. 14–16) | [current-system §3.5](../hydraulics/current-system.md) |
 | `tukilaakeri_25604-4.pdf` | Tukilaakeri 25604-4 (hihnavedon tukilaakeri, luettelo "Supporti") | Pumppuun laipoitettava tukilaakeri hihna- tai ketjuvedon säteiskuormille, hammastettu puolikytkin; käyttöikä 3500 h 1500 rpm:llä; rasva DIN 51502 MPF 1K-20 | [current-system §3.1](../hydraulics/current-system.md) (P1:n hihnaveto) |
 
@@ -75,7 +76,8 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 - [x] VPR3, RPF3, 2/2-vapaakiertoventtiili, orbitroli, ohjauspumppu (omistajien datalehdet)
 - [x] Paineenrajoitusventtiili (Marchesini VMP 3/4")
 - [x] CETOP 3 -pohjalaatta (Flowfit NG6, 4-paikkainen)
-- [ ] BAV-713
+- [x] BAV-713 (fluiconnecto BAV-IC3-713)
+- [ ] BAV-713:n painehäviökäyrä
 - [ ] CETOP 3 -pohjalaatan painearvo (ei Flowfitin mittapiirustuksessa)
 - [ ] HRC 150 -joustokytkin
 - [ ] Caterpillar 3126B -merimoottorin tekniset tiedot (merivesipumppu, tyhjäkäynti)

@@ -240,7 +240,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Vapaakiertoventtiili (keulapotkurin päälle/pois) | Bosch Rexroth OD15-X-17-Y-S0 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. **Kytkee paineen CETOP-pohjalaatalle** [omistaja 2026-10-22]. Todennäköisesti asennettu **pohjalaatan paineenrajoitusventtiilin kavitettiin** (P→T): auki se purkaa pohjalaatan P-kanavan säiliöön, kiinni paine nousee pohjalaatalla. **⚠ Vahvista.** | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön; jännitteellisenä venttiili sulkeutuu ja paine menee BAV-713:lle. Ohjataan päälle aina, kun keulapotkuria käytetään kumpaan tahansa suuntaan. |
 | Pohjalaatta | **Flowfit CETOP 3 / NG6, 4-paikkainen, rinnankytketty**, paineenrajoitusventtiilin paikalla (kavitetti P→T) ja painemittariliitännällä. Liitännät: **P ja T 1/2" BSP, A ja B 3/8" BSP**, G (mittari) 1/4" BSP. Pituus 247,7 mm, paino 8,21 kg. **Materiaali teräs** [omistaja 2026-10-22]. Painearvoa ei ilmoitettu; teräksiset CETOP 3 -pohjalaatat on tyypillisesti luokiteltu noin 250–350 bariin **⚠ vahvista Flowfitilta** [datalehti Flowfit CETOP 3]. | 1 paikka käytössä (BAV-713), 3 vapaana (ankkurivinssi ym.). A/B-liitännät ovat 3/8", vaikka keulapotkurin letkut ovat 1/2": pieni lisähäviö, sisältyy venttiilihäviön arvioon. |
 | Paineenrajoitusventtiili | **Marchesini VMP 3/4"** (V0720), suoratoiminen istukkaventtiili, asetettu 250 bariin. Suurin virtaus **90 l/min**, suurin paine 350 bar. Jousi todennäköisesti 80–300 bar (vastaa aiemmin mainittua 300 baria), 50 bar / kierros [datalehti VMP, omistaja 2026-10-22] | Aiemmin kirjattu "300 bar, 80 l/min" korjattu datalehden mukaan |
-| Keulapotkurin suuntaventtiili | BAV-713 4/3-solenoidiventtiili pohjalaatassa, **valitsee pyörimissuunnan** [omistaja 2026-10-22]; keskiasennossa A-B-T vapaakierto (moottori pyörii vapaasti) | Datalehti puuttuu |
+| Keulapotkurin suuntaventtiili | **fluiconnecto (Manuli) BAV-IC3-713**, suoraan ohjattu 4/3-solenoidiventtiili, NG6 / CETOP 03, pohjalaatassa; **valitsee pyörimissuunnan** [omistaja 2026-10-22]. Keskiasennossa A, B ja T yhdistetty, P suljettu (moottori pyörii vapaasti). Suurin virtaus **60 l/min**, suurin paine **350 bar**; kelat BAV-SPC3, 12 tai 24 VDC (**⚠ tarkista** jännite) [datalehti fluiconnecto, Teollisuusventtiilit s. 239] | Painehäviökäyrää ei ole luettelossa |
 | Painemittari | P-linjassa ennen pohjalaattaa | Ei näy kaaviossa |
 | Keulapotkuri | Side-Power SH240-U11 | Moottorin vuotolinja säiliöön |
 | Keulapotkurin tarve | 100 %: 264 bar × 33,8 l/min (≈ 14,9 kW hydraulista); 60 %: 158 bar × 26,2 l/min (≈ 6,9 kW) | Valmistajan tiedot [blogi 2018-11-12] |
@@ -299,7 +299,9 @@ Avoimet:
 - [ ] HRC 150: nimellismomentti, suurin reikä ja napatyyppi 48 mm:lle ja kytkimen akselille (luettelo)
 - [ ] Valitun pumpun pienin sallittu imupaine (datalehti)
 - [ ] Hydrauliöljyn tyyppi ja luokka (suositus **HV 32**, ks. [p2-pump-options.md](design/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu))
-- [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T)
+- [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
+- [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
+- [ ] BAV-713:n kelojen jännite (12 vai 24 VDC)
 - [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
 - [ ] Onko sähköinen varapumppu kytketty?

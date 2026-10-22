@@ -188,8 +188,9 @@ Työntövoima-arviot **700 rpm:n tyhjäkäynnillä**, lämmin öljy:
   - **Pumppu:** VNK3 ryhmä 3 (43 ja 51 cm³) on 250 bar jatkuva ja 300 bar huippu. 260–280 barin käyttö
     nojaa huippuarvoon keulapotkurin käyttöjaksoissa. Kysy, kattaako huippuarvo ajoittaisen käytön,
     tai valitse pumppu, joka on 280 bar jatkuva.
-  - **Venttiilit:** BAV-713 ja CETOP-pohjalaatta. CETOP 3 -osat ovat usein 315–350 bar, mutta
-    **⚠ tarkista**.
+  - **Venttiilit:** BAV-713 (fluiconnecto BAV-IC3-713) on 350 bar ✅. Teräksinen CETOP 3 -pohjalaatta on
+    tyypillisesti 250–350 bar, painearvo **⚠ vahvista Flowfitilta**. Patruunaventtiili (350 bar) ja VMP
+    (350 bar) ✅.
   - **Keulapotkurin moottori:** Side-Power SH240:n hydraulimoottorin suurin paine. **⚠ Tarkista.**
 - **VMP:n 90 l/min riittää.** Paineenrajoitus on VPR3:n (35 l/min) jälkeen, joten se ei koskaan näe
   pumpun koko tuottoa.
@@ -512,5 +513,6 @@ kauempaa:
 - [ ] PTO:n pyörimissuunta (30501 vai 30502)
 - [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)
 - [ ] Side-Power SH240:n hydraulimoottorin suurin paine (jos paineenrajoitusta nostetaan)
-- [ ] CETOP 3 -pohjalaatan, venttiilien ja BAV-713:n painearvot
+- [x] BAV-713 350 bar, VMP 350 bar, 2/2-patruunaventtiili 350 bar
+- [ ] CETOP 3 -pohjalaatan painearvo (teräs; Flowfit)
 - [ ] Hyväksyykö CAT 3126B:n elektroniikka ulkoisen kierrostenkorotussignaalin? (vaihtoehto B)
