@@ -210,9 +210,12 @@ suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestel
 
 \* Laskettu hihnavälityksellä 1:1,24 ja 100 %:n volumetrisella hyötysuhteella. Koneen 2500 rpm:llä
 pumput pyörivät noin 3100 rpm. **P1:n (2PE16D) suurin sallittu kierrosnopeus on 3000 rpm**
-[datalehti Salami 2PE], eli hihnavetoisena koneen kierrokset saavat olla enintään noin **2400 rpm**.
-Tarkista koneen suurin kierrosluku 350 hv:n säädöllä; jos se on yli 2400 rpm, hihnapyörien välitystä
-kannattaa pienentää (esim. 1:1,1). Salamin 2PE-sarjan käyttöehdot: imupaine 0,7–2,5 bar absoluuttista,
+[datalehti Salami 2PE], eli hihnavetoisena koneen kierrokset saavat olla enintään noin **2420 rpm**.
+Koneen suurin kierrosluku on noin **2400 rpm** [omistaja 2026-10-22], jolloin P1 pyörii noin 2980 rpm:
+**juuri ja juuri rajan sisällä**. Jos hihnapyöriä uusitaan, välitystä kannattaa hieman pienentää
+(esim. 1:1,15 → noin 2760 rpm) marginaalin saamiseksi; ohjaukselle riittää silti noin 12 l/min
+tyhjäkäynnillä. (Tämän dokumentin muut 2500 rpm:n laskelmat ovat varovaisia arvioita, jotka pätevät
+myös 2400 rpm:llä.) Salamin 2PE-sarjan käyttöehdot: imupaine 0,7–2,5 bar absoluuttista,
 viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 800 cSt), öljy −15…+85 °C
 (NBR-tiivisteet).
 
@@ -235,7 +238,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 |---|---|---|
 | Virtauksensäätö | VPR3 (Marchesini, kolmitie-etusijaventtiili), asetus 35 l/min, ylimäärä B-portista säiliöön. Suurin tulovirtaus 60 / 80 / 120 / 200 l/min (3/8" / 1/2" / 3/4" / 1"), 350 bar [datalehti VPR3] | Koko **⚠ tarkista**: 1/2" kestää vain 80 l/min |
 | Vapaakiertoventtiili | Bosch Rexroth OD15…17 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. T-haaralla VPR3:n jälkeen. | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön, jännitteellisenä pohjalaatalle |
-| Pohjalaatta | CETOP 3, 4-paikkainen, paineenrajoitus asetettu 250 bariin. **Paineenrajoitusventtiili enintään 300 bar, 80 l/min** [omistaja 2026-10-22]. | 1 paikka käytössä, 3 vapaana (ankkurivinssi ym.) |
+| Pohjalaatta | CETOP 3, 4-paikkainen, paineenrajoitus asetettu 250 bariin. **Paineenrajoitusventtiili enintään 300 bar, 80 l/min** [omistaja 2026-10-22]. Pohjalaattaan on asennettu Bosch Rexrothin 2/2-patruunaventtiili OD15-X-17-Y-S0 (jännitteettömänä auki, solenoidiohjattu) [omistaja 2026-10-22, datalehti RE 18323-07]. **⚠ Tarkista**, onko se paineenrajoitusventtiili vai vapaakiertoventtiili. | 1 paikka käytössä, 3 vapaana (ankkurivinssi ym.) |
 | Keulapotkurin venttiili | BAV-713 4/3-solenoidiventtiili, keskiasennossa A-B-T vapaakierto (moottori pyörii vapaasti) | |
 | Painemittari | P-linjassa ennen pohjalaattaa | Ei näy kaaviossa |
 | Keulapotkuri | Side-Power SH240-U11 | Moottorin vuotolinja säiliöön |
@@ -304,6 +307,8 @@ Avoimet:
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
 - [ ] Orbitrolin paineenrajoituksen asetusarvo
 - [ ] VPR3:n ja RPF3:n koko (kierreliitäntä): VPR3 1/2" kestäisi vain 80 l/min
-- [ ] P1:n kierrosraja 3000 rpm: hihnavälityksellä 1:1,24 koneen kierrokset enintään noin 2400 rpm; tarkista koneen suurin kierrosluku 350 hv:n säädöllä
+- [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
+- [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15)
+- [ ] CETOP-pohjalaatan patruunaventtiili: onko siinä solenoidikela (→ vapaakiertoventtiili) vai säätöruuvi (→ paineenrajoitus)? Missä paineenrajoitusventtiili (300 bar / 80 l/min) ja 2/2-vapaakiertoventtiili fyysisesti ovat?
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

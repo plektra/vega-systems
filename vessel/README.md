@@ -28,7 +28,7 @@ omistajien suoraan antama tieto.
 | Kohde | Arvo | Lähde |
 |---|---|---|
 | Pääkone | Caterpillar 3126B, asennettu 2012. Teho **säädetty 350 hv:hen** omistajan muistin mukaan (blogissa 420 hv, joka on luultavasti mallin nimellisteho) **⚠ tarkista** koneen tyyppikilvestä tai Caterpillar-huollosta | [perustiedot], [omistaja 2026-10-22] |
-| Kierrosalue | Tyhjäkäynti (ks. alla) – ~2500 rpm, matka ~1800 rpm | [blogi 2018-11-12] |
+| Kierrosalue | Tyhjäkäynti (ks. alla) – **suurin noin 2400 rpm** (350 hv:n säädöllä), matka ~1800 rpm | [blogi 2018-11-12], [omistaja 2026-10-22] |
 | Vauhtipyörä / kytkinkoppa | SAE 11-1/2 -vauhtipyörä, luultavasti SAE #3 -koppa, sovitelaippa SAE 14:ään | [blogi 2021-02-08] |
 | Vaihteisto (alkuperäinen) | Masson RSD200 (1976), poistettu | [blogi 2019-01-24] |
 | Vaihteisto | Advance 300, ~5,4:1, **asennettu ja linjattu** (2026) | [blogi 2021-02-08], [omistaja 2026-10-21] |
