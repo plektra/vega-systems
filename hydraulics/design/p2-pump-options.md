@@ -416,24 +416,50 @@ axial shaft loads are allowed on the pump shaft"* [luettelo MSG30-8200/UK s. 79]
 279 Nm 280 barissa. Dieselvetoisen hydraulipumpun käyttökertoimella noin 2 (arvio; tarkista
 kytkinvalmistajan taulukosta) tarve on noin 500–560 Nm.
 
-**Joustokytkin: suunniteltu HRC 150 käy.** Jälleenmyyjien mukaan nimellismomentti on 600 Nm,
-ulkohalkaisija 150 mm ja pituus F/H-navoilla 107,5 mm ja F+B-navoilla 129,5 mm
-([BEP, HRC-luettelo](https://bepltd.com/cdn/shop/files/HRC-COUPLING.pdf);
-[Lemu, HRC 150 B](https://www.lemu.dk/en/product/hrc-150-b-coupling-part-for-bore-id-3731605594)).
-**⚠ Vahvista Fennerin omasta luettelosta.**
+**Suositus: valmis Spidex-kynsikytkin (koko 48/60), ei koneistusta** [selvitys 2026-10-23].
+Salhydro myy R+L Hydraulicsin Spidex-kytkimen napoja suoraan kuorma-auton pumppuakselille
+(*"DIN 5462, ISO 14 = B 8 x 32 x 36 (typical truck pump shaft)"*). Spidex on samaa kynsikytkintyyppiä
+kuin KTR Rotex, ja osat ovat keskenään vaihtokelpoisia
+([Salhydro, uritetut navat](https://www.salhydro.fi/en/product/spidex-hubs-for-splined-shaft);
+[lieriöakselin navat](https://www.salhydro.fi/en/product/hydraulic-components/pumps-and-power-units/mechanical-transmission/spidex-hubs-for-cylindrical-shaft);
+[Spidex-luettelo](https://files.salhydro.fi/files/products/Spidex_ja_Dentex_tekniset_tiedot.pdf), luettu tekstinä).
 
-| Puoli | Akseli | Napa |
+| Osa | Koodi (Salhydro) | Tiedot |
 |---|---|---|
-| PTO | Ø48 mm, kiila | **F- tai H-napa ja taper-holkki 2012, reikä 48 mm ja kiilaura** (holkin suurin reikä 50 mm), tai B-napa porattuna 48H7 + kiilaura |
-| Pumppu | **DIN ISO 14 (DIN 5462) B8×32×36**: 8 suoraa uraa, sisähalkaisija 32, ulkohalkaisija 36 mm; hammasakseli noin 55 mm laipasta; päässä M12×24-kierre [luettelo s. 24, *kuvana*] | **B-napa (esiporattu), johon koneistamo avartaa 8×32×36-sisäurituksen.** Kuorma-autojen PTO-standardi, joten avarrustyökaluja löytyy. Napa lukitaan aksiaalisesti akselin pään M12-pultilla ja aluslevyllä. |
+| Pumpun napa | **SPI-48A-KL-A8X32X36** | uritus B8×32×36, teräs, Ø105 mm |
+| PTO:n napa | **SPI-48A-ST-D48H7** | reikä 48 H7, teräs, Ø105 mm. A-navan suurin reikä on juuri 48 mm. Kiilaura DIN 6885 luettelon vakiona **⚠ varmista tilatessa** |
+| Hammaskehä (elastinen välikappale) | Spidex 48/60, **98 Sh A** tai 64 Sh D | koodi **⚠ Salhydrolta** |
 
-**Muut tavat tehdä pumppupuolen napa:**
-- **Myyjän holkki** (luultavasti 8×32×36-sisäuritettu): B-napa avarretaan holkin ulkohalkaisijalle,
-  ja holkki kiinnitetään puristussovitteella ja kiilalla tai tapilla. Hitsaaminen ei sovi
-  karkaistulle holkille. **⚠ Selvitä holkin mitat.**
-- **Valmis uritettu napa** toiseen joustokytkinsarjaan (esim. kynsikytkin, jonka navan saa
-  DIN ISO 14 -urituksella). Valmista 8×32×36-napaa ei löytynyt haulla; kysy toimittajilta (esim.
-  Salhydro, Hydroscand, KTR:n jälleenmyyjä). Silloin myös PTO-puolen napa vaihtuu samaan sarjaan.
+Spidex 48/60:n arvot [luettelo s. 9, 11 ja 16]:
+
+| Hammaskehä | Nimellismomentti TKN | Suurin TKmax | Suurin kierrosluku |
+|---|---|---|---|
+| 92 Sh A (vakio) | 310 Nm | 620 Nm | 5600 rpm |
+| **98 Sh A** | **525 Nm** | **1050 Nm** | 5600 rpm |
+| 64 Sh D | 655 Nm | 1310 Nm | 5600 rpm |
+
+- Pituus A/A-navoilla 140 mm, navat 56 mm kumpikin, napojen väli 28 mm.
+- Sallitut virheet 1000 rpm:llä: aksiaalinen 2,1 mm, säteis 0,44 mm, kulma 1,2°. Säteis- ja
+  kulmavirhe kerrotaan 0,7:llä 40–60 °C:ssa.
+- **Mitoitus** luettelon menetelmällä [laskelma]: TN 279 Nm (280 bar) × K1 noin 1,3 (hydraulipumppu
+  1,0 luettelon mukaan, korotettu dieselvedon vuoksi, arvio) × K2 1,0 (alle 100 käynnistystä
+  tunnissa) × K3 1,3 (konehuone noin 50 °C, vakiohammaskehä) ≈ **470 Nm**. 98 Sh A:n 525 Nm riittää,
+  64 Sh D antaa lisävaraa. Vakiokehä 92 Sh A (310 Nm) ei riitä.
+- Pienempi koko 42/55 (SPI-42A-KL-A8X32X36, sintraterästä, ja SPI-42B-GG-D48H7) riittäisi vain
+  64 Sh D -kehällä (TKN 560 Nm); 98 Sh A (450 Nm) jää 280 barissa alle tarpeen.
+- Pumpun napa lukitaan akselin pään M12-pultilla ja aluslevyllä; PTO-napa kiilalla ja
+  pidätysruuvilla.
+- **Hinta:** Salhydro ei näytä hintoja (tarjouspyyntö). **⚠ Pyydä tarjous kaikista kolmesta osasta.**
+
+**Muut vaihtoehdot:**
+- **HRC 150 + valmis uritettu holkki:** Salhydron **EPH-8-36** on valmis B8×32×36-uritettu holkki
+  (Ø60 × 50 mm) hitsattavaksi navan sisään. HRC 150:n B-napaan (esiporattu) sorvataan Ø60-reikä ja
+  holkki hitsataan tai kiinnitetään siihen. Tämä on yksinkertaisempaa työtä kuin urituksen
+  avartaminen, mutta vaatii silti konepajaa. Kannattaa vain, jos HRC 150 on jo hankittu. HRC 150:n
+  momentti jälleenmyyjien mukaan 600 Nm
+  ([BEP, HRC-luettelo](https://bepltd.com/cdn/shop/files/HRC-COUPLING.pdf)) **⚠ vahvista**.
+- **Myyjän holkki** HRC:n B-napaan samaan tapaan, jos mitat sopivat. **⚠ Selvitä holkin mitat.**
+- **Urituksen avartaminen HRC-napaan** koneistamolla: toimii, mutta todennäköisesti kallein.
 
 **Pumpun kannake (runkoalusta):**
 - ISO 7653 -laippa: keskitys **Ø80 mm** (akseli 0/−0,013, kannakkeen reikä Ø80 H8), **4 × Ø13 mm:n
@@ -442,7 +468,7 @@ ulkohalkaisija 150 mm ja pituus F/H-navoilla 107,5 mm ja F+B-navoilla 129,5 mm
 - Pumppu painaa 8,5 kg, ja BPV ja imuliitin tulevat sen päälle. Imu- ja vuotoletkun on mahduttava.
 - **Linjaus:** pumpun akseli PTO-akselin kanssa samaan linjaan HRC:n sallimien säteis-, kulma- ja
   aksiaalivirheiden sisään **⚠ arvot Fennerin luettelosta**. Tarkista uudelleen koeajon jälkeen.
-- **Akselien väli:** HRC 150:n navat tarvitsevat noin 107,5–129,5 mm, joten PTO-akselin pään ja
+- **Akselien väli:** Spidex 48/60 vie 140 mm (HRC 150 noin 107,5–129,5 mm), joten PTO-akselin pään ja
   pumpun laipan väli on suunniteltava sen mukaan. **⚠ Mittaa PTO-akselin pituus ja tila.**
 
 **Huolto ja turvallisuus:**
@@ -688,7 +714,7 @@ kauempaa:
 - [x] BPV-F1: vuotoliitinsarja 378 3039 tulee venttiilin mukana; vuotolinja on pakollinen [MSG30-8227]
 - [ ] BPV-F1: ohitusasennon painehäviö ja lämpö (ei julkaistu; kysy Parkerilta tai mittaa)
 - [ ] Tuleeko tori.fi-pumpun mukana imuliitin (ISO-mallissa ei kierreimuaukkoa)?
-- [ ] Veto ilman kytkintä: HRC 150:n nimellismomentti, linjaustoleranssit ja navat Fennerin luettelosta; pumppupuolen B-navan avarrus 8×32×36 (koneistamo) tai myyjän holkin käyttö
+- [ ] Veto ilman kytkintä: tarjous Salhydrolta Spidex 48/60 -osista (SPI-48A-KL-A8X32X36, SPI-48A-ST-D48H7, hammaskehä 98 Sh A); onko HRC 150 jo hankittu?
 - [ ] PTO-akselin pituus ja tila PTO:n ja pumppukannakkeen välillä
 - [ ] Imulinjan suurentaminen 50 mm:iin: säiliön ulosotto ja palloventtiili
 - [x] Vegan koneen käyttötunnit: alle 1000 h vuodessa [omistaja 2026-10-23]
