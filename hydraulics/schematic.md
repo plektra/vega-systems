@@ -80,7 +80,6 @@ flowchart LR
   VMP["VMP 3/4#quot;<br/>paineenrajoitus<br/>250 bar"]
   UNL["2/2-venttiili (oma runko)<br/>jännitteettömänä auki → T"]
   BAV["BAV-713 4/3<br/>suunta"]
-  SHOCK["Iskuventtiilit A/B<br/>~275 bar"]
   THR["Keulapotkuri<br/>SH240-U11<br/>240 kg"]
   RET(["Paluu"])
 
@@ -92,8 +91,6 @@ flowchart LR
   VPR3 -->|P| UNL
   VPR3 -.-> VMP
   UNL -->|"kiinni = paine<br/>pohjalaatalle"| BAV
-  BAV -.-> SHOCK
-  SHOCK -.->|"A / B 1/2#quot;, 2 × 8,5 m"| THR
   BAV -->|"A / B 1/2#quot;, 2 × 8,5 m"| THR
   VPR3 -->|"B, ylimäärä"| RET
   UNL -->|"auki → T"| RET
@@ -102,13 +99,8 @@ flowchart LR
   THR -->|"vuotolinja 1/4#quot;<br/>paluulinjaan (kohta ⚠)"| TANK
 
   subgraph MAN ["CETOP 3 -pohjalaatta, 4 paikkaa"]
-    UNL
     BAV
-    SHOCK
   end
-
-  classDef planned stroke-dasharray: 5 5
-  class SHOCK planned
 ```
 
 Pohjalaatan paikat 2–4 ovat vapaana (esim. ankkurivinssi).
@@ -155,4 +147,4 @@ flowchart LR
 - VMP:n fyysinen paikka P-linjassa (VPR3:n P-portin ja pohjalaatan välissä?) **⚠ tarkista**
 - ~~2/2-venttiilin paikka~~: omassa erillisessä rungossaan [omistaja 2026-10-23]
 - ~~Varapumpun P3 kytkentä~~: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
-- Iskuventtiilit, öljynjäähdytin ja merivesihaara ovat suunnitteilla
+- Öljynjäähdytin ja merivesihaara ovat suunnitteilla; iskuventtiileitä ei lisätä (päätös 2026-10-23)

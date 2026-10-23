@@ -147,7 +147,8 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 - **Hätäpysäytyksen periaate:** TBD
 - **Kuormien prioriteetti** (mitkä pudotetaan ensin, kun teho ei riitä): TBD
 - **Keulapotkurin iskuventtiilit:** Sleipner suosittelee vahvasti iskuventtiilejä 10–15 % valitun
-  maksimipaineen yläpuolelle (suojaa, jos potkurit jumittuvat) [ohje Sleipner 2746 35 2025]. Lisättävä.
+  maksimipaineen yläpuolelle (suojaa, jos potkurit jumittuvat) [ohje Sleipner 2746 35 2025]. **Ei lisätä**
+  (päätös 2026-10-23): BAV-713:n kelluva keskiasento ja VMP 250 bar rajaavat painepiikit.
 - **Paineenrajoitus / suurin järjestelmäpaine:** apupiiri 250 bar (päätetty; ~90 %:n keulapotkuriteho
   hyväksytty kustannussyistä). Ohjauspiiri TBD.
 - **Suojaus tahattomalta liikkeeltä:** TBD

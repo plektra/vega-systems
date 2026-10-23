@@ -216,8 +216,8 @@ suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestel
 pumput pyörivät noin 3100 rpm. **P1:n (2PE16D) suurin sallittu kierrosnopeus on 3000 rpm**
 [datalehti Salami 2PE], eli hihnavetoisena koneen kierrokset saavat olla enintään noin **2420 rpm**.
 Koneen suurin kierrosluku on noin **2400 rpm** [omistaja 2026-10-22], jolloin P1 pyörii noin 2980 rpm:
-**juuri ja juuri rajan sisällä**. Jos hihnapyöriä uusitaan, välitystä kannattaa hieman pienentää
-(esim. 1:1,15 → noin 2760 rpm) marginaalin saamiseksi; ohjaukselle riittää silti noin 12 l/min
+**juuri ja juuri rajan sisällä**. **Välitystä ei muuteta** (päätös 2026-10-23); pienempi välitys
+(esim. 1:1,15 → noin 2760 rpm) antaisi marginaalia, ja ohjaukselle riittäisi silti noin 12 l/min
 tyhjäkäynnillä. (Tämän dokumentin muut 2500 rpm:n laskelmat ovat varovaisia arvioita, jotka pätevät
 myös 2400 rpm:llä.) Salamin 2PE-sarjan käyttöehdot: imupaine 0,7–2,5 bar absoluuttista,
 viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 800 cSt), öljy −15…+85 °C
@@ -277,7 +277,7 @@ Asennusohjeen mukaan, kun käytössä ei ole Sleipnerin omaa hydraulijärjestelm
 | Öljynsuodatin | Paluusuodatin on olemassa ✅ |
 | **Öljynjäähdytin niin, että öljy pysyy alle 75 °C:n**; suositeltu käyttölämpötila **40–60 °C** | Suunnitteilla Bowman EC100, ks. [oil-cooling.md](design/oil-cooling.md) |
 | Venttiilin virtaus- ja painerajat keulapotkurin rajoissa | VPR3 35 l/min ja VMP 250 bar; U11:n 100 %: 33,8 l/min ja 264 bar ✅ |
-| **Iskuventtiilit (shock valve) 10–15 % valitun maksimipaineen yläpuolelle**, suojaamaan järjestelmää, jos potkurit jumittuvat | **Puuttuu.** BAV-713:ssa ei ole iskuventtiileitä. **Päätös 2026-10-23: lisätään** A/B-linjojen ristiinkytketty iskuventtiililohko (esim. CETOP 3 -välilevy); malli ja asetus avoinna. |
+| **Iskuventtiilit (shock valve) 10–15 % valitun maksimipaineen yläpuolelle**, suojaamaan järjestelmää, jos potkurit jumittuvat | **Poikkeaa, hyväksytty.** BAV-713:ssa ei ole iskuventtiileitä, eikä lohkoa lisätä (päätös 2026-10-23): kelluva keskiasento (A, B, T yhdistetty) ja VMP 250 bar rajaavat painepiikit. |
 | Vuotolinja (1/4" BSP, pakollinen, ylempi liitäntä) | Olemassa ✅, kytketty paluulinjaan [omistaja 2026-10-23]. Ohje ei sano, pitääkö sen mennä suoraan säiliöön; kotelon paine pitää pysyä matalana, ks. avoimet kysymykset |
 | Ohjaukseen Sleipnerin S-Link-järjestelmä | **Poikkeaa:** Vegalla oma ohjaus solenoidiventtiileillä. Voi vaikuttaa takuuseen; toiminnallisesti tavallinen ratkaisu. |
 
@@ -341,8 +341,8 @@ Avoimet:
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
 - [x] BAV-713:n kelojen jännite: 24 VDC [omistaja 2026-10-23]
-- [x] Keulapotkurin iskuventtiilit: lisätään A/B-iskuventtiililohko (päätös 2026-10-23)
-- [ ] **Tarvitaanko iskuventtiililohko lainkaan?** BAV-713:n keskiasento on kelluva (A, B ja T yhdistetty), ja VMP rajoittaa P-linjan 250 bariin, joten painepiikit ovat jo rajattuja. Omistajien päätettäväksi (ks. [p2-pump-options](design/p2-pump-options.md))
+- [x] Keulapotkurin iskuventtiilit: ~~lisätään A/B-iskuventtiililohko~~ → **ei lisätä** (päätös 2026-10-23, korvaa saman päivän päätöksen)
+- [x] **Tarvitaanko iskuventtiililohko lainkaan?** Ei (päätös 2026-10-23). BAV-713:n keskiasento on kelluva (A, B ja T yhdistetty), ja VMP rajoittaa P-linjan 250 bariin, joten painepiikit ovat jo rajattuja. Omistajien päätettäväksi (ks. [p2-pump-options](design/p2-pump-options.md))
 - [x] ~~U11-moottorin suurin sallittu paine~~: ei tarvita, kun paineenrajoitus pysyy 250 barissa; Sleipnerin taulukko näyttää U11:lle 264 bar 100 %:lla [omistaja 2026-10-23]
 - [x] Paineenrajoitus pysyy 250 barissa (päätös 2026-10-21, vahvistettu 2026-10-23)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
@@ -357,7 +357,7 @@ Avoimet:
 - [ ] Orbitrolin paineenrajoituksen asetusarvo
 - [x] VPR3 3/4", RPF3 1/2" [omistaja 2026-10-23]
 - [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
-- [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15); imun kannalta vaikutus pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
+- [x] P1:n hihnavälitys pysyy 1:1,24 (päätös 2026-10-23); imun kannalta pienennyksen vaikutus olisi ollut pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
 - [x] P1:n imulinja nyt: 25 mm, 320 cm [omistaja 2026-10-23]
 - [x] P1:n imulinja jatkossa: 32 mm (päätös 2026-10-23)
 - [ ] Säiliön öljypinnan korkeus P1:een nähden; P2:n 50 mm:n ulosotto uuteen kohtaan, jotta 32 mm:n ulosotto jää P1:lle

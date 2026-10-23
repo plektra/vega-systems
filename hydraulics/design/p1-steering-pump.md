@@ -1,7 +1,7 @@
 # Ohjauspumppu P1: imulinja ja muutokset P2-remontin yhteydessä
 
 > **Tila:** selvitys 2026-10-23. **Päätetty 2026-10-23: kohdat 1, 3, 4 ja 5** (32 mm:n imulinja,
-> täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohdat 6–7 avoinna. Imulinjan mitat [omistaja 2026-10-23],
+> täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohta 6: välitystä ei muuteta; kohta 7 avoinna. Imulinjan mitat [omistaja 2026-10-23],
 > laskelmat [laskelma]. Ohjaus on turvallisuuskriittinen: **pätevän henkilön pitää tarkistaa
 > ohjauspiirin muutokset ennen rakentamista.**
 
@@ -89,7 +89,7 @@ koska säiliö on silloin tyhjä ja auki.
 | 3 | **Täysiaukkoinen palloventtiili** P1:n imu-ulosottoon, ja ulosotto vähintään 50 mm minimiöljypinnan alle eikä paluiden lähelle | Kuristava venttiili tai ilmaa imevä ulosotto syö koko marginaalin | Pieni |
 | 4 | **HV 32 -öljy** koko järjestelmään (jo suositeltu P2:n takia) | Suurin yksittäinen parannus P1:n imuun kylmänä. Huom. HV 32 ohenee noin 70 °C:ssa alle P1:n 12 cSt:n minimin, joten lämpötilahälytys 70 °C pysyy ([vaatimukset](../requirements.md)). | Öljy vaihdetaan joka tapauksessa |
 | 5 | **Imupaineen tarkistus käyttöönotossa:** alipainemittari (−1…0 bar) P1:n imuaukolle, ja koeajo kylmänä 700 ja 1800 rpm:llä | Laskelma perustuu oletettuun säiliön korkeuteen ja liitinhäviöihin. Mittaus kertoo todellisen marginaalin. | Mittari ~20–40 € (arvio) |
-| 6 | **Hihnavälitys:** päätetään samalla, pienennetäänkö 1:1,15:een | P1 pyörii nyt 2400 rpm:llä noin 2980 rpm (raja 3000). Imun kannalta muutos on pieni. | Hihnapyörä |
+| 6 | **Hihnavälitys:** ~~pienennetäänkö 1:1,15:een~~ **ei muuteta** (päätös 2026-10-23) | P1 pyörii nyt 2400 rpm:llä noin 2980 rpm (raja 3000). Imun kannalta muutos on pieni. | Hihnapyörä |
 | 7 | **Hihnaveto ja kannake:** vanha kannake kantoi kahta pumppua peräkkäin. Kun vanha P2 poistuu hihnoilta, tarkistetaan kannakkeen ja tukilaakerin kiinnitys ja hihnojen kireys yhdelle pumpulle. | Ohjauksen ainoa pumppu, hihnan katkeaminen = ohjaus vain hätäjärjestelmillä | Työtä |
 
 **Päätetty 2026-10-23: 1 + 3 + 4 + 5** ([päätösloki](../../decisions.md)).
@@ -108,8 +108,8 @@ vapautuvat P2:lta. Ennen sitä pitää mitata säiliön öljypinnan korkeus suht
 
 - [x] P1:n imuaukon koko: 3/4" [omistaja 2026-10-23]
 - [ ] Säiliön öljypinnan korkeus suhteessa P1:n imuaukkoon
-- [ ] Mahtuuko P2:n vanha 32 mm:n imuletku P1:lle, ja riittääkö sen pituus (~3 m)?
+- [x] P2:n vanha 32 mm:n imuletku mahtuu P1:lle; pumpun päähän tarvitaan uusi letkukara/letkuliitin [omistaja 2026-10-23]
 - [x] Päätös: P1:n imulinja 32 mm (2026-10-23)
 - [ ] Säiliö: P2:n 50 mm:n ulosotto uuteen kohtaan, jotta vanha 32 mm:n ulosotto jää P1:lle
-- [ ] Hankinta: 32 mm → 3/4" BSP -liitin P1:n imuaukkoon, 32 mm:n täysiaukkoinen palloventtiili (jos nykyinen on 25 mm), alipainemittari (−1…0 bar)
-- [ ] Hihnavälitys 1:1,24 vai 1:1,15
+- [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun), 32 mm:n täysiaukkoinen palloventtiili (jos nykyinen on 25 mm), alipainemittari (−1…0 bar)
+- [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)
