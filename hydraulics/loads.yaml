@@ -26,7 +26,7 @@ loads:
     actuator: cylinder
     cylinder:
       max_force_kN: null           # peräsimen suurin momentti / ohjausvarren pituus
-      stroke_mm: null              # mallikoodin ZS60350100 perusteella todennäköisesti 100 (Ø 60/35), vahvistamatta
+      stroke_mm: 100               # ZS60350100: männän Ø 60, varren Ø 35 [omistaja 2026-10-23]
       tiller_arm_mm: null
       hard_over_time_s: null       # ääriasennosta toiseen
     duty:

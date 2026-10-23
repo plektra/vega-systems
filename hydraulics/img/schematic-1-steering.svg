@@ -29,7 +29,7 @@
   <rect x="560" y="100" width="280" height="10" fill="#fff"/>
   <g stroke="none" fill="#000">
     <text x="855" y="95" font-weight="bold">1A1 Ohjaussylinteri ZS60350100</text>
-    <text x="855" y="111">kaksitoiminen, Ø 60/35 × 100 mm (⚠ arvio)</text>
+    <text x="855" y="111">kaksitoiminen, Ø 60/35 × 100 mm</text>
     <text x="855" y="127">varsi → peräsimen ohjausvarsi</text>
     <text x="507" y="148" font-size="11">A</text>
     <text x="707" y="148" font-size="11">B</text>
@@ -204,7 +204,7 @@
     <text x="950" y="882" font-size="13" font-weight="bold">Vega — hydraulijärjestelmä</text>
     <text x="950" y="904">Arkki 1/3: Piiri 1, ohjaus</text>
     <text x="950" y="920">ISO 1219-1 -merkit, ISO 1219-2 -periaatteet</text>
-    <text x="950" y="936">Versio 0.3 · 2026-10-23</text>
+    <text x="950" y="936">Versio 0.4 · 2026-10-23</text>
     <text x="950" y="953" font-weight="bold" fill="#b00">Tila: LUONNOS – ei rakentamiseen</text>
     <text x="950" y="969">Tarkastettava pätevällä henkilöllä</text>
     <text x="950" y="984">Piirtänyt: Claude · Hyväksynyt: –</text>

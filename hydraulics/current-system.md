@@ -229,7 +229,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 |---|---|---|
 | Virtauksensäätö | RPF3 (Marchesini, kolmitie, ylimäärä suoraan säiliöön), asetus 20 l/min. Suurin tulovirtaus 50 l/min (3/8") tai 85 l/min (1/2"), 350 bar [datalehti RPF3]; koko **⚠ tarkista** | Tyhjäkäynnillä pumppu antaa ~16,5 l/min, joten kaikki menee orbitrolille |
 | Ohjausyksikkö | **M+S Hydraulic HKUS 160/4**: 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; **sisäänrakennettu paineenrajoitus** (asetus 80–170 bar) ja iskuventtiilit (140–220 bar); nimellisvirtaus 16 l/min; **T-linjan suurin jatkuva paine 25 bar** [datalehti HKUS] | Paluulinjan vastapaine (esim. öljynjäähdytin ja sen ohitusventtiili) pitää pysyä alle 25 barin |
-| Sylinteri | **ZS60350100** [omistaja 2026-10-23], kaksitoiminen. Koodista arvioituna männän Ø 60 mm, varren Ø 35 mm, isku 100 mm (**⚠ arvio, vahvista mittaamalla**). Jos 60/35/100: pinta-alat 28,3 / 18,7 cm², tilavuudet 283 / 187 cm³, orbitrolin kierroksia laidasta laitaan noin 1,8 / 1,2; voima 50 barilla noin 14 / 9 kN [laskelma] | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
+| Sylinteri | **ZS60350100**, kaksitoiminen: männän Ø 60 mm, varren Ø 35 mm, isku 100 mm [omistaja 2026-10-23]. Pinta-alat 28,3 / 18,7 cm², tilavuudet 283 / 187 cm³, orbitrolin kierroksia laidasta laitaan noin 1,8 / 1,2; voima 50 barilla noin 14 / 9 kN [laskelma] | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
 | Hätäohitus | Käsiventtiili A- ja B-linjan välissä sylinterin vieressä, irrotettavaa hätäpinnaa varten | [blogi 2017-07-04] |
 | Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
 | Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus; asetusarvo **⚠ tarkista** (tehdasvaihtoehdot 80–170 bar) | [datalehti HKUS] |
@@ -347,7 +347,7 @@ Avoimet:
 - [x] P1:n painelinjassa on vastaventtiili ennen T-haaraa [omistaja 2026-10-23]
 - [x] Piirin 1 painelinjat 1/2" [omistaja 2026-10-23]
 - [x] Ohjaussylinterin malli: ZS60350100 [omistaja 2026-10-23]
-- [ ] Ohjaussylinterin mitat: vahvista 60/35/100 mm mittaamalla (männän ja varren Ø, isku)
+- [x] Ohjaussylinterin mitat: männän Ø 60 mm, varren Ø 35 mm, isku 100 mm [omistaja 2026-10-23]
 - [ ] Ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
 - [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
