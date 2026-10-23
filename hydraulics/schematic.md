@@ -41,7 +41,7 @@ flowchart LR
   HRC["HRC 150"]
   CL["PTO-kytkin<br/>Borelli 30501/30502<br/>580 Nm"]
   TANK[("Säiliö")]
-  P2["P2 Parker F1-061<br/>61 cm³<br/>(tai VNK3 51 cm³)"]
+  P2["P2 Parker F1-061<br/>59,5 cm³<br/>(tai VNK3 51 cm³)"]
   VPR3["VPR3 3/4#quot;<br/>35 l/min"]
   VMP["VMP 3/4#quot;<br/>paineenrajoitus<br/>250 bar"]
   UNL["2/2-patruunaventtiili<br/>jännitteettömänä auki"]

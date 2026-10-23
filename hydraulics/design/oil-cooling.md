@@ -29,7 +29,7 @@ Kaikki teho, jota toimilaitteet eivät muuta työksi, päätyy öljyyn:
 
 ## Lämpökuormat ja lämpeneminen
 
-Oletukset: Parker F1-061 (61 cm³) PTO:lla 1:1, paineenrajoitus 250 bar, 80 l öljyä, säiliön ja
+Oletukset: Parker F1-061 (laskettu 61 cm³:llä; todellinen 59,5 cm³ antaa noin 2,5 % pienemmät lämmöt) PTO:lla 1:1, paineenrajoitus 250 bar, 80 l öljyä, säiliön ja
 letkujen teräs mukana lämpökapasiteetissa, ei jäähdytintä. Ks. myös
 [p2-pump-options.md](p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061).
 

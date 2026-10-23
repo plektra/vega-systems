@@ -188,7 +188,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
 | PTO-kytkimen asento | Kytkin | päällä/pois | `hydraulics.<system>.clutch.engaged` | Hälytys, jos päällä yli ~1200 rpm |
-| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Hälytys alle ~−0,2 bar |
+| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (Parker F1: vähintään 1,0 bar abs), hälytys alle ~−0,2 bar |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
 ### 10.2 Ohjaus

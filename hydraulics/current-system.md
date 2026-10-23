@@ -162,7 +162,13 @@
     2500 rpm:llä virtaus olisi niin suuri, että kytkimen pitää silti irrota automaattisesti noin
     1000–1200 rpm:n yläpuolella.
 
-    **Päivitys 2026-10-22:** Parker F1-061:llä (61 cm³) imuvirtaus on suurempi. **Suositus: 38 mm:n
+    **Päivitys 2026-10-23:** Parkerin F1-luettelon mukaan imupaineen pitää olla vähintään 1,0 bar
+    absoluuttista (noin 0 bar ylipainetta), ja F1-61:lle suositellaan 50 mm:n imuliitintä. Nykyinen
+    32 mm:n linja ei täytä tätä kylmällä öljyllä edes tyhjäkäynnillä (noin −0,2 bar 5 °C:ssa VG 46:lla).
+    **Uusi suositus: 50 mm:n imulinja ja HV 32 -öljy.** Tämä koskee myös päätöslokin 2026-10-22
+    merkintää, jonka perusteena oli −0,2 barin raja. **⚠ Omistajien päätettävä.**
+
+    **Päivitys 2026-10-22:** Parker F1-061:llä (59,5 cm³) imuvirtaus on suurempi. **Suositus: 38 mm:n
     imulinja mahdollisimman lyhyenä (~2 m) ja HV 32 -öljy**, jolloin imupaine pysyy noin 0 barissa
     vielä 1000 rpm:llä ja 5 °C:ssa. Vertailu ja kierroslukuanalyysi:
     [p2-pump-options.md](design/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu).
