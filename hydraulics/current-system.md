@@ -227,7 +227,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 
 | Komponentti | Tiedot | Huomiot |
 |---|---|---|
-| Virtauksensäätö | RPF3 (Marchesini, kolmitie, ylimäärä suoraan säiliöön), asetus 20 l/min. Suurin tulovirtaus 50 l/min (3/8") tai 85 l/min (1/2"), 350 bar [datalehti RPF3]; koko **⚠ tarkista** | Tyhjäkäynnillä pumppu antaa ~16,5 l/min, joten kaikki menee orbitrolille |
+| Virtauksensäätö | RPF3 (Marchesini, kolmitie, ylimäärä suoraan säiliöön), asetus 20 l/min. Suurin tulovirtaus 50 l/min (3/8") tai 85 l/min (1/2"), 350 bar [datalehti RPF3]; **koko 1/2"** [omistaja 2026-10-23]: kestää P1:n suurimman tuoton (~49 l/min) | Tyhjäkäynnillä pumppu antaa ~16,5 l/min, joten kaikki menee orbitrolille |
 | Ohjausyksikkö | **M+S Hydraulic HKUS 160/4**: 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; **sisäänrakennettu paineenrajoitus** (asetus 80–170 bar) ja iskuventtiilit (140–220 bar); nimellisvirtaus 16 l/min; **T-linjan suurin jatkuva paine 25 bar** [datalehti HKUS] | Paluulinjan vastapaine (esim. öljynjäähdytin ja sen ohitusventtiili) pitää pysyä alle 25 barin |
 | Sylinteri | **ZS60350100**, kaksitoiminen: männän Ø 60 mm, varren Ø 35 mm, isku 100 mm [omistaja 2026-10-23]. Pinta-alat 28,3 / 18,7 cm², tilavuudet 283 / 187 cm³, orbitrolin kierroksia laidasta laitaan noin 1,8 / 1,2; voima 50 barilla noin 14 / 9 kN [laskelma] | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
 | Hätäohitus | Käsiventtiili A- ja B-linjan välissä sylinterin vieressä, irrotettavaa hätäpinnaa varten | [blogi 2017-07-04] |
@@ -242,8 +242,8 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 
 | Komponentti | Tiedot | Huomiot |
 |---|---|---|
-| Virtauksensäätö | VPR3 (Marchesini, kolmitie-prioriteettiventtiili), asetus 35 l/min, ylimäärä B-portista säiliöön. Suurin tulovirtaus 60 / 80 / 120 / 200 l/min (3/8" / 1/2" / 3/4" / 1"), 350 bar [datalehti VPR3] | Koko **⚠ tarkista**: 1/2" kestää vain 80 l/min |
-| Vapaakiertoventtiili (keulapotkurin päälle/pois) | Bosch Rexroth OD15-X-17-Y-S0 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. **Kytkee paineen CETOP-pohjalaatalle** [omistaja 2026-10-22]. Todennäköisesti asennettu **pohjalaatan paineenrajoitusventtiilin kavitettiin** (P→T): auki se purkaa pohjalaatan P-kanavan säiliöön, kiinni paine nousee pohjalaatalla. **⚠ Vahvista.** | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön; jännitteellisenä venttiili sulkeutuu ja paine menee BAV-713:lle. Ohjataan päälle aina, kun keulapotkuria käytetään kumpaan tahansa suuntaan. |
+| Virtauksensäätö | VPR3 (Marchesini, kolmitie-prioriteettiventtiili), asetus 35 l/min, ylimäärä B-portista säiliöön. Suurin tulovirtaus 60 / 80 / 120 / 200 l/min (3/8" / 1/2" / 3/4" / 1"), 350 bar [datalehti VPR3] | **Koko 3/4"** [omistaja 2026-10-23]: tulovirtaus enintään 120 l/min, säädetty enintään 100 l/min |
+| Vapaakiertoventtiili (keulapotkurin päälle/pois) | Bosch Rexroth OD15-X-17-Y-S0 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. **Kytkee paineen CETOP-pohjalaatalle** [omistaja 2026-10-22]. **Omassa erillisessä rungossaan** [omistaja 2026-10-23]: jännitteettömänä auki, jolloin virtaus ohjautuu venttiilin kautta T-linjaan ja säiliöön; jännitteellisenä kiinni, jolloin virtaus ohjautuu CETOP-lohkolle. | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön; jännitteellisenä venttiili sulkeutuu ja paine menee BAV-713:lle. Ohjataan päälle aina, kun keulapotkuria käytetään kumpaan tahansa suuntaan. |
 | Pohjalaatta | **Flowfit CETOP 3 / NG6, 4-paikkainen, rinnankytketty**, paineenrajoitusventtiilin paikalla (kavitetti P→T) ja painemittariliitännällä. Liitännät: **P ja T 1/2" BSP, A ja B 3/8" BSP**, G (mittari) 1/4" BSP. Pituus 247,7 mm, paino 8,21 kg. **Materiaali teräs** [omistaja 2026-10-22]. Painearvoa ei ilmoitettu; teräksiset CETOP 3 -pohjalaatat on tyypillisesti luokiteltu noin 250–350 bariin **⚠ vahvista Flowfitilta** [datalehti Flowfit CETOP 3]. | 1 paikka käytössä (BAV-713), 3 vapaana (ankkurivinssi ym.). A/B-liitännät ovat 3/8", vaikka keulapotkurin letkut ovat 1/2": pieni lisähäviö, sisältyy venttiilihäviön arvioon. |
 | Paineenrajoitusventtiili | **Marchesini VMP 3/4"** (V0720), suoratoiminen istukkaventtiili, asetettu 250 bariin. Suurin virtaus **90 l/min**, suurin paine 350 bar. Jousi todennäköisesti 80–300 bar (vastaa aiemmin mainittua 300 baria), 50 bar / kierros [datalehti VMP, omistaja 2026-10-22] | Aiemmin kirjattu "300 bar, 80 l/min" korjattu datalehden mukaan |
 | Keulapotkurin suuntaventtiili | **fluiconnecto (Manuli) BAV-IC3-713**, suoraan ohjattu 4/3-solenoidiventtiili, NG6 / CETOP 03, pohjalaatassa; **valitsee pyörimissuunnan** [omistaja 2026-10-22]. Keskiasennossa A, B ja T yhdistetty, P suljettu (moottori pyörii vapaasti). Suurin virtaus **60 l/min**, suurin paine **350 bar**; kelat BAV-SPC3, 12 tai 24 VDC (**⚠ tarkista** jännite) [datalehti fluiconnecto, Teollisuusventtiilit s. 239] | Painehäviökäyrää ei ole luettelossa |
@@ -325,25 +325,25 @@ Ratkaistut:
 
 Avoimet:
 
-- [ ] Koneen tyhjäkäynti: omistajan mukaan noin 700 rpm [omistaja 2026-10-22]; **vahvista mittaamalla** ennen pumpun ostoa
+- [x] Koneen tyhjäkäynti: **oletetaan 700 rpm, ei mitata** (päätös 2026-10-23)
 - [x] P2: Parker F1-61 (59,5 cm³) + BPV-F1 käsiohituksella (päätös 2026-10-23); hankinta myöhemmin
 - [x] ~~PTO-kytkin~~: ei kytkintä, BPV hoitaa tyhjäkierron (päätös 2026-10-23)
 - [x] Akselikytkin: Spidex 48/60 (päätös 2026-10-23); hankinta: tarjous Salhydrolta, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
-- [ ] Pumppukannake: ISO 7653 -laippa (Ø80), linjaus PTO-akseliin, tila 140 mm:n kytkimelle, suojakotelo
+- [ ] Pumppukannake: ISO 7653 -laippa (Ø80), linjaus PTO-akseliin, tila 140 mm:n kytkimelle, suojakotelo (mitat omistajilla tiedossa [omistaja 2026-10-23])
 - [ ] BPV:n ohitustilan lämpö ajossa (ei julkaistu): kysy Parkerilta, mittaa ensimmäisellä kaudella
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto ja täysiaukkoinen palloventtiili; BPV:n vuotolinjan paluu öljypinnan alle
-- [ ] PTO:n pyörimissuunta (F1-pumpun suunta R/L sovitetaan siihen)
+- [ ] PTO:n pyörimissuunta: **vastakkainen koneen pyörimissuuntaan nähden** [omistaja 2026-10-23]; koneen pyörimissuunta **⚠ tarkista**. F1:n suunta valitaan sen mukaan (R/L; suuntaa voi myös vaihtaa kääntämällä päätykappaleen)
 - [x] Valitun pumpun pienin sallittu imupaine: 1,0 bar abs (Parker F1)
 - [ ] Mitä öljyä järjestelmässä nyt on (säiliö ja letkut paikallaan): merkki, luokka, ikä; vaihdetaanko ja huuhdellaanko
 - [x] Hydrauliöljyn tyyppi ja luokka: **HVLP 32** (päätös 2026-10-23), ks. [hydraulic-oil.md](design/hydraulic-oil.md)
 - [ ] Öljytuote (Teboil 32S / Neste 32 Super, VI) ja vanhan öljyn tyhjennys ja huuhtelu
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
-- [ ] BAV-713:n kelojen jännite (12 vai 24 VDC)
+- [x] BAV-713:n kelojen jännite: 24 VDC [omistaja 2026-10-23]
 - [x] Keulapotkurin iskuventtiilit: lisätään A/B-iskuventtiililohko (päätös 2026-10-23)
-- [ ] Iskuventtiililohkon malli ja asetus: Sleipnerin 10–15 % yli 250 barin on 275–290 bar, mutta U11:n raja on noin 275 bar (vahvistamatta) → asetus noin 275 bar, vahvista Sleipneriltä
-- [ ] U11-moottorin suurin sallittu paine: ohjeiden taulukoiden perusteella noin 275 bar; vahvista Sleipneriltä
-- [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
+- [ ] **Tarvitaanko iskuventtiililohko lainkaan?** BAV-713:n keskiasento on kelluva (A, B ja T yhdistetty), ja VMP rajoittaa P-linjan 250 bariin, joten painepiikit ovat jo rajattuja. Omistajien päätettäväksi (ks. [p2-pump-options](design/p2-pump-options.md))
+- [x] ~~U11-moottorin suurin sallittu paine~~: ei tarvita, kun paineenrajoitus pysyy 250 barissa; Sleipnerin taulukko näyttää U11:lle 264 bar 100 %:lla [omistaja 2026-10-23]
+- [x] Paineenrajoitus pysyy 250 barissa (päätös 2026-10-21, vahvistettu 2026-10-23)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
 - [x] Sähköinen varapumppu P3 on kytketty: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
 - [x] P1:n painelinjassa on vastaventtiili ennen T-haaraa [omistaja 2026-10-23]
@@ -354,7 +354,7 @@ Avoimet:
 - [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
 - [ ] Orbitrolin paineenrajoituksen asetusarvo
-- [ ] VPR3:n ja RPF3:n koko (kierreliitäntä): VPR3 1/2" kestäisi vain 80 l/min
+- [x] VPR3 3/4", RPF3 1/2" [omistaja 2026-10-23]
 - [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
 - [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15); imun kannalta vaikutus pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
 - [x] P1:n imulinja nyt: 25 mm, 320 cm [omistaja 2026-10-23]
@@ -364,7 +364,7 @@ Avoimet:
 - [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23]
 - [x] Venttiilien tehtävät: Rexrothin 2/2-patruunaventtiili kytkee paineen CETOP-pohjalaatalle, BAV-713 ohjaa suuntaa [omistaja 2026-10-22]
 - [x] CETOP-pohjalaatta: Flowfit NG6, 4-paikkainen, rinnankytketty, P/T 1/2", A/B 3/8"
-- [ ] Onko 2/2-patruunaventtiili pohjalaatan paineenrajoitusventtiilin kavitetissa?
+- [x] 2/2-venttiili on omassa erillisessä rungossaan, ei pohjalaatan kavitetissa [omistaja 2026-10-23]
 - [x] Pohjalaatan materiaali: teräs
 - [ ] Pohjalaatan painearvo Flowfitilta (rajoittaako 280 barin vaihtoehtoa?)
 - [ ] VMP:n jousialue (80–300 bar?) ja nykyinen asetus

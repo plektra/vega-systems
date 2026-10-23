@@ -26,7 +26,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 1P1 | Ohjauspumppu Salami 2PE16D-P28P1 | 16,6 cm³/r, max 3000 rpm, imupaine ≥ 0,7 bar abs, imuaukko 3/4" | [datalehti Salami 2PE], [omistaja 2026-10-23] |
 | 1V5 | Imulinjan palloventtiili | täysiaukkoinen, auki ajossa; imu 32 mm (päätös 2026-10-23; nyt 25 mm × 3,2 m) | [p1-steering-pump.md](design/p1-steering-pump.md) |
 | 1V7 | P1:n vastaventtiili | ennen T-haaraa, jossa P1 ja P3 yhdistyvät | [omistaja 2026-10-23] |
-| 1V1 | Kolmitievirtauksensäätöventtiili Marchesini RPF3 | vakiovirtaus CF 20 l/min orbitrolille pumpun kierroksista riippumatta, ylimäärä EF paluuseen; koko todennäköisesti 1/2" (linjat 1/2") **⚠ tarkista** | [datalehti RPF3] |
+| 1V1 | Kolmitievirtauksensäätöventtiili Marchesini RPF3 | vakiovirtaus CF 20 l/min orbitrolille pumpun kierroksista riippumatta, ylimäärä EF paluuseen; koko 1/2" [omistaja 2026-10-23] | [datalehti RPF3] |
 | 1V2 | Orbitroli M+S HKUS 160/4 | 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; sis. paineenrajoitus 80–170 bar (asetus **⚠**), iskuventtiilit 140–220 bar; T max 25 bar | [datalehti HKUS] |
 | 1V3 | Hätäohitus A↔B | käsiventtiili sylinterin vieressä, lepoasennossa kiinni | [blogi 2017-07-04] |
 | 1A1 | Ohjaussylinteri ZS60350100, kaksitoiminen | männän Ø 60 mm, varren Ø 35 mm, isku 100 mm | [omistaja 2026-10-23], [blogi 2017-07-04] |
@@ -78,7 +78,7 @@ flowchart LR
   BPV["BPV-F1 24 V<br/>käsiohitus<br/>jännitteetön = ohitus"]
   VPR3["VPR3 3/4#quot;<br/>35 l/min"]
   VMP["VMP 3/4#quot;<br/>paineenrajoitus<br/>250 bar"]
-  UNL["2/2-patruunaventtiili<br/>jännitteettömänä auki"]
+  UNL["2/2-venttiili (oma runko)<br/>jännitteettömänä auki → T"]
   BAV["BAV-713 4/3<br/>suunta"]
   SHOCK["Iskuventtiilit A/B<br/>~275 bar"]
   THR["Keulapotkuri<br/>SH240-U11<br/>240 kg"]
@@ -153,6 +153,6 @@ flowchart LR
 ## Avoimia kohtia kaaviossa
 
 - VMP:n fyysinen paikka P-linjassa (VPR3:n P-portin ja pohjalaatan välissä?) **⚠ tarkista**
-- Onko 2/2-patruunaventtiili pohjalaatan paineenrajoitusventtiilin kavitetissa **⚠ tarkista**
+- ~~2/2-venttiilin paikka~~: omassa erillisessä rungossaan [omistaja 2026-10-23]
 - ~~Varapumpun P3 kytkentä~~: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
 - Iskuventtiilit, öljynjäähdytin ja merivesihaara ovat suunnitteilla

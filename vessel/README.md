@@ -43,7 +43,7 @@ omistajien suoraan antama tieto.
 
 ### Tyhjäkäyntikierrokset
 
-**Tyhjäkäynti on noin 700 rpm** [omistaja 2026-10-22] (**⚠ tarkista** mittaamalla, kun kone käy).
+**Tyhjäkäynti on noin 700 rpm** [omistaja 2026-10-22]. **Laskelmissa oletetaan 700 rpm, eikä sitä mitata** (päätös 2026-10-23).
 Vuoden 2018 blogissa mainittu noin 800 rpm oli siis yläkanttiin. 700 rpm sopii myös verkosta
 löytyneisiin tietoihin (haettu 2026-10-22):
 

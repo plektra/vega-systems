@@ -82,7 +82,7 @@ toisin.
 
 - Hydrauliöljy ISO VG 46 vanhoissa laskelmissa; **päätetty HVLP 32** (2026-10-23, VI ≥ 150); tiheys 870 kg/m³.
 - Hammaspyöräpumpun volumetrinen hyötysuhde 92 %, mekaaninen 90 %.
-- Koneen tyhjäkäynti 700 rpm omistajan mukaan (2026-10-22, ei vielä mitattu), ks. `vessel/README.md`.
+- Koneen tyhjäkäynti 700 rpm: omistajan arvio, jota ei mitata (päätös 2026-10-23), ks. `vessel/README.md`.
 
 ## Git-työnkulku (tee käyttäjän puolesta)
 
