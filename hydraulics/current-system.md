@@ -329,8 +329,8 @@ Avoimet:
 - [x] P2: Parker F1-61 (59,5 cm³) + BPV-F1 käsiohituksella (päätös 2026-10-23); hankinta myöhemmin
 - [x] ~~PTO-kytkin~~: ei kytkintä, BPV hoitaa tyhjäkierron (päätös 2026-10-23)
 - [x] Akselikytkin: Spidex 48/60 (päätös 2026-10-23); hankinta: tarjous Salhydrolta, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
-- [ ] Pumppukannake: omistajat suunnittelevat, 10 mm teräslevy, laserleikkaus ja hitsaus [omistaja 2026-10-23]; ISO 7653 -laippa Ø80 H8 (avarretaan hitsauksen jälkeen), Spidex 140 mm, suojakotelo, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
-- [ ] Koneen ja vaihteiston tuenta: joustava vai jäykkä? Ratkaisee, kiinnitetäänkö pumppukannake runkoon vai koneeseen/vaihteistoon
+- [ ] Pumppukannake: omistajat suunnittelevat, 10 mm teräslevy, laserleikkaus ja hitsaus [omistaja 2026-10-23]; ei koneistusta (päätös 2026-10-23); ISO 7653 -laippa Ø80, säätövara linjaukseen, Spidex 140 mm, suojakotelo, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
+- [x] Kone ja merivaihde ovat jäykästi runkoon kiinni, joten pumppukannake kiinnitetään runkoon [omistaja 2026-10-23]
 - [ ] BPV:n ohitustilan lämpö ajossa (ei julkaistu): kysy Parkerilta, mittaa ensimmäisellä kaudella
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto ja täysiaukkoinen palloventtiili; BPV:n vuotolinjan paluu öljypinnan alle
 - [ ] U11:n vuotolinja: missä kohtaa se liittyy paluulinjaan? Jos ennen jäähdytintä, ohitusventtiiliä (3–4 bar) tai suodatinta, kotelon paine nousee. Kysy Sleipneriltä kotelon suurin sallittu paine; tarvittaessa vuotolinja suoraan säiliöön tai paluulinjaan suodattimen jälkeen

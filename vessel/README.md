@@ -36,7 +36,7 @@ omistajien suoraan antama tieto.
 | Vaihteiston PTO | 1:1, ensiöakselilta (pyörii vapaalla), ei omaa kytkintä, 0,044 kW/rpm (≈ 420 Nm), Ø48 mm:n kiila-akseli | [omistaja 2026-10-21] |
 | Akselin laakeri | Uusi laakeripukki potkuriakselille | [omistaja 2026-10-21] |
 | Koneen tilanne | Asennetaan takaisin ja linjataan vaihteistoon (lokakuu 2026) | [omistaja 2026-10-21] |
-| Koneen kiinnitys | Sekä vaihteisto että kone jäykästi runkoon | [blogi 2021-02-08] |
+| Koneen kiinnitys | Sekä vaihteisto että kone jäykästi runkoon | [blogi 2021-02-08], [omistaja 2026-10-23] |
 | Potkuri | Oikeakätinen | [blogi 2019-01-24] |
 | Merivesipumppu (impelleri) | Koneen etupään omassa voimanulosotossa, kiinteä välitys (suhde **⚠ ei tiedossa**). Tuotto noin **70 l/min koneen 650 rpm:llä** verkkohaun mukaan, **⚠ vahvistamatta**. Kiinteällä välityksellä tuotto kasvaa suunnilleen koneen kierrosten suhteessa: arvio ~75 l/min 700 rpm, ~110 l/min 1000 rpm, ~190 l/min 1800 rpm. | [omistaja 2026-10-22, verkkohaun perusteella], [laskelma] |
 | Merivesipiirin jäähdyttimet | Pääkoneen lämmönvaihdin ja merivaihteen (Advance 300) oma öljynjäähdytin samassa merivesipiirissä | [omistaja 2026-10-22] |

@@ -526,13 +526,12 @@ Spidex 48/60:n arvot [luettelo s. 9, 11 ja 16]:
 hitsaus** [omistaja 2026-10-23]. Suunnittelun lähtötiedot:
 - **Reaktiomomentti** noin 250 Nm (250 bar) pumpun laippaan; kannake ja sen kiinnitys runkoon
   mitoitetaan sen ja tärinän mukaan [laskelma].
-- **Keskitysreikä Ø80 H8** (toleranssi 0…+0,046 mm) ei onnistu laserleikkauksella, ja hitsaus
-  vääntää levyä. Leikkaa reikä alamittaiseksi ja sorvaa tai avarra se hitsauksen jälkeen, tai tee
-  laippalevy erilliseksi ja pulttaa se hitsattuun runkoon (laippapinta pysyy tasaisena).
-- **Koneen tuenta ⚠ tarkista:** jos kone ja vaihteisto ovat joustavilla tuilla mutta kannake on
-  kiinni rungossa, PTO-akseli liikkuu kannakkeeseen nähden käynnistyksessä, kuormassa ja
-  aallokossa. Spidexin säteisvirheraja on käyttölämmössä vain noin 0,3 mm. Silloin kannake
-  kannattaa kiinnittää koneeseen tai vaihteistoon, jolloin pumppu liikkuu PTO:n mukana.
+- **Kannaketta ei koneisteta** (päätös 2026-10-23): joustava kytkin sallii linjausvirhettä, ja
+  linjaus säädetään asennettaessa. Keskitysreikä laserleikataan pumpun Ø80-keskitykselle väljäksi
+  (suositus noin Ø80,2–80,5), ja säätövara tehdään kiinnitykseen (soikiot tai välilevyt), jotta
+  akselit saadaan Spidexin rajoihin: säteis noin 0,3 mm ja kulma noin 0,8° käyttölämpimänä.
+- **Kiinnitys runkoon on oikea ratkaisu:** kone ja merivaihde ovat molemmat jäykästi runkoon
+  kiinni, ja PTO on merivaihteessa [omistaja 2026-10-23].
 - ISO 7653 -laippa: keskitys **Ø80 mm** (akseli 0/−0,013, kannakkeen reikä Ø80 H8), **4 × Ø13 mm:n
   reikää** M12-pulteille. Reikäjako on luettu mittapiirroksesta kuvana **⚠ tarkista pumpusta**
   [luettelo s. 24].
@@ -838,8 +837,8 @@ tyhjäkäynti on mitattu vähintään 700 rpm:ksi.
 - [x] PTO-akselin pituus ja tila kannakkeelle: omistajilla tiedossa [omistaja 2026-10-23]
 - [x] Vegan koneen käyttötunnit: alle 1000 h vuodessa [omistaja 2026-10-23]
 - [x] BPV-F1 vai PTO-kytkin: BPV valittu (päätös 2026-10-23)
-- [ ] Pumppukannakkeen suunnittelu (omistajat; 10 mm teräslevy, laserleikkaus ja hitsaus): ISO 7653 -laippa Ø80 H8, linjaus PTO-akseliin, Spidex 140 mm, suojakotelo
-- [ ] Onko kone/vaihteisto joustavilla tuilla? Jos on, kannake koneeseen tai vaihteistoon eikä runkoon
+- [ ] Pumppukannakkeen suunnittelu (omistajat; 10 mm teräslevy, laserleikkaus ja hitsaus, ei koneistusta): ISO 7653 -laippa Ø80, säätövara linjaukseen, Spidex 140 mm, suojakotelo
+- [x] Kone ja merivaihde jäykästi runkoon; kannake runkoon [omistaja 2026-10-23]
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto (uuteen kohtaan, vanha 32 mm jää P1:lle) ja täysiaukkoinen palloventtiili, imulinja mahdollisimman lyhyt; BPV:n vuotolinjan paluu öljypinnan alle
 - [ ] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; koneen suunta **⚠ tarkista**
 - [x] VPR3: kolmitie-prioriteettiventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
