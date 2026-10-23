@@ -522,15 +522,28 @@ Spidex 48/60:n arvot [luettelo s. 9, 11 ja 16]:
 - **Myyjän holkki** HRC:n B-napaan samaan tapaan, jos mitat sopivat. **⚠ Selvitä holkin mitat.**
 - **Urituksen avartaminen HRC-napaan** koneistamolla: toimii, mutta todennäköisesti kallein.
 
-**Pumpun kannake (runkoalusta):**
+**Pumpun kannake (runkoalusta):** omistajat suunnittelevat itse; **10 mm:n teräslevy, laserleikkaus ja
+hitsaus** [omistaja 2026-10-23]. Suunnittelun lähtötiedot:
+- **Reaktiomomentti** noin 250 Nm (250 bar) pumpun laippaan; kannake ja sen kiinnitys runkoon
+  mitoitetaan sen ja tärinän mukaan [laskelma].
+- **Keskitysreikä Ø80 H8** (toleranssi 0…+0,046 mm) ei onnistu laserleikkauksella, ja hitsaus
+  vääntää levyä. Leikkaa reikä alamittaiseksi ja sorvaa tai avarra se hitsauksen jälkeen, tai tee
+  laippalevy erilliseksi ja pulttaa se hitsattuun runkoon (laippapinta pysyy tasaisena).
+- **Koneen tuenta ⚠ tarkista:** jos kone ja vaihteisto ovat joustavilla tuilla mutta kannake on
+  kiinni rungossa, PTO-akseli liikkuu kannakkeeseen nähden käynnistyksessä, kuormassa ja
+  aallokossa. Spidexin säteisvirheraja on käyttölämmössä vain noin 0,3 mm. Silloin kannake
+  kannattaa kiinnittää koneeseen tai vaihteistoon, jolloin pumppu liikkuu PTO:n mukana.
 - ISO 7653 -laippa: keskitys **Ø80 mm** (akseli 0/−0,013, kannakkeen reikä Ø80 H8), **4 × Ø13 mm:n
   reikää** M12-pulteille. Reikäjako on luettu mittapiirroksesta kuvana **⚠ tarkista pumpusta**
   [luettelo s. 24].
 - Pumppu painaa 8,5 kg, ja BPV ja imuliitin tulevat sen päälle. Imu- ja vuotoletkun on mahduttava.
-- **Linjaus:** pumpun akseli PTO-akselin kanssa samaan linjaan HRC:n sallimien säteis-, kulma- ja
-  aksiaalivirheiden sisään **⚠ arvot Fennerin luettelosta**. Tarkista uudelleen koeajon jälkeen.
-- **Akselien väli:** Spidex 48/60 vie 140 mm (HRC 150 noin 107,5–129,5 mm), joten PTO-akselin pään ja
-  pumpun laipan väli on suunniteltava sen mukaan. **⚠ Mittaa PTO-akselin pituus ja tila.**
+- **Linjaus:** pumpun akseli PTO-akselin kanssa samaan linjaan Spidex 48/60:n sallimissa rajoissa:
+  säteis 0,44 mm, kulma 1,2°, aksiaalinen 2,1 mm (1000 rpm); 40–60 °C:ssa säteis ja kulma × 0,7 eli
+  noin 0,31 mm ja 0,84° [luettelo Spidex s. 16]. Linjaa käyttölämpimänä tarkkaillen ja tarkista
+  uudelleen koeajon jälkeen.
+- **Akselien väli:** Spidex 48/60 vie 140 mm (navat 56 mm, väli 28 mm), joten PTO-akselin pään ja
+  pumpun laipan väli suunnitellaan sen mukaan. PTO-akselin mitat ovat omistajilla tiedossa
+  [omistaja 2026-10-23].
 
 **Huolto ja turvallisuus:**
 - Pumpun uritus rasvataan lämmönkestävällä rasvalla ennen käyttöönottoa ja vähintään kerran
@@ -825,7 +838,8 @@ tyhjäkäynti on mitattu vähintään 700 rpm:ksi.
 - [x] PTO-akselin pituus ja tila kannakkeelle: omistajilla tiedossa [omistaja 2026-10-23]
 - [x] Vegan koneen käyttötunnit: alle 1000 h vuodessa [omistaja 2026-10-23]
 - [x] BPV-F1 vai PTO-kytkin: BPV valittu (päätös 2026-10-23)
-- [ ] Pumppukannakkeen suunnittelu: ISO 7653 -laippa, linjaus PTO-akseliin, Spidex-kytkimen 140 mm, suojakotelo
+- [ ] Pumppukannakkeen suunnittelu (omistajat; 10 mm teräslevy, laserleikkaus ja hitsaus): ISO 7653 -laippa Ø80 H8, linjaus PTO-akseliin, Spidex 140 mm, suojakotelo
+- [ ] Onko kone/vaihteisto joustavilla tuilla? Jos on, kannake koneeseen tai vaihteistoon eikä runkoon
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto (uuteen kohtaan, vanha 32 mm jää P1:lle) ja täysiaukkoinen palloventtiili, imulinja mahdollisimman lyhyt; BPV:n vuotolinjan paluu öljypinnan alle
 - [ ] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; koneen suunta **⚠ tarkista**
 - [x] VPR3: kolmitie-prioriteettiventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
