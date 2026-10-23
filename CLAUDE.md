@@ -80,7 +80,7 @@ decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
 Nämä ovat voimassa, ellei dokumentissa toisin sanota. Muuta niitä tähän, jos omistajat päättävät
 toisin.
 
-- Hydrauliöljy ISO VG 46 vanhoissa laskelmissa; **suositus HV 32** (vahvistamatta); tiheys 870 kg/m³.
+- Hydrauliöljy ISO VG 46 vanhoissa laskelmissa; **päätetty HVLP 32** (2026-10-23, VI ≥ 150); tiheys 870 kg/m³.
 - Hammaspyöräpumpun volumetrinen hyötysuhde 92 %, mekaaninen 90 %.
 - Koneen tyhjäkäynti 700 rpm omistajan mukaan (2026-10-22, ei vielä mitattu), ks. `vessel/README.md`.
 

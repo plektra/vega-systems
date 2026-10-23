@@ -168,7 +168,7 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 
 ## Valvonta
 
-- **Öljyn lämpötila-anturi** säiliöön tai paluulinjaan Signal K:hon: varoitus noin 65 °C, hälytys
+- **Öljyn lämpötila-anturi** (päätetty 2026-10-23) säiliöön tai paluulinjaan Signal K:hon: varoitus noin 65 °C, hälytys
   noin 70 °C. Raja tulee ohjauspumpusta: Salamin 2PE vaatii vähintään 12 cSt, ja HV 32 ohenee
   sen alle noin 70 °C:n yläpuolella (Parker F1:n oma raja on 75 °C). Ensimmäisen kauden mittaukset
   näyttävät todelliset lämpötilat.

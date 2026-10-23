@@ -25,7 +25,7 @@
 | Keulapotkurin letkut | **Pääosin valmiit:** 1/2" **SAE 100R2AT / EN 853** -letkut, omistajien mukaan 300 bar, CETOP-venttiileiltä keulapotkurille. A- ja B-linjat **8,5 m kumpikin**. |
 | P2:n painelinja | 3/4" letku pumpulta venttiileille. PTO-sijoitus vaatii **3–4 m** letkua. |
 | P2:n imulinja | **50 mm** [päätös 2026-10-23; aiemmin 32 mm:n sisähalkaisija, noin 3 m]. Säiliön öljypinta on noin 1 m pumpun imuaukon yläpuolella. |
-| P1:n imulinja | **25 mm:n sisähalkaisija, 320 cm** [omistaja 2026-10-23]. Riittää lämpimällä öljyllä; kylmällä öljyllä suurilla kierroksilla alittaa Salamin −0,3 barin rajan, ja 5 m:n pituudella 25 mm ei riitä. **Ehdotus:** 32 mm (P2:n vapautuva letku), ks. [p1-steering-pump.md](design/p1-steering-pump.md). |
+| P1:n imulinja | **25 mm:n sisähalkaisija, 320 cm** [omistaja 2026-10-23]. Riittää lämpimällä öljyllä; kylmällä öljyllä suurilla kierroksilla alittaa Salamin −0,3 barin rajan, ja 5 m:n pituudella 25 mm ei riitä. **Päätös 2026-10-23: 32 mm** (P2:n vapautuva letku), ks. [p1-steering-pump.md](design/p1-steering-pump.md). |
 | Apupiirin paluulinja | 3/4" letku, **< 0,5 m**, venttiililohkolta säiliöön (paluusuodattimen kautta) |
 | Päätös: järjestelmäpaine | **Pysytään 250 barin luokassa.** Noin 90 %:n keulapotkuriteho hyväksytään kustannusten vuoksi. |
 
@@ -259,7 +259,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 |---|---|---|
 | Säiliö | Flowfit 100 l, saumaton teräs (Flowfit Weldless Steel Tanks, tyyppi A/B/C **⚠ tarkista**), 50×50×5-kulmarautakannakkeilla kaariin | [blogi 2017-04-01], [datalehti Flowfit] |
 | Öljymäärä | 80 l | [blogi 2017-07-04] |
-| Öljyn tyyppi ja luokka | **⚠ ei tiedossa** | |
+| Öljyn tyyppi ja luokka | Nykyinen **⚠ ei tiedossa**. Uusi: **HVLP 32** [päätös 2026-10-23], ks. [hydraulic-oil.md](design/hydraulic-oil.md) | |
 | Imulinjat | Suunnitelma 2017: 2 × 1" (konepumput) ja 1 × 3/4" (sähköpumppu), kussakin palloventtiili. **2026: P2:n ulosotto on 32 mm:n letkun kokoinen; P1:n imulinja 25 mm, 320 cm.** | [blogi 2017-04-10], [omistaja 2026-10-22], [omistaja 2026-10-23] |
 | Säiliön kannen komponentit | Virtauksensäätöventtiilit, paluusuodatin, täyttö- ja huohotinkorkki | [blogi 2017-04-10] |
 | Paluusuodatin | Painemittarillinen; nykyisessä paikassa vaikea lukea | [blogi 2017-04-10] |
@@ -277,7 +277,7 @@ Asennusohjeen mukaan, kun käytössä ei ole Sleipnerin omaa hydraulijärjestelm
 | Öljynsuodatin | Paluusuodatin on olemassa ✅ |
 | **Öljynjäähdytin niin, että öljy pysyy alle 75 °C:n**; suositeltu käyttölämpötila **40–60 °C** | Suunnitteilla Bowman EC100, ks. [oil-cooling.md](design/oil-cooling.md) |
 | Venttiilin virtaus- ja painerajat keulapotkurin rajoissa | VPR3 35 l/min ja VMP 250 bar; U11:n 100 %: 33,8 l/min ja 264 bar ✅ |
-| **Iskuventtiilit (shock valve) 10–15 % valitun maksimipaineen yläpuolelle**, suojaamaan järjestelmää, jos potkurit jumittuvat | **Puuttuu.** BAV-713:ssa ei ole iskuventtiileitä. Lisättävä esim. A/B-linjojen ristiinkytketty iskuventtiililohko (CETOP 3 -välilevy). |
+| **Iskuventtiilit (shock valve) 10–15 % valitun maksimipaineen yläpuolelle**, suojaamaan järjestelmää, jos potkurit jumittuvat | **Puuttuu.** BAV-713:ssa ei ole iskuventtiileitä. **Päätös 2026-10-23: lisätään** A/B-linjojen ristiinkytketty iskuventtiililohko (esim. CETOP 3 -välilevy); malli ja asetus avoinna. |
 | Vuotolinja säiliöön (1/4" BSP, pakollinen) | Olemassa ✅ |
 | Ohjaukseen Sleipnerin S-Link-järjestelmä | **Poikkeaa:** Vegalla oma ohjaus solenoidiventtiileillä. Voi vaikuttaa takuuseen; toiminnallisesti tavallinen ratkaisu. |
 
@@ -335,11 +335,13 @@ Avoimet:
 - [ ] PTO:n pyörimissuunta (F1-pumpun suunta R/L sovitetaan siihen)
 - [x] Valitun pumpun pienin sallittu imupaine: 1,0 bar abs (Parker F1)
 - [ ] Mitä öljyä järjestelmässä nyt on (säiliö ja letkut paikallaan): merkki, luokka, ikä; vaihdetaanko ja huuhdellaanko
-- [ ] Hydrauliöljyn tyyppi ja luokka (suositus **HVLP 32**, VI ≥ 150, esim. Teboil 32S, ks. [hydraulic-oil.md](design/hydraulic-oil.md))
+- [x] Hydrauliöljyn tyyppi ja luokka: **HVLP 32** (päätös 2026-10-23), ks. [hydraulic-oil.md](design/hydraulic-oil.md)
+- [ ] Öljytuote (Teboil 32S / Neste 32 Super, VI) ja vanhan öljyn tyhjennys ja huuhtelu
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
 - [ ] BAV-713:n kelojen jännite (12 vai 24 VDC)
-- [ ] Keulapotkurin iskuventtiilit (Sleipnerin vaatimus): A/B-iskuventtiililohko ja asetus
+- [x] Keulapotkurin iskuventtiilit: lisätään A/B-iskuventtiililohko (päätös 2026-10-23)
+- [ ] Iskuventtiililohkon malli ja asetus: Sleipnerin 10–15 % yli 250 barin on 275–290 bar, mutta U11:n raja on noin 275 bar (vahvistamatta) → asetus noin 275 bar, vahvista Sleipneriltä
 - [ ] U11-moottorin suurin sallittu paine: ohjeiden taulukoiden perusteella noin 275 bar; vahvista Sleipneriltä
 - [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
@@ -356,7 +358,9 @@ Avoimet:
 - [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
 - [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15); imun kannalta vaikutus pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
 - [x] P1:n imulinja nyt: 25 mm, 320 cm [omistaja 2026-10-23]
-- [ ] P1:n imulinja jatkossa: 32 mm (ehdotus, P2:n vapautuva letku) vai 25 mm ≤ 3,2 m; säiliön öljypinnan korkeus P1:een nähden
+- [x] P1:n imulinja jatkossa: 32 mm (päätös 2026-10-23)
+- [ ] Säiliön öljypinnan korkeus P1:een nähden; P2:n 50 mm:n ulosotto uuteen kohtaan, jotta 32 mm:n ulosotto jää P1:lle
+- [ ] Anturit: öljyn lämpötila ja P2:n imupaine (malli, ESP32/Signal K -liitäntä); P1:n imupaineen mittaus käyttöönotossa
 - [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23]
 - [x] Venttiilien tehtävät: Rexrothin 2/2-patruunaventtiili kytkee paineen CETOP-pohjalaatalle, BAV-713 ohjaa suuntaa [omistaja 2026-10-22]
 - [x] CETOP-pohjalaatta: Flowfit NG6, 4-paikkainen, rinnankytketty, P/T 1/2", A/B 3/8"

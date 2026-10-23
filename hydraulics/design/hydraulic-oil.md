@@ -1,6 +1,6 @@
 # Hydrauliöljyn valinta
 
-> **Tila:** selvitys 2026-10-23, suositus, ei päätetty. Viskositeetit [laskelma, Walther-yhtälö],
+> **Tila:** selvitys 2026-10-23. **Päätetty 2026-10-23: HVLP 32** (tuote valitaan VI:n perusteella). Viskositeetit [laskelma, Walther-yhtälö],
 > komponenttien rajat datalehdistä, tuotetiedot jälleenmyyjien sivuilta (haettu 2026-10-23).
 
 Liittyy: [vaatimukset §9](../requirements.md#9-öljy-puhtaus-ja-huolto),
@@ -97,4 +97,5 @@ yksityisaluksessa, ja ne ovat kalliimpia.
 - [ ] Teboil 32S:n ja Neste Hydraulic 32 Superin VI ja leikkauskestävyys (tuotetiedotteet)
 - [ ] Orbitrolin HKUS 160/4 viskositeettialue omasta datalehdestä
 - [ ] Sleipnerin öljysuositus (HS 6468 -ohje) keulapotkurijärjestelmälle
-- [ ] Päätös öljystä
+- [x] Päätös öljystä: HVLP 32, VI ≥ 150 (2026-10-23)
+- [ ] Tuotteen valinta (Teboil 32S tai Neste Hydraulic 32 Super) ja määrä: 80 l täyttö + huuhteluun noin 20 l (arvio)

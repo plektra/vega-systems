@@ -24,7 +24,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 |---|---|---|---|
 | 1M1 | Pääkone CAT 3126B, 2 kiilahihnaa | välitys 1:1,24; kone 700–2400 rpm | [blogi 2017-07-04], [omistaja 2026-10-22] |
 | 1P1 | Ohjauspumppu Salami 2PE16D-P28P1 | 16,6 cm³/r, max 3000 rpm, imupaine ≥ 0,7 bar abs, imuaukko 3/4" | [datalehti Salami 2PE], [omistaja 2026-10-23] |
-| 1V5 | Imulinjan palloventtiili | täysiaukkoinen, auki ajossa; imu 25 mm × 3,2 m (ehdotus 32 mm) | [p1-steering-pump.md](design/p1-steering-pump.md) |
+| 1V5 | Imulinjan palloventtiili | täysiaukkoinen, auki ajossa; imu 32 mm (päätös 2026-10-23; nyt 25 mm × 3,2 m) | [p1-steering-pump.md](design/p1-steering-pump.md) |
 | 1V7 | P1:n vastaventtiili | ennen T-haaraa, jossa P1 ja P3 yhdistyvät | [omistaja 2026-10-23] |
 | 1V1 | Kolmitievirtauksensäätöventtiili Marchesini RPF3 | vakiovirtaus CF 20 l/min orbitrolille pumpun kierroksista riippumatta, ylimäärä EF paluuseen; koko todennäköisesti 1/2" (linjat 1/2") **⚠ tarkista** | [datalehti RPF3] |
 | 1V2 | Orbitroli M+S HKUS 160/4 | 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; sis. paineenrajoitus 80–170 bar (asetus **⚠**), iskuventtiilit 140–220 bar; T max 25 bar | [datalehti HKUS] |
@@ -57,7 +57,7 @@ flowchart LR
   RET(["Paluu"])
 
   ENG -->|kampiakseli| BELT --> P1
-  TANK -->|"imu 25 mm, 3,2 m<br/>(ehdotus 32 mm)"| P1
+  TANK -->|"imu 32 mm<br/>(päätös, nyt 25 mm)"| P1
   P1 -->|"vastaventtiili, 1/2#quot;"| RPF3 -->|P| ORB
   ORB <-->|A / B| CYL
   TANK -->|"imu 3/4#quot;"| P3

@@ -167,8 +167,8 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 
 | Kohde | Vaatimus |
 |---|---|
-| Öljytyyppi | Suositus mineraalipohjainen **HVLP** (DIN 51524-3 / ISO 11158 HV); HEES ei tarpeen. Vahvistamatta, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
-| Viskositeettiluokka | Suositus **HVLP 32** (DIN 51524-3), VI ≥ 150, mieluiten > 180, Parker HF-0; esim. Teboil Hydraulic Oil 32S. Ainoa luokka, joka pysyy kaikkien komponenttien rajoissa 0 °C:sta noin 72 °C:seen (P1:n 12 cSt:n minimi). Vahvistamatta, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
+| Öljytyyppi | Mineraalipohjainen **HVLP** (DIN 51524-3 / ISO 11158 HV); HEES ei tarpeen. **Päätetty 2026-10-23**, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
+| Viskositeettiluokka | Suositus **HVLP 32** (DIN 51524-3), VI ≥ 150, mieluiten > 180, Parker HF-0; esim. Teboil Hydraulic Oil 32S. Ainoa luokka, joka pysyy kaikkien komponenttien rajoissa 0 °C:sta noin 72 °C:seen (P1:n 12 cSt:n minimi). **Päätetty 2026-10-23**, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
 | Puhtaustavoite | TBD (ISO 4406 -koodi herkimmän komponentin mukaan) |
 | Suodatus | TBD (paluu / paine / sivuvirta) |
 | Huoltoväli | TBD |
@@ -184,12 +184,12 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Mittaus | Paikka | Alue | Ehdotettu Signal K -polku | Hälytys / raja |
 |---|---|---|---|---|
 | Järjestelmäpaine | Pumpun lähtö | TBD bar | `hydraulics.<system>.pressure` | TBD |
-| Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~70 °C |
+| Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~70 °C. **Päätetty 2026-10-23** |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
 | BPV:n tila | BPV-F1:n kela | syöttö/ohitus | `hydraulics.<system>.bypass.engaged` | Hälytys, jos syöttö päällä yli ~1200 rpm |
 | P2:n lähtöpaine | BPV:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | BPV:n vaihto vain alle 20 bar |
-| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (Parker F1: vähintään 1,0 bar abs), hälytys alle ~−0,2 bar |
+| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (Parker F1: vähintään 1,0 bar abs), hälytys alle ~−0,2 bar. **Päätetty 2026-10-23.** P1: mittaus käyttöönotossa, ei kiinteää anturia |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
 ### 10.2 Ohjaus
