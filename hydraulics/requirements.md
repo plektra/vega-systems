@@ -84,7 +84,7 @@ mitoitukseen vaikuttavat arvot.
 | Koneiden määrä | 1 | |
 | Tyhjäkäynti / suurin | ~700 (**⚠ tarkista** mittaamalla) / ~2400 (matka ~1800) | rpm |
 | Käytettävissä olevat voimanulosotot | Etupään hihnat → ohjauspumppu P1 (vain pienelle teholle; luisti yli ~9 kW:lla). Advance 300:n PTO → apupiirin pumppu P2. | |
-| Vaihteiston PTO: välitys / suurin momentti / kytkin | 1:1 / 0,044 kW/rpm ≈ 420 Nm / ei omaa kytkintä; erillinen kytkin suunniteltu PTO:n ja pumpun väliin | – / Nm / – |
+| Vaihteiston PTO: välitys / suurin momentti / kytkin | 1:1 / 0,044 kW/rpm ≈ 420 Nm / ei kytkintä; pumppu pyörii aina, tyhjäkierto BPV-ohitusventtiilillä (päätös 2026-10-23) | – / Nm / – |
 | Pyöriikö vaihteiston PTO vapaalla? | kyllä (ensiöakselilta) | |
 | Tarvitaanko hydrauliikkaa koneen ollessa sammutettuna? | TBD | kyllä / ei: ankkurointi, satama |
 
@@ -187,7 +187,8 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~70 °C |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
-| PTO-kytkimen asento | Kytkin | päällä/pois | `hydraulics.<system>.clutch.engaged` | Hälytys, jos päällä yli ~1200 rpm |
+| BPV:n tila | BPV-F1:n kela | syöttö/ohitus | `hydraulics.<system>.bypass.engaged` | Hälytys, jos syöttö päällä yli ~1200 rpm |
+| P2:n lähtöpaine | BPV:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | BPV:n vaihto vain alle 20 bar |
 | Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (Parker F1: vähintään 1,0 bar abs), hälytys alle ~−0,2 bar |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
@@ -197,10 +198,10 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 - **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja kytkimen toimilaitteelle, CAN/N2K)
 - **Autopilotin liitäntä:** TBD (autopilotin merkki, suunnanvaihtopumppu vai solenoidiventtiiliohjaus)
 - **Lukitukset:**
-  - PTO-kytkimen kytkentä vain alle noin 1000 rpm:ssä ja vapaakiertoventtiilin ollessa auki.
-  - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään ja 2/2-vapaakiertoventtiili avataan automaattisesti (rajaa lämpökuorman ~1–2 kW:iin; ks. [p2-pump-options.md](design/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)).
-  - Hälytys, jos kytkin on päällä yli noin 1200 rpm:ssä.
-  - Jos P2:ksi tulee Parker F1 ja siihen BPV-ohitusventtiili: BPV:n tilaa saa vaihtaa vain alle 20 barissa (2/2-venttiili ensin auki), ja yli noin 1000 rpm:ssä BPV ohitusasentoon. Ks. [p2-pump-options.md](design/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
+  - Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä.
+  - BPV:n tilaa vaihdetaan vain alle 20 barissa: päälle 2/2-venttiili auki → BPV:n kela → 2/2 kiinni; pois päinvastoin.
+  - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään, 2/2-venttiili avataan ja BPV palautetaan ohitukseen. Ks. [p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23).
+  - Hälytys, jos BPV on syöttöasennossa yli noin 1200 rpm:ssä (myös käsiohitus).
   - Muut TBD.
 
 ## 11. Standardit ja määräykset

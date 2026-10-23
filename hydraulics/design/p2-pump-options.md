@@ -1,10 +1,45 @@
 # Apupiirin pumppu (P2) ja PTO-kytkin — vaihtoehdot
 
-> **Tila:** Vaihtoehtoselvitys, päivitetty 2026-10-23 (BPV-ohitusventtiili, Parkerin F1-luettelo). Ei vielä päätöstä.
+> **Tila:** **Päätetty 2026-10-23** ([decisions.md](../../decisions.md)): P2 on Parker F1-61, veto PTO:lta
+> Spidex 48/60 -kynsikytkimellä ilman PTO-kytkintä, BPV-F1-ohitusventtiili käsiohituksella
+> (378 4179), 50 mm:n imulinja ja BPV:n vuotolinja säiliöön. Hankinta myöhemmin. Alla oleva
+> vertailu on säilytetty taustaksi.
 > Tausta: [current-system.md §0](../current-system.md). Hinnat ovat karkeita suuntaa-antavia
 > arvioita; pyydä tarjoukset ennen päätöstä.
 
-## Yhteenveto ja alustava suositus
+## Päätetty kokoonpano (2026-10-23)
+
+```
+PTO 1:1, Ø48 kiila ── Spidex 48/60 (98 Sh A) ── Parker F1-61 + BPV-F1 (käsiohitus) ── 3/4" ── VPR3 ── CETOP
+                       └──────── oma kannake runkoon ────────┘
+säiliö ── 50 mm imulinja ── imuliitin Ø50 BPV:n päällä
+BPV:n vuotoliitäntä 1/4" ── oma letku säiliöön öljypinnan alle
+```
+
+| Osa | Valinta | Lisätiedot |
+|---|---|---|
+| Pumppu | Parker F1-61-R (378 1060), 59,5 cm³, käytetty (tori.fi) | [Ehdokas: Parker F1-061](#ehdokas-parker-f1-061-käytettynä-torifi) |
+| Veto | Spidex 48/60: napa SPI-48A-KL-A8X32X36 (pumppu), napa SPI-48A-ST-D48H7 (PTO), hammaskehä 98 Sh A (tai 64 Sh D) | [Veto PTO:lta](#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä) |
+| Tyhjäkierto | Parker BPV-F1, 24 VDC, **käsiohituksella 378 4179** | [BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili) |
+| Imu | 50 mm:n letku mahdollisimman lyhyenä, Parkerin Ø50-imuliitin (esim. suora 378 0636 / 45° 378 0364 / 90° 378 0979) | [Imupuoli](#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu) |
+| Vuotolinja | BPV:n 1/4"-vuotoliitäntä (liitin 378 3039 mukana) → oma letku säiliöön öljypinnan alle | [BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili) |
+| Kannake | Pumppu ISO 7653 -laipalla (Ø80) omaan runkoon kiinnitettyyn kannakkeeseen; kytkimelle suojakotelo | [Veto PTO:lta](#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä) |
+
+**Toimintatilat:** ajossa BPV:n kela on jännitteetön (ohitus) ja pumppu kiertää tyhjänä. Keulapotkuria
+varten (tyhjäkäynnillä): 2/2-venttiili auki → BPV:n kela päälle → 2/2-venttiili kiinni →
+BAV-713. Pois päältä päinvastaisessa järjestyksessä. BPV:n tilaa vaihdetaan vain alle 20 barissa.
+
+**Vikatilat (turvallisuus):**
+- *Sähkökatko tai kelan vika:* BPV ohittaa, keulapotkuri ei toimi (kuten nykyinen 2/2-venttiili).
+  Käsiohituksella pumpun saa syöttämään: **kone sammutetaan ensin**, ruuvi pohjaan. Käsiohitus
+  palautetaan heti korjauksen jälkeen, koska sen ollessa päällä pumppu syöttää aina ja vain
+  2/2-venttiili ja kierroslukitus suojaavat piiriä.
+- *BPV jää syöttöasentoon:* korkeilla kierroksilla koko tuotto kulkee piirin läpi (lämpö, VPR3:n ja
+  suodattimen virtaus). Öljyn lämpötila- ja paineanturi havaitsevat tämän.
+- *Pyörivä kytkin:* akseli pyörii aina koneen käydessä, joten kiinteä suojakotelo on pakollinen.
+- Pätevän henkilön pitää tarkistaa kannake, linjaus, suojaus ja ohjauslogiikka ennen käyttöönottoa.
+
+## Yhteenveto ja alustava suositus (ennen päätöstä)
 
 - **Kytkin:** Borelli **30501 tai 30502** (sarja 30500, yhteen suuntaan pyörivä PTO:n
   pyörimissuunnan mukaan), ryhmän 3 pumppulaipalla, toimittaja Salhydro. Nimellismomentti 580 Nm,
@@ -35,13 +70,13 @@
 
 | Reunaehto | Arvo |
 |---|---|
-| Veto | Advance 300:n PTO, 1:1 ensiöakselilta, Ø48 kiila-akseli, HRC 150 -joustokytkin, kytkin, pumppu omalla runkoalustalla |
+| Veto | Advance 300:n PTO, 1:1 ensiöakselilta, Ø48 kiila-akseli → Spidex 48/60 → F1-61 omalla kannakkeella (päätös 2026-10-23; aiemmin HRC 150 ja kytkin) |
 | PTO:n momenttiraja | ≈ 420 Nm (0,044 kW/rpm) |
 | Koneen kierrokset keulapotkuria käytettäessä | Tyhjäkäynti, ~700 rpm [omistaja 2026-10-22, ei mitattu]; kytkin lukittu pois yli ~1000–1200 rpm:n |
 | Mitoittava kuorma | Side-Power SH240: 264 bar × 33,8 l/min (100 %). Hyväksytty: ~90 % työntövoimasta. |
 | Paineluokka | 250 bar (kustannuspäätös); letkut 300 bar; paineenrajoitusventtiili Marchesini VMP 3/4": 350 bar, 90 l/min, jousi todennäköisesti 80–300 bar |
 | Tulevat kuormat | Ankkurivinssi (moottori olemassa, tiedot puuttuvat), 3 vapaata CETOP 3 -paikkaa |
-| Imu | 32 mm, 3 m, säiliö noin 1 m imuaukon yläpuolella |
+| Imu | **50 mm** (päätös 2026-10-23; aiemmin 32 mm, 3 m), säiliö noin 1 m imuaukon yläpuolella |
 
 ## Käyttöjakso: miksi hyötysuhteella on vähemmän väliä kuin luulisi
 
@@ -732,8 +767,9 @@ kauempaa:
 
 - [ ] Vahvista tyhjäkäynti mittaamalla (omistajan mukaan ~700 rpm; ratkaisee pumpun koon)
 - [x] Parker F1-061: tyyppikilpi F1-061-R---000, osanumero 3781060; vuotolinjaa ei tarvita
-- [ ] Parker F1-061 (tori.fi, 100 €): holkin mitat, kunto; ostopäätös
-- [ ] F1-061: ISO 7653 -laipan ja 8×32×36-akselin sovitus Borellin 30500:een (sovitelaippa ja -holkki)
+- [x] P2:ksi valittu Parker F1-61 (päätös 2026-10-23)
+- [ ] Parker F1-061 (tori.fi, 100 €): kunto, holkin mitat, imuliitin mukana?; osto
+- [x] ~~F1-061: sovitus Borellin 30500:een~~ ei tarpeen, PTO-kytkimestä luovuttu (päätös 2026-10-23)
 - [x] F1-061: pienin sallittu imupaine 1,0 bar abs (≈ 0 bar ylipainetta) [luettelo MSG30-8200/UK s. 14]
 - [x] F1-61: kierrostilavuus 59,5 cm³; suurin itseimevä kierrosluku 2400 rpm, lyhytsuljettuna 2700 rpm [luettelo s. 23]
 - [x] F1-61: jatkuvasti pyörivän pumpun kuluminen; omistajien arvio: kestää (kuorma-autokäyttöön tehty, Vega alle 1000 h/v) [omistaja 2026-10-23]
@@ -744,14 +780,16 @@ kauempaa:
 - [ ] PTO-akselin pituus ja tila PTO:n ja pumppukannakkeen välillä
 - [ ] Imulinjan suurentaminen 50 mm:iin: säiliön ulosotto ja palloventtiili
 - [x] Vegan koneen käyttötunnit: alle 1000 h vuodessa [omistaja 2026-10-23]
-- [ ] BPV-F1 vai PTO-kytkin: Salhydron tarjous kytkimestä ja sovitteista
+- [x] BPV-F1 vai PTO-kytkin: BPV valittu (päätös 2026-10-23)
+- [ ] **BPV:n ohitustilan lämpö ajossa** (tunteja 1000–1800 rpm:llä): ei julkaistu; kysy Parkerilta, mittaa öljyn lämpötila ensimmäisellä kaudella
+- [ ] Pumppukannakkeen suunnittelu: ISO 7653 -laippa, linjaus PTO-akseliin, Spidex-kytkimen 140 mm, suojakotelo
+- [ ] Säiliöön liitännät: 50 mm:n imu-ulosotto ja palloventtiili, vuotolinjan paluu öljypinnan alle
 - [ ] PTO:n pyörimissuunta (pumpun suunta sovitetaan siihen)
 - [x] VPR3: kolmitie-etusijaventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [ ] Asennetun VPR3:n koko; paluusuodattimen virtausluokitus (~104 l/min 1800 rpm:llä)
 - [ ] Ohjauspumpun, orbitrolin ja Side-Power SH240:n öljyvaatimukset (HV 32 käy?)
 - [ ] Imulinja 50 mm (päivitetty, aiemmin 38 mm) ja mahdollisimman lyhyt; säiliön ulosotto ja palloventtiili täysiaukkoinen
-- [ ] Salhydro: spline-sovite 30500:n ja ryhmän 3 pumpun väliin, vipuvoima, hinta ja toimitusaika 30501/30502 + Gr.3-laippa
-- [ ] PTO:n pyörimissuunta (30501 vai 30502)
+- [x] ~~Salhydro: Borelli 30501/30502 -tarjous~~ ei tarpeen (päätös 2026-10-23)
 - [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)
 - [ ] Side-Power SH240:n hydraulimoottorin suurin paine (jos paineenrajoitusta nostetaan)
 - [x] BAV-713 350 bar, VMP 350 bar, 2/2-patruunaventtiili 350 bar

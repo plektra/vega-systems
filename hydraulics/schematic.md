@@ -1,6 +1,6 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
-> **Tila:** 2026-10-22. Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
+> **Tila:** päivitetty 2026-10-23 (P2 = F1-61 + BPV, Spidex-kytkin, 50 mm imu). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
 > Yhtenäinen viiva = olemassa tai päätetty, katkoviiva = suunnitteilla tai vaihtoehto.
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
 > [design/p2-pump-options.md](design/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
@@ -38,10 +38,10 @@ flowchart LR
 ```mermaid
 flowchart LR
   GB["Advance 300<br/>PTO 1:1, Ø48<br/>≤ 420 Nm"]
-  HRC["HRC 150"]
-  CL["PTO-kytkin<br/>Borelli 30501/30502<br/>580 Nm"]
+  CPL["Spidex 48/60<br/>98 Sh A"]
   TANK[("Säiliö")]
-  P2["P2 Parker F1-061<br/>59,5 cm³<br/>(tai VNK3 51 cm³)"]
+  P2["P2 Parker F1-61<br/>59,5 cm³"]
+  BPV["BPV-F1 24 V<br/>käsiohitus<br/>jännitteetön = ohitus"]
   VPR3["VPR3 3/4#quot;<br/>35 l/min"]
   VMP["VMP 3/4#quot;<br/>paineenrajoitus<br/>250 bar"]
   UNL["2/2-patruunaventtiili<br/>jännitteettömänä auki"]
@@ -50,9 +50,11 @@ flowchart LR
   THR["Keulapotkuri<br/>SH240-U11<br/>240 kg"]
   RET(["Paluu"])
 
-  GB --> HRC --> CL --> P2
-  TANK -->|"imu 32–38 mm, ~2–3 m"| P2
-  P2 -->|"3/4#quot;, 3–4 m"| VPR3
+  GB --> CPL --> P2
+  TANK -->|"imu 50 mm"| P2
+  P2 <--> BPV
+  BPV -->|"vuotolinja 1/4#quot;,<br/>öljypinnan alle"| TANK
+  BPV -->|"3/4#quot;, 3–4 m"| VPR3
   VPR3 -->|P| UNL
   VPR3 -.-> VMP
   UNL -->|"kiinni = paine<br/>pohjalaatalle"| BAV
@@ -106,12 +108,13 @@ flowchart LR
 
 ## Toimintatilat (apupiiri)
 
-| Tila | Kytkin | 2/2-patruunaventtiili | BAV-713 | Mitä tapahtuu |
+| Tila | BPV-F1 | 2/2-patruunaventtiili | BAV-713 | Mitä tapahtuu |
 |---|---|---|---|---|
-| Ajo | irti | — | keskellä | P2 ei pyöri; vain ohjauspiiri käy |
-| Valmiustila satamassa | päällä (tyhjäkäynnillä) | jännitteetön, auki | keskellä | P2:n öljy kiertää matalalla paineella säiliöön (~0,7 kW lämpöä) |
-| Keulapotkuri käytössä | päällä | jännitteellinen, kiinni | a tai b | Paine nousee pohjalaatalla; VPR3 rajaa virtauksen 35 l/min:iin; potkuri saa ~88 % työntövoimasta (~210 kg) |
-| Kierroslukitus (> ~1000 rpm) | päällä | pakotetaan jännitteettömäksi | estetty | Öljy kiertää vapaasti; hälytys yli ~1200 rpm |
+| Ajo | jännitteetön (ohitus) | jännitteetön, auki | keskellä | P2 pyörii mutta kiertää tyhjänä pumpun päädyssä; pieni jäähdytysvirtaus vuotolinjan kautta säiliöön (lämpö **⚠ ei tiedossa**) |
+| Keulapotkuri valmiina (tyhjäkäynti) | jännitteellinen (vaihdettu 2/2:n ollessa auki, < 20 bar) | jännitteetön, auki | keskellä | P2:n öljy kiertää matalalla paineella säiliöön (~0,7 kW) |
+| Keulapotkuri käytössä | jännitteellinen | jännitteellinen, kiinni | a tai b | Paine nousee pohjalaatalla; VPR3 rajaa virtauksen 35 l/min:iin; potkuri saa ~88 % työntövoimasta (~210 kg) |
+| Kierroslukitus (> ~1000 rpm) | pakotetaan jännitteettömäksi (2/2 ensin auki) | pakotetaan jännitteettömäksi | estetty | Pumppu ohitukseen; hälytys, jos syöttö päällä yli ~1200 rpm |
+| Sähkökatko | ohitus | auki | keskellä | Keulapotkuri ei toimi; käsiohitus vain kone sammutettuna |
 
 ## Avoimia kohtia kaaviossa
 

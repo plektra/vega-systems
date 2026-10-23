@@ -52,6 +52,7 @@ konehuoneessa:
 | Ohjauspumppu matka-ajossa (~0,5 kW) | noin 55–60 °C (40–45 °C:n konehuoneessa 65–70 °C) |
 | Kytkin päällä tyhjäkäynnillä, keulapotkuri ei käytössä (~0,7 kW) | noin 65 °C |
 | Kytkin päällä 1800 rpm:llä, vapaakierto auki (~2 kW) | **yli 100 °C** |
+| **Päätetty ratkaisu (2026-10-23):** ajossa BPV:n ohitus, pumppu kiertää tyhjänä | **⚠ ei tiedossa** (Parker ei ilmoita ohitustilan lämpöä); mitataan ensimmäisellä kaudella |
 
 Viimeisessä tapauksessa lämpeneminen on hidasta: 40 → 75 °C noin 1 tunnissa (kuorman mukaan
 45–90 min), 20 → 75 °C noin 1,5 tunnissa. Kytkimen unohtuminen päälle koko matkan ajaksi
@@ -174,7 +175,7 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 - **Paluulinjan vastapaine** (jäähdytin, ohitusventtiili, suodatin) pitää pysyä alle 25 barin, joka
   on orbitrolin (HKUS 160/4) T-linjan suurin jatkuva paine. 3–4 barin ohitusventtiilillä tämä täyttyy
   reilusti.
-- **Kierroslukitus** (ks. [requirements.md §10.2](../requirements.md)): kytkin päälle vain alle noin
+- **Kierroslukitus** (päivitetty 2026-10-23: PTO-kytkimen sijaan BPV-ohitusventtiili, ks. [requirements.md §10.2](../requirements.md)). Alkuperäinen muotoilu: kytkin päälle vain alle noin
   1000 rpm:ssä; sen yli keulapotkurin venttiili estetään ja vapaakiertoventtiili avataan; hälytys,
   jos kytkin on päällä yli noin 1200 rpm:ssä.
 
