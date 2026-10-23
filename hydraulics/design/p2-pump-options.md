@@ -449,7 +449,23 @@ Spidex 48/60:n arvot [luettelo s. 9, 11 ja 16]:
   64 Sh D -kehällä (TKN 560 Nm); 98 Sh A (450 Nm) jää 280 barissa alle tarpeen.
 - Pumpun napa lukitaan akselin pään M12-pultilla ja aluslevyllä; PTO-napa kiilalla ja
   pidätysruuvilla.
-- **Hinta:** Salhydro ei näytä hintoja (tarjouspyyntö). **⚠ Pyydä tarjous kaikista kolmesta osasta.**
+- **Hinta:** Salhydro ei näytä hintoja (tarjouspyyntö). Halvimmat löydetyt hinnat Euroopasta
+  (haettu 2026-10-23, ALV 0 %, ilman rahteja). Saman kokoluokan Spidex 48/60-, KTR Rotex 48- ja SIT
+  Trasco 48/60 -osat ovat valmistajien mukaan keskenään vaihtokelpoisia **⚠ varmista sovitus
+  ennen asennusta**:
+
+  | Osa | Tuote | Hinta ALV 0 % | Myyjä, toimitus |
+  |---|---|---|---|
+  | Pumpun napa (8×32×36) | KTR Rotex 48 ST napa 1.3, DIN ISO 14 8×32×36, KTR 020485044032, pituus 45 mm | **134,39 €** | [Mercateo](https://www.mercateo.com/p/1955-2000343706/KTR_ROTEX_48_ST_Nabe_1_3_P004301_DIN_ISO_14_8x32x36_DIN5462_Aussenbund_ueb.html?viewOptions=secureMode), ei varastossa, noin 20 pv; vain yritysasiakkaille. Toinen tarjous 142,84 €. Halvempaa ei löytynyt. |
+  | PTO:n napa (48 H7 + kiilaura) | SIT Trasco GRMP48/60AF48, valurauta, valmis 48 H7 -reikä, kiilaura DIN 6885 | **61,80 €** | [tyma.eu](https://www.tyma.eu/products/trasco-48-60-grmp-grmp48-60af48-hub-type-a-d-48h7-cast-iron/) (Tšekki), noin 3 viikkoa |
+  | Hammaskehä 98 Sh A | Spidex 48/60 punainen 98° (HV71007010) | **19,00 €** | [BJ-Gear](https://shop.bj-gear.com/en_eur/spidex-spider-48-red-98-shore-a) (Tanska), varastossa |
+  | – vaihtoehto | Trasco AR48/60R 98 Sh A; AR48/60V 64 Sh D | 19,32 € / 28,98 € | [tyma.eu](https://www.tyma.eu/products/trasco-48-60-ar48-60r-elastic-spider-98-shore-a-red-polyurethane/) |
+
+  **Yhteensä noin 215 € + ALV 25,5 % ≈ 270 €** ja rahdit [laskelma]. Kahdesta kaupasta (Mercateo ja
+  tyma.eu, kehä samasta kaupasta kuin PTO:n napa) noin 216 € + ALV. BJ-Gearin Spidex-napa A 48/60
+  (77 €) on ilmoitettu vain reikäalueella 19–48 mm, joten se on todennäköisesti esiporattu ja
+  vaatisi sorvausta ja kiilauran.
+  **⚠ Pyydä vertailuksi tarjous Salhydrolta** (kotimainen toimitus, sama tuoteperhe).
 
 **Muut vaihtoehdot:**
 - **HRC 150 + valmis uritettu holkki:** Salhydron **EPH-8-36** on valmis B8×32×36-uritettu holkki
