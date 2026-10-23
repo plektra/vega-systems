@@ -22,6 +22,7 @@ omistajien suoraan antama tieto.
 | Ohjauspaikka | Yksi ruori, komentosillan keskellä | [blogi 2017-04-19] |
 | Peräsin | Yksi peräsin; mitat **⚠ ei tiedossa** | |
 | Keulapotkuri | Side-Power SH240-U11 (hydraulinen), 250 mm:n tunneli, asennettu 2017 | [blogi 2018-11-12] |
+| Koneen käyttötunnit vuodessa | alle 1000 h | [omistaja 2026-10-23] |
 
 ## Voimansiirto
 

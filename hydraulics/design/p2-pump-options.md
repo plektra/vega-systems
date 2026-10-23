@@ -380,8 +380,11 @@ pumppu on kytketty pysyvästi, ja BPV purkaa sen ajon ajaksi. Vegalla se tarkoit
   aukeaa yhä, joten paine pysyy matalana, mutta imupuoli ja lämpö ovat samassa tilanteessa kuin
   taulukossa yllä. **Öljyn lämpötila- ja imupaineanturi tarvitaan silti.**
 - **Pumppu pyörii jatkuvasti:** F1-61 kestää ohitusasennossa 2700 rpm, joten kierrosluku ei rajoita.
-  Pumppu on tehty kuorma-autojen jatkuvasti pyöriviin PTO-asennuksiin, mutta laakerien ja
-  akselitiivisteen käyttöikää jatkuvassa tyhjäkierrossa Parker ei ilmoita **⚠ ei tiedossa**.
+  Laakerien ja akselitiivisteen käyttöikää Parker ei ilmoita. Omistajien arvio: pumppu kestää
+  pitkään, koska se on tehty kuorma-autojen PTO-asennuksiin, joissa se pyörii aina moottorin mukana
+  [omistaja 2026-10-23]. Vegan kone käy alle 1000 h vuodessa [omistaja 2026-10-23]; raskaassa
+  liikenteessä vuotuiset käyttötunnit ovat tyypillisesti suuremmat (arvio). Ohitusasennossa pumppu
+  pyörii lisäksi kuormittamattomana, joten kulumisen ei arvioida ratkaisevan valintaa.
 - **Ohjausjärjestys** 20 barin rajan vuoksi:
   - *Päälle:* 2/2-venttiili auki (paine alle 20 bar) → BPV:n kela päälle → 2/2-venttiili kiinni →
     keulapotkurin venttiili.
@@ -396,9 +399,9 @@ pumppu on kytketty pysyvästi, ja BPV purkaa sen ajon ajaksi. Vegalla se tarkoit
 **Arvio:** BPV ratkaisee kavitaation ja suuren läpivirtauksen kaikissa tilanteissa, joissa
 keulapotkuria ei käytetä. **Varteenotettavin käyttö on korvata sillä PTO-kytkin**, jos F1-61
 ostetaan: sähköinen ohjaus on yksinkertaisempi kuin mekaanisen kytkimen kauko-ohjaus, ja
-kierroslukitus koskee silloin vain keulapotkurin venttiiliä. Vertailu vaatii vielä Salhydron
-tarjouksen kytkimestä ja sovitteista sekä arvion siitä, kuinka paljon jatkuvasti pyörivä pumppu kuluu
-(Vegan ajotunnit vuodessa). Kytkimen kanssa BPV on lisävarmistus unohtunutta kytkintä vastaan,
+kierroslukitus koskee silloin vain keulapotkurin venttiiliä. Jatkuvasti pyörivän pumpun kuluminen
+ei omistajien arvion mukaan ole este (alle 1000 h vuodessa, ks. yllä). Vertailu vaatii vielä
+Salhydron tarjouksen kytkimestä ja sovitteista. Kytkimen kanssa BPV on lisävarmistus unohtunutta kytkintä vastaan,
 mutta 430 €:lla se on silloin kallis varmistus verrattuna kierroslukitukseen ja hälytykseen.
 Hammaspyöräpumppuun (vaihtoehto A) BPV:tä ei saa; sille vastaava ratkaisu olisi kytkin.
 
@@ -630,12 +633,13 @@ kauempaa:
 - [ ] F1-061: ISO 7653 -laipan ja 8×32×36-akselin sovitus Borellin 30500:een (sovitelaippa ja -holkki)
 - [x] F1-061: pienin sallittu imupaine 1,0 bar abs (≈ 0 bar ylipainetta) [luettelo MSG30-8200/UK s. 14]
 - [x] F1-61: kierrostilavuus 59,5 cm³; suurin itseimevä kierrosluku 2400 rpm, lyhytsuljettuna 2700 rpm [luettelo s. 23]
-- [ ] F1-61: laakerien ja akselitiivisteen käyttöikä jatkuvassa tyhjäkierrossa (Parker ei ilmoita)
+- [x] F1-61: jatkuvasti pyörivän pumpun kuluminen; omistajien arvio: kestää (kuorma-autokäyttöön tehty, Vega alle 1000 h/v) [omistaja 2026-10-23]
 - [x] BPV-F1: vuotoliitinsarja 378 3039 tulee venttiilin mukana; vuotolinja on pakollinen [MSG30-8227]
 - [ ] BPV-F1: ohitusasennon painehäviö ja lämpö (ei julkaistu; kysy Parkerilta tai mittaa)
 - [ ] Tuleeko tori.fi-pumpun mukana imuliitin (ISO-mallissa ei kierreimuaukkoa)?
 - [ ] Imulinjan suurentaminen 50 mm:iin: säiliön ulosotto ja palloventtiili
-- [ ] BPV-F1 vai PTO-kytkin: Salhydron tarjous kytkimestä ja sovitteista, Vegan ajotunnit vuodessa (jatkuvasti pyörivän pumpun kuluminen)
+- [x] Vegan koneen käyttötunnit: alle 1000 h vuodessa [omistaja 2026-10-23]
+- [ ] BPV-F1 vai PTO-kytkin: Salhydron tarjous kytkimestä ja sovitteista
 - [ ] PTO:n pyörimissuunta (pumpun suunta sovitetaan siihen)
 - [x] VPR3: kolmitie-etusijaventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [ ] Asennetun VPR3:n koko; paluusuodattimen virtausluokitus (~104 l/min 1800 rpm:llä)
