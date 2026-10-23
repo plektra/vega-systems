@@ -467,6 +467,16 @@ Spidex 48/60:n arvot [luettelo s. 9, 11 ja 16]:
   vaatisi sorvausta ja kiilauran.
   **⚠ Pyydä vertailuksi tarjous Salhydrolta** (kotimainen toimitus, sama tuoteperhe).
 
+  **Kuluttajana ja yhdestä paikasta** (selvitys 2026-10-23): verkosta ei löytynyt kauppaa, joka myy
+  kaikki kolme osaa kuluttajalle ja toimittaa Suomeen. Mercateo myy vain yrityksille. Saksalainen
+  tefa24.de myy kuluttajille (Rotex 48 -napa 48 H7 + kiilaura 135,37 €, kehä 98 Sh A 17,93 €,
+  64 Sh D 27,61 €, hinnat sis. Saksan ALV:n), mutta 8×32×36-napaa siellä on vain koossa 42, eikä
+  kauppa toimita Suomeen. Suomalaisista verkkokaupoista (hydraulics.fi, koneosakeskus.fi,
+  hydrauliikkakauppa.fi) ei löytynyt 8×32×36-napaa eikä koon 48/60 osia. **Suositus: tarjous
+  Salhydrolta kaikista kolmesta Spidex-osasta, vertailuksi hydrauliikkakauppa.fi** (kuluttajille
+  myyvä verkkokauppa, hankkii valikoiman ulkopuolisia osia tilauksesta). Vertailuhinta Euroopasta
+  osina noin 270 € sis. ALV 25,5 % + rahdit.
+
 **Muut vaihtoehdot:**
 - **HRC 150 + valmis uritettu holkki:** Salhydron **EPH-8-36** on valmis B8×32×36-uritettu holkki
   (Ø60 × 50 mm) hitsattavaksi navan sisään. HRC 150:n B-napaan (esiporattu) sorvataan Ø60-reikä ja
