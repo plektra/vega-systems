@@ -118,7 +118,7 @@ Pohjalaatan paikat 2–4 ovat vapaana (esim. ankkurivinssi).
 ```mermaid
 flowchart LR
   RET(["Paluut:<br/>orbitroli, RPF3,<br/>VPR3, 2/2, BAV-713, VMP"])
-  COOL["Öljynjäähdytin<br/>Bowman EC100"]
+  COOL["Öljynjäähdytin<br/>Bowman EC100 / EC80 ⚠"]
   BYP["Ohitus 3–4 bar"]
   FILT["Paluusuodatin"]
   TANK[("Säiliö")]

@@ -161,7 +161,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Painobudjetti | TBD kg |
 | Putki- ja letkuvedot | Keulapotkurin A/B-linjat: 1/2" letku, asennettu (CETOP → keula). Muut TBD (laipiolävistykset, palo-osastot). |
 | Huollettavuus | TBD (suodattimet, tarkastuslasi, ilmauspisteet) |
-| Öljynjäähdytin | Bowman EC100 (varalla), merivesi koneen merivesipiiristä, yhteiseen paluulinjaan ohitusventtiilin kanssa; ks. [oil-cooling.md](design/oil-cooling.md) |
+| Öljynjäähdytin | Bowman EC100 tai EC80 (varalla, malli ⚠ tarkista), merivesi koneen merivesipiiristä, yhteiseen paluulinjaan ohitusventtiilin kanssa; ks. [oil-cooling.md](design/oil-cooling.md) |
 
 ## 9. Öljy, puhtaus ja huolto
 

@@ -12,7 +12,8 @@
 - **Säiliö ja letkut luovuttavat itsestään vain noin 0,5 kW**, joten pienetkin jatkuvat kuormat
   nostavat öljyn pitkällä matkalla korkealle.
 - **Varalla oleva Bowman EC100** kestää 92 l/min ja jäähdyttää merivedellä noin 7–9 kW. Se
-  riittää kaikkiin jatkuviin kuormiin ja keulapotkurin käyttöön tyhjäkäynnillä.
+  riittää kaikkiin jatkuviin kuormiin ja keulapotkurin käyttöön tyhjäkäynnillä. **⚠ Malli voi olla
+  myös EC80** (noin puolet tehosta, noin 3,5–4,5 kW), ks. [Malli](#malli-ec100-vai-ec80--tarkista).
 - **Suositus:** EC100 kaikkien piirien yhteiseen paluulinjaan ohitusventtiilin kanssa, merivesi
   koneen merivesipiiristä. Lisäksi kierroslukitus ja öljyn lämpötila-anturi.
 
@@ -63,7 +64,7 @@ huomattavasti, koska öljy kiertää silloin pumpun päätykappaleessa eikä kok
 luku **⚠ ei tiedossa**), ks.
 [p2-pump-options.md](p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
 
-## Bowman EC100 -jäähdytin (omistajilla varalla)
+## Bowman EC100 -jäähdytin (omistajilla varalla; malli ⚠ EC100 vai EC80)
 
 Omistajien tiedot [omistaja 2026-10-22]: Bowman EC100 -sarjan öljynjäähdytin, **pronssiset
 päätykannet** (marine-versio), ollut aiemmin käytössä **Masson-vaihteiston öljynjäähdyttimenä**.
@@ -92,6 +93,40 @@ s. 1–2, luettu kuvana ja tekstinä):
 - ✅ kaikkiin jatkuviin kuormiin (ohjaus, kytkin päällä tyhjäkäynnillä, ankkurivinssi);
 - ✅ käytännössä jatkuvaan keulapotkurin käyttöön tyhjäkäynnillä (~8 kW);
 - ❌ ei keulapotkurin käyttöön 1000–1800 rpm:llä (16–38 kW), joten kierroslukitus tarvitaan silti.
+
+### Malli: EC100 vai EC80? **⚠ tarkista**
+
+Omistajat eivät ole varmoja, onko varalla oleva jäähdytin EC100 vai pienempi EC80
+[omistaja 2026-10-23]. Bowmanin luettelo samoilla ehdoilla (ISO VG 37 -öljy, öljy ulos 50 °C,
+öljyn painehäviö 1 bar, vesi sisään 25 °C, veden painehäviö 0,5 bar)
+([EC Series Product Profile](https://ej-bowman.com/wp-content/uploads/2023/05/EC-Series-Product-Profile.pdf), luettu tekstinä):
+
+| | EC80 | EC100 |
+|---|---|---|
+| Jäähdytysteho, merivesiversio (-3875-) | **4 kW** | **8 kW** |
+| Jäähdytysteho, makean veden versio (-1425-) | 4 kW | 9 kW |
+| Suurin öljyvirtaus | 80 l/min | 92 l/min |
+| Suurin merivesivirtaus | 50 l/min | 50 l/min |
+| Öljytilavuus | 0,26 l | 0,49 l |
+| **Pituus (A)** | **174 mm** | **260 mm** |
+| **Öljyliitäntä** | **1/2" BSP** | **3/4" BSP** |
+| Paino | 2,4 kg | 3,2 kg |
+| Tyyppikilven koodi | EC 80-xxxx-**1** | EC100-xxxx-**2** |
+
+**Tunnistus:** mitta päästä päähän (noin 17 vai 26 cm) ja öljyliitäntöjen koko riittävät.
+Tyyppikilven koodin numero kertoo samalla vesiversion (esim. 3875 = merivesi).
+
+**Jos se on EC80** [laskelma, arvio]: teho Vegalla noin puolet EC100:sta eli **noin 3,5–4,5 kW**.
+Se riittää:
+
+- ✅ jatkuviin kuormiin (ohjaus matka-ajossa noin 0,5 kW, BPV:n ohitus);
+- ✅ tavallisiin keulapotkurimanöövereihin tyhjäkäynnillä (1–2 min, noin 8 kW): öljy lämpenee
+  hitaammin kuin ilman jäähdytintä;
+- ❌ ei pitkään jatkuvaan keulapotkurin käyttöön: 8 kW:n kuormalla öljy lämpenee edelleen,
+  noin puolta hitaammin kuin ilman jäähdytintä.
+
+Vegan käytössä (satamamanööverit lyhyitä, matka-ajossa P2 ohituksella) EC80 todennäköisesti
+riittää, mutta EC100 antaa marginaalia. Uusi merivesi-EC100 maksaa noin **⚠ ei tiedossa**.
 
 ## Asennustapa: paluulinja vai erillinen piiri
 
@@ -181,7 +216,7 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 
 ## Avoimet kysymykset
 
-- [ ] EC100:n tyyppikilven koko koodi (vetojen määrä)
+- [ ] Onko varalla oleva jäähdytin EC100 vai EC80 (pituus 26 vs. 17 cm, öljyliitäntä 3/4" vs. 1/2"), ja tyyppikilven koko koodi (vesiversio, vedot)
 - [x] Koneen merivesipumpun tuotto: noin 70 l/min 650 rpm:llä [omistaja 2026-10-22]
 - [x] 650 rpm on koneen kierrosluku; pumppu on koneen etupään voimanulosotossa kiinteällä välityksellä
 - [ ] Vahvista merivesipumpun tuotto (verkkohaun arvo ~70 l/min 650 rpm) ja välityssuhde

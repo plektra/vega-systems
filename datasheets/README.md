@@ -52,7 +52,7 @@ käyttöohjeista ja tuotesivuista.
 | Komponentti | Dokumentti | Tärkeimmät tiedot | Käytetään |
 |---|---|---|---|
 | Side-Power SH240/250TC-U11 -keulapotkuri | [Side-Power, tuotesivu](https://side-power.com/produkt/20443/sh240/); omistajien datalehti `sh-spec-sheet-v1-0-0-2017-lr-qvktgqi.pdf` | Ks. omistajien datalehdet. Asennusohje ks. omistajien datalehdet. **⚠ Moottorin U11 suurin sallittu paine ei ilmoitettu suoraan.** | [current-system](../hydraulics/current-system.md) |
-| **Bowman EC100 -öljynjäähdytin** | [Bowman, EC Series Product Profile](https://ej-bowman.com/wp-content/uploads/2023/05/EC-Series-Product-Profile.pdf) (*kuvana*) | Öljy ≤ 92 l/min; 0,44 bar / 60 l/min; 4–10 kW esitteen ehdoilla; merivesi 3-vetoinen 25–50 l/min; 3/4" BSP | [oil-cooling](../hydraulics/design/oil-cooling.md#bowman-ec100--jäähdytin-omistajilla-varalla) |
+| **Bowman EC100 / EC80 -öljynjäähdytin** (malli ⚠) | [Bowman, EC Series Product Profile](https://ej-bowman.com/wp-content/uploads/2023/05/EC-Series-Product-Profile.pdf) (*kuvana*) | Öljy ≤ 92 l/min; 0,44 bar / 60 l/min; 4–10 kW esitteen ehdoilla; merivesi 3-vetoinen 25–50 l/min; 3/4" BSP; **EC80** (sama luettelo, ISO VG 37, öljy ulos 50 °C, vesi 25 °C): 4 kW merivesiversiona (EC100: 8 kW), öljy ≤ 80 l/min, 1/2" BSP, pituus 174 mm, 2,4 kg | [oil-cooling](../hydraulics/design/oil-cooling.md#bowman-ec100--jäähdytin-omistajilla-varalla) |
 | BAV-713 | ks. omistajien datalehdet (`Teollisuusventtiilit.pdf`) | 60 l/min, 350 bar; painehäviö puuttuu | [current-system §3.4](../hydraulics/current-system.md) |
 | HRC 150 -joustokytkin | — | **⚠ Datalehti puuttuu** (nimellismomentti, suurin reikä napatyypeittäin) | [current-system](../hydraulics/current-system.md) |
 
