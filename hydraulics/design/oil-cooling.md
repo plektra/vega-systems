@@ -1,6 +1,6 @@
 # Hydrauliöljyn lämpökuorma ja jäähdytys
 
-> **Tila:** Selvitys, 2026-10-22. Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
+> **Tila:** Selvitys, päivitetty 2026-10-23. Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
 > on kerrottu kunkin taulukon yhteydessä. Tausta: [current-system.md](../current-system.md),
 > [p2-pump-options.md](p2-pump-options.md).
 
@@ -56,6 +56,11 @@ konehuoneessa:
 Viimeisessä tapauksessa lämpeneminen on hidasta: 40 → 75 °C noin 1 tunnissa (kuorman mukaan
 45–90 min), 20 → 75 °C noin 1,5 tunnissa. Kytkimen unohtuminen päälle koko matkan ajaksi
 ylikuumentaa öljyn, mutta lyhyt hetki ei.
+
+Parker F1:n **BPV-ohitusventtiili** pienentäisi viimeisen tapauksen lämpökuormaa ja läpivirtausta
+huomattavasti, koska öljy kiertää silloin pumpun päätykappaleessa eikä koko piirin kautta (tarkka
+luku **⚠ ei tiedossa**), ks.
+[p2-pump-options.md](p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
 
 ## Bowman EC100 -jäähdytin (omistajilla varalla)
 

@@ -1,6 +1,6 @@
 # Apupiirin pumppu (P2) ja PTO-kytkin — vaihtoehdot
 
-> **Tila:** Vaihtoehtoselvitys, päivitetty 2026-10-22 (tyhjäkäynti 700 rpm). Ei vielä päätöstä.
+> **Tila:** Vaihtoehtoselvitys, päivitetty 2026-10-23 (BPV-ohitusventtiili). Ei vielä päätöstä.
 > Tausta: [current-system.md §0](../current-system.md). Hinnat ovat karkeita suuntaa-antavia
 > arvioita; pyydä tarjoukset ennen päätöstä.
 
@@ -21,6 +21,9 @@
      [Ehdokas: Parker F1-061](#ehdokas-parker-f1-061-käytettynä-torifi)). 61 cm³ ja 350 bar
      jatkuva, ei vuotolinjaa: 250 barissa sama ~88 % kuin A:lla, ja 280 barissa noin 99 % työntövoima, kun venttiilien
      ja keulapotkurimoottorin painearvot on varmistettu.
+     Lisävarusteena saa sähköohjatun **BPV-F1-ohitusventtiilin** (noin 430 € + ALV), joka purkaa
+     pumpun tyhjäkiertoon ja voisi korvata PTO-kytkimen, ks.
+     [Lisävaruste: BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili).
   3. **E harkitaan uudelleen** vain, jos keulapotkurin tai vinssin proportionaalinen ohjaus tai
      useat samanaikaiset kuormat tulevat vaatimuksiksi.
 - **Flowfitin 43 cm³:n kokoonpano ei enää sovi:** 700 rpm:llä se antaisi vain noin 67 %
@@ -213,12 +216,12 @@ Parkerin varsinaista F1-luetteloa ei saatu luettua.
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Kierrostilavuus | **61 cm³/r** (F1-61) **⚠ tarkista** Parkerin luettelosta | jälleenmyyjä |
+| Kierrostilavuus | **61 cm³/r** (F1-61) **⚠ tarkista** Parkerin luettelosta; hakutuloksen mukaan luettelossa 59,5 cm³/r (ks. [BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili)) | jälleenmyyjä |
 | Paine | 350 bar jatkuva (SAE) / 400 bar (ISO) | jälleenmyyjä, Parker |
 | Kierrosnopeus | enintään noin 2600 rpm 350 barin jatkuvalla paineella | jälleenmyyjä (Parkerin teksti) |
 | Pyörimissuunta | **R** = oikea eli myötäpäivään akselin päästä katsottuna. **Vaihdettavissa:** päätykappaleen pultit auki, päätykappale 180° käännettynä takaisin, pultit 80–100 Nm. | ohje s. 4 |
 | Laippa ja akseli | **ISO-malli:** kuorma-auton ISO 7653 -laippa ja **DIN 5462 B8×32×36** -hammasakseli (8 uraa) | jälleenmyyjä |
-| Vuotolinja | **Ei tarvita.** *"Fixed displacement pumps don't need an external drain line as they are internally drained."* (Erillinen ohituslinja tarvitaan vain, jos pumppuun asennetaan Parkerin BPV-ohitusventtiili.) | ohje s. 11 |
+| Vuotolinja | **Ei tarvita.** *"Fixed displacement pumps don't need an external drain line as they are internally drained."* (Erillinen vuotolinja voidaan tarvita vain, jos pumppuun asennetaan Parkerin BPV-ohitusventtiili, ks. [Lisävaruste: BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili).) | ohje s. 11 |
 | Imuliitin | Parker suosittelee imuliittimeksi **vähintään 38 mm (1½")**, kun tuotto on enintään 60 l/min. Nopeustaulukon mukaan 32 mm:n letkussa 50 l/min on 1,0 m/s. | ohje s. 4 |
 | Öljy | HLP (DIN 51524) tai biohajoavat esterit. Suositeltu viskositeetti 20–30 cSt; käytön rajat 10–400 cSt; käynnistyksessä enintään 4000 cSt. Öljyn lämpötila enintään 75 °C. | ohje s. 11 |
 | Akselin voitelu | Jos voimanulosoton holkki on tiivistetty, hammasakseli rasvataan lämmönkestävällä rasvalla ennen käyttöönottoa ja säännöllisesti | ohje |
@@ -292,6 +295,100 @@ pyörii silloin noin 2230 rpm.
 2. Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään ja 2/2-venttiili avataan automaattisesti.
    Pumppu siirtyy vapaakiertoon, ja lämpö putoaa noin 1–2 kW:iin. Toimii ilman kytkimen toimilaitettakin.
 3. Hälytys, jos kytkin on päällä yli noin 1200 rpm:ssä (vaatii kytkimeen rajakytkimen).
+
+## Lisävaruste: Parker BPV-F1 -ohitusventtiili
+
+Parker myy F1-pumpun päätykappaleen päälle asennettavan sähköohjatun ohitusventtiilin
+(**BPV-F1-25**, sopii kokoihin F1-25, -41, -51 ja **-61**). Omistaja nosti sen esiin 2026-10-23
+vaihtoehdoksi kavitaation ja lämpenemisen estämiseen korkeilla kierroksilla [omistaja 2026-10-23].
+
+Lähde: Parkerin luettelo *HY30-8200/PL, Hydraulika do samochodów ciężarowych*, s. 47 (BPV-F1) ja
+s. 48 (BPV-F2:n toimintaperiaate), puolankielinen, luettu tekstinä ja kuvina
+([PDF, dzwigi.net.pl](https://cdn.dzwigi.net.pl/b/v2/3787424/Document/zawory%20bocznikowe%20BPV%20Parker.pdf)).
+Uudemmat tilausnumerot englanninkielisestä luettelosta *MSG30-8200/UK* s. 60
+([paro.nl](https://paro.nl/library//storage/datasheets/Parker/UK/Parker_BPV-F1-BPV-T1_uk.pdf/datasheet.html))
+ja hinta jälleenmyyjältä ([dzwigi.net.pl](https://dzwigi.net.pl/en/sklep/4957-bpv.html)).
+
+### Tiedot
+
+| Kohde | Arvo | Lähde |
+|---|---|---|
+| Käyttötarkoitus | Pumppu, jota ajetaan jatkuvasti suoraan koneelta (kardaani tai PTO). Ohitus kytketään päälle siirtoajossa, kun kone käy suurilla kierroksilla eikä järjestelmää ole mitoitettu pumpun koko tuotolle. *"Zawór bocznikowy BPV znacznie redukuje straty mocy podczas transportu"* (vähentää tehohäviöitä huomattavasti). | HY30-8200/PL s. 47 |
+| Toiminta | Ohitusasennossa venttiili **yhdistää pumpun painepuolen sen imupuoleen**, ja järjestelmän ja säiliön kautta kulkee vain pieni öljymäärä. Parkerin mukaan tämä estää pumpun kavitaation ja suuren lämmöntuoton, joita suuri virtaus muuten aiheuttaisi. (Sanottu suoraan BPV-F2:sta; BPV-F1:n kaavio on sama.) | s. 47–48 |
+| Ohjaus | Kela jännitteellisenä esiohjattu takaiskuventtiili on kiinni, ja pumppu syöttää järjestelmää. **Jännitteettömänä ohitus on päällä** eli pumppu kiertää tyhjänä. | s. 47 |
+| Kytkentäehto | *"Zawór musi włączać się i wyłączać … przy ciśnieniu układu w stanie bezobciążeniowym (poniżej 20 barów)"*: venttiiliä saa vaihtaa asennosta toiseen **vain kuormittamattomana, alle 20 barin paineessa**. | s. 47 |
+| Jäähdytysvirtaus | Ohitusasennossa järjestelmän ja suodattimen kautta kulkevan virtauksen ("q") pitää olla **vähintään 5 l/min**, jotta pumppuun ei kerry lämpöä. Jos virtaus voi jäädä pienemmäksi, tai järjestelmä on suljettu keskiasennossa, **venttiilin vuotoliitännästä tarvitaan erillinen vuotolinja suoraan säiliöön**. | s. 47 |
+| Vuotoliitäntä | BSP 1/4", tulpattu. Vuotoliitinsarja Parkerilta: 378 3039 tai 378 1640 (F1-025) **⚠ tarkista** oikea sarja F1-61:lle. | s. 47 |
+| Paine | 350 bar jatkuva, 400 bar ajoittainen (sama kuin pumpulla) | s. 47 |
+| Kela | 24 VDC; 17 W (vanha luettelo) tai 14 W (jälleenmyyjä: kela CCS024HSN, venttiili DSH081NX3285). Johto noin 0,55 m ja urospistoke. | s. 47; jälleenmyyjä |
+| Asennus | Venttiilirunko kiinnitetään päätykappaleen päälle: banjoliitin painelähtöön, välikeholkki imuaukkoon ja kaksi kuusiokoloruuvia puristuskappaleineen. Painelähdön liitin kiristetään **50 Nm** ennen ruuveja. Symmetrinen, voidaan kääntää 180° ja sopii kummallekin pyörimissuunnalle. Painelähtö BSP 3/4"; ulkomitat noin 110 × 105 mm. | s. 47 (mittapiirros, *kuvana*) |
+| Tilausnumerot, 24 VDC | Vanha: 378 1401. Uudemmat: **378 7201** (ilman käsiohitusta) ja 378 4179 (käsiohituksella, korvaa 378 7461). 12 VDC -versiot 378 1318 / 378 7202. O-rengassarja 378 0641. | s. 47; MSG30-8200/UK s. 60 |
+| Hinta (uusi) | 378 7201: **1813,71 PLN + ALV** (saatavilla 2 kpl); 378 4179: 1896,18 PLN + ALV (ei saatavilla). Noin **430 € + ALV** (oletus 4,25 PLN/€). | jälleenmyyjä, haettu 2026-10-23 |
+| Kierrostilavuus | F1-61:n kierrostilavuus on luettelon mukaan **59,5 cm³/r** (ei 61). **⚠ tarkista** Parkerin luettelosta. | hakutulos Parkerin F1-luettelosta (MSG30-8220), ei luettu suoraan |
+
+Luettelosta ei löytynyt: ohitusasennon painehäviötä, lämpöä tai suurinta kierroslukua ohitusasennossa,
+eikä tietoa siitä, kuinka paljon öljyä ohitusasennossa kulkee järjestelmän kautta. **⚠ ei tiedossa**
+
+### Mitä BPV muuttaisi Vegalla [laskelma, arvio]
+
+**1. Kytkin päällä korkeilla kierroksilla (kytkin unohtunut tai pumppu ilman kytkintä).** Nykyisellä
+2/2-vapaakiertoventtiilillä pumpun koko tuotto (1800 rpm:llä noin 104 l/min) kulkee imuletkun,
+VPR3:n, paluusuodattimen ja jäähdyttimen kautta. Imupaine on silloin kylmällä öljyllä −0,3…−0,7 bar,
+VPR3:n ja suodattimen virtauskesto on epävarma, ja lämpöä tulee noin 2 kW. BPV:n ollessa
+ohitusasennossa öljy kiertää pumpun päätykappaleessa, joten:
+
+- **imuletkun virtaus putoaa muutamaan l/min:iin**, eikä imupuolen kavitaatioriskiä enää ole
+  (imupuolen taulukon 1000–1800 rpm:n rivit menettävät merkityksensä tässä tilassa);
+- VPR3:n, paluusuodattimen ja EC100:n ei tarvitse kestää 104 l/min:ää;
+- lämpökuorma pienenee Parkerin mukaan huomattavasti. Tarkkaa lukua ei ole, koska ohitusasennon
+  painehäviötä ei ilmoiteta. **⚠ ei tiedossa**
+
+**2. Keulapotkuri käytössä korkeilla kierroksilla:** BPV ei auta. Ylimäärä menee edelleen VPR3:n ja
+paineenrajoituksen yli (1000 rpm:llä ~16 kW, 1800 rpm:llä ~38 kW). **Keulapotkurin kierroslukitus
+tarvitaan edelleen.**
+
+**3. Voisiko BPV korvata PTO-kytkimen?** Tähän käyttöön Parker on venttiilin tehnyt: kuorma-auton
+pumppu on kytketty pysyvästi, ja BPV purkaa sen ajon ajaksi. Vegalla se tarkoittaisi:
+
+| | Borelli 30500 -kytkin + 2/2-venttiili (nykyinen suunnitelma) | BPV ilman kytkintä | Kytkin **ja** BPV |
+|---|---|---|---|
+| Pumppu pyörii ajossa | ei | **aina, kun kone käy** (laakerien ja akselitiivisteen kuluminen, pieni tyhjäkäyntihäviö) | ei |
+| Imupuolen kavitaatio korkeilla kierroksilla | ei (kytkin irti); riski, jos kytkin unohtuu päälle | ei (ohitus) | ei |
+| Ohjaus | mekaaninen vipu tai vaijeri, kauko-ohjaukseen toimilaite ja rajakytkin | 24 V:n kela (14–17 W) suoraan ESP32 PDM:ltä | molemmat |
+| Kytkentäehto | kytkin vain alle ~1000 rpm:ssä | venttiili vain alle 20 barissa, kaikilla kierroksilla | molemmat |
+| Kiinnitys | pumppu ISO 7653 -sovitelaipalla 30500:aan | pumppu sovitelaipalla suoraan PTO:hon (joustokytkin tai holkki) | kuten kytkimellä |
+| Hinta | kytkin + sovitteet, **⚠ tarjous Salhydrolta puuttuu** | BPV noin 430 € + ALV, käytettynä halvempi | molemmat |
+| Kun sähköt katkeavat | kytkin pysyy asennossaan | ohitus päälle, pumppu kiertää tyhjänä | ohitus päälle |
+
+- **Sähkökatko:** BPV on jännitteettömänä ohitusasennossa, joten sähkökatko pysäyttää keulapotkurin.
+  Sama tapahtuu jo nyt, koska 2/2-vapaakiertoventtiili on jännitteettömänä auki. Uutta vikatilaa ei
+  synny, mutta keulapotkuri ei ole käytettävissä sähkökatkon aikana kummassakaan ratkaisussa.
+  Ohjaus (P1) ei ole BPV:n varassa.
+- **Vikatila: BPV jää kiinni (ei ohita).** Ilman kytkintä pumppu syöttäisi koko tuoton piiriin
+  korkeilla kierroksilla, kuten nykyisessä suunnitelmassa unohtuneen kytkimen kanssa. 2/2-venttiili
+  aukeaa yhä, joten paine pysyy matalana, mutta imupuoli ja lämpö ovat samassa tilanteessa kuin
+  taulukossa yllä. **Öljyn lämpötila- ja imupaineanturi tarvitaan silti.**
+- **Pumppu pyörii jatkuvasti:** Parkerin F1-61:n suurin kierrosluku tyhjänä kiertäessä ja käyttöikä
+  jatkuvassa käytössä **⚠ tarkista** F1-luettelosta. Koneen 1800 rpm on selvästi alle noin 2600 rpm:n,
+  jonka pumppu kestää 350 barissa.
+- **Ohjausjärjestys** 20 barin rajan vuoksi:
+  - *Päälle:* 2/2-venttiili auki (paine alle 20 bar) → BPV:n kela päälle → 2/2-venttiili kiinni →
+    keulapotkurin venttiili.
+  - *Pois:* keulapotkurin venttiili keskelle → 2/2-venttiili auki → BPV:n kela pois.
+  - Ohjain hoitaa järjestyksen. Paineanturi pumpun lähdössä on hyvä varmistus.
+- **Vuotolinja:** Ohitusasennossa 2/2-venttiilin kautta kulkeva virtaus on **⚠ ei tiedossa**, joten
+  ei voida varmistaa, että se on vähintään 5 l/min. **Suositus: vuotolinja BPV:n 1/4":n
+  vuotoliitännästä suoraan säiliöön** (halpa varmistus; Parker vaatii sen, jos virtaus voi jäädä alle
+  5 l/min). Vuotolinja kulkee samaan säiliöön kuin muut paluut.
+
+**Arvio:** BPV ratkaisee kavitaation ja suuren läpivirtauksen kaikissa tilanteissa, joissa
+keulapotkuria ei käytetä. **Varteenotettavin käyttö on korvata sillä PTO-kytkin**, jos F1-61
+ostetaan: sähköinen ohjaus on yksinkertaisempi kuin mekaanisen kytkimen kauko-ohjaus, ja
+kierroslukitus koskee silloin vain keulapotkurin venttiiliä. Vertailu vaatii vielä Salhydron
+tarjouksen kytkimestä ja sovitteista sekä arvion siitä, kuinka paljon jatkuvasti pyörivä pumppu kuluu
+(Vegan ajotunnit vuodessa). Kytkimen kanssa BPV on lisävarmistus unohtunutta kytkintä vastaan,
+mutta 430 €:lla se on silloin kallis varmistus verrattuna kierroslukitukseen ja hälytykseen.
+Hammaspyöräpumppuun (vaihtoehto A) BPV:tä ei saa; sille vastaava ratkaisu olisi kytkin.
 
 ## Imupuoli: letkun koko ja pituus sekä öljylaatu
 
@@ -505,6 +602,9 @@ kauempaa:
 - [ ] Parker F1-061 (tori.fi, 100 €): holkin mitat, kunto; ostopäätös
 - [ ] F1-061: ISO 7653 -laipan ja 8×32×36-akselin sovitus Borellin 30500:een (sovitelaippa ja -holkki)
 - [ ] F1-061: pienin sallittu imupaine (Parkerin F1-luettelo)
+- [ ] F1-61: tarkka kierrostilavuus (59,5 vai 61 cm³), suurin kierrosluku ja käyttöikä jatkuvassa tyhjäkierrossa BPV:n kanssa
+- [ ] BPV-F1: ohitusasennon painehäviö ja lämpö; oikea vuotoliitinsarja F1-61:lle
+- [ ] BPV-F1 vai PTO-kytkin: Salhydron tarjous kytkimestä ja sovitteista, Vegan ajotunnit vuodessa (jatkuvasti pyörivän pumpun kuluminen)
 - [ ] PTO:n pyörimissuunta (pumpun suunta sovitetaan siihen)
 - [x] VPR3: kolmitie-etusijaventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [ ] Asennetun VPR3:n koko; paluusuodattimen virtausluokitus (~104 l/min 1800 rpm:llä)

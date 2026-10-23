@@ -26,6 +26,7 @@ käyttöohjeista ja tuotesivuista.
 | **Parker F1-061-R---000 (3781060)** | [Asennus- ja käyttöönotto-ohje HY30-8201 (pzip.ru)](https://pzip.ru/downloads/parker/HY30-8201-INST_EU.pdf?sku=3781060) | Ei vuotolinjaa; pyörimissuunnan vaihto (päätykappale 180°, 80–100 Nm); imuliitin ≥ 38 mm ≤ 60 l/min:lle; viskositeetti 10–400 cSt (suositus 20–30), käynnistys ≤ 4000 cSt; öljy ≤ 75 °C | [p2-pump-options](../hydraulics/design/p2-pump-options.md#ehdokas-parker-f1-061-käytettynä-torifi) |
 | Parker F1-061 (3781060) | [Jälleenmyyjän tuotesivu (pzip.ru)](https://pzip.ru/catalog/parker/3781060) | 61 cm³; 350–400 bar; DIN 5462 B8×32×36 -akseli; ISO | sama |
 | Parker F1 -sarja | [Parker, tuotesivu](https://ph.parker.com/us/en/axial-piston-fixed-pumps-series-f1) | 350 bar jatkuva / 400 bar (ISO); ≤ 2600 rpm 350 barissa. **⚠ F1-luettelo (koko datalehti) puuttuu**, mm. pienin imupaine. | sama |
+| **Parker BPV-F1-25 -ohitusventtiili** (F1-25…-61) | [Parker HY30-8200/PL s. 47–48 (dzwigi.net.pl)](https://cdn.dzwigi.net.pl/b/v2/3787424/Document/zawory%20bocznikowe%20BPV%20Parker.pdf) (puolaksi, osin *kuvana*); [MSG30-8200/UK s. 60 (paro.nl)](https://paro.nl/library//storage/datasheets/Parker/UK/Parker_BPV-F1-BPV-T1_uk.pdf/datasheet.html); [hinnat (dzwigi.net.pl)](https://dzwigi.net.pl/en/sklep/4957-bpv.html) | Jännitteettömänä ohitus (painelähtö → imu), jännitteellisenä syöttää piiriin; vaihto vain alle 20 barissa; ohitustilassa ≥ 5 l/min järjestelmän kautta tai vuotolinja (BSP 1/4") säiliöön; 350/400 bar; 24 VDC 14–17 W; 24 VDC: 378 7201 / 378 4179 (vanha 378 1401); ~1814 PLN + ALV | [p2-pump-options](../hydraulics/design/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili) |
 | VNK3 ryhmän 3 hammaspyöräpumppu (Flowfit) | Flowfitin datalehti, ks. kytkinkokoonpano alla (s. 1–2, *kuvana*) | 43 ja 51 cm³: 250 bar jatkuva / 300 huippu; 60 cm³: 200 / 250 bar | [p2-pump-options](../hydraulics/design/p2-pump-options.md) |
 | Sunfab SCP (SAE) | [Sunfab, luettelo](https://www.sunfab.com/media/ocuftr3s/3106en2110scp-012-108-sae.pdf) | SCP 064: 63,5 cm³; 350–400 bar; 1900 rpm jatkuva | vertailu |
 | Casappa Polaris PLP30 | [Hydraspecma, PLP30.61D](https://www.hydraspecma.com/store/no/en/find/item/03599158) | 61 cm³: vain 160 bar jatkuva | vertailu |
@@ -74,7 +75,9 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 ## Puuttuvat datalehdet
 
 - [ ] Advance 300 -merivaihteen käyttöohje (PTO, jäähdytys)
-- [ ] Parker F1 -luettelo (pienin sallittu imupaine, tarkka kierrostilavuus)
+- [ ] Parker F1 -luettelo (pienin sallittu imupaine, tarkka kierrostilavuus, suurin kierrosluku BPV:n ohitustilassa)
+- [x] Parker BPV-F1 -ohitusventtiili (HY30-8200/PL s. 47)
+- [ ] BPV-F1:n asennusohje MSG30-8227-INST (ohitusasennon painehäviö)
 - [x] Side-Power SH -sarjan tuote-esite (suorituskyky)
 - [x] Sleipner SH240 -asennusohje (2025)
 - [x] Sleipner SH -käyttöohje (2025)

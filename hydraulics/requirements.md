@@ -200,6 +200,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
   - PTO-kytkimen kytkentä vain alle noin 1000 rpm:ssä ja vapaakiertoventtiilin ollessa auki.
   - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään ja 2/2-vapaakiertoventtiili avataan automaattisesti (rajaa lämpökuorman ~1–2 kW:iin; ks. [p2-pump-options.md](design/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)).
   - Hälytys, jos kytkin on päällä yli noin 1200 rpm:ssä.
+  - Jos P2:ksi tulee Parker F1 ja siihen BPV-ohitusventtiili: BPV:n tilaa saa vaihtaa vain alle 20 barissa (2/2-venttiili ensin auki), ja yli noin 1000 rpm:ssä BPV ohitusasentoon. Ks. [p2-pump-options.md](design/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
   - Muut TBD.
 
 ## 11. Standardit ja määräykset
