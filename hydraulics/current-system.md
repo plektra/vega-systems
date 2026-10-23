@@ -3,8 +3,9 @@
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
 > (ks. §0). Päivitetty 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
-> **Hydraulijärjestelmä on tällä hetkellä kokonaan purettuna** (lokakuu 2026). Luvut 3.1–3.5
-> kuvaavat viimeisintä koottua kokoonpanoa (2017–2018). Osa niiden osista käytetään uudelleen.
+> **Hydraulipumput on irrotettu** (lokakuu 2026); muu järjestelmä (säiliö, venttiilit, orbitroli,
+> sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Luvut 3.1–3.5 kuvaavat viimeisintä
+> koottua kokoonpanoa (2017–2018); pumppujen veto (3.1–3.2) muuttuu, muu osin käytetään uudelleen.
 >
 > Lähteet: `[blogi VVVV-KK-PP]` viittaa blogikirjoituksiin (`plektra.github.io/_posts/`),
 > `[omistaja VVVV-KK-PP]` omistajien antamiin tietoihin.
@@ -15,7 +16,7 @@
 |---|---|
 | Vaihteisto | Advance 300 on **asennettu ja linjattu** potkuriakseliin, ja akselille on uusi laakeripukki |
 | Pääkone | Asennetaan takaisin ja linjataan vaihteistoon |
-| Hydrauliikka | **Kokonaan purettu**, molemmat pumput irrotettu. Mitään ei kootaan ennen kuin kone on linjattu. |
+| Hydrauliikka | **Molemmat pumput irrotettu**; muu järjestelmä (säiliö, venttiilit, orbitroli, sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Pumppuja ei asenneta ennen kuin kone on linjattu. |
 | Suunnitelma: ohjauspumppu | Pieni vakiotilavuuspumppu (P1, 16,6 cm³) palaa koneen etupäähän, kahden kiilahihnan vetämänä kuten ennenkin. **Vain ohjaukselle.** |
 | Suunnitelma: apupiirin pumppu | **Parker F1-61** (59,5 cm³, vinoakselimäntäpumppu) **suoraan Advance 300:n voimanulosotosta (PTO)** [päätös 2026-10-23] |
 | Advance 300:n PTO | **Välitys 1:1, käyttö ensiöakselilta** (pyörii aina kun kone käy, myös vapaalla). **Ei omaa kytkintä.** Nimellisteho **0,044 kW/rpm**, eli vakiomomenttiraja **≈ 420 Nm** (35 kW 800 rpm:llä, 110 kW 2500 rpm:llä). Ulostulo on **sileä Ø48 mm:n kiila-akseli** ilman pumppulaippaa. |
@@ -308,7 +309,7 @@ vasen- ja oikeakätinen potkuri.
 
 Ratkaistut:
 
-- [x] Pumppujen veto: P1 etupään hihnoille, P2 vaihteiston PTO:lle (suunniteltu; nyt purettuna)
+- [x] Pumppujen veto: P1 etupään hihnoille, P2 vaihteiston PTO:lle (suunniteltu; pumput nyt irrotettu)
 - [x] Advance 300 asennettu ja linjattu
 - [x] Advance 300:n PTO: 1:1, ensiöakseli (pyörii vapaalla), ei omaa kytkintä
 - [x] Advance 300:n PTO:n nimellisarvo: 0,044 kW/rpm (≈ 420 Nm)
@@ -332,6 +333,7 @@ Avoimet:
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto ja täysiaukkoinen palloventtiili; BPV:n vuotolinjan paluu öljypinnan alle
 - [ ] PTO:n pyörimissuunta (F1-pumpun suunta R/L sovitetaan siihen)
 - [x] Valitun pumpun pienin sallittu imupaine: 1,0 bar abs (Parker F1)
+- [ ] Mitä öljyä järjestelmässä nyt on (säiliö ja letkut paikallaan): merkki, luokka, ikä; vaihdetaanko ja huuhdellaanko
 - [ ] Hydrauliöljyn tyyppi ja luokka (suositus **HV 32**, ks. [p2-pump-options.md](design/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu))
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa

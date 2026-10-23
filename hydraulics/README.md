@@ -15,7 +15,8 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 
 ## Tilanne lyhyesti
 
-Kaikki hydrauliikka on purettuna, kun konetta linjataan uuteen Advance 300 -vaihteistoon.
+Hydraulipumput on irrotettu, kun konetta linjataan uuteen Advance 300 -vaihteistoon; muu
+järjestelmä (säiliö, venttiilit, orbitroli, sylinteri, letkut) on paikallaan.
 Suunnitelmassa on kaksi piiriä:
 
 - **Ohjaus:** 16,6 cm³:n hammaspyöräpumppu koneen etupäästä hihnavedolla, syöttää orbitrolia ja
