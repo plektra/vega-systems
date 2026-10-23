@@ -233,7 +233,8 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Hätäohitus | Käsiventtiili A- ja B-linjan välissä sylinterin vieressä, irrotettavaa hätäpinnaa varten | [blogi 2017-07-04] |
 | Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
 | Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus; asetusarvo **⚠ tarkista** (tehdasvaihtoehdot 80–170 bar) | [datalehti HKUS] |
-| Varasyöttö | P3 vastaventtiilin kautta RPF3:n tuloon | Suunniteltu 2017. **⚠ Tarkista**, onko asennettu. 65 A:n laturi ei jaksa syöttää sitä pitkään. |
+| Varasyöttö | P1 ja P3 yhdistyvät T-haarassa, **kumpikin oman vastaventtiilinsä kautta**, RPF3:n tuloon [omistaja 2026-10-23] | P3 on kytketty. 65 A:n laturi ei jaksa syöttää sitä pitkään. |
+| Painelinjat | **1/2"** koko piirissä 1 [omistaja 2026-10-23] | |
 | Imulinja | **25 mm, 320 cm**; P1:n imuaukko **3/4"** [omistaja 2026-10-23]; Salamin raja −0,3 bar ylipainetta. Laskelma ja ehdotus 32 mm:n linjasta: [p1-steering-pump.md](design/p1-steering-pump.md) | Koko tuotto kulkee imuletkun läpi (RPF3:n ylimäärä palaa säiliöön) |
 | Ilmaus | Ei ilmausruuveja; sylinterin liitännät sivuilla | Vaikea ilmata [blogi 2017-07-04] |
 
@@ -342,8 +343,9 @@ Avoimet:
 - [ ] U11-moottorin suurin sallittu paine: ohjeiden taulukoiden perusteella noin 275 bar; vahvista Sleipneriltä
 - [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
-- [ ] Onko sähköinen varapumppu kytketty?
-- [ ] Onko P1:n painelinjassa vastaventtiili (P3:n syöttö voi muuten vuotaa P1:n kautta säiliöön)? Ks. [schematic.md](schematic.md#arkki-1-piiri-1-ohjaus)
+- [x] Sähköinen varapumppu P3 on kytketty: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
+- [x] P1:n painelinjassa on vastaventtiili ennen T-haaraa [omistaja 2026-10-23]
+- [x] Piirin 1 painelinjat 1/2" [omistaja 2026-10-23]
 - [ ] Ohjaussylinterin männän ja varren halkaisija ja iskunpituus, ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
 - [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus

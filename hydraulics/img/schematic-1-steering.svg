@@ -19,7 +19,7 @@
     <text x="40" y="83">Venttiilit lepoasennossa (jännitteetön, käsi vapaana)</text>
     <text x="40" y="98">Yhtenäinen viiva: paine-, paluu- ja imulinja</text>
     <text x="40" y="113">Katkoviiva: ohjauslinja · pisteviivakehys: komponenttiyhdistelmä</text>
-    <text x="40" y="128" fill="#888">Harmaa: asennus tai kytkentä ⚠ tarkistettava</text>
+    <text x="40" y="128">Piirin 1 painelinjat 1/2"</text>
     <text x="40" y="143">⚠ = arvo tai tieto tarkistettava · osaluettelo: schematic.md</text>
   </g>
 
@@ -38,7 +38,7 @@
   <!-- A- ja B-linjat -->
   <line x1="500" y1="130" x2="500" y2="360"/>
   <line x1="700" y1="130" x2="700" y2="360"/>
-  <text x="493" y="330" text-anchor="end" stroke="none" fill="#000" font-size="11">G1/2, letkukoko ⚠</text>
+  <text x="493" y="330" text-anchor="end" stroke="none" fill="#000" font-size="11">1/2" (orbitroli G1/2)</text>
 
   <!-- ===== 1V3 Hätäohitus (2/2, käsi, lepoasennossa kiinni) ===== -->
   <rect x="580" y="220" width="40" height="40" stroke-width="1.5"/>
@@ -112,7 +112,11 @@
 
   <!-- ===== 1V1 Etusijaventtiili RPF3 ===== -->
   <rect x="440" y="615" width="180" height="110" stroke-width="1" stroke-dasharray="12 4 2 4"/>
-  <line x1="520" y1="560" x2="520" y2="775"/>
+  <line x1="520" y1="560" x2="520" y2="746"/>
+  <line x1="520" y1="770" x2="520" y2="775"/>
+  <!-- 1V7 P1:n vastaventtiili (vapaa virtaus ylöspäin) -->
+  <path d="M520 770 L509 752 M520 770 L531 752" stroke-width="1.5"/>
+  <circle cx="520" cy="754" r="8" fill="#fff" stroke-width="1.5"/>
   <rect x="512" y="638" width="16" height="24" fill="#fff" stroke="none"/>
   <path d="M512 638 Q522 650 512 662 M528 638 Q518 650 528 662" stroke-width="1.5"/>
   <line x1="506" y1="668" x2="533" y2="633" stroke-width="1" marker-end="url(#ah)"/>
@@ -133,12 +137,13 @@
     <text x="430" y="640" font-weight="bold">1V1 Etusijaventtiili RPF3</text>
     <text x="430" y="656">(Marchesini), CF 20 l/min orbitrolille</text>
     <text x="430" y="672">ylimäärä EF → paluu</text>
-    <text x="430" y="688">koko 3/8" tai 1/2" ⚠</text>
+    <text x="430" y="688">koko todennäköisesti 1/2" ⚠</text>
   </g>
 
   <!-- painelinja ja P3:n liitos -->
-  <text x="510" y="765" text-anchor="end" stroke="none" fill="#000" font-size="11">painelinja, koko ⚠</text>
-  <circle cx="520" cy="745" r="4" fill="#000" stroke="none"/>
+  <text x="504" y="752" text-anchor="end" stroke="none" fill="#000" font-weight="bold">1V7</text>
+  <text x="504" y="767" text-anchor="end" stroke="none" fill="#000" font-size="11">vastaventtiili</text>
+  <circle cx="520" cy="735" r="4" fill="#000" stroke="none"/>
 
   <!-- ===== 1P1 Ohjauspumppu ja veto ===== -->
   <circle cx="520" cy="800" r="25"/>
@@ -169,26 +174,26 @@
   </g>
   <text x="552" y="962" stroke="none" fill="#000"><tspan font-weight="bold">1Z1 Säiliö</tspan> Flowfit 100 l (80 l öljyä)</text>
 
-  <!-- ===== 1P2 Varapumppu P3 (harmaa = tarkistettava) ===== -->
-  <g stroke="#888">
+  <!-- ===== 1P2 Varapumppu P3 ===== -->
+  <g stroke="#000">
     <circle cx="760" cy="800" r="25"/>
-    <path d="M760 776 L751 791 L769 791 Z" fill="#888" stroke-width="1"/>
+    <path d="M760 776 L751 791 L769 791 Z" fill="#000" stroke-width="1"/>
     <path d="M785 797 H818 M785 803 H818" stroke-width="1.5"/>
     <circle cx="840" cy="800" r="22"/>
-    <path d="M760 775 V745 H680 M650 745 H520"/>
-    <path d="M680 745 L662 734 M680 745 L662 756" stroke-width="1.5"/>
-    <circle cx="660" cy="745" r="8" fill="#fff" stroke-width="1.5"/>
+    <path d="M760 775 V735 H680 M650 735 H520"/>
+    <path d="M680 735 L662 724 M680 735 L662 746" stroke-width="1.5"/>
+    <circle cx="660" cy="735" r="8" fill="#fff" stroke-width="1.5"/>
     <line x1="760" y1="825" x2="760" y2="958"/>
     <path d="M752 893 L768 893 L760 905 Z M752 917 L768 917 L760 905 Z" fill="#fff" stroke-width="1.5"/>
     <path d="M738 942 V966 H782 V942"/>
   </g>
-  <text x="840" y="806" text-anchor="middle" font-size="16" font-weight="bold" stroke="none" fill="#888">M</text>
-  <g stroke="none" fill="#888">
-    <text x="660" y="728" text-anchor="middle" font-weight="bold">1V4</text>
-    <text x="700" y="728">vastaventtiili</text>
+  <text x="840" y="806" text-anchor="middle" font-size="16" font-weight="bold" stroke="none" fill="#000">M</text>
+  <g stroke="none" fill="#000">
+    <text x="660" y="716" text-anchor="middle" font-weight="bold">1V4</text>
+    <text x="690" y="716">vastaventtiili</text>
     <text x="790" y="845" font-weight="bold">1P2 Varapumppu (P3)</text>
     <text x="790" y="861">1M2 sähkömoottori 24 V, 2,5 kW</text>
-    <text x="790" y="877">asennus ja kytkentä ⚠</text>
+    <text x="790" y="877">kierrostilavuus ⚠</text>
     <text x="772" y="915">1V6 · imu 3/4"</text>
   </g>
 
@@ -199,7 +204,7 @@
     <text x="950" y="882" font-size="13" font-weight="bold">Vega — hydraulijärjestelmä</text>
     <text x="950" y="904">Arkki 1/3: Piiri 1, ohjaus</text>
     <text x="950" y="920">ISO 1219-1 -merkit, ISO 1219-2 -periaatteet</text>
-    <text x="950" y="936">Versio 0.1 · 2026-10-23</text>
+    <text x="950" y="936">Versio 0.2 · 2026-10-23</text>
     <text x="950" y="953" font-weight="bold" fill="#b00">Tila: LUONNOS – ei rakentamiseen</text>
     <text x="950" y="969">Tarkastettava pätevällä henkilöllä</text>
     <text x="950" y="984">Piirtänyt: Claude · Hyväksynyt: –</text>
