@@ -4,14 +4,14 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 
 | Tiedosto | Sisältö |
 |---|---|
-| [schematic.md](schematic.md) | **Kaavio** suunnitellusta järjestelmästä (ohjaus, apupiiri, paluu ja jäähdytys) |
+| [schematic.md](schematic.md) | **Kaaviot**: ISO 1219 -arkit 1–3 (ohjaus, apupiiri, paluu ja jäähdytys; luonnos) osaluetteloineen sekä lohkokaaviot |
 | [current-system.md](current-system.md) | Lähtötilanne, nykyinen remonttitilanne (§0), vaikutukset suunnitteluun, avoimet kysymykset |
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
 | [design/p2-pump-options.md](design/p2-pump-options.md) | Apupiirin pumppu ja veto: päätetty kokoonpano (F1-61, BPV, Spidex), taustavertailu ja muut Parkerin pumput (F1-51 vaihtoehtona) |
-| [design/p1-steering-pump.md](design/p1-steering-pump.md) | Ohjauspumpun imulinja (25 mm, 3,2 m) ja ehdotetut P1:n muutokset P2-remontin yhteydessä |
-| [design/hydraulic-oil.md](design/hydraulic-oil.md) | Hydrauliöljyn valinta: komponenttien rajat, HV 32 / VG 46 / HV 46 -vertailu, tuotteet (suositus HVLP 32) |
-| [design/oil-cooling.md](design/oil-cooling.md) | Öljyn lämpökuorma ja jäähdytys (Bowman EC100) |
+| [design/p1-steering-pump.md](design/p1-steering-pump.md) | Ohjauspumpun imulinja (päätetty 32 mm) ja P1:n muutokset P2-remontin yhteydessä |
+| [design/hydraulic-oil.md](design/hydraulic-oil.md) | Hydrauliöljyn valinta: komponenttien rajat, HV 32 / VG 46 / HV 46 -vertailu, tuotteet (päätetty HVLP 32) |
+| [design/oil-cooling.md](design/oil-cooling.md) | Öljyn lämpökuorma ja jäähdytys (Bowman EC100 tai EC80; päättämättä) |
 | [img/](img/) | Kaaviot ja kuvat |
 
 ## Tilanne lyhyesti

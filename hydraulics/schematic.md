@@ -6,8 +6,8 @@
 > [design/p2-pump-options.md](design/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
 > Vanha kaavio (2018): [img/hydraulics-v3-2018.png](img/hydraulics-v3-2018.png).
 >
-> **ISO 1219 -kaaviot** (2026-10-23, luonnos): arkki 1 ohjauspiiri valmis (v0.2), ks. alla. Arkit 2 (apupiiri)
-> ja 3 (paluu ja jäähdytys) tulossa. Alla olevat Mermaid-lohkokaaviot säilyvät yleiskuvana.
+> **ISO 1219 -kaaviot** (2026-10-23, luonnos): arkki 1 ohjauspiiri, arkki 2 apupiiri ja keulapotkuri,
+> arkki 3 paluu, jäähdytys ja säiliö. Alla olevat Mermaid-lohkokaaviot säilyvät yleiskuvana.
 
 ## ISO 1219 -kaaviot (luonnos)
 
@@ -41,6 +41,47 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 - ~~P1:n painelinjan vastaventtiili~~: on olemassa (1V7) ennen T-haaraa [omistaja 2026-10-23].
 - Orbitrolin iskuventtiilejä ja imuventtiilejä ei ole piirretty erikseen (orbitrolin sisällä).
 - Painelinjat 1/2" [omistaja 2026-10-23]; paluulinjojen koot puuttuvat.
+
+### Arkki 2: Piiri 2, apupiiri ja keulapotkuri
+
+![Apupiiri ISO 1219 -merkein](img/schematic-2-auxiliary.svg)
+
+| Tunnus | Osa | Tiedot | Lähde |
+|---|---|---|---|
+| 2M1 | Advance 300 PTO | 1:1, Ø48 mm kiila-akseli, ≤ 420 Nm; pyörii vastakkaiseen suuntaan kuin kone | [current-system §0](current-system.md), [omistaja 2026-10-23] |
+| 2Z3 | Spidex 48/60 -kynsikytkin | hammaskehä 98 Sh A | [päätös 2026-10-23](../decisions.md) |
+| 2P1 | Parker F1-61 | 59,5 cm³/r, 350/400 bar; suunta R/L valitaan koneen suunnan mukaan **⚠** | [p2-pump-options](design/p2-pump-options.md) |
+| 2V1 | Parker BPV-F1 378 4179, Y1 | jännitteetön = ohitus (pumppu kiertää tyhjänä), käsiohitus; vuotolinja 1/4" suoraan säiliöön; kaaviossa yksinkertaistettu 2/2-venttiilinä | [p2-pump-options](design/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili) |
+| 2V0 | Imulinjan palloventtiili | täysiaukkoinen; imu 50 mm, Ø50-imuliitin | [päätös 2026-10-23](../decisions.md) |
+| 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar | [päätös 2026-10-23](../decisions.md) |
+| 2V2 | Marchesini VPR3 3/4" | kolmitie-prioriteettiventtiili, A 35 l/min, ylimäärä B → paluu | [omistaja 2026-10-23], [datalehti VPR3] |
+| 2G1 | Painemittari | P-linjassa ennen pohjalaattaa | [blogi 2017-04-01] |
+| 2V3 | Marchesini VMP 3/4" | paineenrajoitus 250 bar; paikka P-linjassa **⚠ tarkista** | [datalehti VMP] |
+| 2V4 | Rexroth OD15 2/2, Y2 | omassa rungossaan; jännitteetön auki → T, jännitteellinen kiinni → paine pohjalaatalle | [omistaja 2026-10-23] |
+| 2Z2 | Flowfit CETOP 3 -pohjalaatta | 4 paikkaa, 1 käytössä; teräs; painearvo **⚠** | [omistaja 2026-10-22] |
+| 2V5 | fluiconnecto BAV-IC3-713, Y3a/Y3b | 4/3, keskiasento P kiinni, A–B–T yhdistetty; 24 V | [omistaja 2026-10-23] |
+| 2M2 | Sleipner U11 / SH240 | 100 %: 33,8 l/min, 264 bar; A/B 1/2" SAE 100R2AT 2 × 8,5 m; vuotolinja 1/4" | [ohje Sleipner 2746 35 2025] |
+
+### Arkki 3: Paluu, jäähdytys ja säiliö
+
+![Paluu ja jäähdytys ISO 1219 -merkein](img/schematic-3-return-cooling.svg)
+
+| Tunnus | Osa | Tiedot | Lähde |
+|---|---|---|---|
+| 3E1 | Öljynjäähdytin Bowman EC100 tai EC80 **⚠** | suunnitteilla, ei päätetty; merivesi 25–50 l/min | [oil-cooling](design/oil-cooling.md) |
+| 3V1 | Jäähdyttimen ohitusventtiili | 3–4 bar, rinnakkain jäähdyttimen kanssa | [oil-cooling](design/oil-cooling.md#paluulinja-asennus) |
+| 3V3 | Merivesihaaran virtauksenrajoitus | 30–40 l/min; vakiovirtausventtiili tai käsiventtiili **⚠ päättämättä** | [oil-cooling](design/oil-cooling.md#merivesi) |
+| 3V4 | Kuristus merivesipäälinjaan | ohjaa osan virtauksesta haaraan | [oil-cooling](design/oil-cooling.md#merivesi) |
+| 3Z2 | Paluusuodatin | painemittarilla; virtausluokitus **⚠** | [blogi 2017-04-10] |
+| 3Z1 | Säiliö Flowfit 100 l | 80 l HVLP 32; uusi 50 mm:n ulosotto P2:lle, 32 mm jää P1:lle | [päätös 2026-10-23](../decisions.md) |
+| 3B1 | Öljyn lämpötila-anturi | varoitus 65 °C, hälytys 70 °C → ESP32 / Signal K | [päätös 2026-10-23](../decisions.md) |
+
+**Arkkeja 2 ja 3 piirtäessä esiin tulleet asiat:**
+
+- Vuotolinjat (BPV ja U11) on piirretty suoraan säiliöön öljypinnan alle. BPV:lle Parker vaatii
+  tämän; U11:n vuotolinja on nyt paluulinjassa, ja liitoskohta pitää tarkistaa.
+- VMP:n paikka P-linjassa (VPR3:n ja 2/2-venttiilin välissä?) **⚠ tarkista**.
+- Arkki 2: P2:n lähtöpaineanturia (vaatimuksissa ehdotettu) ei ole piirretty, koska siitä ei ole päätetty.
 
 ## 1. Voimansiirto ja ohjauspiiri
 
