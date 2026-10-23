@@ -97,5 +97,5 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 - [x] BAV-713 (fluiconnecto BAV-IC3-713)
 - [ ] BAV-713:n painehäviökäyrä
 - [ ] CETOP 3 -pohjalaatan painearvo (ei Flowfitin mittapiirustuksessa)
-- [ ] HRC 150 -joustokytkin
+- [x] ~~HRC 150 -joustokytkin~~: ei tarpeen, veto Spidex 48/60 -kytkimellä (päätös 2026-10-23)
 - [ ] Caterpillar 3126B -merimoottorin tekniset tiedot (merivesipumppu, tyhjäkäynti)

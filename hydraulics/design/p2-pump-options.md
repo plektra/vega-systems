@@ -814,31 +814,27 @@ tyhjäkäynti on mitattu vähintään 700 rpm:ksi.
 - [x] Tyhjäkäynti: oletetaan 700 rpm, ei mitata (päätös 2026-10-23)
 - [x] Parker F1-061: tyyppikilpi F1-061-R---000, osanumero 3781060; vuotolinjaa ei tarvita
 - [x] P2:ksi valittu Parker F1-61 (päätös 2026-10-23)
-- [ ] Parker F1-061 (tori.fi, 100 €): kunto, holkin mitat, imuliitin mukana?; osto
+- [ ] Parker F1-061 (tori.fi, 100 €): kunto, holkin mitat, tuleeko imuliitin mukana (ISO-mallissa ei kierreimuaukkoa); osto
 - [x] ~~F1-061: sovitus Borellin 30500:een~~ ei tarpeen, PTO-kytkimestä luovuttu (päätös 2026-10-23)
 - [x] F1-061: pienin sallittu imupaine 1,0 bar abs (≈ 0 bar ylipainetta) [luettelo MSG30-8200/UK s. 14]
 - [x] F1-61: kierrostilavuus 59,5 cm³; suurin itseimevä kierrosluku 2400 rpm, lyhytsuljettuna 2700 rpm [luettelo s. 23]
 - [x] F1-61: jatkuvasti pyörivän pumpun kuluminen; omistajien arvio: kestää (kuorma-autokäyttöön tehty, Vega alle 1000 h/v) [omistaja 2026-10-23]
 - [x] BPV-F1: vuotoliitinsarja 378 3039 tulee venttiilin mukana; vuotolinja on pakollinen [MSG30-8227]
-- [ ] BPV-F1: ohitusasennon painehäviö ja lämpö (ei julkaistu; kysy Parkerilta tai mittaa)
-- [ ] Tuleeko tori.fi-pumpun mukana imuliitin (ISO-mallissa ei kierreimuaukkoa)?
-- [ ] Veto ilman kytkintä: tarjous Salhydrolta Spidex 48/60 -osista (SPI-48A-KL-A8X32X36, SPI-48A-ST-D48H7, hammaskehä 98 Sh A); onko HRC 150 jo hankittu?
+- [ ] **BPV-F1: ohitusasennon painehäviö ja lämpö ajossa** (tunteja 1000–1800 rpm:llä; ei julkaistu): kysy Parkerilta, mittaa öljyn lämpötila ensimmäisellä kaudella
+- [ ] Veto ilman kytkintä: tarjous Salhydrolta Spidex 48/60 -osista (SPI-48A-KL-A8X32X36, SPI-48A-ST-D48H7, hammaskehä 98 Sh A)
 - [x] PTO-akselin pituus ja tila kannakkeelle: omistajilla tiedossa [omistaja 2026-10-23]
-- [ ] Imulinjan suurentaminen 50 mm:iin: säiliön ulosotto ja palloventtiili
 - [x] Vegan koneen käyttötunnit: alle 1000 h vuodessa [omistaja 2026-10-23]
 - [x] BPV-F1 vai PTO-kytkin: BPV valittu (päätös 2026-10-23)
-- [ ] **BPV:n ohitustilan lämpö ajossa** (tunteja 1000–1800 rpm:llä): ei julkaistu; kysy Parkerilta, mittaa öljyn lämpötila ensimmäisellä kaudella
 - [ ] Pumppukannakkeen suunnittelu: ISO 7653 -laippa, linjaus PTO-akseliin, Spidex-kytkimen 140 mm, suojakotelo
-- [ ] Säiliöön liitännät: 50 mm:n imu-ulosotto ja palloventtiili, vuotolinjan paluu öljypinnan alle
+- [ ] Säiliön liitännät: 50 mm:n imu-ulosotto (uuteen kohtaan, vanha 32 mm jää P1:lle) ja täysiaukkoinen palloventtiili, imulinja mahdollisimman lyhyt; BPV:n vuotolinjan paluu öljypinnan alle
 - [ ] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; koneen suunta **⚠ tarkista**
 - [x] VPR3: kolmitie-prioriteettiventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [x] Asennetun VPR3:n koko: 3/4" [omistaja 2026-10-23]
 - [ ] Paluusuodattimen virtausluokitus
-- [ ] Ohjauspumpun, orbitrolin ja Side-Power SH240:n öljyvaatimukset (HV 32 käy?)
-- [ ] Imulinja 50 mm (päivitetty, aiemmin 38 mm) ja mahdollisimman lyhyt; säiliön ulosotto ja palloventtiili täysiaukkoinen
+- [x] Öljy: HVLP 32 (päätös 2026-10-23), ks. [hydraulic-oil.md](hydraulic-oil.md)
 - [x] ~~Salhydro: Borelli 30501/30502 -tarjous~~ ei tarpeen (päätös 2026-10-23)
 - [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)
 - [x] ~~Side-Power SH240:n hydraulimoottorin suurin paine~~: ei tarvita, paineenrajoitus pysyy 250 barissa
 - [x] BAV-713 350 bar, VMP 350 bar, 2/2-patruunaventtiili 350 bar
-- [ ] CETOP 3 -pohjalaatan painearvo (teräs; Flowfit)
-- [ ] Hyväksyykö CAT 3126B:n elektroniikka ulkoisen kierrostenkorotussignaalin? (vaihtoehto B)
+- [ ] CETOP 3 -pohjalaatan painearvo (teräs; Flowfit): vahvista, että kestää 250 bar
+- [x] ~~CAT 3126B:n kierrostenkorotussignaali (vaihtoehto B)~~: ei tarpeen, P2 = F1-61

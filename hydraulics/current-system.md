@@ -352,7 +352,7 @@ Avoimet:
 - [x] Ohjaussylinterin malli: ZS60350100 [omistaja 2026-10-23]
 - [x] Ohjaussylinterin mitat: männän Ø 60 mm, varren Ø 35 mm, isku 100 mm [omistaja 2026-10-23]
 - [ ] Ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
-- [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
+- [ ] Mahdollinen autopilotti ja sen liitäntä ohjauspiiriin (orbitrolin malli selvitetty, ks. alla)
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
 - [ ] Orbitrolin paineenrajoituksen asetusarvo
 - [x] VPR3 3/4", RPF3 1/2" [omistaja 2026-10-23]
@@ -367,7 +367,7 @@ Avoimet:
 - [x] CETOP-pohjalaatta: Flowfit NG6, 4-paikkainen, rinnankytketty, P/T 1/2", A/B 3/8"
 - [x] 2/2-venttiili on omassa erillisessä rungossaan, ei pohjalaatan kavitetissa [omistaja 2026-10-23]
 - [x] Pohjalaatan materiaali: teräs
-- [ ] Pohjalaatan painearvo Flowfitilta (rajoittaako 280 barin vaihtoehtoa?)
+- [ ] Pohjalaatan painearvo Flowfitilta: vahvista, että kestää 250 bar (teräs, todennäköisesti 250–350 bar)
 - [ ] VMP:n jousialue (80–300 bar?) ja nykyinen asetus
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä; **onko varalla oleva malli EC100 vai EC80** (EC80: noin puolet tehosta) (ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata
