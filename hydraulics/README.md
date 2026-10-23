@@ -9,6 +9,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
 | [design/p2-pump-options.md](design/p2-pump-options.md) | Apupiirin pumppu ja veto: päätetty kokoonpano (F1-61, BPV, Spidex) ja taustavertailu |
+| [design/p1-steering-pump.md](design/p1-steering-pump.md) | Ohjauspumpun imulinja (25 mm, 3,2 m) ja ehdotetut P1:n muutokset P2-remontin yhteydessä |
 | [design/oil-cooling.md](design/oil-cooling.md) | Öljyn lämpökuorma ja jäähdytys (Bowman EC100) |
 | [img/](img/) | Kaaviot ja kuvat |
 

@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Päivitetty 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulijärjestelmä on tällä hetkellä kokonaan purettuna** (lokakuu 2026). Luvut 3.1–3.5
 > kuvaavat viimeisintä koottua kokoonpanoa (2017–2018). Osa niiden osista käytetään uudelleen.
@@ -24,6 +24,7 @@
 | Keulapotkurin letkut | **Pääosin valmiit:** 1/2" **SAE 100R2AT / EN 853** -letkut, omistajien mukaan 300 bar, CETOP-venttiileiltä keulapotkurille. A- ja B-linjat **8,5 m kumpikin**. |
 | P2:n painelinja | 3/4" letku pumpulta venttiileille. PTO-sijoitus vaatii **3–4 m** letkua. |
 | P2:n imulinja | **50 mm** [päätös 2026-10-23; aiemmin 32 mm:n sisähalkaisija, noin 3 m]. Säiliön öljypinta on noin 1 m pumpun imuaukon yläpuolella. |
+| P1:n imulinja | **25 mm:n sisähalkaisija, 320 cm** [omistaja 2026-10-23]. Riittää lämpimällä öljyllä; kylmällä öljyllä suurilla kierroksilla alittaa Salamin −0,3 barin rajan, ja 5 m:n pituudella 25 mm ei riitä. **Ehdotus:** 32 mm (P2:n vapautuva letku), ks. [p1-steering-pump.md](design/p1-steering-pump.md). |
 | Apupiirin paluulinja | 3/4" letku, **< 0,5 m**, venttiililohkolta säiliöön (paluusuodattimen kautta) |
 | Päätös: järjestelmäpaine | **Pysytään 250 barin luokassa.** Noin 90 %:n keulapotkuriteho hyväksytään kustannusten vuoksi. |
 
@@ -232,6 +233,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
 | Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus; asetusarvo **⚠ tarkista** (tehdasvaihtoehdot 80–170 bar) | [datalehti HKUS] |
 | Varasyöttö | P3 vastaventtiilin kautta RPF3:n tuloon | Suunniteltu 2017. **⚠ Tarkista**, onko asennettu. 65 A:n laturi ei jaksa syöttää sitä pitkään. |
+| Imulinja | **25 mm, 320 cm** [omistaja 2026-10-23]; Salamin raja −0,3 bar ylipainetta. Laskelma ja ehdotus 32 mm:n linjasta: [p1-steering-pump.md](design/p1-steering-pump.md) | Koko tuotto kulkee imuletkun läpi (RPF3:n ylimäärä palaa säiliöön) |
 | Ilmaus | Ei ilmausruuveja; sylinterin liitännät sivuilla | Vaikea ilmata [blogi 2017-07-04] |
 
 ### 3.4 Piiri 2 — Apupiiri
@@ -256,7 +258,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Säiliö | Flowfit 100 l, saumaton teräs (Flowfit Weldless Steel Tanks, tyyppi A/B/C **⚠ tarkista**), 50×50×5-kulmarautakannakkeilla kaariin | [blogi 2017-04-01], [datalehti Flowfit] |
 | Öljymäärä | 80 l | [blogi 2017-07-04] |
 | Öljyn tyyppi ja luokka | **⚠ ei tiedossa** | |
-| Imulinjat | Suunnitelma 2017: 2 × 1" (konepumput) ja 1 × 3/4" (sähköpumppu), kussakin palloventtiili. **2026: P2:n ulosotto on 32 mm:n letkun kokoinen.** | [blogi 2017-04-10], [omistaja 2026-10-22] |
+| Imulinjat | Suunnitelma 2017: 2 × 1" (konepumput) ja 1 × 3/4" (sähköpumppu), kussakin palloventtiili. **2026: P2:n ulosotto on 32 mm:n letkun kokoinen; P1:n imulinja 25 mm, 320 cm.** | [blogi 2017-04-10], [omistaja 2026-10-22], [omistaja 2026-10-23] |
 | Säiliön kannen komponentit | Virtauksensäätöventtiilit, paluusuodatin, täyttö- ja huohotinkorkki | [blogi 2017-04-10] |
 | Paluusuodatin | Painemittarillinen; nykyisessä paikassa vaikea lukea | [blogi 2017-04-10] |
 | Putkitus | Pitkät vedot 15×2-tarkkuusteräsputkella, muuten letkut | [blogi 2017-04-01] |
@@ -345,7 +347,9 @@ Avoimet:
 - [ ] Orbitrolin paineenrajoituksen asetusarvo
 - [ ] VPR3:n ja RPF3:n koko (kierreliitäntä): VPR3 1/2" kestäisi vain 80 l/min
 - [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
-- [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15)
+- [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15); imun kannalta vaikutus pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
+- [x] P1:n imulinja nyt: 25 mm, 320 cm [omistaja 2026-10-23]
+- [ ] P1:n imulinja jatkossa: 32 mm (ehdotus, P2:n vapautuva letku) vai 25 mm ≤ 3,2 m; P1:n imuaukon koko ja säiliön öljypinnan korkeus P1:een nähden
 - [x] Venttiilien tehtävät: Rexrothin 2/2-patruunaventtiili kytkee paineen CETOP-pohjalaatalle, BAV-713 ohjaa suuntaa [omistaja 2026-10-22]
 - [x] CETOP-pohjalaatta: Flowfit NG6, 4-paikkainen, rinnankytketty, P/T 1/2", A/B 3/8"
 - [ ] Onko 2/2-patruunaventtiili pohjalaatan paineenrajoitusventtiilin kavitetissa?

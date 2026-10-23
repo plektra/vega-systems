@@ -21,7 +21,7 @@ flowchart LR
   RET(["Paluu"])
 
   ENG -->|kampiakseli| BELT --> P1
-  TANK -->|"imu 1#quot;"| P1
+  TANK -->|"imu 25 mm, 3,2 m<br/>(ehdotus 32 mm)"| P1
   P1 --> RPF3 -->|P| ORB
   ORB <-->|A / B| CYL
   TANK -.->|"imu 3/4#quot;"| P3
