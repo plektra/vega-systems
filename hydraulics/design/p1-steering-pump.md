@@ -111,5 +111,5 @@ vapautuvat P2:lta. Ennen sitä pitää mitata säiliön öljypinnan korkeus suht
 - [x] P2:n vanha 32 mm:n imuletku mahtuu P1:lle; pumpun päähän tarvitaan uusi letkukara/letkuliitin [omistaja 2026-10-23]
 - [x] Päätös: P1:n imulinja 32 mm (2026-10-23)
 - [ ] Säiliö: P2:n 50 mm:n ulosotto uuteen kohtaan, jotta vanha 32 mm:n ulosotto jää P1:lle
-- [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun), 32 mm:n täysiaukkoinen palloventtiili (jos nykyinen on 25 mm), alipainemittari (−1…0 bar)
+- [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)), 32 mm:n täysiaukkoinen palloventtiili (jos nykyinen on 25 mm), alipainemittari (−1…0 bar)
 - [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)

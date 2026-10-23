@@ -12,7 +12,7 @@ Liittyy: [vaatimukset §10.1](../requirements.md#101-anturit), [kaaviot](../sche
 |---|---|---|---|
 | 1G1 | Piiri 1: P-linjan alussa heti kolmitievirtauksensäätöventtiilin (RPF3) CF-lähdön jälkeen, eli orbitrolin P-paine | analoginen | [omistaja 2026-10-23] |
 | 2G1 | Piiri 2: CETOP-pohjalaatalle tuleva P-linja | analoginen | [omistaja 2026-10-23] |
-| 3Z2:n mittari | Paluusuodattimen painemittari, huonosti luettavissa | analoginen | [blogi 2017-04-10] |
+| 3Z2:n mittari | Paluusuodattimen painemittari, olemassa; nykyisessä paikassa huonosti luettavissa | analoginen | [blogi 2017-04-10], [omistaja 2026-10-23] |
 
 ## Kolme mittaustapaa
 
@@ -37,11 +37,42 @@ vastaan.
 | 1G1 | RPF3:n CF-lähtö | analoginen | 0–160 tai 0–250 bar | olemassa | – |
 | 2G1 | CETOP-pohjalaatan P | analoginen | 0–400 bar | olemassa | – |
 | 3G2 | Paluulinja ennen jäähdytintä | analoginen tai mittausliitin | 0–25 bar | Orbitrolin T-linjan raja 25 bar; näyttää jäähdyttimen ohitusventtiilin avautumisen kylmällä öljyllä | 3 |
-| 3Z2 | Paluusuodattimen mittari | analoginen, siirretään näkyvälle paikalle (tai paine-eroilmaisin) | – | Suodattimen tukkeutuminen | 3 |
+| 3Z2 | Paluusuodattimen mittari | analoginen, **olemassa**; siirretään näkyvämmäksi vain tarvittaessa | – | Suodattimen tukkeutuminen | – |
 | 1T1 | P1:n lähtö ennen vastaventtiiliä 1V7 | mittausliitin | 0–250 bar | Vianhaku: pumppu vai RPF3; P3:n testaus erikseen | 4 |
 | 1T2 | P1:n imuaukko | mittausliitin (alipaine) | −1…0 bar | Päätetty mittaus käyttöönotossa | päätetty |
 | 2T1, 2T2 | Keulapotkurin A- ja B-linjat pohjalaatalla | mittausliittimet | 0–400 bar | Vianhaku: potkurin paine kumpaankin suuntaan, moottorin ja venttiilin kunto | 4 |
 | 1T3, 1T4 | Ohjaussylinterin A- ja B-linjat | mittausliittimet | 0–250 bar | Vianhaku: sylinterin ja orbitrolin iskuventtiilien vuodot | 5 (valinnainen) |
+
+## Imupaineen mittaus
+
+Imupuolella paine on noin −0,3…+0,1 bar, joten tavallinen painemittari ei kelpaa, eikä
+imulinjassa ole valmiita mittausliitäntöjä: Parkerin imuliittimessä ja BPV-venttiilissä ei ole
+mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salamin P1:ssä on pelkkä
+3/4":n imuaukko.
+
+**Liitäntä:** imuletkun ja pumpun väliin lyhyt **välikappale, jossa on 1/4" BSP -sivuaukko**:
+
+- **P1 (32 mm):** uuden letkukaran ja 3/4" BSP -liittimen väliin 3/4" BSP -T-kappale, jonka
+  sivuhaarassa 1/4" BSP -supistus. Kaikki vakio-osia.
+- **P2 (50 mm):** lyhyt teräsputki (Ø50, noin 100–150 mm) letkukaroilla tai letkuliittimellä
+  molemmissa päissä ja siihen hitsattu 1/4" BSP -hitsausmuhvi; tai valmis 2" T-kappale
+  1/4"-sivuaukolla. Asennetaan Parkerin imuliittimen ja letkun väliin.
+
+**Ohjeita:**
+
+- **Mahdollisimman lähelle pumpun imuaukkoa**, palloventtiilin ja muiden liittimien jälkeen, koska
+  mittauksen pitää sisältää koko linjan häviöt.
+- **Sivuaukko putken kyljessä**, ei alapuolella (lika) eikä yläpuolella (ilmataskut). Suora
+  putkiosuus ennen aukkoa antaa tasaisemman lukeman.
+- **Tiiviys on tärkeämpää kuin painepuolella:** imupuolen vuoto ei tiputa öljyä vaan imee ilmaa,
+  joka aiheuttaa kavitaatiota ja melua. Käytä suorakierteisiä (BSPP) liittimiä tiivistealuslevyllä
+  tai O-renkaalla, ei kartiokierrettä tai kierreteippiä.
+- **Mittari:** yhdistelmämittari (vakuumi ja paine) **−1…+1,5 bar**, glyseriinitäytteinen, Ø63 mm;
+  tai digitaalinen anturi samalla alueella (−1…+1 bar, 4–20 mA), kuten päätetty 2B1. Paineenmittaus
+  ilmoitetaan ylipaineena (0 bar = ilmanpaine): Parkerin raja 1,0 bar abs vastaa noin 0 baria ja
+  Salamin 0,7 bar abs noin −0,3 baria.
+- **Mittausliitin:** jos imupuolelle halutaan pikaliitin (1T2), tarkista, että liitin on tiivis myös
+  alipaineessa (**⚠ tarkista valmistajalta**). Muuten kiinteä mittari tai anturi on varmempi.
 
 ## Suositus
 
@@ -50,7 +81,7 @@ vastaan.
 2. **Digitaalinen anturi 1B2 ohjauspiiriin** nykyisen mittarin 1G1 rinnalle.
 3. **Mittausliittimet** kohtiin 1T1, 1T2, 2T1, 2T2 ja 3G2 sekä yksi kannettava mittari: halvin tapa
    saada vianhakuun kattava mittaus.
-4. Paluusuodattimen mittari näkyvälle paikalle.
+4. Paluusuodattimen nykyinen mittari riittää; siirto näkyvämmäksi tarvittaessa.
 
 Analogiset 1G1 ja 2G1 jäävät, jotta paineen näkee myös ilman sähköä tai Signal K:ta.
 
