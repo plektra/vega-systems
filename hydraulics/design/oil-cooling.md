@@ -146,7 +146,10 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
 ## Paluulinja-asennus
 
 1. **Kaikki paluut yhteen linjaan:** VPR3:n ylimäärä, 2/2-venttiili, BAV-713:n T, RPF3:n ylimäärä ja
-   orbitrolin T → EC100 → paluusuodatin → säiliö. Normaalisti virtaus on noin 15–60 l/min. 1800 rpm:llä
+   orbitrolin T → EC100 → paluusuodatin → säiliö. **Myös U11:n vuotolinja on kytketty paluulinjaan**
+   [omistaja 2026-10-23]: jos se liittyy ennen jäähdytintä ja ohitusventtiiliä, moottorin kotelo saa
+   saman vastapaineen (kylmänä jopa 3–4 bar + suodatin); kotelon raja **⚠ ei tiedossa**. Vuotolinja
+   kannattaa liittää suodattimen jälkeen tai suoraan säiliöön. Normaalisti virtaus on noin 15–60 l/min. 1800 rpm:llä
    kytkin päällä virtaus olisi noin 125 l/min, ja ylimäärä kulkee ohitusventtiilin kautta.
 2. **Ohitusventtiili** (takaiskuventtiili) jäähdyttimen rinnalle, avautuu noin 3–4 barissa. Suojaa
    jäähdytintä kylmältä, paksulta öljyltä ja virtapiikeiltä.

@@ -99,7 +99,7 @@ flowchart LR
   UNL -->|"auki → T"| RET
   BAV -->|T| RET
   VMP -->|T| RET
-  THR -->|"vuotolinja 1/4#quot;"| TANK
+  THR -->|"vuotolinja 1/4#quot;<br/>paluulinjaan (kohta ⚠)"| TANK
 
   subgraph MAN ["CETOP 3 -pohjalaatta, 4 paikkaa"]
     UNL
