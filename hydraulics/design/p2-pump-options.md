@@ -751,6 +751,52 @@ kauempaa:
   -ohjauksen, Signal K -näytön ja kierroslukituksen (kytkentä vain alle noin 1000 rpm:n, hälytys
   jos päällä rajan yli).
 
+## Muut Parkerin pumput ja kuorman purku (selvitys 2026-10-23)
+
+Parkerin kuorma-autopumppuluettelo *MSG30-8200/UK* (F1 s. 24–26, T1 s. 35–37, F2 s. 40–43,
+F3 s. 44–48, F4 s. 49–53, VP1 s. 54–57, apuventtiilit s. 64–73; sivunumerot poimittu tekstistä,
+voivat heittää sivun verran), luettu tekstinä. Tarkoitus: löytyykö F1-61:lle vaihtoehtoja, joihin saa
+vastaavan ohitusventtiilin tai muun hyväksi todetun kuorman purun.
+
+[laskelma]: tuotto 700 rpm:llä (PTO 1:1), volumetrinen hyötysuhde 95 %; momentti 250 barissa,
+mekaaninen hyötysuhde 95 %. Tarve 33,8 l/min (keulapotkuri 100 %), PTO noin 420 Nm.
+
+| Sarja | Koot (cm³) | Kuorman purku | Tuotto 700 rpm | Momentti 250 bar | Itseimevä max rpm | Sopivuus |
+|---|---|---|---|---|---|---|
+| **F1-61** (päätetty) | 59,5 | BPV-F1 378 4179 / 7201 | 39,6 l/min | 249 Nm | 2400 (lyhytsuljettuna 2700) | ✅ |
+| **F1-51** | 51,1 | **sama BPV-F1** | 34,0 l/min | 214 Nm | **2450** (lyhytsuljettuna 2700) | ✅ vaihtoehto |
+| F1-41 | 40,9 | sama BPV-F1 | 27,2 l/min | 171 Nm | 2550 | ❌ noin 80 % tarpeesta |
+| F1-81 / -101 | 81,6 / 102,9 | BPV-F1-81: 378 4180 / 7203 (ei sovi F1-61:een) | 54 / 68 l/min | 342 / 431 Nm | 2200 / 2100 | ❌ liian suuri; -101 yli PTO:n rajan |
+| T1-81 / -121 | 81,5 / 118,5 | BPV-T1 | 54 / 79 l/min | 341 / 496 Nm | 2000 / 1600 | ❌ Parker: lyhyisiin, harvoihin työjaksoihin (kipit); 250 bar jatkuva |
+| F2 (kaksivirta) | 42/42, 53/53, 55/28, 70/35, 70/70 | BPV-F2 | kaksi erillistä virtaa | ≥ 336 Nm yhteensä | 1800 (molemmat paineistettu); 70/70 ei sovi koneen PTO:lle | ❌ 19 kg; hyöty vain, jos ankkurivinssille tarvitaan oma virta |
+| F3 (irtikytkettävä) | 81,6 / 102,9 | sisäinen paineilmakytkin (5–10 bar) + BPV-F3 | 54 / 68 l/min | 342 / 431 Nm | 2200 / 2100 | ❌ paineilma, liian suuri |
+| F4 (kaksivirta, irtikytkettävä) | 53/53, 70/35 | paineilmakytkin + BPV-F4 | – | – | 1800 | ❌ 29,5 kg, paineilma |
+| VP1 (säätötilavuus, LS) | 45, 60, 75, 95, 110, 128 | säätö nollatuottoon + BPV-VP1 (379 8799) | VP1-060: 39,9 l/min | – | VP1-045 3000 / -060 2700 / -075 2500 | ⚠ vaatii kuormantuntoventtiilit; 27 kg |
+| GPA / GP1 (hammaspyörä) | 8–80 | ei omaa ohitusta; vain BPV-L linjaan | – | – | – | ❌ ks. BPV-L |
+
+**Kuorman purkutavat:**
+
+1. **Pumpun päälle asennettava BPV** (F1, T1, F2, F3, F4): ohituksessa öljy kiertää pumpun sisällä,
+   ja imuletkun ja säiliön kautta kulkee vain pieni jäähdytysvirta vuotolinjan kautta. Ei kavitaatiota
+   eikä lämpöä. **Valittu ratkaisu.**
+2. **Paineilmakytkin pumpussa** (F3, F4): pumppu irtoaa kokonaan, mutta tarvitsee 5–10 barin
+   paineilman, jota Vegalla ei ole. Kokoja vain 81 ja 101 cm³.
+3. **Säätötilavuuspumppu VP1:** kun mitään ei käytetä, pumppu kääntyy lähes nollatuotolle. BPV-VP1
+   pitää pienen jäähdytysvirran ja ilmaa imulinjan seisokin jälkeen. Vaatii LS-signaalin, jota
+   BAV-713:ssa ei ole, joten venttiilit pitäisi vaihtaa (vrt. vaihtoehto E). Kallein.
+4. **Linjaan asennettava purkuventtiili BPV-L** (378 1487; 350 bar, 250 l/min, 24 VDC 14 W, BSP 1"):
+   sopii mille tahansa vakiopumpulle, mutta koko tuotto kulkee silti imuletkun kautta säiliöön.
+   Toiminta on sama kuin nykyisellä Rexroth-2/2-venttiilillä, joten se ei tuo Vegalle mitään uutta.
+
+**F1-51 vaihtoehtona:** sama runko, ISO 7653 -laippa, B8x32x36-akseli ja paino (8,5 kg) kuin
+F1-61:ssä, sama BPV-F1, Spidex-napa ja 50 mm:n imuliitin, joten muu suunnitelma ei muutu.
+Itseimevä raja on 2450 rpm (F1-61: 2400), eli jos BPV jää syöttöasentoon, pumppu ei kavitoi koneen
+täysillä kierroksilla. Myös momentti ja ylimäärävirta ovat pienempiä. Haittana tuotto 700 rpm:llä on
+34,0 l/min, juuri tarpeen rajalla. Keulapotkuri on 250 barin rajoituksella noin 88 %:n työntövoimassa
+kummallakin pumpulla, mutta **jos tyhjäkäynti on mitattaessa alle 700 rpm, F1-51 ei riitä.**
+**Johtopäätös:** F1-61 pysyy ensisijaisena. Käytetty F1-51 kelpaa, jos se on selvästi halvempi ja
+tyhjäkäynti on mitattu vähintään 700 rpm:ksi.
+
 ## Pumppuvaihtoehtojen vertailu
 
 | | A. Hammaspyörä 43–51 cc | B. Hammaspyörä 37 cc + kierrokset | C. Vinoakseli | D. Säätö PC | E. Kuormantunteva | F. Tandem |
