@@ -405,6 +405,57 @@ Salhydron tarjouksen kytkimestä ja sovitteista. Kytkimen kanssa BPV on lisävar
 mutta 430 €:lla se on silloin kallis varmistus verrattuna kierroslukitukseen ja hälytykseen.
 Hammaspyöräpumppuun (vaihtoehto A) BPV:tä ei saa; sille vastaava ratkaisu olisi kytkin.
 
+### Veto PTO:lta suoraan F1-61:lle (BPV-vaihtoehto, ei kytkintä)
+
+Selvitys 2026-10-23. Ketju: **PTO:n Ø48-kiila-akseli → joustokytkin → F1-61:n hammasakseli**.
+Pumppu laipoitetaan omaan, runkoon kiinnitettyyn kannakkeeseen, joten kytkin välittää vain
+momentin. Parker ei salli pumpun akselille säteis- eikä aksiaalikuormaa: *"No external radial or
+axial shaft loads are allowed on the pump shaft"* [luettelo MSG30-8200/UK s. 79].
+
+**Mitoittava momentti** [laskelma]: 59,5 cm³, mekaaninen hyötysuhde 95 %: noin 249 Nm 250 barissa ja
+279 Nm 280 barissa. Dieselvetoisen hydraulipumpun käyttökertoimella noin 2 (arvio; tarkista
+kytkinvalmistajan taulukosta) tarve on noin 500–560 Nm.
+
+**Joustokytkin: suunniteltu HRC 150 käy.** Jälleenmyyjien mukaan nimellismomentti on 600 Nm,
+ulkohalkaisija 150 mm ja pituus F/H-navoilla 107,5 mm ja F+B-navoilla 129,5 mm
+([BEP, HRC-luettelo](https://bepltd.com/cdn/shop/files/HRC-COUPLING.pdf);
+[Lemu, HRC 150 B](https://www.lemu.dk/en/product/hrc-150-b-coupling-part-for-bore-id-3731605594)).
+**⚠ Vahvista Fennerin omasta luettelosta.**
+
+| Puoli | Akseli | Napa |
+|---|---|---|
+| PTO | Ø48 mm, kiila | **F- tai H-napa ja taper-holkki 2012, reikä 48 mm ja kiilaura** (holkin suurin reikä 50 mm), tai B-napa porattuna 48H7 + kiilaura |
+| Pumppu | **DIN ISO 14 (DIN 5462) B8×32×36**: 8 suoraa uraa, sisähalkaisija 32, ulkohalkaisija 36 mm; hammasakseli noin 55 mm laipasta; päässä M12×24-kierre [luettelo s. 24, *kuvana*] | **B-napa (esiporattu), johon koneistamo avartaa 8×32×36-sisäurituksen.** Kuorma-autojen PTO-standardi, joten avarrustyökaluja löytyy. Napa lukitaan aksiaalisesti akselin pään M12-pultilla ja aluslevyllä. |
+
+**Muut tavat tehdä pumppupuolen napa:**
+- **Myyjän holkki** (luultavasti 8×32×36-sisäuritettu): B-napa avarretaan holkin ulkohalkaisijalle,
+  ja holkki kiinnitetään puristussovitteella ja kiilalla tai tapilla. Hitsaaminen ei sovi
+  karkaistulle holkille. **⚠ Selvitä holkin mitat.**
+- **Valmis uritettu napa** toiseen joustokytkinsarjaan (esim. kynsikytkin, jonka navan saa
+  DIN ISO 14 -urituksella). Valmista 8×32×36-napaa ei löytynyt haulla; kysy toimittajilta (esim.
+  Salhydro, Hydroscand, KTR:n jälleenmyyjä). Silloin myös PTO-puolen napa vaihtuu samaan sarjaan.
+
+**Pumpun kannake (runkoalusta):**
+- ISO 7653 -laippa: keskitys **Ø80 mm** (akseli 0/−0,013, kannakkeen reikä Ø80 H8), **4 × Ø13 mm:n
+  reikää** M12-pulteille. Reikäjako on luettu mittapiirroksesta kuvana **⚠ tarkista pumpusta**
+  [luettelo s. 24].
+- Pumppu painaa 8,5 kg, ja BPV ja imuliitin tulevat sen päälle. Imu- ja vuotoletkun on mahduttava.
+- **Linjaus:** pumpun akseli PTO-akselin kanssa samaan linjaan HRC:n sallimien säteis-, kulma- ja
+  aksiaalivirheiden sisään **⚠ arvot Fennerin luettelosta**. Tarkista uudelleen koeajon jälkeen.
+- **Akselien väli:** HRC 150:n navat tarvitsevat noin 107,5–129,5 mm, joten PTO-akselin pään ja
+  pumpun laipan väli on suunniteltava sen mukaan. **⚠ Mittaa PTO-akselin pituus ja tila.**
+
+**Huolto ja turvallisuus:**
+- Pumpun uritus rasvataan lämmönkestävällä rasvalla ennen käyttöönottoa ja vähintään kerran
+  vuodessa [luettelo s. 79].
+- **Pyörivä kytkin vaatii kiinteän suojakotelon.** Ilman kytkintä akseli pyörii aina, kun kone käy,
+  ja se voi tarttua vaatteisiin tai käteen.
+- Pumpun pyörimissuunta (R/L) sovitetaan PTO:n pyörimissuuntaan. **⚠ Tarkista PTO:n suunta.**
+- Pätevän henkilön pitää tarkistaa kannake, linjaus ja suojaus ennen käyttöönottoa.
+
+**Jos kytkin pidetään** (Borelli 30500), HRC 150 tulee PTO:n ja kytkimen Ø42-ensiöakselin väliin, ja
+pumppu laipoitetaan kytkimen toisioon sovitelaipalla ja -holkilla (ks. [Kiinnitys](#sopivuus-vegaan-laskelma)).
+
 ## Imupuoli: letkun koko ja pituus sekä öljylaatu
 
 Laskelma 2026-10-23 [laskelma]: imupaine Parker F1-61:n imuaukolla, bar ylipainetta. Kierrostilavuus
@@ -637,6 +688,8 @@ kauempaa:
 - [x] BPV-F1: vuotoliitinsarja 378 3039 tulee venttiilin mukana; vuotolinja on pakollinen [MSG30-8227]
 - [ ] BPV-F1: ohitusasennon painehäviö ja lämpö (ei julkaistu; kysy Parkerilta tai mittaa)
 - [ ] Tuleeko tori.fi-pumpun mukana imuliitin (ISO-mallissa ei kierreimuaukkoa)?
+- [ ] Veto ilman kytkintä: HRC 150:n nimellismomentti, linjaustoleranssit ja navat Fennerin luettelosta; pumppupuolen B-navan avarrus 8×32×36 (koneistamo) tai myyjän holkin käyttö
+- [ ] PTO-akselin pituus ja tila PTO:n ja pumppukannakkeen välillä
 - [ ] Imulinjan suurentaminen 50 mm:iin: säiliön ulosotto ja palloventtiili
 - [x] Vegan koneen käyttötunnit: alle 1000 h vuodessa [omistaja 2026-10-23]
 - [ ] BPV-F1 vai PTO-kytkin: Salhydron tarjous kytkimestä ja sovitteista
