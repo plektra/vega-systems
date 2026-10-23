@@ -26,10 +26,10 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 1P1 | Ohjauspumppu Salami 2PE16D-P28P1 | 16,6 cm³/r, max 3000 rpm, imupaine ≥ 0,7 bar abs, imuaukko 3/4" | [datalehti Salami 2PE], [omistaja 2026-10-23] |
 | 1V5 | Imulinjan palloventtiili | täysiaukkoinen, auki ajossa; imu 25 mm × 3,2 m (ehdotus 32 mm) | [p1-steering-pump.md](design/p1-steering-pump.md) |
 | 1V7 | P1:n vastaventtiili | ennen T-haaraa, jossa P1 ja P3 yhdistyvät | [omistaja 2026-10-23] |
-| 1V1 | Etusijaventtiili Marchesini RPF3 | CF 20 l/min orbitrolille, ylimäärä EF paluuseen; koko todennäköisesti 1/2" (linjat 1/2") **⚠ tarkista** | [datalehti RPF3] |
+| 1V1 | Kolmitievirtauksensäätöventtiili Marchesini RPF3 | vakiovirtaus CF 20 l/min orbitrolille pumpun kierroksista riippumatta, ylimäärä EF paluuseen; koko todennäköisesti 1/2" (linjat 1/2") **⚠ tarkista** | [datalehti RPF3] |
 | 1V2 | Orbitroli M+S HKUS 160/4 | 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; sis. paineenrajoitus 80–170 bar (asetus **⚠**), iskuventtiilit 140–220 bar; T max 25 bar | [datalehti HKUS] |
 | 1V3 | Hätäohitus A↔B | käsiventtiili sylinterin vieressä, lepoasennossa kiinni | [blogi 2017-07-04] |
-| 1A1 | Ohjaussylinteri, kaksitoiminen | männän ja varren Ø sekä isku **⚠ ei tiedossa** | [blogi 2017-07-04] |
+| 1A1 | Ohjaussylinteri ZS60350100, kaksitoiminen | koodista arvioituna Ø 60 / 35 mm, isku 100 mm (**⚠ vahvista mittaamalla**) | [omistaja 2026-10-23], [blogi 2017-07-04] |
 | 1P2, 1M2 | Varapumppu P3, sähkömoottori 24 V 2,5 kW | kytketty T-haaraan oman vastaventtiilin kautta [omistaja 2026-10-23]; kierrostilavuus **⚠ ei tiedossa** | [blogi 2017-04-01] |
 | 1V4 | P3:n vastaventtiili | ennen T-haaraa → RPF3 | [omistaja 2026-10-23] |
 | – | Piirin 1 painelinjat | **1/2"** (P1/P3 → RPF3 → orbitroli → sylinteri) | [omistaja 2026-10-23] |
@@ -50,7 +50,7 @@ flowchart LR
   BELT["2 kiilahihnaa 1:1,24<br/>+ tukilaakeri"]
   TANK[("Säiliö<br/>Flowfit 100 l")]
   P1["P1 Salami 2PE16D<br/>16,6 cm³<br/>max 3000 rpm"]
-  RPF3["RPF3<br/>etusija 20 l/min"]
+  RPF3["RPF3<br/>virtauksensäätö 20 l/min"]
   ORB["Orbitroli<br/>HKUS 160/4<br/>sis. paineenrajoitus"]
   CYL["Ohjaussylinteri<br/>+ hätäohitus A–B"]
   P3["P3 sähköpumppu<br/>24 V, 2,5 kW (vara)"]

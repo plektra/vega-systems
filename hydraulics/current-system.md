@@ -181,7 +181,7 @@ Alkuperäinen "traktorijärjestelmä" (hihnavetoinen pumppu omalla säiliöllä�
 suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestelmällä**
 [blogi 2017-04-01]:
 
-- **Piiri 1 — Ohjaus:** pieni pumppu → etusijavirtauksen säätö → orbitroli → ohjaussylinteri.
+- **Piiri 1 — Ohjaus:** pieni pumppu → kolmitievirtauksensäätöventtiili (vakiovirtaus orbitrolille) → orbitroli → ohjaussylinteri.
   Piirissä on tarkoituksella vain peräsin, turvallisuussyistä.
 - **Piiri 2 — Apupiiri:** iso pumppu → virtauksensäätö → vapaakiertoventtiili → CETOP 3 -pohjalaatta
   → keulapotkuri (myöhemmin myös ankkurivinssi ja muut kuormat).
@@ -229,7 +229,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 |---|---|---|
 | Virtauksensäätö | RPF3 (Marchesini, kolmitie, ylimäärä suoraan säiliöön), asetus 20 l/min. Suurin tulovirtaus 50 l/min (3/8") tai 85 l/min (1/2"), 350 bar [datalehti RPF3]; koko **⚠ tarkista** | Tyhjäkäynnillä pumppu antaa ~16,5 l/min, joten kaikki menee orbitrolille |
 | Ohjausyksikkö | **M+S Hydraulic HKUS 160/4**: 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; **sisäänrakennettu paineenrajoitus** (asetus 80–170 bar) ja iskuventtiilit (140–220 bar); nimellisvirtaus 16 l/min; **T-linjan suurin jatkuva paine 25 bar** [datalehti HKUS] | Paluulinjan vastapaine (esim. öljynjäähdytin ja sen ohitusventtiili) pitää pysyä alle 25 barin |
-| Sylinteri | Kaksitoiminen; männän ja varren halkaisija sekä iskunpituus **⚠ ei tiedossa** | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
+| Sylinteri | **ZS60350100** [omistaja 2026-10-23], kaksitoiminen. Koodista arvioituna männän Ø 60 mm, varren Ø 35 mm, isku 100 mm (**⚠ arvio, vahvista mittaamalla**). Jos 60/35/100: pinta-alat 28,3 / 18,7 cm², tilavuudet 283 / 187 cm³, orbitrolin kierroksia laidasta laitaan noin 1,8 / 1,2; voima 50 barilla noin 14 / 9 kN [laskelma] | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
 | Hätäohitus | Käsiventtiili A- ja B-linjan välissä sylinterin vieressä, irrotettavaa hätäpinnaa varten | [blogi 2017-07-04] |
 | Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
 | Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus; asetusarvo **⚠ tarkista** (tehdasvaihtoehdot 80–170 bar) | [datalehti HKUS] |
@@ -242,7 +242,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 
 | Komponentti | Tiedot | Huomiot |
 |---|---|---|
-| Virtauksensäätö | VPR3 (Marchesini, kolmitie-etusijaventtiili), asetus 35 l/min, ylimäärä B-portista säiliöön. Suurin tulovirtaus 60 / 80 / 120 / 200 l/min (3/8" / 1/2" / 3/4" / 1"), 350 bar [datalehti VPR3] | Koko **⚠ tarkista**: 1/2" kestää vain 80 l/min |
+| Virtauksensäätö | VPR3 (Marchesini, kolmitie-prioriteettiventtiili), asetus 35 l/min, ylimäärä B-portista säiliöön. Suurin tulovirtaus 60 / 80 / 120 / 200 l/min (3/8" / 1/2" / 3/4" / 1"), 350 bar [datalehti VPR3] | Koko **⚠ tarkista**: 1/2" kestää vain 80 l/min |
 | Vapaakiertoventtiili (keulapotkurin päälle/pois) | Bosch Rexroth OD15-X-17-Y-S0 -patruunaventtiili, 2/2, jännitteettömänä auki, esiohjattu istukka; 350 bar, 2–70 l/min [datalehti RE 18323-07]. **Kytkee paineen CETOP-pohjalaatalle** [omistaja 2026-10-22]. Todennäköisesti asennettu **pohjalaatan paineenrajoitusventtiilin kavitettiin** (P→T): auki se purkaa pohjalaatan P-kanavan säiliöön, kiinni paine nousee pohjalaatalla. **⚠ Vahvista.** | Jännitteettömänä P2:n tuotto menee matalalla paineella säiliöön; jännitteellisenä venttiili sulkeutuu ja paine menee BAV-713:lle. Ohjataan päälle aina, kun keulapotkuria käytetään kumpaan tahansa suuntaan. |
 | Pohjalaatta | **Flowfit CETOP 3 / NG6, 4-paikkainen, rinnankytketty**, paineenrajoitusventtiilin paikalla (kavitetti P→T) ja painemittariliitännällä. Liitännät: **P ja T 1/2" BSP, A ja B 3/8" BSP**, G (mittari) 1/4" BSP. Pituus 247,7 mm, paino 8,21 kg. **Materiaali teräs** [omistaja 2026-10-22]. Painearvoa ei ilmoitettu; teräksiset CETOP 3 -pohjalaatat on tyypillisesti luokiteltu noin 250–350 bariin **⚠ vahvista Flowfitilta** [datalehti Flowfit CETOP 3]. | 1 paikka käytössä (BAV-713), 3 vapaana (ankkurivinssi ym.). A/B-liitännät ovat 3/8", vaikka keulapotkurin letkut ovat 1/2": pieni lisähäviö, sisältyy venttiilihäviön arvioon. |
 | Paineenrajoitusventtiili | **Marchesini VMP 3/4"** (V0720), suoratoiminen istukkaventtiili, asetettu 250 bariin. Suurin virtaus **90 l/min**, suurin paine 350 bar. Jousi todennäköisesti 80–300 bar (vastaa aiemmin mainittua 300 baria), 50 bar / kierros [datalehti VMP, omistaja 2026-10-22] | Aiemmin kirjattu "300 bar, 80 l/min" korjattu datalehden mukaan |
@@ -346,7 +346,9 @@ Avoimet:
 - [x] Sähköinen varapumppu P3 on kytketty: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
 - [x] P1:n painelinjassa on vastaventtiili ennen T-haaraa [omistaja 2026-10-23]
 - [x] Piirin 1 painelinjat 1/2" [omistaja 2026-10-23]
-- [ ] Ohjaussylinterin männän ja varren halkaisija ja iskunpituus, ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
+- [x] Ohjaussylinterin malli: ZS60350100 [omistaja 2026-10-23]
+- [ ] Ohjaussylinterin mitat: vahvista 60/35/100 mm mittaamalla (männän ja varren Ø, isku)
+- [ ] Ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
 - [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
 - [ ] Orbitrolin paineenrajoituksen asetusarvo

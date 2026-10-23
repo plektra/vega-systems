@@ -21,12 +21,12 @@ loads:
   - id: STR
     name: Ohjaus / autopilotti
     in_scope: true
-    existing: Orbitroli 160 cm3/r (vahvistamatta) + kaksitoiminen sylinteri; normaali paine < 50 bar
+    existing: Orbitroli HKUS 160/4 (158.4 cm3/r) + kaksitoiminen sylinteri ZS60350100; normaali paine < 50 bar
     criticality: critical
     actuator: cylinder
     cylinder:
       max_force_kN: null           # peräsimen suurin momentti / ohjausvarren pituus
-      stroke_mm: null
+      stroke_mm: null              # mallikoodin ZS60350100 perusteella todennäköisesti 100 (Ø 60/35), vahvistamatta
       tiller_arm_mm: null
       hard_over_time_s: null       # ääriasennosta toiseen
     duty:
