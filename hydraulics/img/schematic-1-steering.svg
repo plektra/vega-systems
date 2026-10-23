@@ -99,6 +99,13 @@
     <text x="785" y="456">liitännät G1/2 · T-linja max 25 bar</text>
   </g>
 
+  <!-- 1G1 painemittari RPF3:n CF-lähdön jälkeen -->
+  <path d="M520 592 H496" stroke-width="1.5"/>
+  <circle cx="484" cy="592" r="12" stroke-width="1.5"/>
+  <line x1="476" y1="600" x2="492" y2="584" stroke-width="1" marker-end="url(#ah)"/>
+  <circle cx="520" cy="592" r="3" fill="#000" stroke="none"/>
+  <text x="466" y="596" text-anchor="end" font-weight="bold" stroke="none" fill="#000">1G1</text>
+
   <!-- ===== Paluulinjat ===== -->
   <path d="M680 560 V590 H880 V760 H905"/>
   <circle cx="880" cy="665" r="4" fill="#000" stroke="none"/>
@@ -204,7 +211,7 @@
     <text x="950" y="882" font-size="13" font-weight="bold">Vega — hydraulijärjestelmä</text>
     <text x="950" y="904">Arkki 1/3: Piiri 1, ohjaus</text>
     <text x="950" y="920">ISO 1219-1 -merkit, ISO 1219-2 -periaatteet</text>
-    <text x="950" y="936">Versio 0.7 · 2026-10-23</text>
+    <text x="950" y="936">Versio 0.8 · 2026-10-23</text>
     <text x="950" y="953" font-weight="bold" fill="#b00">Tila: LUONNOS – ei rakentamiseen</text>
     <text x="950" y="969">Tarkastettava pätevällä henkilöllä</text>
     <text x="950" y="984">Piirtänyt: Claude · Hyväksynyt: –</text>

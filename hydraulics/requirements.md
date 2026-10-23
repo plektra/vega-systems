@@ -184,12 +184,12 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 
 | Mittaus | Paikka | Alue | Ehdotettu Signal K -polku | Hälytys / raja |
 |---|---|---|---|---|
-| Järjestelmäpaine | Pumpun lähtö | TBD bar | `hydraulics.<system>.pressure` | TBD |
+| Ohjauspaine (1B2, ehdotus) | Piiri 1, RPF3:n CF-lähtö (1G1:n rinnalla) | 0–250 bar | `hydraulics.steering.pressure` | Normaali < 50 bar; hälytys TBD. Ks. [pressure-monitoring.md](design/pressure-monitoring.md) |
 | Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~70 °C. **Päätetty 2026-10-23** |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
 | BPV:n tila | BPV-F1:n kela | syöttö/ohitus | `hydraulics.<system>.bypass.engaged` | Hälytys, jos syöttö päällä yli ~1200 rpm |
-| P2:n lähtöpaine | BPV:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | BPV:n vaihto vain alle 20 bar |
+| P2:n lähtöpaine (2B2, ehdotus, prioriteetti 1) | BPV:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | BPV:n vaihto vain alle 20 bar (ohjauslogiikan ehto) |
 | Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (Parker F1: vähintään 1,0 bar abs), hälytys alle ~−0,2 bar. **Päätetty 2026-10-23.** P1: mittaus käyttöönotossa, ei kiinteää anturia |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
