@@ -233,7 +233,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
 | Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus; asetusarvo **⚠ tarkista** (tehdasvaihtoehdot 80–170 bar) | [datalehti HKUS] |
 | Varasyöttö | P3 vastaventtiilin kautta RPF3:n tuloon | Suunniteltu 2017. **⚠ Tarkista**, onko asennettu. 65 A:n laturi ei jaksa syöttää sitä pitkään. |
-| Imulinja | **25 mm, 320 cm** [omistaja 2026-10-23]; Salamin raja −0,3 bar ylipainetta. Laskelma ja ehdotus 32 mm:n linjasta: [p1-steering-pump.md](design/p1-steering-pump.md) | Koko tuotto kulkee imuletkun läpi (RPF3:n ylimäärä palaa säiliöön) |
+| Imulinja | **25 mm, 320 cm**; P1:n imuaukko **3/4"** [omistaja 2026-10-23]; Salamin raja −0,3 bar ylipainetta. Laskelma ja ehdotus 32 mm:n linjasta: [p1-steering-pump.md](design/p1-steering-pump.md) | Koko tuotto kulkee imuletkun läpi (RPF3:n ylimäärä palaa säiliöön) |
 | Ilmaus | Ei ilmausruuveja; sylinterin liitännät sivuilla | Vaikea ilmata [blogi 2017-07-04] |
 
 ### 3.4 Piiri 2 — Apupiiri
@@ -349,7 +349,8 @@ Avoimet:
 - [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
 - [ ] Pienennetäänkö P1:n hihnavälitystä marginaalin saamiseksi (esim. 1:1,15); imun kannalta vaikutus pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
 - [x] P1:n imulinja nyt: 25 mm, 320 cm [omistaja 2026-10-23]
-- [ ] P1:n imulinja jatkossa: 32 mm (ehdotus, P2:n vapautuva letku) vai 25 mm ≤ 3,2 m; P1:n imuaukon koko ja säiliön öljypinnan korkeus P1:een nähden
+- [ ] P1:n imulinja jatkossa: 32 mm (ehdotus, P2:n vapautuva letku) vai 25 mm ≤ 3,2 m; säiliön öljypinnan korkeus P1:een nähden
+- [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23]
 - [x] Venttiilien tehtävät: Rexrothin 2/2-patruunaventtiili kytkee paineen CETOP-pohjalaatalle, BAV-713 ohjaa suuntaa [omistaja 2026-10-22]
 - [x] CETOP-pohjalaatta: Flowfit NG6, 4-paikkainen, rinnankytketty, P/T 1/2", A/B 3/8"
 - [ ] Onko 2/2-patruunaventtiili pohjalaatan paineenrajoitusventtiilin kavitetissa?
