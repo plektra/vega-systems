@@ -232,7 +232,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Sylinteri | **ZS60350100**, kaksitoiminen: männän Ø 60 mm, varren Ø 35 mm, isku 100 mm [omistaja 2026-10-23]. Pinta-alat 28,3 / 18,7 cm², tilavuudet 283 / 187 cm³, orbitrolin kierroksia laidasta laitaan noin 1,8 / 1,2; voima 50 barilla noin 14 / 9 kN [laskelma] | Kiinnitetty alkuperäiseen reikään lähellä peräsinakselia. Ei aivan yllä paapuurin ääriasentoon, ja reikä on hieman väljä. Saatetaan vaihtaa pidempään [blogi 2017-07-04]. |
 | Hätäohitus | Käsiventtiili A- ja B-linjan välissä sylinterin vieressä, irrotettavaa hätäpinnaa varten | [blogi 2017-07-04] |
 | Työpaine | Normaalisti < 50 bar | [blogi 2017-07-04] |
-| Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus; asetusarvo **⚠ tarkista** (tehdasvaihtoehdot 80–170 bar) | [datalehti HKUS] |
+| Paineenrajoitus | Orbitrolin sisäänrakennettu paineenrajoitus (säätöalue 80–170 bar). **Säädetään käyttöönotossa**, nykyistä asetusta ei tarvitse selvittää [omistaja 2026-10-23] | [datalehti HKUS] |
 | Varasyöttö | P1 ja P3 yhdistyvät T-haarassa, **kumpikin oman vastaventtiilinsä kautta**, RPF3:n tuloon [omistaja 2026-10-23] | P3 on kytketty. 65 A:n laturi ei jaksa syöttää sitä pitkään. |
 | Painelinjat | **1/2"** koko piirissä 1 [omistaja 2026-10-23] | |
 | Imulinja | **25 mm, 320 cm**; P1:n imuaukko **3/4"** [omistaja 2026-10-23]; Salamin raja −0,3 bar ylipainetta. Laskelma ja ehdotus 32 mm:n linjasta: [p1-steering-pump.md](design/p1-steering-pump.md) | Koko tuotto kulkee imuletkun läpi (RPF3:n ylimäärä palaa säiliöön) |
@@ -355,7 +355,7 @@ Avoimet:
 - [ ] Ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
 - [ ] Mahdollinen autopilotti ja sen liitäntä ohjauspiiriin (orbitrolin malli selvitetty, ks. alla)
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
-- [ ] Orbitrolin paineenrajoituksen asetusarvo
+- [x] ~~Orbitrolin paineenrajoituksen nykyinen asetus~~: säädetään käyttöönotossa [omistaja 2026-10-23]
 - [x] VPR3 3/4", RPF3 1/2" [omistaja 2026-10-23]
 - [x] Koneen suurin kierrosluku noin 2400 rpm → P1 noin 2980 rpm (raja 3000 rpm), riittää niukasti
 - [x] P1:n hihnavälitys pysyy 1:1,24 (päätös 2026-10-23); imun kannalta pienennyksen vaikutus olisi ollut pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
@@ -369,6 +369,7 @@ Avoimet:
 - [x] 2/2-venttiili on omassa erillisessä rungossaan, ei pohjalaatan kavitetissa [omistaja 2026-10-23]
 - [x] Pohjalaatan materiaali: teräs
 - [ ] Pohjalaatan painearvo Flowfitilta: vahvista, että kestää 250 bar (teräs, todennäköisesti 250–350 bar)
-- [ ] VMP:n jousialue (80–300 bar?) ja nykyinen asetus
+- [x] ~~VMP:n nykyinen asetus~~: säädetään käyttöönotossa 250 bariin [omistaja 2026-10-23]
+- [ ] **Käyttöönoton säädöt:** VMP 250 bariin painemittarilla (2G1) keulapotkuri jumitettuna tai BAV-713 ääriasennossa; orbitrolin paineenrajoitus pienimpään arvoon, jolla peräsin kääntyy ääriasentoihin ajossa, kuitenkin enintään sylinterin ja letkujen painearvon
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä; **onko varalla oleva malli EC100 vai EC80** (EC80: noin puolet tehosta) (ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

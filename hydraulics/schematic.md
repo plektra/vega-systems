@@ -27,7 +27,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 1V5 | Imulinjan palloventtiili | täysiaukkoinen, auki ajossa; imu 32 mm (päätös 2026-10-23; nyt 25 mm × 3,2 m) | [p1-steering-pump.md](design/p1-steering-pump.md) |
 | 1V7 | P1:n vastaventtiili | ennen T-haaraa, jossa P1 ja P3 yhdistyvät | [omistaja 2026-10-23] |
 | 1V1 | Kolmitievirtauksensäätöventtiili Marchesini RPF3 | vakiovirtaus CF 20 l/min orbitrolille pumpun kierroksista riippumatta, ylimäärä EF paluuseen; koko 1/2" [omistaja 2026-10-23] | [datalehti RPF3] |
-| 1V2 | Orbitroli M+S HKUS 160/4 | 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; sis. paineenrajoitus 80–170 bar (asetus **⚠**), iskuventtiilit 140–220 bar; T max 25 bar | [datalehti HKUS] |
+| 1V2 | Orbitroli M+S HKUS 160/4 | 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; sis. paineenrajoitus 80–170 bar (säädetään käyttöönotossa), iskuventtiilit 140–220 bar; T max 25 bar | [datalehti HKUS] |
 | 1V3 | Hätäohitus A↔B | käsiventtiili sylinterin vieressä, lepoasennossa kiinni | [blogi 2017-07-04] |
 | 1A1 | Ohjaussylinteri ZS60350100, kaksitoiminen | männän Ø 60 mm, varren Ø 35 mm, isku 100 mm | [omistaja 2026-10-23], [blogi 2017-07-04] |
 | 1P2, 1M2 | Varapumppu P3, sähkömoottori 24 V 2,5 kW | kytketty T-haaraan oman vastaventtiilin kautta [omistaja 2026-10-23]; kierrostilavuus **⚠ ei tiedossa** | [blogi 2017-04-01] |
@@ -56,7 +56,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar | [päätös 2026-10-23](../decisions.md) |
 | 2V2 | Marchesini VPR3 3/4" | kolmitie-prioriteettiventtiili, A 35 l/min, ylimäärä B → paluu | [omistaja 2026-10-23], [datalehti VPR3] |
 | 2G1 | Painemittari | P-linjassa ennen pohjalaattaa | [blogi 2017-04-01] |
-| 2V3 | Marchesini VMP 3/4" | paineenrajoitus 250 bar; paikka P-linjassa **⚠ tarkista** | [datalehti VMP] |
+| 2V3 | Marchesini VMP 3/4" | paineenrajoitus 250 bar (säädetään käyttöönotossa); paikka P-linjassa **⚠ tarkista** | [datalehti VMP] |
 | 2V4 | Rexroth OD15 2/2, Y2 | omassa rungossaan; jännitteetön auki → T, jännitteellinen kiinni → paine pohjalaatalle | [omistaja 2026-10-23] |
 | 2Z2 | Flowfit CETOP 3 -pohjalaatta | 4 paikkaa, 1 käytössä; teräs; painearvo **⚠** | [omistaja 2026-10-22] |
 | 2V5 | fluiconnecto BAV-IC3-713, Y3a/Y3b | 4/3, keskiasento P kiinni, A–B–T yhdistetty; 24 V | [omistaja 2026-10-23] |
