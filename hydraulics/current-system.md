@@ -343,6 +343,7 @@ Avoimet:
 - [ ] Paineenrajoitus: pysytäänkö 250 barissa, vai noustaanko 260–280 bariin (vaatii pumpun, venttiilien ja keulapotkurimoottorin arvot)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus
 - [ ] Onko sähköinen varapumppu kytketty?
+- [ ] Onko P1:n painelinjassa vastaventtiili (P3:n syöttö voi muuten vuotaa P1:n kautta säiliöön)? Ks. [schematic.md](schematic.md#arkki-1-piiri-1-ohjaus)
 - [ ] Ohjaussylinterin männän ja varren halkaisija ja iskunpituus, ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
 - [ ] Orbitrolin malli (avoin/suljettu keskiasento, kuormantakaisinkytkentä) ja mahdollinen autopilotti
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus

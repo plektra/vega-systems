@@ -5,6 +5,42 @@
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
 > [design/p2-pump-options.md](design/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
 > Vanha kaavio (2018): [img/hydraulics-v3-2018.png](img/hydraulics-v3-2018.png).
+>
+> **ISO 1219 -kaaviot** (2026-10-23, luonnos): arkki 1 ohjauspiiri valmis, ks. alla. Arkit 2 (apupiiri)
+> ja 3 (paluu ja jäähdytys) tulossa. Alla olevat Mermaid-lohkokaaviot säilyvät yleiskuvana.
+
+## ISO 1219 -kaaviot (luonnos)
+
+Piirretty ISO 1219-1:n piirrosmerkein ja ISO 1219-2:n periaattein: venttiilit lepoasennossa,
+komponenttitunnus muotoa *piiri + tyyppi + numero* (P pumppu, M moottori, V venttiili, A toimilaite,
+Z muu), osaluettelo alla. **Tila: luonnos, ei rakentamiseen.** Ohjaus on turvallisuuskriittinen:
+pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
+
+### Arkki 1: Piiri 1, ohjaus
+
+![Ohjauspiiri ISO 1219 -merkein](img/schematic-1-steering.svg)
+
+| Tunnus | Osa | Tiedot | Lähde |
+|---|---|---|---|
+| 1M1 | Pääkone CAT 3126B, 2 kiilahihnaa | välitys 1:1,24; kone 700–2400 rpm | [blogi 2017-07-04], [omistaja 2026-10-22] |
+| 1P1 | Ohjauspumppu Salami 2PE16D-P28P1 | 16,6 cm³/r, max 3000 rpm, imupaine ≥ 0,7 bar abs, imuaukko 3/4" | [datalehti Salami 2PE], [omistaja 2026-10-23] |
+| 1V5 | Imulinjan palloventtiili | täysiaukkoinen, auki ajossa; imu 25 mm × 3,2 m (ehdotus 32 mm) | [p1-steering-pump.md](design/p1-steering-pump.md) |
+| 1V1 | Etusijaventtiili Marchesini RPF3 | CF 20 l/min orbitrolille, ylimäärä EF paluuseen; koko **⚠ tarkista** | [datalehti RPF3] |
+| 1V2 | Orbitroli M+S HKUS 160/4 | 158,4 cm³/r, avoin keskiasento, ei kuormantakaisinkytkentää; sis. paineenrajoitus 80–170 bar (asetus **⚠**), iskuventtiilit 140–220 bar; T max 25 bar | [datalehti HKUS] |
+| 1V3 | Hätäohitus A↔B | käsiventtiili sylinterin vieressä, lepoasennossa kiinni | [blogi 2017-07-04] |
+| 1A1 | Ohjaussylinteri, kaksitoiminen | männän ja varren Ø sekä isku **⚠ ei tiedossa** | [blogi 2017-07-04] |
+| 1P2, 1M2 | Varapumppu P3, sähkömoottori 24 V 2,5 kW | kierrostilavuus **⚠ ei tiedossa**; asennus **⚠ tarkista** | [blogi 2017-04-01] |
+| 1V4 | P3:n vastaventtiili | RPF3:n tuloon | suunnitelma 2017 |
+| 1V6 | P3:n imun palloventtiili | imu 3/4" | [blogi 2017-04-10] |
+| 1Z1 | Säiliö Flowfit 100 l | 80 l öljyä | [blogi 2017-07-04] |
+
+**Kaaviota piirtäessä esiin tulleet kysymykset:**
+
+- **P1:n painelinjassa ei ole vastaventtiiliä.** Kun P3 syöttää ohjausta koneen ollessa sammuksissa,
+  osa sen tuotosta voi vuotaa seisovan P1:n kautta takaisin säiliöön. Onko P1:n ja liitoskohdan
+  välissä vastaventtiili? Jos ei, sellainen kannattaa lisätä (halpa). **⚠ tarkista**
+- Orbitrolin iskuventtiilejä ja imuventtiilejä ei ole piirretty erikseen (orbitrolin sisällä).
+- Painelinjojen ja A/B-letkujen koot puuttuvat.
 
 ## 1. Voimansiirto ja ohjauspiiri
 
@@ -121,4 +157,5 @@ flowchart LR
 - VMP:n fyysinen paikka P-linjassa (VPR3:n P-portin ja pohjalaatan välissä?) **⚠ tarkista**
 - Onko 2/2-patruunaventtiili pohjalaatan paineenrajoitusventtiilin kavitetissa **⚠ tarkista**
 - Varapumpun P3 kytkentä (asennettu?) **⚠ tarkista**
+- Onko P1:n painelinjassa vastaventtiili, ettei P3:n syöttö vuoda P1:n kautta säiliöön **⚠ tarkista**
 - Iskuventtiilit, öljynjäähdytin ja merivesihaara ovat suunnitteilla
