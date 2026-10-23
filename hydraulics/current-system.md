@@ -334,7 +334,7 @@ Avoimet:
 - [ ] PTO:n pyörimissuunta (F1-pumpun suunta R/L sovitetaan siihen)
 - [x] Valitun pumpun pienin sallittu imupaine: 1,0 bar abs (Parker F1)
 - [ ] Mitä öljyä järjestelmässä nyt on (säiliö ja letkut paikallaan): merkki, luokka, ikä; vaihdetaanko ja huuhdellaanko
-- [ ] Hydrauliöljyn tyyppi ja luokka (suositus **HV 32**, ks. [p2-pump-options.md](design/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu))
+- [ ] Hydrauliöljyn tyyppi ja luokka (suositus **HVLP 32**, VI ≥ 150, esim. Teboil 32S, ks. [hydraulic-oil.md](design/hydraulic-oil.md))
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
 - [ ] BAV-713:n kelojen jännite (12 vai 24 VDC)

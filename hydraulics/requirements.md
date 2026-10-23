@@ -167,8 +167,8 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 
 | Kohde | Vaatimus |
 |---|---|
-| Öljytyyppi | TBD (mineraali HLP / HVLP, tai ympäristöystävällinen HEES, ISO 15380) |
-| Viskositeettiluokka | Suositus **HV 32** (kylmäkäynnistykset ja PTO-pumpun imupuoli; pysyy Parker F1:n 10–400 cSt:n rajoissa), vahvistamatta |
+| Öljytyyppi | Suositus mineraalipohjainen **HVLP** (DIN 51524-3 / ISO 11158 HV); HEES ei tarpeen. Vahvistamatta, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
+| Viskositeettiluokka | Suositus **HVLP 32** (DIN 51524-3), VI ≥ 150, mieluiten > 180, Parker HF-0; esim. Teboil Hydraulic Oil 32S. Ainoa luokka, joka pysyy kaikkien komponenttien rajoissa 0 °C:sta noin 72 °C:seen (P1:n 12 cSt:n minimi). Vahvistamatta, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
 | Puhtaustavoite | TBD (ISO 4406 -koodi herkimmän komponentin mukaan) |
 | Suodatus | TBD (paluu / paine / sivuvirta) |
 | Huoltoväli | TBD |
