@@ -16,6 +16,7 @@ käyttöohjeista ja tuotesivuista.
 | Komponentti | Dokumentti | Tärkeimmät tiedot | Käytetään |
 |---|---|---|---|
 | Caterpillar 3126B | [Esite, Scribd](https://www.scribd.com/document/832207648/3126B) | Tyhjäkäynti 700 rpm (teholuokka epäselvä) | [vessel](../vessel/README.md#tyhjäkäyntikierrokset) |
+| Caterpillar 3126B Marine Propulsion | [Datalehti, Diesel Parts Direct](https://www.dieselpartsdirect.com/documents/caterpillar-specs/cat-3126b-propulsion.pdf) | Pyörimissuunta vauhtipyörän päästä: vastapäivään. Teholuokat A–E 250–450 bhp (E: 420/450 bhp @ 2800 rpm). Lomakenumeroa ja päiväystä ei näy. | [vessel](../vessel/README.md#pyörimissuunnat) |
 | Caterpillar merimoottorit (vertailu) | [cat.com, tuotesivu](https://www.cat.com/en_US/products/new/power-systems/marine-power-systems/commercial-propulsion-engines/18408926.html) | Ohjelmoitava tyhjäkäynti 550–750 rpm | [vessel](../vessel/README.md#tyhjäkäyntikierrokset) |
 | Advance 300 -merivaihde | [advance-gearboxes.eu](https://www.advance-gearboxes.eu/advance-gearboxes/medium-heavy-duty-gearboxes/advance-300-5441/) | Välitys ~5,4:1. PTO 1:1, 0,044 kW/rpm ja Ø48 kiila-akseli on saatu omistajilta, ei tästä. **⚠ Käyttöohje puuttuu** (PTO:n pyörimissuunta, jäähdyttimen merivesivirtaus). | [vessel](../vessel/README.md) |
 

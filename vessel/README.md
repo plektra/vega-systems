@@ -29,6 +29,7 @@ omistajien suoraan antama tieto.
 | Kohde | Arvo | Lähde |
 |---|---|---|
 | Pääkone | Caterpillar 3126B, asennettu 2012. Teho **säädetty 350 hv:hen** omistajan muistin mukaan (blogissa 420 hv, joka on luultavasti mallin nimellisteho) **⚠ tarkista** koneen tyyppikilvestä tai Caterpillar-huollosta | [perustiedot], [omistaja 2026-10-22] |
+| Kampiakselin pyörimissuunta | **Vastapäivään vauhtipyörän päästä katsottuna** (eli myötäpäivään koneen etupäästä katsottuna); Caterpillarin vakiosuunta | [datalehti 3126B Marine Propulsion](https://www.dieselpartsdirect.com/documents/caterpillar-specs/cat-3126b-propulsion.pdf) |
 | Kierrosalue | Tyhjäkäynti (ks. alla) – **suurin noin 2400 rpm** (350 hv:n säädöllä), matka ~1800 rpm | [blogi 2018-11-12], [omistaja 2026-10-22] |
 | Vauhtipyörä / kytkinkoppa | SAE 11-1/2 -vauhtipyörä, luultavasti SAE #3 -koppa, sovitelaippa SAE 14:ään | [blogi 2021-02-08] |
 | Vaihteisto (alkuperäinen) | Masson RSD200 (1976), poistettu | [blogi 2019-01-24] |
@@ -40,6 +41,31 @@ omistajien suoraan antama tieto.
 | Potkuri | Oikeakätinen | [blogi 2019-01-24] |
 | Merivesipumppu (impelleri) | Koneen etupään omassa voimanulosotossa, kiinteä välitys (suhde **⚠ ei tiedossa**). Tuotto noin **70 l/min koneen 650 rpm:llä** verkkohaun mukaan, **⚠ vahvistamatta**. Kiinteällä välityksellä tuotto kasvaa suunnilleen koneen kierrosten suhteessa: arvio ~75 l/min 700 rpm, ~110 l/min 1000 rpm, ~190 l/min 1800 rpm. | [omistaja 2026-10-22, verkkohaun perusteella], [laskelma] |
 | Merivesipiirin jäähdyttimet | Pääkoneen lämmönvaihdin ja merivaihteen (Advance 300) oma öljynjäähdytin samassa merivesipiirissä | [omistaja 2026-10-22] |
+
+### Pyörimissuunnat
+
+- **Kone:** CAT 3126B:n kampiakseli pyörii **vastapäivään vauhtipyörän päästä katsottuna**
+  ("Rotation (from flywheel end): Counterclockwise"). Sama arvo on 3126B:n merimoottorin
+  datalehdessä ja Caterpillarin huoltotiedoissa (haettu 2026-10-24). Kyse on tyyppitiedosta; Vegan
+  koneen suuntaa ei ole erikseen katsottu, mutta vastakkaiseen suuntaan pyöriviä 3126B-koneita ei
+  löytynyt.
+- **PTO:** pyörii **koneeseen nähden vastakkaiseen suuntaan** [omistaja 2026-10-23], eli
+  myötäpäivään, kun katsotaan samasta suunnasta kuin vauhtipyörää (perästä keulaan päin).
+  Advance 300:n käyttöohjetta ei ole, joten tätä ei ole vahvistettu datalehdestä.
+- **PTO-pumpun suunta** [laskelma]: pumppu ja PTO ovat vastakkain, joten pumpun suunta omasta
+  akselinpäästään katsottuna on päinvastainen kuin PTO:n suunta PTO-akselin päästä katsottuna.
+  Tulos riippuu siitä, mihin suuntaan PTO-akseli osoittaa:
+
+  | PTO-akseli osoittaa | PTO akselin päästä katsottuna | Pumppu akselin päästä katsottuna |
+  |---|---|---|
+  | **perään** (pumppu PTO:n takana) | myötäpäivään | **vastapäivään = L** |
+  | **keulaan** (pumppu PTO:n edessä, koneen puolella) | vastapäivään | **myötäpäivään = R** |
+
+  **⚠ tarkista** veneellä: mihin suuntaan PTO-akseli osoittaa, ja pyöriikö se todella
+  vastakkaiseen suuntaan kuin kone. Helpointa on katsoa PTO-akselia, kun konetta pyöritetään
+  käsin tai käynnistetään hetkeksi (vaihde vapaalla). Merkitse akseliin teippiliuska.
+  Pumppujen R/L-merkintä tarkoittaa valmistajasta riippumatta suuntaa **pumpun akselin päästä
+  katsottuna**; tarkista se silti kunkin pumpun datalehdestä.
 
 ### Tyhjäkäyntikierrokset
 
