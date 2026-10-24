@@ -921,9 +921,19 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
 -asennusohje]. **⚠ Tarkista laipan ja akselin koodit (DL4, L35).**
 
 **Kysy myyjältä ennen ostoa:**
-1. Tyyppikilven koodi kokonaan (koko, R/L, laippa ja akseli, esim. `SAP-064R-N-DL4-L35`,
+1. Tyyppikilven koodi kokonaan (koko, R/L, laippa ja akseli, esim. `SAP-064L-N-DL4-L35`,
    `HDS-64 ISO`, Rexrothilla `A17FO063`).
-2. Pyörimissuunta. Sen pitää sopia PTO:hon, tai pumpun suunta pitää pystyä vaihtamaan.
+2. Pyörimissuunta: **Vegaan tarvitaan L** (ks. yllä), tai pumpun suunta pitää pystyä vaihtamaan.
+   L-mallin tunnistaa näin:
+
+   | Pumppu | L-malli | Lähde |
+   |---|---|---|
+   | Sunfab SAP DIN | koodin 3. kohta `L`: `SAP-056L-…`, `SAP-064L-…` (R-mallia ei voi kääntää) | [datalehti Sunfab SAP DIN] |
+   | OMFB HDS ISO | HDS-55 ISO **601-001-10559**, HDS-64 ISO **601-001-10649** (vanhat koodit 108-015-05545 ja 108-015-06044); R-mallien koodit päättyvät …10553 / …10643 | [OMFB-luettelo s. 4, *kuvana*] |
+   | Hyva (OMFB:n valmistama) | Hyvan koodissa on sekä `L` että `R` (esim. `064L-R-4H-BAHP` on datalehden mukaan myötäpäivään), joten **katso suunta datalehdestä tai pumpun nuolesta** | [Hyva 145 69 004] |
+   | Rexroth A17FO | pyörimissuuntakoodi `L` = vastapäivään; suunnan voi vaihtaa (käyttöohje 91520-01-B) | [RE 91520] |
+   | Parker F1 | `F1-61-L`; R-mallin voi kääntää (päätykappale 180°) | [luettelo MSG30-8200/UK] |
+   | Hydro Leduc XPi | molempiin suuntiin, vaihto imuliitintä kääntämällä | [hydrokit.com] |
 3. Tuleeko ohitusventtiili mukana, ja mikä on sen koodi. Käytetty pumppu ja venttiili yhdessä on
    yleensä selvästi edullisin.
 4. Kunto: akselitiivisteen vuoto, akselin välys, urituksen kuluminen, käyttötunnit ja miksi pumppu
