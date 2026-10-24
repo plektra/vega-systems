@@ -2,8 +2,11 @@
 
 > **Tila:** **Päätetty 2026-10-23** ([decisions.md](../../decisions.md)): P2 on Parker F1-61, veto PTO:lta
 > Spidex 48/60 -kynsikytkimellä ilman PTO-kytkintä, BPV-F1-ohitusventtiili käsiohituksella
-> (378 4179), 50 mm:n imulinja ja BPV:n vuotolinja säiliöön. Hankinta myöhemmin. Alla oleva
-> vertailu on säilytetty taustaksi.
+> (378 4179), 50 mm:n imulinja ja BPV:n vuotolinja säiliöön. **Päivitetty 2026-10-24:** Torin
+> F1-61:n kauppa peruuntui, joten P2:ksi kelpaa myös vastaava ISO 7653 -vinoakselipumppu
+> valmistajan omalla ohitusventtiilillä, mieluiten käytettynä, ks.
+> [Vaihtoehtoiset pumput](#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24).
+> Alla oleva vertailu on säilytetty taustaksi.
 > Tausta: [current-system.md §0](../current-system.md). Hinnat ovat karkeita suuntaa-antavia
 > arvioita; pyydä tarjoukset ennen päätöstä.
 
@@ -18,9 +21,9 @@ BPV:n vuotoliitäntä 1/4" ── oma letku säiliöön öljypinnan alle
 
 | Osa | Valinta | Lisätiedot |
 |---|---|---|
-| Pumppu | Parker F1-61-R (378 1060), 59,5 cm³, käytetty (tori.fi) | [Ehdokas: Parker F1-061](#ehdokas-parker-f1-061-käytettynä-torifi) |
+| Pumppu | Parker F1-61 (59,5 cm³) **tai vastaava** ISO 7653 -vinoakselipumppu 56–64 cm³ (Sunfab SAP 056/064 DIN, OMFB/Hyva HDS-55/64 ISO, Rexroth A17FO 063), käytettynä. Torin F1-61:n kauppa peruuntui 2026-10-24. | [Vaihtoehtoiset pumput](#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24) |
 | Veto | Spidex 48/60: napa SPI-48A-KL-A8X32X36 (pumppu), napa SPI-48A-ST-D48H7 (PTO), hammaskehä 98 Sh A (tai 64 Sh D) | [Veto PTO:lta](#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä) |
-| Tyhjäkierto | Parker BPV-F1, 24 VDC, **käsiohituksella 378 4179** | [BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili) |
+| Tyhjäkierto | Parker BPV-F1, 24 VDC, **käsiohituksella 378 4179**; muulla pumpulla saman valmistajan ohitusventtiili (Sunfab SBP-1-M, OMFB 108-200-24494/24485, Rexroth R930062926) | [BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili), [vaihtoehdot](#sopivat-pumput-ja-niiden-ohitusventtiilit) |
 | Imu | 50 mm:n letku mahdollisimman lyhyenä, Parkerin Ø50-imuliitin (esim. suora 378 0636 / 45° 378 0364 / 90° 378 0979) | [Imupuoli](#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu) |
 | Vuotolinja | BPV:n 1/4"-vuotoliitäntä (liitin 378 3039 mukana) → oma letku säiliöön öljypinnan alle | [BPV-F1](#lisävaruste-parker-bpv-f1--ohitusventtiili) |
 | Kannake | Pumppu ISO 7653 -laipalla (Ø80) omaan runkoon kiinnitettyyn kannakkeeseen; kytkimelle suojakotelo | [Veto PTO:lta](#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä) |
@@ -235,6 +238,8 @@ Työntövoima-arviot **700 rpm:n tyhjäkäynnillä**, lämmin öljy:
   pumpun koko tuottoa.
 
 ## Ehdokas: Parker F1-061 käytettynä (tori.fi)
+
+> **Kauppa peruuntui 2026-10-24** [omistaja]. Tiedot pätevät edelleen mihin tahansa F1-61:een.
 
 Ilmoitus: <https://www.tori.fi/recommerce/forsale/item/45212646>, hinta **100 €** (tarkistettu
 2026-10-22). Ilmoituksen teksti: *"Hyväkuntoinen vähän käytetty mäntäpumppu. Pyörimissuunta helppo
@@ -809,6 +814,131 @@ kummallakin pumpulla, mutta **jos tyhjäkäynti on mitattaessa alle 700 rpm, F1-
 **Johtopäätös:** F1-61 pysyy ensisijaisena. Käytetty F1-51 kelpaa, jos se on selvästi halvempi ja
 tyhjäkäynti on mitattu vähintään 700 rpm:ksi.
 
+## Vaihtoehtoiset pumput muilta valmistajilta (selvitys 2026-10-24)
+
+**Tausta:** Torin F1-61:n kauppa peruuntui [omistaja 2026-10-24]. Siksi P2:ksi kelpaa nyt mikä
+tahansa F1-61:tä vastaava kuorma-auton vinoakselipumppu, kunhan siihen saa pumpun päälle asennettavan
+ohitusventtiilin. Uudet pumput ovat kalliita, joten käytettyjä suositaan.
+
+**Mikä ratkaisee yhteensopivuuden:** muu päätetty kokoonpano (Spidex 48/60, kannake, 50 mm:n imu,
+vuotolinja, ohjauslogiikka) säilyy, jos pumpussa on
+- **ISO 7653 -laippa** (kuorma-autolaippa, keskitys Ø80). Kannake suunnitellaan laipan mukaan, joten
+  se sopii kaikille alla oleville. Pumpun rungon muoto ja ohitusventtiilin paikka vaihtelevat, joten
+  imu- ja vuotoletkuille jätetään tilaa.
+- **DIN ISO 14 / DIN 5462 8×32×36 -hammasakseli**, jolloin Spidex-napa SPI-48A-KL-A8X32X36 käy;
+- kierrostilavuus **noin 55–64 cm³**, jotta 700 rpm:n tyhjäkäynnillä saadaan vähintään 33,8 l/min;
+- **vähintään 250 bar jatkuva** paine;
+- **valmistajan oma ohitusventtiili** (BPV-tyyppinen), joka asennetaan pumpun päätykappaleeseen. Ilman
+  sitä pumppu tarvitsisi PTO-kytkimen.
+
+Teollisuusmallit eivät käy ilman sovitteita: esim. **Sunfab SCP ISO** -sarjassa on ISO 3019-2
+-laippa ja DIN 5480 -akseli [datalehti Sunfab SCP 012-130 ISO]. Kuorma-automalli on **SAP DIN**.
+
+### Sopivat pumput ja niiden ohitusventtiilit
+
+[laskelma]: tuotto 700 rpm:llä, volumetrinen hyötysuhde 95 %; momentti 250 barissa, mekaaninen
+hyötysuhde 95 %. Tarve 33,8 l/min. PTO:n raja noin 420 Nm, Spidex 48/60 98 Sh A 525 Nm.
+
+| Pumppu | cm³ | Paine jatkuva / huippu | Tuotto 700 rpm | Momentti 250 bar | Ohitusventtiili (24 V) | Lähde |
+|---|---|---|---|---|---|---|
+| **Parker F1-61** (vertailu, aiempi valinta) | 59,5 | 350 / 400 bar | 39,6 l/min | 249 Nm | BPV-F1 378 4179 (käsiohitus) tai 378 7201 | ks. yllä |
+| Parker F1-51 | 51,1 | 350 / 400 bar | 34,0 l/min (rajalla) | 214 Nm | sama BPV-F1 | ks. yllä |
+| **Sunfab SAP 056 DIN** | 56,7 | 400 bar | 37,7 l/min | 237 Nm | **Sunfab SBP-1-M** (käsiohitus), 28 V:n kela sopii 24 V:n järjestelmään | [SAP DIN](https://www.sunfab.com/media/v41lcque/3122en2211sap-sapt-012-130-din.pdf), [SBP](https://www.sunfab.com/media/vpddpiaz/3304en2402-by-pass-sbp.pdf) |
+| **Sunfab SAP 064 DIN** | 63,6 | 400 bar | 42,3 l/min | 266 Nm | sama SBP-1-M | sama |
+| **OMFB HDS-55 ISO** | 56,7 | 350 / 400 bar | 37,7 l/min | 237 Nm | OMFB **108-200-24494** (= 10820024494, HDS-40…MDS-80) tai uudempi esiohjattu **108-200-24485** (HDS-47/55/64) | [OMFB HDS ISO](https://cdn.dzwigi.net.pl/b/v2/60100110179/Document/OMFB-10836-6852c03aa516c.pdf), [ohitusventtiilit](https://www.omfb.com/media/ARXIVAR_WEB/99741010836.pdf) |
+| **OMFB HDS-64 ISO** (myös **Hyva 064**, OMFB:n valmistama) | 63,56 | 350 / 400 bar | 42,3 l/min | 266 Nm | samat; Hyvan nimellä **14740060** (HDS 47-55-64) | sama, [Hyva 145 69 004](https://cdn.dzwigi.net.pl/b/v2/14569004/Document/14569004(1).pdf) |
+| **Bosch Rexroth A17FO 063** | 63,0 | 350 / 400 bar | 41,9 l/min | 264 Nm | Rexroth **A-VALV-BY-PASS 089111000402000 (R930062926)**, vain koolle 63; kela D36 tilataan erikseen | [RE 91520](https://paro.nl/library//storage/datasheets/BoschRexroth/EN/BR_re91520_2015-11.pdf/datasheet.html), [RE 18309-66](https://apps.boschrexroth.com/products/compact-hydraulics/ch-catalog/pdf/08911100K_RE18309-66.pdf) |
+| **Hydro Leduc XPi 63** | 63 | 380 / 420 bar | 41,9 l/min | 264 Nm | Hydro Leduc **BP63, 0517931** (XPi 12…63) | [hydrokit.com](https://www.hydrokit.com/en/produit/hydraulic-pump/piston-pumps/piston-pumps-for-trucks/leduc-xpi-fixed-displacement-bent-axis/piston-truck-pump-xpi-63-cc-bi-di-xrp8809-xpr47200.html), [BP-esite](https://hydroleduc.com/it/wp-content/uploads/2025/07/hydroleduc_by-passXPi_en.pdf) |
+| Bezares FR 60 | noin 60 **⚠ tarkista** | **⚠ ei tiedossa** | noin 40 l/min (arvio) | noin 251 Nm (arvio) | Bezares FR 40/60: 9061590 (paineenrajoituksella) / 9073890 (ilman) | [Bezares](https://bezares.com/new-by-pass-valve-without-relief-valve/) |
+
+**Ei sovi:** OMFB HDS-47 (47,1 cm³, 31,3 l/min) ja Rexroth A17FO 045 (45,6 cm³, 30,3 l/min, eikä
+ohitusventtiiliä tälle koolle) antavat tyhjäkäynnillä liian vähän. Parker F1-81/-101 ja muut yli
+80 cm³:n pumput ovat liian suuria (ks. edellinen luku). OMFB:n **UNI**-mallit (HDS-55 UNI 300 bar,
+HDS-64 UNI 280 bar) ovat eri laipalla; valitse **ISO**-malli.
+
+### Erot, jotka vaikuttavat asennukseen
+
+| | Parker F1-61 | Sunfab SAP 056/064 | OMFB HDS-55/64 ISO | Rexroth A17FO 063 | Hydro Leduc XPi 63 |
+|---|---|---|---|---|---|
+| Pyörimissuunta | vaihdettavissa (päätykappale 180°) | **kiinteä L tai R**, ostetaan oikea | **kiinteä, oikea tai vasen** | vaihdettavissa (käyttöohjeen mukaan) | **molempiin suuntiin**, vaihto kääntämällä imuliitin |
+| Itseimevä raja (jos ohitus ei aukea) | 2400 rpm | 1900 rpm jatkuva, 2500 ajoittain | 1900 rpm jatkuva, 2500 ajoittain | 2200 rpm | 2300 rpm (suurin) |
+| Suurin kierrosluku ohituksessa | 2700 rpm | SBP-1: 3000 rpm (ajoittain) | 2700 rpm kuormittamattomana; esiohjattu venttiili 2500 rpm | Rexroth: ohituksessa pumppu voi pyöriä suurimmalla nopeudella (3200 rpm) | **⚠ ei tiedossa**; pumpun 2300 rpm alittaa koneen 2400 rpm:n |
+| Pienin imupaine | 1,0 bar abs | 1,0 bar abs (kierrosrajojen ehto) | 0,85 bar abs (Hyva) | 0,8 bar abs | **⚠ ei tiedossa** |
+| Imuaukko | Ø50-liitin erikseen | Ø45 letkunippa (laippa), kahdella letkunkiristimellä | G 1 1/4 -kierre | kierreliitäntä, koko **⚠ tarkista** | Ø46, 45°-kulmaputki mukana; 2"-liitin saatavana |
+| Vuotolinja ohituksessa | pakollinen | tarvitaan, jos ohituksessa järjestelmän läpi kulkee alle 10 % pumpun teoreettisesta tuotosta; 3/8–1/2" | vuotoliitäntä venttiilissä | tarvitaan, jos tankkiin kulkee alle 5 l/min (portti D) | pakollinen, G 1/4 |
+| Käsiohitus | 378 4179 | -M-malli: kelan suojahattu ruuvataan pohjaan, kone sammuksissa | "emergency device" | **⚠ ei mainita** | **⚠ ei tiedossa** |
+| Paino (pumppu) | 8,5 kg | 9,8 kg | 12,0–13,2 kg | 9,3 kg | noin 14,9 kg ohitusventtiilin kanssa |
+| Kela | 14 W | 16,9 W (28 V), IP69K, Deutsch DT04 | 22 W, IP66 | 20 W | 24 V |
+
+- **Pyörimissuunta on tärkein asia ennen käytetyn ostoa.** Sunfabia ja OMFB:tä ei voi kääntää, joten
+  PTO:n suunta (akselin päästä katsottuna) pitää tietää ennen kauppaa. F1, A17FO ja XPi sallivat
+  virheen. **⚠ Tarkista PTO:n pyörimissuunta.**
+- **Itseimevä raja on Sunfabilla ja OMFB:llä matalampi** (1900 rpm jatkuva) kuin F1-61:llä. Jos
+  ohitusventtiili jää syöttöasentoon, pumppu kavitoi matkakierroksilla nopeammin. Kierroslukitus ja
+  imupaineanturi ovat siksi vielä tärkeämpiä. Normaalissa käytössä (keulapotkuri tyhjäkäynnillä,
+  ohitus auki ajossa) tällä ei ole merkitystä.
+- **Hydro Leduc XPi:** suurin kierrosluku 2300 rpm on koneen 2400 rpm:n alla. Selvitä, sallitaanko
+  ohitusasennossa suurempi nopeus, ennen kuin XPi:tä harkitaan. Muuten se on hyvä, koska suunta ei
+  rajoita.
+- **Rexroth A17FO 063:n ohitusventtiili** tarvitsee vähintään 10 barin paineen P-portissa, ja sen
+  S-portin suurin paine on 2 bar [RE 18309-66]. Kela (D36) tilataan erikseen.
+- **Spidex:** 63–64 cm³:n pumpuilla momentti on 280 barissa noin 298 Nm, ja luettelon kertoimilla
+  (1,3 × 1,3) tarve on noin 500 Nm. 98 Sh A (525 Nm) riittää niukasti; **64 Sh D (655 Nm) on
+  suositeltava 63–64 cm³:n pumpulle**. 250 barissa (päätetty asetus) tarve on noin 450 Nm [laskelma].
+- **Isompi pumppu, enemmän lämpöä tyhjäkäynnillä:** 63–64 cm³ tuottaa 700 rpm:llä noin 42 l/min,
+  joten noin 7–8 l/min menee paineenrajoituksen yli keulapotkurin käydessä (noin 3 kW, F1-61:llä noin
+  2 kW). Lyhyissä jaksoissa harmitonta [laskelma].
+- **Imu:** kaikkien imuvirtaus 700 rpm:llä on 50 mm:n letkussa noin 0,36 m/s. G 1 1/4- tai Ø45-aukon
+  edessä 50 mm:n letku supistetaan lyhyesti, mikä tuo pienen lisähäviön.
+- **Sekoittaminen ei käy:** ohitusventtiili kuuluu aina saman valmistajan pumppuun. Parkerin BPV ei
+  sovi Sunfabiin eikä päinvastoin.
+
+### Hinnat ja käytetyt
+
+Uushinnat eivät ole julkisia (tarjouspyyntö) lukuun ottamatta muutamaa jälleenmyyjää:
+
+| Osa | Hinta | Lähde |
+|---|---|---|
+| Parker BPV-F1 378 7201 | noin 430 € + ALV | dzwigi.net.pl, haettu 2026-10-23 |
+| Hydro Leduc BP63 0517931 | 2095,06 PLN + ALV, noin 490 € + ALV (4,25 PLN/€), ei saatavilla | [dzwigi.net.pl](https://dzwigi.net.pl/en/sklep/4978-akcesoria.html), haettu 2026-10-24 |
+| Sunfab SBP-1, OMFB 108-200-24494, Rexroth R930062926 | **⚠ ei tiedossa**, pyydä tarjous | – |
+| Uusi vinoakselipumppu 56–64 cm³ | **⚠ ei tiedossa**; arviolta 700–1500 € (ks. vaihtoehto C) | – |
+
+**Käytettyjen markkinat** (tarkistettu tori.fi 2026-10-24): sopivaa ei ollut myynnissä. Torissa oli
+Parker F1-101-R varaosiksi (50 €, liian suuri), Sunfab SC034L (34 cm³, 480 €, liian pieni),
+Sunfab SAP 108 L DIN (200 €, liian suuri) ja Parker F2 70/70 (1800 €). Kokemus F1-61:stä (100 €)
+osoittaa, että käytetty pumppu voi olla murto-osa uuden hinnasta.
+
+**Hakusanoja käytettyjen etsintään:** "F1-61", "F1-061", "VOAC F1", "SAP 056", "SAP 064", "SCP 056",
+"SCP 064", "HDS 55", "HDS 64", "A17FO 63", "XPi 63", "kippipumppu", "mäntäpumppu", "nosturin pumppu".
+Hyviä paikkoja ovat tori.fi, huutokaupat.com, purettujen kuorma-autojen ja nostureiden osamyyjät
+sekä Ruotsin blocket.se (Sunfab on ruotsalainen, ja sitä on paljon ruotsalaisissa nostureissa).
+Vanhempi Volvo Hydraulics / VOAC F1 on Parkerin F1:n edeltäjä. Se on todennäköisesti sama pumppu,
+mutta **⚠ tarkista ennen ostoa, sopiiko nykyinen BPV-F1 sen päätykappaleeseen**. Sunfabin vanhempi
+SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös SCP:lle [Sunfab SBP
+-asennusohje]. **⚠ Tarkista laipan ja akselin koodit (DL4, L35).**
+
+**Kysy myyjältä ennen ostoa:**
+1. Tyyppikilven koodi kokonaan (koko, R/L, laippa ja akseli, esim. `SAP-064R-N-DL4-L35`,
+   `HDS-64 ISO`, Rexrothilla `A17FO063`).
+2. Pyörimissuunta. Sen pitää sopia PTO:hon, tai pumpun suunta pitää pystyä vaihtamaan.
+3. Tuleeko ohitusventtiili mukana, ja mikä on sen koodi. Käytetty pumppu ja venttiili yhdessä on
+   yleensä selvästi edullisin.
+4. Kunto: akselitiivisteen vuoto, akselin välys, urituksen kuluminen, käyttötunnit ja miksi pumppu
+   irrotettiin.
+
+### Suositus
+
+1. **Ensisijaisesti mikä tahansa näistä käytettynä ohitusventtiilin kanssa:** Parker F1-61, Sunfab
+   SAP 056/064 DIN, OMFB/Hyva HDS-55/64 ISO tai Rexroth A17FO 063. Ne sopivat päätettyyn
+   kokoonpanoon (Spidex, kannake, 50 mm:n imu, vuotolinja ja ohjauslogiikka), ja vain imu- ja
+   vuotoletkujen liittimet vaihtuvat.
+2. **Hydro Leduc XPi 63** vasta, kun ohitusasennon suurin kierrosluku on selvitetty.
+3. **Ennen ostoa selvitä PTO:n pyörimissuunta.** Silloin myös Sunfab- ja OMFB-pumpun voi ostaa
+   heti, kun sopiva löytyy.
+4. Jos käytettyä ohitusventtiiliä ei löydy, uusi maksaa noin 430–490 € + ALV. Laske se mukaan
+   kokonaishintaan, kun vertaat käytettyjä pumppuja.
+
 ## Pumppuvaihtoehtojen vertailu
 
 | | A. Hammaspyörä 43–51 cc | B. Hammaspyörä 37 cc + kierrokset | C. Vinoakseli | D. Säätö PC | E. Kuormantunteva | F. Tandem |
@@ -826,7 +956,12 @@ tyhjäkäynti on mitattu vähintään 700 rpm:ksi.
 - [x] Tyhjäkäynti: oletetaan 700 rpm, ei mitata (päätös 2026-10-23)
 - [x] Parker F1-061: tyyppikilpi F1-061-R---000, osanumero 3781060; vuotolinjaa ei tarvita
 - [x] P2:ksi valittu Parker F1-61 (päätös 2026-10-23)
-- [ ] Parker F1-061 (tori.fi, 100 €): kunto, holkin mitat, tuleeko imuliitin mukana (ISO-mallissa ei kierreimuaukkoa); osto
+- [x] ~~Parker F1-061 (tori.fi, 100 €): osto~~ kauppa peruuntui [omistaja 2026-10-24]
+- [ ] **P2-pumpun hankinta käytettynä:** F1-61, Sunfab SAP 056/064 DIN, OMFB/Hyva HDS-55/64 ISO tai Rexroth A17FO 063, mieluiten ohitusventtiilin kanssa (ks. [vaihtoehdot](#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24))
+- [ ] Hinnat uusille ohitusventtiileille: Sunfab SBP-1-M (28 V), OMFB 108-200-24494 / 24485, Rexroth R930062926 + kela D36
+- [ ] Hydro Leduc XPi 63: suurin kierrosluku ohitusasennossa (pumpun raja 2300 rpm, kone 2400 rpm)
+- [ ] VOAC / Volvo F1-61 (vanhempi): sopiiko nykyinen BPV-F1
+- [ ] Spidex-hammaskehä: 64 Sh D, jos pumppu on 63–64 cm³
 - [x] ~~F1-061: sovitus Borellin 30500:een~~ ei tarpeen, PTO-kytkimestä luovuttu (päätös 2026-10-23)
 - [x] F1-061: pienin sallittu imupaine 1,0 bar abs (≈ 0 bar ylipainetta) [luettelo MSG30-8200/UK s. 14]
 - [x] F1-61: kierrostilavuus 59,5 cm³; suurin itseimevä kierrosluku 2400 rpm, lyhytsuljettuna 2700 rpm [luettelo s. 23]
@@ -840,7 +975,7 @@ tyhjäkäynti on mitattu vähintään 700 rpm:ksi.
 - [ ] Pumppukannakkeen suunnittelu (omistajat; 10 mm teräslevy, laserleikkaus ja hitsaus, ei koneistusta): ISO 7653 -laippa Ø80, säätövara linjaukseen, Spidex 140 mm, suojakotelo
 - [x] Kone ja merivaihde jäykästi runkoon; kannake runkoon [omistaja 2026-10-23]
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto (uuteen kohtaan, vanha 32 mm jää P1:lle) ja täysiaukkoinen palloventtiili, imulinja mahdollisimman lyhyt; BPV:n vuotolinjan paluu öljypinnan alle
-- [ ] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; koneen suunta **⚠ tarkista**
+- [ ] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; koneen suunta **⚠ tarkista**. **Tärkeä ennen käytetyn pumpun ostoa:** Sunfab SAP ja OMFB HDS ovat kiinteäsuuntaisia
 - [x] VPR3: kolmitie-prioriteettiventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [x] Asennetun VPR3:n koko: 3/4" [omistaja 2026-10-23]
 - [ ] Paluusuodattimen virtausluokitus

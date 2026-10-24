@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Päivitetty 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulipumput on irrotettu** (lokakuu 2026); muu järjestelmä (säiliö, venttiilit, orbitroli,
 > sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Luvut 3.1–3.5 kuvaavat viimeisintä
@@ -18,7 +18,7 @@
 | Pääkone | Asennetaan takaisin ja linjataan vaihteistoon |
 | Hydrauliikka | **Molemmat pumput irrotettu**; muu järjestelmä (säiliö, venttiilit, orbitroli, sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Pumppuja ei asenneta ennen kuin kone on linjattu. |
 | Suunnitelma: ohjauspumppu | Pieni vakiotilavuuspumppu (P1, 16,6 cm³) palaa koneen etupäähän, kahden kiilahihnan vetämänä kuten ennenkin. **Vain ohjaukselle.** |
-| Suunnitelma: apupiirin pumppu | **Parker F1-61** (59,5 cm³, vinoakselimäntäpumppu) **suoraan Advance 300:n voimanulosotosta (PTO)** [päätös 2026-10-23] |
+| Suunnitelma: apupiirin pumppu | **Parker F1-61** (59,5 cm³, vinoakselimäntäpumppu) **tai vastaava** 56–64 cm³:n ISO 7653 -pumppu valmistajan ohitusventtiilillä (Sunfab SAP DIN, OMFB/Hyva HDS ISO, Rexroth A17FO 063) **suoraan Advance 300:n voimanulosotosta (PTO)** [päätös 2026-10-23 ja 2026-10-24; [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24)] |
 | Advance 300:n PTO | **Välitys 1:1, käyttö ensiöakselilta** (pyörii aina kun kone käy, myös vapaalla). **Ei omaa kytkintä.** Nimellisteho **0,044 kW/rpm**, eli vakiomomenttiraja **≈ 420 Nm** (35 kW 800 rpm:llä, 110 kW 2500 rpm:llä). Ulostulo on **sileä Ø48 mm:n kiila-akseli** ilman pumppulaippaa. |
 | Suunnitelma: PTO-voimansiirto | PTO-akseli → **Spidex 48/60 -kynsikytkin** → P2. Pumppu on **omalla, runkoon kiinnitetyllä kannakkeella**, joten PTO-akselille ei tule pumpun painoa eikä sivukuormaa. **Ei PTO-kytkintä** [päätös 2026-10-23, korvaa HRC 150 + kytkin]. |
 | Suunnitelma: tyhjäkierto | **Parker BPV-F1 -ohitusventtiili käsiohituksella** (378 4179) pumpun päällä: jännitteettömänä pumppu kiertää tyhjänä, jännitteellisenä syöttää piiriin. **Vuotolinja** BPV:ltä suoraan säiliöön. Ks. [p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23). |
@@ -328,6 +328,7 @@ Avoimet:
 
 - [x] Koneen tyhjäkäynti: **oletetaan 700 rpm, ei mitata** (päätös 2026-10-23)
 - [x] P2: Parker F1-61 (59,5 cm³) + BPV-F1 käsiohituksella (päätös 2026-10-23); hankinta myöhemmin
+- [ ] P2:n hankinta: Torin F1-61:n kauppa peruuntui; etsitään käytetty F1-61 tai vastaava ohitusventtiilin kanssa (päätös 2026-10-24), ks. [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24)
 - [x] ~~PTO-kytkin~~: ei kytkintä, BPV hoitaa tyhjäkierron (päätös 2026-10-23)
 - [x] Akselikytkin: Spidex 48/60 (päätös 2026-10-23); hankinta: tarjous Salhydrolta, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
 - [ ] Pumppukannake: omistajat suunnittelevat, 10 mm teräslevy, laserleikkaus ja hitsaus [omistaja 2026-10-23]; ei koneistusta (päätös 2026-10-23); ISO 7653 -laippa Ø80, säätövara linjaukseen, Spidex 140 mm, suojakotelo, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)

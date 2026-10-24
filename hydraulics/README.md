@@ -29,4 +29,5 @@ Suunnitelmassa on kaksi piiriä:
 
 Päätös 2026-10-23: F1-61 + BPV-F1 käsiohituksella, Spidex 48/60 -kytkin, 50 mm:n imulinja ja
 BPV:n vuotolinja säiliöön, ks. [design/p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23).
-Hankinta myöhemmin.
+Hankinta myöhemmin. **2026-10-24:** Torin F1-61:n kauppa peruuntui; myös vastaavat Sunfab-, OMFB/Hyva- ja
+Rexroth-pumput omalla ohitusventtiilillään käyvät, ks. [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24).
