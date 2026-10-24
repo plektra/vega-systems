@@ -952,6 +952,12 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
 4. Jos käytettyä ohitusventtiiliä ei löydy, uusi maksaa noin 430–490 € + ALV. Laske se mukaan
    kokonaishintaan, kun vertaat käytettyjä pumppuja.
 
+**Säätötilavuuspumppu vaihtoehtona** (selvitys 2026-10-25): käytetty Vickers PVH57 (L, 57,4 cm³,
+190 €) toimisi ilman ohitusventtiiliä LS-purulla, ja keulapotkurin käytön lämpö korkeilla
+kierroksilla putoaisi noin 38 kW:sta noin 2–3 kW:iin. Se vaatii kuitenkin SAE C -kannakkeen,
+eri kytkinnavan, kotelovuotolinjan ja VPR3:n tilalle kaksitiekompensoidun
+virtauksensäätöventtiilin, ks. [p2-variable-pump.md](p2-variable-pump.md).
+
 ## Pumppuvaihtoehtojen vertailu
 
 | | A. Hammaspyörä 43–51 cc | B. Hammaspyörä 37 cc + kierrokset | C. Vinoakseli | D. Säätö PC | E. Kuormantunteva | F. Tandem |
@@ -971,6 +977,7 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
 - [x] P2:ksi valittu Parker F1-61 (päätös 2026-10-23)
 - [x] ~~Parker F1-061 (tori.fi, 100 €): osto~~ kauppa peruuntui [omistaja 2026-10-24]
 - [ ] **P2-pumpun hankinta käytettynä:** F1-61, Sunfab SAP 056/064 DIN, OMFB/Hyva HDS-55/64 ISO tai Rexroth A17FO 063, mieluiten ohitusventtiilin kanssa (ks. [vaihtoehdot](#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24))
+- [ ] Säätötilavuuspumppu (Vickers PVH57) vai F1-61 tai vastaava: ks. [p2-variable-pump.md](p2-variable-pump.md#avoimet-kysymykset)
 - [ ] Hinnat uusille ohitusventtiileille: Sunfab SBP-1-M (28 V), OMFB 108-200-24494 / 24485, Rexroth R930062926 + kela D36
 - [ ] Hydro Leduc XPi 63: suurin kierrosluku ohitusasennossa (pumpun raja 2300 rpm, kone 2400 rpm)
 - [ ] VOAC / Volvo F1-61 (vanhempi): sopiiko nykyinen BPV-F1

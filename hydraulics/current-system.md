@@ -328,7 +328,7 @@ Avoimet:
 
 - [x] Koneen tyhjäkäynti: **oletetaan 700 rpm, ei mitata** (päätös 2026-10-23)
 - [x] P2: Parker F1-61 (59,5 cm³) + BPV-F1 käsiohituksella (päätös 2026-10-23); hankinta myöhemmin
-- [ ] P2:n hankinta: Torin F1-61:n kauppa peruuntui; etsitään käytetty F1-61 tai vastaava ohitusventtiilin kanssa (päätös 2026-10-24), ks. [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24)
+- [ ] P2:n hankinta: Torin F1-61:n kauppa peruuntui; etsitään käytetty F1-61 tai vastaava ohitusventtiilin kanssa (päätös 2026-10-24), ks. [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24). Selvitettävänä myös säätötilavuuspumppu Vickers PVH57 (tori.fi, 190 €), ks. [p2-variable-pump](design/p2-variable-pump.md)
 - [x] ~~PTO-kytkin~~: ei kytkintä, BPV hoitaa tyhjäkierron (päätös 2026-10-23)
 - [x] Akselikytkin: Spidex 48/60 (päätös 2026-10-23); hankinta: tarjous Salhydrolta, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
 - [ ] Pumppukannake: omistajat suunnittelevat, 10 mm teräslevy, laserleikkaus ja hitsaus [omistaja 2026-10-23]; ei koneistusta (päätös 2026-10-23); ISO 7653 -laippa Ø80, säätövara linjaukseen, Spidex 140 mm, suojakotelo, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
