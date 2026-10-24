@@ -34,7 +34,7 @@ omistajien suoraan antama tieto.
 | Vauhtipyörä / kytkinkoppa | SAE 11-1/2 -vauhtipyörä, luultavasti SAE #3 -koppa, sovitelaippa SAE 14:ään | [blogi 2021-02-08] |
 | Vaihteisto (alkuperäinen) | Masson RSD200 (1976), poistettu | [blogi 2019-01-24] |
 | Vaihteisto | Advance 300, ~5,4:1, **asennettu ja linjattu** (2026) | [blogi 2021-02-08], [omistaja 2026-10-21] |
-| Vaihteiston PTO | 1:1, ensiöakselilta (pyörii vapaalla), ei omaa kytkintä, 0,044 kW/rpm (≈ 420 Nm), Ø48 mm:n kiila-akseli | [omistaja 2026-10-21] |
+| Vaihteiston PTO | 1:1, ensiöakselilta (pyörii vapaalla), ei omaa kytkintä, 0,044 kW/rpm (≈ 420 Nm), Ø48 mm:n kiila-akseli. **Akseli osoittaa perään**, pyörii koneeseen nähden vastakkaiseen suuntaan → PTO-pumppu **L**, ks. [Pyörimissuunnat](#pyörimissuunnat) | [omistaja 2026-10-21], [omistaja 2026-10-23], [omistaja 2026-10-24] |
 | Akselin laakeri | Uusi laakeripukki potkuriakselille | [omistaja 2026-10-21] |
 | Koneen tilanne | Asennetaan takaisin ja linjataan vaihteistoon (lokakuu 2026) | [omistaja 2026-10-21] |
 | Koneen kiinnitys | Sekä vaihteisto että kone jäykästi runkoon | [blogi 2021-02-08], [omistaja 2026-10-23] |
@@ -54,16 +54,19 @@ omistajien suoraan antama tieto.
   Advance 300:n käyttöohjetta ei ole, joten tätä ei ole vahvistettu datalehdestä.
 - **PTO-pumpun suunta** [laskelma]: pumppu ja PTO ovat vastakkain, joten pumpun suunta omasta
   akselinpäästään katsottuna on päinvastainen kuin PTO:n suunta PTO-akselin päästä katsottuna.
-  Tulos riippuu siitä, mihin suuntaan PTO-akseli osoittaa:
+  Tulos riippuu siitä, mihin suuntaan PTO-akseli osoittaa. **PTO-akseli osoittaa perään**
+  [omistaja 2026-10-24], joten **PTO-pumpun pitää olla L** (vastapäivään pumpun akselin päästä
+  katsottuna):
 
   | PTO-akseli osoittaa | PTO akselin päästä katsottuna | Pumppu akselin päästä katsottuna |
   |---|---|---|
-  | **perään** (pumppu PTO:n takana) | myötäpäivään | **vastapäivään = L** |
+  | **perään** (pumppu PTO:n takana) ✅ Vega | myötäpäivään | **vastapäivään = L** |
   | **keulaan** (pumppu PTO:n edessä, koneen puolella) | vastapäivään | **myötäpäivään = R** |
 
-  **⚠ tarkista** veneellä: mihin suuntaan PTO-akseli osoittaa, ja pyöriikö se todella
-  vastakkaiseen suuntaan kuin kone. Helpointa on katsoa PTO-akselia, kun konetta pyöritetään
-  käsin tai käynnistetään hetkeksi (vaihde vapaalla). Merkitse akseliin teippiliuska.
+  PTO:n pyörimissuunta koneeseen nähden on omistajan tieto eikä datalehdestä. **Ennen
+  kiinteäsuuntaisen pumpun (Sunfab, OMFB) ostoa** se kannattaa varmistaa: merkitse PTO-akseliin
+  teippiliuska ja katso perästä päin, pyöriikö akseli myötäpäivään, kun konetta pyöritetään käsin
+  tai käynnistetään hetkeksi (vaihde vapaalla).
   Pumppujen R/L-merkintä tarkoittaa valmistajasta riippumatta suuntaa **pumpun akselin päästä
   katsottuna**; tarkista se silti kunkin pumpun datalehdestä.
 

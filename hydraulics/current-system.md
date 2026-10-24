@@ -336,7 +336,7 @@ Avoimet:
 - [ ] BPV:n ohitustilan lämpö ajossa (ei julkaistu): kysy Parkerilta, mittaa ensimmäisellä kaudella
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto ja täysiaukkoinen palloventtiili; BPV:n vuotolinjan paluu öljypinnan alle
 - [ ] U11:n vuotolinja: missä kohtaa se liittyy paluulinjaan? Jos ennen jäähdytintä, ohitusventtiiliä (3–4 bar) tai suodatinta, kotelon paine nousee. Kysy Sleipneriltä kotelon suurin sallittu paine; tarvittaessa vuotolinja suoraan säiliöön tai paluulinjaan suodattimen jälkeen
-- [ ] PTO:n pyörimissuunta: **vastakkainen koneen pyörimissuuntaan nähden** [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]. Pumppu on **L**, jos PTO-akseli osoittaa perään, ja **R**, jos se osoittaa keulaan; **⚠ tarkista** PTO-akselin suunta ja pyöriminen veneellä, ks. [vessel: Pyörimissuunnat](../vessel/README.md#pyörimissuunnat). (F1:n suuntaa voi vaihtaa kääntämällä päätykappaleen.)
+- [x] PTO:n pyörimissuunta: **vastakkainen koneen pyörimissuuntaan nähden** [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **P2-pumppu on L**. Ennen kiinteäsuuntaisen pumpun ostoa suunta kannattaa varmistaa teippiliuskalla, ks. [vessel: Pyörimissuunnat](../vessel/README.md#pyörimissuunnat). (F1:n suuntaa voi vaihtaa kääntämällä päätykappaleen.)
 - [x] Valitun pumpun pienin sallittu imupaine: 1,0 bar abs (Parker F1)
 - [ ] Mitä öljyä järjestelmässä nyt on (säiliö ja letkut paikallaan): merkki, luokka, ikä; vaihdetaanko ja huuhdellaanko
 - [x] Hydrauliöljyn tyyppi ja luokka: **HVLP 32** (päätös 2026-10-23), ks. [hydraulic-oil.md](design/hydraulic-oil.md)

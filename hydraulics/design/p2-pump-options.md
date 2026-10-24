@@ -287,7 +287,7 @@ Oletukset: 59,5 cm³ (päivitetty 2026-10-23, aiemmin 61), volumetrinen hyötysu
 | Lämpö | Ylimääräiset ~5–6 l/min menevät paineenrajoituksen yli, noin 2–3 kW lisälämpöä vain keulapotkurin käytön ajan; lyhyissä jaksoissa harmitonta |
 | Imulinja | Nykyinen 32 mm:n letku: noin 0,86 m/s 700 rpm:llä, alle Parkerin 1,0 m/s:n rajan, mutta 1000 rpm:llä 1,2 m/s. Parkerin 1,0 bar abs:n imupainevaatimus ei täyty 32 mm:n linjalla kylmällä öljyllä. **Suositus: 50 mm:n imuliitin ja -linja**, ks. [Imupuoli](#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu). |
 | Kylmä öljy | ISO VG 46 on 5 °C:ssa noin 380 cSt, eli lähellä pumpun 400 cSt:n käyttörajaa. **HV 32 -öljy** (noin 200–250 cSt 5 °C:ssa) antaisi marginaalia. |
-| Pyörimissuunta | Pumpun suunta (akselin päästä katsottuna) pitää sovittaa PTO:n suuntaan (PTO-akselin päästä katsottuna). Koska suunnan voi vaihtaa, tämä ei ole riski. Pumppu L, jos PTO-akseli osoittaa perään, R, jos keulaan, ks. [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). **⚠ Tarkista PTO-akselin suunta.** |
+| Pyörimissuunta | Pumpun suunta (akselin päästä katsottuna) pitää sovittaa PTO:n suuntaan (PTO-akselin päästä katsottuna). Koska suunnan voi vaihtaa, tämä ei ole riski. PTO-akseli osoittaa perään, joten pumpun pitää olla **L**: tämä R-pumppu käännetään (päätykappale 180°), ks. [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). |
 | Kiinnitys | ISO 7653 -laippa ja 8×32×36-hammasakseli **eivät sovi suoraan** Borellin 30500:een (toisiossa 48×44-sisähammastus ja ryhmä-/SAE-laipat). Tarvitaan sovitelaippa ja -holkki, joko Salhydrolta/Borellilta tai teetettynä. Myyjän holkki on luultavasti 8×32×36-sisähammastettu holkki, josta voi tehdä vedon. **⚠ Selvitä holkin mitat.** |
 
 **Arvio:** pumppu sopii hyvin. 100 eurolla se kannattaa ostaa, jos kunto on hyvä (ei vuotoa
@@ -554,7 +554,7 @@ hitsaus** [omistaja 2026-10-23]. Suunnittelun lähtötiedot:
   vuodessa [luettelo s. 79].
 - **Pyörivä kytkin vaatii kiinteän suojakotelon.** Ilman kytkintä akseli pyörii aina, kun kone käy,
   ja se voi tarttua vaatteisiin tai käteen.
-- Pumpun pyörimissuunta (R/L) sovitetaan PTO:n pyörimissuuntaan: L, jos PTO-akseli osoittaa perään, R, jos keulaan ([vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat)). **⚠ Tarkista PTO-akselin suunta.**
+- Pumpun pyörimissuunta (R/L) sovitetaan PTO:n pyörimissuuntaan: PTO-akseli osoittaa perään, joten pumppu on **L** ([vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat)).
 - Pätevän henkilön pitää tarkistaa kannake, linjaus ja suojaus ennen käyttöönottoa.
 
 **Jos kytkin pidetään** (Borelli 30500), HRC 150 tulee PTO:n ja kytkimen Ø42-ensiöakselin väliin, ja
@@ -872,9 +872,9 @@ HDS-64 UNI 280 bar) ovat eri laipalla; valitse **ISO**-malli.
 
 - **Pyörimissuunta on tärkein asia ennen käytetyn ostoa.** Sunfabia ja OMFB:tä ei voi kääntää, joten
   PTO:n suunta (akselin päästä katsottuna) pitää tietää ennen kauppaa. F1, A17FO ja XPi sallivat
-  virheen. Koneen suunta on selvitetty (vastapäivään vauhtipyörän päästä); pumpun R/L riippuu vielä
-  siitä, mihin suuntaan PTO-akseli osoittaa, ks.
-  [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). **⚠ Tarkista veneellä.**
+  virheen. **Vegaan tarvitaan L-pumppu** (kone vastapäivään vauhtipyörän päästä, PTO-akseli
+  osoittaa perään), ks. [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). Varmista PTO:n suunta
+  teippiliuskalla ennen kiinteäsuuntaisen pumpun ostoa.
 - **Itseimevä raja on Sunfabilla ja OMFB:llä matalampi** (1900 rpm jatkuva) kuin F1-61:llä. Jos
   ohitusventtiili jää syöttöasentoon, pumppu kavitoi matkakierroksilla nopeammin. Kierroslukitus ja
   imupaineanturi ovat siksi vielä tärkeämpiä. Normaalissa käytössä (keulapotkuri tyhjäkäynnillä,
@@ -936,10 +936,9 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
    kokoonpanoon (Spidex, kannake, 50 mm:n imu, vuotolinja ja ohjauslogiikka), ja vain imu- ja
    vuotoletkujen liittimet vaihtuvat.
 2. **Hydro Leduc XPi 63** vasta, kun ohitusasennon suurin kierrosluku on selvitetty.
-3. **Ennen ostoa selvitä PTO:n pyörimissuunta:** katso veneellä, osoittaako PTO-akseli perään
-   (pumppu **L**) vai keulaan (pumppu **R**), ks.
-   [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). Silloin myös Sunfab- ja OMFB-pumpun voi ostaa
-   heti, kun sopiva löytyy.
+3. **Osta L-pumppu** (vastapäivään pumpun akselin päästä katsottuna), ks.
+   [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). Sunfab- ja OMFB-pumpun voi ostaa heti, kun
+   sopiva L-mallinen löytyy; varmista ensin PTO:n suunta teippiliuskalla.
 4. Jos käytettyä ohitusventtiiliä ei löydy, uusi maksaa noin 430–490 € + ALV. Laske se mukaan
    kokonaishintaan, kun vertaat käytettyjä pumppuja.
 
@@ -979,7 +978,7 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
 - [ ] Pumppukannakkeen suunnittelu (omistajat; 10 mm teräslevy, laserleikkaus ja hitsaus, ei koneistusta): ISO 7653 -laippa Ø80, säätövara linjaukseen, Spidex 140 mm, suojakotelo
 - [x] Kone ja merivaihde jäykästi runkoon; kannake runkoon [omistaja 2026-10-23]
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto (uuteen kohtaan, vanha 32 mm jää P1:lle) ja täysiaukkoinen palloventtiili, imulinja mahdollisimman lyhyt; BPV:n vuotolinjan paluu öljypinnan alle
-- [ ] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]. Pumppu on **L**, jos PTO-akseli osoittaa perään, ja **R**, jos keulaan ([vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat)); **⚠ tarkista** PTO-akselin suunta veneellä. **Tärkeä ennen käytetyn pumpun ostoa:** Sunfab SAP ja OMFB HDS ovat kiinteäsuuntaisia
+- [x] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **pumppu L** ([vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat)). **Tärkeä ennen käytetyn pumpun ostoa:** Sunfab SAP ja OMFB HDS ovat kiinteäsuuntaisia
 - [x] VPR3: kolmitie-prioriteettiventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [x] Asennetun VPR3:n koko: 3/4" [omistaja 2026-10-23]
 - [ ] Paluusuodattimen virtausluokitus
