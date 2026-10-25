@@ -438,6 +438,42 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
   varaventtiiliksi paineenrajoittimen yläpuolelle, esim. noin 270 bariin (pätevä henkilö
   hyväksyy); kotelo täytetään öljyllä ennen ensimmäistä käynnistystä.
 
+## Säätö käyttöönotossa ilman virtausmittaria
+
+> Lisätty 2026-10-25 [arvio]. Pätevän henkilön pitää hyväksyä säätöjärjestys ja -arvot.
+
+Kaikki säädöt voi tehdä painemittarilla **2G1** (CETOP-pohjalaatan P-linja, FXDC:n jälkeen,
+[pressure-monitoring](pressure-monitoring.md)). Nollavirtauksella FXDC:n yli ei ole painehäviötä,
+joten 2G1 näyttää silloin pumpun lähtöpaineen.
+
+| Säätö | Miten | Mittari |
+|---|---|---|
+| **Valmiustila (LS-paine-ero, noin 20 bar)** | 2/2 auki, BAV-713 keskellä: 2G1 näyttää valmiustilan paineen. Tehdasasetus, säädetään vain, jos lukema poikkeaa selvästi. | 2G1 |
+| **Paineenrajoitin 120 → 250 bar** | 2/2 kiinni, BAV-713 keskellä: pumppu nousee asetuspaineeseen nollatuotolla. Säädetään pumpun säätöruuvista. Pidä jakso lyhyenä, koska tilassa syntyy noin 10 kW lämpöä. | 2G1 |
+| **VMP varaventtiiliksi noin 270 bariin** | VMP:n pitää avautua vasta pumpun asetuksen yläpuolella, joten sitä ei voi säätää 250 barin pumpulla suoraan. Esim. pumpun asetus nostetaan hetkeksi noin 280 bariin, VMP säädetään 270 bariin ja pumppu palautetaan 250 bariin. **Pätevä henkilö tekee tämän.** | 2G1 |
+| **Keulapotkurin virtaus (FXDC)** | Keulapotkuria ajetaan, ja 2G1:n lukema muunnetaan virtaukseksi Sleipnerin taulukolla (alla). Jos lukema jää selvästi alle 250 barin, FXDC rajoittaa virtausta liikaa ja asetusta nostetaan (`L`/`K`-malli) tai valitaan suurempi kiinteä asetus. | 2G1 |
+
+**Painemittari toimii virtausmittarina,** koska keulapotkurin moottorin paine ja virtaus kulkevat
+yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin taulukko U11:lle
+[datalehti Side-Power SH Series v1.0.0 2017]:
+
+| Paine moottorilla | Virtaus | Työntövoima |
+|---|---|---|
+| 158 bar | 26,2 l/min | 60 % |
+| 211 bar | 30,2 l/min | 80 % |
+| 264 bar | 33,8 l/min | 100 % |
+
+- 250 barissa moottori ottaa arviolta noin 33 l/min (interpoloitu) [laskelma]. **Jos FXDC on
+  asetettu tätä suuremmaksi (esim. 34–36 l/min), paine rajoittaa eikä virtaus, ja FXDC:n tarkka
+  asetus ei vaikuta työntövoimaan.** Silloin se toimii vain ylikierrossuojana. Siksi tarkkaa
+  virtausmittausta ei tarvita.
+- 2G1 näyttää paineen pohjalaatalla, ja moottorilla paine on BAV-713:n ja letkujen häviön verran
+  pienempi **⚠ häviö ei tiedossa, arviolta muutama bar**.
+- **Ankkurivinssin** nopeus tarkistetaan sekuntikellolla ketjun nopeudesta, kun vinssi on kytketty.
+- **Varmistus tarvittaessa:** virtauksen voi mitata ämpärillä ja sekuntikellolla vapaasta
+  paluuletkusta (34 l/min täyttää 20 l:n astian noin 35 sekunnissa). Letku pitää kiinnittää
+  tukevasti ja tehdä matalalla paineella; tätä ei yleensä tarvita.
+
 ## Vikatilat
 
 - **Kela tai sähkö pettää:** LS on yhteydessä säiliöön, pumppu on valmiustilassa ja keulapotkuri
