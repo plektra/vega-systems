@@ -88,7 +88,50 @@ Ankkurivinssin kanssa PVH57 ei ole automaattisesti parempi (ks.
 **Suositus:** F1-61 ohitusventtiilillä, kuten on päätetty. Se on yksinkertaisempi ja käyttää
 olemassa olevaa VPR3:a, eikä sen suurin heikkous juuri näy Vegan käytössä. PVH57:ään kannattaa
 palata vain, jos ankkurivinssiä käytetään pitkiä jaksoja tai keulapotkuria joudutaan käyttämään
-usein korkeilla kierroksilla.
+usein korkeilla kierroksilla, tai jos tavoitteeksi tulee jokin
+[vain säätötilavuuspumpulla järkevistä ominaisuuksista](#mitä-pvh57-mahdollistaisi-mitä-kiinteällä-pumpulla-ei-ole-järkevää).
+
+## Mitä PVH57 mahdollistaisi, mitä kiinteällä pumpulla ei ole järkevää
+
+> Lisätty 2026-10-25. Arvio ilman laskelmia; ideat vaativat tarkistuksen ennen kuin niitä käytetään
+> päätöksen perusteena.
+
+### Proportionaaliohjaus onnistuu kummallakin
+
+- **Kiinteä pumppu (F1-61):** proportionaaliventtiili, jonka tuloosassa on kolmitiekompensaattori.
+  Se laskee ylimäärän säiliöön hieman kuorman painetta korkeammassa paineessa. Toimii hyvin, mutta
+  korkeilla kierroksilla ylimäärä kuristuu lämmöksi kuten nyt.
+- **PVH57:** pumppu tuottaa vain sen, mitä venttiili päästää läpi, joten lämpöä syntyy vähän millä
+  tahansa kierroksilla.
+- Kummassakin tapauksessa keulapotkurin portaaton ohjaus vaatii proportionaaliventtiilin ja ohjaimen,
+  koska BAV-713 on on/off-venttiili (ks. [p2-pump-options, vaihtoehto E](p2-pump-options.md)).
+
+### Mitä vain PVH57 tekee järkevästi
+
+1. **Keulapotkurin portaaton teho halvemmalla.** LS-linjaan lisätään pieni sähköisesti säädettävä
+   paineenrajoitusventtiili, jolla pumpun painetta säädetään noin 20 barin ja 250 barin välillä.
+   Moottorin vääntö ja potkurin työntö seuraavat painetta, ja BAV-713 hoitaa edelleen suunnan.
+   LS-linjan venttiili on pieni, koska sen läpi kulkee vain vähän öljyä. Kiinteällä pumpulla sama
+   vaatisi täyden virtauksen venttiilin, ja ylimäärä menisi lämmöksi. **⚠ Idea, ei laskettu:**
+   tarkista, sopiiko SH240 tällaiseen ohjaukseen ja miten säätö käyttäytyy (vakaus, vasteaika).
+2. **Useita kuormia yhtä aikaa ilman hukkaa.** Vinssi, daavitti tai spiira saavat yhteensä enintään
+   pumpun tuoton, ja pumppu tuottaa vain kulutetun määrän. Kiinteällä pumpulla käyttämätön osa
+   kuristuu aina lämmöksi.
+3. **Jatkuvat kuormat koneen käydessä,** esim. hydraulisesti käytetty generaattori tai pumppu:
+   vakiovirtaus kierroksista riippumatta ilman ylimäärän kuristamista. Tällaisia kuormia ei ole nyt
+   suunnitelmissa.
+4. **Paineen pito ilman virtausta,** esim. sylinterin pitäminen paineessa: pumppu lepää
+   nollatuotolla, kun kiinteän pumpun koko tuotto menisi paineenrajoittimen yli.
+
+### Mitä PVH57 ei muuta
+
+- **Suurin työntövoima ei kasva:** pumpun säätöalueen yläraja on 250 bar.
+- **Tyhjäkäynnin tuotto on sama,** noin 38 l/min 700 rpm:llä [laskelma].
+- **Venttiilejä ei jää pois:** suunta- ja virtausventtiilit tarvitaan edelleen.
+
+**Johtopäätös:** PVH57 on järkevä, jos järjestelmää aiotaan laajentaa (portaaton keulapotkuri,
+useita samanaikaisia tai jatkuvia kuormia). Nykyisillä tavoitteilla (on/off-keulapotkuri ja
+ankkurivinssi) F1-61 riittää. Portaaton keulapotkuri on tärkein syy harkita PVH57:ää uudelleen.
 
 ## Ehdokas: Vickers PVH57C-LAF-1S-10-C12V-31 (tori.fi)
 
@@ -363,4 +406,5 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
 - [ ] Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy (vinssin kuormantuntotila noin 20 bar)
+- [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (ratkaisee pitkälti, kannattaako PVH57)
 - [ ] Omistajat: PVH57 vai F1-61 tai vastaava ohitusventtiilillä
