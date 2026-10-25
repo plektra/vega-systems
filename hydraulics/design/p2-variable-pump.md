@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (VPR3:n B-porttia ei saa tulpata), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
@@ -73,8 +73,10 @@ siinä, kuinka paljon järjestelmää pitää ymmärtää.
 - **Öljyn puhtaus:** mäntäpumppu vaatii puhtaampaa öljyä (17/15/13, 140–210 bar [luettelo s. 31]).
   Nykyisen paluusuodattimen riittävyyttä ei tiedetä.
 - **Kunto:** pumppu on arviolta 1980-luvun lopulta tai 1990-luvulta (ks.
-  [Ikä](#ikä-ja-siihen-liittyvät-riskit)), uudelleen maalattu ja historialtaan tuntematon.
-  Tiivistesarjat ja korjaukset ovat kalliimpia, ja harvempi korjaamo tuntee sen.
+  [Ikä](#ikä-ja-siihen-liittyvät-riskit)) ja uudelleen maalattu. Myyjän mukaan se on säilytetty
+  lämpimässä öljyt sisällä, ruosteetta, ja akseli pyörii äänettömästi [myyjä 2026-10-25], joten
+  kuntoriski on pienempi kuin aluksi arvioitiin. Tiivistesarjat ja korjaukset ovat silti
+  kalliimpia, ja harvempi korjaamo tuntee sen.
 - **Ymmärrettävyys:** vian sattuessa F1-61:n toiminta on helpompi päätellä. LS-ohjauslinja on uusi
   käsite.
 - **Asennus:** pumppu on noin neljä kertaa painavampi, ja siinä on yksi letku enemmän.
@@ -145,7 +147,10 @@ pyörimisuunta vastapäivään. Pumpun perään voidaan kytkeä toinen pumppu."*
 - **Kunto kuvien perusteella:** maalattu uudelleen tai kauttaaltaan (maalia kilven reunoilla ja
   pulttien kannoissa), ruostepilkkuja säädinlohkossa ja rungossa. Portit tulpattu. Akselissa ja
   tiivistepinnoissa ei näy vaurioita. "Käyttämätön" voi tarkoittaa varastossa ollutta tai
-  kunnostettua. **⚠ Kysy alkuperä, varastointiaika ja pyöriikö akseli käsin tasaisesti.**
+  kunnostettua.
+- **Myyjän vastaukset** [myyjä 2026-10-25, omistajan välittämä]: akseli pyörii ilman ääniä;
+  pumppu on säilytetty koko ajan lämpimässä tallissa; sisällä on öljyt, eikä ruostetta ole.
+  **⚠ Vielä kysymättä:** alkuperä ja varastointiaika, onko kunnostettu, onko säädin koskematon.
 
 ### Ikä ja siihen liittyvät riskit
 
@@ -201,10 +206,15 @@ Lähteet: hakutulosten tiivistelmät 2026-10-25; sivuja ei saatu avattua tästä
     Avaamattomat sisäiset tiivisteet jätetään rauhaan: ne ovat suojassa, ja liikuttamaton tiiviste
     pitää yleensä paremmin kuin liikutettu.
 
-**Arvio:** ikä ei sinänsä estä käyttöä, koska sarjaa valmistetaan yhä ja osia saa. Käyttämätön
-mutta vanha pumppu tarvitsee kuitenkin todennäköisesti uudet tiivisteet. Laske tiivistesarja
-osaksi hintaa, ja tarkista sisäinen kunto ennen ostoa. Pätevän henkilön tai hydrauliikkakorjaamon
-kannattaa koeajaa pumppu ennen asennusta.
+**Arvio (päivitetty 2026-10-25 myyjän vastausten jälkeen):** ikä ei sinänsä estä käyttöä, koska
+sarjaa valmistetaan yhä ja osia saa. Myyjän mukaan pumppu on säilytetty lämpimässä, sisällä on
+öljyt eikä ruostetta, ja akseli pyörii äänettömästi. Silloin sisäisen korroosion ja laakerivaurion
+riski on pieni, eikä pumppua ole syytä avata. **Koko tiivistesarjaa (02-102244) ei tarvita.**
+Tiivisteiden ikä on yhä riski: akselitiiviste ja ulkoiset O-renkaat voivat olla kovettuneet, vaikka
+pumppu on ollut öljyssä. Tarkista ostaessa, ettei akselitiivisteen ympärillä ole öljyä ja että
+tiivisteen huuli ei ole halkeillut, ja vaihda ulkoiset O-renkaat liitäntöjä tehdessä. Akselitiiviste
+vaihdetaan, jos se vuotaa koeajossa. Hydrauliikkakorjaamon kannattaa koeajaa pumppu ennen
+asennusta.
 
 ### Tyyppikoodi
 
@@ -453,12 +463,13 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | Kytkimen pumppunapa | 8×32×36-uritettu, noin 134 € | 1,25":n kiilareikä **⚠ hinta ei tiedossa** |
 | Kytkimen PTO-napa ja hammaskehä | noin 81 € | sama |
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
-| Tiivisteet (ikä) | – | koko sarja 02-102244 noin 853 $ **⚠ tarkista**, tai pelkkä akselitiiviste ja O-renkaat (halvempi, hinta ei tiedossa), ks. [Tiivistesarja](#tiivistesarja) |
+| Tiivisteet (ikä) | – | ulkoiset O-renkaat, akselitiiviste vain jos vuotaa (halpa, hinta ei tiedossa); koko sarjaa 02-102244 (noin 853 $) ei tarvita, jos kunto on myyjän kertoma, ks. [Tiivistesarja](#tiivistesarja) |
 | Muuta | – | SAE-laippaliittimet, vuotoletku |
 
 ## Avoimet kysymykset
 
-- [ ] Myyjältä: alkuperä, varastointiaika, kunnostettu vai ei, pyöriikö akseli käsin tasaisesti, onko säädin koskematon (tehdasasetus 120 bar)
+- [x] Myyjältä: pyöriikö akseli tasaisesti (pyörii ilman ääniä), säilytys (lämmin talli), onko sisällä öljyä ja ruostetta (öljyt sisällä, ei ruostetta) [myyjä 2026-10-25]
+- [ ] Myyjältä: alkuperä, varastointiaika, kunnostettu vai ei, onko säädin koskematon (tehdasasetus 120 bar)
 - [ ] Valmistusvuosi (sarjanumero kilvestä, kysy myyjältä tai Danfossilta)
 - [ ] Tiivistesarja: sopiiko 02-102244 (vanha 02-102260) rakenteelle 10 ja yksinkertaiselle akselitiivisteelle, hinta Suomesta; vaihtoehtona pelkän akselitiivisteen ja O-renkaiden mitat
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
