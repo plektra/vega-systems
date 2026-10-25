@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
@@ -438,6 +438,39 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 - **Säädöt:** paineenrajoitin 120 → 250 bar pumpun säätöruuvista (mittari 2G1); VMP
   varaventtiiliksi paineenrajoittimen yläpuolelle, esim. noin 270 bariin (pätevä henkilö
   hyväksyy); kotelo täytetään öljyllä ennen ensimmäistä käynnistystä.
+
+## Asennusjärjestys
+
+> Lisätty 2026-10-25 [arvio]. Koostettu tämän dokumentin osalistasta ja kytkennästä. Pätevän
+> henkilön pitää tarkistaa kannake, LS-kytkentä ja ohjauslogiikka ennen rakentamista.
+
+1. **Pumpun tarkistus ennen asennusta.** Akselitiivisteen ympärillä ei saa olla öljyä, ja
+   akselin pitää pyöriä käsin tasaisesti. Ulkoiset O-renkaat vaihdetaan liitäntöjä tehtäessä.
+   Hydrauliikkakorjaamon koeajo kannattaa (ks. [Tiivistesarja](#tiivistesarja)).
+2. **Kannake ja kytkin.** Kannake 10 mm:n teräslevystä laserleikkaamalla ja hitsaamalla SAE C
+   -reikäkuviolle ja noin 36 kg:n pumpulle **⚠ tarkista paino**. Spidex 48/60: PTO-napa,
+   hammaskehä 98 Sh A ja pumppunapa 1,25":n kiila-akselille. Linjaus kytkimen sallimiin rajoihin
+   ([current-system §0](../current-system.md)) ja suojakotelo pyörivälle kytkimelle. Laipan mitat
+   asennuspiirustuksesta **⚠ ei vielä saatu**.
+3. **Imulinja.** 50 mm:n letku SAE-laipalla ja supistuksella pumpun imuaukkoon (koko
+   **⚠ tarkista pumpusta**); palloventtiili säilyy linjassa.
+4. **Kotelovuoto.** Ylimmästä vuotoportista oma letku (vähintään noin 1/2") säiliöön öljypinnan
+   alle. **Ei yhteiseen paluulinjaan.**
+5. **Painelinja.** Pumpulta FXDC:lle (linjarungossa) ja siitä CETOP-pohjalaatan P-porttiin.
+   VPR3 ja OD15 irrotetaan.
+6. **LS-linja.** Pumpun lähdöstä Ø0,8 mm:n kuristin LS-porttiin; LS-portista T-haara ja
+   2/2-magneettiventtiili (auki jännitteettömänä) säiliöön. Letkut 1/4".
+7. **Sähköt ja ohjaus** (ESP32 PDM):
+   - päälle: 2/2 kiinni ensin, sitten BAV-713 suuntaan
+   - pois: BAV-713 keskelle, sitten 2/2 auki
+   - **2/2 on auki aina, kun kaikki suuntaventtiilit ovat keskellä.** Muuten pumppu seisoo
+     250 barissa nollatuotolla (noin 10 kW lämpöä).
+8. **Öljy.** Järjestelmä huuhdellaan ja täytetään HVLP 32:lla ([päätös 2026-10-23](../../decisions.md)).
+   **Pumpun kotelo täytetään öljyllä ennen ensimmäistä käynnistystä.** Imulinjan palloventtiili
+   auki ennen käynnistystä.
+9. **Käyttöönotto ja säädöt** mittarilla 2G1, ks. [seuraava luku](#säätö-käyttöönotossa-ilman-virtausmittaria).
+   Pumpun paineenrajoittimen tehdasasetus on 120 bar, joten se nostetaan 250 bariin ennen
+   keulapotkurin täyttä käyttöä.
 
 ## Säätö käyttöönotossa ilman virtausmittaria
 
