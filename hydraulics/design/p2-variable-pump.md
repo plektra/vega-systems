@@ -1,10 +1,51 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (VPR3:n B-porttia ei saa tulpata), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
 > rakentamista.
+
+## Selkokielinen yhteenveto
+
+**Ongelma, joka halutaan ratkaista.** Nykyinen suunnitelma (Parker F1-61) on *kiinteätilavuuksinen*
+pumppu: se tuottaa aina kierroksia vastaavan määrän öljyä (700 rpm:llä noin 38 l/min, 1800 rpm:llä
+noin 102 l/min). Keulapotkuri tarvitsee noin 34 l/min. Ylimäärä on pakko päästää säiliöön:
+
+- *Kun keulapotkuria ei käytetä,* ohitusventtiili (BPV) kierrättää koko tuoton matalalla
+  paineella. Lämpöä syntyy vähän.
+- *Kun keulapotkuria käytetään korkeilla kierroksilla,* VPR3 päästää potkurille 35 l/min ja
+  laskee loput säiliöön lähes täydessä paineessa. 1800 rpm:llä tämä on noin 38 kW lämpöä
+  [laskelma, ks. [p2-pump-options](p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)].
+
+**Mitä PVH57 tekee toisin.** Säätötilavuuspumppu pienentää itse iskuaan, joten se tuottaa vain sen
+öljyn, joka menee läpi. Ylimäärää ei synny, eikä sitä tarvitse kuristaa lämmöksi.
+
+**Miten pumppua ohjataan.** Pumpussa on pieni ohjausliitäntä, LS-portti. Sitä voi ajatella
+pumpun "ohjauslankana":
+
+| Tila | Mitä tehdään | Mitä pumppu tekee |
+|---|---|---|
+| Lepo (myös sähkökatko) | pieni 2/2-magneettiventtiili on jännitteetön ja auki, LS-portti on yhteydessä säiliöön | pyörii noin 20 barissa lähes ilman tuottoa; lämpöä vähän |
+| Keulapotkuri käytössä | 2/2 saa jännitteen ja sulkeutuu, sitten BAV-713 ohjataan suuntaan | nostaa paineen 250 bariin; uusi kaksitie-virtauksensäätöventtiili päästää potkurille noin 34 l/min, ja pumppu tuottaa vain sen verran |
+
+Lämpöä syntyy keulapotkuria käytettäessä arviolta 2–3 kW 38 kW:n sijaan [laskelma, ks. alla].
+
+**Mikä muuttuu piirissä:**
+
+- **VPR3 poistetaan.** Kolmitieventtiilinä se laskee ylimäärän B-portista säiliöön, ja silloin
+  pumppu ajaa täydellä tuotolla matalassa paineessa. B-porttia ei myöskään saa tulpata (ks.
+  [VPR3:n portit](#vpr3n-portit-ja-miksi-se-ei-kelpaa)). Tilalle tulee kaksitie-virtauksensäätöventtiili
+  (esim. Sun FXDC), jossa ei ole ylimääräporttia lainkaan.
+- **OD15-vapaakiertoventtiili poistetaan.** Sen tehtävän (paine pohjalaatalle päälle ja pois)
+  hoitaa LS-linjan pieni 2/2-magneettiventtiili.
+- **Uudet osat:** SAE C -kannake, toinen kytkinnapa (1,25":n kiila-akseli), kotelovuotoletku
+  säiliöön, 2/2-magneettiventtiili ja kuristin LS-linjaan.
+- **Ennallaan:** CETOP-pohjalaatta, BAV-713, VMP, letkut, säiliö, suodatin ja jäähdytin.
+
+**Hinta ja tila:** pumppu 190 €, mutta kannake, napa, liittimet ja FXDC tulevat lisäksi (ks.
+[kustannusvertailu](#kustannusvertailu-arvio)). Mitään ei ole päätetty. F1-61 ohitusventtiilillä on
+edelleen voimassa oleva suunnitelma.
 
 ## Ehdokas: Vickers PVH57C-LAF-1S-10-C12V-31 (tori.fi)
 
@@ -81,16 +122,21 @@ C**V-säädin pitää pumpun lähtöpaineen noin 20 bar LS-portin painetta korke
 kääntää pumpun nollatuotolle asetuspaineessa. Huolto-ohjeen mukaan LS-linjaa voi käyttää pumpun
 etäohjaukseen ja purkuun [M-2210-S s. 6].
 
-### VPR3:n portit ja miksi se ei kelpaa sellaisenaan
+### VPR3:n portit ja miksi se ei kelpaa
 
 Marchesini VPR3 [datalehti VPR3]: **E** = tulo pumpulta, **P** = säädetty prioriteettivirtaus
-toimilaitteelle (käsipyörä), **B** = ylimäärä säiliöön tai toiselle toimilaitteelle. Kaaviossa E→P
-on pelkkä säädettävä kuristin, ja kompensaattori ainoastaan avaa ylimäärän B:hen. Siksi:
+toimilaitteelle (käsipyörä), **B** = ylimäärä. Datalehden kytkentäohje: *"Connect B to the tank or
+to a second actuator"* eli B kytketään aina säiliöön tai toiselle toimilaitteelle
+([Salhydro, VPR3-2015](https://www.salhydro.fi/files/PDF/VPR3-2015.pdf)). **B-porttia ei saa
+tulpata** [omistaja 2026-10-25]; datalehti ei anna tulppausta käyttötavaksi. Siksi:
 
-- **B tulpattuna VPR3 on pelkkä kuristin** eikä rajoita virtausta. Jos pumppu pitäisi lähdön
-  250 barissa, kevyellä kuormalla moottori voisi saada moninkertaisen virtauksen ja ylikierroksia.
-- **B säiliöön** ylimäärä valuu matalassa paineessa, pumppu ei saavuta paineenrajoittimen asetusta
+- **B säiliöön:** ylimäärä valuu matalassa paineessa, pumppu ei saavuta paineenrajoittimen asetusta
   ja ajaa täydellä tuotolla. Korkeilla kierroksilla tulisi sama lämpö kuin F1-61:llä.
+- **B toiselle toimilaitteelle:** Vegassa ei ole toista kuluttajaa, jolle ylimäärä voisi mennä.
+- **B tulpattuna** (ei sallittu): vaikka E→P näyttää kaaviossa pelkältä kuristimelta, se ei
+  rajoittaisi virtausta itse, eikä käsipyörän asetusta ole kalibroitu tähän käyttöön.
+
+**VPR3 ei siis sovi PVH57:n kanssa millään kytkennällä,** ja se korvataan kaksitieventtiilillä.
 
 ### Suositus: kaksitiekompensoitu virtauksensäätö ja LS-purku
 
@@ -116,14 +162,20 @@ PTO ─ Spidex ─ PVH57 ─ 2-tie kompensoitu virtauksensäätö ~34 l/min ─ 
   pitää olla auki aina, kun BAV-713 on keskellä.** Muuten pumppu seisoo 250 barissa nollatuotolla,
   mikä kuluttaa luettelon kuvaajan mukaan noin 10 kW.
 
-### Vaihtoehto: aito kuormantunto nykyisellä VPR3:lla
+### Vaihtoehto: aito kuormantunto säädettävällä kuristimella
 
-VPR3:n B tulpataan, ja LS-signaali otetaan kuristimen jälkeen pohjalaatan P-linjasta (esim.
-mittariliitäntä G 1/4") Ø0,8 mm:n kuristimen kautta. Pumppu pitää VPR3:n kuristimen yli 20 barin
-paine-eron, joten virtaus pysyy vakiona. Käsipyörä säädetään uudelleen niin, että virtaus on noin
-34 l/min 20 barin paine-erolla.
+> **Korjattu 2026-10-25:** aiempi versio ehdotti VPR3:n B-portin tulppaamista. Se ei ole sallittua
+> (ks. yllä), joten vaihtoehto toteutetaan erillisellä kaksiporttisella kuristimella VPR3:n tilalla.
 
-- **Plussat:** ei uutta virtauksensäätöventtiiliä; pienimmät häviöt osakuormalla (esim. vinssi).
+VPR3:n tilalle asennetaan säädettävä kaksiporttinen kuristin (neulaventtiili, esim. Marchesini
+VRFB **⚠ tarkista koko ja painearvo**), ja LS-signaali otetaan kuristimen jälkeen pohjalaatan
+P-linjasta (esim. mittariliitäntä G 1/4") Ø0,8 mm:n kuristimen kautta. Pumppu pitää kuristimen yli
+20 barin paine-eron, joten virtaus pysyy vakiona: **pumppu hoitaa painekompensoinnin**, joten
+kuristin ei tarvitse omaa kompensaattoria. Kuristin säädetään niin, että virtaus on noin 34 l/min
+20 barin paine-erolla. LS-linjaan tarvitaan silti 2/2-purkuventtiili, jotta pumppu lepää, kun
+BAV-713 on keskellä.
+
+- **Plussat:** halvempi kuin FXDC; pienimmät häviöt osakuormalla (esim. vinssi).
 - **Miinus:** 17–20 bar paineenrajoittimen 250 barista kuluu säätövaraan, ja moottori saa enintään
   noin 230 bar. **Työntövoima arviolta noin 80 %** (noin 4 % / 10 bar aiemman taulukon perusteella),
   mikä alittaa hyväksytyn noin 90 %:n kompromissin. C-jousen yläraja on 250 bar.
@@ -136,8 +188,10 @@ paine-eron, joten virtaus pysyy vakiona. Käsipyörä säädetään uudelleen ni
 | Hansa-Flex HK V270 5 - 3/4 | 2-tie, painekompensoitu, G 3/4", 15–80 l/min säädettävä, **250 bar** [Hansa-Flex](https://shop.hansa-flex.com/en_GB/es_ES/componentes-hidr%C3%A1ulicos/v%C3%A1lvulas/flow-control-valves/flow-control-valves-for-pipeline-installation/hk-v270-5---3-4/p/HKV2705-3-4) | Yksinkertaisin asentaa, mutta painearvo on tasan pumpun asetuksessa, eikä VMP:tä voi asettaa yläpuolelle venttiilin arvoa ylittämättä |
 | Bosch Rexroth 2FRM 10-3X/50L | 2-tie, painekompensoitu, enintään 50 l/min, 315 bar, NG10-alilaatta (ISO 6263) [jälleenmyyjä](https://hydraulicpartsusa.com/products/bosch-rexroth/2f-flow-control-valves/2FRM10-3X50LB) | Vaatii erillisen NG10-alilaatan |
 
-**Ei sovi:** Sun FRDA (prioriteettiportti enintään 210 bar), Marchesini VPR3 / RFP3 (kolmitie, ks.
-yllä), Marchesini VRFB (ei painekompensointia), Rexroth 2FRM 6 (enintään 32 l/min).
+**Ei sovi:** Sun FRDA (prioriteettiportti enintään 210 bar), Marchesini VPR3 / RFP3 (kolmitie,
+B-portti pakko kytkeä, ks. yllä), Rexroth 2FRM 6 (enintään 32 l/min). Marchesini VRFB ei käy
+suositusratkaisuun, koska siinä ei ole painekompensointia; kuormantuntovaihtoehdossa se käy, koska
+pumppu kompensoi.
 
 ## Tarvittavat osat pumpun lisäksi (minimi)
 
@@ -156,9 +210,12 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | 9 | Kaksitiekompensoitu virtauksensäätöventtiili noin 34 l/min (esim. Sun FXDC linjarungossa) | VPR3:n tilalle |
 
 **Poistuu tai muuttuu:**
-- **Rexroth OD15 -vapaakiertoventtiili poistetaan tai tulpataan.** Jännitteettömänä se on auki
-  säiliöön, ja silloin pumppu yrittää pitää 20 barin paine-eron ja ajaa täydellä tuotolla säiliöön.
-  OD15 on esiohjattu (2–70 l/min), joten se ei luultavasti sovi LS-linjan pieneen virtaukseen.
+- **VPR3 poistetaan** (B-porttia ei saa tulpata, ks. [VPR3:n portit](#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
+- **Rexroth OD15 -vapaakiertoventtiili poistetaan.** Jännitteettömänä se on auki säiliöön. Jos LS:n
+  2/2 on samaan aikaan kiinni, pumppu nostaa paineen 250 bariin ja virtauksensäätöventtiilin
+  34 l/min valuu OD15:n kautta säiliöön lähes koko paineella (arviolta 34 l/min × 250 bar ≈ 14 kW
+  lämpöä) [laskelma]. Sen tehtävän hoitaa LS:n 2/2. OD15 on esiohjattu (2–70 l/min), joten se ei
+  luultavasti sovi itse LS-linjan pieneen virtaukseen.
 - **Ei tarvita:** BPV-F1 (noin 430 € + ALV), Parkerin Ø50-imuliitin eikä 8×32×36-uritettu napa.
 - **Säädöt:** paineenrajoitin 120 → 250 bar pumpun säätöruuvista (mittari 2G1); VMP
   varaventtiiliksi paineenrajoittimen yläpuolelle, esim. noin 270 bariin (pätevä henkilö
@@ -194,4 +251,5 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 - [ ] Salhydro: Sun FXDC:n asetusvaihtoehto 34 l/min:lle ja 3/4":n linjarunko T-5A-pesälle, hinta
 - [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
 - [ ] Paluusuodattimen suodatusaste vs. 17/15/13
+- [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Omistajat: PVH57 vai F1-61 tai vastaava ohitusventtiilillä

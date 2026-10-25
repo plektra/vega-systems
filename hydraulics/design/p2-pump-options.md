@@ -148,8 +148,9 @@ Tyypillisiä merkkejä: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc ym., kokolu
 ### D. Säätötilavuuksinen aksiaalimäntäpumppu, painekompensoitu (PC)
 
 - **Plussat:** pienentää tilavuuttaan niin, että tuottaa vain käytetyn virtauksen. Mitään ei mene
-  paineenrajoituksen yli, eikä virtauksensäätöventtiilissä synny kuristushäviötä. VPR3 voisi
-  jäädä tarpeettomaksi.
+  paineenrajoituksen yli, eikä virtauksensäätöventtiilissä synny merkittävää kuristushäviötä. VPR3 pitää kuitenkin
+  korvata kaksitie-virtauksensäätöventtiilillä: sen B-portti on kytkettävä säiliöön, jolloin
+  pumppu ajaisi täydellä tuotolla, eikä B:tä saa tulpata ([p2-variable-pump](p2-variable-pump.md#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
 - **Miinukset:** noin 1500–3000 €. Ilman virtaustarvetta pumppu on silti täydessä säätöpaineessa
   (250 bar), joten vuotolinja vuotaa ja pumppu lämpenee tyhjäkäynnillä. Kytkin tarvitaan edelleen.
   Vaatii vuotolinjan säiliöön ja puhtaampaa öljyä. Isompi ja painavampi.
@@ -963,7 +964,7 @@ virtauksensäätöventtiilin, ks. [p2-variable-pump.md](p2-variable-pump.md).
 | | A. Hammaspyörä 43–51 cc | B. Hammaspyörä 37 cc + kierrokset | C. Vinoakseli | D. Säätö PC | E. Kuormantunteva | F. Tandem |
 |---|---|---|---|---|---|---|
 | Pumpun hinta (suuntaa-antava) | € | € | €€ | €€€ | €€€€ (venttiileineen) | €–€€ |
-| Muutokset piiriin | ei | kierrosohjaus | sovitelaippa; ehkä venttiilien arvot | vuotolinja; VPR3 valinnainen | uusi venttiilipaketti | lisäventtiilit |
+| Muutokset piiriin | ei | kierrosohjaus | sovitelaippa; ehkä venttiilien arvot | vuotolinja; VPR3 → kaksitieventtiili | uusi venttiilipaketti | lisäventtiilit |
 | Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~90 % | ~90 % | ~88 % |
 | Hyötysuhde käytön aikana | ~80–85 % | ~80–85 % | ~90–95 % | ~88–92 % | paras | ~80–85 % |
 | Öljyn puhtausvaatimus | sietää | sietää | kohtalainen | tiukka | tiukka | sietää |
