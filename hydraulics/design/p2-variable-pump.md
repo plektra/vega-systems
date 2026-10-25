@@ -401,7 +401,7 @@ BAV-713 on keskellä.
 
 | Venttiili | Tiedot | Huom. |
 |---|---|---|
-| **Sun Hydraulics FXDC** (korvaa FXDA:n) | 2-porttinen, kiinteä kuristin, painekompensoitu; 45 l/min, sarja 2, pesä T-5A, **350 bar**; asetus valitaan valmiista vaihtoehdoista, `L`/`K` antaa ±25 %:n hienosäädön; tehdasasetus ±10 % (`L`, `K`) tai ±15 % (`X`) [Sunin tuotesivu](https://www.sunhydraulics.com/model/FXDC) | **Suositus.** Tarvitsee 3/4":n linjarungon T-5A-pesälle. Toimittaja Salhydro (Suomi). **⚠ Kysy, mikä asetusvaihtoehto kattaa 34 l/min.** |
+| **Sun Hydraulics FXDC** (korvaa FXDA:n) | 2-porttinen, kiinteä kuristin, painekompensoitu; 45 l/min, sarja 2, pesä T-5A, **350 bar**; asetus valitaan valmiista vaihtoehdoista, `L`/`K` antaa ±25 %:n hienosäädön; tehdasasetus ±10 % (`L`, `K`) tai ±15 % (`X`) [Sunin tuotesivu](https://www.sunhydraulics.com/model/FXDC) | **Suositus.** Linjarunko T-5A-pesälle 3/4":n BSPP-porteilla on Sun **DAW**; valitaan **valurautainen DAW/S**, koska alumiinirunko kestää vain 210 bar [Sunin DAW-datalehti (paro.nl)](https://paro.nl/library//storage/datasheets/Sun/Line%20Mount%20Bodies/Sun_DAW.pdf/datasheet.html). Hinnat Hydrotechilla (USA) 2026-10-25: FXDC-LAN 83,10 $, FXDC-KAN 89,10 $, DAW (alumiini) 53,40 $; DAW/S:n hintaa ei löytynyt **⚠ ei tiedossa**. Toimittaja Suomessa Salhydro. **⚠ Kysy, mikä asetusvaihtoehto kattaa 34 l/min.** |
 | Hansa-Flex HK V270 5 - 3/4 | 2-tie, painekompensoitu, G 3/4", 15–80 l/min säädettävä, **250 bar** [Hansa-Flex](https://shop.hansa-flex.com/en_GB/es_ES/componentes-hidr%C3%A1ulicos/v%C3%A1lvulas/flow-control-valves/flow-control-valves-for-pipeline-installation/hk-v270-5---3-4/p/HKV2705-3-4) | Yksinkertaisin asentaa, mutta painearvo on tasan pumpun asetuksessa, eikä VMP:tä voi asettaa yläpuolelle venttiilin arvoa ylittämättä |
 | Bosch Rexroth 2FRM 10-3X/50L | 2-tie, painekompensoitu, enintään 50 l/min, 315 bar, NG10-alilaatta (ISO 6263) [jälleenmyyjä](https://hydraulicpartsusa.com/products/bosch-rexroth/2f-flow-control-valves/2FRM10-3X50LB) | Vaatii erillisen NG10-alilaatan |
 
@@ -424,7 +424,7 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | 6 | Kotelovuotolinja (vähintään noin 1/2") ylimmästä vuotoportista säiliöön öljypinnan alle | korvaa BPV:n vuotolinjan |
 | 7 | 2/2-magneettiventtiili, auki jännitteettömänä, suoraan toimiva, 24 V | LS-purku; ainoa uusi magneettiventtiili |
 | 8 | Kuristin noin Ø0,8 mm, T-haara ja 1/4":n letkut LS-linjaan | |
-| 9 | Kaksitiekompensoitu virtauksensäätöventtiili noin 34 l/min (esim. Sun FXDC linjarungossa) | VPR3:n tilalle |
+| 9 | Kaksitiekompensoitu virtauksensäätöventtiili noin 34 l/min: Sun FXDC (`L`/`K`, säädettävä ±25 %) valurautaisessa linjarungossa **DAW/S** (T-5A, 3/4" BSPP) | VPR3:n tilalle; alumiininen DAW ei kelpaa (210 bar) |
 | 10 | (valinnainen) 3/2-magneettiventtiili, suoraan toimiva, 24 V, ja 1/4":n letku pohjalaatan mittariliitäntään | vain jos ankkurivinssiä käytetään pitkään matalalla paineella, ks. [Ankkurivinssi](#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
 
 **Poistuu tai muuttuu:**
@@ -530,7 +530,7 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 |---|---|---|
 | Pumppu | käytetty 100–300 € | 190 € (tori.fi) |
 | Tyhjäkierto | BPV-F1 noin 430 € + ALV | 2/2-magneettiventtiili ja kuristin, arviolta 100–200 € |
-| Virtauksen rajoitus | VPR3 (olemassa) | Sun FXDC ja linjarunko **⚠ hinta ei tiedossa** |
+| Virtauksen rajoitus | VPR3 (olemassa) | Sun FXDC noin 83–89 $ (Hydrotech, USA, 2026-10-25, toimitus vasta 2027) ja linjarunko DAW/S **⚠ hinta ei tiedossa**; Suomen hinta Salhydrolta **⚠ ei tiedossa** |
 | Kytkimen pumppunapa | 8×32×36-uritettu, noin 134 € | 1,25":n kiilareikä **⚠ hinta ei tiedossa** |
 | Kytkimen PTO-napa ja hammaskehä | noin 81 € | sama |
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
@@ -545,7 +545,7 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 - [ ] Tiivistesarja: sopiiko 02-102244 (vanha 02-102260) rakenteelle 10 ja yksinkertaiselle akselitiivisteelle, hinta Suomesta; vaihtoehtona pelkän akselitiivisteen ja O-renkaiden mitat
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
-- [ ] Salhydro: Sun FXDC:n asetusvaihtoehto 34 l/min:lle ja 3/4":n linjarunko T-5A-pesälle, hinta
+- [ ] Salhydro: Sun FXDC:n asetusvaihtoehto 34 l/min:lle, ero `L`- ja `K`-mallin välillä, hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
 - [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
 - [ ] Paluusuodattimen suodatusaste vs. 17/15/13
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
