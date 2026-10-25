@@ -72,7 +72,8 @@ siinä, kuinka paljon järjestelmää pitää ymmärtää.
 
 - **Öljyn puhtaus:** mäntäpumppu vaatii puhtaampaa öljyä (17/15/13, 140–210 bar [luettelo s. 31]).
   Nykyisen paluusuodattimen riittävyyttä ei tiedetä.
-- **Kunto:** pumppu on 1990-luvun mallia, uudelleen maalattu ja historialtaan tuntematon.
+- **Kunto:** pumppu on arviolta 1980-luvun lopulta tai 1990-luvulta (ks.
+  [Ikä](#ikä-ja-siihen-liittyvät-riskit)), uudelleen maalattu ja historialtaan tuntematon.
   Tiivistesarjat ja korjaukset ovat kalliimpia, ja harvempi korjaamo tuntee sen.
 - **Ymmärrettävyys:** vian sattuessa F1-61:n toiminta on helpompi päätellä. LS-ohjauslinja on uusi
   käsite.
@@ -145,6 +146,36 @@ pyörimisuunta vastapäivään. Pumpun perään voidaan kytkeä toinen pumppu."*
   pulttien kannoissa), ruostepilkkuja säädinlohkossa ja rungossa. Portit tulpattu. Akselissa ja
   tiivistepinnoissa ei näy vaurioita. "Käyttämätön" voi tarkoittaa varastossa ollutta tai
   kunnostettua. **⚠ Kysy alkuperä, varastointiaika ja pyöriikö akseli käsin tasaisesti.**
+
+### Ikä ja siihen liittyvät riskit
+
+**Valmistusvuosi ei ole tiedossa** **⚠ ei tiedossa**. Kilven tiedoista sitä ei voi lukea, ja
+päivämääräkoodia ei ole tunnistettu. Arvio perustuu rakennenumeroon:
+
+- Koodin **10** on rakennenumero. Huolto-ohje M-2210-S (rev. 2/93) kattaa sen.
+- Vickersin huolto-ohjeessa, jonka revisio on 11/1997, kuvataan jo PVH57/63:n **rakenne 11**
+  ([manualmachine.com](https://manualmachine.com/eaton/pvh63/350146-user-manual/), hakutuloksen
+  tiivistelmä, ei luettu kokonaan).
+- Kilvessä lukee pelkkä *Vickers* eikä Eaton. Tämä ei rajaa ikää, koska Eaton (osti Vickersin 1999)
+  ja nyt Danfoss käyttävät Vickers-nimeä yhä.
+
+Pumppu on siis **todennäköisesti 1980-luvun lopulta tai 1990-luvulta**, noin 25–40 vuotta vanha
+[arvio]. **⚠ Kysy myyjältä tai Danfossilta** sarjanumeron perusteella.
+
+**Riskit, jotka liittyvät ikään eivätkä käyttöön:**
+
+| Riski | Miksi | Mitä tehdään |
+|---|---|---|
+| Tiivisteiden vanheneminen | Akselitiiviste ja O-renkaat (nitriili) kovettuvat ja halkeilevat vuosikymmenten varastoinnissa, vaikka pumppua ei olisi käytetty | **Vaihda akselitiiviste ja O-renkaat ennen asennusta** (tiivistesarja **⚠ hinta ei tiedossa**) |
+| Sisäinen korroosio | Jos pumppu on varastoitu ilman öljyä, sylinteriporaukset, männät ja säätimen karat voivat ruostua. Ruostepilkut säädinlohkossa ulkopuolella viittaavat kosteuteen | Katso porttien sisään, pyöritä akselia käsin; säätimen karan pitää liikkua vapaasti |
+| Laakerit | Pitkä seisonta ilman pyörimistä voi jättää laakereihin kosteus- tai seisontajälkiä | Akselin pitää pyöriä käsin tasaisesti ilman kohtia, joissa se tarttuu tai rahisee |
+| Säädin | Kara voi jumittua lakkaan tai ruosteeseen, jolloin pumppu ei palaa valmiustilaan | Tarkista käyttöönotossa paine ja valmiustila mittarilla 2G1 |
+| Varaosat | Vanha rakenne voi poiketa nykyisestä | **PVH-sarjaa myydään yhä** (Danfoss/Vickers), ja PVH57:n tiiviste-, laakeri- ja mäntäsarjoja on saatavilla jälleenmyyjiltä ([hydraulic-supply.com](https://www.hydraulic-supply.com/877423.html)) **⚠ varmista sopivuus rakenteelle 10** |
+
+**Arvio:** ikä ei sinänsä estä käyttöä, koska sarjaa valmistetaan yhä ja osia saa. Käyttämätön
+mutta vanha pumppu tarvitsee kuitenkin todennäköisesti uudet tiivisteet. Laske tiivistesarja
+osaksi hintaa, ja tarkista sisäinen kunto ennen ostoa. Pätevän henkilön tai hydrauliikkakorjaamon
+kannattaa koeajaa pumppu ennen asennusta.
 
 ### Tyyppikoodi
 
@@ -393,11 +424,12 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | Kytkimen pumppunapa | 8×32×36-uritettu, noin 134 € | 1,25":n kiilareikä **⚠ hinta ei tiedossa** |
 | Kytkimen PTO-napa ja hammaskehä | noin 81 € | sama |
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
-| Muuta | – | SAE-laippaliittimet, vuotoletku, mahdollisesti tiivistesarja |
+| Muuta | – | SAE-laippaliittimet, vuotoletku, **todennäköisesti tiivistesarja** (ikä, ks. [Ikä](#ikä-ja-siihen-liittyvät-riskit)) |
 
 ## Avoimet kysymykset
 
 - [ ] Myyjältä: alkuperä, varastointiaika, kunnostettu vai ei, pyöriikö akseli käsin tasaisesti, onko säädin koskematon (tehdasasetus 120 bar)
+- [ ] Valmistusvuosi (sarjanumero kilvestä, kysy myyjältä tai Danfossilta) ja tiivistesarjan hinta ja sopivuus rakenteelle 10
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
 - [ ] Salhydro: Sun FXDC:n asetusvaihtoehto 34 l/min:lle ja 3/4":n linjarunko T-5A-pesälle, hinta
