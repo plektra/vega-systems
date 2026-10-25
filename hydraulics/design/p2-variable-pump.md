@@ -166,11 +166,29 @@ Pumppu on siis **todennäköisesti 1980-luvun lopulta tai 1990-luvulta**, noin 2
 
 | Riski | Miksi | Mitä tehdään |
 |---|---|---|
-| Tiivisteiden vanheneminen | Akselitiiviste ja O-renkaat (nitriili) kovettuvat ja halkeilevat vuosikymmenten varastoinnissa, vaikka pumppua ei olisi käytetty | **Vaihda akselitiiviste ja O-renkaat ennen asennusta** (tiivistesarja **⚠ hinta ei tiedossa**) |
+| Tiivisteiden vanheneminen | Akselitiiviste ja O-renkaat (nitriili) kovettuvat ja halkeilevat vuosikymmenten varastoinnissa, vaikka pumppua ei olisi käytetty | **Vaihda akselitiiviste ja O-renkaat ennen asennusta**, ks. [Tiivistesarja](#tiivistesarja) |
 | Sisäinen korroosio | Jos pumppu on varastoitu ilman öljyä, sylinteriporaukset, männät ja säätimen karat voivat ruostua. Ruostepilkut säädinlohkossa ulkopuolella viittaavat kosteuteen | Katso porttien sisään, pyöritä akselia käsin; säätimen karan pitää liikkua vapaasti |
 | Laakerit | Pitkä seisonta ilman pyörimistä voi jättää laakereihin kosteus- tai seisontajälkiä | Akselin pitää pyöriä käsin tasaisesti ilman kohtia, joissa se tarttuu tai rahisee |
 | Säädin | Kara voi jumittua lakkaan tai ruosteeseen, jolloin pumppu ei palaa valmiustilaan | Tarkista käyttöönotossa paine ja valmiustila mittarilla 2G1 |
 | Varaosat | Vanha rakenne voi poiketa nykyisestä | **PVH-sarjaa myydään yhä** (Danfoss/Vickers), ja PVH57:n tiiviste-, laakeri- ja mäntäsarjoja on saatavilla jälleenmyyjiltä ([hydraulic-supply.com](https://www.hydraulic-supply.com/877423.html)) **⚠ varmista sopivuus rakenteelle 10** |
+
+### Tiivistesarja
+
+Lähteet: hakutulosten tiivistelmät 2026-10-25; sivuja ei saatu avattua tästä ympäristöstä, joten
+**⚠ tarkista koodi ja hinta toimittajalta** pumpun osanumerolla 02-159964 ja tyyppikoodilla.
+
+| Koodi | Mitä | Lähde |
+|---|---|---|
+| **02-102244** (vanha koodi **02-102260**, myös C1AC14) | PVH57/63:n tiivistesarja. Vickersin huoltotiedote M-2206-S (PVH57/63, **rakenne 11**, rev. 11/1997) viittaa siihen: *"Available in double shaft seal kit 02-102244"*; erillinen akselitiiviste 513439 mainitaan kaksoistiivisteversiolle. Hinta noin **853 $** (Motion, tarjouspyyntö) | [M-2206-S (paro.nl)](https://paro.nl/library//storage/datasheets/Eaton/PVH57_M-2206-S22175617.pdf/datasheet.html), [Motion](https://www.motion.com/products/sku/01283726), [hydraulic-supply.com](https://www.hydraulic-supply.com/02-102244.html) |
+| 02-346217 | Danfossin sivulla PVM-sarjan alla ("PVM series code B"); jälleenmyyjä mainitsee PVQ63:n. **Ei luultavasti tämän pumpun sarja.** | [Danfoss PowerSource](https://powersource.danfoss.com/products/pumps/industrial-pumps/medium-duty-open-circuit-piston-pumps/pvm-series-code-b-pumps/p/02-346217) |
+
+- **Epävarmuus:** Vegan pumppu on **rakenne 10** ja yksinkertaisella akselitiivisteellä (`S`).
+  Löydetty tieto koskee rakennetta 11, ja sarjasta puhutaan kaksoistiivisteen yhteydessä. Kysy
+  Danfossin jälleenmyyjältä, sopiiko 02-102244 rakenteelle 10.
+- **Hinta on noin nelinkertainen pumpun hintaan nähden.** Halvempi vaihtoehto: jos pumppu pyörii
+  käsin tasaisesti ja sisältä on puhdas, vaihdetaan vain akselitiiviste ja ulkoiset O-renkaat
+  (portit, laipat, säädin), jotka saa mitoilla tavallisina osina. Mitat tiivisteistä tai
+  osaluettelosta **⚠ ei tiedossa**. Tämän arvioi hydrauliikkakorjaamo.
 
 **Arvio:** ikä ei sinänsä estä käyttöä, koska sarjaa valmistetaan yhä ja osia saa. Käyttämätön
 mutta vanha pumppu tarvitsee kuitenkin todennäköisesti uudet tiivisteet. Laske tiivistesarja
@@ -424,12 +442,14 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | Kytkimen pumppunapa | 8×32×36-uritettu, noin 134 € | 1,25":n kiilareikä **⚠ hinta ei tiedossa** |
 | Kytkimen PTO-napa ja hammaskehä | noin 81 € | sama |
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
-| Muuta | – | SAE-laippaliittimet, vuotoletku, **todennäköisesti tiivistesarja** (ikä, ks. [Ikä](#ikä-ja-siihen-liittyvät-riskit)) |
+| Tiivisteet (ikä) | – | koko sarja 02-102244 noin 853 $ **⚠ tarkista**, tai pelkkä akselitiiviste ja O-renkaat (halvempi, hinta ei tiedossa), ks. [Tiivistesarja](#tiivistesarja) |
+| Muuta | – | SAE-laippaliittimet, vuotoletku |
 
 ## Avoimet kysymykset
 
 - [ ] Myyjältä: alkuperä, varastointiaika, kunnostettu vai ei, pyöriikö akseli käsin tasaisesti, onko säädin koskematon (tehdasasetus 120 bar)
-- [ ] Valmistusvuosi (sarjanumero kilvestä, kysy myyjältä tai Danfossilta) ja tiivistesarjan hinta ja sopivuus rakenteelle 10
+- [ ] Valmistusvuosi (sarjanumero kilvestä, kysy myyjältä tai Danfossilta)
+- [ ] Tiivistesarja: sopiiko 02-102244 (vanha 02-102260) rakenteelle 10 ja yksinkertaiselle akselitiivisteelle, hinta Suomesta; vaihtoehtona pelkän akselitiivisteen ja O-renkaiden mitat
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
 - [ ] Salhydro: Sun FXDC:n asetusvaihtoehto 34 l/min:lle ja 3/4":n linjarunko T-5A-pesälle, hinta
