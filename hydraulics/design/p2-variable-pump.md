@@ -150,7 +150,8 @@ pyörimisuunta vastapäivään. Pumpun perään voidaan kytkeä toinen pumppu."*
   kunnostettua.
 - **Myyjän vastaukset** [myyjä 2026-10-25, omistajan välittämä]: akseli pyörii ilman ääniä;
   pumppu on säilytetty koko ajan lämpimässä tallissa; sisällä on öljyt, eikä ruostetta ole.
-  **⚠ Vielä kysymättä:** alkuperä ja varastointiaika, onko kunnostettu, onko säädin koskematon.
+  Muuta myyjältä ei kysytä [omistaja 2026-10-25]: alkuperä, varastointiaika ja kunnostus jäävät
+  tuntemattomiksi, ja säätimen asetus mitataan käyttöönotossa.
 
 ### Ikä ja siihen liittyvät riskit
 
@@ -165,7 +166,7 @@ päivämääräkoodia ei ole tunnistettu. Arvio perustuu rakennenumeroon:
   ja nyt Danfoss käyttävät Vickers-nimeä yhä.
 
 Pumppu on siis **todennäköisesti 1980-luvun lopulta tai 1990-luvulta**, noin 25–40 vuotta vanha
-[arvio]. **⚠ Kysy myyjältä tai Danfossilta** sarjanumeron perusteella.
+[arvio]. Tarkemmin sen voi tarvittaessa kysyä Danfossilta sarjanumeron perusteella.
 
 **Riskit, jotka liittyvät ikään eivätkä käyttöön:**
 
@@ -469,8 +470,8 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 ## Avoimet kysymykset
 
 - [x] Myyjältä: pyöriikö akseli tasaisesti (pyörii ilman ääniä), säilytys (lämmin talli), onko sisällä öljyä ja ruostetta (öljyt sisällä, ei ruostetta) [myyjä 2026-10-25]
-- [ ] Myyjältä: alkuperä, varastointiaika, kunnostettu vai ei, onko säädin koskematon (tehdasasetus 120 bar)
-- [ ] Valmistusvuosi (sarjanumero kilvestä, kysy myyjältä tai Danfossilta)
+- [x] ~~Myyjältä: alkuperä, varastointiaika, kunnostettu vai ei, onko säädin koskematon~~ ei kysytä enempää [omistaja 2026-10-25]; tarkistetaan paikan päällä ja koeajossa (säätimen asetus mitataan käyttöönotossa)
+- [ ] Valmistusvuosi (sarjanumero kilvestä; myyjältä ei kysytä, Danfossilta voi kysyä tarvittaessa)
 - [ ] Tiivistesarja: sopiiko 02-102244 (vanha 02-102260) rakenteelle 10 ja yksinkertaiselle akselitiivisteelle, hinta Suomesta; vaihtoehtona pelkän akselitiivisteen ja O-renkaiden mitat
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
