@@ -53,6 +53,43 @@ Lämpöä syntyy keulapotkuria käytettäessä arviolta 2–3 kW 38 kW:n sijaan 
 BPV jää pois (ks. [kustannusvertailu](#kustannusvertailu-arvio)). Mitään ei ole päätetty. F1-61 ohitusventtiilillä on
 edelleen voimassa oleva suunnitelma.
 
+## Kumpi on monimutkaisempi: F1-61 vai PVH57
+
+> Lisätty 2026-10-25. Vertailu on arvio, ei päätös.
+
+Venttiilien ja ohjauksen määrä on reiteissä suunnilleen sama. Ero on pumpun vaatimuksissa ja
+siinä, kuinka paljon järjestelmää pitää ymmärtää.
+
+| | F1-61 + ohitusventtiili | PVH57 |
+|---|---|---|
+| Pumppu | yksinkertainen, kevyt (8,5 kg) | säädin, kotelovuotoletku, raskas (noin 36 kg **⚠ tarkista**) |
+| Magneettiventtiilit | ohitusventtiili (BPV) ja OD15 | 2/2, ja vinssiä varten ehkä 3/2 |
+| Virtauksen rajoitus | VPR3 (olemassa) | uusi FXDC |
+| Ohjauslogiikka | BPV:n tilaa saa vaihtaa vain alle 20 barissa, joten tarvitaan paineanturi ja ohjain ([pressure-monitoring](pressure-monitoring.md)) | 2/2 suljetaan, kun jotain käytetään |
+| Käyttöönotto | paineenrajoitin säädetään | paineenrajoitin ja säädin säädetään, kotelo täytetään öljyllä |
+
+**Missä PVH57 on oikeasti vaativampi:**
+
+- **Öljyn puhtaus:** mäntäpumppu vaatii puhtaampaa öljyä (17/15/13, 140–210 bar [luettelo s. 31]).
+  Nykyisen paluusuodattimen riittävyyttä ei tiedetä.
+- **Kunto:** pumppu on 1990-luvun mallia, uudelleen maalattu ja historialtaan tuntematon.
+  Tiivistesarjat ja korjaukset ovat kalliimpia, ja harvempi korjaamo tuntee sen.
+- **Ymmärrettävyys:** vian sattuessa F1-61:n toiminta on helpompi päätellä. LS-ohjauslinja on uusi
+  käsite.
+- **Asennus:** pumppu on noin neljä kertaa painavampi, ja siinä on yksi letku enemmän.
+
+**Mitä PVH57:llä saavutetaan:** lähinnä pienempi lämpö, kun keulapotkuria käytetään korkeilla
+kierroksilla (arviolta 2–3 kW eikä noin 38 kW [laskelma]). Keulapotkuria käytetään lyhyitä hetkiä ja
+yleensä satamassa matalilla kierroksilla, jolloin hyötysuhteella on vähemmän väliä (ks.
+[p2-pump-options: Käyttöjakso](p2-pump-options.md#käyttöjakso-miksi-hyötysuhteella-on-vähemmän-väliä-kuin-luulisi)).
+Ankkurivinssin kanssa PVH57 ei ole automaattisesti parempi (ks.
+[Ankkurivinssi](#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä)).
+
+**Suositus:** F1-61 ohitusventtiilillä, kuten on päätetty. Se on yksinkertaisempi ja käyttää
+olemassa olevaa VPR3:a, eikä sen suurin heikkous juuri näy Vegan käytössä. PVH57:ään kannattaa
+palata vain, jos ankkurivinssiä käytetään pitkiä jaksoja tai keulapotkuria joudutaan käyttämään
+usein korkeilla kierroksilla.
+
 ## Ehdokas: Vickers PVH57C-LAF-1S-10-C12V-31 (tori.fi)
 
 Ilmoitus: <https://www.tori.fi/recommerce/forsale/item/45217879>, **190 € tai tarjous** (tarkistettu
