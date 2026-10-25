@@ -117,7 +117,7 @@ usein korkeilla kierroksilla, tai jos tavoitteeksi tulee jokin
    LS-linjan venttiili on pieni, koska sen läpi kulkee vain vähän öljyä. Kiinteällä pumpulla sama
    vaatisi täyden virtauksen venttiilin, ja ylimäärä menisi lämmöksi. **⚠ Idea, ei laskettu:**
    tarkista, sopiiko SH240 tällaiseen ohjaukseen ja miten säätö käyttäytyy (vakaus, vasteaika).
-2. **Useita kuormia yhtä aikaa ilman hukkaa.** Vinssi, daavitti tai spiira saavat yhteensä enintään
+2. **Useita kuormia yhtä aikaa ilman hukkaa.** Vinssi, painepesuri tai nosturi saavat yhteensä enintään
    pumpun tuoton, ja pumppu tuottaa vain kulutetun määrän. Kiinteällä pumpulla käyttämätön osa
    kuristuu aina lämmöksi.
 3. **Jatkuvat kuormat koneen käydessä,** esim. hydraulisesti käytetty generaattori tai pumppu:

@@ -127,10 +127,6 @@ Kolme mahdollista apupiirin kuormaa mahtuu pohjalaatan kolmeen vapaaseen paikkaa
 pohjalaattaa ei tarvitse vaihtaa [laskelma]. Kaikki saavat enintään saman virtauksen ja paineen kuin
 keulapotkuri (noin 34 l/min, 250 bar).
 
-**Muut pohjan esimerkkikuormat, jotka eivät ole omistajien listalla** (2026-10-25): peräpotkuri (STH),
-spiira / kiinnitysvinssi (CAP), vakaimet (STB), maihinnousuramppi / uimataso (PAS). Ne jätetään
-`loads.yaml`iin tilalla `in_scope: null`, kunnes omistajat päättävät poistaa ne.
-
 ## 6. Käyttötilanteet (samanaikaisuus)
 
 > Pumpun mitoituksen ratkaisee pahin *realistinen* kuormien yhdistelmä, ei kaikkien summa.

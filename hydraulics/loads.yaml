@@ -65,25 +65,6 @@ loads:
     source: Sleipner asennusohje 2746 35 2025; Side-Power SH Series product specification v1.0.0 2017
     notes: "Hihnavedolla saavutettiin vain ~160-170 bar; se riitti kääntämään aluksen laiturissa."
 
-  - id: STH
-    name: Peräpotkuri
-    in_scope: null
-    criticality: high
-    actuator: motor
-    motor:
-      thrust_kN: null
-      max_torque_Nm: null
-      max_speed_rpm: null
-      power_kW: null
-    duty:
-      continuous: false
-      run_time_min: null
-      cycles_per_hour: null
-    control: proportional
-    fail_state: pysähtyy
-    source: null
-    notes: ""
-
   - id: WLS
     name: Ankkurivinssi
     in_scope: true                 # vahvistamatta
@@ -126,24 +107,6 @@ loads:
     source: null
     notes: "Mahdollinen apupiirin kuorma [omistaja 2026-10-25]. Käytetään satamassa tyhjäkäynnillä; CETOP-pohjalaatan vapaa paikka."
 
-  - id: STB
-    name: Vakaimet
-    in_scope: null
-    criticality: medium
-    actuator: rotary_actuator
-    motor:
-      max_torque_Nm: null
-      max_speed_rpm: null
-      power_kW: null
-    duty:
-      continuous: true
-      run_time_min: null
-      cycles_per_hour: null
-    control: proportional
-    fail_state: evät keskelle ja lukitus
-    source: null
-    notes: ""
-
   - id: DAV
     name: Nosturi / jollan daavitti
     in_scope: null                 # epätodennäköinen [omistaja 2026-10-25]
@@ -159,23 +122,5 @@ loads:
       cycles_per_hour: null
     control: proportional
     fail_state: pitää kuorman (kuormanpitoventtiilit)
-    source: null
-    notes: ""
-
-  - id: PAS
-    name: Maihinnousuramppi / uimataso
-    in_scope: null
-    criticality: low
-    actuator: cylinder
-    cylinder:
-      max_force_kN: null
-      stroke_mm: null
-      speed_mm_per_s: null
-    duty:
-      continuous: false
-      run_time_min: null
-      cycles_per_hour: null
-    control: on_off
-    fail_state: pitää asennon
     source: null
     notes: ""
