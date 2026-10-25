@@ -355,7 +355,9 @@ Avoimet:
 - [x] Ohjaussylinterin malli: ZS60350100 [omistaja 2026-10-23]
 - [x] Ohjaussylinterin mitat: männän Ø 60 mm, varren Ø 35 mm, isku 100 mm [omistaja 2026-10-23]
 - [ ] Ohjausvarren pituus, peräsimen pinta-ala ja tyyppi
-- [ ] Mahdollinen autopilotti ja sen liitäntä ohjauspiiriin (orbitrolin malli selvitetty, ks. alla)
+- [ ] Autopilotti (mahdollinen, ohjaa suuntaventtiileillä ohjauspiirissä [omistaja 2026-10-25]): autopilotin merkki, haluttu kääntöaika laidasta laitaan, peräsinkulma-anturi. Kytkentäehdotus: [vaatimukset §10.3](requirements.md#103-autopilotin-liitäntä-ohjauspiiriin)
+- [ ] Painepesuri (mahdollinen apupiirin kuorma [omistaja 2026-10-25]): laitteen malli, hydraulimoottorin virtaus ja paine; jatkuvan käytön lämpökuorma, ks. [oil-cooling](design/oil-cooling.md)
+- [ ] Nosturi tai jollan daavitti (epätodennäköinen [omistaja 2026-10-25]): tarvitaanko lainkaan
 - [x] Orbitroli: M+S HKUS 160/4, sisäänrakennettu paineenrajoitus
 - [x] ~~Orbitrolin paineenrajoituksen nykyinen asetus~~: säädetään käyttöönotossa [omistaja 2026-10-23]
 - [x] VPR3 3/4", RPF3 1/2" [omistaja 2026-10-23]

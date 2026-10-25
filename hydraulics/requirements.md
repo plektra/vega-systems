@@ -10,7 +10,7 @@
 |---|---|
 | Vastuuhenkilö | TBD |
 | Versio | 0.1 |
-| Päivitetty | TBD |
+| Päivitetty | 2026-10-25 (tulevat kuormat, autopilotti) |
 
 ---
 
@@ -105,17 +105,31 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 
 > Tarkat luvut ovat tiedostossa [`loads.yaml`](loads.yaml). Tämä taulukko on pikakatsaus.
 
-| ID | Toiminto | Laajuudessa | Kriittisyys | Huomiot |
+Omistajien lista mahdollisesti tulevista laitteista [omistaja 2026-10-25]:
+
+**Piiri 1, ohjauspiiri** (P1 hihnavedolla, varalla sähköpumppu P3)
+
+| ID | Toiminto | Tila | Kriittisyys | Huomiot |
 |---|---|---|---|---|
-| STR | Ohjaus / autopilotti | kyllä | kriittinen | Nykyinen: orbitroli + sylinteri, oma piiri |
-| BTH | Keulapotkuri | kyllä | korkea | Nykyinen: Side-Power SH240-U11, 264 bar × 33,8 l/min |
-| STH | Peräpotkuri | TBD | korkea | |
-| WLS | Ankkurivinssi | kyllä (vahvistamatta) | korkea | Hydraulimoottori olemassa, tiedot puuttuvat |
-| CAP | Spiira / kiinnitysvinssi | TBD | keskitaso | |
-| STB | Vakaimet | TBD | keskitaso | |
-| DAV | Jollan daavitti / nosturi | TBD | keskitaso | |
-| PAS | Maihinnousuramppi / uimataso | TBD | matala | |
-| EXISTING | Muut integroitavat laitteet | TBD | | |
+| STR | Ohjaus, orbitroli | olemassa | kriittinen | Orbitroli HKUS 160/4 + sylinteri ZS60350100 |
+| STR | Autopilotti | mahdollinen | kriittinen | Ohjaa peräsintä **suuntaventtiileillä** samassa piirissä orbitrolin rinnalla (ei erillistä autopilottipumppua) [omistaja 2026-10-25]. Kytkentäperiaate ja vikatilat: [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin) |
+
+**Piiri 2, apupiiri** (P2 PTO:lta, CETOP 3 -pohjalaatta: 1 paikka käytössä, 3 vapaana)
+
+| ID | Toiminto | Tila | Kriittisyys | Huomiot |
+|---|---|---|---|---|
+| BTH | Keulapotkuri | olemassa | korkea | Side-Power SH240-U11, 264 bar × 33,8 l/min; pohjalaatan paikka 1 (BAV-713) |
+| WLS | Ankkurivinssi | mahdollinen | korkea | Hydraulimoottori olemassa, tiedot puuttuvat. Kuorman pito vaaditaan (§7). Ks. [p2-variable-pump § Ankkurivinssi](design/p2-variable-pump.md#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
+| PWW | Painepesuri | mahdollinen | matala | Hydraulimoottorilla käytetty pesuri; laite ei vielä valittu. **Jatkuva kuorma**, joten öljyn lämpö ratkaisee (ks. [oil-cooling](design/oil-cooling.md)); käytetään satamassa tyhjäkäynnillä |
+| DAV | Nosturi / jollan daavitti | epätodennäköinen | keskitaso | Kuorman pito vaaditaan (kuormanpitoventtiilit, §7) |
+
+Kolme mahdollista apupiirin kuormaa mahtuu pohjalaatan kolmeen vapaaseen paikkaan, joten
+pohjalaattaa ei tarvitse vaihtaa [laskelma]. Kaikki saavat enintään saman virtauksen ja paineen kuin
+keulapotkuri (noin 34 l/min, 250 bar).
+
+**Muut pohjan esimerkkikuormat, jotka eivät ole omistajien listalla** (2026-10-25): peräpotkuri (STH),
+spiira / kiinnitysvinssi (CAP), vakaimet (STB), maihinnousuramppi / uimataso (PAS). Ne jätetään
+`loads.yaml`iin tilalla `in_scope: null`, kunnes omistajat päättävät poistaa ne.
 
 ## 6. Käyttötilanteet (samanaikaisuus)
 
@@ -127,6 +141,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | S2 Ankkurointi | Ankkurin lasku ja nosto | WLS, STR, BTH | TBD | TBD |
 | S3 Matka-ajo | Pitkäkestoinen ohjaus | STR | tunteja | kyllä |
 | S4 Hätätilanne | Päätehonlähde menetetty | STR (vähintään) | TBD | ei |
+| S5 Pesu satamassa | Kannen tai rungon pesu painepesurilla | PWW (STR lepotilassa) | TBD, mahdollisesti pitkä | kyllä, tyhjäkäynti |
 
 **Mitoittava tilanne:** TBD (todennäköisesti S1 tai S2)
 
@@ -139,7 +154,11 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 |---|---|---|---|
 | Ohjaus | Pumpun tai tehon menetys | TBD | Hätäpinna / sähköinen varapumppu / orbitroli käsipumppuna |
 | Ohjaus | Letkun tai liittimen repeämä | TBD | Sulkuventtiilit, erilliset piirit |
+| Autopilotti | Venttiili jää auki tai ohjain antaa väärän käskyn (peräsin ajaa ääriasentoon) | Peräsimen ohjaus palaa heti ruorille: autopilotin kelojen virta katkeaa, ja jousi palauttaa venttiilin keskiasentoon | Ruorilla autopilotin pääkytkin (katkaisee kelojen virran, ei pelkkä ohjelmallinen pois-tila); hätäohitus 1V3 |
+| Autopilotti | Peräsinkulma-anturin vika | Autopilotti kytkeytyy pois ja hälyttää | Käsiohjaus orbitrolilla |
 | Ankkurivinssi | Tehon menetys ankkurin ollessa puoliksi ylhäällä | Kuorman pito (jarru / jarruventtiili) | Käsinosto |
+| Nosturi / daavitti | Letkun repeämä tai tehon menetys kuorma ylhäällä | Kuorma ei saa pudota: kuormanpitoventtiilit suoraan sylinterissä | Kuorman lasku käsin avattavalla venttiilillä |
+| Painepesuri | Letkun tai pesupistoolin vika | Pesuri pysähtyy, kun suuntaventtiili palaa keskelle | |
 | Keulapotkuri | Ylikuorma / ylikuumeneminen | TBD | Paineenrajoitus, lämpösuoja |
 | Kaikki | Matala öljynpinta | Hälytys, sitten ei-kriittisten kuormien suojapysäytys | |
 | Kaikki | Korkea öljyn lämpötila | Suositeltu käyttölämpötila 40–60 °C (Sleipner); varoitus ~65 °C, hälytys ~70 °C (HV 32 -öljy ohenee 70 °C:n yläpuolella alle Salamin ohjauspumpun 12 cSt:n minimin; Parker F1:n raja 75 °C) | Öljynjäähdytin, kierroslukitus |
@@ -197,13 +216,65 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 
 - **Ohjauspaikat:** TBD (ohjauspisteet, langattomat kaukosäätimet, MFD, autopilotti)
 - **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja kytkimen toimilaitteelle, CAN/N2K)
-- **Autopilotin liitäntä:** TBD (autopilotin merkki, suunnanvaihtopumppu vai solenoidiventtiiliohjaus)
+- **Autopilotin liitäntä:** solenoidiventtiiliohjaus ohjauspiirissä [omistaja 2026-10-25]; autopilotin
+  merkki TBD. Ks. [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin).
 - **Lukitukset:**
   - Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä.
   - BPV:n tilaa vaihdetaan vain alle 20 barissa: päälle 2/2-venttiili auki → BPV:n kela → 2/2 kiinni; pois päinvastoin.
   - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään, 2/2-venttiili avataan ja BPV palautetaan ohitukseen. Ks. [p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23).
   - Hälytys, jos BPV on syöttöasennossa yli noin 1200 rpm:ssä (myös käsiohitus).
   - Muut TBD.
+
+### 10.3 Autopilotin liitäntä ohjauspiiriin
+
+> Lisätty 2026-10-25. Ehdotus, ei päätetty. Autopilotti on turvallisuuskriittinen: pätevän henkilön
+> pitää tarkistaa kytkentä ennen rakentamista.
+
+Omistajat haluavat autopilotin ohjaavan peräsintä suuntaventtiileillä ohjauspiirin omalla öljyllä,
+ei erillisellä autopilottipumpulla [omistaja 2026-10-25].
+
+**Nykyinen orbitroli sopii tähän.** HKUS 160/4 on avoimen keskiasennon malli ilman
+kuormantakaisinkytkentää [datalehti HKUS]. Lepoasennossa sylinterin liitännät ovat siis kiinni, joten
+autopilotti voi liikuttaa sylinteriä ilman että ruori pyörii mukana.
+
+**Autopilotille erotetaan pieni oma virtaus orbitrolin edestä** [laskelma]. Avoimen keskiasennon
+orbitroli päästää RPF3:n 20 l/min:n virtauksen lepoasennossa matalalla paineella säiliöön, joten
+suoraan sen rinnalle kytketty venttiili ei saisi painetta. Siksi RPF3:n CF-lähdön ja orbitrolin väliin
+tulee toinen, pieni kolmitievirtauksensäätöventtiili (prioriteettiventtiili, samaa tyyppiä kuin RPF3):
+
+```
+RPF3 CF ── pieni prioriteettiventtiili ── CF noin 1–2 l/min ── 4/3 autopilottiventtiili (suljettu keskiasento) ── A/B → T-liittimet sylinterilinjoihin
+                                       └─ EF loput ─────────── orbitrolin P (käsiohjaus kuten nyt)
+autopilottiventtiilin T ── säiliöön (ei orbitrolin T-linjaan, jonka raja on 25 bar)
+```
+
+- Kun autopilotti ei ohjaa, sen venttiili on keskellä ja kiinni. Prioriteettiventtiili ohjaa silloin
+  kaiken öljyn orbitrolille, ja käsiohjaus toimii kuten nyt.
+- Kun autopilotti ohjaa, se saa pienen vakiovirtauksen paineesta riippumatta, ja loput menevät
+  orbitrolille. Käsiohjaus toimii siis edelleen, mutta se ottelee autopilottia vastaan, kunnes
+  autopilotti kytketään pois.
+- **Autopilotin haaraan tarvitaan oma paineenrajoitus** (enintään sylinterin ja letkujen
+  painearvo), koska orbitrolin sisäinen paineenrajoitus ei suojaa sitä. Peräsimen ollessa
+  ääriasennossa rajoittimen yli menee vain pieni virtaus, joten lämpöä syntyy vähän (noin 1,5 l/min ×
+  100 bar ≈ 0,25 kW hetkellisesti; paine on esimerkki) [laskelma].
+- Virtaa **ei kannata kuristaa pelkällä kuristimella** RPF3:n perässä. Silloin lähes koko 20 l/min
+  menisi paineenrajoittimen yli ja lämpenisi (esim. 20 l/min × 100 bar ≈ 3 kW aina, kun autopilotti
+  ohjaa) [laskelma].
+
+**Autopilotin virtauksen mitoitus** [laskelma]. Sylinterin (Ø 60 / Ø 35 mm, isku 100 mm) tilavuus on
+männän puolella noin 283 cm³ ja varren puolella noin 187 cm³. RPF3:n täydellä 20 l/min:n virtauksella
+peräsin kääntyisi laidasta laitaan alle sekunnissa, mikä on autopilotille aivan liian nopeaa.
+Esimerkiksi noin 12 sekunnin kääntöaika vastaa noin 1,4 l/min:n virtausta (oletus: koko 100 mm:n isku
+käytössä, **⚠ tarkista**; sopiva kääntöaika valitaan autopilotin mukaan). Vaihtoehtona on
+proportionaalinen venttiili, jos autopilotti osaa ohjata sitä.
+
+**Tarvittavat lisäosat** (arvio, malleja ei valittu): pieni kolmitievirtauksensäätöventtiili (noin
+1–2 l/min, näin pienen kiinteän virtauksen mallien saatavuus **⚠ tarkista**; vaihtoehtona säädettävä),
+4/3-solenoidiventtiili suljetulla keskiasennolla (24 V, pieni virtaus, esim. CETOP 3),
+paineenrajoitusventtiili, kaksi T-liitintä sylinterilinjoihin, peräsinkulma-anturi (§10.1), autopilotin ohjausyksikkö, joka
+osaa ohjata solenoidiventtiiliä, sekä pääkytkin ruoriin.
+
+**Toimii vain, kun ohjauspiirissä on öljyä:** kone käy (P1) tai sähköinen varapumppu P3 on päällä.
 
 ## 11. Standardit ja määräykset
 
