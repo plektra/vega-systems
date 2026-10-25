@@ -189,6 +189,17 @@ Lähteet: hakutulosten tiivistelmät 2026-10-25; sivuja ei saatu avattua tästä
   käsin tasaisesti ja sisältä on puhdas, vaihdetaan vain akselitiiviste ja ulkoiset O-renkaat
   (portit, laipat, säädin), jotka saa mitoilla tavallisina osina. Mitat tiivisteistä tai
   osaluettelosta **⚠ ei tiedossa**. Tämän arvioi hydrauliikkakorjaamo.
+- **Mitä voi vaihtaa avaamatta pumppua** [arvio yleisen mäntäpumppurakenteen perusteella,
+  **⚠ tarkista huolto-ohjeesta M-2210-S**]:
+  - *Ilman purkua:* porttien ja laippojen O-renkaat, tulppien O-renkaat ja säätimen O-renkaat
+    (säädin irrotetaan omilla ruuveillaan, mäntäryhmä ei aukea). Akselitiiviste vaihdetaan
+    monissa mäntäpumpuissa ulkopuolelta kiilan ja lukkorenkaan irrotuksen jälkeen; PVH:n osalta
+    tämä on tarkistamatta.
+  - *Vaatii purun:* rungon ja venttiililohkon välinen tiiviste ja muut sisäiset tiivisteet.
+  - **Avattua liitosta ei koota vanhoilla tiivisteillä.** Ne ovat painuneet muotoonsa ja vuotavat
+    helposti uudelleen asennettuina. Jos pumppu avataan, liitoksen kaikki tiivisteet vaihdetaan.
+    Avaamattomat sisäiset tiivisteet jätetään rauhaan: ne ovat suojassa, ja liikuttamaton tiiviste
+    pitää yleensä paremmin kuin liikutettu.
 
 **Arvio:** ikä ei sinänsä estä käyttöä, koska sarjaa valmistetaan yhä ja osia saa. Käyttämätön
 mutta vanha pumppu tarvitsee kuitenkin todennäköisesti uudet tiivisteet. Laske tiivistesarja
