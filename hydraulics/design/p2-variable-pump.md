@@ -168,6 +168,65 @@ PTO ─ Spidex ─ PVH57 ─ 2-tie kompensoitu virtauksensäätö ~34 l/min ─ 
   pitää olla auki aina, kun BAV-713 on keskellä.** Muuten pumppu seisoo 250 barissa nollatuotolla,
   mikä kuluttaa luettelon kuvaajan mukaan noin 10 kW.
 
+### Ankkurivinssi ja muut kuormat samassa kytkennässä
+
+> Lisätty 2026-10-25. Vinssin moottorin tiedot puuttuvat (kierrostilavuus, käyttöpaine,
+> käyttöaika), joten luvut ovat esimerkkejä eri käyttöpaineilla [laskelma].
+
+**Kytkentä onnistuu.** Vinssin suuntaventtiili tulee CETOP-pohjalaatan vapaaseen paikkaan
+BAV-713:n rinnalle, kuten F1-61-suunnitelmassakin. Ohjaus toimii samoin: 2/2 suljetaan aina, kun
+jokin suuntaventtiili (BAV-713 tai vinssin venttiili) ohjataan, ja avataan, kun kaikki ovat
+keskellä. Vinssi saa enintään noin 34 l/min ja 250 bar.
+
+**Ongelma on lämpö, jos vinssi toimii matalalla paineella.** Suosituskytkennässä pumppu pitää aina
+250 baria, ja FXDC kuristaa paineen alas kuorman paineeseen. Lämpö on noin
+34 l/min × (250 bar − kuorman paine) / 600:
+
+| Vinssin käyttöpaine | Lämpö suosituskytkennällä | Vertailu: F1-61 700 rpm:llä | F1-61 1800 rpm:llä |
+|---|---|---|---|
+| 50 bar | noin 11 kW | enintään noin 1 kW | noin 6 kW |
+| 100 bar | noin 8,5 kW | enintään noin 1 kW | noin 11 kW |
+| 150 bar | noin 5,7 kW | enintään noin 1 kW | noin 17 kW |
+| 200 bar | noin 2,8 kW | enintään noin 1 kW | noin 22 kW |
+
+F1-61:n luvuissa ylimäärä (700 rpm:llä noin 3 l/min, 1800 rpm:llä noin 67 l/min) valuu VPR3:n
+B-portista kuorman paineessa; VPR3:n oma painehäviö on jätetty pois [laskelma]. Keulapotkurin
+lyhyillä käytöillä 2–3 kW ei haittaa, mutta minuuttien vinssauksessa 5–11 kW lämmittää öljyä
+selvästi (ks. [oil-cooling](oil-cooling.md)).
+
+**Korjaus: LS-signaalin valinta kolmitiemagneettiventtiilillä.** LS-linjaan lisätään 3/2-venttiili,
+joka valitsee, mistä pumppu saa ohjauspaineensa:
+
+```
+LS-portti ─┬─ 2/2 (NO) ─ säiliö                       lepo: pumppu 20 barissa
+           └─ 3/2 ─┬─ (jännitteetön) pohjalaatan P-linja, FXDC:n jälkeen   vinssi: kuormantunto
+                   └─ (jännitteellinen) kuristin Ø0,8 ─ pumpun lähtö       keulapotkuri: 250 bar
+```
+
+| Tila | 2/2 | 3/2 | Pumppu | Lämpö |
+|---|---|---|---|---|
+| Lepo | auki | – | noin 20 bar, lähes nollatuotto | vähän |
+| Vinssi | kiinni | jännitteetön | kuorman paine + noin 20 bar | noin 34 l/min × 20 bar ≈ 1,1 kW kuorman paineesta riippumatta |
+| Keulapotkuri (myös yhtä aikaa vinssin kanssa) | kiinni | jännitteellinen | 250 bar | noin 2–3 kW keulapotkurilla |
+
+- Vinssitilassa FXDC:n yli jää vain noin 20 bar. **⚠ Tarkista Suniltä FXDC:n pienin paine-ero**,
+  jolla se vielä pitää asetusvirtauksen; jos se on suurempi, vinssin virtaus jää alle 34 l/min.
+- Lisäosa: suoraan toimiva 3/2-magneettiventtiili 24 V ja yksi 1/4":n letku pohjalaatan
+  mittariliitännästä. **⚠ hinta ei tiedossa.**
+- **Yhtäaikainen käyttö** (ankkurointi, S2 [requirements](../requirements.md)): vinssi ja keulapotkuri
+  jakavat saman 34 l/min, ja matalamman paineen kuorma saa suurimman osan. Sama rajoitus on
+  F1-61-suunnitelmassa.
+- **Jos vinssi tarvitsee alle 34 l/min** (hitaampi nopeus), sen CETOP-paikkaan lisätään välilaatta-
+  kuristin. Vinssitilassa pumppu pitää silloin edelleen vain noin 20 bar kuorman yläpuolella, joten
+  lämpö pysyy pienenä.
+- **Turvallisuus:** sähkökatkossa 2/2 aukeaa ja vinssi pysähtyy. **Ankkurin pito ei saa riippua
+  pumpusta:** vinssissä pitää olla jarru tai jarruventtiili ([requirements §7](../requirements.md)).
+  Pätevän henkilön pitää tarkistaa vinssin kytkentä ja kuorman pito ennen rakentamista.
+
+**Suositus:** 3/2 kannattaa lisätä vasta, kun vinssin käyttöpaine ja käyttöaika tiedetään. Jos
+vinssin käyttöpaine on lähellä 200 baria tai vinssaus kestää vain lyhyitä jaksoja, suosituskytkentä
+riittää sellaisenaan.
+
 ### Vaihtoehto: aito kuormantunto säädettävällä kuristimella
 
 > **Korjattu 2026-10-25:** aiempi versio ehdotti VPR3:n B-portin tulppaamista. Se ei ole sallittua
@@ -214,6 +273,7 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | 7 | 2/2-magneettiventtiili, auki jännitteettömänä, suoraan toimiva, 24 V | LS-purku; ainoa uusi magneettiventtiili |
 | 8 | Kuristin noin Ø0,8 mm, T-haara ja 1/4":n letkut LS-linjaan | |
 | 9 | Kaksitiekompensoitu virtauksensäätöventtiili noin 34 l/min (esim. Sun FXDC linjarungossa) | VPR3:n tilalle |
+| 10 | (valinnainen) 3/2-magneettiventtiili, suoraan toimiva, 24 V, ja 1/4":n letku pohjalaatan mittariliitäntään | vain jos ankkurivinssiä käytetään pitkään matalalla paineella, ks. [Ankkurivinssi](#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
 
 **Poistuu tai muuttuu:**
 - **VPR3 poistetaan** (B-porttia ei saa tulpata, ks. [VPR3:n portit](#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
@@ -236,6 +296,10 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
   tämän.
 - **Paineenrajoitin jumittuu täydelle tuotolle:** VMP rajoittaa paineen, ja tilanne on sama kuin
   vakiotilavuuspumpulla (lämpöä).
+- **Ankkurivinssi ja sähkökatko:** 2/2 aukeaa, pumppu menee valmiustilaan ja vinssi pysähtyy.
+  Ankkurin pidon hoitaa vinssin jarru tai jarruventtiili, ei pumppu.
+- **3/2 (jos asennettu) jää jännitteettömäksi keulapotkuria käytettäessä:** pumppu toimii
+  kuormantuntona, ja keulapotkuri saa noin 230 bar (työntövoima noin 80 %). Ei vaarallinen.
 - **Kotelovuotolinja tukkeutuu:** akselitiiviste voi vaurioitua. Linja viedään omana letkunaan
   säiliöön, ei yhteiseen paluulinjaan.
 
@@ -260,4 +324,6 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 - [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
 - [ ] Paluusuodattimen suodatusaste vs. 17/15/13
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
+- [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
+- [ ] Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy (vinssin kuormantuntotila noin 20 bar)
 - [ ] Omistajat: PVH57 vai F1-61 tai vastaava ohitusventtiilillä
