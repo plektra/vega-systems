@@ -955,9 +955,10 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
 
 **Säätötilavuuspumppu vaihtoehtona** (selvitys 2026-10-25): käytetty Vickers PVH57 (L, 57,4 cm³,
 190 €) toimisi ilman ohitusventtiiliä LS-purulla, ja keulapotkurin käytön lämpö korkeilla
-kierroksilla putoaisi noin 38 kW:sta noin 2–3 kW:iin. Se vaatii kuitenkin SAE C -kannakkeen,
-eri kytkinnavan, kotelovuotolinjan ja VPR3:n tilalle kaksitiekompensoidun
-virtauksensäätöventtiilin, ks. [p2-variable-pump.md](p2-variable-pump.md).
+kierroksilla putoaisi noin 38 kW:sta noin 2–3 kW:iin. Kannake ja kytkimen pumppunapa
+suunniteltaisiin silloin SAE C -laipalle ja kiila-akselille; kumpaakaan ei ole vielä tehty
+[omistaja 2026-10-25], joten tämä ei ole lisätyötä. Lisäksi tarvitaan kotelovuotolinja ja VPR3:n
+tilalle kaksitiekompensoitu virtauksensäätöventtiili, ks. [p2-variable-pump.md](p2-variable-pump.md).
 
 ## Pumppuvaihtoehtojen vertailu
 

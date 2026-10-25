@@ -39,12 +39,18 @@ Lämpöä syntyy keulapotkuria käytettäessä arviolta 2–3 kW 38 kW:n sijaan 
   (esim. Sun FXDC), jossa ei ole ylimääräporttia lainkaan.
 - **OD15-vapaakiertoventtiili poistetaan.** Sen tehtävän (paine pohjalaatalle päälle ja pois)
   hoitaa LS-linjan pieni 2/2-magneettiventtiili.
-- **Uudet osat:** SAE C -kannake, toinen kytkinnapa (1,25":n kiila-akseli), kotelovuotoletku
-  säiliöön, 2/2-magneettiventtiili ja kuristin LS-linjaan.
+- **Kannake ja akselikytkin tarvitaan kummassakin reitissä.** Kumpaakaan ei ole vielä rakennettu
+  eikä hankittu [omistaja 2026-10-25], joten ne eivät ole PVH57:n lisäkustannus. Ne vain
+  suunnitellaan eri pumpulle: kannake SAE C -laipalle (ISO 7653:n sijaan) ja 36 kg:n pumpulle, ja
+  kytkimen pumppunapa 1,25":n kiila-akselille (8×32×36-urituksen sijaan). PTO-napa ja hammaskehä
+  ovat samat.
+- **Vain PVH57-reitissä tarvittavat osat:** kaksitie-virtauksensäätöventtiili (esim. Sun FXDC),
+  2/2-magneettiventtiili ja kuristin LS-linjaan, kotelovuotoletku säiliöön ja SAE-laippaliittimet.
+  BPV-ohitusventtiiliä (noin 430 € + ALV) ei tarvita.
 - **Ennallaan:** CETOP-pohjalaatta, BAV-713, VMP, letkut, säiliö, suodatin ja jäähdytin.
 
-**Hinta ja tila:** pumppu 190 €, mutta kannake, napa, liittimet ja FXDC tulevat lisäksi (ks.
-[kustannusvertailu](#kustannusvertailu-arvio)). Mitään ei ole päätetty. F1-61 ohitusventtiilillä on
+**Hinta ja tila:** pumppu 190 €. Lisäksi tarvitaan FXDC, magneettiventtiili ja liittimet, mutta
+BPV jää pois (ks. [kustannusvertailu](#kustannusvertailu-arvio)). Mitään ei ole päätetty. F1-61 ohitusventtiilillä on
 edelleen voimassa oleva suunnitelma.
 
 ## Ehdokas: Vickers PVH57C-LAF-1S-10-C12V-31 (tori.fi)
@@ -113,8 +119,8 @@ Oletukset: volumetrinen hyötysuhde 95 %, mekaaninen 90 %, tyhjäkäynti 700 rpm
 | Momentti 250 barissa | noin 254 Nm; PTO noin 420 Nm ✅; Spidex 98 Sh A (525 Nm) riittää (tarve kertoimilla noin 430 Nm) ✅ |
 | Pyörimissuunta | L ✅ |
 | Kierrosluku | koneen 2400 rpm on tasan mobiiliversion rajalla, kun imupaine on vähintään 0 bar. Säiliö on noin 1 m pumpun yläpuolella ja imulinja 50 mm. Täydellä iskulla 2400 rpm:llä (noin 138 l/min) imupaine olisi kylmällä öljyllä arviolta 0…−0,03 bar. **Vegan käytössä täyttä iskua ei tule korkeilla kierroksilla**: ajossa pumppu on valmiustilassa ja keulapotkuria käytettäessä virtaus on rajattu noin 35 l/minuun. Luettelo ei kerro, saako pienemmällä iskulla pyöriä nopeammin **⚠ kysy Danfossilta**. |
-| Laippa ja akseli | SAE C ja kiila-akseli: **ei ISO 7653 eikä 8×32×36**, joten kannake ja Spidexin pumppunapa ovat eri kuin F1-suunnitelmassa |
-| Paino | noin 36 kg (F1-61 8,5 kg): kannake mitoitetaan uudelleen |
+| Laippa ja akseli | SAE C ja kiila-akseli: **ei ISO 7653 eikä 8×32×36**. Kannake ja Spidexin pumppunapa suunnitellaan PVH57:lle; kumpaakaan ei ole vielä tehty [omistaja 2026-10-25] |
+| Paino | noin 36 kg (F1-61 8,5 kg): kannake mitoitetaan tälle painolle ja tärinälle; reaktiomomentti noin 254 Nm on lähes sama kuin F1-61:llä (noin 250 Nm) [laskelma] |
 
 ## Miten LS-linjaa käytetään
 
@@ -200,8 +206,8 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | # | Osa | Huom. |
 |---|---|---|
 | 1 | Spidex 48/60 PTO-napa (48 H7 + kiila) ja hammaskehä 98 Sh A | sama kuin F1-suunnitelmassa |
-| 2 | Spidex/Rotex 48 -pumppunapa 1,25":n (31,75 mm) kiilareiällä | vakio-osana tuumareiällä tai esiporattuna ja sorvattuna **⚠ tarkista saatavuus** |
-| 3 | Kannake SAE C -nelireikälaipalle | pumppu noin 36 kg; mitat asennuspiirustuksesta (Eaton M-2206-S) **⚠** |
+| 2 | Spidex/Rotex 48 -pumppunapa 1,25":n (31,75 mm) kiilareiällä | F1-reitin 8×32×36-navan sijaan (kumpaakaan ei ole hankittu); vakio-osana tuumareiällä tai esiporattuna ja sorvattuna **⚠ tarkista saatavuus** |
+| 3 | Kannake SAE C -nelireikälaipalle | F1-reitin ISO 7653 -kannakkeen sijaan (ei vielä tehty); sama tapa: 10 mm:n teräslevy, laserleikkaus ja hitsaus. Pumppu noin 36 kg; mitat asennuspiirustuksesta (Eaton M-2206-S) **⚠** |
 | 4 | Imuliitin: SAE-laippa, O-rengas, pultit ja supistus 50 mm:n letkuun | laipan koko pumpusta **⚠** |
 | 5 | Painelähdön SAE-laippa ja liitin 3/4":n painelinjaan | koko pumpusta **⚠** |
 | 6 | Kotelovuotolinja (vähintään noin 1/2") ylimmästä vuotoportista säiliöön öljypinnan alle | korvaa BPV:n vuotolinjan |
@@ -240,8 +246,10 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | Pumppu | käytetty 100–300 € | 190 € (tori.fi) |
 | Tyhjäkierto | BPV-F1 noin 430 € + ALV | 2/2-magneettiventtiili ja kuristin, arviolta 100–200 € |
 | Virtauksen rajoitus | VPR3 (olemassa) | Sun FXDC ja linjarunko **⚠ hinta ei tiedossa** |
-| Kytkimen pumppunapa | 8×32×36-uritettu, noin 134 € | 1,25":n kiilareikä **⚠** |
-| Muuta | – | SAE-laippaliittimet, vuotoletku, järeämpi kannake, mahdollisesti tiivistesarja |
+| Kytkimen pumppunapa | 8×32×36-uritettu, noin 134 € | 1,25":n kiilareikä **⚠ hinta ei tiedossa** |
+| Kytkimen PTO-napa ja hammaskehä | noin 81 € | sama |
+| Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
+| Muuta | – | SAE-laippaliittimet, vuotoletku, mahdollisesti tiivistesarja |
 
 ## Avoimet kysymykset
 
