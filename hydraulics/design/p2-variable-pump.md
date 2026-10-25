@@ -133,7 +133,8 @@ usein korkeilla kierroksilla, tai jos tavoitteeksi tulee jokin
 - **Venttiilejä ei jää pois:** suunta- ja virtausventtiilit tarvitaan edelleen.
 
 **Johtopäätös:** PVH57 on järkevä, jos järjestelmää aiotaan laajentaa (portaaton keulapotkuri,
-useita samanaikaisia tai jatkuvia kuormia). Nykyisillä tavoitteilla (on/off-keulapotkuri ja
+useita samanaikaisia tai jatkuvia kuormia). Miten apupiiri rakennettaisiin alusta alkaen LS-lohkoventtiilillä:
+[aux-circuit-ls-clean-sheet](aux-circuit-ls-clean-sheet.md). Nykyisillä tavoitteilla (on/off-keulapotkuri ja
 ankkurivinssi) F1-61 riittää. Portaaton keulapotkuri on tärkein syy harkita PVH57:ää uudelleen.
 
 ## Ehdokas: Vickers PVH57C-LAF-1S-10-C12V-31 (tori.fi)

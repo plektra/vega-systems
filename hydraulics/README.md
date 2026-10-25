@@ -10,6 +10,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
 | [design/p2-pump-options.md](design/p2-pump-options.md) | Apupiirin pumppu ja veto: päätetty kokoonpano (F1-61, BPV, Spidex), taustavertailu ja muut Parkerin pumput (F1-51 vaihtoehtona) |
 | [design/p2-variable-pump.md](design/p2-variable-pump.md) | P2 säätötilavuuspumppuna: Vickers PVH57 (tori.fi), LS-ohjaus, kaksitiekompensoitu virtauksensäätö, osalista (selvitys, ei päätetty) |
+| [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä ja proportionaalisella LS-lohkoventtiilillä (esim. PVG 32); ei päätetty |
 | [design/p1-steering-pump.md](design/p1-steering-pump.md) | Ohjauspumpun imulinja (päätetty 32 mm) ja P1:n muutokset P2-remontin yhteydessä |
 | [design/hydraulic-oil.md](design/hydraulic-oil.md) | Hydrauliöljyn valinta: komponenttien rajat, HV 32 / VG 46 / HV 46 -vertailu, tuotteet (päätetty HVLP 32) |
 | [design/pressure-monitoring.md](design/pressure-monitoring.md) | Painemittaus: nykyiset mittarit ja ehdotus digitaalisista antureista (Signal K / NMEA 2000) ja mittausliittimistä |
