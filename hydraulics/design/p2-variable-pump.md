@@ -656,7 +656,7 @@ valmistajan vaatimusta [arvio].
 yleistieto]. Paperielementti ei ole ongelma siksi, että se kuluisi, vaan siksi, että se päästää läpi
 suuren osan 10 µm:n ja sitä pienemmistä hiukkasista jo uutena: nominaalisen selluloosaelementin
 erotusaste (beta-arvo) 10 µm:llä on tyypillisesti vain noin 2 (noin puolet hiukkasista jää
-kiinni yhdellä läpikululla), lasikuitu­elementin 200 tai enemmän (yli 99,5 %) [yleistieto].
+kiinni yhdellä läpikululla), lasikuituelementin 200 tai enemmän (yli 99,5 %) [yleistieto].
 PVH57:n vaatimus koskee nimenomaan pieniä, 4 ja 6 µm:n hiukkasia (luvut 16 ja 14), joita
 paperielementti juuri päästää läpi. Öljyn puhtaus asettuu tasolle, jonka määräävät elementin
 erotusaste ja säiliöön tulevan lian määrä, ei vaihtoväli. Uusi paperielementti suodattaa jopa
