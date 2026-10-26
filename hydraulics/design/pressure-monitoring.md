@@ -1,6 +1,6 @@
 # Painemittaus: analogiset mittarit, digitaaliset anturit ja mittausliittimet
 
-> **Tila:** ehdotus 2026-10-23, ei päätetty. Nykyiset mittarit [omistaja 2026-10-23]. Hinnat ovat
+> **Tila:** ehdotus 2026-10-23, päivitetty 2026-10-26 (2B2:n käyttö vaihtoehdossa C), ei päätetty. Nykyiset mittarit [omistaja 2026-10-23]. Hinnat ovat
 > arvioita.
 
 Liittyy: [vaatimukset §10.1](../requirements.md#101-anturit), [kaaviot](../schematic.md),
@@ -77,7 +77,10 @@ mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salam
 ## Suositus
 
 1. **Digitaalinen anturi 2B2 P2:n lähtöön.** BPV:n vaihtoehto (alle 20 bar) kannattaa varmistaa
-   ohjauslogiikassa mittauksella, ei pelkällä toimintajärjestyksellä.
+   ohjauslogiikassa mittauksella, ei pelkällä toimintajärjestyksellä. **Vaihtoehdossa C**
+   (PVH57, LS ja on/off-venttiilit) BPV:tä ei ole, mutta sama anturi valvoo keulapotkuria: jos
+   paine jää venttiilin ollessa päällä alle rajan, veto on todennäköisesti katkennut, ja ESP32
+   katkaisee venttiilin virran ([aux-circuit-ls-onoff](aux-circuit-ls-onoff.md#painevalvonta-arvio)).
 2. **Digitaalinen anturi 1B2 ohjauspiiriin** nykyisen mittarin 1G1 rinnalle.
 3. **Mittausliittimet** kohtiin 1T1, 1T2, 2T1, 2T2 ja 3G2 sekä yksi kannettava mittari: halvin tapa
    saada vianhakuun kattava mittaus.

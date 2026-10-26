@@ -167,8 +167,43 @@ F1-61-reitillä kierroslukitus on välttämätön lämmön takia (1800 rpm:llä 
    maksa mitään, mutta ei suojaa unohdukselta.
 3. **FXDC keulapotkurin linjaan** ylikierrossuojaksi: rajaa virtauksen noin 34 l/min:iin kaikilla
    kierroksilla, mutta vie noin 8 bar ja työntövoimasta noin 3 prosenttiyksikköä (ks. yllä).
+4. **Painevalvonta P2:n lähdön paineanturilla** (2B2, ks.
+   [pressure-monitoring](pressure-monitoring.md)): tunnistaa vian, ei tarvitse kierrostietoa.
 
-Kierroslukitus on suositeltava mutta ei välttämätön. Omistajat päättävät.
+#### Painevalvonta [arvio]
+
+**Miten vika näkyy:** normaalisti paine nousee keulapotkurin käynnistyessä lähes heti 250 bariin
+(täysi työntö vaatisi noin 264 bar). Jos veto katkeaa, kuorma katoaa ja paine putoaa letkujen ja
+venttiilin häviöihin, muutamaan kymmeneen bariin. Ero on suuri, joten raja on helppo asettaa.
+
+**Logiikka ESP32:ssa:**
+
+1. Keulapotkurin venttiili ohjataan päälle.
+2. Odotetaan noin 0,5–1 s, että paine nousee (**⚠ viive tarkistetaan käyttöönotossa**).
+3. Jos paine on venttiilin ollessa päällä alle rajan (esim. 150 bar, **⚠ raja tarkistetaan
+   mittaamalla**), venttiilin virta katkaistaan, annetaan hälytys ja uudelleenkäynnistys estetään,
+   kunnes vika kuitataan.
+4. Anturin vika tai katkennut johto (4–20 mA: alle 4 mA) tulkitaan viaksi.
+
+**Rajoitukset:**
+
+- **Ylikierrosta ei estetä kokonaan.** Kuormaton moottori kiihtyy sekunnin murto-osassa, joten
+  tunnistusviive ja venttiilin sulkeutuminen (noin 50 ms) ovat ylikierrosaikaa. Vaurio jää
+  todennäköisesti paljon pienemmäksi kuin jatkuvassa ylikierroksessa, mutta suoja ei ole täysi.
+  Kierroslukitus estää suuren virtauksen ennalta.
+- **Väärät laukeamiset ovat epätodennäköisiä,** koska potkuri ei saa ilmaa lapoihin
+  [omistaja 2026-10-26] ja kylmä öljy vain nostaa painetta.
+
+**Miksi paineanturi eikä virtausanturi:** hydrauliikan virtausanturi maksaa arviolta satoja euroja
+ja lisää painehäviötä; paineanturi noin 40–150 € ([pressure-monitoring](pressure-monitoring.md)).
+F1-61-reitillä 2B2 tarvittaisiin BPV:n ohjaukseen; vaihtoehdossa C sama anturi hoitaa tämän
+valvonnan ja paljastaa muitakin vikoja (säädin ei nosta painetta, venttiili ei avaudu, paine jää
+korkeaksi venttiilin sulkeuduttua).
+
+**Suositus [arvio]:** halvin hyvä yhdistelmä on käyttösääntö (keulapotkuri tyhjäkäynnillä) ja
+painevalvonta. Kierroslukitus lisätään, jos kierrostieto saadaan helposti. Kumpikaan ei ole
+välttämätön, koska vika ei aiheuta vaaraa ihmisille. Omistajat päättävät. Ohjauslogiikka liittyy
+turvallisuuteen, joten pätevän henkilön pitää tarkistaa se ennen käyttöä.
 
 **Miksi vinssille ja pesurille kompensoitu virtauksensäätö eikä pelkkä kuristin:** kun keulapotkuri
 pitää pumpun 250 barissa, matalan paineen kuorman kuristimen yli olisi suuri paine-ero. Se veisi
@@ -232,7 +267,7 @@ vinssin jarruventtiili.
 | Suuntaventtiili jumittuu auki | Kuorma jää käyntiin. Hätäpysäytys katkaisee kelojen virran; jos kara ei palaa, pumpun kierrokset tai imulinjan palloventtiili ovat ainoa keino **⚠ pätevä henkilö arvioi**. |
 | LS-linjan vuotokuristin tukkeutuu | Pumppu voi jäädä venttiilien palattua keskelle hetkeksi korkeaan paineeseen; keskiasennon A,B→T-yhteys tyhjentää linjan silti. |
 | Pumpun säädin jumittuu täydelle tuotolle | Varaventtiili rajaa paineen; tilanne vastaa kiinteää pumppua (lämpöä), ja lämpötila-anturi hälyttää. |
-| Keulapotkurin veto (kytkin, akseli) katkeaa | Moottori menettää kuormansa ja ryntää, koska linjassa ei ole virtauksensäätöä. Kierroslukitus rajaa pumpun tuoton (tyhjäkäynnillä noin 38 l/min); hätäpysäytys katkaisee venttiilin virran. |
+| Keulapotkurin veto (kytkin, akseli) katkeaa | Moottori menettää kuormansa ja ryntää, koska linjassa ei ole virtauksensäätöä. Kierroslukitus rajaa pumpun tuoton (tyhjäkäynnillä noin 38 l/min); painevalvonta (2B2) tunnistaa paineen putoamisen ja katkaisee venttiilin virran; hätäpysäytys katkaisee venttiilin virran. |
 | Kotelovuotolinja tukkeutuu | Akselitiiviste voi vaurioitua; siksi vuotolinja on oma letkunsa. |
 | Vinssi kuormassa ja hydrauliikka menetetään | Jarruventtiili ja vinssin jarru pitävät kuorman, ei pumppu eikä venttiilin kara. **Pätevä henkilö tarkistaa ennen rakentamista.** |
 
@@ -243,6 +278,7 @@ vinssin jarruventtiili.
 - [ ] Omistajat: kierroslukitus vai käyttösääntö, ja lukituksen raja (suoja vedon katkeamisen varalle, ks. [Tarvitaanko kierroslukitus](#tarvitaanko-kierroslukitus))
 - [ ] Sleipner: U11-moottorin suurin sallittu kierrosnopeus
 - [ ] Saako ESP32 PDM kierrostiedon (Signal K) vai tarvitaanko anturi
+- [ ] Painevalvonnan raja ja viive: mitataan keulapotkurin paine käyttöönotossa (normaali käynnistys, kylmä ja lämmin öljy)
 - [ ] Lohkokohtaisen FXDC:n asennus CETOP-pohjalaatalle: välilaatta (malli) vai linjarunko kunkin aseman letkuun
 - [ ] Danfoss: PVH57:n kierrosraja (2400 rpm) yhtäaikaisessa käytössä, kun 38 l/min ei riitä kahdelle kuormalle tyhjäkäynnillä
 - [ ] Vaihtoventtiilien malli ja liitäntäkoko
