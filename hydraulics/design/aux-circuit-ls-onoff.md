@@ -92,14 +92,36 @@ ei päätetty, ei rakentamiseen.** Pätevän henkilön pitää tarkistaa kaavio 
 | 2P10 | Vickers PVH57, LS-säädin (V) | 57,4 cm³; painekompensaattori 250 bar, LS-paine-ero noin 20 bar; kotelovuoto omana letkuna säiliöön | 1 |
 | 2V0, 2B1 | Imun palloventtiili, imupaineanturi | imu 50 mm, kuten arkki 2 | 1 |
 | 2G1 | Painemittari | P-linja | 1 |
+| 2B2 | Paineanturi 0–400 bar, 4–20 mA → ESP32 PDM | painevalvonta: paine alle noin 150 bar venttiilin ollessa päällä → Y1a/b pois ja hälytys ([Painevalvonta](#painevalvonta-arvio)); raja ja viive **⚠** käyttöönotossa | 1 |
 | 2V3 | VMP (nykyinen) | varaventtiili noin 270 bar; rajaa paineen, jos säädin jumittuu | 1 |
 | 2V5 | BAV-713 4/3 (nykyinen), Y1a/b | keskiasento P kiinni, A, B, T yhdistetty; CETOP 3 -pohjalaatalla | 1 |
-| 2V10 | Vaihtoventtiili keulapotkurin A/B-linjoista | malli **⚠ valitsematta** | 1 |
+| 2V10 | Vaihtoventtiili (shuttle valve, "OR-venttiili") keulapotkurin A/B-linjoista | linjamalli, kaksi tuloa ja lähtö, G 1/4" tai G 3/8", vähintään 350 bar; virtaus vain muutamia l/min; ks. [LS-linjan venttiilit](#ls-linjan-venttiilit); malli **⚠ valitsematta** | 1 |
 | 2V19 | Vuotokuristin noin Ø0,8 mm | LS-linjasta säiliöön; LS-linja tyhjenee, kun venttiilit ovat keskellä | 1 |
 | 2M2 | Sleipner U11 (SH240) | A/B 1/2", 2 × 8,5 m; ei virtauksensäätöä; vuotolinja suoraan säiliöön | 1 |
 | 2V12, 2V13 | Vaihtoventtiilit asemien välillä | välittävät suurimman kuorman paineen pumpulle; ennen vinssiä aseman 1 signaali menee suoraan LS-linjaan | myöhemmin |
 | 2V14, 2V15, 2V11, 2V16, 2M3 | Vinssi: FXDC, 4/3 A,B→T, vaihtoventtiili, jarruventtiili, moottori | vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../loads.yaml)) | myöhemmin |
 | 2V17, 2V18, 2M4 | Pesuri: FXDC, 3/2 (lepo A→T), moottori | pesurin tiedot **⚠ ei tiedossa**; LS-signaali suoraan A-linjasta | myöhemmin |
+
+### LS-linjan venttiilit
+
+LS-linjaan ei tarvita ohjattavaa magneettiventtiiliä. Ensimmäisessä vaiheessa uusia osia on kaksi
+[arvio]:
+
+1. **Vaihtoventtiili 2V10** (shuttle valve). Passiivinen kuulaventtiili, jossa on kaksi tuloa ja
+   yksi lähtö: suuremman paineen tulo sulkee toisen, ja lähtöön pääsee aina A- tai B-linjan
+   suurempi paine. Tulot T-liittimillä keulapotkurin A- ja B-letkuista, lähtö 1/4":n LS-letkulla
+   pumpun LS-porttiin.
+   - **Vaatimukset:** linjamalli, BSPP-liitännät (esim. G 1/4"), paineluokka vähintään 350 bar
+     (A/B-linjoissa on 250 bar, ja keulapotkurin pysähtyessä voi tulla paineiskuja). Virtaus on
+     pieni (LS-linjan täyttö ja vuotokuristin), joten pienin koko riittää.
+   - **Vaihtoehto:** CETOP 3 -välilaatta, jossa vaihtoventtiili ja LS-portti, BAV-713:n ja
+     pohjalaatan väliin. Siistimpi, vähemmän letkuja; saatavuus ja hinta **⚠ tarkista**.
+2. **Vuotokuristin 2V19,** noin Ø0,8 mm, LS-linjasta säiliöön. Kuristinnippa tai kuristinruuvi
+   1/4":n liittimeen. Se tyhjentää LS-linjan, kun venttiili palaa keskelle; keskiasennon A,B→T-yhteys
+   tyhjentää linjan myös venttiilin kautta.
+
+Myöhemmin vinssi ja pesuri tuovat vaihtoventtiilit 2V11–2V13 (samaa tyyppiä). PVH57:n LS-portin
+koko **⚠ ei tiedossa** (asennuspiirustus M-2206-S).
 
 Kaaviota piirtäessä esiin tulleet asiat:
 

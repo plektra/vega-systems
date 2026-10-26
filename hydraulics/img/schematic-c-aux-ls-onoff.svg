@@ -16,7 +16,7 @@
 <text x="40" y="67" font-weight="bold" font-size="11" stroke="none" fill="#000">Lukuohje</text>
 <text x="40" y="83" font-size="11" stroke="none" fill="#000">Venttiilit lepoasennossa (jännitteetön)</text>
 <text x="40" y="98" font-size="11" stroke="none" fill="#000">Yhtenäinen viiva: paine-, paluu- ja imulinja</text>
-<text x="40" y="113" font-size="11" stroke="none" fill="#000">Katkoviiva: LS-signaali, ohjaus- ja vuotolinja</text>
+<text x="40" y="113" font-size="11" stroke="none" fill="#000">Katkoviiva: LS-signaali, ohjaus- ja vuotolinja · pisteviiva: sähkö</text>
 <text x="40" y="128" font-size="11" stroke="none" fill="#000">Musta: 1. vaihe (keulapotkuri) · harmaa: myöhemmin</text>
 <text x="40" y="143" font-size="11" stroke="none" fill="#000">Y = solenoidi 24 V · ⚠ = tarkistettava</text>
 <text x="40" y="158" font-size="11" stroke="none" fill="#000">SELVITYS, EI PÄÄTETTY · osaluettelo: aux-circuit-ls-onoff.md</text>
@@ -81,6 +81,16 @@
 <text x="1068" y="612" font-weight="bold" font-size="11" stroke="none" fill="#000">Paluu → arkki 3</text>
 <text x="1068" y="625" font-size="11" stroke="none" fill="#000">3Z3 paluukeräin, 1"</text>
 <text x="430" y="581" font-size="11" stroke="none" fill="#000">paluulinja → paluukeräin</text>
+<!-- ===== 2B2 paineanturi ja painevalvonta ===== -->
+<path d="M455 520 V502" stroke-width="1.5"/>
+<circle cx="455" cy="520" r="3" fill="#000" stroke="none"/>
+<circle cx="455" cy="490" r="12" stroke-width="1.5"/>
+<text x="455" y="494" text-anchor="middle" font-weight="bold" font-size="11" stroke="none" fill="#000">P</text>
+<text x="455" y="470" text-anchor="middle" font-weight="bold" font-size="11" stroke="none" fill="#000">2B2</text>
+<rect x="320" y="448" width="100" height="32" stroke-width="1"/>
+<text x="370" y="461" text-anchor="middle" font-weight="bold" font-size="10" stroke="none" fill="#000">ESP32 PDM</text>
+<text x="370" y="474" text-anchor="middle" font-size="10" stroke="none" fill="#000">→ Y1a/b (2V5)</text>
+<path d="M443 490 H432 V464 H420" stroke-width="1" stroke-dasharray="2 3"/>
 <!-- ===== Asema 1: keulapotkuri ===== -->
 <rect x="445" y="380" width="50" height="40" stroke-width="1.5" stroke="#000"/>
 <rect x="495" y="380" width="50" height="40" stroke-width="1.5" stroke="#000"/>
@@ -223,15 +233,17 @@
 <text x="470" y="715" font-size="11" stroke="none" fill="#000">Kaikki venttiilit keskellä → A, B → T, LS-linja tyhjenee, pumppu ~20 bar.</text>
 <text x="470" y="730" font-size="11" stroke="none" fill="#000">Venttiili päällä → LS = kuorman paine, pumppu = LS + 20 bar, enintään 250 bar.</text>
 <text x="470" y="745" font-size="11" stroke="none" fill="#000">Keulapotkuri: ei kuristinta, pumppu nousee suoraan 250 bariin (työntö ~85–88 %).</text>
-<text x="470" y="760" font-size="11" stroke="none" fill="#000">Kierroslukitus ESP32:ssa: keulapotkuri vain lähellä tyhjäkäyntiä (raja ⚠).</text>
-<text x="470" y="775" font-size="11" stroke="none" fill="#000">Vinssin kuorman pito: jarruventtiili ja vinssin jarru, ei pumppu.</text>
-<text x="470" y="790" font-size="11" stroke="none" fill="#000">Pätevä henkilö tarkistaa kytkennän ja säädöt ennen rakentamista.</text>
+<text x="470" y="760" font-size="11" stroke="none" fill="#000">Painevalvonta: 2B2 &lt; ~150 bar venttiilin ollessa päällä (viive ~0,5–1 s) → veto katkennut,</text>
+<text x="470" y="775" font-size="11" stroke="none" fill="#000">   ESP32 katkaisee Y1a/b:n virran ja hälyttää (raja ja viive ⚠ käyttöönotossa).</text>
+<text x="470" y="790" font-size="11" stroke="none" fill="#000">Lisäksi käyttösääntö tai kierroslukitus: keulapotkuri lähellä tyhjäkäyntiä (raja ⚠).</text>
+<text x="470" y="805" font-size="11" stroke="none" fill="#000">Vinssin kuorman pito: jarruventtiili ja vinssin jarru, ei pumppu.</text>
+<text x="470" y="820" font-size="11" stroke="none" fill="#000">Pätevä henkilö tarkistaa kytkennän ja säädöt ennen rakentamista.</text>
   <rect x="940" y="866" width="280" height="124" stroke-width="1.5"/>
   <line x1="940" y1="888" x2="1220" y2="888" stroke-width="1"/>
 <text x="950" y="882" font-weight="bold" font-size="13" stroke="none" fill="#000">Vega — hydraulijärjestelmä</text>
 <text x="950" y="904" font-size="11" stroke="none" fill="#000">Vaihtoehto C: apupiiri, LS + on/off</text>
 <text x="950" y="920" font-size="11" stroke="none" fill="#000">ISO 1219-1 -merkit, ISO 1219-2 -periaatteet</text>
-<text x="950" y="936" font-size="11" stroke="none" fill="#000">Versio 0.1 · 2026-10-26</text>
+<text x="950" y="936" font-size="11" stroke="none" fill="#000">Versio 0.2 · 2026-10-26</text>
 <text x="950" y="969" font-size="11" stroke="none" fill="#000">Tarkastettava pätevällä henkilöllä</text>
 <text x="950" y="984" font-size="11" stroke="none" fill="#000">Piirtänyt: Claude · Hyväksynyt: –</text>
 <text x="950" y="953" font-weight="bold" font-size="11" stroke="none" fill="#b00">Tila: SELVITYS – ei päätetty</text>
