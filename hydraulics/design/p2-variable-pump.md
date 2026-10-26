@@ -271,8 +271,8 @@ Q250 tai Q140, eikä tässä koodissa ole lisäkoodia.
 | Puhtaus (säätötilavuuksinen mäntäpumppu) | 18/16/14 (≤ 140 bar), **17/15/13 (140–210 bar)**, 16/14/12 (yli 210 bar) | s. 31 |
 | Asennus | vaakaan, suora veto joustavalla kytkimellä; linjaus asennuspiirustuksen toleransseihin | s. 31 |
 | Paino | noin 36 kg (jälleenmyyjät) **⚠ tarkista** | jälleenmyyjät |
-| Imuaukko | 2 1/2" SAE-laippa (jälleenmyyjät) **⚠ tarkista pumpusta** | jälleenmyyjät |
-| Kotelovuoto | pakollinen vuotolinja säiliöön | M-2210-S |
+| Imuaukko | 2 1/2" SAE-laippa (jälleenmyyjät) **⚠ tarkista pumpusta**. Pääliitännät ovat jälleenmyyjien mukaan pumpun **kyljissä** ("SP", side ports), eivät päällä tai pohjassa; kummalla puolella imu on, riippuu pyörimissuunnasta **⚠ tarkista pumpusta** | jälleenmyyjät (hakutulokset 2026-10-26) |
+| Kotelovuoto | pakollinen vuotolinja säiliöön. Jälleenmyyjien mukaan (muut PVH57-koodit) vuotoportti 3/4-16 SAE O-rengas **pohjassa**; onko ylempää vuotoporttia, **⚠ tarkista pumpusta** (jos vain pohjassa, kotelon täyttö ja ilmaus mietittävä erikseen) | M-2210-S; jälleenmyyjät |
 
 ### Sopivuus Vegaan [laskelma]
 

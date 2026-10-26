@@ -2,7 +2,7 @@
 
 > **Tila:** selvitys 2026-10-23. **Päätetty 2026-10-23: kohdat 1, 3, 4 ja 5** (32 mm:n imulinja,
 > täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohta 6: välitystä ei muuteta; kohta 7 avoinna. Imulinjan mitat [omistaja 2026-10-23],
-> laskelmat [laskelma]. Ohjaus on turvallisuuskriittinen: **pätevän henkilön pitää tarkistaa
+> laskelmat [laskelma]. 2026-10-26: öljypinta vähintään 1 m pumppujen yläpuolella [omistaja], joten laskelman oletus pätee. Ohjaus on turvallisuuskriittinen: **pätevän henkilön pitää tarkistaa
 > ohjauspiirin muutokset ennen rakentamista.**
 
 Liittyy: [current-system §3.3](../current-system.md#33-piiri-1--ohjaus),
@@ -19,7 +19,7 @@ Liittyy: [current-system §3.3](../current-system.md#33-piiri-1--ohjaus),
 | Pienin viskositeetti | 12 cSt | [datalehti Salami 2PE] |
 | Nykyinen imulinja | **25 mm:n sisähalkaisija, 320 cm** | [omistaja 2026-10-23] |
 | Mahdollinen pidempi linja | enintään 5 m | [omistaja 2026-10-23] |
-| Säiliön öljypinta suhteessa P1:een | **⚠ ei tiedossa**; laskelmassa oletettu noin 1 m yläpuolella (kuten P2) | oletus |
+| Säiliön öljypinta suhteessa P1:een | **vähintään 1 m P1:n ja P2:n yläpuolella** (laskelmassa 1 m) | [omistaja 2026-10-26] |
 | P1:n imuaukon koko | **3/4"** (≈ 19 mm) | [omistaja 2026-10-23] |
 
 **Koko pumpun tuotto kulkee imuletkun läpi:** RPF3 palauttaa ylimäärän säiliöön, joten imuvirtaus
@@ -94,7 +94,7 @@ koska säiliö on silloin tyhjä ja auki.
 
 **Päätetty 2026-10-23: 1 + 3 + 4 + 5** ([päätösloki](../../decisions.md)).
 Alkuperäinen suositus: Kohta 1 maksaa lähes vain liittimet, koska letku ja säiliön ulosotto
-vapautuvat P2:lta. Ennen sitä pitää mitata säiliön öljypinnan korkeus suhteessa P1:een.
+vapautuvat P2:lta. Säiliön öljypinta on vähintään 1 m P1:n yläpuolella [omistaja 2026-10-26].
 
 ### Vikatilanteet (ohjaus)
 
@@ -107,7 +107,7 @@ vapautuvat P2:lta. Ennen sitä pitää mitata säiliön öljypinnan korkeus suht
 ## Avoimet kysymykset
 
 - [x] P1:n imuaukon koko: 3/4" [omistaja 2026-10-23]
-- [ ] Säiliön öljypinnan korkeus suhteessa P1:n imuaukkoon
+- [x] Säiliön öljypinnan korkeus suhteessa P1:n imuaukkoon: vähintään 1 m [omistaja 2026-10-26]
 - [x] P2:n vanha 32 mm:n imuletku mahtuu P1:lle; pumpun päähän tarvitaan uusi letkukara/letkuliitin [omistaja 2026-10-23]
 - [x] Päätös: P1:n imulinja 32 mm (2026-10-23)
 - [ ] Säiliö: P2:n 50 mm:n ulosotto uuteen kohtaan, jotta vanha 32 mm:n ulosotto jää P1:lle

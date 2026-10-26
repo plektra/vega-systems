@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Päivitetty 2026-10-26: paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-26: säiliön öljypinta vähintään 1 m pumppujen yläpuolella; paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulipumput on irrotettu** (lokakuu 2026); muu järjestelmä (säiliö, venttiilit, orbitroli,
 > sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Luvut 3.1–3.5 kuvaavat viimeisintä
@@ -24,7 +24,7 @@
 | Suunnitelma: tyhjäkierto | **Parker BPV-F1 -ohitusventtiili käsiohituksella** (378 4179) pumpun päällä: jännitteettömänä pumppu kiertää tyhjänä, jännitteellisenä syöttää piiriin. **Vuotolinja** BPV:ltä suoraan säiliöön. Ks. [p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23). |
 | Keulapotkurin letkut | **Pääosin valmiit:** 1/2" **SAE 100R2AT / EN 853** -letkut, omistajien mukaan 300 bar, CETOP-venttiileiltä keulapotkurille. A- ja B-linjat **8,5 m kumpikin**. |
 | P2:n painelinja | 3/4" letku pumpulta venttiileille. PTO-sijoitus vaatii **3–4 m** letkua. |
-| P2:n imulinja | **50 mm** [päätös 2026-10-23; aiemmin 32 mm:n sisähalkaisija, noin 3 m]. Säiliön öljypinta on noin 1 m pumpun imuaukon yläpuolella. |
+| P2:n imulinja | **50 mm** [päätös 2026-10-23; aiemmin 32 mm:n sisähalkaisija, noin 3 m]. Säiliön öljypinta on vähintään noin 1 m pumppujen imuaukkojen yläpuolella [omistaja 2026-10-26]. |
 | P1:n imulinja | **25 mm:n sisähalkaisija, 320 cm** [omistaja 2026-10-23]. Riittää lämpimällä öljyllä; kylmällä öljyllä suurilla kierroksilla alittaa Salamin −0,3 barin rajan, ja 5 m:n pituudella 25 mm ei riitä. **Päätös 2026-10-23: 32 mm** (P2:n vapautuva letku), ks. [p1-steering-pump.md](design/p1-steering-pump.md). |
 | Apupiirin paluulinja | 3/4" letku, **< 0,5 m**, venttiililohkolta säiliöön (paluusuodattimen kautta) |
 | Päätös: järjestelmäpaine | **Pysytään 250 barin luokassa.** Noin 90 %:n keulapotkuriteho hyväksytään kustannusten vuoksi. |
@@ -365,7 +365,8 @@ Avoimet:
 - [x] P1:n hihnavälitys pysyy 1:1,24 (päätös 2026-10-23); imun kannalta pienennyksen vaikutus olisi ollut pieni, ks. [p1-steering-pump.md](design/p1-steering-pump.md)
 - [x] P1:n imulinja nyt: 25 mm, 320 cm [omistaja 2026-10-23]
 - [x] P1:n imulinja jatkossa: 32 mm (päätös 2026-10-23)
-- [ ] Säiliön öljypinnan korkeus P1:een nähden; P2:n 50 mm:n ulosotto uuteen kohtaan, jotta 32 mm:n ulosotto jää P1:lle
+- [x] Säiliön öljypinnan korkeus P1:een nähden: vähintään 1 m [omistaja 2026-10-26]
+- [ ] P2:n 50 mm:n ulosotto uuteen kohtaan, jotta 32 mm:n ulosotto jää P1:lle
 - [ ] Painemittaus molempiin piireihin: ehdotus digitaalisista antureista (2B2 P2:n lähtö, 1B2 ohjauspaine), mittausliittimistä ja paluulinjan mittarista, ks. [pressure-monitoring.md](design/pressure-monitoring.md)
 - [ ] Anturit: öljyn lämpötila ja P2:n imupaine (malli, ESP32/Signal K -liitäntä); P1:n imupaineen mittaus käyttöönotossa
 - [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23]

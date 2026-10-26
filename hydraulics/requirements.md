@@ -173,7 +173,7 @@ keulapotkuri (noin 34 l/min, 250 bar).
 | Kohde | Rajoite |
 |---|---|
 | Tila voimayksikölle / säiliölle | TBD (paikka, P×L×K) |
-| Säiliön sijainti suhteessa pumppuihin | Säiliön öljypinta noin 1 m P2:n imuaukon yläpuolella |
+| Säiliön sijainti suhteessa pumppuihin | Säiliön öljypinta vähintään 1 m P1:n ja P2:n imuaukkojen yläpuolella [omistaja 2026-10-26]. Ratkaiseva on öljypinnan korkeus, ei säiliöliitännän; imuletku laskee koko matkan säiliöltä pumpulle ilman ilmaa kerääviä yläkohtia. |
 | Painobudjetti | TBD kg |
 | Putki- ja letkuvedot | Keulapotkurin A/B-linjat: 1/2" letku, asennettu (CETOP → keula). Muut TBD (laipiolävistykset, palo-osastot). |
 | Huollettavuus | TBD (suodattimet, tarkastuslasi, ilmauspisteet) |
