@@ -185,8 +185,8 @@ keulapotkuri (noin 34 l/min, 250 bar).
 |---|---|
 | Öljytyyppi | Mineraalipohjainen **HVLP** (DIN 51524-3 / ISO 11158 HV); HEES ei tarpeen. **Päätetty 2026-10-23**, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
 | Viskositeettiluokka | Suositus **HVLP 32** (DIN 51524-3), VI ≥ 150, mieluiten > 180, Parker HF-0; esim. Teboil Hydraulic Oil 32S. Ainoa luokka, joka pysyy kaikkien komponenttien rajoissa 0 °C:sta noin 72 °C:seen (P1:n 12 cSt:n minimi). **Päätetty 2026-10-23**, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
-| Puhtaustavoite | TBD (ISO 4406 -koodi herkimmän komponentin mukaan) |
-| Suodatus | TBD (paluu / paine / sivuvirta) |
+| Puhtaustavoite | Herkimmän komponentin mukaan: **F1-61 20/18/13** [Parker MSG30-8200 s. 80]; jos P2:ksi valitaan PVH57, **16/14/12** (250 bar) [Eaton PVH s. 31]. Ks. [paperisuodattimen riittävyys](design/p2-variable-pump.md#riittääkö-nykyinen-paperisuodatin) |
+| Suodatus | Paluusuodatin säiliön kannella; nykyinen OMTF112C10NA2 F1-61:lle, PVH57:lle OMTF171F10NA1 (ehdokas). Suodattava huohotin **⚠ päättämättä** |
 | Huoltoväli | TBD |
 | Vuotojen keräys | TBD |
 

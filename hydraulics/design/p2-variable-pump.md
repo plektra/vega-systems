@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä sellaisenaan; ehdokas OMTF171F10NA1), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä PVH57:lle, mutta todennäköisesti riittää F1-61:lle; ehdokas OMTF171F10NA1; puhtausvaatimus 250 barissa 16/14/12), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
@@ -70,11 +70,13 @@ siinä, kuinka paljon järjestelmää pitää ymmärtää.
 
 **Missä PVH57 on oikeasti vaativampi:**
 
-- **Öljyn puhtaus:** mäntäpumppu vaatii puhtaampaa öljyä (17/15/13, 140–210 bar [luettelo s. 31]).
+- **Öljyn puhtaus:** mäntäpumppu vaatii puhtaampaa öljyä: 17/15/13 140–210 barissa ja **16/14/12 yli
+  210 barin** [luettelo s. 31]. Vegan 250 barin asetuksella pätee 16/14/12 (korjattu 2026-10-26;
+  aiemmin tässä mainittiin vain 17/15/13). Valmiustilassa (noin 20 bar) vaatimus on lievempi.
   Nykyinen paluusuodatin on OMTF112C10NA2, 10 µm [omistaja 2026-10-26]. Tilauskoodin `C10` tarkoittaa
   jälleenmyyjien vastinelementtien perusteella **selluloosaa, 10 µm nominaalinen** (**⚠ tarkista**
   OMT:n luettelosta). Nominaalinen selluloosaelementti ei luotettavasti pidä öljyä luokassa
-  17/15/13; siihen käytetään yleensä lasikuituelementtiä, jonka erotusaste on ilmoitettu
+  16/14/12; siihen käytetään yleensä lasikuituelementtiä, jonka erotusaste on ilmoitettu
   (beta-arvo) [arvio, yleistieto]. Saman sarjan lasikuituversio `F10` (10 µm absoluuttinen) on
   jälleenmyyjän mukaan mitoitettu vain 55 l/min:lle [jälleenmyyjä Phoenix Hydraulics, OMTF112F10NA2].
   **Johtopäätös:** PVH57-reitillä suodatin tai ainakin elementti pitää vaihtaa lasikuituun, ja
@@ -625,6 +627,37 @@ liittyy paluulinjaan ennen suodatinta, kotelon paine nousee tämän verran (avoi
 **Suositus:** OMTF171F10NA1 sopii, jos säiliön mitat sallivat. Halvempaa saman rungon
 vaihtoehtoa ei ole: OMTF112:n lasikuituelementti on liian pieni Vegan virralle.
 
+### Riittääkö nykyinen paperisuodatin?
+
+Vaatimus riippuu pumpusta [luettelot, ks. [p2-pump-options](p2-pump-options.md) ja
+[Tekniset tiedot](#tekniset-tiedot)]:
+
+| Pumppu | Puhtausvaatimus (ISO 4406) | Nykyinen OMTF112C10NA2 (selluloosa 10 µm nominaalinen) |
+|---|---|---|
+| **F1-61 (päätetty)** | 20/18/13 [Parker MSG30-8200 s. 80] | **todennäköisesti riittää** [arvio], ks. ehdot alla |
+| PVH57 (selvitys), 250 bar | 16/14/12 [Eaton s. 31] | **ei riitä** [arvio]: vaatimus on noin 2–3 luokkaa tiukempi (jokainen luokka kaksinkertaistaa hiukkasmäärän) |
+
+**F1-61:n kanssa** nykyinen suodatin kannattaa pitää [arvio], kunhan
+
+- järjestelmä huuhdellaan ja uusi HVLP 32 lisätään suodattimen kautta (uusi öljy ei tynnyristä
+  ole tavallisesti edes luokassa 20/18/13 [yleistieto]),
+- huohotinkorkki vaihdetaan suodattavaan (esim. 3 µm), koska suurin osa liasta tulee säiliöön
+  ilman mukana [yleistieto],
+- elementti vaihdetaan käyttöönoton jälkeen (kokoamisessa syntynyt lika) ja sitten painemittarin
+  mukaan,
+- öljystä otetaan näyte hiukkaslaskentaan (ISO 4406) muutaman kymmenen käyttötunnin jälkeen;
+  hinta **⚠ ei tiedossa**. Näyte kertoo varmasti, riittääkö suodatin.
+
+Vegan käyttö keventää vaatimusta: P2 on suurimman osan ajasta ohitusasennossa matalalla paineella,
+ja suurpaineinen käyttö (keulapotkuri, vinssi) on lyhytaikaista. Se ei kuitenkaan muuta
+valmistajan vaatimusta [arvio].
+
+**PVH57:n kanssa** halvin välivaihe olisi lasikuituelementti nykyiseen runkoon, jos se sopii
+(`F10`-elementti CR112F10R samaan runkoon **⚠ tarkista**). Elementin virta 55 l/min (Phoenix)
+tai 71–80 l/min (Oudshoorn) jää kuitenkin tiukaksi: tyhjäkäynnillä suodattimen läpi kulkee noin
+35 + 16,5 ≈ 52 l/min ja kylmällä öljyllä painehäviö kasvaa [laskelma]. Siksi PVH57-reitillä
+suositus on OMTF171F10NA1.
+
 ## Avoimet kysymykset
 
 - [x] Myyjältä: pyöriikö akseli tasaisesti (pyörii ilman ääniä), säilytys (lämmin talli), onko sisällä öljyä ja ruostetta (öljyt sisällä, ei ruostetta) [myyjä 2026-10-25]
@@ -636,8 +669,10 @@ vaihtoehtoa ei ole: OMTF112:n lasikuituelementti on liian pieni Vegan virralle.
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
 - [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
-- [x] Paluusuodattimen suodatusaste vs. 17/15/13: nykyinen OMTF112C10NA2 on 10 µm, arviolta selluloosa nominaalinen, **ei riitä** sellaisenaan [omistaja 2026-10-26]
+- [x] Paluusuodattimen suodatusaste vs. 16/14/12 (aiemmin 17/15/13): nykyinen OMTF112C10NA2 on 10 µm, arviolta selluloosa nominaalinen, **ei riitä** sellaisenaan [omistaja 2026-10-26]
 - [x] ~~Lasikuituelementti: virtauskesto, kun P1:n paluu kulkee samasta suodattimesta~~ OMTF112F10 (55 l/min) liian pieni; ehdokas OMTF171F10NA1 (157 l/min), ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1)
+- [ ] Sopiiko lasikuituelementti CR112F10R nykyiseen OMTF112C10NA2:n runkoon
+- [ ] Öljynäytteen hiukkaslaskenta (ISO 4406) käyttöönoton jälkeen: mistä ja hinta
 - [ ] OMTF171F10NA1: beta-arvo, ohitusventtiilin asetus (1,7 vai 3 bar), pulttijako ja laipan ulkohalkaisija (OMT:n luettelo tai STEP-tiedosto), elementin CR171F10R hinta
 - [ ] Veneellä: säiliön sisäkorkeus, öljypinnan etäisyys kannesta pienimmällä öljymäärällä, tila kannella Ø 129 mm:n reiälle ja laipalle, nykyisten pulttireikien jako
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]

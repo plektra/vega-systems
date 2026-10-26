@@ -169,7 +169,7 @@ Tyypillisiä merkkejä: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc ym., kokolu
 - **Miinukset:** uutena noin 1500–3000 €; käytettynä halvempi (Vickers PVH57 190 € tori.fi:ssä
   2026-10-25). Pelkällä painekompensoinnilla pumppu pysyisi ilman virtaustarvetta 250 barissa, mutta
   **LS-purulla (pieni 2/2-magneettiventtiili LS-linjassa) se lepää noin 20 barissa**, joten kytkintä
-  tai ohitusventtiiliä ei tarvita. Vaatii kotelovuotolinjan säiliöön, puhtaampaa öljyä (17/15/13) ja
+  tai ohitusventtiiliä ei tarvita. Vaatii kotelovuotolinjan säiliöön, puhtaampaa öljyä (16/14/12 250 barissa, 17/15/13 140–210 barissa) ja
   oman kannakkeen ja kytkinnavan (SAE C, kiila-akseli). Isompi ja painavampi (noin 36 kg).
 - **Sopivuus:** kohtalainen. Hyöty on pieni lämpö keulapotkurin käytössä korkeilla kierroksilla;
   järjestelmä on hieman vaativampi ymmärtää ja ylläpitää. Ankkurivinssin kanssa matalalla paineella
