@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä sellaisenaan), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä sellaisenaan; ehdokas OMTF171F10NA1), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
@@ -81,6 +81,7 @@ siinä, kuinka paljon järjestelmää pitää ymmärtää.
   virtauskesto tarkistetaan (apupiiri noin 33–38 l/min ja P1:n paluu 14–37 l/min samassa
   suodattimessa). Kustannus on pieni (suodatin noin 30 £ jälleenmyyjällä), mutta se lisätään
   PVH57-reitin osaluetteloon.
+  **Ehdokas: OMTF171F10NA1** [omistaja 2026-10-26], ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1).
 - **Kunto:** pumppu on arviolta 1980-luvun lopulta tai 1990-luvulta (ks.
   [Ikä](#ikä-ja-siihen-liittyvät-riskit)) ja uudelleen maalattu. Myyjän mukaan se on säilytetty
   lämpimässä öljyt sisällä, ruosteetta, ja akseli pyörii äänettömästi [myyjä 2026-10-25], joten
@@ -559,7 +560,70 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
 | Tiivisteet (ikä) | – | ulkoiset O-renkaat, akselitiiviste vain jos vuotaa (halpa, hinta ei tiedossa); koko sarjaa 02-102244 (noin 853 $) ei tarvita, jos kunto on myyjän kertoma, ks. [Tiivistesarja](#tiivistesarja) |
 | Muuta | – | SAE-laippaliittimet, vuotoletku |
-| Paluusuodatin | nykyinen OMTF112C10NA2 käy | lasikuituelementti tai -suodatin (OMTF112C10NA2 noin 30 £ jälleenmyyjällä; lasikuituversion hinta **⚠ ei tiedossa**) |
+| Paluusuodatin | nykyinen OMTF112C10NA2 käy | ehdokas OMTF171F10NA1, noin 85 £ (ALV:n kanssa) jälleenmyyjällä; kannen reiän avarrus ja 1 1/4":n liitin, ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1) |
+
+## Paluusuodattimen vaihto: OMTF171F10NA1
+
+Omistajan ehdotus [omistaja 2026-10-26]: nykyisen OMTF112C10NA2:n tilalle saman sarjan
+suurempi OMTF171F10NA1 lasikuituelementillä. Tiedot ovat jälleenmyyjien sivuilta (hakutuloksista;
+sivuja tai OMT:n luetteloa ei saatu auki 2026-10-26), ks. [datasheets](../../datasheets/README.md).
+
+| | Nykyinen OMTF112C10NA2 | OMTF112F10NA2 (vertailu) | **Ehdokas OMTF171F10NA1** |
+|---|---|---|---|
+| Elementti | selluloosa 10 µm, nominaalinen **⚠ tarkista** | lasikuitu 10 µm absoluuttinen | **lasikuitu** (epäorgaaninen kuitu) 10 µm absoluuttinen; vaihtoelementti CR171F10R |
+| Virtaus, Phoenix | 100 l/min | 55 l/min | **157 l/min** |
+| Virtaus, Oudshoorn | 150 l/min | 71–80 l/min (sivulla kaksi arvoa) | **200 l/min** |
+| Liitäntä | 1" BSP | 1" BSP | **1 1/4" BSP** |
+| Kannen reikä | Ø 86 mm | Ø 86 mm | **Ø 129 mm** |
+| Upotussyvyys säiliöön | 150 mm | 150 mm | **244 mm** |
+| Ohitusventtiili | 1,7 bar (Phoenix) / 3 bar (Oudshoorn) | sama | 1,7 bar (Phoenix) / 3 bar (Oudshoorn) **⚠ tarkista** |
+| Pulttijako, pulttien määrä ja koko | **⚠ ei tiedossa** | sama | **⚠ ei tiedossa** |
+| Korkeus kannen yläpuolella | **⚠ ei tiedossa** | sama | **⚠ ei tiedossa** |
+| Hinta | noin 29 £ (Phoenix) | – | **84,70 £ ALV:n kanssa** (Phoenix 2026-10-26); elementin hinta **⚠ ei tiedossa** |
+
+Jälleenmyyjien virtausarvot eroavat toisistaan, mutta ero on johdonmukainen (Phoenixin arvot noin
+65–75 % Oudshoornin arvoista); erot johtuvat todennäköisesti eri painehäviö- tai
+viskositeettioletuksista [arvio]. Vertailussa käytetään Phoenixin pienempiä arvoja.
+
+**Virtaus riittää reilusti.** Suodattimen läpi kulkee apupiirin noin 33–38 l/min ja P1:n paluu
+14–37 l/min, yhteensä enintään noin 75 l/min 1800 rpm:llä [laskelma, luvut tästä dokumentista ja
+[p2-pump-options](p2-pump-options.md)]. OMTF171F10NA1:llä marginaali on noin kaksinkertainen
+(157 l/min), mikä on hyödyllistä kylmäkäynnistyksessä, kun öljy on paksua ja ohitusventtiili
+avautuu helpommin [arvio]. Saman runkokoon lasikuituversio OMTF112F10NA2 (55 l/min) olisi liian
+pieni, joten **runkokoon suurentaminen on perusteltu**.
+
+**Paluulinja:** yhteinen paluulinja on 3/4" (myös EC100:n öljyliitännät ovat 3/4" BSP,
+[oil-cooling](oil-cooling.md)), joten linjaa ei tarvitse suurentaa koko matkalta: riittää
+supistus 3/4" → 1 1/4" BSP suodattimen liittimellä [arvio]. 75 l/min:n virtauksella 3/4":n
+letkussa (sisähalkaisija noin 19 mm) nopeus on noin 4,4 m/s [laskelma], yli paluulinjan tavallisen
+suositusarvon (noin 2–3 m/s) [yleistieto]; lyhyellä (< 0,5 m) linjalla painehäviö on silti pieni (ks.
+[current-system §3](../current-system.md)). Jos paluulinja kootaan uudelleen jäähdyttimen kanssa,
+1":n letku jäähdyttimeltä suodattimelle on halpa parannus [arvio].
+
+**Säiliön kansi ja syvyys (mitattava veneellä):**
+
+- **Reikä:** Ø 86 → Ø 129 mm eli säde kasvaa 21,5 mm. Avarrus onnistuu esim. reikäsahalla tai
+  plasmaleikkurilla; vanhat pulttireiät eivät todennäköisesti osu uuteen laippaan, joten uudet
+  reiät porataan ja kierteytetään tai tehdään läpipultein. Pulttijakoa ei löytynyt; sen saa OMT:n
+  luettelosta, jälleenmyyjien STEP-tiedostoista tai suoraan suodattimen rungosta mittaamalla.
+  Vanhat reiät jäävät mahdollisesti laipan tiivisteen alle tai tulpataan.
+- **Tila kannella:** uuden laipan ulkohalkaisija **⚠ ei tiedossa** (selvästi yli 129 mm). Tarkista,
+  ettei se osu virtauksensäätöventtiileihin, täyttö- ja huohotinkorkkiin tai kannakkeisiin, ja että
+  painemittari saadaan samalla luettavampaan suuntaan ([current-system §4](../current-system.md)).
+- **Upotussyvyys 244 mm** (nykyinen 150 mm): suodattimen alapään pitää olla öljypinnan alla myös
+  pienimmällä öljymäärällä (muuten paluuöljy vaahtoaa ja sekoittaa ilmaa), mutta se ei saa osua
+  pohjaan tai väliseinään, eikä paluuvirta saa suuntautua suoraan imu-ulosottoihin (P2:n 50 mm,
+  P1:n 32 mm). Säiliön sisäkorkeus ja öljypinnan etäisyys kannesta **⚠ ei tiedossa**.
+- **Kannen paksuus ja jäykkyys** suuremman reiän ympärillä **⚠ tarkista** (säiliön tyyppi A/B/C
+  ei ole tiedossa).
+
+**Muut vaikutukset:** ohitusventtiilin asetus (1,7 tai 3 bar) lisää paluulinjan vastapainetta
+enintään saman verran; orbitrolin T-linjan 25 barin raja ei ole vaarassa. Jos U11:n vuotolinja
+liittyy paluulinjaan ennen suodatinta, kotelon paine nousee tämän verran (avoin kysymys
+[current-system](../current-system.md)).
+
+**Suositus:** OMTF171F10NA1 sopii, jos säiliön mitat sallivat. Halvempaa saman rungon
+vaihtoehtoa ei ole: OMTF112:n lasikuituelementti on liian pieni Vegan virralle.
 
 ## Avoimet kysymykset
 
@@ -573,7 +637,9 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
 - [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
 - [x] Paluusuodattimen suodatusaste vs. 17/15/13: nykyinen OMTF112C10NA2 on 10 µm, arviolta selluloosa nominaalinen, **ei riitä** sellaisenaan [omistaja 2026-10-26]
-- [ ] Lasikuituelementti (esim. OMTF:n `F10` tai suurempi suodatin): beta-arvo ja virtauskesto, kun P1:n paluu kulkee samasta suodattimesta
+- [x] ~~Lasikuituelementti: virtauskesto, kun P1:n paluu kulkee samasta suodattimesta~~ OMTF112F10 (55 l/min) liian pieni; ehdokas OMTF171F10NA1 (157 l/min), ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1)
+- [ ] OMTF171F10NA1: beta-arvo, ohitusventtiilin asetus (1,7 vai 3 bar), pulttijako ja laipan ulkohalkaisija (OMT:n luettelo tai STEP-tiedosto), elementin CR171F10R hinta
+- [ ] Veneellä: säiliön sisäkorkeus, öljypinnan etäisyys kannesta pienimmällä öljymäärällä, tila kannella Ø 129 mm:n reiälle ja laipalle, nykyisten pulttireikien jako
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
 - [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]

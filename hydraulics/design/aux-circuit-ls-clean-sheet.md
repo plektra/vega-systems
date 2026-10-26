@@ -82,7 +82,8 @@ saa asetetun virtauksensa paineesta riippumatta, kunhan pumpun tuotto riittää.
   ks. [p2-variable-pump](p2-variable-pump.md#tekniset-tiedot)]. Nykyinen paluusuodatin
   OMTF112C10NA2 (10 µm, arviolta selluloosa nominaalinen) ei riitä sellaisenaan [omistaja 2026-10-26], ks.
   [p2-variable-pump](p2-variable-pump.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57). Ehdotus:
-  lasikuituinen paluusuodatin 10 µm
+  lasikuituinen paluusuodatin 10 µm (ehdokas OMTF171F10NA1, ks.
+  [paluusuodattimen vaihto](p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1))
   tukkeumaosoittimella, säiliöön 3 µm:n huohotin, öljyn lisäys suodattimen kautta [arvio].
 - **Jäähdytys:** EC100 (tai EC80) paluulinjaan termostaattiohituksella
   ([oil-cooling](oil-cooling.md)). Lämpökuorma pienenee selvästi: esim. pesuri jatkuvasti noin

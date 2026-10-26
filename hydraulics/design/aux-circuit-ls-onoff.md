@@ -50,7 +50,7 @@ Ohjauspiiri (P1, orbitroli) pysyy erillään kuten nyt ([päätös 2017-04](../.
 | 5 | Kaksitiekompensoitu virtauksensäätö (Sun FXDC) vinssille ja pesurille | Pitää nopeuden vakiona myös yhtäaikaisessa käytössä; keulapotkurin linjaan sitä ei tarvita (ks. alla) | FXDC ja runko DAW/S, ks. [vaihtoehdot](p2-variable-pump.md#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot). Asennus välilaattana tai linjarunkona **⚠ tarkista** |
 | 6 | Varaventtiili (nykyinen VMP) noin 270 bariin | Rajaa paineen, jos pumpun säädin jumittuu | Pätevä henkilö säätää |
 | 7 | Vinssin jarruventtiili moottorilla ja vinssin oma jarru | Kuorman pito | Vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../loads.yaml)) |
-| 8 | Jäähdytin termostaattiohituksella, paluusuodatin 10 µm lasikuitua | Mäntäpumppu vaatii puhtausluokan 17/15/13 | Nykyinen OMTF112C10NA2 (arviolta selluloosa nominaalinen) ei riitä sellaisenaan [omistaja 2026-10-26]: elementti tai suodatin vaihdetaan, ks. [p2-variable-pump](p2-variable-pump.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57). Jäähdytin: [oil-cooling](oil-cooling.md) |
+| 8 | Jäähdytin termostaattiohituksella, paluusuodatin 10 µm lasikuitua | Mäntäpumppu vaatii puhtausluokan 17/15/13 | Nykyinen OMTF112C10NA2 (arviolta selluloosa nominaalinen) ei riitä sellaisenaan [omistaja 2026-10-26]: ehdokas OMTF171F10NA1, ks. [p2-variable-pump](p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1). Jäähdytin: [oil-cooling](oil-cooling.md) |
 
 **Miksi keulapotkurille ei tarvita virtauksensäätöä:** 250 barissa moottori ottaa itse noin
 33 l/min (interpoloitu Sleipnerin taulukosta [datalehti Side-Power SH Series v1.0.0 2017]), joten
