@@ -1004,7 +1004,7 @@ tilalle kaksitiekompensoitu virtauksensäätöventtiili, ks. [p2-variable-pump.m
 |---|---|---|---|---|---|---|
 | Pumpun hinta (suuntaa-antava) | € | € | €€ (käytettynä €) | €€€ (käytettynä €, PVH57 190 €) | €€€€ (venttiileineen) | €–€€ |
 | Muutokset piiriin | ei | kierrosohjaus | oma kannake, ohitusventtiili ja vuotolinja (päätetty) | kotelovuotolinja; VPR3 → kaksitieventtiili; LS-purku 2/2 | uusi venttiilipaketti | lisäventtiilit |
-| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~85–88 % | ~80–90 % **⚠ tarkista** (LS-marginaali vie osan paineesta) | ~88 % |
+| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~82–85 % (FXDC vie noin 8 bar, [p2-variable-pump](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)) | ~82–88 % (ei kuristinta potkurilinjassa, [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md)) | ~88 % |
 | Hyötysuhde käytön aikana | ~80–85 % | ~80–85 % | ~90–95 % | ~88–92 % | paras | ~80–85 % |
 | Öljyn puhtausvaatimus | sietää | sietää | kohtalainen | tiukka | tiukka | sietää |
 | Proportionaalinen ohjaus | ei | ei | ei | ei | **kyllä** | ei |

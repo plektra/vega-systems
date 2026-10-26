@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
@@ -312,8 +312,10 @@ PTO ─ Spidex ─ PVH57 ─ 2-tie kompensoitu virtauksensäätö ~34 l/min ─ 
 - **2/2 jännitteellinen (kiinni):** LS saa paineen pumpun lähdöstä kuristimen kautta, ja pumppu
   toimii painekompensoituna 250 barissa. Kaksitieventtiili rajaa virtauksen noin 34 l/minuun
   kuorman paineesta ja kierroksista riippumatta.
-- **Työntövoima** pysyy arviolta 85–88 %:ssa, koska moottori saa 250 bar miinus venttiilin pienin
-  painehäviö (tyypillisesti muutama bar) [arvio].
+- **Työntövoima** on arviolta noin 82–85 %. **Korjattu 2026-10-26:** aiemmin arvioitiin FXDC:n
+  painehäviöksi muutama bar ja työntövoimaksi 85–88 %. Datalehden kuvaajan mukaan noin 33 l/min
+  kulkee FXDC:n läpi noin 8 barin paine-erolla, joten moottori saa noin 242 bar miinus BAV-713:n ja
+  letkujen häviö [datalehti Sun FXDC, kuvaajasta luettu; työntövoima arvio noin 4 % / 10 bar].
 - **Lämpö keulapotkurin käytössä 1800 rpm:llä** on arviolta 2–3 kW (35 l/min × (250 − kuorman paine),
   kun kuorma on noin 200 bar). F1-61:llä se on noin 38 kW, ks.
   [p2-pump-options](p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061) [laskelma].
@@ -362,8 +364,11 @@ LS-portti ─┬─ 2/2 (NO) ─ säiliö                       lepo: pumppu 20 
 | Vinssi | kiinni | jännitteetön | kuorman paine + noin 20 bar | noin 34 l/min × 20 bar ≈ 1,1 kW kuorman paineesta riippumatta |
 | Keulapotkuri (myös yhtä aikaa vinssin kanssa) | kiinni | jännitteellinen | 250 bar | noin 2–3 kW keulapotkurilla |
 
-- Vinssitilassa FXDC:n yli jää vain noin 20 bar. **⚠ Tarkista Suniltä FXDC:n pienin paine-ero**,
-  jolla se vielä pitää asetusvirtauksen; jos se on suurempi, vinssin virtaus jää alle 34 l/min.
+- Vinssitilassa FXDC:n yli jää vain noin 20 bar. **Datalehden kuvaajan mukaan se riittää:**
+  30–40 l/min:n asetus saavuttaa asetusvirtauksen noin 15–20 barin paine-erolla ja noin 95 % jo
+  noin 12–14 barissa; pienemmät asetukset noin 10 barissa [datalehti Sun FXDC, kuvaajasta luettu].
+  Jos pohjalaatan ja suuntaventtiilin häviö vie marginaalista useita bareja, suurella asetuksella
+  vinssin virtaus jää muutaman prosentin alle asetuksen.
 - Lisäosa: suoraan toimiva 3/2-magneettiventtiili 24 V ja yksi 1/4":n letku pohjalaatan
   mittariliitännästä. **⚠ hinta ei tiedossa.**
 - **Yhtäaikainen käyttö** (ankkurointi, S2 [requirements](../requirements.md)): vinssi ja keulapotkuri
@@ -402,7 +407,7 @@ BAV-713 on keskellä.
 
 | Venttiili | Tiedot | Huom. |
 |---|---|---|
-| **Sun Hydraulics FXDC** (korvaa FXDA:n) | 2-porttinen, kiinteä kuristin, painekompensoitu; 45 l/min, sarja 2, pesä T-5A, **350 bar**; asetus valitaan valmiista vaihtoehdoista, `L`/`K` antaa ±25 %:n hienosäädön; tehdasasetus ±10 % (`L`, `K`) tai ±15 % (`X`) [Sunin tuotesivu](https://www.sunhydraulics.com/model/FXDC) | **Suositus.** Linjarunko T-5A-pesälle 3/4":n BSPP-porteilla on Sun **DAW**; valitaan **valurautainen DAW/S**, koska alumiinirunko kestää vain 210 bar [Sunin DAW-datalehti (paro.nl)](https://paro.nl/library//storage/datasheets/Sun/Line%20Mount%20Bodies/Sun_DAW.pdf/datasheet.html). Hinnat Hydrotechilla (USA) 2026-10-25: FXDC-LAN 83,10 $, FXDC-KAN 89,10 $, DAW (alumiini) 53,40 $; DAW/S:n hintaa ei löytynyt **⚠ ei tiedossa**. Toimittaja Suomessa Salhydro. **⚠ Kysy, mikä asetusvaihtoehto kattaa 34 l/min.** |
+| **Sun Hydraulics FXDC** (korvaa FXDA:n) | 2-porttinen, kiinteä kuristin, painekompensoitu; 45 l/min, sarja 2, pesä T-5A, **350 bar**; asetus valitaan valmiista vaihtoehdoista, `L`/`K` antaa ±25 %:n hienosäädön; tehdasasetus ±10 % (`L`, `K`) tai ±15 % (`X`) [Sunin tuotesivu](https://www.sunhydraulics.com/model/FXDC) | **Suositus.** Linjarunko T-5A-pesälle 3/4":n BSPP-porteilla on Sun **DAW**; valitaan **valurautainen DAW/S**, koska alumiinirunko kestää vain 210 bar [Sunin DAW-datalehti (paro.nl)](https://paro.nl/library//storage/datasheets/Sun/Line%20Mount%20Bodies/Sun_DAW.pdf/datasheet.html). Hinnat Hydrotechilla (USA) 2026-10-25: FXDC-LAN 83,10 $, FXDC-KAN 89,10 $, DAW (alumiini) 53,40 $; DAW/S:n hintaa ei löytynyt **⚠ ei tiedossa**. Toimittaja Suomessa Salhydro. Asetusalue keulapotkurille **T (31,45–42,55 l/min)** tai V; noin 33 l/min kulkee noin 8 barin paine-erolla [datalehti Sun FXDC, [cutsheet](https://www.sunhydraulics.com/cutsheet/FXDC/XAN?format=A4&unit=US&full=1&base=1), kuvaajasta luettu 2026-10-26]. |
 | Hansa-Flex HK V270 5 - 3/4 | 2-tie, painekompensoitu, G 3/4", 15–80 l/min säädettävä, **250 bar** [Hansa-Flex](https://shop.hansa-flex.com/en_GB/es_ES/componentes-hidr%C3%A1ulicos/v%C3%A1lvulas/flow-control-valves/flow-control-valves-for-pipeline-installation/hk-v270-5---3-4/p/HKV2705-3-4) | Yksinkertaisin asentaa, mutta painearvo on tasan pumpun asetuksessa, eikä VMP:tä voi asettaa yläpuolelle venttiilin arvoa ylittämättä |
 | Bosch Rexroth 2FRM 10-3X/50L | 2-tie, painekompensoitu, enintään 50 l/min, 315 bar, NG10-alilaatta (ISO 6263) [jälleenmyyjä](https://hydraulicpartsusa.com/products/bosch-rexroth/2f-flow-control-valves/2FRM10-3X50LB) | Vaatii erillisen NG10-alilaatan |
 
@@ -498,10 +503,13 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 | 211 bar | 30,2 l/min | 80 % |
 | 264 bar | 33,8 l/min | 100 % |
 
-- 250 barissa moottori ottaa arviolta noin 33 l/min (interpoloitu) [laskelma]. **Jos FXDC on
-  asetettu tätä suuremmaksi (esim. 34–36 l/min), paine rajoittaa eikä virtaus, ja FXDC:n tarkka
-  asetus ei vaikuta työntövoimaan.** Silloin se toimii vain ylikierrossuojana. Siksi tarkkaa
-  virtausmittausta ei tarvita.
+- 250 barissa moottori ottaa arviolta noin 33 l/min (interpoloitu) [laskelma]. **Valitaan
+  FXDC:n asetusalue T (31,45–42,55 l/min) tai V (38,25–51,75 l/min), ei S:ää.** S-alueen
+  (25,5–34,5 l/min) huippu on kuvaajan mukaan noin 32 l/min, jolloin FXDC rajoittaisi virtausta ja
+  moottorin paine jäisi noin 237 bariin. T- tai V-asetuksella FXDC ei rajoita virtausta, vaan toimii
+  ylikierrossuojana, ja tarkka asetus ei vaikuta työntövoimaan. Noin 8 barin painehäviö jää silti,
+  koska noin 33 l/min tarvitsee sen jo ennen kompensointia [datalehti Sun FXDC, kuvaajasta luettu].
+  Siksi tarkkaa virtausmittausta ei tarvita.
 - 2G1 näyttää paineen pohjalaatalla, ja moottorilla paine on BAV-713:n ja letkujen häviön verran
   pienempi **⚠ häviö ei tiedossa, arviolta muutama bar**.
 - **Ankkurivinssin** nopeus tarkistetaan sekuntikellolla ketjun nopeudesta, kun vinssi on kytketty.
@@ -546,11 +554,12 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 - [ ] Tiivistesarja: sopiiko 02-102244 (vanha 02-102260) rakenteelle 10 ja yksinkertaiselle akselitiivisteelle, hinta Suomesta; vaihtoehtona pelkän akselitiivisteen ja O-renkaiden mitat
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
-- [ ] Salhydro: Sun FXDC:n asetusvaihtoehto 34 l/min:lle, ero `L`- ja `K`-mallin välillä, hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
+- [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
+- [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
 - [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
 - [ ] Paluusuodattimen suodatusaste vs. 17/15/13
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
-- [ ] Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy (vinssin kuormantuntotila noin 20 bar)
+- [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]
 - [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (ratkaisee pitkälti, kannattaako PVH57)
 - [ ] Omistajat: PVH57 vai F1-61 tai vastaava ohitusventtiilillä
