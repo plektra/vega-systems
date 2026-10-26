@@ -652,6 +652,22 @@ Vegan käyttö keventää vaatimusta: P2 on suurimman osan ajasta ohitusasennoss
 ja suurpaineinen käyttö (keulapotkuri, vinssi) on lyhytaikaista. Se ei kuitenkaan muuta
 valmistajan vaatimusta [arvio].
 
+**Auttaako tiheämpi elementin vaihto (esim. 100 h välein)?** Ei puhtausluokkaan [arvio,
+yleistieto]. Paperielementti ei ole ongelma siksi, että se kuluisi, vaan siksi, että se päästää läpi
+suuren osan 10 µm:n ja sitä pienemmistä hiukkasista jo uutena: nominaalisen selluloosaelementin
+erotusaste (beta-arvo) 10 µm:llä on tyypillisesti vain noin 2 (noin puolet hiukkasista jää
+kiinni yhdellä läpikululla), lasikuitu­elementin 200 tai enemmän (yli 99,5 %) [yleistieto].
+PVH57:n vaatimus koskee nimenomaan pieniä, 4 ja 6 µm:n hiukkasia (luvut 16 ja 14), joita
+paperielementti juuri päästää läpi. Öljyn puhtaus asettuu tasolle, jonka määräävät elementin
+erotusaste ja säiliöön tulevan lian määrä, ei vaihtoväli. Uusi paperielementti suodattaa jopa
+hieman huonommin kuin osittain likaantunut [yleistieto].
+
+Vaihtoväli ratkaisee vain sen, ettei elementti tukkeudu: tukkeutunut elementti avaa
+ohitusventtiilin, ja silloin öljy kulkee kokonaan suodattamatta. Lisäksi vesi ja kuuma öljy
+heikentävät selluloosaa. **Suositus:** vaihto ensimmäisten käyttötuntien jälkeen, sitten
+painemittarin (tai tukkeumaosoittimen) mukaan ja vähintään kerran vuodessa [arvio]. Vegan
+vuotuiset käyttötunnit **⚠ ei tiedossa**.
+
 **PVH57:n kanssa** halvin välivaihe olisi lasikuituelementti nykyiseen runkoon, jos se sopii
 (`F10`-elementti CR112F10R samaan runkoon **⚠ tarkista**). Elementin virta 55 l/min (Phoenix)
 tai 71–80 l/min (Oudshoorn) jää kuitenkin tiukaksi: tyhjäkäynnillä suodattimen läpi kulkee noin
