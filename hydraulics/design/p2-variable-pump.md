@@ -563,7 +563,7 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
 | Tiivisteet (ikä) | – | ulkoiset O-renkaat, akselitiiviste vain jos vuotaa (halpa, hinta ei tiedossa); koko sarjaa 02-102244 (noin 853 $) ei tarvita, jos kunto on myyjän kertoma, ks. [Tiivistesarja](#tiivistesarja) |
 | Muuta | – | SAE-laippaliittimet, vuotoletku |
-| Paluusuodatin | nykyinen OMTF112C10NA2 käy | ehdokas OMTF171F10NA1, noin 85 £ (ALV:n kanssa) jälleenmyyjällä; kannen reiän avarrus ja 1 1/4":n liitin, ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1) |
+| Paluusuodatin | nykyinen OMTF112C10NA2 käy | ehdokas OMTF171F10NA1, noin 85 £ (ALV:n kanssa) jälleenmyyjällä; kannen reiän avarrus ja 1 1/4":n liitin, ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1); tai linjasuodatin paluulinjaan nykyisen rinnalle, arviolta 100–250 € **⚠ ei tiedossa**, ks. [linjasuodatin](#vaihtoehto-linjasuodatin-paluulinjaan-nykyinen-suodatin-jää) |
 
 ## Paluusuodattimen vaihto: OMTF171F10NA1
 
@@ -626,7 +626,58 @@ liittyy paluulinjaan ennen suodatinta, kotelon paine nousee tämän verran (avoi
 [current-system](../current-system.md)).
 
 **Suositus:** OMTF171F10NA1 sopii, jos säiliön mitat sallivat. Halvempaa saman rungon
-vaihtoehtoa ei ole: OMTF112:n lasikuituelementti on liian pieni Vegan virralle.
+vaihtoehtoa ei ole: OMTF112:n lasikuituelementti on liian pieni Vegan virralle. Jos kannessa ei ole
+tilaa, ks. [linjasuodatin](#vaihtoehto-linjasuodatin-paluulinjaan-nykyinen-suodatin-jää).
+
+### Vaihtoehto: linjasuodatin paluulinjaan, nykyinen suodatin jää
+
+Omistajan huomio [omistaja 2026-10-26]: kannessa ei välttämättä ole tilaa isommalle suodattimelle,
+ja uusi kansi pitäisi luultavasti teettää laserleikattuna. Vaihtoehtona nykyinen OMTF112C10NA2 jää
+paikalleen, ja yhteiseen paluulinjaan lisätään linjamallinen lasikuitusuodatin. Malli ja hinta
+**⚠ valitsematta**; luvut ovat arvioita.
+
+**Paikka:** yhteiseen paluulinjaan jäähdyttimen (EC100) jälkeen ja ennen kannen suodatinta:
+
+```
+apupiirin paluu ─┐
+                 ├─ EC100 (+ ohitus 3–4 bar) ─ UUSI linjasuodatin 10 µm lasikuitu ─ OMTF112C10NA2 ─ säiliö
+orbitrolin T ────┘
+U11:n ja PVH57:n vuotolinjat ─────────────────────────────────────────────────────────────── suoraan säiliöön
+```
+
+- **P1:n paluu kulkee aina uuden suodattimen läpi,** kun kone käy (14–37 l/min,
+  [p1-steering-pump](p1-steering-pump.md)). Se puhdistaa säiliön öljyä jatkuvasti, vaikka PVH57
+  olisi valmiustilassa lähes ilman virtausta [arvio].
+- **Nykyinen suodatin jää toiseksi vaiheeksi** halvalla selluloosaelementillä. Siitä on hyötyä
+  myös, jos linjasuodattimen ohitusventtiili aukeaa kylmällä öljyllä.
+- **Vuotolinjat (U11 ja PVH57:n kotelo) suoraan säiliöön,** ei suodattimien läpi: kotelot eivät
+  kestä paluulinjan vastapainetta.
+
+**Mitoitus [arvio]:** 10 µm absoluuttinen lasikuitu, beta-arvo ilmoitettu (vähintään 200);
+virtauskesto noin 100 l/min tai enemmän (yhteinen virta enintään noin 75 l/min, ks. yllä);
+liitäntä 3/4"–1" BSP; sisäänrakennettu ohitusventtiili ja tukkeumaosoitin; tila elementin vaihtoon
+kupin alla (tyypillisesti 10–15 cm) ja kiinnityskannake.
+
+**Vastapaine:** kylmällä öljyllä jäähdyttimen ohitus (3–4 bar), linjasuodatin ja kannen suodatin
+(ohitus 1,7 tai 3 bar) voivat nostaa paluupaineen noin 5–8 bariin [arvio]. Orbitrolin T-linjan
+25 barin raja ei ole vaarassa; keulapotkurin paine-ero pienenee lämpimällä öljyllä vain noin
+1 bar [arvio].
+
+| | Uusi kanteen asennettava (OMTF171F10NA1) | Linjasuodatin, nykyinen jää |
+|---|---|---|
+| Säiliön kansi | reikä Ø 86 → Ø 129 mm, uudet pulttireiät; kansi ehkä uusittava (laserleikkaus) | ei muutoksia |
+| Upotussyvyys | 244 mm, tarkistettava säiliöstä | ennallaan (150 mm) |
+| Virtauskesto | 157 l/min (Phoenix) | valitaan noin 100 l/min tai enemmän |
+| Suodatusvaiheita | yksi | kaksi (lasikuitu + nykyinen) |
+| Paluulinjan vastapaine | pienempi | hieman suurempi (yksi suodatin lisää) |
+| Tila | kannella | paluulinjan varrella, kannake ja tila elementin vaihtoon |
+| Hinta | 84,70 £ + mahdollinen uusi kansi **⚠ ei tiedossa** | suodatin **⚠ ei tiedossa** (arviolta 100–250 €) + liittimet |
+| Huolto | yksi elementti | kaksi elementtiä |
+
+**Suositus [arvio]:** jos kanteen mahtuu Ø 129 mm:n reikä ja 244 mm:n upotus ilman uutta kantta,
+OMTF171F10NA1 on yksinkertaisempi (yksi suodatin, pienempi vastapaine). Jos kansi pitäisi
+uusia, linjasuodatin on todennäköisesti halvempi ja nopeampi. Kumpikin valinta ratkeaa veneellä
+tehtävillä mittauksilla (ks. avoimet kysymykset).
 
 ### Riittääkö nykyinen paperisuodatin?
 
@@ -674,7 +725,8 @@ väli tarkoittaisi enimmillään noin 10 elementtiä vuodessa ilman puhtaushyöt
 (`F10`-elementti CR112F10R samaan runkoon **⚠ tarkista**). Elementin virta 55 l/min (Phoenix)
 tai 71–80 l/min (Oudshoorn) jää kuitenkin tiukaksi: tyhjäkäynnillä suodattimen läpi kulkee noin
 35 + 16,5 ≈ 52 l/min ja kylmällä öljyllä painehäviö kasvaa [laskelma]. Siksi PVH57-reitillä
-suositus on OMTF171F10NA1.
+suositus on OMTF171F10NA1 tai [linjasuodatin](#vaihtoehto-linjasuodatin-paluulinjaan-nykyinen-suodatin-jää)
+nykyisen rinnalle.
 
 ## Avoimet kysymykset
 
@@ -692,6 +744,8 @@ suositus on OMTF171F10NA1.
 - [ ] Sopiiko lasikuituelementti CR112F10R nykyiseen OMTF112C10NA2:n runkoon
 - [ ] Öljynäytteen hiukkaslaskenta (ISO 4406) käyttöönoton jälkeen: mistä ja hinta
 - [ ] OMTF171F10NA1: beta-arvo, ohitusventtiilin asetus (1,7 vai 3 bar), pulttijako ja laipan ulkohalkaisija (OMT:n luettelo tai STEP-tiedosto), elementin CR171F10R hinta
+- [ ] Linjasuodatin (jos kansi ei salli OMTF171:tä): malli, beta-arvo, virtauskesto noin 100 l/min, hinta; paikka ja kannake paluulinjassa
+- [ ] Omistajat: uusi kanteen asennettava suodatin vai linjasuodatin (ratkeaa kannen mittauksilla)
 - [ ] Veneellä: säiliön sisäkorkeus, öljypinnan etäisyys kannesta pienimmällä öljymäärällä, tila kannella Ø 129 mm:n reiälle ja laipalle, nykyisten pulttireikien jako
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
