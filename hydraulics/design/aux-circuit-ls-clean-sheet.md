@@ -5,6 +5,7 @@
 > venttiilien kanssa on selvitetty tiedostossa [p2-variable-pump](p2-variable-pump.md). Tässä
 > kysytään, miten apupiiri rakennettaisiin, jos olemassa olevia venttiileitä ei tarvitsisi käyttää
 > uudelleen [omistaja 2026-10-25, kysymys].
+> Sama ilman proportionaalista venttiilipöytää, on/off-venttiileillä: [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md).
 >
 > Lohkoventtiilin arvot ovat yleistietoa, **ei luettu datalehdestä** (**⚠ tarkista**). Pätevän
 > henkilön pitää tarkistaa kytkentä, säätöarvot ja erityisesti ankkurivinssin kuorman pito ennen

@@ -134,7 +134,8 @@ usein korkeilla kierroksilla, tai jos tavoitteeksi tulee jokin
 
 **Johtopäätös:** PVH57 on järkevä, jos järjestelmää aiotaan laajentaa (portaaton keulapotkuri,
 useita samanaikaisia tai jatkuvia kuormia). Miten apupiiri rakennettaisiin alusta alkaen LS-lohkoventtiilillä:
-[aux-circuit-ls-clean-sheet](aux-circuit-ls-clean-sheet.md). Nykyisillä tavoitteilla (on/off-keulapotkuri ja
+[aux-circuit-ls-clean-sheet](aux-circuit-ls-clean-sheet.md); ilman venttiilipöytää on/off-venttiileillä:
+[aux-circuit-ls-onoff](aux-circuit-ls-onoff.md). Nykyisillä tavoitteilla (on/off-keulapotkuri ja
 ankkurivinssi) F1-61 riittää. Portaaton keulapotkuri on tärkein syy harkita PVH57:ää uudelleen.
 
 ## Ehdokas: Vickers PVH57C-LAF-1S-10-C12V-31 (tori.fi)
@@ -276,7 +277,7 @@ Oletukset: volumetrinen hyötysuhde 95 %, mekaaninen 90 %, tyhjäkäynti 700 rpm
 
 ## Miten LS-linjaa käytetään
 
-C**V-säädin pitää pumpun lähtöpaineen noin 20 bar LS-portin painetta korkeampana, ja paineenrajoitin
+CV-säädin pitää pumpun lähtöpaineen noin 20 bar LS-portin painetta korkeampana, ja paineenrajoitin
 kääntää pumpun nollatuotolle asetuspaineessa. Huolto-ohjeen mukaan LS-linjaa voi käyttää pumpun
 etäohjaukseen ja purkuun [M-2210-S s. 6].
 
