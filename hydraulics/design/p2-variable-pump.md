@@ -665,8 +665,9 @@ hieman huonommin kuin osittain likaantunut [yleistieto].
 Vaihtoväli ratkaisee vain sen, ettei elementti tukkeudu: tukkeutunut elementti avaa
 ohitusventtiilin, ja silloin öljy kulkee kokonaan suodattamatta. Lisäksi vesi ja kuuma öljy
 heikentävät selluloosaa. **Suositus:** vaihto ensimmäisten käyttötuntien jälkeen, sitten
-painemittarin (tai tukkeumaosoittimen) mukaan ja vähintään kerran vuodessa [arvio]. Vegan
-vuotuiset käyttötunnit **⚠ ei tiedossa**.
+painemittarin (tai tukkeumaosoittimen) mukaan ja vähintään kerran vuodessa [arvio]. Vegan kone
+käy alle 1000 h vuodessa ([vessel](../../vessel/README.md), [omistaja 2026-10-23]), joten 100 tunnin
+väli tarkoittaisi enimmillään noin 10 elementtiä vuodessa ilman puhtaushyötyä [laskelma].
 
 **PVH57:n kanssa** halvin välivaihe olisi lasikuituelementti nykyiseen runkoon, jos se sopii
 (`F10`-elementti CR112F10R samaan runkoon **⚠ tarkista**). Elementin virta 55 l/min (Phoenix)
