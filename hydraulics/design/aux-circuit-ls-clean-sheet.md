@@ -79,7 +79,10 @@ saa asetetun virtauksensa paineesta riippumatta, kunhan pumpun tuotto riittää.
 ### 3. Paluu, suodatus ja jäähdytys
 
 - **Suodatus:** mäntäpumppu vaatii puhtausluokan 17/15/13 (140–210 bar) [Eatonin PVH-luettelo s. 31,
-  ks. [p2-variable-pump](p2-variable-pump.md#tekniset-tiedot)]. Ehdotus: paluusuodatin 10 µm
+  ks. [p2-variable-pump](p2-variable-pump.md#tekniset-tiedot)]. Nykyinen paluusuodatin
+  OMTF112C10NA2 (10 µm, arviolta selluloosa nominaalinen) ei riitä sellaisenaan [omistaja 2026-10-26], ks.
+  [p2-variable-pump](p2-variable-pump.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57). Ehdotus:
+  lasikuituinen paluusuodatin 10 µm
   tukkeumaosoittimella, säiliöön 3 µm:n huohotin, öljyn lisäys suodattimen kautta [arvio].
 - **Jäähdytys:** EC100 (tai EC80) paluulinjaan termostaattiohituksella
   ([oil-cooling](oil-cooling.md)). Lämpökuorma pienenee selvästi: esim. pesuri jatkuvasti noin

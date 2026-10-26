@@ -73,7 +73,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 3V1 | Jäähdyttimen ohitusventtiili | 3–4 bar, rinnakkain jäähdyttimen kanssa | [oil-cooling](design/oil-cooling.md#paluulinja-asennus) |
 | 3V3 | Merivesihaaran virtauksenrajoitus | 30–40 l/min; vakiovirtausventtiili tai käsiventtiili **⚠ päättämättä** | [oil-cooling](design/oil-cooling.md#merivesi) |
 | 3V4 | Kuristus merivesipäälinjaan | ohjaa osan virtauksesta haaraan | [oil-cooling](design/oil-cooling.md#merivesi) |
-| 3Z2 | Paluusuodatin | painemittarilla; virtausluokitus **⚠** | [blogi 2017-04-10] |
+| 3Z2 | Paluusuodatin OMT OMTF112C10NA2 | 10 µm (selluloosa, nominaalinen **⚠ tarkista**), 100 l/min, ohitus 1,7 bar; painemittarilla | [blogi 2017-04-10], [omistaja 2026-10-26], [jälleenmyyjä Phoenix Hydraulics](https://www.phoenixhydraulics.co.uk/omtf112c10na2.html) |
 | 3Z1 | Säiliö Flowfit 100 l | 80 l HVLP 32; uusi 50 mm:n ulosotto P2:lle, 32 mm jää P1:lle | [päätös 2026-10-23](../decisions.md) |
 | 3B1 | Öljyn lämpötila-anturi | varoitus 65 °C, hälytys 70 °C → ESP32 / Signal K | [päätös 2026-10-23](../decisions.md) |
 

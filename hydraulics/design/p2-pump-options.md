@@ -357,9 +357,11 @@ pyörii silloin noin 2230 rpm.
 - 1800 rpm:llä öljy nousisi 40 °C:sta yli Parkerin 75 °C:n rajan parissa minuutissa.
 - Momentti pysyy noin 260 Nm:ssä (PTO 420 Nm, Spidex 48/60 98 Sh A 525 Nm). 49 kW mahtuu PTO:n
   79 kW:n (1800 rpm) rajaan.
-- VPR3 3/4" kestää 104 l/min ✅. **⚠ Paluusuodattimen virtausluokitus ei tiedossa**; BPV:n
-  ohitusasennossa suodattimen läpi ei kulje pumpun koko tuottoa, mutta keulapotkurin käytössä
-  korkeilla kierroksilla kulkee.
+- VPR3 3/4" kestää 104 l/min ✅. **Paluusuodatin (OMTF112C10NA2) on mitoitettu 100 l/min:lle,
+  ja sen ohitusventtiili avautuu 1,7 barissa** [omistaja 2026-10-26], [jälleenmyyjä Phoenix Hydraulics](https://www.phoenixhydraulics.co.uk/omtf112c10na2.html). BPV:n ohitusasennossa
+  suodattimen läpi ei kulje pumpun koko tuottoa. Keulapotkurin käytössä korkeilla kierroksilla
+  kulkee, ja P1:n paluu (1800 rpm:llä noin 37 l/min) tulee lisäksi: yhteensä yli 100 l/min, jolloin
+  osa öljystä ohittaa suodatinelementin. Kierroslukitus (alla) estää tämänkin.
 
 **Johtopäätös: keulapotkuria käytetään vain tyhjäkäynnillä, ja se varmistetaan kierroslukituksella**
 (ESP32 PDM ja Signal K):
@@ -1043,7 +1045,7 @@ näyttää [arvio, 2026-10-26].*
 - [x] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **pumppu L** ([vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat)). **Tärkeä ennen käytetyn pumpun ostoa:** Sunfab SAP ja OMFB HDS ovat kiinteäsuuntaisia
 - [x] VPR3: kolmitie-prioriteettiventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [x] Asennetun VPR3:n koko: 3/4" [omistaja 2026-10-23]
-- [ ] Paluusuodattimen virtausluokitus
+- [x] Paluusuodattimen virtausluokitus: OMTF112C10NA2, 100 l/min, ohitus 1,7 bar [omistaja 2026-10-26], jälleenmyyjän tiedot
 - [x] Öljy: HVLP 32 (päätös 2026-10-23), ks. [hydraulic-oil.md](hydraulic-oil.md)
 - [x] ~~Salhydro: Borelli 30501/30502 -tarjous~~ ei tarpeen (päätös 2026-10-23)
 - [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)

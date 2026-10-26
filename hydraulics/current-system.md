@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Päivitetty 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-26: paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulipumput on irrotettu** (lokakuu 2026); muu järjestelmä (säiliö, venttiilit, orbitroli,
 > sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Luvut 3.1–3.5 kuvaavat viimeisintä
@@ -263,7 +263,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Öljyn tyyppi ja luokka | Nykyinen **⚠ ei tiedossa**. Uusi: **HVLP 32** [päätös 2026-10-23], ks. [hydraulic-oil.md](design/hydraulic-oil.md) | |
 | Imulinjat | Suunnitelma 2017: 2 × 1" (konepumput) ja 1 × 3/4" (sähköpumppu), kussakin palloventtiili. **2026: P2:n ulosotto on 32 mm:n letkun kokoinen; P1:n imulinja 25 mm, 320 cm.** | [blogi 2017-04-10], [omistaja 2026-10-22], [omistaja 2026-10-23] |
 | Säiliön kannen komponentit | Virtauksensäätöventtiilit, paluusuodatin, täyttö- ja huohotinkorkki | [blogi 2017-04-10] |
-| Paluusuodatin | Painemittarillinen; nykyisessä paikassa vaikea lukea | [blogi 2017-04-10] |
+| Paluusuodatin | **OMT OMTF112C10NA2**, 10 µm, säiliön kanteen asennettava, 1" BSP; painemittarillinen, nykyisessä paikassa vaikea lukea. Jälleenmyyjän mukaan 100 l/min, ohitusventtiili 1,7 bar, vaihtoelementti CR112C10R; `C10` = selluloosa, 10 µm nominaalinen **⚠ tarkista** OMT:n luettelosta | [blogi 2017-04-10], [omistaja 2026-10-26], [jälleenmyyjä Phoenix Hydraulics](https://www.phoenixhydraulics.co.uk/omtf112c10na2.html) |
 | Putkitus | Pitkät vedot 15×2-tarkkuusteräsputkella, muuten letkut | [blogi 2017-04-01] |
 | Öljynjäähdytin | Ei kummassakaan piirissä. **Varalla Bowman EC100 tai EC80 ⚠** (pronssiset päätykannet, ex-Masson-vaihteisto, putket kunnossa), suunniteltu yhteiseen paluulinjaan, ks. [oil-cooling.md](design/oil-cooling.md) | [omistaja 2026-10-22] |
 | Päivätankki (polttoaine) | 150 l, hydraulisäiliön alla | [blogi 2017-04-19] |

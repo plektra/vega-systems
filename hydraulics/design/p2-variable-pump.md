@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä sellaisenaan), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
@@ -71,7 +71,16 @@ siinä, kuinka paljon järjestelmää pitää ymmärtää.
 **Missä PVH57 on oikeasti vaativampi:**
 
 - **Öljyn puhtaus:** mäntäpumppu vaatii puhtaampaa öljyä (17/15/13, 140–210 bar [luettelo s. 31]).
-  Nykyisen paluusuodattimen riittävyyttä ei tiedetä.
+  Nykyinen paluusuodatin on OMTF112C10NA2, 10 µm [omistaja 2026-10-26]. Tilauskoodin `C10` tarkoittaa
+  jälleenmyyjien vastinelementtien perusteella **selluloosaa, 10 µm nominaalinen** (**⚠ tarkista**
+  OMT:n luettelosta). Nominaalinen selluloosaelementti ei luotettavasti pidä öljyä luokassa
+  17/15/13; siihen käytetään yleensä lasikuituelementtiä, jonka erotusaste on ilmoitettu
+  (beta-arvo) [arvio, yleistieto]. Saman sarjan lasikuituversio `F10` (10 µm absoluuttinen) on
+  jälleenmyyjän mukaan mitoitettu vain 55 l/min:lle [jälleenmyyjä Phoenix Hydraulics, OMTF112F10NA2].
+  **Johtopäätös:** PVH57-reitillä suodatin tai ainakin elementti pitää vaihtaa lasikuituun, ja
+  virtauskesto tarkistetaan (apupiiri noin 33–38 l/min ja P1:n paluu 14–37 l/min samassa
+  suodattimessa). Kustannus on pieni (suodatin noin 30 £ jälleenmyyjällä), mutta se lisätään
+  PVH57-reitin osaluetteloon.
 - **Kunto:** pumppu on arviolta 1980-luvun lopulta tai 1990-luvulta (ks.
   [Ikä](#ikä-ja-siihen-liittyvät-riskit)) ja uudelleen maalattu. Myyjän mukaan se on säilytetty
   lämpimässä öljyt sisällä, ruosteetta, ja akseli pyörii äänettömästi [myyjä 2026-10-25], joten
@@ -550,6 +559,7 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
 | Tiivisteet (ikä) | – | ulkoiset O-renkaat, akselitiiviste vain jos vuotaa (halpa, hinta ei tiedossa); koko sarjaa 02-102244 (noin 853 $) ei tarvita, jos kunto on myyjän kertoma, ks. [Tiivistesarja](#tiivistesarja) |
 | Muuta | – | SAE-laippaliittimet, vuotoletku |
+| Paluusuodatin | nykyinen OMTF112C10NA2 käy | lasikuituelementti tai -suodatin (OMTF112C10NA2 noin 30 £ jälleenmyyjällä; lasikuituversion hinta **⚠ ei tiedossa**) |
 
 ## Avoimet kysymykset
 
@@ -562,7 +572,8 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
 - [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
-- [ ] Paluusuodattimen suodatusaste vs. 17/15/13
+- [x] Paluusuodattimen suodatusaste vs. 17/15/13: nykyinen OMTF112C10NA2 on 10 µm, arviolta selluloosa nominaalinen, **ei riitä** sellaisenaan [omistaja 2026-10-26]
+- [ ] Lasikuituelementti (esim. OMTF:n `F10` tai suurempi suodatin): beta-arvo ja virtauskesto, kun P1:n paluu kulkee samasta suodattimesta
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
 - [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]
