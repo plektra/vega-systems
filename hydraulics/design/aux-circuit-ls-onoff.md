@@ -1,6 +1,6 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu, LS ja on/off-venttiilit
 
-> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä kysytään, miten apupiiri
 > rakennettaisiin alusta alkaen säätötilavuuspumpulla **ilman proportionaalista venttiilipöytää**
 > [omistaja 2026-10-26, kysymys]. Vertailukohdat: PVH57 olemassa olevilla venttiileillä
@@ -17,9 +17,10 @@
 - **Pumppu tietää itse, milloin sitä tarvitaan.** Kun mikään venttiili ei ole päällä, keskiasento
   yhdistää A- ja B-linjat säiliöön, LS-linja tyhjenee ja pumppu jää noin 20 barin valmiustilaan.
   LS-purkuventtiiliä (2/2), 3/2-valintaventtiiliä ja ohjelman ohjausjärjestystä ei tarvita.
-- **Keulapotkurilinjassa ei ole kuristinta,** joten pumppu nousee suoraan 250 bariin. Jos linjaan
-  laitetaan FXDC ylikierrossuojaksi, se vie noin 8 bar ja työntövoima on arviolta 82–85 %; ilman
-  sitä noin 85–88 % ([päätös 2026-10-21](../../decisions.md): noin 90 % hyväksytty).
+- **Keulapotkurilinjassa ei ole kuristinta eikä virtauksensäätöä,** joten pumppu nousee suoraan
+  250 bariin ja työntövoima on arviolta 85–88 % ([päätös 2026-10-21](../../decisions.md): noin 90 %
+  hyväksytty). Ylikierrossuojaa ei tarvita, koska potkuri on niin syvällä, ettei se saa ilmaa
+  lapoihin [omistaja 2026-10-26].
 - **Vinssi ja painepesuri saavat oman kompensoidun virtauksensäätönsä,** ja pumppu pitää paineen vain
   noin 20 bar kuorman yläpuolella. Öljyyn syntyy vähän lämpöä millä tahansa kierroksilla.
 - **Kustannus on lähellä halvinta reittiä:** CETOP-pohjalaatta, BAV-713, VMP, letkut, säiliö ja
@@ -29,7 +30,7 @@
 
 ```
 PTO ─ Spidex ─ PVH57 (LS-säädin, 250 bar) ──P──┬─ varaventtiili ~270 bar ──► T
-        │   ▲                                  ├─ 1 keulapotkuri: FXDC ~36 l/min ─ 4/3 on/off, A,B→T keskellä ─► keula
+        │   ▲                                  ├─ 1 keulapotkuri: ────────────── 4/3 on/off, A,B→T keskellä ─► keula
         │   │                                  ├─ 2 vinssi:       FXDC (vinssin virtaus) ─ 4/3 on/off, A,B→T ─ jarruventtiili ─► moottori
         │   │                                  └─ 3 pesuri:       FXDC (pesurin virtaus) ─ on/off ─► moottori
         │   └── LS ◄── vaihtoventtiilit (suurin A/B-paine kaikista lohkoista) + vuotokuristin Ø0,8 ─► T
@@ -46,25 +47,23 @@ Ohjauspiiri (P1, orbitroli) pysyy erillään kuten nyt ([päätös 2017-04](../.
 | 2 | 4/3 on/off -suuntaventtiilit, keskiasennossa A,B→T | Keskellä potkuri pyörii vapaasti, vinssin jarruventtiili sulkeutuu ja LS-linja tyhjenee | Keulapotkurille käy nykyinen BAV-713 |
 | 3 | Vaihtoventtiilit A/B-linjoista ja lohkojen välillä LS-porttiin | Tuo suurimman kuorman paineen pumpun säätimelle | Pieniä linjamallisia vaihtoventtiileitä, malli **⚠ valitsematta** |
 | 4 | Vuotokuristin noin Ø0,8 mm LS-linjasta säiliöön | Varmistaa, että LS-linja tyhjenee ja pumppu palaa valmiustilaan | |
-| 5 | Kaksitiekompensoitu virtauksensäätö (Sun FXDC) lohkoittain | Keulapotkurilla vain ylikierrossuoja; vinssillä ja pesurilla pitää nopeuden vakiona myös yhtäaikaisessa käytössä | FXDC ja runko DAW/S, ks. [vaihtoehdot](p2-variable-pump.md#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot). Asennus välilaattana tai linjarunkona **⚠ tarkista** |
+| 5 | Kaksitiekompensoitu virtauksensäätö (Sun FXDC) vinssille ja pesurille | Pitää nopeuden vakiona myös yhtäaikaisessa käytössä; keulapotkurin linjaan sitä ei tarvita (ks. alla) | FXDC ja runko DAW/S, ks. [vaihtoehdot](p2-variable-pump.md#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot). Asennus välilaattana tai linjarunkona **⚠ tarkista** |
 | 6 | Varaventtiili (nykyinen VMP) noin 270 bariin | Rajaa paineen, jos pumpun säädin jumittuu | Pätevä henkilö säätää |
 | 7 | Vinssin jarruventtiili moottorilla ja vinssin oma jarru | Kuorman pito | Vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../loads.yaml)) |
 | 8 | Jäähdytin termostaattiohituksella, paluusuodatin 10 µm | Mäntäpumppu vaatii puhtausluokan 17/15/13 | Ks. [oil-cooling](oil-cooling.md) |
 
-**Miksi keulapotkurille ylikierrossuoja:** 250 barissa moottori ottaa itse noin 33 l/min
-(interpoloitu Sleipnerin taulukosta [datalehti Side-Power SH Series v1.0.0 2017]), joten
-virtausta ei tarvitse rajata normaalikäytössä. Jos potkuri imee ilmaa, sen kuorma katoaa, ja
-suurilla kierroksilla pumppu antaisi sille paljon enemmän öljyä. FXDC noin 36 l/min estää
-ryntäyksen. **Hinta on noin 8 barin painehäviö:** datalehden kuvaajan mukaan noin 33 l/min kulkee
-FXDC:n läpi noin 8 barin paine-erolla jo ennen kompensointia, asetuksesta riippumatta. Työntövoima
-pienenee arviolta noin 3 prosenttiyksikköä (noin 4 % / 10 bar) [datalehti Sun FXDC, kuvaajasta
-luettu; arvio]. Asetukseksi T (31,45–42,55 l/min) tai V; S-alueen huippu noin 32 l/min rajoittaisi
-potkuria.
+**Miksi keulapotkurille ei tarvita virtauksensäätöä:** 250 barissa moottori ottaa itse noin
+33 l/min (interpoloitu Sleipnerin taulukosta [datalehti Side-Power SH Series v1.0.0 2017]), joten
+virtausta ei tarvitse rajata. Ylikierrossuojaa tarvittaisiin vain, jos potkuri imisi ilmaa ja sen
+kuorma katoaisi. **Vegan potkuri on niin syvällä, ettei se koskaan saa ilmaa lapoihin**
+[omistaja 2026-10-26]. FXDC jätetään siksi pois, ja sen noin 8 barin painehäviö säästyy
+(datalehden kuvaajan mukaan noin 33 l/min kulkee FXDC:n läpi noin 8 barin paine-erolla;
+työntövoimassa noin 3 prosenttiyksikköä [datalehti Sun FXDC, kuvaajasta luettu; arvio]).
 
-**Halvempi vaihtoehto ylikierrossuojalle:** kierroslukitus ESP32:ssa. Tyhjäkäynnillä pumppu antaa
-enintään noin 38 l/min, joten potkuri ei voi ryntätä paljon. Jos keulapotkurin käyttö sallitaan vain
-alle noin 900 rpm:llä (**⚠ raja valitsematta**), FXDC voidaan jättää pois ja 8 bar säästyy.
-Omistajat päättävät.
+**Jäljelle jäävä riski:** jos moottorin ja potkurin välinen veto (kytkin, akseli) katkeaa, moottori
+menettää kuormansa ja ryntää. Pumppu antaa tyhjäkäynnillä enintään noin 38 l/min, mutta suurilla
+kierroksilla paljon enemmän. Halpa suoja on kierroslukitus ESP32:ssa: keulapotkurin käyttö sallitaan
+vain lähellä tyhjäkäyntiä (**⚠ raja valitsematta**, esim. noin 900 rpm) [arvio].
 
 **Miksi vinssille ja pesurille kompensoitu virtauksensäätö eikä pelkkä kuristin:** kun keulapotkuri
 pitää pumpun 250 barissa, matalan paineen kuorman kuristimen yli olisi suuri paine-ero. Se veisi
@@ -88,8 +87,7 @@ tai 250 bar, kumpi on pienempi.**
 - **Keulapotkurilla:** täyteen työntöön tarvittaisiin 264 bar, joten LS-kara pyytäisi noin
   284 bar. Paineenrajoitin pysäyttää pumpun 250 bariin, ja pumppu säätää iskun juuri sille
   virtaukselle, jolla 250 bar säilyy (noin 33 l/min). Paine-ero pumpun ja moottorin välillä on
-  silloin vain FXDC:n (noin 8 bar, datalehden kuvaajasta), BAV-713:n ja letkujen todellinen häviö
-  (**⚠ BAV-713:n ja letkujen häviö ei mitattu**) [arvio].
+  silloin vain BAV-713:n ja letkujen todellinen häviö (**⚠ ei mitattu**) [arvio].
 - **Siksi keulapotkurilinjassa ei saa olla kuristinta.** Kuristinvaihtoehdossa
   ([p2-variable-pump](p2-variable-pump.md#vaihtoehto-aito-kuormantunto-säädettävällä-kuristimella))
   virtaus rajattiin kuristimella, joka tarvitsi 20 barin paine-eron, ja moottori sai vain noin
@@ -111,13 +109,13 @@ tai 250 bar, kumpi on pienempi.**
 | Ohjauslogiikka | 2/2 (ja 3/2) oikeassa järjestyksessä | PVE-ohjaimet | **ei mitään, pelkät kytkimet** |
 | Vika "2/2 jää kiinni", noin 10 kW lämpöä | mahdollinen | ei | **ei** |
 | Lämpö vinssillä | 3–11 kW ilman 3/2:ta | pieni | **pieni** |
-| Keulapotkurin työntövoima | noin 82–85 % (FXDC) | noin 85–88 % (enemmän, jos paine nostetaan) | noin 82–85 % FXDC:llä, noin 85–88 % kierroslukituksella |
+| Keulapotkurin työntövoima | noin 82–85 % (FXDC yhteisessä P-linjassa) | noin 85–88 % (enemmän, jos paine nostetaan) | noin 85–88 % |
 | Portaaton ohjaus | ei | kyllä | ei |
 | Kustannus | pienin | suurin | lähellä pienintä |
 
 **Poistuu nykysuunnitelmasta:** VPR3, OD15, BPV sekä PVH57-selvityksen 2/2- ja 3/2-ratkaisut.
 **Säilyy:** CETOP-pohjalaatta, BAV-713, VMP, säiliö, 50 mm:n imu, Spidex ja kannake, letkut ja
-jäähdytin. **Uutta:** kolme FXDC:tä runkoineen (FXDC noin 83–89 $ USA:ssa 2026-10-25,
+jäähdytin. **Uutta:** kaksi FXDC:tä runkoineen (vinssi ja pesuri) (FXDC noin 83–89 $ USA:ssa 2026-10-25,
 valurautaisen DAW/S-rungon hinta **⚠ ei tiedossa**), muutama vaihtoventtiili, vuotokuristin ja
 vinssin jarruventtiili.
 
@@ -129,15 +127,16 @@ vinssin jarruventtiili.
 | Suuntaventtiili jumittuu auki | Kuorma jää käyntiin. Hätäpysäytys katkaisee kelojen virran; jos kara ei palaa, pumpun kierrokset tai imulinjan palloventtiili ovat ainoa keino **⚠ pätevä henkilö arvioi**. |
 | LS-linjan vuotokuristin tukkeutuu | Pumppu voi jäädä venttiilien palattua keskelle hetkeksi korkeaan paineeseen; keskiasennon A,B→T-yhteys tyhjentää linjan silti. |
 | Pumpun säädin jumittuu täydelle tuotolle | Varaventtiili rajaa paineen; tilanne vastaa kiinteää pumppua (lämpöä), ja lämpötila-anturi hälyttää. |
+| Keulapotkurin veto (kytkin, akseli) katkeaa | Moottori menettää kuormansa ja ryntää, koska linjassa ei ole virtauksensäätöä. Kierroslukitus rajaa pumpun tuoton (tyhjäkäynnillä noin 38 l/min); hätäpysäytys katkaisee venttiilin virran. |
 | Kotelovuotolinja tukkeutuu | Akselitiiviste voi vaurioitua; siksi vuotolinja on oma letkunsa. |
 | Vinssi kuormassa ja hydrauliikka menetetään | Jarruventtiili ja vinssin jarru pitävät kuorman, ei pumppu eikä venttiilin kara. **Pätevä henkilö tarkistaa ennen rakentamista.** |
 
 ## Avoimet kysymykset
 
 - [x] ~~Sun FXDC:n pienin paine-ero~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; 20 barin marginaali riittää lähes [datalehti Sun FXDC 2026-10-26, kuvaajasta luettu]
-- [ ] Omistajat: keulapotkurin ylikierrossuoja FXDC:llä (noin 8 bar häviö) vai kierroslukituksella
+- [x] ~~Keulapotkurin ylikierrossuoja FXDC:llä vai kierroslukituksella~~ FXDC:tä ei tarvita: potkuri ei saa ilmaa lapoihin [omistaja 2026-10-26]
+- [ ] Omistajat: kierroslukituksen raja keulapotkurille (suoja vedon katkeamisen varalle)
 - [ ] Lohkokohtaisen FXDC:n asennus CETOP-pohjalaatalle: välilaatta (malli) vai linjarunko kunkin aseman letkuun
 - [ ] Danfoss: PVH57:n kierrosraja (2400 rpm) yhtäaikaisessa käytössä, kun 38 l/min ei riitä kahdelle kuormalle tyhjäkäynnillä
-- [ ] Sleipner: SH240:n suurin sallittu virtaus ylikierrossuojan asetusta varten
 - [ ] Vaihtoventtiilien malli ja liitäntäkoko
 - [ ] Ankkurivinssin moottori, jarru ja jarruventtiili; painepesurin hydraulimoottorin virtaus ja paine ([loads.yaml](../loads.yaml))

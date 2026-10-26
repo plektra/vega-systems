@@ -63,7 +63,7 @@ loads:
     fail_state: pysähtyy, moottori pyörii vapaasti (A-B-T-vapaakierto)
     design_pressure_bar: 250       # päätetty: ~90 % työntövoima hyväksytty, 250 barin komponentit
     source: Sleipner asennusohje 2746 35 2025; Side-Power SH Series product specification v1.0.0 2017
-    notes: "Hihnavedolla saavutettiin vain ~160-170 bar; se riitti kääntämään aluksen laiturissa."
+    notes: "Hihnavedolla saavutettiin vain ~160-170 bar; se riitti kääntämään aluksen laiturissa. Potkuri on niin syvällä, ettei se koskaan saa ilmaa lapoihin [omistaja 2026-10-26] -> ylikierrossuojaa ei tarvita."
 
   - id: WLS
     name: Ankkurivinssi

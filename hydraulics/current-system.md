@@ -125,7 +125,7 @@
 
    *Oletukset: noin 6 barin häviö venttiilin kummallakin reitillä (P→A ja B→T), mitatut
    letkupituudet ja noin 1,5 bar paluusuodattimessa. 4–10 barin venttiilihäviöillä lämmin tulos on
-   85–89 %. **⚠ Hanki BAV-713:n painehäviökäyrä** tarkentamaan tätä.* Kilot on laskettu asennusohjeen
+   85–89 %. **⚠ Hanki BAV-713:n painehäviökäyrä** tarkentamaan tätä. **Virtauksensäätöventtiilin (F1-61-reitillä VPR3) omaa painehäviötä ei ole mukana** (**⚠ ei tiedossa**); vertailukohtana Sun FXDC vie noin 33 l/min:llä noin 8 bar [datalehti Sun FXDC, kuvaajasta luettu 2026-10-26], mikä pienentäisi työntövoimaa arviolta noin 3 prosenttiyksikköä.* Kilot on laskettu asennusohjeen
    240 kg:n suurimmasta työntövoimasta (kevyt käyttö).
 
    **Malli vahvistettu valmistajan taulukolla:** Side-Powerin mukaan 80 %:n työntövoimaan tarvitaan

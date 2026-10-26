@@ -510,6 +510,11 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
   ylikierrossuojana, ja tarkka asetus ei vaikuta työntövoimaan. Noin 8 barin painehäviö jää silti,
   koska noin 33 l/min tarvitsee sen jo ennen kompensointia [datalehti Sun FXDC, kuvaajasta luettu].
   Siksi tarkkaa virtausmittausta ei tarvita.
+- **Ylikierrossuojaa keulapotkuri ei tarvitse,** koska potkuri on niin syvällä, ettei se saa ilmaa
+  lapoihin [omistaja 2026-10-26]. Pelkälle keulapotkurille FXDC:n voisi siis jättää pois (noin
+  85–88 %). Tässä kytkennässä FXDC on kuitenkin pohjalaatan yhteisessä P-linjassa ja rajaa myös
+  ankkurivinssin virtauksen, joten se pysyy, jos vinssi liitetään. Vaihtoehto, jossa virtaus
+  rajataan vain vinssin asemalla: [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md).
 - 2G1 näyttää paineen pohjalaatalla, ja moottorilla paine on BAV-713:n ja letkujen häviön verran
   pienempi **⚠ häviö ei tiedossa, arviolta muutama bar**.
 - **Ankkurivinssin** nopeus tarkistetaan sekuntikellolla ketjun nopeudesta, kun vinssi on kytketty.

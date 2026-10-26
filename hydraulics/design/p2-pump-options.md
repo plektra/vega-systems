@@ -301,7 +301,7 @@ Oletukset: 59,5 cm³ (päivitetty 2026-10-23, aiemmin 61), volumetrinen hyötysu
 | Tarkistus | Arvio |
 |---|---|
 | Tuotto 700 rpm:llä | noin 39,6 l/min, enemmän kuin keulapotkurin 33,8 l/min ✅ |
-| Työntövoima, paineenrajoitus 250 bar | noin 88 % (paine rajoittaa) |
+| Työntövoima, paineenrajoitus 250 bar | noin 88 % (paine rajoittaa); VPR3:n omaa painehäviötä ei ole mukana **⚠ ei tiedossa**, ks. [current-system §1](../current-system.md) |
 | Työntövoima, paineenrajoitus 280 bar | **noin 99 %**; pumppu kestää tämän reilusti ✅ |
 | Momentti 250 / 280 barissa | noin 249 / 279 Nm: Spidex 48/60 98 Sh A (525 Nm) ja PTO (420 Nm) riittävät (aiemmin vertailtu Borelli 30500 580 Nm; 30300 185 Nm ei) |
 | Lämpö | Ylimääräiset ~5–6 l/min menevät paineenrajoituksen yli, noin 2–3 kW lisälämpöä vain keulapotkurin käytön ajan; lyhyissä jaksoissa harmitonta |
@@ -1004,11 +1004,16 @@ tilalle kaksitiekompensoitu virtauksensäätöventtiili, ks. [p2-variable-pump.m
 |---|---|---|---|---|---|---|
 | Pumpun hinta (suuntaa-antava) | € | € | €€ (käytettynä €) | €€€ (käytettynä €, PVH57 190 €) | €€€€ (venttiileineen) | €–€€ |
 | Muutokset piiriin | ei | kierrosohjaus | oma kannake, ohitusventtiili ja vuotolinja (päätetty) | kotelovuotolinja; VPR3 → kaksitieventtiili; LS-purku 2/2 | uusi venttiilipaketti | lisäventtiilit |
-| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~82–85 % (FXDC vie noin 8 bar, [p2-variable-pump](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)) | ~82–88 % (ei kuristinta potkurilinjassa, [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md)) | ~88 % |
+| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~82–85 % (FXDC vie noin 8 bar, [p2-variable-pump](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)) | ~85–88 % (ei virtauksensäätöä potkurilinjassa, [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md)) | ~88 % |
 | Hyötysuhde käytön aikana | ~80–85 % | ~80–85 % | ~90–95 % | ~88–92 % | paras | ~80–85 % |
 | Öljyn puhtausvaatimus | sietää | sietää | kohtalainen | tiukka | tiukka | sietää |
 | Proportionaalinen ohjaus | ei | ei | ei | ei | **kyllä** | ei |
 | Sopivuus nykyiseen linjaan | **hyvä** | kohtalainen | **hyvä (valittu)** | kohtalainen ([selvitys](p2-variable-pump.md)) | laajuuden muutos | tilanteen mukaan |
+
+*Työntövoimat sisältävät BAV-713:n, letkujen ja suodattimen arvioidut häviöt, mutta **eivät
+VPR3:n omaa painehäviötä** (vaihtoehdot A–C ja F; **⚠ ei tiedossa**). D:ssä mukana on FXDC:n noin
+8 bar datalehden kuvaajasta. Ero D:n ja muiden välillä on siksi todennäköisesti pienempi kuin taulukko
+näyttää [arvio, 2026-10-26].*
 
 ## Avoimet kysymykset
 
