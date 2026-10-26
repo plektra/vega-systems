@@ -217,7 +217,7 @@ keulapotkuri (noin 34 l/min, 250 bar).
 - **Lukitukset:**
   - Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä.
   - BPV:n tilaa vaihdetaan vain alle 20 barissa: päälle 2/2-venttiili auki → BPV:n kela → 2/2 kiinni; pois päinvastoin.
-  - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään, 2/2-venttiili avataan ja BPV palautetaan ohitukseen. Ks. [p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23).
+  - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään, 2/2-venttiili avataan ja BPV palautetaan ohitukseen. Ks. [p2-pump-options.md](design/p2-pump-options.md#alustava-kokoonpano-2026-10-23).
   - Hälytys, jos BPV on syöttöasennossa yli noin 1200 rpm:ssä (myös käsiohitus).
   - Muut TBD.
 

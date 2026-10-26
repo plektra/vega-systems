@@ -1,7 +1,8 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä PVH57:lle, mutta todennäköisesti riittää F1-61:lle; ehdokas OMTF171F10NA1; puhtausvaatimus 250 barissa 16/14/12), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
-> ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä arvioidaan, sopisiko
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä PVH57:lle, mutta todennäköisesti riittää F1-61:lle; ehdokas OMTF171F10NA1; puhtausvaatimus 250 barissa 16/14/12), **ei päätetty**. Alustava päätös on yhä F1-61 tai vastaava
+> ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). **2026-10-26:** omistaja kallistuu hiukan
+> säätötilavuuspumpun suuntaan; koko hydraulijärjestelmä on vielä päättämättä [omistaja 2026-10-26]. Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
 > rakentamista.
@@ -100,7 +101,7 @@ yleensä satamassa matalilla kierroksilla, jolloin hyötysuhteella on vähemmän
 Ankkurivinssin kanssa PVH57 ei ole automaattisesti parempi (ks.
 [Ankkurivinssi](#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä)).
 
-**Suositus:** F1-61 ohitusventtiilillä, kuten on päätetty. Se on yksinkertaisempi ja käyttää
+**Suositus:** F1-61 ohitusventtiilillä, kuten on alustavasti päätetty. Se on yksinkertaisempi ja käyttää
 olemassa olevaa VPR3:a, eikä sen suurin heikkous juuri näy Vegan käytössä. PVH57:ään kannattaa
 palata vain, jos ankkurivinssiä käytetään pitkiä jaksoja tai keulapotkuria joudutaan käyttämään
 usein korkeilla kierroksilla, tai jos tavoitteeksi tulee jokin

@@ -53,7 +53,7 @@ konehuoneessa:
 | Ohjauspumppu matka-ajossa (~0,5 kW) | noin 55–60 °C (40–45 °C:n konehuoneessa 65–70 °C) |
 | Kytkin päällä tyhjäkäynnillä, keulapotkuri ei käytössä (~0,7 kW) | noin 65 °C |
 | Kytkin päällä 1800 rpm:llä, vapaakierto auki (~2 kW) | **yli 100 °C** |
-| **Päätetty ratkaisu (2026-10-23):** ajossa BPV:n ohitus, pumppu kiertää tyhjänä | **⚠ ei tiedossa** (Parker ei ilmoita ohitustilan lämpöä); mitataan ensimmäisellä kaudella |
+| **Alustava ratkaisu (2026-10-23):** ajossa BPV:n ohitus, pumppu kiertää tyhjänä | **⚠ ei tiedossa** (Parker ei ilmoita ohitustilan lämpöä); mitataan ensimmäisellä kaudella |
 
 Viimeisessä tapauksessa lämpeneminen on hidasta: 40 → 75 °C noin 1 tunnissa (kuorman mukaan
 45–90 min), 20 → 75 °C noin 1,5 tunnissa. Kytkimen unohtuminen päälle koko matkan ajaksi

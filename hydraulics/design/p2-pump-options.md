@@ -1,6 +1,6 @@
 # Apupiirin pumppu (P2) ja PTO-kytkin — vaihtoehdot
 
-> **Tila:** **Päätetty 2026-10-23** ([decisions.md](../../decisions.md)): P2 on Parker F1-61, veto PTO:lta
+> **Tila:** **Alustava päätös 2026-10-23** ([decisions.md](../../decisions.md)): P2 on Parker F1-61, veto PTO:lta
 > Spidex 48/60 -kynsikytkimellä ilman PTO-kytkintä, BPV-F1-ohitusventtiili käsiohituksella
 > (378 4179), 50 mm:n imulinja ja BPV:n vuotolinja säiliöön. **Päivitetty 2026-10-24:** Torin
 > F1-61:n kauppa peruuntui, joten P2:ksi kelpaa myös vastaava ISO 7653 -vinoakselipumppu
@@ -9,11 +9,14 @@
 > **Tarkistettu 2026-10-25:** vanhentuneet kohdat (PTO-kytkin, Borelli, tyhjäkäynnin mittaus,
 > öljylaatu, VPR3:n koko) on päivitetty tai merkitty taustaksi; säätötilavuuspumppu (D) on päivitetty
 > PVH57-selvityksen mukaan ([p2-variable-pump](p2-variable-pump.md)).
+> **2026-10-26:** päätös on **alustava**, ja koko hydraulijärjestelmä on vielä päättämättä.
+> Omistaja kallistuu hiukan **säätötilavuuspumpun** suuntaan, ks.
+> [p2-variable-pump](p2-variable-pump.md) ja [vaihtoehto D](#d-säätötilavuuksinen-aksiaalimäntäpumppu-painekompensoitu-pc).
 > Alla oleva vertailu on säilytetty taustaksi.
 > Tausta: [current-system.md §0](../current-system.md). Hinnat ovat karkeita suuntaa-antavia
 > arvioita; pyydä tarjoukset ennen päätöstä.
 
-## Päätetty kokoonpano (2026-10-23)
+## Alustava kokoonpano (2026-10-23)
 
 ```
 PTO 1:1, Ø48 kiila ── Spidex 48/60 (98 Sh A) ── Parker F1-61 + BPV-F1 (käsiohitus) ── 3/4" ── VPR3 ── CETOP
@@ -818,7 +821,7 @@ mekaaninen hyötysuhde 95 %. Tarve 33,8 l/min (keulapotkuri 100 %), PTO noin 420
 
 | Sarja | Koot (cm³) | Kuorman purku | Tuotto 700 rpm | Momentti 250 bar | Itseimevä max rpm | Sopivuus |
 |---|---|---|---|---|---|---|
-| **F1-61** (päätetty) | 59,5 | BPV-F1 378 4179 / 7201 | 39,6 l/min | 249 Nm | 2400 (lyhytsuljettuna 2700) | ✅ |
+| **F1-61** (alustava päätös) | 59,5 | BPV-F1 378 4179 / 7201 | 39,6 l/min | 249 Nm | 2400 (lyhytsuljettuna 2700) | ✅ |
 | **F1-51** | 51,1 | **sama BPV-F1** | 34,0 l/min | 214 Nm | **2450** (lyhytsuljettuna 2700) | ✅ vaihtoehto |
 | F1-41 | 40,9 | sama BPV-F1 | 27,2 l/min | 171 Nm | 2550 | ❌ noin 80 % tarpeesta |
 | F1-81 / -101 | 81,6 / 102,9 | BPV-F1-81: 378 4180 / 7203 (ei sovi F1-61:een) | 54 / 68 l/min | 342 / 431 Nm | 2200 / 2100 | ❌ liian suuri; -101 yli PTO:n rajan |
@@ -833,7 +836,7 @@ mekaaninen hyötysuhde 95 %. Tarve 33,8 l/min (keulapotkuri 100 %), PTO noin 420
 
 1. **Pumpun päälle asennettava BPV** (F1, T1, F2, F3, F4): ohituksessa öljy kiertää pumpun sisällä,
    ja imuletkun ja säiliön kautta kulkee vain pieni jäähdytysvirta vuotolinjan kautta. Ei kavitaatiota
-   eikä lämpöä. **Valittu ratkaisu.**
+   eikä lämpöä. **Alustavasti valittu ratkaisu.**
 2. **Paineilmakytkin pumpussa** (F3, F4): pumppu irtoaa kokonaan, mutta tarvitsee 5–10 barin
    paineilman, jota Vegalla ei ole. Kokoja vain 81 ja 101 cm³.
 3. **Säätötilavuuspumppu VP1:** kun mitään ei käytetä, pumppu kääntyy lähes nollatuotolle. BPV-VP1
@@ -1021,7 +1024,8 @@ näyttää [arvio, 2026-10-26].*
 
 - [x] Tyhjäkäynti: oletetaan 700 rpm, ei mitata (päätös 2026-10-23)
 - [x] Parker F1-061: tyyppikilpi F1-061-R---000, osanumero 3781060; vuotolinjaa ei tarvita
-- [x] P2:ksi valittu Parker F1-61 (päätös 2026-10-23)
+- [x] P2:ksi valittu Parker F1-61 (alustava päätös 2026-10-23)
+- [ ] P2:n lopullinen valinta: kiinteä F1-61 tai vastaava ohitusventtiilillä vai säätötilavuuspumppu (omistaja kallistuu säätötilavuuspumppuun 2026-10-26)
 - [x] ~~Parker F1-061 (tori.fi, 100 €): osto~~ kauppa peruuntui [omistaja 2026-10-24]
 - [ ] **P2-pumpun hankinta käytettynä:** F1-61, Sunfab SAP 056/064 DIN, OMFB/Hyva HDS-55/64 ISO tai Rexroth A17FO 063, mieluiten ohitusventtiilin kanssa (ks. [vaihtoehdot](#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24))
 - [ ] Säätötilavuuspumppu (Vickers PVH57) vai F1-61 tai vastaava: ks. [p2-variable-pump.md](p2-variable-pump.md#avoimet-kysymykset)

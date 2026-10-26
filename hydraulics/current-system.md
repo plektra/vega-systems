@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Päivitetty 2026-10-26: säiliön öljypinta vähintään 1 m pumppujen yläpuolella; paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-26: P2:n valinta (F1-61) on alustava, omistaja kallistuu säätötilavuuspumppuun; säiliön öljypinta vähintään 1 m pumppujen yläpuolella; paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (alustava päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulipumput on irrotettu** (lokakuu 2026); muu järjestelmä (säiliö, venttiilit, orbitroli,
 > sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Luvut 3.1–3.5 kuvaavat viimeisintä
@@ -18,10 +18,10 @@
 | Pääkone | Asennetaan takaisin ja linjataan vaihteistoon |
 | Hydrauliikka | **Molemmat pumput irrotettu**; muu järjestelmä (säiliö, venttiilit, orbitroli, sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Pumppuja ei asenneta ennen kuin kone on linjattu. |
 | Suunnitelma: ohjauspumppu | Pieni vakiotilavuuspumppu (P1, 16,6 cm³) palaa koneen etupäähän, kahden kiilahihnan vetämänä kuten ennenkin. **Vain ohjaukselle.** |
-| Suunnitelma: apupiirin pumppu | **Parker F1-61** (59,5 cm³, vinoakselimäntäpumppu) **tai vastaava** 56–64 cm³:n ISO 7653 -pumppu valmistajan ohitusventtiilillä (Sunfab SAP DIN, OMFB/Hyva HDS ISO, Rexroth A17FO 063) **suoraan Advance 300:n voimanulosotosta (PTO)** [päätös 2026-10-23 ja 2026-10-24; [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24)] |
+| Suunnitelma: apupiirin pumppu | **Parker F1-61** (59,5 cm³, vinoakselimäntäpumppu) **tai vastaava** 56–64 cm³:n ISO 7653 -pumppu valmistajan ohitusventtiilillä (Sunfab SAP DIN, OMFB/Hyva HDS ISO, Rexroth A17FO 063) **suoraan Advance 300:n voimanulosotosta (PTO)** [alustava päätös 2026-10-23 ja 2026-10-24; [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24); omistaja kallistuu säätötilavuuspumppuun 2026-10-26, ks. [p2-variable-pump.md](design/p2-variable-pump.md)] |
 | Advance 300:n PTO | **Välitys 1:1, käyttö ensiöakselilta** (pyörii aina kun kone käy, myös vapaalla). **Ei omaa kytkintä.** Nimellisteho **0,044 kW/rpm**, eli vakiomomenttiraja **≈ 420 Nm** (35 kW 800 rpm:llä, 110 kW 2500 rpm:llä). Ulostulo on **sileä Ø48 mm:n kiila-akseli** ilman pumppulaippaa. |
-| Suunnitelma: PTO-voimansiirto | PTO-akseli → **Spidex 48/60 -kynsikytkin** → P2. Pumppu on **omalla, runkoon kiinnitetyllä kannakkeella**, joten PTO-akselille ei tule pumpun painoa eikä sivukuormaa. **Ei PTO-kytkintä** [päätös 2026-10-23, korvaa HRC 150 + kytkin]. |
-| Suunnitelma: tyhjäkierto | **Parker BPV-F1 -ohitusventtiili käsiohituksella** (378 4179) pumpun päällä: jännitteettömänä pumppu kiertää tyhjänä, jännitteellisenä syöttää piiriin. **Vuotolinja** BPV:ltä suoraan säiliöön. Ks. [p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23). |
+| Suunnitelma: PTO-voimansiirto | PTO-akseli → **Spidex 48/60 -kynsikytkin** → P2. Pumppu on **omalla, runkoon kiinnitetyllä kannakkeella**, joten PTO-akselille ei tule pumpun painoa eikä sivukuormaa. **Ei PTO-kytkintä** [alustava päätös 2026-10-23, korvaa HRC 150 + kytkin]. |
+| Suunnitelma: tyhjäkierto | **Parker BPV-F1 -ohitusventtiili käsiohituksella** (378 4179) pumpun päällä: jännitteettömänä pumppu kiertää tyhjänä, jännitteellisenä syöttää piiriin. **Vuotolinja** BPV:ltä suoraan säiliöön. Ks. [p2-pump-options.md](design/p2-pump-options.md#alustava-kokoonpano-2026-10-23). |
 | Keulapotkurin letkut | **Pääosin valmiit:** 1/2" **SAE 100R2AT / EN 853** -letkut, omistajien mukaan 300 bar, CETOP-venttiileiltä keulapotkurille. A- ja B-linjat **8,5 m kumpikin**. |
 | P2:n painelinja | 3/4" letku pumpulta venttiileille. PTO-sijoitus vaatii **3–4 m** letkua. |
 | P2:n imulinja | **50 mm** [päätös 2026-10-23; aiemmin 32 mm:n sisähalkaisija, noin 3 m]. Säiliön öljypinta on vähintään noin 1 m pumppujen imuaukkojen yläpuolella [omistaja 2026-10-26]. |
@@ -68,7 +68,7 @@
    vaatisi moottorilla 264 bar plus linjahäviöt. Omistajat hyväksyvät noin 90 %:n työntövoiman,
    jotta pumppu ja venttiilit voidaan valita yleisestä 250 barin luokasta. Todellisilla
    letkupituuksilla 250 barin paineenrajoitus antaa lämpimänä noin 85–89 %, ks. kohta 9.
-6. **Ajon aikana pumppu kiertää tyhjänä BPV-ohitusventtiilin kautta** [päätös 2026-10-23]. PTO-kytkintä
+6. **Ajon aikana pumppu kiertää tyhjänä BPV-ohitusventtiilin kautta** [alustava päätös 2026-10-23]. PTO-kytkintä
    ei ole, joten F1-61 pyörii aina koneen mukana. BPV:n ollessa jännitteetön pumpun tuotto kiertää
    pumpun päädyssä, ja vain pieni jäähdytysvirtaus kulkee vuotolinjan kautta säiliöön. Näin
    korkeilla kierroksilla ei synny kavitaatiota eikä suurta läpivirtausta. Ohitustilan lämpöä Parker
@@ -82,7 +82,7 @@
      noin 1000 rpm).
    - **Ohjaus:** BPV:n kela 24 V, 14 W, ESP32 PDM:ltä; Signal K näyttää tilan.
    - **Vikatilat:** sähkökatko → ohitus, keulapotkuri ei toimi; käsiohitus vain kone sammutettuna, ks.
-     [p2-pump-options.md](design/p2-pump-options.md#päätetty-kokoonpano-2026-10-23).
+     [p2-pump-options.md](design/p2-pump-options.md#alustava-kokoonpano-2026-10-23).
    - **Linjaus:** vaihteisto on kiinnitetty jäykästi runkoon [blogi 2021-02-08], kuten myös
      pumppukannake. Kytkimen sallitut virheet 1000 rpm:llä: säteis 0,44 mm, kulma 1,2° (×0,7
      40–60 °C:ssa). Tarkista linjaus uudelleen koeajon jälkeen.
