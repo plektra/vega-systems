@@ -1,6 +1,6 @@
 # Hydrauliöljyn lämpökuorma ja jäähdytys
 
-> **Tila:** Selvitys, päivitetty 2026-10-23. Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
+> **Tila:** Selvitys, päivitetty 2026-10-23 ja 2026-10-26 (paluulinjan letkukoko ja paluiden yhdistäminen). Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
 > on kerrottu kunkin taulukon yhteydessä. Tausta: [current-system.md](../current-system.md),
 > [p2-pump-options.md](p2-pump-options.md).
 
@@ -159,6 +159,67 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
    merivesipuolelle käsiventtiili tai öljypuolelle termostaattinen ohitus (ohittaa jäähdyttimen alle
    noin 40–45 °C:ssa).
 5. **Sinkkianodi** tarkistetaan ja vaihdetaan tarvittaessa ennen käyttöönottoa.
+6. **Paluulinja 1":n letkusta,** koska jäähdytin tulee 2–3 metrin päähän säiliöstä
+   [omistaja 2026-10-26] (ks. [Paluulinjan letkukoko](#paluulinjan-letkukoko)).
+7. **Paluut yhdistetään yhdeksi 1":n linjaksi venttiililohkon lähellä** (ks.
+   [Paluiden yhdistäminen](#paluiden-yhdistäminen)).
+
+### Paluulinjan letkukoko
+
+Jäähdytin tulee 2–3 metrin päähän säiliöstä [omistaja 2026-10-26], joten paluulinjaan tulee noin
+5 m letkua (venttiileiltä jäähdyttimelle ja jäähdyttimeltä säiliöön). Painehäviö suorassa
+letkussa [laskelma: Darcy–Weisbach, HVLP 32:n viskositeetit [hydraulic-oil](hydraulic-oil.md),
+tiheys 870 kg/m³; liittimet, mutkat ja supistukset lisäävät hieman]:
+
+| Öljy | Virtaus | 3/4" (sisähalk. noin 19 mm) | 1" (noin 25 mm) |
+|---|---|---|---|
+| 5 °C (noin 170 cSt) | 50 l/min | noin 2,0 bar | noin 0,6 bar |
+| 5 °C | 75 l/min | noin 2,9 bar | noin 0,9 bar |
+| 20 °C (noin 76 cSt) | 75 l/min | noin 1,3 bar | noin 0,4 bar |
+| 40–60 °C | 75 l/min | noin 0,8–1,0 bar | noin 0,2 bar |
+
+50 l/min on tyhjäkäynnin yhteinen paluuvirta (apupiiri ja P1); 75 l/min on PVH57-reitin suurin
+yhteinen virta 1800 rpm:llä ([p2-variable-pump](p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1)).
+Virtausnopeus 75 l/min:llä on 1":ssa noin 2,5 m/s (paluulinjan tavallinen suositus noin 2–3 m/s
+[yleistieto]) ja 3/4":ssa noin 4,4 m/s [laskelma].
+
+**Suositus [arvio]:** 1":n letku koko paluulinjaan. Hyöty on pieni lämpimällä öljyllä (alle 1 bar),
+mutta kylmällä öljyllä se pudottaa paluupainetta noin 2 bar. Paluupaineet kertyvät päällekkäin:
+letkut, jäähdyttimen ohitusventtiili (3–4 bar) ja yksi tai kaksi suodatinta
+([linjasuodatin](p2-variable-pump.md#vaihtoehto-linjasuodatin-paluulinjaan-nykyinen-suodatin-jää))
+voivat kylmänä nostaa paluupaineen 3/4":n letkulla 6–9 bariin. Keulapotkurin työntövoimaan ero ei
+juuri vaikuta. EC100:n öljyliitännät ovat 3/4" BSP, joten letku supistetaan jäähdyttimen päissä;
+lyhyt supistus ei haittaa. Kannen suodattimeen OMTF171 (1 1/4") 1":n letku sopii paremmin kuin
+3/4".
+
+### Paluiden yhdistäminen
+
+Yhdistettävät paluut [suunnitelma, ks. [schematic](../schematic.md)]:
+
+| Paluu | F1-61-reitti | PVH57-reitti (LS + on/off) |
+|---|---|---|
+| CETOP-pohjalaatan T (BAV-713, VMP) | kyllä | kyllä |
+| VPR3:n B (ylimäärä) | kyllä | ei (VPR3 poistuu) |
+| OD15 / 2/2-vapaakiertoventtiili | kyllä | ei |
+| P1: RPF3:n ylimäärä ja orbitrolin T | kyllä | kyllä |
+| **Ei paluulinjaan:** U11:n vuotolinja, PVH57:n kotelovuoto, BPV:n vuotolinja | suoraan säiliöön öljypinnan alle | sama |
+
+Paluita on siis 2–4, ja tavalliset T-liittimet riittävät [arvio]:
+
+- **Kokoa paluut yhteen venttiililohkon lähellä,** jolloin jäähdyttimelle ja säiliöön kulkee vain
+  yksi 1":n letku.
+- **1":n läpivirtaus suoraan T:n läpi,** pienemmät paluut (3/4" tai 1/2") T:n haaraan
+  supistusnipalla. Suurin virta (apupiirin paluu) kulkee suoraan. Nopeudet ovat pieniä, joten
+  T-liittimen häviö on alle 0,05 bar [laskelma: 2,5 m/s, kerroin noin 1,5].
+- **Hydrauliikkaliittimet, ei vesijohto-osia:** BSPP-kierre ja tiivistealuslevy (esim. Dowty) tai
+  24°-leikkausrengasliittimet. Kartiokierteiset vesijohto-T:t ja teippitiivistys vuotavat
+  helposti ja voivat irrottaa roskia järjestelmään [yleistieto].
+- **Painemittari tai anturi keräimeen** (esim. T:n jatkeeksi mittausliitin): näyttää paluupaineen
+  kylmäkäynnistyksessä ja kertoo, jos jäähdytin tai suodatin tukkeutuu (ks.
+  [pressure-monitoring](pressure-monitoring.md)).
+- **Siistimpi vaihtoehto:** valmis paluukeräinlohko (alumiini- tai teräslohko, 1":n pääkanava ja
+  useita sivuportteja), joka kiinnitetään laipioon. Vähemmän liitoksia ja vuotokohtia, mutta
+  kalliimpi; hinta **⚠ ei tiedossa**. Kahdella–neljällä paluulla T-liittimet riittävät.
 
 ## Merivesi
 
@@ -219,6 +280,7 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 
 ## Avoimet kysymykset
 
+- [ ] Jäähdyttimen tarkka paikka ja paluulinjan letkupituus (arvio 2–3 m säiliöstä [omistaja 2026-10-26]); paluiden yhdistämiskohta
 - [ ] Onko varalla oleva jäähdytin EC100 vai EC80 (pituus 26 vs. 17 cm, öljyliitäntä 3/4" vs. 1/2"), ja tyyppikilven koko koodi (vesiversio, vedot)
 - [x] Koneen merivesipumpun tuotto: noin 70 l/min 650 rpm:llä [omistaja 2026-10-22]
 - [x] 650 rpm on koneen kierrosluku; pumppu on koneen etupään voimanulosotossa kiinteällä välityksellä
