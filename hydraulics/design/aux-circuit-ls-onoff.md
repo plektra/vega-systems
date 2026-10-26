@@ -1,6 +1,6 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu, LS ja on/off-venttiilit
 
-> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa; ISO 1219 -kaavio), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä kysytään, miten apupiiri
 > rakennettaisiin alusta alkaen säätötilavuuspumpulla **ilman proportionaalista venttiilipöytää**
 > [omistaja 2026-10-26, kysymys]. Vertailukohdat: PVH57 olemassa olevilla venttiileillä
@@ -38,6 +38,39 @@ PTO ─ Spidex ─ PVH57 (LS-säädin, 250 bar) ──P──┬─ varaventtiil
 ```
 
 Ohjauspiiri (P1, orbitroli) pysyy erillään kuten nyt ([päätös 2017-04](../../decisions.md)).
+
+### ISO 1219 -kaavio (luonnos)
+
+![Vaihtoehto C: PVH57, LS ja on/off-venttiilit, ISO 1219 -merkein](../img/schematic-c-aux-ls-onoff.svg)
+
+Piirretty samoin periaattein kuin [arkit 1–3](../schematic.md): venttiilit lepoasennossa,
+tunnus *piiri + tyyppi + numero*. Nykyisestä suunnitelmasta säilyvät osat pitävät tunnuksensa
+(2V3, 2V5, 2M2, 2V0, 2B1); uudet osat on numeroitu 10:stä alkaen. **Musta = ensimmäinen vaihe**
+(pumppu ja keulapotkuri), **harmaa = lisätään myöhemmin** (vinssi ja pesuri). Paluu jatkuu arkin 3
+paluukeräimeen ([schematic](../schematic.md#arkki-3-paluu-jäähdytys-ja-säiliö)). **Tila: selvitys,
+ei päätetty, ei rakentamiseen.** Pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
+
+| Tunnus | Osa | Tiedot | Vaihe |
+|---|---|---|---|
+| 2M1, 2Z3 | Advance 300 PTO, Spidex 48/60 | kuten [arkki 2](../schematic.md#arkki-2-piiri-2-apupiiri-ja-keulapotkuri); pumppunapa 1,25":n kiilareiällä | 1 |
+| 2P10 | Vickers PVH57, LS-säädin (V) | 57,4 cm³; painekompensaattori 250 bar, LS-paine-ero noin 20 bar; kotelovuoto omana letkuna säiliöön | 1 |
+| 2V0, 2B1 | Imun palloventtiili, imupaineanturi | imu 50 mm, kuten arkki 2 | 1 |
+| 2G1 | Painemittari | P-linja | 1 |
+| 2V3 | VMP (nykyinen) | varaventtiili noin 270 bar; rajaa paineen, jos säädin jumittuu | 1 |
+| 2V5 | BAV-713 4/3 (nykyinen), Y1a/b | keskiasento P kiinni, A, B, T yhdistetty; CETOP 3 -pohjalaatalla | 1 |
+| 2V10 | Vaihtoventtiili keulapotkurin A/B-linjoista | malli **⚠ valitsematta** | 1 |
+| 2V19 | Vuotokuristin noin Ø0,8 mm | LS-linjasta säiliöön; LS-linja tyhjenee, kun venttiilit ovat keskellä | 1 |
+| 2M2 | Sleipner U11 (SH240) | A/B 1/2", 2 × 8,5 m; ei virtauksensäätöä; vuotolinja suoraan säiliöön | 1 |
+| 2V12, 2V13 | Vaihtoventtiilit asemien välillä | välittävät suurimman kuorman paineen pumpulle; ennen vinssiä aseman 1 signaali menee suoraan LS-linjaan | myöhemmin |
+| 2V14, 2V15, 2V11, 2V16, 2M3 | Vinssi: FXDC, 4/3 A,B→T, vaihtoventtiili, jarruventtiili, moottori | vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../loads.yaml)) | myöhemmin |
+| 2V17, 2V18, 2M4 | Pesuri: FXDC, 3/2 (lepo A→T), moottori | pesurin tiedot **⚠ ei tiedossa**; LS-signaali suoraan A-linjasta | myöhemmin |
+
+Kaaviota piirtäessä esiin tulleet asiat:
+
+- Vinssi ja pesuri ovat kaaviossa omina linjaventtiileinään. Jos ne asennetaan CETOP-pohjalaatan
+  vapaille paikoille, FXDC tarvitsee välilaatan tai linjarungon (avoin kysymys alla).
+- Kaaviossa vinssin jarruventtiili on yksinkertaistettu lohkoksi; sen tyyppi ja asetus valitaan
+  vinssin moottorin mukaan.
 
 ## Osat ja perustelut
 

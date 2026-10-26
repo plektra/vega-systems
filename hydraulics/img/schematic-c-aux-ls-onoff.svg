@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1000" width="1240" height="1000" font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>Vega – hydrauliikka, vaihtoehto C: PVH57, LS ja on/off-venttiilit (ISO 1219 -luonnos)</title>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="1240" height="1000" fill="#fff"/>
+  <g stroke="#000" stroke-width="2" fill="none" stroke-linecap="square">
+<!-- ===== Otsikko ja lukuohje ===== -->
+<text x="30" y="34" font-weight="bold" font-size="18" stroke="none" fill="#000">Vega — hydrauliikka · Vaihtoehto C: PVH57, kuormantunto (LS) ja on/off-venttiilit</text>
+<rect x="30" y="50" width="380" height="115" stroke-width="1"/>
+<text x="40" y="67" font-weight="bold" font-size="11" stroke="none" fill="#000">Lukuohje</text>
+<text x="40" y="83" font-size="11" stroke="none" fill="#000">Venttiilit lepoasennossa (jännitteetön)</text>
+<text x="40" y="98" font-size="11" stroke="none" fill="#000">Yhtenäinen viiva: paine-, paluu- ja imulinja</text>
+<text x="40" y="113" font-size="11" stroke="none" fill="#000">Katkoviiva: LS-signaali, ohjaus- ja vuotolinja</text>
+<text x="40" y="128" font-size="11" stroke="none" fill="#000">Musta: 1. vaihe (keulapotkuri) · harmaa: myöhemmin</text>
+<text x="40" y="143" font-size="11" stroke="none" fill="#000">Y = solenoidi 24 V · ⚠ = tarkistettava</text>
+<text x="40" y="158" font-size="11" stroke="none" fill="#000">SELVITYS, EI PÄÄTETTY · osaluettelo: aux-circuit-ls-onoff.md</text>
+<!-- ===== 2P10 PVH57 ja LS-säädin ===== -->
+<circle cx="200" cy="770" r="25"/>
+<path d="M200 746 L191 761 L209 761 Z" fill="#000" stroke-width="1"/>
+<line x1="170" y1="792" x2="230" y2="748" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="250" y="735" width="110" height="70" stroke-width="1.5"/>
+<path d="M226 770 H250" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="305" y="755" text-anchor="middle" font-weight="bold" font-size="11" stroke="none" fill="#000">säädin</text>
+<text x="305" y="770" text-anchor="middle" font-size="11" stroke="none" fill="#000">LS Δp ~20 bar</text>
+<text x="305" y="785" text-anchor="middle" font-size="11" stroke="none" fill="#000">paineraja 250 bar</text>
+<text x="305" y="799" text-anchor="middle" font-size="10" stroke="none" fill="#000">(C-jousi 70–250)</text>
+<path d="M200 700 H280 V735" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="200" cy="700" r="2.5" fill="#000" stroke="none"/>
+<path d="M218 788 L245 860 H330 V900" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M316 900 V916 H344 V900" stroke-width="2" stroke="#000"/>
+<text x="345" y="880" font-size="11" stroke="none" fill="#000">kotelovuoto omana letkuna</text>
+<text x="345" y="894" font-size="11" stroke="none" fill="#000">suoraan säiliöön, öljypinnan alle</text>
+<line x1="200" y1="795" x2="200" y2="958"/>
+<path d="M200 850 H164" stroke-width="1.5"/>
+<circle cx="152" cy="850" r="12" stroke-width="1.5"/>
+<text x="152" y="854" text-anchor="middle" font-weight="bold" font-size="11" stroke="none" fill="#000">P</text>
+<circle cx="200" cy="850" r="3" fill="#000" stroke="none"/>
+<path d="M192 893 L208 893 L200 905 Z M192 917 L208 917 L200 905 Z" fill="#fff" stroke-width="1.5"/>
+<path d="M178 942 V966 H222 V942" stroke-width="2"/>
+<text x="130" y="846" text-anchor="end" font-weight="bold" stroke="none" fill="#000">2B1 imupaineanturi</text>
+<text x="130" y="861" text-anchor="end" stroke="none" fill="#000">−1…+1 bar</text>
+<text x="188" y="899" text-anchor="end" font-weight="bold" stroke="none" fill="#000">2V0 palloventtiili</text>
+<text x="188" y="914" text-anchor="end" stroke="none" fill="#000">imu 50 mm</text>
+<text x="232" y="988" stroke="none" fill="#000"><tspan font-weight="bold">2Z1 Säiliö</tspan> (sama kuin arkki 1)</text>
+<text x="40" y="560" font-weight="bold" stroke="none" fill="#000">2P10 Vickers PVH57</text>
+<text x="40" y="575" font-size="11" stroke="none" fill="#000">LS-säädin (V), 57,4 cm³</text>
+<text x="40" y="589" font-size="11" stroke="none" fill="#000">~38 l/min tyhjäkäynnillä</text>
+<text x="40" y="603" font-size="11" stroke="none" fill="#000">valmiustila ~20 bar</text>
+<rect x="40" y="750" width="60" height="40"/>
+<text x="70" y="775" text-anchor="middle" font-weight="bold" stroke="none" fill="#000">PTO</text>
+<path d="M100 767 H175 M100 773 H175" stroke-width="1.5"/>
+<path d="M130 756 V784 M142 756 V784" stroke-width="2"/>
+<text x="40" y="735" font-size="11" stroke="none" fill="#000">2M1 PTO · 2Z3 Spidex 48/60</text>
+<!-- ===== P-linja ===== -->
+<path d="M200 745 V520 H1060"/>
+<text x="208" y="600" font-size="11" stroke="none" fill="#000">painelinja 3/4"</text>
+<path d="M260 520 V497" stroke-width="1.5"/>
+<circle cx="260" cy="485" r="12" stroke-width="1.5"/>
+<line x1="252" y1="493" x2="268" y2="477" stroke-width="1" marker-end="url(#ah)"/>
+<circle cx="260" cy="520" r="3" fill="#000" stroke="none"/>
+<text x="260" y="466" text-anchor="middle" font-weight="bold" stroke="none" fill="#000">2G1</text>
+<path d="M350 520 V530 M350 570 V580" stroke-width="1.5" stroke="#000"/>
+<rect x="330" y="530" width="40" height="40" stroke-width="1.5" stroke="#000"/>
+<line x1="340" y1="535" x2="340" y2="565" stroke-width="1.5" stroke="#000" marker-end="url(#ah)"/>
+<polyline points="370,550 373,544 377,556 381,544 385,556 388,550" stroke-width="1" stroke="#000"/>
+<path d="M350 524 H320 V550 H330" stroke-width="1" stroke-dasharray="4 3" stroke="#000"/>
+<circle cx="350" cy="520" r="3.5" fill="#000" stroke="none"/>
+<path d="M350 580 V565" stroke-width="1.5"/>
+<text x="392" y="542" font-weight="bold" font-size="11" stroke="none" fill="#000">2V3 VMP</text>
+<text x="392" y="556" font-size="11" stroke="none" fill="#000">varaventtiili ~270 bar</text>
+<path d="M350 565 H1150 V600"/>
+<circle cx="350" cy="565" r="3.5" fill="#000" stroke="none"/>
+<path d="M1060 600 H1200 L1215 615 L1200 630 H1060 Z" stroke-width="1.5"/>
+<path d="M1150 600 V600"/>
+<text x="1068" y="612" font-weight="bold" font-size="11" stroke="none" fill="#000">Paluu → arkki 3</text>
+<text x="1068" y="625" font-size="11" stroke="none" fill="#000">3Z3 paluukeräin, 1"</text>
+<text x="430" y="581" font-size="11" stroke="none" fill="#000">paluulinja → paluukeräin</text>
+<!-- ===== Asema 1: keulapotkuri ===== -->
+<rect x="445" y="380" width="50" height="40" stroke-width="1.5" stroke="#000"/>
+<rect x="495" y="380" width="50" height="40" stroke-width="1.5" stroke="#000"/>
+<rect x="545" y="380" width="50" height="40" stroke-width="1.5" stroke="#000"/>
+<path d="M530 380 V420 M510 380 V395 H530 M510 420 V410 M505 410 H515" stroke-width="1.5" stroke="#000"/>
+<circle cx="530" cy="395" r="2.5" fill="#000" stroke="none"/>
+<line x1="460" y1="418" x2="460" y2="383" stroke-width="1.5" stroke="#000" marker-end="url(#ah)"/>
+<line x1="480" y1="383" x2="480" y2="418" stroke-width="1.5" stroke="#000" marker-end="url(#ah)"/>
+<line x1="560" y1="418" x2="580" y2="383" stroke-width="1.5" stroke="#000" marker-end="url(#ah)"/>
+<line x1="560" y1="383" x2="580" y2="418" stroke-width="1.5" stroke="#000" marker-end="url(#ah)"/>
+<polyline points="445,400 441,394 437,406 433,394 429,406 426,400" stroke-width="1" stroke="#000"/>
+<rect x="412" y="390" width="14" height="20" stroke-width="1.5" stroke="#000"/>
+<line x1="412" y1="410" x2="426" y2="390" stroke-width="1" stroke="#000"/>
+<polyline points="595,400 599,394 603,406 607,394 611,406 614,400" stroke-width="1" stroke="#000"/>
+<rect x="614" y="390" width="14" height="20" stroke-width="1.5" stroke="#000"/>
+<line x1="614" y1="410" x2="628" y2="390" stroke-width="1" stroke="#000"/>
+<path d="M510 380 V360 H490 V130 H496" stroke="#000"/>
+<path d="M530 380 V360 H550 V130 H544" stroke="#000"/>
+<path d="M490 315 H508 M550 315 H532" stroke-width="1" stroke="#000" stroke-dasharray="4 3"/>
+<circle cx="490" cy="315" r="2.5" fill="#000" stroke="none"/>
+<circle cx="550" cy="315" r="2.5" fill="#000" stroke="none"/>
+<rect x="508" y="307" width="24" height="16" stroke-width="1.5" stroke="#000" fill="#fff"/>
+<circle cx="520" cy="315" r="4.5" stroke-width="1" stroke="#000"/>
+<circle cx="520" cy="130" r="24" stroke="#000"/>
+<path d="M497 130 L510 123 L510 137 Z" fill="#000" stroke-width="1" stroke="#000"/>
+<path d="M543 130 L530 123 L530 137 Z" fill="#000" stroke-width="1" stroke="#000"/>
+<path d="M510 520 V420"/>
+<circle cx="510" cy="520" r="3.5" fill="#000" stroke="none"/>
+<path d="M530 420 V565"/>
+<circle cx="530" cy="565" r="3.5" fill="#000" stroke="none"/>
+<path d="M542 140 H600 V170" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M586 170 V186 H614 V170" stroke-width="2" stroke="#000"/>
+<text x="608" y="150" font-size="10" stroke="none" fill="#000">U11:n vuoto 1/4"</text>
+<text x="608" y="162" font-size="10" stroke="none" fill="#000">suoraan säiliöön</text>
+<text x="520" y="74" text-anchor="middle" font-weight="bold" stroke="none" fill="#000">2M2 Sleipner U11 (SH240)</text>
+<text x="520" y="89" text-anchor="middle" font-size="11" stroke="none" fill="#000">A/B 1/2", 2 × 8,5 m</text>
+<text x="520" y="102" text-anchor="middle" font-size="11" stroke="none" fill="#000">ei virtauksensäätöä</text>
+<text x="410" y="400" text-anchor="end" font-weight="bold" stroke="none" fill="#000">2V5</text>
+<text x="410" y="414" text-anchor="end" font-size="11" stroke="none" fill="#000">BAV-713, Y1a/b</text>
+<text x="410" y="428" text-anchor="end" font-size="11" stroke="none" fill="#000">(nykyinen)</text>
+<text x="482" y="340" text-anchor="end" font-weight="bold" font-size="11" stroke="none" fill="#000">2V10</text>
+<!-- ===== Asema 2: ankkurivinssi (myöhemmin) ===== -->
+<rect x="705" y="380" width="50" height="40" stroke-width="1.5" stroke="#888"/>
+<rect x="755" y="380" width="50" height="40" stroke-width="1.5" stroke="#888"/>
+<rect x="805" y="380" width="50" height="40" stroke-width="1.5" stroke="#888"/>
+<path d="M790 380 V420 M770 380 V395 H790 M770 420 V410 M765 410 H775" stroke-width="1.5" stroke="#888"/>
+<circle cx="790" cy="395" r="2.5" fill="#888" stroke="none"/>
+<line x1="720" y1="418" x2="720" y2="383" stroke-width="1.5" stroke="#888" marker-end="url(#ahg)"/>
+<line x1="740" y1="383" x2="740" y2="418" stroke-width="1.5" stroke="#888" marker-end="url(#ahg)"/>
+<line x1="820" y1="418" x2="840" y2="383" stroke-width="1.5" stroke="#888" marker-end="url(#ahg)"/>
+<line x1="820" y1="383" x2="840" y2="418" stroke-width="1.5" stroke="#888" marker-end="url(#ahg)"/>
+<polyline points="705,400 701,394 697,406 693,394 689,406 686,400" stroke-width="1" stroke="#888"/>
+<rect x="672" y="390" width="14" height="20" stroke-width="1.5" stroke="#888"/>
+<line x1="672" y1="410" x2="686" y2="390" stroke-width="1" stroke="#888"/>
+<polyline points="855,400 859,394 863,406 867,394 871,406 874,400" stroke-width="1" stroke="#888"/>
+<rect x="874" y="390" width="14" height="20" stroke-width="1.5" stroke="#888"/>
+<line x1="874" y1="410" x2="888" y2="390" stroke-width="1" stroke="#888"/>
+<path d="M770 380 V360 H750 V130 H756" stroke="#888"/>
+<path d="M790 380 V360 H810 V130 H804" stroke="#888"/>
+<path d="M750 315 H768 M810 315 H792" stroke-width="1" stroke="#888" stroke-dasharray="4 3"/>
+<circle cx="750" cy="315" r="2.5" fill="#888" stroke="none"/>
+<circle cx="810" cy="315" r="2.5" fill="#888" stroke="none"/>
+<rect x="768" y="307" width="24" height="16" stroke-width="1.5" stroke="#888" fill="#fff"/>
+<circle cx="780" cy="315" r="4.5" stroke-width="1" stroke="#888"/>
+<circle cx="780" cy="130" r="24" stroke="#888"/>
+<path d="M757 130 L770 123 L770 137 Z" fill="#888" stroke-width="1" stroke="#888"/>
+<path d="M803 130 L790 123 L790 137 Z" fill="#888" stroke-width="1" stroke="#888"/>
+<rect x="732" y="170" width="96" height="36" stroke-width="1" stroke="#888" stroke-dasharray="12 4 2 4"/>
+<text x="780" y="186" text-anchor="middle" font-size="10" stroke="none" fill="#888">2V16 jarru-</text>
+<text x="780" y="199" text-anchor="middle" font-size="10" stroke="none" fill="#888">venttiili</text>
+<rect x="752" y="432" width="36" height="44" stroke-width="1" stroke="#888" stroke-dasharray="12 4 2 4"/>
+<path d="M764 444 Q772 454 764 464 M776 444 Q768 454 776 464" stroke-width="1.5" stroke="#888"/>
+<line x1="758" y1="466" x2="782" y2="442" stroke-width="1" stroke="#888" marker-end="url(#ahg)"/>
+<path d="M770 520 V476 M770 432 V420" stroke="#888"/>
+<circle cx="770" cy="520" r="3.5" fill="#888" stroke="none"/>
+<path d="M790 420 V565" stroke="#888"/>
+<circle cx="790" cy="565" r="3.5" fill="#888" stroke="none"/>
+<text x="780" y="74" text-anchor="middle" font-weight="bold" stroke="none" fill="#888">2M3 Ankkurivinssi</text>
+<text x="780" y="89" text-anchor="middle" font-size="11" stroke="none" fill="#888">+ oma jarru · tiedot ⚠</text>
+<text x="798" y="470" font-weight="bold" font-size="11" stroke="none" fill="#888">2V14 FXDC</text>
+<text x="798" y="484" font-size="11" stroke="none" fill="#888">vinssin virtaus ⚠</text>
+<text x="680" y="436" font-weight="bold" font-size="11" stroke="none" fill="#888">2V15 4/3</text>
+<text x="680" y="450" font-size="11" stroke="none" fill="#888">A,B→T</text>
+<text x="742" y="340" text-anchor="end" font-weight="bold" font-size="11" stroke="none" fill="#888">2V11</text>
+<!-- ===== Asema 3: painepesuri (myöhemmin) ===== -->
+<rect x="970" y="380" width="50" height="40" stroke-width="1.5" stroke="#888"/>
+<rect x="1020" y="380" width="50" height="40" stroke-width="1.5" stroke="#888"/>
+<path d="M1035 380 V400 H1055 V420 M1035 420 V410 M1030 410 H1040" stroke-width="1.5" stroke="#888"/>
+<line x1="985" y1="418" x2="985" y2="383" stroke-width="1.5" stroke="#888" marker-end="url(#ahg)"/>
+<path d="M1005 420 V410 M1000 410 H1010" stroke-width="1.5" stroke="#888"/>
+<polyline points="970,400 966,394 962,406 958,394 954,406 951,400" stroke-width="1" stroke="#888"/>
+<rect x="937" y="390" width="14" height="20" stroke-width="1.5" stroke="#888"/>
+<line x1="937" y1="410" x2="951" y2="390" stroke-width="1" stroke="#888"/>
+<polyline points="1070,400 1074,394 1078,406 1082,394 1086,406 1089,400" stroke-width="1" stroke="#888"/>
+<rect x="1089" y="390" width="14" height="20" stroke-width="1.5" stroke="#888"/>
+<line x1="1089" y1="410" x2="1103" y2="390" stroke-width="1" stroke="#888"/>
+<circle cx="1020" cy="130" r="24" stroke="#888"/>
+<path d="M997 130 L1010 123 L1010 137 Z" fill="#888" stroke-width="1" stroke="#888"/>
+<path d="M1035 380 V350 H990 V130 H996" stroke="#888"/>
+<path d="M1044 130 H1090 V565" stroke="#888"/>
+<circle cx="1090" cy="565" r="3.5" fill="#888" stroke="none"/>
+<rect x="1017" y="432" width="36" height="44" stroke-width="1" stroke="#888" stroke-dasharray="12 4 2 4"/>
+<path d="M1029 444 Q1037 454 1029 464 M1041 444 Q1033 454 1041 464" stroke-width="1.5" stroke="#888"/>
+<line x1="1023" y1="466" x2="1047" y2="442" stroke-width="1" stroke="#888" marker-end="url(#ahg)"/>
+<path d="M1035 520 V476 M1035 432 V420" stroke="#888"/>
+<circle cx="1035" cy="520" r="3.5" fill="#888" stroke="none"/>
+<path d="M1055 420 V565" stroke="#888"/>
+<circle cx="1055" cy="565" r="3.5" fill="#888" stroke="none"/>
+<text x="1020" y="74" text-anchor="middle" font-weight="bold" stroke="none" fill="#888">2M4 Painepesuri</text>
+<text x="1020" y="89" text-anchor="middle" font-size="11" stroke="none" fill="#888">yksisuuntainen · tiedot ⚠</text>
+<text x="1012" y="470" text-anchor="end" font-weight="bold" font-size="11" stroke="none" fill="#888">2V17 FXDC</text>
+<text x="1012" y="484" text-anchor="end" font-size="11" stroke="none" fill="#888">pesurin virtaus ⚠</text>
+<text x="958" y="436" font-weight="bold" font-size="11" stroke="none" fill="#888">2V18 3/2</text>
+<text x="958" y="450" font-size="11" stroke="none" fill="#888">lepo A→T</text>
+<!-- ===== LS-signaalit ===== -->
+<path d="M520 307 V265 H638" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M780 307 V265 H888" stroke-width="1.5" stroke-dasharray="6 4" stroke="#888"/>
+<path d="M990 300 H1010 V265 H912" stroke-width="1.5" stroke-dasharray="6 4" stroke="#888"/>
+<circle cx="990" cy="300" r="2.5" fill="#888" stroke="none"/>
+<rect x="888" y="257" width="24" height="16" stroke-width="1.5" stroke="#888" fill="#fff"/>
+<circle cx="900" cy="265" r="4.5" stroke-width="1" stroke="#888"/>
+<path d="M900 257 V240 H680 V265 H662" stroke-width="1.5" stroke-dasharray="6 4" stroke="#888"/>
+<rect x="638" y="257" width="24" height="16" stroke-width="1.5" stroke="#888" fill="#fff"/>
+<circle cx="650" cy="265" r="4.5" stroke-width="1" stroke="#888"/>
+<text x="900" y="290" text-anchor="middle" font-weight="bold" font-size="11" stroke="none" fill="#888">2V13</text>
+<text x="650" y="290" text-anchor="middle" font-weight="bold" font-size="11" stroke="none" fill="#888">2V12</text>
+<path d="M650 257 V215 H300 V735" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="310" y="208" font-size="11" stroke="none" fill="#000">LS-linja 1/4" → säätimelle</text>
+<circle cx="300" cy="640" r="3" fill="#000" stroke="none"/>
+<path d="M300 640 H330" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M330 632 Q340 640 330 648 M350 632 Q340 640 350 648" stroke-width="1.5"/>
+<path d="M350 640 H372 V662" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M358 662 V678 H386 V662" stroke-width="2" stroke="#000"/>
+<text x="392" y="642" font-weight="bold" font-size="11" stroke="none" fill="#000">2V19 vuotokuristin ~Ø0,8 mm</text>
+<text x="392" y="656" font-size="11" stroke="none" fill="#000">LS-linja tyhjenee → valmiustila</text>
+<text x="650" y="304" text-anchor="middle" font-size="10" stroke="none" fill="#888">ennen vinssiä: asema 1</text>
+<text x="650" y="316" text-anchor="middle" font-size="10" stroke="none" fill="#888">suoraan LS-linjaan</text>
+<!-- ===== Huomautukset ===== -->
+<text x="470" y="700" font-weight="bold" font-size="11" stroke="none" fill="#000">Toiminta</text>
+<text x="470" y="715" font-size="11" stroke="none" fill="#000">Kaikki venttiilit keskellä → A, B → T, LS-linja tyhjenee, pumppu ~20 bar.</text>
+<text x="470" y="730" font-size="11" stroke="none" fill="#000">Venttiili päällä → LS = kuorman paine, pumppu = LS + 20 bar, enintään 250 bar.</text>
+<text x="470" y="745" font-size="11" stroke="none" fill="#000">Keulapotkuri: ei kuristinta, pumppu nousee suoraan 250 bariin (työntö ~85–88 %).</text>
+<text x="470" y="760" font-size="11" stroke="none" fill="#000">Kierroslukitus ESP32:ssa: keulapotkuri vain lähellä tyhjäkäyntiä (raja ⚠).</text>
+<text x="470" y="775" font-size="11" stroke="none" fill="#000">Vinssin kuorman pito: jarruventtiili ja vinssin jarru, ei pumppu.</text>
+<text x="470" y="790" font-size="11" stroke="none" fill="#000">Pätevä henkilö tarkistaa kytkennän ja säädöt ennen rakentamista.</text>
+  <rect x="940" y="866" width="280" height="124" stroke-width="1.5"/>
+  <line x1="940" y1="888" x2="1220" y2="888" stroke-width="1"/>
+<text x="950" y="882" font-weight="bold" font-size="13" stroke="none" fill="#000">Vega — hydraulijärjestelmä</text>
+<text x="950" y="904" font-size="11" stroke="none" fill="#000">Vaihtoehto C: apupiiri, LS + on/off</text>
+<text x="950" y="920" font-size="11" stroke="none" fill="#000">ISO 1219-1 -merkit, ISO 1219-2 -periaatteet</text>
+<text x="950" y="936" font-size="11" stroke="none" fill="#000">Versio 0.1 · 2026-10-26</text>
+<text x="950" y="969" font-size="11" stroke="none" fill="#000">Tarkastettava pätevällä henkilöllä</text>
+<text x="950" y="984" font-size="11" stroke="none" fill="#000">Piirtänyt: Claude · Hyväksynyt: –</text>
+<text x="950" y="953" font-weight="bold" font-size="11" stroke="none" fill="#b00">Tila: SELVITYS – ei päätetty</text>
+  </g>
+</svg>

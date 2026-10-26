@@ -8,6 +8,8 @@
 >
 > **ISO 1219 -kaaviot** (2026-10-23, luonnos): arkki 1 ohjauspiiri, arkki 2 apupiiri ja keulapotkuri,
 > arkki 3 paluu, jäähdytys ja säiliö. Alla olevat Mermaid-lohkokaaviot säilyvät yleiskuvana.
+> Vaihtoehdon C (PVH57, LS ja on/off-venttiilit; selvitys, ei päätetty) kaavio:
+> [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md#iso-1219--kaavio-luonnos).
 
 ## ISO 1219 -kaaviot (luonnos)
 
