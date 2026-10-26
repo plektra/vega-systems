@@ -1,6 +1,6 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
-> **Tila:** päivitetty 2026-10-23 (P2 = F1-61 + BPV, Spidex-kytkin, 50 mm imu). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
+> **Tila:** päivitetty 2026-10-23 (P2 = F1-61 + BPV, Spidex-kytkin, 50 mm imu) ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
 > Yhtenäinen viiva = olemassa tai päätetty, katkoviiva = suunnitteilla tai vaihtoehto.
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
 > [design/p2-pump-options.md](design/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
@@ -73,6 +73,9 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 3V1 | Jäähdyttimen ohitusventtiili | 3–4 bar, rinnakkain jäähdyttimen kanssa | [oil-cooling](design/oil-cooling.md#paluulinja-asennus) |
 | 3V3 | Merivesihaaran virtauksenrajoitus | 30–40 l/min; vakiovirtausventtiili tai käsiventtiili **⚠ päättämättä** | [oil-cooling](design/oil-cooling.md#merivesi) |
 | 3V4 | Kuristus merivesipäälinjaan | ohjaa osan virtauksesta haaraan | [oil-cooling](design/oil-cooling.md#merivesi) |
+| 3Z3 | Paluukeräin | paluut yhdistetään tavallisilla T-liittimillä venttiililohkon lähellä: 1" läpivirtaus, pienemmät paluut haaraan; BSPP + tiivistealuslevy; vuotolinjat eivät tule keräimeen | [oil-cooling](design/oil-cooling.md#paluiden-yhdistäminen) |
+| – | Paluulinja | **1"**, noin 5 m (keräin → jäähdytin → suodatin); supistus 3/4":iin jäähdyttimen liitännöissä | [omistaja 2026-10-26], [oil-cooling](design/oil-cooling.md#paluulinjan-letkukoko) |
+| 3G1 | Paluupaineen mittari (ehdotus) | keräimessä; näyttää kylmäkäynnistyksen paluupaineen ja jäähdyttimen tai suodattimen tukkeutumisen | [oil-cooling](design/oil-cooling.md#paluiden-yhdistäminen) |
 | 3Z2 | Paluusuodatin OMT OMTF112C10NA2 | 10 µm (selluloosa, nominaalinen **⚠ tarkista**), 100 l/min, ohitus 1,7 bar; painemittarilla | [blogi 2017-04-10], [omistaja 2026-10-26], [jälleenmyyjä Phoenix Hydraulics](https://www.phoenixhydraulics.co.uk/omtf112c10na2.html) |
 | 3Z1 | Säiliö Flowfit 100 l | 80 l HVLP 32; uusi 50 mm:n ulosotto P2:lle, 32 mm jää P1:lle | [päätös 2026-10-23](../decisions.md) |
 | 3B1 | Öljyn lämpötila-anturi | varoitus 65 °C, hälytys 70 °C → ESP32 / Signal K | [päätös 2026-10-23](../decisions.md) |
@@ -151,7 +154,10 @@ Pohjalaatan paikat 2–4 ovat vapaana (esim. ankkurivinssi).
 
 ```mermaid
 flowchart LR
-  RET(["Paluut:<br/>orbitroli, RPF3,<br/>VPR3, 2/2, BAV-713, VMP"])
+  R1(["Piiri 1:<br/>orbitrolin T, RPF3"])
+  R2(["Piiri 2:<br/>VPR3 B, 2/2, BAV-713 T, VMP"])
+  RET["3Z3 paluukeräin<br/>T-liittimet, 1#quot; läpi"]
+  GAU["3G1 paluupaineen<br/>mittari (ehdotus)"]
   COOL["Öljynjäähdytin<br/>Bowman EC100 / EC80 ⚠"]
   BYP["Ohitus 3–4 bar"]
   FILT["Paluusuodatin"]
@@ -161,8 +167,11 @@ flowchart LR
   GBC["Merivaihteen<br/>jäähdytin"]
   EHX["Koneen<br/>lämmönvaihdin"]
 
+  R1 --> RET
+  R2 --> RET
+  RET -.- GAU
   RET -->|nykyinen| FILT
-  RET -.-> COOL -.-> FILT
+  RET -.->|"1#quot;, ~5 m"| COOL -.-> FILT
   RET -.-> BYP -.-> FILT
   FILT --> TANK
 
@@ -171,7 +180,7 @@ flowchart LR
   COOL -.->|"palaa ennen koneen<br/>lämmönvaihdinta"| EHX
 
   classDef planned stroke-dasharray: 5 5
-  class COOL,BYP,LIM planned
+  class COOL,BYP,LIM,GAU planned
 ```
 
 ## Toimintatilat (apupiiri)
