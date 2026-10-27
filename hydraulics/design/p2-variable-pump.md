@@ -771,7 +771,7 @@ nykyisen rinnalle.
 - [x] Säiliön syvyys kannesta pohjaan: 365 mm [omistaja 2026-10-27]
 - [ ] Veneellä: öljypinnan etäisyys kannesta pienimmällä öljymäärällä, imu-ulosottojen ja mahdollisen väliseinän paikka suodattimen kohdalla, tila kannella Ø 129 mm:n reiälle ja laipalle, nykyisten pulttireikien jako
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
-- [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
+- [ ] Ankkurivinssin moottori on Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]; kierrostilavuus (noin 155,7 cm³ ⚠), käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
 - [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]
 - [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (ratkaisee venttiilikokoonpanon: FXDC + LS-purku, LS + on/off vai PVG 32)
 - [x] Omistajat: PVH57 vai F1-61 → **PVH57**, kaupat sovittu (päätös 2026-10-27)

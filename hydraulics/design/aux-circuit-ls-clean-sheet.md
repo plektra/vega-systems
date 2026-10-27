@@ -68,7 +68,7 @@ saa asetetun virtauksensa paineesta riippumatta, kunhan pumpun tuotto riittää.
 | Lohko | Kuorma | Kara ja lisät |
 |---|---|---|
 | 1 | Keulapotkuri | Moottorikara: keskellä A ja B ovat yhteydessä säiliöön, joten potkuri pyörii vapaasti kuten BAV-713:lla ([päätös 2026-10-23](../../decisions.md)). Isku- ja imuventtiilit A/B-portteihin. Karan koko noin 40 l/min **⚠ tarkista karavalikoima**. Portaaton työntö ilman lisäosia; **⚠ tarkista, sopiiko SH240 portaattomaan ohjaukseen**. |
-| 2 | Ankkurivinssi | Moottorikara, portaaton nopeus. **Kuorman pito vinssin omalla jarrulla ja moottoriin asennetulla jarruventtiilillä, ei venttiilin karalla.** Vinssin moottorin tiedot **⚠ ei tiedossa** ([loads.yaml](../loads.yaml)). |
+| 2 | Ankkurivinssi | Moottorikara, portaaton nopeus. **Kuorman pito vinssin omalla jarrulla ja moottoriin asennetulla jarruventtiilillä, ei venttiilin karalla.** Moottori **Danfoss OMP 160 (151-0031)** [omistaja 2026-10-27], kierrostilavuus noin 155,7 cm³ **⚠ tarkista**. Teoreettinen momentti noin **25 Nm / 10 bar** (155,7 × Δp / 20π) ja nopeus noin **6,4 rpm / l/min** (esim. 20 l/min → noin 130 rpm) [laskelma, ei hyötysuhteita]. **OMP:n suurin paine-ero on selvästi alle järjestelmän 250 barin ⚠ tarkista datalehdestä**, joten vinssilohkoon tarvitaan oma paineraja (PVG:n porttiventtiilit tai LS-paineenrajoitus). ([loads.yaml](../loads.yaml)) |
 | 3 | Painepesuri | Yksisuuntainen, virtaus rajattu pesurimoottorin tarpeeseen (**⚠ ei tiedossa**, laitetta ei valittu) |
 | 4 | Varapaikka | Daavitti tai muu myöhemmin; lohkoja voi lisätä jälkikäteen |
 
@@ -319,5 +319,5 @@ säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole t
 - [ ] Pätevä henkilö: PVLP-isku- ja imuventtiilien tarve ja asetus keulapotkurille
 - [ ] Danfossin PVG 32 -huolto-ohje: kiristyspulttien ja PVE-ruuvien momentit, purkujärjestys; PVAS 157B8005:n hinta; korjaamon koestuksen hinta
 - [ ] Sleipner: sopiiko SH240 portaattomaan ohjaukseen proportionaaliventtiilillä
-- [ ] Ankkurivinssin moottori, jarru ja jarruventtiili
+- [ ] Ankkurivinssin moottori (Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]): paineraja vinssilohkolle (OMP:n raja alle järjestelmän 250 barin ⚠), jarruventtiili
 - [ ] Painepesurin hydraulimoottorin virtaus ja paine

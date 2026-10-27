@@ -68,10 +68,13 @@ loads:
   - id: WLS
     name: Ankkurivinssi
     in_scope: true                 # vahvistamatta
-    existing: ei kytketty; ketjuveto kahdella ketjulla ja käsikäyttöinen hihna-/kitkajarru (nauhajarru) ketjupyörän akselilla; vapaa pudotus; räikkälukitus (omistajan muistin mukaan, tarkista); käsikampi välitysakselilla (myös moottorin voima kulkee välitysakselin ja hammaspyörävälityksen kautta ketjupyörän akselille); sähkömoottori (tukilaakeriyksikön kautta, suoraveto tai planeettavaihde, ei varmaa) korvataan hydraulimoottorilla, ketjuveto säilytetään; moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli ei tiedossa [omistaja 2026-10-27]
+    existing: ei kytketty; ketjuveto kahdella ketjulla ja käsikäyttöinen hihna-/kitkajarru (nauhajarru) ketjupyörän akselilla; vapaa pudotus; räikkälukitus (omistajan muistin mukaan, tarkista); käsikampi välitysakselilla (myös moottorin voima kulkee välitysakselin ja hammaspyörävälityksen kautta ketjupyörän akselille); sähkömoottori (tukilaakeriyksikön kautta, suoraveto tai planeettavaihde, ei varmaa) korvataan hydraulimoottorilla, ketjuveto säilytetään; moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]
     criticality: high
     actuator: motor
     motor:
+      model: Danfoss OMP 160 (151-0031)   # omistaja 2026-10-27; lopetettu, korvaava 151-0614
+      displacement_cm3: 155.7         # tarkista datalehdestä (hakutulos)
+      max_pressure_drop_bar: null     # OMP-sarjan raja selvästi alle 250 bar, tarkista
       working_pull_kN: null
       max_pull_kN: null
       line_speed_m_per_min: null

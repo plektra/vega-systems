@@ -72,7 +72,7 @@ Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61
 | 2V1.4–2V1.5, Y4–Y5 | Lohkot 4–5, PVEO | varalla, A/B tulpattu; voidaan poistaa pinosta (PVAS 4 lohkolle 157B8004) | [datalehti PVG 32 s. 28–29] |
 | 2A1 | Ohjaus (ESP32 PDM) | joystick (potentiometri) → PVEH; kytkimet → PVEO; hätäseis-rele katkaisee PVE-syötön 24 V; PVEH:n vikasignaali Signal K:hon | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md) |
 | 2M2 | Sleipner U11 / SH240 | 100 %: 33,8 l/min, 264 bar; A/B 1/2" SAE 100R2AT 2 × 8,5 m; vuotolinja 1/4" säiliöön | [ohje Sleipner 2746 35 2025] |
-| 2M3, 2M4 | Ankkurivinssi, painepesuri | myöhemmin; mallit **⚠ ei tiedossa** | – |
+| 2M3, 2M4 | Ankkurivinssi, painepesuri | myöhemmin; 2M3 = Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]; painepesurin malli **⚠ ei tiedossa** | – |
 
 ### Arkki 3: Paluu, jäähdytys ja säiliö
 
