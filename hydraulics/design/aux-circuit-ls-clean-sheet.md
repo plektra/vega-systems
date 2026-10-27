@@ -1,6 +1,6 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu ja proportionaalinen LS-lohkoventtiili
 
-> **Tila:** ajatuskoe 2026-10-25, päivitetty 2026-10-26 (PVG 32 -ehdokas, ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
+> **Tila:** ajatuskoe 2026-10-25, päivitetty 2026-10-27 (PVG 32 -ehdokas, tarjous 200 €, ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). PVH57:n käyttö olemassa olevien
 > venttiilien kanssa on selvitetty tiedostossa [p2-variable-pump](p2-variable-pump.md). Tässä
 > kysytään, miten apupiiri rakennettaisiin, jos olemassa olevia venttiileitä ei tarvitsisi käyttää
@@ -126,7 +126,7 @@ Sama ajatus kuin [pressure-monitoring](pressure-monitoring.md):
 ## Kustannukset
 
 - LS-lohkoventtiilin hinta uutena **⚠ ei tiedossa** (arviolta useita satoja euroja lohkolta [arvio]).
-  Käytetty 5-lohkoinen PVG 32 on myynnissä 400 €:lla, ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi).
+  Käytetty 5-lohkoinen PVG 32 on myynnissä 400 €:lla; omistaja tarjosi 200 € (2026-10-27), ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi).
 - Ratkaisu jättää käyttämättä toimivia osia, jotka on jo hankittu.
 
 ## Suositus
@@ -162,6 +162,9 @@ Kuvista luetut arvot on merkitty *kuvasta*; merkinnät ovat likaisia ja osin ep�
 | Karat | **⚠ ei tiedossa**; selviää kokoonpanokoodista | – |
 | Pumppumoduuli | avoin vai suljettu keskiasento **⚠ ei tiedossa**; selviää kokoonpanokoodista | – |
 | Kunto | likainen, **osa porteista auki ilman tulppia** → puhdistus ja koestus välttämättömiä | kuvasta |
+| Toiminta purettaessa | **Ei kokeiltu:** auton keulapumpun kardaani oli rikki, kun auto tuli purkuun, joten venttiiliä ei voitu ajaa. Toimintakunto ja vuodot **⚠ ei tiedossa** | [myyjä 2026-10-27] |
+| Käyttö autossa | Hiekoittimessa oli nopeudensäätö → todennäköisesti se oli ainoa portaaton toiminto ja PVEH-lohko, muut on/off. Sopii kuvista luettuun (1 × PVEH, 4 × PVEO) | [myyjä 2026-10-27] |
+| Säilytys | sisällä purkamisen jälkeen; irrotuksen kesto **⚠ ei tiedossa** | [myyjä 2026-10-27] |
 
 ### PVG 32:n rakenne: mitä voi vaihtaa
 
@@ -248,13 +251,21 @@ venttiili. Venttiili sopii vain PVH57-reittiin (suljetun keskiasennon moduulilla
 selvitetään kokoonpanokoodilla pumppumoduulin tyyppi ja karat sekä kysytään myyjältä, toimiko PVEH
 purettaessa.
 
+**Päivitys 2026-10-27:** Myyjä ei päässyt kokeilemaan venttiiliä (keulapumpun kardaani rikki), joten
+toimintakunnosta ja vuodoista ei ole tietoa. Sisäsäilytys pienentää ruostumisen ja karojen
+jumiutumisen riskiä, mutta auki olleiden porttien kautta sisään on voinut päästä likaa. Omistaja
+tarjosi **200 €** perustellen riskillä, että venttiili joutuu kierrätykseen [omistaja 2026-10-27].
+Tarjous on perusteltu: pelkkä PVEH-yksikkö on uutena noin 670 € + ALV, ja karat sekä PVE:t voi
+koestaa ja tarvittaessa vaihtaa yksitellen. Odottaa myyjän vastausta.
+
 ## Avoimet kysymykset
 
 - [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (sama kysymys kuin [p2-variable-pump](p2-variable-pump.md#avoimet-kysymykset))
 - [x] Käytetyn PVG 32:n hinta ja saatavuus: 5 lohkoa, 1 × PVEH ja 4 × PVEO, 400 € (tori.fi 2026-10-26), ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)
 - [x] PVG 32:n datalehti: paineluokka, karat, PVLP, PVE-signaali luettu ohjeesta 520L0344
 - [ ] Danfossin jälleenmyyjä: kokoonpanokoodi 157N553(8/B) → pumppumoduulin tyyppi (avoin vai suljettu keskiasento), peruslohkot (PVLP-paikat, LS A/B -vaihtoventtiili), karat
-- [ ] Myyjä: toimiko venttiili ja erityisesti PVEH purettaessa; mitä kukin lohko ohjasi; porttien tulppaus kuljetukseen
+- [x] Myyjä: toimiko venttiili purettaessa → ei kokeiltu (kardaani rikki); säilytetty sisällä; hiekoittimessa nopeudensäätö (todennäköisesti PVEH-lohko) [myyjä 2026-10-27]
+- [ ] Myyjä: hyväksyykö 200 €:n tarjouksen; mitä muut lohkot ohjasivat; porttien tulppaus kuljetukseen
 - [ ] Danfoss: riittääkö PVH57:n noin 20 barin paine-ero PVG 32:n kompensaattoreille ja PVE:iden pilottiöljylle; sopiiko sarjan 4/7 PVE sarjan 0 lohkoon
 - [ ] Pätevä henkilö: PVLP-isku- ja imuventtiilien tarve ja asetus keulapotkurille
 - [ ] Sleipner: sopiiko SH240 portaattomaan ohjaukseen proportionaaliventtiilillä
