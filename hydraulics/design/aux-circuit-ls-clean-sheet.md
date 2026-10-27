@@ -225,6 +225,7 @@ HRC 150 ja Taper Lock 2012 -holkit 48 mm / 1 1/4" (päätös 2026-10-27), kannak
 | Kara keulapotkurin lohkossa | Tarvitaan **40 l/min, avoin keskiasento** (A ja B kuristettuina säiliöön): 157B7102 (lohko ilman LS A/B -vaihtoventtiiliä) tai 157B7122 / 157B7132 (vaihtoventtiilin kanssa) [s. 56]. Suljettu keskiasento (esim. 157B7002) ei käy, koska se lukitsisi moottorin. Hinta noin 116 SGD + verot ([PV Global](https://www.pvglobal.com.sg/pvg32/133-157b7002-pvbs32-main-spool.html), 2026-10-25). |
 | Pumppumoduulin paineenrajoitin | sisäänrakennettu; asetetaan **noin 30 bar pumpun asetuksen yläpuolelle**, eli noin 280 bariin [s. 5]. Korvaa VMP:n. |
 | Isku- ja imuventtiilit PVLP keulapotkurin A/B-porttiin | **Suositus,** jos lohkossa on niille paikat: Sleipner vaatii iskuventtiilit 10–15 % maksimipaineen yläpuolelle, ja imuventtiili estää kavitaation potkurin pyöriessä vapaasti. Esim. PVLP 280 bar = 157B2280 [s. 27] **⚠ hinta ei tiedossa**. Pätevä henkilö arvioi. |
+| Vinssilohkon paineraja (OMP 160) | **Suositus [arvio]: LS A/B -paineenrajoitus vinssin peruslohkossa (PVB).** Rajoitin katkaisee lohkon LS-signaalin säädettyyn paineeseen, joten pumppu nostaa painetta vinssille vain siihen asti eikä täysi virta kulje paineenrajoituksen yli: ei lämpöä, vaikka vinssi jumittuu. Asetetaan OMP 160:n suurimman jatkuvan paine-eron mukaan (**⚠ datalehdestä**). Vaatii peruslohkon, jossa on LS A/B -rajoittimet (**⚠ tarkista** lohkon 2 koodista ja datalehden 520L0344 vaihtoehdoista); muuten käytetty peruslohko vaihdetaan. **Lisäksi PVLP-iskuventtiilit** lohkon A/B-portteihin, jos paikat ovat: ne leikkaavat painepiikit (ketjun nykäys, pysäytys). **Varavaihtoehto:** moottorin päälle asennettava kaksoisristivirtausventtiili (dual cross-over relief), jonka läpi koko virta kulkee jumitilanteessa (lyhytaikaisesti hyväksyttävä). Jarruventtiili ei korvaa painerajaa. |
 | Pumpun paine-ero (PVH57 noin 20 bar) | riittää luultavasti lohkojen kompensaattoreille ja PVE:iden pilottiöljylle **⚠ tarkista Danfossilta** |
 | Tiivisteet ja puhdistus | PVAS 157B8005, jos venttiili avataan; puhdistus ja koestus hydrauliikkaliikkeessä |
 
@@ -317,6 +318,7 @@ säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole t
 - [ ] Myyjä: hyväksyykö 200 €:n tarjouksen; mitä muut lohkot ohjasivat; porttien tulppaus kuljetukseen
 - [ ] Danfoss: riittääkö PVH57:n noin 20 barin paine-ero PVG 32:n kompensaattoreille ja PVE:iden pilottiöljylle; sopiiko sarjan 4/7 PVE sarjan 0 lohkoon
 - [ ] Pätevä henkilö: PVLP-isku- ja imuventtiilien tarve ja asetus keulapotkurille
+- [ ] Vinssilohkon (lohko 2) peruslohkon koodi: onko LS A/B -paineenrajoittimet ja PVLP-paikat; OMP 160:n suurin jatkuva ja hetkellinen paine-ero rajoittimen asetusta varten
 - [ ] Danfossin PVG 32 -huolto-ohje: kiristyspulttien ja PVE-ruuvien momentit, purkujärjestys; PVAS 157B8005:n hinta; korjaamon koestuksen hinta
 - [ ] Sleipner: sopiiko SH240 portaattomaan ohjaukseen proportionaaliventtiilillä
 - [ ] Ankkurivinssin moottori (Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]): paineraja vinssilohkolle (OMP:n raja alle järjestelmän 250 barin ⚠), jarruventtiili
