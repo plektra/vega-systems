@@ -109,8 +109,12 @@ on 07/88. Jäähdytinrungon pituus ilman päätylaippoja on **185 mm** [omistaja
 - EC80:n kokonaispituus päätykansineen on vain 174 mm, joten 185 mm:n runko ei voi olla EC80.
   EC100:n kokonaispituus on 260 mm, josta päätykansiin jää noin 2 × 37 mm, mikä on uskottavaa.
 - Koodin loppuosa **-2** vastaa luettelon EC100-koodeja (EC100-xxxx-**2**; EC80:llä -1).
-- Kilven *EC10* on todennäköisesti *EC100*, jonka viimeinen numero on kulunut tai jäänyt
-  lukematta **⚠ tarkista** kilvestä.
+- Merkintä **EC10** on valettu vaipan kylkeen (kuva alla), joten se ei ole kulunut kilpi.
+  Todennäköisesti se on vaippavalun kokotunnus, joka vastaa EC100-kokoa [arvio]. Tätä ei löytynyt
+  luettelosta, mutta pituus ja koodin -2 osoittavat samaan suuntaan.
+
+  ![Vaipan valumerkintä EC10](../img/oil-cooler-ec10-casting.jpg)
+  *Vaipan valumerkintä "EC10" [omistaja 2026-10-27].*
 - Välikoodi **3249** on vanha (1988) versiokoodi. Sitä ei löytynyt nykyisistä luetteloista, joten
   vetojen määrä (1-, 2- vai 3-vetoinen) ja tarkka teho ovat **⚠ ei tiedossa**. Laskelmat olettavat
   nykyisen merivesiversion (3-vetoinen) arvot. Vetojen määrän näkee päätykannen väliseinistä, ja
@@ -317,7 +321,7 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 ## Avoimet kysymykset
 
 - [ ] Jäähdyttimen tarkka paikka ja paluulinjan letkupituus (arvio 2–3 m säiliöstä [omistaja 2026-10-26]); paluiden yhdistämiskohta
-- [x] Onko varalla oleva jäähdytin EC100 vai EC80: **EC100** (kilpi EC10[0]-3249-2, 07/88, runko 185 mm) [omistaja 2026-10-27]
+- [x] Onko varalla oleva jäähdytin EC100 vai EC80: **EC100** (valumerkintä EC10, koodi 3249-2, 07/88, runko 185 mm) [omistaja 2026-10-27]
 - [ ] Koodin 3249 merkitys ja vetojen määrä (Bowman / Lancing Marine, tai päätykannen väliseinistä)
 - [x] Koneen merivesipumpun tuotto: noin 70 l/min 650 rpm:llä [omistaja 2026-10-22]
 - [x] 650 rpm on koneen kierrosluku; pumppu on koneen etupään voimanulosotossa kiinteällä välityksellä
