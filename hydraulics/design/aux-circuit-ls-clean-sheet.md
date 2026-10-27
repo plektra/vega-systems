@@ -160,7 +160,7 @@ Kuvista luetut arvot on merkitty *kuvasta*; merkinnät ovat likaisia ja osin ep�
 | Ohjausyksiköt (PVE) | Lohko 1: **157B4024 = PVEH 24 V** (proportionaalinen, vikavalvonta); lohkot 2–3: **157B4224 = PVEO 24 V** (on/off); lohkot 4–5 epäselviä, todennäköisesti PVEO. Kaikki vanhaa sarjaa 0. | kuvasta, [Kramp: PVE cross reference](https://documents.kramp.com/PVE_cross_reference_EN.pdf) |
 | Käsiohjaus | Toisella puolella käsivipujen kannat ilman vipuja **⚠ tarkista** | kuvasta |
 | Karat | **⚠ ei tiedossa**; selviää kokoonpanokoodista | – |
-| Pumppumoduuli | avoin vai suljettu keskiasento **⚠ ei tiedossa**; selviää kokoonpanokoodista | – |
+| Pumppumoduuli | Autossa kytkettynä **säätötilavuuspumppuun** [myyjä 2026-10-27] → todennäköisesti **suljetun keskiasennon** malli, joka sopii PVH57:lle. Moduulin oma koodi (157B5…) **⚠ tarkista** rungosta. Kuvassa kyljessä liitin, todennäköisesti käytössä ollut LS-portti; ylhäällä P- ja T-portit, M-portti ja tulpattu lisäportti; etupinnalla todennäköisesti paineenrajoittimen säätöruuvi | [myyjä 2026-10-27], kuvasta |
 | Kunto | likainen, **osa porteista auki ilman tulppia** → puhdistus ja koestus välttämättömiä | kuvasta |
 | Toiminta purettaessa | **Ei kokeiltu:** auton keulapumpun kardaani oli rikki, kun auto tuli purkuun, joten venttiiliä ei voitu ajaa. Toimintakunto ja vuodot **⚠ ei tiedossa** | [myyjä 2026-10-27] |
 | Käyttö autossa | Hiekoittimessa oli nopeudensäätö → todennäköisesti se oli ainoa portaaton toiminto ja PVEH-lohko, muut on/off. Sopii kuvista luettuun (1 × PVEH, 4 × PVEO) | [myyjä 2026-10-27] |
@@ -183,8 +183,10 @@ Kuvista luetut arvot on merkitty *kuvasta*; merkinnät ovat likaisia ja osin ep�
 
 ### Mitä keulapotkuri tarvitsee PVH57:n ja tämän venttiilin lisäksi
 
-Oletus: pumppumoduuli on suljetun keskiasennon malli (sopii säätötilavuuspumpulle). Jos se on
-avoimen keskiasennon malli, moduuli vaihdetaan **⚠ hinta ei tiedossa**.
+Pumppumoduuli on todennäköisesti suljetun keskiasennon malli, koska venttiili oli autossa
+kytkettynä säätötilavuuspumppuun [myyjä 2026-10-27]. Varmistetaan moduulin koodista; jos se
+osoittautuu avoimen keskiasennon malliksi, moduuli vaihdetaan (esim. 157B5111, G 3/4, suljettu
+keskiasento, pilottiöljy PVE:ille **⚠ tarkista** Danfossin ohjeesta) **⚠ hinta ei tiedossa**.
 
 ```
 PTO ─ Spidex ─ PVH57 ──P──► PVG 32 [pumppumoduuli ─ lohko 1 (PVEH): keulapotkuri ─ lohkot 2–5 ─ päätylevy]
@@ -256,14 +258,16 @@ toimintakunnosta ja vuodoista ei ole tietoa. Sisäsäilytys pienentää ruostumi
 jumiutumisen riskiä, mutta auki olleiden porttien kautta sisään on voinut päästä likaa. Omistaja
 tarjosi **200 €** perustellen riskillä, että venttiili joutuu kierrätykseen [omistaja 2026-10-27].
 Tarjous on perusteltu: pelkkä PVEH-yksikkö on uutena noin 670 € + ALV, ja karat sekä PVE:t voi
-koestaa ja tarvittaessa vaihtaa yksitellen. Odottaa myyjän vastausta.
+koestaa ja tarvittaessa vaihtaa yksitellen. Myyjän mukaan venttiili oli kytkettynä
+säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole tarpeen
+[myyjä 2026-10-27]. Odottaa myyjän vastausta tarjoukseen.
 
 ## Avoimet kysymykset
 
 - [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (sama kysymys kuin [p2-variable-pump](p2-variable-pump.md#avoimet-kysymykset))
 - [x] Käytetyn PVG 32:n hinta ja saatavuus: 5 lohkoa, 1 × PVEH ja 4 × PVEO, 400 € (tori.fi 2026-10-26), ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)
 - [x] PVG 32:n datalehti: paineluokka, karat, PVLP, PVE-signaali luettu ohjeesta 520L0344
-- [ ] Danfossin jälleenmyyjä: kokoonpanokoodi 157N553(8/B) → pumppumoduulin tyyppi (avoin vai suljettu keskiasento), peruslohkot (PVLP-paikat, LS A/B -vaihtoventtiili), karat
+- [ ] Danfossin jälleenmyyjä: kokoonpanokoodi 157N553(8/B) → pumppumoduulin tyyppi (todennäköisesti suljettu keskiasento, koska autossa oli säätötilavuuspumppu [myyjä 2026-10-27]; varmistetaan moduulin koodista), peruslohkot (PVLP-paikat, LS A/B -vaihtoventtiili), karat
 - [x] Myyjä: toimiko venttiili purettaessa → ei kokeiltu (kardaani rikki); säilytetty sisällä; hiekoittimessa nopeudensäätö (todennäköisesti PVEH-lohko) [myyjä 2026-10-27]
 - [ ] Myyjä: hyväksyykö 200 €:n tarjouksen; mitä muut lohkot ohjasivat; porttien tulppaus kuljetukseen
 - [ ] Danfoss: riittääkö PVH57:n noin 20 barin paine-ero PVG 32:n kompensaattoreille ja PVE:iden pilottiöljylle; sopiiko sarjan 4/7 PVE sarjan 0 lohkoon
