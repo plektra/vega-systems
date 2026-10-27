@@ -113,7 +113,7 @@ yksityisaluksessa, ja ne ovat kalliimpia.
    korkeampi ja jonka leikkauskestävyys on ilmoitettu. Teboil 32S on turvallinen oletus, ja sitä
    on saatavilla.
 2. **Koko öljy vaihdetaan käyttöönoton jälkeen** (päätös 2026-10-27). Vanha, kirkas öljy toimii
-   ensin huuhteluöljynä uuden suodatinelementin läpi. Sen jälkeen öljy tyhjennetään säiliön lisäksi
+   ensin huuhteluöljynä uuden suodatinelementin läpi, ja sillä ajetaan **vähintään koeajot** [omistaja 2026-10-27]. Sen jälkeen öljy tyhjennetään säiliön lisäksi
    letkuista, sylinteristä ja orbitrolista, ja suodatinelementti vaihdetaan.
 3. **HV 46 vain, jos öljynjäähdytin jää pois** tai venettä käytetään vain lämpimänä kautena. Silloin
    kylmäkäynnistyksessä ajetaan tyhjäkäynnillä, kunnes öljy on yli noin 10 °C.
@@ -125,7 +125,8 @@ yksityisaluksessa, ja ne ovat kalliimpia.
 - [x] Nykyisen öljyn kunto: kirkasta [omistaja 2026-10-27]
 - [ ] Hydraulic Lift 32:n VI (tuotetiedote)
 - [x] Huuhtelu: vanhalla öljyllä käyttöönotossa, ei erillistä huuhteluöljyä (päätös 2026-10-27)
-- [ ] Milloin huuhteluöljy vaihdetaan uuteen (esim. käyttöönoton säätöjen ja koeajon jälkeen) ja tarvitaanko käyttöönotossa erillinen suodatinelementti, joka vaihdetaan samalla
+- [x] Milloin huuhteluöljy vaihdetaan: vanhalla öljyllä ajetaan **vähintään koeajot** ennen vaihtoa [omistaja 2026-10-27]
+- [ ] Tarvitaanko käyttöönotossa erillinen suodatinelementti, joka vaihdetaan samalla
 - [ ] Teboil 32S:n ja Neste Hydraulic 32 Superin VI ja leikkauskestävyys (tuotetiedotteet)
 - [ ] Orbitrolin HKUS 160/4 viskositeettialue omasta datalehdestä
 - [ ] Sleipnerin öljysuositus (HS 6468 -ohje) keulapotkurijärjestelmälle

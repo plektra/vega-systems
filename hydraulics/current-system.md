@@ -347,7 +347,7 @@ Avoimet:
 - [x] Mitä öljyä järjestelmässä nyt on: **Teboil Hydraulic Lift 32** (ISO VG 32, DIN 51524-3 HVLP, ISO 6743-4 HV) [omistaja 2026-10-27]
 - [x] Nykyinen öljy: noin 7 vuotta, alle 200 h, kirkasta [omistaja 2026-10-27]; **käytetään käyttöönoton huuhteluöljynä** (päätös 2026-10-27, ks. [hydraulic-oil](design/hydraulic-oil.md))
 - [x] Hydrauliöljyn tyyppi ja luokka: **HVLP 32** (päätös 2026-10-23), ks. [hydraulic-oil.md](design/hydraulic-oil.md)
-- [ ] Öljytuote (Teboil 32S / Neste 32 Super, VI); huuhteluöljyn vaihdon ajankohta käyttöönoton jälkeen
+- [ ] Öljytuote (Teboil 32S / Neste 32 Super, VI); huuhteluöljy vaihdetaan aikaisintaan koeajojen jälkeen [omistaja 2026-10-27]
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
 - [x] BAV-713:n kelojen jännite: 24 VDC [omistaja 2026-10-23]
