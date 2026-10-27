@@ -1,6 +1,6 @@
 # Hydrauliöljyn valinta
 
-> **Tila:** selvitys 2026-10-23, päivitetty 2026-10-27 (nykyinen öljy tunnistettu). **Päätetty 2026-10-23: HVLP 32** (tuote valitaan VI:n perusteella). Viskositeetit [laskelma, Walther-yhtälö],
+> **Tila:** selvitys 2026-10-23, päivitetty 2026-10-27 (nykyinen öljy tunnistettu; huuhtelu vanhalla öljyllä päätetty). **Päätetty 2026-10-23: HVLP 32** (tuote valitaan VI:n perusteella). Viskositeetit [laskelma, Walther-yhtälö],
 > komponenttien rajat datalehdistä, tuotetiedot jälleenmyyjien sivuilta (haettu 2026-10-23).
 
 Liittyy: [vaatimukset §9](../requirements.md#9-öljy-puhtaus-ja-huolto),
@@ -19,8 +19,8 @@ vaihtumisen takia. Vaihdon perusteeksi jäävät öljyn tuntematon ikä, polymee
 (HV-öljy ohenee vanhetessaan), mahdollinen vesi ja epäpuhtaudet sekä uudet pumput (PVH57 vaatii
 puhtaan öljyn). Halvempi vaihtoehto on ottaa näyte ja jättää huuhtelu pois, jos öljy on kirkas
 eikä siinä ole vettä: tyhjennetään säiliö ja letkut ja täytetään uudella, tai säästetään
-huuhteluun varattu noin 20 l (noin 100 €). Päätös kuuluu omistajille; voimassa oleva päätös
-(2026-10-23) on vaihto ja huuhtelu.
+huuhteluun varattu noin 20 l (noin 100 €). **Päätetty 2026-10-27:** vanha öljy
+on kirkasta [omistaja 2026-10-27], ja sitä käytetään käyttöönoton huuhteluöljynä (kohta 2 alla).
 
 **Iän ja tuntien perusteella [arvio]:** alle 200 tuntia on vähän, joten polymeerien hajoaminen ja
 kuluminen ovat todennäköisesti vähäisiä. Seitsemän vuoden seisonnan riski on lähinnä
@@ -31,7 +31,7 @@ vanheneminen. Siksi ehdotus:
    samea tai maitomainen kertoo vedestä, ja pohjalle laskeutuva vesi tai sakka näkyy vuorokaudessa.
    Pohjan vesi lasketaan joka tapauksessa pois. Laboratorioanalyysi (vesi ppm, ISO 4406) antaa
    varmuuden; hinta **⚠ ei tiedossa**.
-2. **Jos öljy on kirkasta:** vanha öljy kelpaa **käyttöönoton huuhteluöljyksi**. Uudet pumput ajetaan
+2. **Jos öljy on kirkasta (✅ valittu 2026-10-27):** vanha öljy kelpaa **käyttöönoton huuhteluöljyksi**. Uudet pumput ajetaan
    sisään ja letkut huuhdellaan vanhalla öljyllä uuden suodattimen läpi, ja sen jälkeen öljy
    vaihdetaan uuteen ja suodatinelementti vaihdetaan. Erillistä 20 litran huuhteluöljyä ei tarvita.
 3. **Jos öljy on sameaa tai siinä on vettä:** toimitaan voimassa olevan päätöksen mukaan, eli
@@ -112,9 +112,9 @@ yksityisaluksessa, ja ne ovat kalliimpia.
    Pyydä Teboil 32S:n ja Neste Hydraulic 32 Superin tuotetiedotteet ja valitse se, jonka VI on
    korkeampi ja jonka leikkauskestävyys on ilmoitettu. Teboil 32S on turvallinen oletus, ja sitä
    on saatavilla.
-2. **Koko öljy vaihdetaan.** Vanha öljy tyhjennetään säiliön lisäksi letkuista, sylinteristä ja
-   orbitrolista; nyt kun pumput ovat irti, letkut voi avata pumppujen päistä. Vanhasta öljystä
-   otetaan näyte: samea tai maitomainen öljy kertoo vedestä.
+2. **Koko öljy vaihdetaan käyttöönoton jälkeen** (päätös 2026-10-27). Vanha, kirkas öljy toimii
+   ensin huuhteluöljynä uuden suodatinelementin läpi. Sen jälkeen öljy tyhjennetään säiliön lisäksi
+   letkuista, sylinteristä ja orbitrolista, ja suodatinelementti vaihdetaan.
 3. **HV 46 vain, jos öljynjäähdytin jää pois** tai venettä käytetään vain lämpimänä kautena. Silloin
    kylmäkäynnistyksessä ajetaan tyhjäkäynnillä, kunnes öljy on yli noin 10 °C.
 
@@ -122,10 +122,12 @@ yksityisaluksessa, ja ne ovat kalliimpia.
 
 - [x] Mitä öljyä järjestelmässä nyt on: Teboil Hydraulic Lift 32 (HVLP, ISO VG 32) [omistaja 2026-10-27]
 - [x] Nykyisen öljyn ikä: noin 7 vuotta, alle 200 tuntia [omistaja 2026-10-27]
-- [ ] Nykyisen öljyn kunto (näyte: kirkkaus, vesi), Hydraulic Lift 32:n VI
-- [ ] Omistajat: tarvitaanko huuhtelu, kun vanha öljy on samaa luokkaa (säästö noin 20 l)
+- [x] Nykyisen öljyn kunto: kirkasta [omistaja 2026-10-27]
+- [ ] Hydraulic Lift 32:n VI (tuotetiedote)
+- [x] Huuhtelu: vanhalla öljyllä käyttöönotossa, ei erillistä huuhteluöljyä (päätös 2026-10-27)
+- [ ] Milloin huuhteluöljy vaihdetaan uuteen (esim. käyttöönoton säätöjen ja koeajon jälkeen) ja tarvitaanko käyttöönotossa erillinen suodatinelementti, joka vaihdetaan samalla
 - [ ] Teboil 32S:n ja Neste Hydraulic 32 Superin VI ja leikkauskestävyys (tuotetiedotteet)
 - [ ] Orbitrolin HKUS 160/4 viskositeettialue omasta datalehdestä
 - [ ] Sleipnerin öljysuositus (HS 6468 -ohje) keulapotkurijärjestelmälle
 - [x] Päätös öljystä: HVLP 32, VI ≥ 150 (2026-10-23)
-- [ ] Tuotteen valinta (Teboil 32S tai Neste Hydraulic 32 Super) ja määrä: 80 l täyttö + huuhteluun noin 20 l (arvio)
+- [ ] Tuotteen valinta (Teboil 32S tai Neste Hydraulic 32 Super) ja määrä: 80 l täyttö (huuhtelu vanhalla öljyllä, päätös 2026-10-27)
