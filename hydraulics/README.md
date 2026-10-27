@@ -9,7 +9,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
 | [design/archive/p2-pump-options.md](design/archive/p2-pump-options.md) | 🗄 **Arkistoitu 2026-10-27.** Parker F1-61 -vaihtoehto (BPV, Spidex) ja pumppuvertailu; taustaksi (imu- ja kierroslukulaskelmat yhä viitekäytössä) |
-| [design/p2-variable-pump.md](design/p2-variable-pump.md) | P2 säätötilavuuspumppuna: Vickers PVH57 (tori.fi), LS-ohjaus, kaksitiekompensoitu virtauksensäätö, osalista (selvitys, ei päätetty) |
+| [design/p2-variable-pump.md](design/p2-variable-pump.md) | P2 säätötilavuuspumppuna: Vickers PVH57 (tori.fi), LS-ohjaus, kaksitiekompensoitu virtauksensäätö, osalista; **pumppu päätetty 2026-10-27** (FXDC-kytkentä varavaihtoehto) |
 | [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md) | **Ykkösvaihtoehto (päätös 2026-10-27):** apupiiri PVH57:llä ja Danfoss PVG 32 -proportionaaliventtiilipöydällä; ehdokasventtiilin tiedot, puhdistus ja koestus |
 | [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä, LS-signaalilla kuormilta ja on/off-venttiileillä (ilman venttiilipöytää); varavaihtoehto |
 | [design/p1-steering-pump.md](design/p1-steering-pump.md) | Ohjauspumpun imulinja (päätetty 32 mm) ja P1:n muutokset P2-remontin yhteydessä |
