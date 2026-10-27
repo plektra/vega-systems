@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1000" width="1240" height="1000" font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>Vega – hydrauliikka, arkki 3: paluu, jäähdytys ja säiliö (ISO 1219 -luonnos)</title>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="1240" height="1000" fill="#fff"/>
+  <g stroke="#000" stroke-width="2" fill="none" stroke-linecap="square">
+
+  <!-- ===== Otsikko ja lukuohje ===== -->
+  <text x="30" y="34" font-size="18" font-weight="bold" fill="#000" stroke="none">Vega — hydrauliikka · Arkki 3: Paluu, jäähdytys ja säiliö</text>
+  <rect x="30" y="50" width="380" height="100" stroke-width="1"/>
+  <g stroke="none" fill="#000" font-size="11">
+    <text x="40" y="67" font-weight="bold">Lukuohje</text>
+    <text x="40" y="83">Yhtenäinen viiva: paluu- ja imulinja; ohut: merivesi</text>
+    <text x="40" y="98">Katkoviiva: vuotolinja</text>
+    <text x="40" y="113" fill="#888">Harmaa: suunnitteilla, ei vielä päätetty (öljynjäähdytin)</text>
+    <text x="40" y="128">Vuotolinjat piirretty suosituksen mukaan suoraan säiliöön</text>
+    <text x="40" y="143">⚠ = arvo tai tieto tarkistettava · osaluettelo: schematic.md</text>
+  </g>
+
+  <!-- ===== Merivesi (suunnitteilla) ===== -->
+  <g stroke="#888">
+    <path d="M220 200 H500 M560 200 H900" stroke-width="1.5"/>
+    <path d="M520 190 Q530 200 520 210 M540 190 Q530 200 540 210" stroke-width="1.5"/>
+    <path d="M500 200 H520 M540 200 H560" stroke-width="1.5"/>
+    <path d="M470 200 V230 M470 254 V300 H505 V355" stroke-width="1.5"/>
+    <path d="M462 230 Q470 242 462 254 M478 230 Q470 242 478 254" stroke-width="1.5"/>
+    <line x1="457" y1="258" x2="484" y2="226" stroke-width="1" marker-end="url(#ahg)"/>
+    <path d="M535 355 V300 H590 V200" stroke-width="1.5"/>
+    <circle cx="470" cy="200" r="3.5" fill="#888" stroke="none"/>
+    <circle cx="590" cy="200" r="3.5" fill="#888" stroke="none"/>
+    <path d="M40 185 H205 L220 200 L205 215 H40 Z" stroke-width="1.5"/>
+    <path d="M900 185 H1175 L1190 200 L1175 215 H900 Z" stroke-width="1.5"/>
+  </g>
+  <g stroke="none" fill="#888" font-size="11">
+    <text x="48" y="197" font-weight="bold">Merivesipumppu</text>
+    <text x="48" y="210">koneen etupää, ~75 l/min ⚠</text>
+    <text x="908" y="197" font-weight="bold">→ merivaihteen öljynjäähdytin</text>
+    <text x="908" y="210">→ koneen lämmönvaihdin → ulos</text>
+    <text x="530" y="180" text-anchor="middle" font-weight="bold">3V4</text>
+    <text x="555" y="180">kuristus päälinjaan ⚠</text>
+    <text x="380" y="238" text-anchor="end" font-weight="bold">3V3 virtauksenrajoitus</text>
+    <text x="380" y="252" text-anchor="end">haaraan 30–40 l/min (vakiovirtaus</text>
+    <text x="380" y="266" text-anchor="end">tai käsiventtiili) ⚠ päättämättä</text>
+  </g>
+
+  <!-- ===== Tulevat paluut (arkit 1 ja 2) ===== -->
+  <path d="M40 330 H205 L220 345 L205 360 H40 Z" stroke-width="1.5"/>
+  <path d="M40 400 H205 L220 415 L205 430 H40 Z" stroke-width="1.5"/>
+  <g stroke="none" fill="#000" font-size="11">
+    <text x="48" y="342" font-weight="bold">Arkki 1: piiri 1</text>
+    <text x="48" y="355">orbitrolin T, RPF3:n EF</text>
+    <text x="48" y="412" font-weight="bold">Arkki 2: piiri 2</text>
+    <text x="48" y="425">VPR3 B, 2/2 T, BAV T, VMP T</text>
+  </g>
+  <path d="M220 345 H260 V380 M220 415 H260 V380"/>
+  <circle cx="260" cy="380" r="4" fill="#000" stroke="none"/>
+  <path d="M260 380 H490"/>
+  <!-- 3Z3 paluukeräin ja 3G1 mittari (ehdotus) -->
+  <g stroke="none" fill="#000" font-size="11">
+    <text x="348" y="372">paluulinja 1", ~5 m</text>
+    <text x="270" y="398">T max 25 bar (orbitroli)</text>
+    <text x="268" y="440" font-weight="bold">3Z3 paluukeräin</text>
+    <text x="268" y="454">T-liittimet, BSPP + Dowty</text>
+    <text x="268" y="468">venttiililohkon lähellä</text>
+  </g>
+  <g stroke="#888">
+    <path d="M320 380 V352" stroke-width="1.5"/>
+    <circle cx="320" cy="340" r="12" stroke-width="1.5"/>
+    <line x1="312" y1="348" x2="328" y2="332" stroke-width="1" marker-end="url(#ahg)"/>
+    <circle cx="320" cy="380" r="3.5" fill="#888" stroke="none"/>
+  </g>
+  <g stroke="none" fill="#888" font-size="11">
+    <text x="338" y="330" font-weight="bold">3G1 paluupaine</text>
+    <text x="338" y="344">mittari (ehdotus)</text>
+  </g>
+
+  <!-- ===== 3E1 Öljynjäähdytin + 3V1 ohitus (suunnitteilla) ===== -->
+  <g stroke="#888">
+    <path d="M520 350 L550 380 L520 410 L490 380 Z" stroke-width="2"/>
+    <path d="M490 380 H550" stroke-width="1"/>
+    <path d="M505 355 L505 365 M535 355 L535 365" stroke-width="1.5"/>
+    <path d="M440 380 V460 H500 M550 460 H600 V380"/>
+    <path d="M500 460 L518 450 M500 460 L518 470" stroke-width="1.5"/>
+    <circle cx="520" cy="460" r="7" fill="#fff" stroke-width="1.5"/>
+    <polyline points="527,460 530,454 534,466 538,454 542,466 546,460 550,460" stroke-width="1"/>
+    <circle cx="440" cy="380" r="4" fill="#888" stroke="none"/>
+    <circle cx="600" cy="380" r="4" fill="#888" stroke="none"/>
+  </g>
+  <path d="M550 380 H700 V440"/>
+  <g stroke="none" fill="#888">
+    <text x="610" y="318" font-weight="bold">3E1 Öljynjäähdytin</text>
+    <text x="610" y="332">Bowman EC100 tai EC80 ⚠</text>
+    <text x="610" y="346">merivesi 25–50 l/min</text>
+    <text x="440" y="490" font-weight="bold">3V1 ohitusventtiili 3–4 bar</text>
+    <text x="440" y="504">suojaa jäähdytintä kylmältä öljyltä</text>
+  </g>
+
+  <!-- ===== 3Z2 Paluusuodatin ===== -->
+  <path d="M700 440 L730 470 L700 500 L670 470 Z"/>
+  <line x1="676" y1="470" x2="724" y2="470" stroke-width="1" stroke-dasharray="4 3"/>
+  <path d="M730 470 H752" stroke-width="1.5"/>
+  <circle cx="764" cy="470" r="12" stroke-width="1.5"/>
+  <line x1="756" y1="478" x2="772" y2="462" stroke-width="1" marker-end="url(#ah)"/>
+  <line x1="700" y1="500" x2="700" y2="705"/>
+  <g stroke="none" fill="#000">
+    <text x="786" y="466" font-weight="bold">3Z2 Paluusuodatin</text>
+    <text x="786" y="481">painemittarilla (nyt huonosti luettavissa)</text>
+    <text x="786" y="496">OMTF112C10NA2, 100 l/min, ohitus 1,7 bar</text>
+  </g>
+
+  <!-- ===== Vuotolinjat (oikealta) ===== -->
+  <path d="M1190 560 H900 V705" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M1190 624 H950 V705" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <g stroke="none" fill="#000" font-size="11">
+    <text x="1185" y="552" text-anchor="end"><tspan font-weight="bold">Arkki 2: U11:n vuotolinja</tspan> 1/4"</text>
+    <text x="1185" y="575" text-anchor="end">nyt paluulinjassa, liitoskohta ⚠</text>
+    <text x="1185" y="616" text-anchor="end"><tspan font-weight="bold">Arkki 2: BPV:n vuotolinja</tspan> 1/4"</text>
+  </g>
+
+  <!-- ===== 3Z1 Säiliö ===== -->
+  <path d="M600 640 V720 H1000 V640" stroke-width="2.5"/>
+  <line x1="610" y1="668" x2="990" y2="668" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="612" y="663" stroke="none" fill="#000" font-size="10">öljypinta</text>
+  <!-- huohotin/täyttö -->
+  <path d="M630 640 V620 M620 620 H640 M622 612 H638" stroke-width="1.5"/>
+  <!-- imulähdöt -->
+  <path d="M640 720 V760 H430" marker-end="url(#ah)"/>
+  <path d="M680 720 V790 H430" marker-end="url(#ah)"/>
+  <path d="M720 720 V820 H430" marker-end="url(#ah)"/>
+  <g stroke="none" fill="#000" font-size="11" text-anchor="end">
+    <text x="420" y="764">→ 1P1 imu 32 mm, 1V5 (arkki 1)</text>
+    <text x="420" y="794">→ 2P1 imu 50 mm, 2V0 (arkki 2)</text>
+    <text x="420" y="824">→ 1P2 imu 3/4", 1V6 (arkki 1)</text>
+  </g>
+  <!-- 3B1 lämpötila-anturi -->
+  <path d="M600 690 H572" stroke-width="1.5"/>
+  <circle cx="560" cy="690" r="12" stroke-width="1.5"/>
+  <text x="560" y="694" text-anchor="middle" font-size="11" font-weight="bold" stroke="none" fill="#000">T</text>
+  <g stroke="none" fill="#000">
+    <text x="545" y="680" text-anchor="end" font-weight="bold">3B1 lämpötila-anturi</text>
+    <text x="545" y="695" text-anchor="end">varoitus 65 °C, hälytys 70 °C</text>
+    <text x="545" y="710" text-anchor="end">→ ESP32 / Signal K</text>
+    <text x="760" y="745"><tspan font-weight="bold">3Z1 Säiliö</tspan> Flowfit 100 l, 80 l HVLP 32</text>
+    <text x="760" y="760" font-size="11">paluut ja vuotolinjat öljypinnan alle</text>
+    <text x="760" y="775" font-size="11">uusi 50 mm:n ulosotto P2:lle; 32 mm jää P1:lle</text>
+    <text x="614" y="618" text-anchor="end" font-size="11">täyttö / huohotin</text>
+  </g>
+
+  <!-- ===== Otsikkokenttä ===== -->
+  <rect x="940" y="866" width="280" height="124" stroke-width="1.5"/>
+  <line x1="940" y1="888" x2="1220" y2="888" stroke-width="1"/>
+  <g stroke="none" fill="#000" font-size="11">
+    <text x="950" y="882" font-size="13" font-weight="bold">Vega — hydraulijärjestelmä</text>
+    <text x="950" y="904">Arkki 3/3: Paluu, jäähdytys, säiliö</text>
+    <text x="950" y="920">ISO 1219-1 -merkit, ISO 1219-2 -periaatteet</text>
+    <text x="950" y="936">Versio 0.2 · 2026-10-26</text>
+    <text x="950" y="953" font-weight="bold" fill="#b00">Tila: LUONNOS – ei rakentamiseen</text>
+    <text x="950" y="969">Tarkastettava pätevällä henkilöllä</text>
+    <text x="950" y="984">Piirtänyt: Claude · Hyväksynyt: –</text>
+  </g>
+  </g>
+</svg>

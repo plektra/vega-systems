@@ -1,19 +1,14 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
-> **⚠ Arkki 2 on vanhentunut 2026-10-27:** P2 on nyt **Vickers PVH57** ja kytkin HRC 150; F1-61, BPV ja Spidex
-> eivät ole enää suunnitelmassa ([decisions.md](../decisions.md)). Venttiilien ykkösvaihtoehto on PVG 32
-> (päätös 2026-10-27, [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md)); arkkia 2 ei ole vielä piirretty uudelleen; PVH57:n ISO 1219 -luonnos vaihtoehdolle C on
-> [aux-circuit-ls-onoff](design/aux-circuit-ls-onoff.md#iso-1219--kaavio-luonnos).
->
-> **Tila:** päivitetty 2026-10-23 (P2 = F1-61 + BPV, Spidex-kytkin, 50 mm imu) ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
+> **Tila:** päivitetty 2026-10-27: **arkki 2 piirretty uudelleen** (P2 = Vickers PVH57, HRC 150, venttiileiksi Danfoss PVG 32, ykkösvaihtoehto); F1-61-kokoonpanon arkki 2 ja sen taulukot [arkistoitu](design/archive/schematic-sheet-2-f1-61.md). Aiemmin 2026-10-23 ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
 > Yhtenäinen viiva = olemassa tai päätetty, katkoviiva = suunnitteilla tai vaihtoehto.
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
-> [design/p2-variable-pump.md](design/p2-variable-pump.md), [arkisto: p2-pump-options](design/archive/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
+> [design/p2-variable-pump.md](design/p2-variable-pump.md), [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md), [arkisto: p2-pump-options](design/archive/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
 > Vanha kaavio (2018): [img/hydraulics-v3-2018.png](img/hydraulics-v3-2018.png).
 >
 > **ISO 1219 -kaaviot** (2026-10-23, luonnos): arkki 1 ohjauspiiri, arkki 2 apupiiri ja keulapotkuri,
 > arkki 3 paluu, jäähdytys ja säiliö. Alla olevat Mermaid-lohkokaaviot säilyvät yleiskuvana.
-> Vaihtoehdon C (PVH57, LS ja on/off-venttiilit; selvitys, ei päätetty) kaavio:
+> Varavaihtoehdon C (PVH57, LS ja on/off-venttiilit) kaavio:
 > [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md#iso-1219--kaavio-luonnos).
 
 ## ISO 1219 -kaaviot (luonnos)
@@ -50,25 +45,34 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 - Orbitrolin iskuventtiilejä ja imuventtiilejä ei ole piirretty erikseen (orbitrolin sisällä).
 - Painelinjat 1/2" [omistaja 2026-10-23]; paluulinjojen koot puuttuvat.
 
-### Arkki 2: Piiri 2, apupiiri ja keulapotkuri
+### Arkki 2: Piiri 2, apupiiri (PVH57 ja PVG 32)
 
-![Apupiiri ISO 1219 -merkein](img/schematic-2-auxiliary.svg)
+![Apupiiri PVH57:llä ja PVG 32:lla ISO 1219 -merkein](img/schematic-2-auxiliary-pvg32.svg)
+
+Piirretty 2026-10-27 ykkösvaihtoehdon mukaan (päätös 2026-10-27). PVG 32:n sisäiset
+paineenkompensaattorit ja LS-vaihtoventtiilit on jätetty piirtämättä, ja PVE on piirretty
+yksinkertaistettuna toimilaitteena karan toisessa päässä.
+Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61.md).
 
 | Tunnus | Osa | Tiedot | Lähde |
 |---|---|---|---|
 | 2M1 | Advance 300 PTO | 1:1, Ø48 mm kiila-akseli, ≤ 420 Nm; pyörii vastakkaiseen suuntaan kuin kone | [current-system §0](current-system.md), [omistaja 2026-10-23] |
-| 2Z3 | Spidex 48/60 -kynsikytkin | hammaskehä 98 Sh A | [päätös 2026-10-23](../decisions.md) |
-| 2P1 | Parker F1-61 | 59,5 cm³/r, 350/400 bar; suunta R/L valitaan koneen suunnan mukaan **⚠** | [p2-pump-options](design/archive/p2-pump-options.md) |
-| 2V1 | Parker BPV-F1 378 4179, Y1 | jännitteetön = ohitus (pumppu kiertää tyhjänä), käsiohitus; vuotolinja 1/4" suoraan säiliöön; kaaviossa yksinkertaistettu 2/2-venttiilinä | [p2-pump-options](design/archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili) |
-| 2V0 | Imulinjan palloventtiili | täysiaukkoinen; imu 50 mm, Ø50-imuliitin | [päätös 2026-10-23](../decisions.md) |
+| 2Z3 | HRC 150 -joustokytkin | Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu); momentti noin 600 Nm **⚠ vahvista** | [päätös 2026-10-27](../decisions.md), [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
+| 2P1 | Vickers PVH57C-LAF-1S-10-C12V-31 | 57,4 cm³/r, LS-säädin, paineraja 250 bar, valmiustila noin 20 bar, pyörimissuunta L; SAE C -laippa omalla kannakkeella; kotelovuoto omana letkuna säiliöön | [p2-variable-pump](design/p2-variable-pump.md#tekniset-tiedot), [päätös 2026-10-27](../decisions.md) |
+| 2V0 | Imulinjan palloventtiili | täysiaukkoinen; imu 50 mm | [päätös 2026-10-23](../decisions.md) |
 | 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar | [päätös 2026-10-23](../decisions.md) |
-| 2V2 | Marchesini VPR3 3/4" | kolmitie-prioriteettiventtiili, A 35 l/min, ylimäärä B → paluu | [omistaja 2026-10-23], [datalehti VPR3] |
-| 2G1 | Painemittari, analoginen | CETOP-pohjalaatalle tuleva P-linja | [omistaja 2026-10-23] |
-| 2V3 | Marchesini VMP 3/4" | paineenrajoitus 250 bar (säädetään käyttöönotossa); paikka P-linjassa **⚠ tarkista** | [datalehti VMP] |
-| 2V4 | Rexroth OD15 2/2, Y2 | omassa rungossaan; jännitteetön auki → T, jännitteellinen kiinni → paine pohjalaatalle | [omistaja 2026-10-23] |
-| 2Z2 | Flowfit CETOP 3 -pohjalaatta | 4 paikkaa, 1 käytössä; teräs; painearvo **⚠** | [omistaja 2026-10-22] |
-| 2V5 | fluiconnecto BAV-IC3-713, Y3a/Y3b | 4/3, keskiasento P kiinni, A–B–T yhdistetty; 24 V | [omistaja 2026-10-23] |
-| 2M2 | Sleipner U11 / SH240 | 100 %: 33,8 l/min, 264 bar; A/B 1/2" SAE 100R2AT 2 × 8,5 m; vuotolinja 1/4" | [ohje Sleipner 2746 35 2025] |
+| 2B2 | P2:n lähtöpaineanturi (ehdotus) | 0–400 bar; valmiustilan ja vedon valvonta → ESP32 / Signal K | [pressure-monitoring](design/pressure-monitoring.md) |
+| 2V1 | Danfoss PVG 32, 5 lohkoa (käytetty) | P 350 bar (PVSI) / 300 bar (PVS), T enintään 25 bar staattinen; kokoonpanokoodi 157N553(8/B) **⚠ tarkista**; kunto tuntematon, puhdistus ja koestus | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
+| 2V1.0 | PVP-pumppumoduuli | suljettu keskiasento **⚠ tarkista koodista** (157B5…); sisäinen paineenrajoitin noin 280 bar (varaventtiili); P-portti G 1/2–G 1, T G 3/4, LS G 1/4, M G 1/4 | [datalehti PVG 32 s. 5, 20–22] |
+| 2G1 | Painemittari, analoginen | PVP:n M-portissa (G 1/4) | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-keulapotkuri-tarvitsee-pvh57n-ja-tämän-venttiilin-lisäksi) |
+| 2V1.1, Y1 | Lohko 1: keulapotkuri, PVEH 157B4024 | kara: avoin keskiasento, A ja B → T, 40 l/min (esim. 157B7102) **⚠ tarkista nykyinen kara**; ohjaus 0,25–0,75 × U | [datalehti PVG 32 s. 15–18, 56] |
+| 2V2 | PVLP-isku- ja imuventtiilit lohkon 1 A/B-portteihin (valinnainen) | esim. 157B2280 (280 bar); tarve ja asetus pätevä henkilö **⚠** | [datalehti PVG 32 s. 27] |
+| 2V1.2, Y2 | Lohko 2: ankkurivinssi, PVEO 157B4224 | myöhemmin; jarruventtiili vinssillä, kara **⚠** | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md) |
+| 2V1.3, Y3 | Lohko 3: painepesuri, PVEO | myöhemmin; A-portti, virtaus rajattu karalla **⚠** | sama |
+| 2V1.4–2V1.5, Y4–Y5 | Lohkot 4–5, PVEO | varalla, A/B tulpattu; voidaan poistaa pinosta (PVAS 4 lohkolle 157B8004) | [datalehti PVG 32 s. 28–29] |
+| 2A1 | Ohjaus (ESP32 PDM) | joystick (potentiometri) → PVEH; kytkimet → PVEO; hätäseis-rele katkaisee PVE-syötön 24 V; PVEH:n vikasignaali Signal K:hon | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md) |
+| 2M2 | Sleipner U11 / SH240 | 100 %: 33,8 l/min, 264 bar; A/B 1/2" SAE 100R2AT 2 × 8,5 m; vuotolinja 1/4" säiliöön | [ohje Sleipner 2746 35 2025] |
+| 2M3, 2M4 | Ankkurivinssi, painepesuri | myöhemmin; mallit **⚠ ei tiedossa** | – |
 
 ### Arkki 3: Paluu, jäähdytys ja säiliö
 
@@ -87,12 +91,14 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 3Z1 | Säiliö Flowfit 100 l | 80 l HVLP 32; uusi 50 mm:n ulosotto P2:lle, 32 mm jää P1:lle | [päätös 2026-10-23](../decisions.md) |
 | 3B1 | Öljyn lämpötila-anturi | varoitus 65 °C, hälytys 70 °C → ESP32 / Signal K | [päätös 2026-10-23](../decisions.md) |
 
-**Arkkeja 2 ja 3 piirtäessä esiin tulleet asiat:**
+**Arkkeja 2 ja 3 piirtäessä esiin tulleet asiat (päivitetty 2026-10-27):**
 
-- Vuotolinjat (BPV ja U11) on piirretty suoraan säiliöön öljypinnan alle. BPV:lle Parker vaatii
-  tämän; U11:n vuotolinja on nyt paluulinjassa, ja liitoskohta pitää tarkistaa.
-- VMP:n paikka P-linjassa (VPR3:n ja 2/2-venttiilin välissä?) **⚠ tarkista**.
-- Arkki 2: P2:n lähtöpaineanturia (vaatimuksissa ehdotettu) ei ole piirretty, koska siitä ei ole päätetty.
+- Vuotolinjat (PVH57:n kotelovuoto ja U11) on piirretty suoraan säiliöön öljypinnan alle. U11:n
+  vuotolinja on nyt paluulinjassa, ja liitoskohta pitää tarkistaa.
+- PVG 32:n T-portin suurin paine on 25 bar staattinen: paluulinjan jäähdytin, ohitus ja suodatin
+  pitävät sen alle, kunhan kylmäkäynnistyksen paluupaine tarkistetaan (3G1).
+- Arkki 3:n merkinnät päivitettiin 2026-10-27 (PVG:n T-portti, PVH57:n kotelovuoto); alkuperäinen
+  [arkistossa](img/archive/schematic-3-return-cooling-f1-61.svg).
 
 ## 1. Voimansiirto ja ohjauspiiri
 
@@ -119,50 +125,57 @@ flowchart LR
 
 ```
 
-## 2. Apupiiri: PTO-pumppu ja keulapotkuri
+## 2. Apupiiri: PTO-pumppu ja PVG 32
 
 ```mermaid
 flowchart LR
   GB["Advance 300<br/>PTO 1:1, Ø48<br/>≤ 420 Nm"]
-  CPL["Spidex 48/60<br/>98 Sh A"]
+  CPL["HRC 150<br/>holkit 48 / 1 1/4#quot;"]
   TANK[("Säiliö")]
-  P2["P2 Parker F1-61<br/>59,5 cm³"]
-  BPV["BPV-F1 24 V<br/>käsiohitus<br/>jännitteetön = ohitus"]
-  VPR3["VPR3 3/4#quot;<br/>35 l/min"]
-  VMP["VMP 3/4#quot;<br/>paineenrajoitus<br/>250 bar"]
-  UNL["2/2-venttiili (oma runko)<br/>jännitteettömänä auki → T"]
-  BAV["BAV-713 4/3<br/>suunta"]
-  THR["Keulapotkuri<br/>SH240-U11<br/>240 kg"]
+  P2["P2 Vickers PVH57<br/>57,4 cm³, LS-säädin<br/>valmiustila ~20 bar"]
+  PVP["PVG 32: PVP<br/>paineenrajoitin ~280 bar<br/>M: painemittari"]
+  S1["Lohko 1 PVEH<br/>portaaton"]
+  S2["Lohko 2 PVEO"]
+  S3["Lohko 3 PVEO"]
+  S45["Lohkot 4–5 PVEO<br/>varalla"]
+  THR["Keulapotkuri<br/>SH240-U11"]
+  WIN["Ankkurivinssi<br/>(myöhemmin)"]
+  WASH["Painepesuri<br/>(myöhemmin)"]
+  CTRL["ESP32 PDM<br/>joystick, hätäseis"]
   RET(["Paluu"])
 
   GB --> CPL --> P2
   TANK -->|"imu 50 mm"| P2
-  P2 <--> BPV
-  BPV -->|"vuotolinja 1/4#quot;,<br/>öljypinnan alle"| TANK
-  BPV -->|"3/4#quot;, 3–4 m"| VPR3
-  VPR3 -->|P| UNL
-  VPR3 -.-> VMP
-  UNL -->|"kiinni = paine<br/>pohjalaatalle"| BAV
-  BAV -->|"A / B 1/2#quot;, 2 × 8,5 m"| THR
-  VPR3 -->|"B, ylimäärä"| RET
-  UNL -->|"auki → T"| RET
-  BAV -->|T| RET
-  VMP -->|T| RET
-  THR -->|"vuotolinja 1/4#quot;<br/>paluulinjaan (kohta ⚠)"| TANK
+  P2 -->|"kotelovuoto,<br/>öljypinnan alle"| TANK
+  P2 -->|"3/4#quot;, 3–4 m"| PVP
+  PVP -.->|"LS 1/4#quot;"| P2
+  PVP --> S1 --> S2 --> S3 --> S45
+  S1 -->|"A / B 1/2#quot;, 2 × 8,5 m"| THR
+  S2 -.-> WIN
+  S3 -.-> WASH
+  CTRL -.-> S1
+  CTRL -.-> S2
+  PVP -->|"T G 3/4"| RET
+  THR -->|"vuotolinja 1/4#quot;<br/>(kohta ⚠)"| TANK
 
-  subgraph MAN ["CETOP 3 -pohjalaatta, 4 paikkaa"]
-    BAV
+  subgraph PVG ["Danfoss PVG 32, 5 lohkoa"]
+    PVP
+    S1
+    S2
+    S3
+    S45
   end
-```
 
-Pohjalaatan paikat 2–4 ovat vapaana (esim. ankkurivinssi).
+  classDef planned stroke-dasharray: 5 5
+  class WIN,WASH planned
+```
 
 ## 3. Paluu ja öljynjäähdytys
 
 ```mermaid
 flowchart LR
   R1(["Piiri 1:<br/>orbitrolin T, RPF3"])
-  R2(["Piiri 2:<br/>VPR3 B, 2/2, BAV-713 T, VMP"])
+  R2(["Piiri 2:<br/>PVG 32:n T-portti"])
   RET["3Z3 paluukeräin<br/>T-liittimet, 1#quot; läpi"]
   GAU["3G1 paluupaineen<br/>mittari (ehdotus)"]
   COOL["Öljynjäähdytin<br/>Bowman EC100 / EC80 ⚠"]
@@ -190,19 +203,21 @@ flowchart LR
   class COOL,BYP,LIM,GAU planned
 ```
 
-## Toimintatilat (apupiiri)
+## Toimintatilat (apupiiri, PVH57 + PVG 32)
 
-| Tila | BPV-F1 | 2/2-patruunaventtiili | BAV-713 | Mitä tapahtuu |
-|---|---|---|---|---|
-| Ajo | jännitteetön (ohitus) | jännitteetön, auki | keskellä | P2 pyörii mutta kiertää tyhjänä pumpun päädyssä; pieni jäähdytysvirtaus vuotolinjan kautta säiliöön (lämpö **⚠ ei tiedossa**) |
-| Keulapotkuri valmiina (tyhjäkäynti) | jännitteellinen (vaihdettu 2/2:n ollessa auki, < 20 bar) | jännitteetön, auki | keskellä | P2:n öljy kiertää matalalla paineella säiliöön (~0,7 kW) |
-| Keulapotkuri käytössä | jännitteellinen | jännitteellinen, kiinni | a tai b | Paine nousee pohjalaatalla; VPR3 rajaa virtauksen 35 l/min:iin; potkuri saa ~88 % työntövoimasta (~210 kg) |
-| Kierroslukitus (> ~1000 rpm) | pakotetaan jännitteettömäksi (2/2 ensin auki) | pakotetaan jännitteettömäksi | estetty | Pumppu ohitukseen; hälytys, jos syöttö päällä yli ~1200 rpm |
-| Sähkökatko | ohitus | auki | keskellä | Keulapotkuri ei toimi; käsiohitus vain kone sammutettuna |
+| Tila | PVE:t | PVH57 | Mitä tapahtuu |
+|---|---|---|---|
+| Ajo, ei käyttöä | jännitteettömiä tai keskellä | valmiustila ~20 bar, lähes nollatuotto | LS-linja tyhjenee säiliöön, kun kaikki karat ovat keskellä; vähän lämpöä (häviöteho **⚠ ei tiedossa**) |
+| Keulapotkuri käytössä | PVEH ohjaa lohkoa 1 joystickin mukaan | paine = kuorman paine + ~20 bar, enintään 250 bar | potkuri saa noin 85–88 % työntövoimasta täydellä ohjauksella; virtaus rajautuu karan avautumaan |
+| Vinssi tai pesuri (myöhemmin) | PVEO päälle/pois | kuten yllä | kuorman pito jarruventtiilillä ja vinssin jarrulla |
+| Hätäseis tai sähkökatko | syöttö katkeaa, jouset keskelle | valmiustila | potkuri pysähtyy ja pyörii vapaasti avoimen keskiasennon kautta; käsivivut toimivat, jos kannoissa on vivut **⚠** |
+| PVEH-vika (signaali 15–85 %:n ulkopuolella, johto poikki) | PVEH pysäyttää karan keskelle | valmiustila | vikasignaali → Signal K -hälytys |
 
 ## Avoimia kohtia kaaviossa
 
-- VMP:n fyysinen paikka P-linjassa (VPR3:n P-portin ja pohjalaatan välissä?) **⚠ tarkista**
+- ~~VMP:n fyysinen paikka~~: VMP jää pois, PVP:n paineenrajoitin toimii varaventtiilinä (2026-10-27)
+- PVG 32:n pumppumoduulin tyyppi (suljettu keskiasento) ja lohkon 1 kara tarkistetaan venttiilistä **⚠**
+- Venttiilipöydän (noin 22–23 kg) kiinnityspaikka konehuoneessa ja letkujen reititys **⚠**
 - ~~2/2-venttiilin paikka~~: omassa erillisessä rungossaan [omistaja 2026-10-23]
 - ~~Varapumpun P3 kytkentä~~: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
-- Öljynjäähdytin ja merivesihaara ovat suunnitteilla; iskuventtiileitä ei lisätä (päätös 2026-10-23)
+- Öljynjäähdytin ja merivesihaara ovat suunnitteilla. Iskuventtiileistä päätettiin 2026-10-23 F1-61-kokoonpanolle (ei lisätä); PVG 32:lla PVLP-isku- ja imuventtiilit (2V2) arvioi pätevä henkilö **⚠**

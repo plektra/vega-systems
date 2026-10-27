@@ -89,7 +89,7 @@ ei päätetty, ei rakentamiseen.** Pätevän henkilön pitää tarkistaa kaavio 
 
 | Tunnus | Osa | Tiedot | Vaihe |
 |---|---|---|---|
-| 2M1, 2Z3 | Advance 300 PTO, HRC 150 -joustokytkin (päätös 2026-10-27) | kuten [arkki 2](../schematic.md#arkki-2-piiri-2-apupiiri-ja-keulapotkuri); Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) | 1 |
+| 2M1, 2Z3 | Advance 300 PTO, HRC 150 -joustokytkin (päätös 2026-10-27) | kuten [arkistoitu arkki 2](archive/schematic-sheet-2-f1-61.md#arkki-2-piiri-2-apupiiri-ja-keulapotkuri); Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) | 1 |
 | 2P10 | Vickers PVH57, LS-säädin (V) | 57,4 cm³; painekompensaattori 250 bar, LS-paine-ero noin 20 bar; kotelovuoto omana letkuna säiliöön | 1 |
 | 2V0, 2B1 | Imun palloventtiili, imupaineanturi | imu 50 mm, kuten arkki 2 | 1 |
 | 2G1 | Painemittari | P-linja | 1 |
