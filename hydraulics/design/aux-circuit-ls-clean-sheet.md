@@ -1,7 +1,10 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu ja proportionaalinen LS-lohkoventtiili
 
-> **Tila:** ajatuskoe 2026-10-25, päivitetty 2026-10-27 (PVG 32 -ehdokas, tarjous 200 €, ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)), **ei päätetty**. **Pumppu on päätetty 2026-10-27: PVH57** (F1-61-vaihtoehto
-> [arkistoitu](archive/p2-pump-options.md)); venttiilikokoonpano on yhä auki. PVH57:n käyttö olemassa olevien
+> **Tila:** **PÄÄTETTY YKKÖSVAIHTOEHTO 2026-10-27:** apupiiri rakennetaan PVH57:llä ja käytetyllä Danfoss PVG 32:lla
+> ([Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)); kaupat toteutumassa [omistaja 2026-10-27]. Varavaihtoehdot: [LS + on/off](aux-circuit-ls-onoff.md)
+> ja [FXDC + LS-purku](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku). Ajatuskoe 2026-10-25, päivitetty 2026-10-26 ja 2026-10-27
+> (PVG 32 -ehdokas, tarjous, puhdistus, paino). Pumppu PVH57 päätetty 2026-10-27 (F1-61
+> [arkistoitu](archive/p2-pump-options.md)). PVH57:n käyttö olemassa olevien
 > venttiilien kanssa on selvitetty tiedostossa [p2-variable-pump](p2-variable-pump.md). Tässä
 > kysytään, miten apupiiri rakennettaisiin, jos olemassa olevia venttiileitä ei tarvitsisi käyttää
 > uudelleen [omistaja 2026-10-25, kysymys].
@@ -131,6 +134,8 @@ Sama ajatus kuin [pressure-monitoring](pressure-monitoring.md):
 
 ## Suositus
 
+**Päätös 2026-10-27:** PVH57 + PVG 32 valittiin ykkösvaihtoehdoksi ([decisions.md](../../decisions.md)).
+
 Teknisesti paras ratkaisu on **PVH57 ja proportionaalinen LS-lohkoventtiili**, jos tavoitteena on
 vähintään kaksi seuraavista: portaaton keulapotkuri, ankkurivinssi, pitkäkestoinen painepesu. Jos
 tavoitteena on edelleen on/off-keulapotkuri ja mahdollisesti vinssi, (arkistoitu) F1-61
@@ -142,7 +147,7 @@ on halvempi ja riittää.
 > Lisätty 2026-10-26. Tiedot luettu ilmoituksen kuvista ja Danfossin teknisestä ohjeesta
 > *PVG 32 Proportional Valve Group, Technical Information 520L0344*
 > ([PDF](https://imdl.gatech.edu/jfrankel/docs/Sauer-Danfoss/520L0344_PVG32.pdf)), jäljempänä
-> [datalehti PVG 32]. **Ei ostettu eikä päätetty.**
+> [datalehti PVG 32]. **Päätetty ykkösvaihtoehdoksi 2026-10-27; kaupat toteutumassa.**
 
 Ilmoitus: <https://www.tori.fi/recommerce/forsale/item/46493298>, **400 €, tee tarjous** (tarkistettu
 2026-10-26). Ilmoituksen teksti: *"Danfors pvg 32 venttiilipöytä. Tienhoitoautosta purettu. Karojen

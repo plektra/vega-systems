@@ -215,8 +215,8 @@ keulapotkuri (noin 34 l/min, 250 bar).
   merkki TBD. Ks. [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin).
 - **Lukitukset:**
   - Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä.
-  - ~~BPV-lukitukset~~: BPV:tä ei tule, P2 on PVH57 (päätös 2026-10-27). LS-purun ohjausjärjestys
-    riippuu venttiilikokoonpanosta, ks. [p2-variable-pump](design/p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)
+  - ~~BPV-lukitukset~~: BPV:tä ei tule, P2 on PVH57 (päätös 2026-10-27). PVG 32:lla (ykkösvaihtoehto 2026-10-27)
+    erillistä LS-purkua ei tarvita; varavaihtoehdoissa ohjausjärjestys riippuu kokoonpanosta, ks. [p2-variable-pump](design/p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)
     ja [LS + on/off: kierroslukitus](design/aux-circuit-ls-onoff.md#tarvitaanko-kierroslukitus). **⚠ päätetään kokoonpanon kanssa**.
   - Muut TBD.
 

@@ -1,7 +1,8 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu, LS ja on/off-venttiilit
 
-> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa; ISO 1219 -kaavio; muutosyhteenveto ja kierroslukitus), **ei päätetty**. **Pumppu on päätetty 2026-10-27: PVH57** (F1-61-vaihtoehto
-> [arkistoitu](archive/p2-pump-options.md)); venttiilikokoonpano on yhä auki. Tässä kysytään, miten apupiiri
+> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa; ISO 1219 -kaavio; muutosyhteenveto ja kierroslukitus), **varavaihtoehto**. **Pumppu on päätetty 2026-10-27: PVH57** (F1-61-vaihtoehto
+> [arkistoitu](archive/p2-pump-options.md)); venttiilikokoonpanon ykkösvaihtoehto on
+> [PVG 32](aux-circuit-ls-clean-sheet.md) (päätös 2026-10-27). Tämä toteutetaan, jos PVG 32 ei onnistu. Tässä kysytään, miten apupiiri
 > rakennettaisiin alusta alkaen säätötilavuuspumpulla **ilman proportionaalista venttiilipöytää**
 > [omistaja 2026-10-26, kysymys]. Vertailukohdat: PVH57 olemassa olevilla venttiileillä
 > ([p2-variable-pump](p2-variable-pump.md)) ja PVH57 proportionaalisella LS-lohkoventtiilillä

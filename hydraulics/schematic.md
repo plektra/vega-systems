@@ -1,8 +1,8 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
 > **⚠ Arkki 2 on vanhentunut 2026-10-27:** P2 on nyt **Vickers PVH57** ja kytkin HRC 150; F1-61, BPV ja Spidex
-> eivät ole enää suunnitelmassa ([decisions.md](../decisions.md)). Arkkia 2 ei ole piirretty uudelleen, koska
-> apupiirin venttiilikokoonpano on vielä auki; PVH57:n ISO 1219 -luonnos vaihtoehdolle C on
+> eivät ole enää suunnitelmassa ([decisions.md](../decisions.md)). Venttiilien ykkösvaihtoehto on PVG 32
+> (päätös 2026-10-27, [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md)); arkkia 2 ei ole vielä piirretty uudelleen; PVH57:n ISO 1219 -luonnos vaihtoehdolle C on
 > [aux-circuit-ls-onoff](design/aux-circuit-ls-onoff.md#iso-1219--kaavio-luonnos).
 >
 > **Tila:** päivitetty 2026-10-23 (P2 = F1-61 + BPV, Spidex-kytkin, 50 mm imu) ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.

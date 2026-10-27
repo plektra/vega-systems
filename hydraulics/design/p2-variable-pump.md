@@ -1,9 +1,10 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
 > **Tila:** **PÄÄTETTY 2026-10-27: P2 on Vickers PVH57** (kaupat sovittu [omistaja 2026-10-27]); Parker F1-61
-> -vaihtoehto on arkistoitu ([archive/p2-pump-options](archive/p2-pump-options.md)). Apupiirin venttiilikokoonpano
-> on vielä auki: tämän dokumentin suositus (FXDC + LS-purku), [LS + on/off](aux-circuit-ls-onoff.md) tai
-> [PVG 32](aux-circuit-ls-clean-sheet.md). Selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta),
+> -vaihtoehto on arkistoitu ([archive/p2-pump-options](archive/p2-pump-options.md)). **Venttiilikokoonpanon
+> ykkösvaihtoehto on [PVG 32](aux-circuit-ls-clean-sheet.md)** (päätös 2026-10-27). Tämän dokumentin FXDC + LS-purku
+> ja [LS + on/off](aux-circuit-ls-onoff.md) ovat varavaihtoehtoja; pumpun tiedot, kytkin, kannake, suodatus ja
+> asennus pätevät kaikissa. Selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta),
 > 2026-10-26 (FXDC:n painehäviö ja asetus; paluusuodatin; puhtausvaatimus 250 barissa 16/14/12) ja 2026-10-27
 > (akselikytkin HRC 150; pumppu päätetty). Vertailut F1-61:een on jätetty perusteluiksi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
@@ -767,4 +768,4 @@ nykyisen rinnalle.
 - [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]
 - [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (ratkaisee venttiilikokoonpanon: FXDC + LS-purku, LS + on/off vai PVG 32)
 - [x] Omistajat: PVH57 vai F1-61 → **PVH57**, kaupat sovittu (päätös 2026-10-27)
-- [ ] Omistajat: apupiirin venttiilikokoonpano PVH57:lle
+- [x] Omistajat: apupiirin venttiilikokoonpano PVH57:lle → **PVG 32** ykkösvaihtoehto (päätös 2026-10-27)

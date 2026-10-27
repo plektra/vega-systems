@@ -10,8 +10,8 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
 | [design/archive/p2-pump-options.md](design/archive/p2-pump-options.md) | 🗄 **Arkistoitu 2026-10-27.** Parker F1-61 -vaihtoehto (BPV, Spidex) ja pumppuvertailu; taustaksi (imu- ja kierroslukulaskelmat yhä viitekäytössä) |
 | [design/p2-variable-pump.md](design/p2-variable-pump.md) | P2 säätötilavuuspumppuna: Vickers PVH57 (tori.fi), LS-ohjaus, kaksitiekompensoitu virtauksensäätö, osalista (selvitys, ei päätetty) |
-| [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä ja proportionaalisella LS-lohkoventtiilillä (esim. PVG 32); ei päätetty |
-| [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä, LS-signaalilla kuormilta ja on/off-venttiileillä (ilman venttiilipöytää); ei päätetty |
+| [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md) | **Ykkösvaihtoehto (päätös 2026-10-27):** apupiiri PVH57:llä ja Danfoss PVG 32 -proportionaaliventtiilipöydällä; ehdokasventtiilin tiedot, puhdistus ja koestus |
+| [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä, LS-signaalilla kuormilta ja on/off-venttiileillä (ilman venttiilipöytää); varavaihtoehto |
 | [design/p1-steering-pump.md](design/p1-steering-pump.md) | Ohjauspumpun imulinja (päätetty 32 mm) ja P1:n muutokset P2-remontin yhteydessä |
 | [design/hydraulic-oil.md](design/hydraulic-oil.md) | Hydrauliöljyn valinta: komponenttien rajat, HV 32 / VG 46 / HV 46 -vertailu, tuotteet (päätetty HVLP 32) |
 | [design/pressure-monitoring.md](design/pressure-monitoring.md) | Painemittaus: nykyiset mittarit ja ehdotus digitaalisista antureista (Signal K / NMEA 2000) ja mittausliittimistä |
@@ -33,6 +33,7 @@ Suunnitelmassa on kaksi piiriä:
 
 **Päätös 2026-10-27:** P2 on PVH57 (kaupat sovittu), kytkin HRC 150, 50 mm:n imulinja ja
 kotelovuotolinja säiliöön, ks. [design/p2-variable-pump.md](design/p2-variable-pump.md). Apupiirin
-venttiilikokoonpano on vielä auki: FXDC + LS-purku, [LS + on/off](design/aux-circuit-ls-onoff.md) tai
-[PVG 32](design/aux-circuit-ls-clean-sheet.md). Aiempi alustava suunnitelma (Parker F1-61 + BPV) on
+venttiileiksi **Danfoss PVG 32** (ykkösvaihtoehto, päätös 2026-10-27, kaupat toteutumassa), ks.
+[design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md); varalla
+[LS + on/off](design/aux-circuit-ls-onoff.md) ja FXDC + LS-purku. Aiempi alustava suunnitelma (Parker F1-61 + BPV) on
 [arkistoitu](design/archive/p2-pump-options.md).
