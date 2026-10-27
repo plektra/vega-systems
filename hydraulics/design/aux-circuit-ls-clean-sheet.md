@@ -246,6 +246,45 @@ HRC 150 ja Taper Lock 2012 -holkit 48 mm / 1 1/4" (päätös 2026-10-27), kannak
 pyörien vapaasti avoimen keskiasennon kautta. PVEH:n vika pysäyttää lohkon ja antaa hälytyksen.
 Pätevän henkilön pitää tarkistaa paineasetukset, PVLP-tarve ja ohjauksen kytkentä ennen käyttöä.
 
+### Puhdistus ja koestus
+
+> Lisätty 2026-10-27. Yleinen hydrauliikkaventtiilien kunnostustapa [arvio], ei Danfossin
+> huolto-ohjeesta. Kiristysmomentit ja purkujärjestys tarkistetaan Danfossin huolto-ohjeesta
+> **⚠ ei vielä luettu**. Tavoite on PVH57:n puhtausluokka 16/14/12, joten sisälle ei saa päästää likaa.
+
+**Järjestys: ulkopuoli → tarkistus purkamatta → purku vain tarvittaessa → koestus.**
+
+1. **Ulkopuoli ennen avaamista**
+   - Tulppaa kaikki portit (muovi- tai terästulpat; teippi vain hätävarana). Osa porteista on nyt auki.
+   - Irrota PVE:t (muutama ruuvi lohkoa kohden), merkitse lohkot ja suojaa liittimet.
+   - Pese harjalla ja liuotinpesuaineella tai petrolilla, huuhtele varovasti ja kuivaa paineilmalla
+     heti. **Ei painepesuria** (vesi ja lika karan tiivisteiden ohi). Pinoa ei liuoteta, koska
+     nitriilitiivisteet turpoavat voimakkaista liuottimista.
+2. **Tarkistus purkamatta**
+   - Kansi auki PVE:n tai käsivivun puolelta lohko kerrallaan: karan pitää liikkua käsin molempiin
+     suuntiin ja palata jousella keskelle. Jäykkä kara viittaa likaan tai ruosteeseen.
+   - Portit taskulampulla: ruskea vesijäämä tai ruoste → venttiili puretaan.
+   - Pumppumoduulin paineenrajoittimen asetukseen ei kosketa; jos se irrotetaan, kierrokset lasketaan.
+3. **Purku vain tarvittaessa**
+   - Lohkojen järjestys ja suunta merkitään (1–5). Pino aukeaa kiristyspulteista; tiivistesarja
+     **PVAS 157B8005** (5 lohkoa) vaihdetaan aina, kun pino avataan [datalehti PVG 32 s. 28–29].
+   - Kara pidetään oman lohkonsa kanssa: karat ovat vaihdettavia [s. 3], mutta kuluneet kara ja
+     pesä ovat sovittuneet toisiinsa. Kevyt pintaruoste kiillotetaan hienolla hiomakankaalla
+     (yli 1000) öljyn kanssa; syvät naarmut tai kuopat → uusi kara.
+   - Osat pestään puhtaassa petrolissa, kuivataan nukkaamattomalla liinalla ja paineilmalla ja
+     voidellaan heti HVLP 32:lla.
+   - Kiristyspulttien ja PVE-ruuvien momentit Danfossin huolto-ohjeesta **⚠ ei tiedossa**; liian
+     kova kiristys voi jumittaa karat.
+4. **Koestus**
+   - Paras: hydrauliikkakorjaamon koepenkki (vuodot, karat, paineenrajoittimen asetus), hinta
+     **⚠ ei tiedossa**.
+   - Oma: PVEH:n toiminta 24 V:lla ja potentiometrilla ilman painetta (kara liikkuu, vikasignaali);
+     ensimmäinen ajo matalalla paineella ja paine nostetaan vaiheittain.
+   - Piiri huuhdellaan ennen käyttöönottoa; paluusuodatin vaihdetaan ensimmäisten käyttötuntien jälkeen.
+
+**Kustannussuositus:** ulkopesu ja karojen käsitarkistus ensin. Jos karat liikkuvat vapaasti ja
+portit ovat sisältä puhtaat, suoraan koestukseen ilman purkua; puretaan vain ongelmalohkot.
+
 ### Arvio
 
 400 € on kohtuullinen, jos lohkot ja PVEH ovat kunnossa: yksi uusi PVEH maksaa enemmän kuin koko
@@ -272,6 +311,7 @@ säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole t
 - [ ] Myyjä: hyväksyykö 200 €:n tarjouksen; mitä muut lohkot ohjasivat; porttien tulppaus kuljetukseen
 - [ ] Danfoss: riittääkö PVH57:n noin 20 barin paine-ero PVG 32:n kompensaattoreille ja PVE:iden pilottiöljylle; sopiiko sarjan 4/7 PVE sarjan 0 lohkoon
 - [ ] Pätevä henkilö: PVLP-isku- ja imuventtiilien tarve ja asetus keulapotkurille
+- [ ] Danfossin PVG 32 -huolto-ohje: kiristyspulttien ja PVE-ruuvien momentit, purkujärjestys; PVAS 157B8005:n hinta; korjaamon koestuksen hinta
 - [ ] Sleipner: sopiiko SH240 portaattomaan ohjaukseen proportionaaliventtiilillä
 - [ ] Ankkurivinssin moottori, jarru ja jarruventtiili
 - [ ] Painepesurin hydraulimoottorin virtaus ja paine
