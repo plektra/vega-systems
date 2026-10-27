@@ -6,7 +6,7 @@
 > ohjauspiirin muutokset ennen rakentamista.**
 
 Liittyy: [current-system §3.3](../current-system.md#33-piiri-1--ohjaus),
-[P2:n selvitys](p2-pump-options.md), [öljynjäähdytys](oil-cooling.md).
+[P2:n selvitys](archive/p2-pump-options.md), [öljynjäähdytys](oil-cooling.md).
 
 ## Lähtötiedot
 
@@ -36,7 +36,7 @@ Imulinjan tavallinen suositus on enintään noin 1 m/s (Parkerin raja F1:lle on 
 
 ## Imupaine P1:n imuaukolla
 
-Laskelma 2026-10-23 [laskelma]: samat oletukset kuin [P2:n imulaskelmassa](p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu):
+Laskelma 2026-10-23 [laskelma]: samat oletukset kuin [P2:n imulaskelmassa](archive/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu):
 laminaarivirtaus, liitinhäviöt K ≈ 2,5, tiheys 870 kg/m³, säiliön öljypinta 1 m pumpun yläpuolella
 (+0,085 bar). Imuvirtaus teoreettinen (100 %). Pumpun sisäiset häviöt eivät ole mukana.
 **Mukana 3/4":n imuaukon liitin** [omistaja 2026-10-23]: oletettu 0,1 m Ø19 mm ja supistus

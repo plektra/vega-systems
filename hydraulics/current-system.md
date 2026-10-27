@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Päivitetty 2026-10-26: P2:n valinta (F1-61) on alustava, omistaja kallistuu säätötilavuuspumppuun; säiliön öljypinta vähintään 1 m pumppujen yläpuolella; paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (alustava päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-27: **P2 on Vickers PVH57** (päätös, kaupat sovittu), kytkin HRC 150; F1-61-selvitys arkistoitu. 2026-10-26: P2:n valinta (F1-61) on alustava, omistaja kallistuu säätötilavuuspumppuun; säiliön öljypinta vähintään 1 m pumppujen yläpuolella; paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (alustava päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulipumput on irrotettu** (lokakuu 2026); muu järjestelmä (säiliö, venttiilit, orbitroli,
 > sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Luvut 3.1–3.5 kuvaavat viimeisintä
@@ -18,10 +18,10 @@
 | Pääkone | Asennetaan takaisin ja linjataan vaihteistoon |
 | Hydrauliikka | **Molemmat pumput irrotettu**; muu järjestelmä (säiliö, venttiilit, orbitroli, sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Pumppuja ei asenneta ennen kuin kone on linjattu. |
 | Suunnitelma: ohjauspumppu | Pieni vakiotilavuuspumppu (P1, 16,6 cm³) palaa koneen etupäähän, kahden kiilahihnan vetämänä kuten ennenkin. **Vain ohjaukselle.** |
-| Suunnitelma: apupiirin pumppu | **Parker F1-61** (59,5 cm³, vinoakselimäntäpumppu) **tai vastaava** 56–64 cm³:n ISO 7653 -pumppu valmistajan ohitusventtiilillä (Sunfab SAP DIN, OMFB/Hyva HDS ISO, Rexroth A17FO 063) **suoraan Advance 300:n voimanulosotosta (PTO)** [alustava päätös 2026-10-23 ja 2026-10-24; [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24); omistaja kallistuu säätötilavuuspumppuun 2026-10-26, ks. [p2-variable-pump.md](design/p2-variable-pump.md)] |
+| Suunnitelma: apupiirin pumppu | **Vickers PVH57** (PVH57C-LAF-1S-10-C12V-31, 57,4 cm³, säätötilavuuksinen aksiaalimäntäpumppu, LS-säädin, pyörimissuunta L) **suoraan Advance 300:n voimanulosotosta (PTO)** omalla SAE C -kannakkeella [päätös 2026-10-27, kaupat sovittu; ks. [p2-variable-pump.md](design/p2-variable-pump.md)]. Apupiirin venttiilikokoonpano on vielä auki. (Aiempi alustava suunnitelma Parker F1-61 + BPV on arkistoitu: [archive/p2-pump-options.md](design/archive/p2-pump-options.md).) |
 | Advance 300:n PTO | **Välitys 1:1, käyttö ensiöakselilta** (pyörii aina kun kone käy, myös vapaalla). **Ei omaa kytkintä.** Nimellisteho **0,044 kW/rpm**, eli vakiomomenttiraja **≈ 420 Nm** (35 kW 800 rpm:llä, 110 kW 2500 rpm:llä). Ulostulo on **sileä Ø48 mm:n kiila-akseli** ilman pumppulaippaa. |
-| Suunnitelma: PTO-voimansiirto | PTO-akseli → **Spidex 48/60 -kynsikytkin** → P2. Pumppu on **omalla, runkoon kiinnitetyllä kannakkeella**, joten PTO-akselille ei tule pumpun painoa eikä sivukuormaa. **Ei PTO-kytkintä** [alustava päätös 2026-10-23, korvaa HRC 150 + kytkin]. **Jos P2:ksi tulee PVH57** (kiila-akseli), kytkin on **HRC 150** Taper Lock 2012 -holkeilla 48 mm / 1 1/4" [päätös 2026-10-27, ks. [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi)]. |
-| Suunnitelma: tyhjäkierto | **Parker BPV-F1 -ohitusventtiili käsiohituksella** (378 4179) pumpun päällä: jännitteettömänä pumppu kiertää tyhjänä, jännitteellisenä syöttää piiriin. **Vuotolinja** BPV:ltä suoraan säiliöön. Ks. [p2-pump-options.md](design/p2-pump-options.md#alustava-kokoonpano-2026-10-23). |
+| Suunnitelma: PTO-voimansiirto | PTO-akseli → **HRC 150 -joustokytkin** (Taper Lock 2012 -holkit 48 mm / 1 1/4") → P2 [päätös 2026-10-27, korvaa Spidex 48/60:n]. Pumppu on **omalla, runkoon kiinnitetyllä kannakkeella**, joten PTO-akselille ei tule pumpun painoa eikä sivukuormaa. **Ei PTO-kytkintä** [päätös 2026-10-23]. |
+| Suunnitelma: tyhjäkierto | PVH57 on ajossa **valmiustilassa** noin 20 barissa lähes nollatuotolla, kun LS-linja on yhteydessä säiliöön (LS-purku 2/2-magneettiventtiilillä tai venttiilien keskiasennossa, kokoonpanosta riippuen). Sähkökatkossa pumppu jää valmiustilaan. **Kotelovuotolinja** omana letkuna säiliöön öljypinnan alle. Ks. [p2-variable-pump.md](design/p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku). (BPV-F1 ei enää tarpeen.) |
 | Keulapotkurin letkut | **Pääosin valmiit:** 1/2" **SAE 100R2AT / EN 853** -letkut, omistajien mukaan 300 bar, CETOP-venttiileiltä keulapotkurille. A- ja B-linjat **8,5 m kumpikin**. |
 | P2:n painelinja | 3/4" letku pumpulta venttiileille. PTO-sijoitus vaatii **3–4 m** letkua. |
 | P2:n imulinja | **50 mm** [päätös 2026-10-23; aiemmin 32 mm:n sisähalkaisija, noin 3 m]. Säiliön öljypinta on vähintään noin 1 m pumppujen imuaukkojen yläpuolella [omistaja 2026-10-26]. |
@@ -37,7 +37,7 @@
   (etupää)       │
                  └── vauhtipyörä ── Advance 300 ── potkuriakseli
                                     │
-                                    └── PTO 1:1, Ø48 kiila ── Spidex 48/60 ── P2 F1-61 + BPV ── apupiiri
+                                    └── PTO 1:1, Ø48 kiila ── HRC 150 ────── P2 PVH57 (LS) ──── apupiiri
                                                                   └─ oma kannake ─┘    (keulapotkuri, ankkurivinssi, …)
 ```
 
@@ -58,7 +58,7 @@
 
    *Oletukset: volumetrinen hyötysuhde 92 %, mekaaninen 90 %.* Käytännössä 250 barin
    paineenrajoituksella **51 cm³:n pumppu** riittää noin 88 %:n työntövoimaan 700 rpm:llä, ks.
-   [p2-pump-options.md](design/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
+   [p2-pump-options.md](design/archive/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
 3. **Ensiöakselin PTO pyörii vapaalla.** Juuri sitä keulapotkurin satamakäyttö vaatii.
 4. **PTO:n nimellisarvossa on reilusti varaa.** 0,044 kW/rpm vastaa noin 420 Nm. 51 cm³:n pumppu
    250 barilla tarvitsee noin 225 Nm (54 %), eli noin 16,5 kW akselitehoa 700 rpm:llä (PTO:n raja
@@ -68,26 +68,27 @@
    vaatisi moottorilla 264 bar plus linjahäviöt. Omistajat hyväksyvät noin 90 %:n työntövoiman,
    jotta pumppu ja venttiilit voidaan valita yleisestä 250 barin luokasta. Todellisilla
    letkupituuksilla 250 barin paineenrajoitus antaa lämpimänä noin 85–89 %, ks. kohta 9.
-6. **Ajon aikana pumppu kiertää tyhjänä BPV-ohitusventtiilin kautta** [alustava päätös 2026-10-23]. PTO-kytkintä
-   ei ole, joten F1-61 pyörii aina koneen mukana. BPV:n ollessa jännitteetön pumpun tuotto kiertää
-   pumpun päädyssä, ja vain pieni jäähdytysvirtaus kulkee vuotolinjan kautta säiliöön. Näin
-   korkeilla kierroksilla ei synny kavitaatiota eikä suurta läpivirtausta. Ohitustilan lämpöä Parker
-   ei ilmoita **⚠ ei tiedossa**; mitataan ensimmäisellä kaudella. (Aiempi suunnitelma: mekaaninen
-   PTO-kytkin, ks. [p2-pump-options.md](design/p2-pump-options.md#kytkinvaihtoehdot).)
-7. **Voimansiirron ja BPV:n vaatimukset:**
-   - **Kytkin:** Spidex 48/60, hammaskehä 98 Sh A (TKN 525 Nm) tai 64 Sh D (655 Nm); mitoittava
-     momentti käyttökertoimineen noin 470 Nm 280 barissa [laskelma].
-   - **BPV:n tilaa vaihdetaan vain alle 20 barissa:** 2/2-vapaakiertoventtiili auki ensin, sitten
-     BPV:n kela, sitten 2/2 kiinni. Keulapotkuria käytetään vain tyhjäkäynnillä (kierroslukitus
-     noin 1000 rpm).
-   - **Ohjaus:** BPV:n kela 24 V, 14 W, ESP32 PDM:ltä; Signal K näyttää tilan.
-   - **Vikatilat:** sähkökatko → ohitus, keulapotkuri ei toimi; käsiohitus vain kone sammutettuna, ks.
-     [p2-pump-options.md](design/p2-pump-options.md#alustava-kokoonpano-2026-10-23).
+6. **Ajon aikana PVH57 on valmiustilassa** [päätös 2026-10-27]. PTO-kytkintä ei ole, joten pumppu
+   pyörii aina koneen mukana, mutta LS-linjan ollessa yhteydessä säiliöön se pitää noin 20 barin
+   paineen lähes nollatuotolla. Lämpöä syntyy vähän; tarkka valmiustilan häviöteho **⚠ ei tiedossa**
+   (kysy Danfossilta). Keulapotkuria käytettäessä pumppu tuottaa vain tarvittavan virtauksen, joten
+   kierroslukitusta ei tarvita lämmön takia; pumpun imupaineraja korkeilla kierroksilla ks.
+   [p2-variable-pump](design/p2-variable-pump.md#sopivuus-vegaan-laskelma). (Aiemmat suunnitelmat:
+   mekaaninen PTO-kytkin ja F1-61 + BPV, ks. [arkisto](design/archive/p2-pump-options.md).)
+7. **Voimansiirron vaatimukset:**
+   - **Kytkin:** HRC 150, Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu); nimellismomentti
+     jälleenmyyjien mukaan noin 600 Nm **⚠ vahvista**; mitoittava momentti käyttökertoimineen noin
+     430 Nm 250 barissa [laskelma].
+   - **LS-purku ja ohjaus** riippuvat valittavasta venttiilikokoonpanosta, ks.
+     [p2-variable-pump](design/p2-variable-pump.md), [LS + on/off](design/aux-circuit-ls-onoff.md),
+     [PVG 32](design/aux-circuit-ls-clean-sheet.md).
+   - **Vikatilat:** sähkökatko → pumppu valmiustilaan, keulapotkuri ei toimi, ks.
+     [p2-variable-pump: Vikatilat](design/p2-variable-pump.md#vikatilat).
    - **Linjaus:** vaihteisto on kiinnitetty jäykästi runkoon [blogi 2021-02-08], kuten myös
-     pumppukannake. Kytkimen sallitut virheet 1000 rpm:llä: säteis 0,44 mm, kulma 1,2° (×0,7
-     40–60 °C:ssa). Tarkista linjaus uudelleen koeajon jälkeen.
-   - **Tila:** kytkin 140 mm + pumppu ja BPV. Tarkista tila suhteessa runkoon, vaihteistoon ja
-     potkuriakselin laakeriin.
+     pumppukannake. Linjaus kytkimen ja pumpun asennuspiirustuksen toleransseihin **⚠ HRC 150:n
+     sallitut virheet luettelosta**. Tarkista linjaus uudelleen koeajon jälkeen.
+   - **Tila:** kytkin (halkaisija 150 mm) + pumppu (noin 36 kg). Tarkista tila suhteessa runkoon,
+     vaihteistoon ja potkuriakselin laakeriin.
    - **Suojakotelo** pyörivälle kytkimelle on pakollinen.
 8. **Nykyiset 1/2":n keulapotkuriletkut riittävät.** 33,8 l/min:llä öljyn nopeus 12,7 mm:n letkussa on
    noin 4,5 m/s, eli painelinjojen tavanomaisen 3–6 m/s:n ohjearvon sisällä. Arvioitu painehäviö
@@ -133,7 +134,7 @@
    että potkurin momentti ja työntövoima kasvavat kierrosnopeuden neliössä [datalehti Side-Power SH Series v1.0.0 2017].
 
    Täyden ~90 %:n saavuttaminen vaatii korkeamman paineenrajoituksen ja enemmän virtausta
-   tyhjäkäynnillä, ks. [p2-pump-options.md](design/p2-pump-options.md#paineenrajoituksen-nostaminen-yli-250-barin).
+   tyhjäkäynnillä, ks. [p2-pump-options.md](design/archive/p2-pump-options.md#paineenrajoituksen-nostaminen-yli-250-barin).
 10. **P2:n imulinja: omistajat vahvistivat 32 mm:n sisähalkaisijan (≈ 1-1/4"), mikä riittää.**
     Säiliön ulosotto on samaa kokoa, joten linjassa ei ole 1":n kuristusta. Arvioitu paine pumpun
     imuaukolla 51 cm³:n pumpulla, kun säiliön öljypinta on noin 1 m pumpun yläpuolella (+0,085 bar)
@@ -156,6 +157,10 @@
     2500 rpm:llä virtaus olisi niin suuri, että kytkimen pitää silti irrota automaattisesti noin
     1000–1200 rpm:n yläpuolella.
 
+    **Päivitys 2026-10-27:** P2 on PVH57; sen mobiiliversio sallii 2400 rpm imupaineella 0 bar, ja
+    50 mm:n imulinja säilyy, ks. [p2-variable-pump](design/p2-variable-pump.md#sopivuus-vegaan-laskelma).
+    Alla olevat F1-päivitykset ovat taustaa.
+
     **Päivitys 2026-10-23:** Parkerin F1-luettelon mukaan imupaineen pitää olla vähintään 1,0 bar
     absoluuttista (noin 0 bar ylipainetta), ja F1-61:lle suositellaan 50 mm:n imuliitintä. Nykyinen
     32 mm:n linja ei täytä tätä kylmällä öljyllä edes tyhjäkäynnillä (noin −0,2 bar 5 °C:ssa VG 46:lla).
@@ -165,10 +170,9 @@
     **Päivitys 2026-10-22:** Parker F1-061:llä (59,5 cm³) imuvirtaus on suurempi. **Suositus: 38 mm:n
     imulinja mahdollisimman lyhyenä (~2 m) ja HV 32 -öljy**, jolloin imupaine pysyy noin 0 barissa
     vielä 1000 rpm:llä ja 5 °C:ssa. Vertailu ja kierroslukuanalyysi:
-    [p2-pump-options.md](design/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu).
-11. **Jos BPV on syöttöasennossa korkeilla kierroksilla** (vika tai käsiohitus), pumpun tuotto kasvaa
-    kierrosten mukana (noin 102 l/min 1800 rpm:llä). Kierroslukitus palauttaa BPV:n ohitukseen yli
-    noin 1000 rpm:ssä. Tarkista silti VPR3:n suurin sallittu tulovirtaus (säädetty 35 l/min).
+    [p2-pump-options.md](design/archive/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu).
+11. ~~BPV syöttöasennossa korkeilla kierroksilla~~: ei koske PVH57:ää (päätös 2026-10-27). PVH57:n
+    imupaine täydellä iskulla 2400 rpm:llä ks. [p2-variable-pump](design/p2-variable-pump.md#sopivuus-vegaan-laskelma).
 
 ## 1–2. Alus ja voimansiirto
 
@@ -315,7 +319,7 @@ Ratkaistut:
 - [x] Advance 300 asennettu ja linjattu
 - [x] Advance 300:n PTO: 1:1, ensiöakseli (pyörii vapaalla), ei omaa kytkintä
 - [x] Advance 300:n PTO:n nimellisarvo: 0,044 kW/rpm (≈ 420 Nm)
-- [x] PTO:n ulostulo: Ø48 mm:n kiila-akseli ilman laippaa; Spidex 48/60 -kynsikytkin runkoon kiinnitetylle pumpulle (päätös 2026-10-23; aiemmin HRC 150 + kytkin)
+- [x] PTO:n ulostulo: Ø48 mm:n kiila-akseli ilman laippaa; HRC 150 -joustokytkin runkoon kiinnitetylle pumpulle (päätös 2026-10-27; välillä Spidex 48/60)
 - [x] Keulapotkurin paine: 250 barin luokka, ~90 % hyväksytty
 - [x] Keulapotkurin letkut: 1/2", 300 bar, A ja B 8,5 m kumpikin
 - [x] P2:n painelinja: 3/4" letku, 3–4 m
@@ -327,17 +331,19 @@ Ratkaistut:
 Avoimet:
 
 - [x] Koneen tyhjäkäynti: **oletetaan 700 rpm, ei mitata** (päätös 2026-10-23)
-- [x] P2: Parker F1-61 (59,5 cm³) + BPV-F1 käsiohituksella (päätös 2026-10-23); hankinta myöhemmin
-- [ ] P2:n hankinta: Torin F1-61:n kauppa peruuntui; etsitään käytetty F1-61 tai vastaava ohitusventtiilin kanssa (päätös 2026-10-24), ks. [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24). Selvitettävänä myös säätötilavuuspumppu Vickers PVH57 (tori.fi, 190 €), ks. [p2-variable-pump](design/p2-variable-pump.md)
-- [x] ~~PTO-kytkin~~: ei kytkintä, BPV hoitaa tyhjäkierron (päätös 2026-10-23)
-- [x] Akselikytkin: Spidex 48/60 (päätös 2026-10-23); hankinta: tarjous Salhydrolta, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
-- [ ] Pumppukannake: omistajat suunnittelevat, 10 mm teräslevy, laserleikkaus ja hitsaus [omistaja 2026-10-23]; ei koneistusta (päätös 2026-10-23); ISO 7653 -laippa Ø80, säätövara linjaukseen, Spidex 140 mm, suojakotelo, ks. [p2-pump-options](design/p2-pump-options.md#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä)
+- [x] ~~P2: Parker F1-61 (59,5 cm³) + BPV-F1 käsiohituksella (päätös 2026-10-23)~~ → **P2 on Vickers PVH57** (päätös 2026-10-27)
+- [x] P2:n hankinta: Vickers PVH57, kaupat sovittu [omistaja 2026-10-27]
+- [ ] Apupiirin venttiilikokoonpano PVH57:lle: FXDC + LS-purku, LS + on/off vai PVG 32, ks. [p2-variable-pump](design/p2-variable-pump.md)
+- [x] ~~PTO-kytkin~~: ei kytkintä (päätös 2026-10-23); PVH57 on ajossa valmiustilassa (päätös 2026-10-27)
+- [x] Akselikytkin: HRC 150 + Taper Lock 2012 -holkit 48 mm / 1 1/4" (päätös 2026-10-27; korvaa Spidex 48/60:n), ks. [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi)
+- [ ] Pumppukannake: omistajat suunnittelevat, 10 mm teräslevy, laserleikkaus ja hitsaus [omistaja 2026-10-23]; ei koneistusta (päätös 2026-10-23); **SAE C -nelireikälaippa** ja noin 36 kg:n pumppu, säätövara linjaukseen, HRC 150, suojakotelo; laipan mitat Eatonin asennuspiirustuksesta **⚠**, ks. [p2-variable-pump](design/p2-variable-pump.md#asennusjärjestys)
 - [x] Kone ja merivaihde ovat jäykästi runkoon kiinni, joten pumppukannake kiinnitetään runkoon [omistaja 2026-10-23]
-- [ ] BPV:n ohitustilan lämpö ajossa (ei julkaistu): kysy Parkerilta, mittaa ensimmäisellä kaudella
-- [ ] Säiliön liitännät: 50 mm:n imu-ulosotto ja täysiaukkoinen palloventtiili; BPV:n vuotolinjan paluu öljypinnan alle
+- [x] ~~BPV:n ohitustilan lämpö ajossa~~: BPV:tä ei tule (päätös 2026-10-27)
+- [ ] PVH57:n valmiustilan häviöteho ajossa: kysy Danfossilta, mittaa ensimmäisellä kaudella
+- [ ] Säiliön liitännät: 50 mm:n imu-ulosotto ja täysiaukkoinen palloventtiili; PVH57:n kotelovuotolinjan paluu öljypinnan alle
 - [ ] U11:n vuotolinja: missä kohtaa se liittyy paluulinjaan? Jos ennen jäähdytintä, ohitusventtiiliä (3–4 bar) tai suodatinta, kotelon paine nousee. Kysy Sleipneriltä kotelon suurin sallittu paine; tarvittaessa vuotolinja suoraan säiliöön tai paluulinjaan suodattimen jälkeen
-- [x] PTO:n pyörimissuunta: **vastakkainen koneen pyörimissuuntaan nähden** [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **P2-pumppu on L**. Ennen kiinteäsuuntaisen pumpun ostoa suunta kannattaa varmistaa teippiliuskalla, ks. [vessel: Pyörimissuunnat](../vessel/README.md#pyörimissuunnat). (F1:n suuntaa voi vaihtaa kääntämällä päätykappaleen.)
-- [x] Valitun pumpun pienin sallittu imupaine: 1,0 bar abs (Parker F1)
+- [x] PTO:n pyörimissuunta: **vastakkainen koneen pyörimissuuntaan nähden** [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **P2-pumppu on L**. Ennen kiinteäsuuntaisen pumpun ostoa suunta kannattaa varmistaa teippiliuskalla, ks. [vessel: Pyörimissuunnat](../vessel/README.md#pyörimissuunnat). PVH57 on L ✅.
+- [x] Valitun pumpun imupaine: PVH57 mobiili 2400 rpm imupaineella 0 bar, 2000 rpm −0,17 bar (Eaton V-PUPI-TM008-E1 s. 7)
 - [ ] Mitä öljyä järjestelmässä nyt on (säiliö ja letkut paikallaan): merkki, luokka, ikä; vaihdetaanko ja huuhdellaanko
 - [x] Hydrauliöljyn tyyppi ja luokka: **HVLP 32** (päätös 2026-10-23), ks. [hydraulic-oil.md](design/hydraulic-oil.md)
 - [ ] Öljytuote (Teboil 32S / Neste 32 Super, VI) ja vanhan öljyn tyhjennys ja huuhtelu
@@ -345,7 +351,7 @@ Avoimet:
 - [ ] BAV-713:n painehäviö ~34 l/min:llä (P→A, B→T): ei luettelossa; kysy toimittajalta tai mittaa
 - [x] BAV-713:n kelojen jännite: 24 VDC [omistaja 2026-10-23]
 - [x] Keulapotkurin iskuventtiilit: ~~lisätään A/B-iskuventtiililohko~~ → **ei lisätä** (päätös 2026-10-23, korvaa saman päivän päätöksen)
-- [x] **Tarvitaanko iskuventtiililohko lainkaan?** Ei (päätös 2026-10-23). BAV-713:n keskiasento on kelluva (A, B ja T yhdistetty), ja VMP rajoittaa P-linjan 250 bariin, joten painepiikit ovat jo rajattuja. Omistajien päätettäväksi (ks. [p2-pump-options](design/p2-pump-options.md))
+- [x] **Tarvitaanko iskuventtiililohko lainkaan?** Ei (päätös 2026-10-23). BAV-713:n keskiasento on kelluva (A, B ja T yhdistetty), ja VMP rajoittaa P-linjan 250 bariin, joten painepiikit ovat jo rajattuja. Omistajien päätettäväksi (ks. [p2-pump-options](design/archive/p2-pump-options.md))
 - [x] ~~U11-moottorin suurin sallittu paine~~: ei tarvita, kun paineenrajoitus pysyy 250 barissa; Sleipnerin taulukko näyttää U11:lle 264 bar 100 %:lla [omistaja 2026-10-23]
 - [x] Paineenrajoitus pysyy 250 barissa (päätös 2026-10-21, vahvistettu 2026-10-23)
 - [ ] Onko ankkurivinssi kytketty? Moottorin merkki, malli ja kierrostilavuus

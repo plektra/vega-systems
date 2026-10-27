@@ -1,7 +1,7 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu, LS ja on/off-venttiilit
 
-> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa; ISO 1219 -kaavio; muutosyhteenveto ja kierroslukitus), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
-> ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). Tässä kysytään, miten apupiiri
+> **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa; ISO 1219 -kaavio; muutosyhteenveto ja kierroslukitus), **ei päätetty**. **Pumppu on päätetty 2026-10-27: PVH57** (F1-61-vaihtoehto
+> [arkistoitu](archive/p2-pump-options.md)); venttiilikokoonpano on yhä auki. Tässä kysytään, miten apupiiri
 > rakennettaisiin alusta alkaen säätötilavuuspumpulla **ilman proportionaalista venttiilipöytää**
 > [omistaja 2026-10-26, kysymys]. Vertailukohdat: PVH57 olemassa olevilla venttiileillä
 > ([p2-variable-pump](p2-variable-pump.md)) ja PVH57 proportionaalisella LS-lohkoventtiilillä
@@ -29,7 +29,7 @@
 ## Mitä muuttuu nykyiseen suunnitelmaan verrattuna
 
 Vertailukohta on nykyinen suunnitelma (F1-61, BPV-ohitusventtiili ja VPR3,
-[p2-pump-options](p2-pump-options.md)) ja veneessä jo olevat osat.
+[p2-pump-options](archive/p2-pump-options.md)) ja veneessä jo olevat osat.
 
 **Toiminta:**
 - Pumppu tuottaa vain sen öljyn, jonka kuormat käyttävät. Ylimäärää ei kuristeta lämmöksi.
@@ -157,7 +157,7 @@ menettää kuormansa ja ryntää. Ks. [Tarvitaanko kierroslukitus](#tarvitaanko-
 ### Tarvitaanko kierroslukitus
 
 F1-61-reitillä kierroslukitus on välttämätön lämmön takia (1800 rpm:llä noin 38 kW,
-[p2-pump-options](p2-pump-options.md)). **Vaihtoehdossa C se ei ole välttämätön** [arvio]:
+[p2-pump-options](archive/p2-pump-options.md)). **Vaihtoehdossa C se ei ole välttämätön** [arvio]:
 
 - **Kun veto on kunnossa, kierrokset eivät haittaa.** Pumppu pysyy 250 barissa ja antaa vain sen
   noin 33 l/min, jonka moottori ottaa. Lämpöä ei synny ylimäärästä, ja työntövoima on sama kuin

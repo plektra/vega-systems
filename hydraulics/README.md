@@ -8,7 +8,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [current-system.md](current-system.md) | Lähtötilanne, nykyinen remonttitilanne (§0), vaikutukset suunnitteluun, avoimet kysymykset |
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
-| [design/p2-pump-options.md](design/p2-pump-options.md) | Apupiirin pumppu ja veto: alustava kokoonpano (F1-61, BPV, Spidex), taustavertailu ja muut Parkerin pumput (F1-51 vaihtoehtona) |
+| [design/archive/p2-pump-options.md](design/archive/p2-pump-options.md) | 🗄 **Arkistoitu 2026-10-27.** Parker F1-61 -vaihtoehto (BPV, Spidex) ja pumppuvertailu; taustaksi (imu- ja kierroslukulaskelmat yhä viitekäytössä) |
 | [design/p2-variable-pump.md](design/p2-variable-pump.md) | P2 säätötilavuuspumppuna: Vickers PVH57 (tori.fi), LS-ohjaus, kaksitiekompensoitu virtauksensäätö, osalista (selvitys, ei päätetty) |
 | [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä ja proportionaalisella LS-lohkoventtiilillä (esim. PVG 32); ei päätetty |
 | [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä, LS-signaalilla kuormilta ja on/off-venttiileillä (ilman venttiilipöytää); ei päätetty |
@@ -26,11 +26,13 @@ Suunnitelmassa on kaksi piiriä:
 
 - **Ohjaus:** 16,6 cm³:n hammaspyöräpumppu koneen etupäästä hihnavedolla, syöttää orbitrolia ja
   ohjaussylinteriä.
-- **Apupiiri:** Parker F1-61 -mäntäpumppu (59,5 cm³) vaihteiston PTO:lta Spidex-kynsikytkimellä,
-  ilman PTO-kytkintä; ajon aikana pumppu kiertää tyhjänä BPV-ohitusventtiilin kautta. Syöttää keulapotkuria (myöhemmin myös ankkurivinssiä) CETOP 3
-  -pohjalaatan kautta. Paineenrajoitus 250 bar, noin 90 %:n työntövoima hyväksytty.
+- **Apupiiri:** Vickers PVH57 -säätötilavuuspumppu (57,4 cm³, LS-säädin) vaihteiston PTO:lta
+  HRC 150 -joustokytkimellä, ilman PTO-kytkintä; ajon aikana pumppu on valmiustilassa noin 20 barissa.
+  Syöttää keulapotkuria (myöhemmin myös ankkurivinssiä). Paineenrajoitus 250 bar, noin 90 %:n
+  työntövoima hyväksytty.
 
-Alustava päätös 2026-10-23: F1-61 + BPV-F1 käsiohituksella, Spidex 48/60 -kytkin, 50 mm:n imulinja ja
-BPV:n vuotolinja säiliöön, ks. [design/p2-pump-options.md](design/p2-pump-options.md#alustava-kokoonpano-2026-10-23).
-Hankinta myöhemmin. **2026-10-24:** Torin F1-61:n kauppa peruuntui; myös vastaavat Sunfab-, OMFB/Hyva- ja
-Rexroth-pumput omalla ohitusventtiilillään käyvät, ks. [vaihtoehdot](design/p2-pump-options.md#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24).
+**Päätös 2026-10-27:** P2 on PVH57 (kaupat sovittu), kytkin HRC 150, 50 mm:n imulinja ja
+kotelovuotolinja säiliöön, ks. [design/p2-variable-pump.md](design/p2-variable-pump.md). Apupiirin
+venttiilikokoonpano on vielä auki: FXDC + LS-purku, [LS + on/off](design/aux-circuit-ls-onoff.md) tai
+[PVG 32](design/aux-circuit-ls-clean-sheet.md). Aiempi alustava suunnitelma (Parker F1-61 + BPV) on
+[arkistoitu](design/archive/p2-pump-options.md).

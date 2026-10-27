@@ -84,7 +84,7 @@ mitoitukseen vaikuttavat arvot.
 | Koneiden määrä | 1 | |
 | Tyhjäkäynti / suurin | ~700 (**⚠ tarkista** mittaamalla) / ~2400 (matka ~1800) | rpm |
 | Käytettävissä olevat voimanulosotot | Etupään hihnat → ohjauspumppu P1 (vain pienelle teholle; luisti yli ~9 kW:lla). Advance 300:n PTO → apupiirin pumppu P2. | |
-| Vaihteiston PTO: välitys / suurin momentti / kytkin | 1:1 / 0,044 kW/rpm ≈ 420 Nm / ei kytkintä; pumppu pyörii aina, tyhjäkierto BPV-ohitusventtiilillä (päätös 2026-10-23) | – / Nm / – |
+| Vaihteiston PTO: välitys / suurin momentti / kytkin | 1:1 / 0,044 kW/rpm ≈ 420 Nm / ei kytkintä; pumppu pyörii aina, PVH57 valmiustilassa ajon aikana (päätös 2026-10-27; aiemmin BPV-ohitusventtiili) | – / Nm / – |
 | Pyöriikö vaihteiston PTO vapaalla? | kyllä (ensiöakselilta) | |
 | Tarvitaanko hydrauliikkaa koneen ollessa sammutettuna? | TBD | kyllä / ei: ankkurointi, satama |
 
@@ -185,8 +185,8 @@ keulapotkuri (noin 34 l/min, 250 bar).
 |---|---|
 | Öljytyyppi | Mineraalipohjainen **HVLP** (DIN 51524-3 / ISO 11158 HV); HEES ei tarpeen. **Päätetty 2026-10-23**, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
 | Viskositeettiluokka | Suositus **HVLP 32** (DIN 51524-3), VI ≥ 150, mieluiten > 180, Parker HF-0; esim. Teboil Hydraulic Oil 32S. Ainoa luokka, joka pysyy kaikkien komponenttien rajoissa 0 °C:sta noin 72 °C:seen (P1:n 12 cSt:n minimi). **Päätetty 2026-10-23**, ks. [hydraulic-oil.md](design/hydraulic-oil.md) |
-| Puhtaustavoite | Herkimmän komponentin mukaan: **F1-61 20/18/13** [Parker MSG30-8200 s. 80]; jos P2:ksi valitaan PVH57, **16/14/12** (250 bar) [Eaton PVH s. 31]. Ks. [paperisuodattimen riittävyys](design/p2-variable-pump.md#riittääkö-nykyinen-paperisuodatin) |
-| Suodatus | Paluusuodatin säiliön kannella; nykyinen OMTF112C10NA2 F1-61:lle, PVH57:lle OMTF171F10NA1 (ehdokas). Suodattava huohotin **⚠ päättämättä** |
+| Puhtaustavoite | Herkimmän komponentin mukaan: P2 on PVH57 (päätös 2026-10-27), joten **16/14/12** (250 bar) [Eaton PVH s. 31]. (F1-61:llä olisi riittänyt 20/18/13.) Ks. [paperisuodattimen riittävyys](design/p2-variable-pump.md#riittääkö-nykyinen-paperisuodatin) |
+| Suodatus | Paluusuodatin säiliön kannella; nykyinen OMTF112C10NA2 ei riitä PVH57:lle; ehdokas OMTF171F10NA1. Suodattava huohotin **⚠ päättämättä** |
 | Huoltoväli | TBD |
 | Vuotojen keräys | TBD |
 
@@ -203,9 +203,8 @@ keulapotkuri (noin 34 l/min, 250 bar).
 | Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~70 °C. **Päätetty 2026-10-23** |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
-| BPV:n tila | BPV-F1:n kela | syöttö/ohitus | `hydraulics.<system>.bypass.engaged` | Hälytys, jos syöttö päällä yli ~1200 rpm |
-| P2:n lähtöpaine (2B2, ehdotus, prioriteetti 1) | BPV:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | BPV:n vaihto vain alle 20 bar (ohjauslogiikan ehto) |
-| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (Parker F1: vähintään 1,0 bar abs), hälytys alle ~−0,2 bar. **Päätetty 2026-10-23.** P1: mittaus käyttöönotossa, ei kiinteää anturia |
+| P2:n lähtöpaine (2B2, ehdotus, prioriteetti 1) | PVH57:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | Valmiustila noin 20 bar; hälytys, jos paine pysyy korkeana, kun mitään toimintoa ei käytetä (LS-purku jumissa). Ks. [pressure-monitoring.md](design/pressure-monitoring.md) |
+| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (PVH57 mobiili: 2400 rpm imupaineella 0 bar), hälytys alle ~−0,2 bar. **Päätetty 2026-10-23.** P1: mittaus käyttöönotossa, ei kiinteää anturia |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
 ### 10.2 Ohjaus
@@ -216,9 +215,9 @@ keulapotkuri (noin 34 l/min, 250 bar).
   merkki TBD. Ks. [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin).
 - **Lukitukset:**
   - Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä.
-  - BPV:n tilaa vaihdetaan vain alle 20 barissa: päälle 2/2-venttiili auki → BPV:n kela → 2/2 kiinni; pois päinvastoin.
-  - Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään, 2/2-venttiili avataan ja BPV palautetaan ohitukseen. Ks. [p2-pump-options.md](design/p2-pump-options.md#alustava-kokoonpano-2026-10-23).
-  - Hälytys, jos BPV on syöttöasennossa yli noin 1200 rpm:ssä (myös käsiohitus).
+  - ~~BPV-lukitukset~~: BPV:tä ei tule, P2 on PVH57 (päätös 2026-10-27). LS-purun ohjausjärjestys
+    riippuu venttiilikokoonpanosta, ks. [p2-variable-pump](design/p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)
+    ja [LS + on/off: kierroslukitus](design/aux-circuit-ls-onoff.md#tarvitaanko-kierroslukitus). **⚠ päätetään kokoonpanon kanssa**.
   - Muut TBD.
 
 ### 10.3 Autopilotin liitäntä ohjauspiiriin

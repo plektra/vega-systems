@@ -4,7 +4,7 @@
 > komponenttien rajat datalehdistä, tuotetiedot jälleenmyyjien sivuilta (haettu 2026-10-23).
 
 Liittyy: [vaatimukset §9](../requirements.md#9-öljy-puhtaus-ja-huolto),
-[P1:n imulinja](p1-steering-pump.md), [P2:n imupuoli](p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu),
+[P1:n imulinja](p1-steering-pump.md), [P2:n imupuoli](archive/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu),
 [öljynjäähdytys](oil-cooling.md).
 
 **Järjestelmässä nyt oleva öljy: ⚠ ei tiedossa.** Säiliö, venttiilit ja letkut ovat paikallaan
@@ -28,7 +28,8 @@ leikkauskestävä laatu ja vaihtaa öljy ajallaan.
 | Komponentti | Pienin | Suurin (käyttö) | Lähde |
 |---|---|---|---|
 | P1 Salami 2PE | **12 cSt** (suositus 17–65) | käynnistys 800 cSt | [datalehti Salami 2PE] |
-| P2 Parker F1 | 10 cSt (suositus 20–30) | **400 cSt**, käynnistys 4000; öljy ≤ 75 °C | [datalehti Parker HY30-8201] |
+| **P2 Vickers PVH57** (päätös 2026-10-27) | **⚠ ei tiedossa** (optimi 16–40 cSt) | kylmäkäynnistys ≤ 5000 cSt; öljy hetkellisesti ≤ 104 °C | [Eaton V-PUPI-TM008-E1 s. 31], ks. [p2-variable-pump](p2-variable-pump.md#tekniset-tiedot) |
+| ~~P2 Parker F1~~ (arkistoitu) | 10 cSt (suositus 20–30) | **400 cSt**, käynnistys 4000; öljy ≤ 75 °C | [datalehti Parker HY30-8201] |
 | Rexroth 2/2-venttiili | 20 cSt | **380 cSt** | [datalehti RE 18323-07] |
 | Orbitroli HKUS | noin 10 cSt | noin 300 cSt; öljy ≤ 80 °C | M+S-ohjausyksiköiden yleistiedot [LöSi-luettelo](https://loesi.de/wp-content/uploads/2023/08/Hydrostatische-Lenkeinheiten_katalog_de-1.pdf); **⚠ tarkista** HKUS:n omasta datalehdestä |
 | Sleipner-keulapotkuri | ei viskositeettirajaa | öljy alle 75 °C, suositus 40–60 °C | [ohje Sleipner 2746 35 2025] |
@@ -40,7 +41,7 @@ ja keulapotkurin ohje asettaa vain lämpötilarajan.
 
 ## Öljyjen vertailu [laskelma]
 
-Walther-yhtälö (ASTM D341). HV 32 ja VG 46 kuten [P2:n imulaskelmassa](p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu);
+Walther-yhtälö (ASTM D341). HV 32 ja VG 46 kuten [P2:n imulaskelmassa](archive/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu);
 HV 46 oletuksella VI noin 150 (7,9 cSt 100 °C:ssa). Imupaine P1:llä: 32 mm × 3,2 m, 3/4":n imuaukko,
 säiliö 1 m pumpun yläpuolella, ks. [p1-steering-pump.md](p1-steering-pump.md).
 

@@ -1,9 +1,14 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
+> **⚠ Arkki 2 on vanhentunut 2026-10-27:** P2 on nyt **Vickers PVH57** ja kytkin HRC 150; F1-61, BPV ja Spidex
+> eivät ole enää suunnitelmassa ([decisions.md](../decisions.md)). Arkkia 2 ei ole piirretty uudelleen, koska
+> apupiirin venttiilikokoonpano on vielä auki; PVH57:n ISO 1219 -luonnos vaihtoehdolle C on
+> [aux-circuit-ls-onoff](design/aux-circuit-ls-onoff.md#iso-1219--kaavio-luonnos).
+>
 > **Tila:** päivitetty 2026-10-23 (P2 = F1-61 + BPV, Spidex-kytkin, 50 mm imu) ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
 > Yhtenäinen viiva = olemassa tai päätetty, katkoviiva = suunnitteilla tai vaihtoehto.
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
-> [design/p2-pump-options.md](design/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
+> [design/p2-variable-pump.md](design/p2-variable-pump.md), [arkisto: p2-pump-options](design/archive/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
 > Vanha kaavio (2018): [img/hydraulics-v3-2018.png](img/hydraulics-v3-2018.png).
 >
 > **ISO 1219 -kaaviot** (2026-10-23, luonnos): arkki 1 ohjauspiiri, arkki 2 apupiiri ja keulapotkuri,
@@ -53,8 +58,8 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 |---|---|---|---|
 | 2M1 | Advance 300 PTO | 1:1, Ø48 mm kiila-akseli, ≤ 420 Nm; pyörii vastakkaiseen suuntaan kuin kone | [current-system §0](current-system.md), [omistaja 2026-10-23] |
 | 2Z3 | Spidex 48/60 -kynsikytkin | hammaskehä 98 Sh A | [päätös 2026-10-23](../decisions.md) |
-| 2P1 | Parker F1-61 | 59,5 cm³/r, 350/400 bar; suunta R/L valitaan koneen suunnan mukaan **⚠** | [p2-pump-options](design/p2-pump-options.md) |
-| 2V1 | Parker BPV-F1 378 4179, Y1 | jännitteetön = ohitus (pumppu kiertää tyhjänä), käsiohitus; vuotolinja 1/4" suoraan säiliöön; kaaviossa yksinkertaistettu 2/2-venttiilinä | [p2-pump-options](design/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili) |
+| 2P1 | Parker F1-61 | 59,5 cm³/r, 350/400 bar; suunta R/L valitaan koneen suunnan mukaan **⚠** | [p2-pump-options](design/archive/p2-pump-options.md) |
+| 2V1 | Parker BPV-F1 378 4179, Y1 | jännitteetön = ohitus (pumppu kiertää tyhjänä), käsiohitus; vuotolinja 1/4" suoraan säiliöön; kaaviossa yksinkertaistettu 2/2-venttiilinä | [p2-pump-options](design/archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili) |
 | 2V0 | Imulinjan palloventtiili | täysiaukkoinen; imu 50 mm, Ø50-imuliitin | [päätös 2026-10-23](../decisions.md) |
 | 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar | [päätös 2026-10-23](../decisions.md) |
 | 2V2 | Marchesini VPR3 3/4" | kolmitie-prioriteettiventtiili, A 35 l/min, ylimäärä B → paluu | [omistaja 2026-10-23], [datalehti VPR3] |

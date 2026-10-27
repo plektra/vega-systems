@@ -1,9 +1,11 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-27 (akselikytkin HRC 150, päätös) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä PVH57:lle, mutta todennäköisesti riittää F1-61:lle; ehdokas OMTF171F10NA1; puhtausvaatimus 250 barissa 16/14/12), **ei päätetty**. Alustava päätös on yhä F1-61 tai vastaava
-> ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). **2026-10-26:** omistaja kallistuu hiukan
-> säätötilavuuspumpun suuntaan; koko hydraulijärjestelmä on vielä päättämättä [omistaja 2026-10-26]. Tässä arvioidaan, sopisiko
-> käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
+> **Tila:** **PÄÄTETTY 2026-10-27: P2 on Vickers PVH57** (kaupat sovittu [omistaja 2026-10-27]); Parker F1-61
+> -vaihtoehto on arkistoitu ([archive/p2-pump-options](archive/p2-pump-options.md)). Apupiirin venttiilikokoonpano
+> on vielä auki: tämän dokumentin suositus (FXDC + LS-purku), [LS + on/off](aux-circuit-ls-onoff.md) tai
+> [PVG 32](aux-circuit-ls-clean-sheet.md). Selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta),
+> 2026-10-26 (FXDC:n painehäviö ja asetus; paluusuodatin; puhtausvaatimus 250 barissa 16/14/12) ja 2026-10-27
+> (akselikytkin HRC 150; pumppu päätetty). Vertailut F1-61:een on jätetty perusteluiksi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
 > rakentamista.
 
@@ -17,7 +19,7 @@ noin 102 l/min). Keulapotkuri tarvitsee noin 34 l/min. Ylimäärä on pakko pä�
   paineella. Lämpöä syntyy vähän.
 - *Kun keulapotkuria käytetään korkeilla kierroksilla,* VPR3 päästää potkurille 35 l/min ja
   laskee loput säiliöön lähes täydessä paineessa. 1800 rpm:llä tämä on noin 38 kW lämpöä
-  [laskelma, ks. [p2-pump-options](p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)].
+  [laskelma, ks. [p2-pump-options](archive/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)].
 
 **Mitä PVH57 tekee toisin.** Säätötilavuuspumppu pienentää itse iskuaan, joten se tuottaa vain sen
 öljyn, joka menee läpi. Ylimäärää ei synny, eikä sitä tarvitse kuristaa lämmöksi.
@@ -41,18 +43,17 @@ Lämpöä syntyy keulapotkuria käytettäessä arviolta 2–3 kW 38 kW:n sijaan 
 - **OD15-vapaakiertoventtiili poistetaan.** Sen tehtävän (paine pohjalaatalle päälle ja pois)
   hoitaa LS-linjan pieni 2/2-magneettiventtiili.
 - **Kannake ja akselikytkin tarvitaan kummassakin reitissä.** Kumpaakaan ei ole vielä rakennettu
-  eikä hankittu [omistaja 2026-10-25], joten ne eivät ole PVH57:n lisäkustannus. Ne vain
-  suunnitellaan eri pumpulle: kannake SAE C -laipalle (ISO 7653:n sijaan) ja 36 kg:n pumpulle, ja
-  kytkimen pumppunapa 1,25":n kiila-akselille (8×32×36-urituksen sijaan). PTO-napa ja hammaskehä
-  ovat samat.
+  eikä hankittu [omistaja 2026-10-25], joten ne eivät ole PVH57:n lisäkustannus. Kannake
+  suunnitellaan SAE C -laipalle (ISO 7653:n sijaan) ja 36 kg:n pumpulle; kytkimeksi valittiin
+  HRC 150 kartioholkeilla (päätös 2026-10-27), ks. [Tarvittavat osat](#tarvittavat-osat-pumpun-lisäksi-minimi).
 - **Vain PVH57-reitissä tarvittavat osat:** kaksitie-virtauksensäätöventtiili (esim. Sun FXDC),
   2/2-magneettiventtiili ja kuristin LS-linjaan, kotelovuotoletku säiliöön ja SAE-laippaliittimet.
   BPV-ohitusventtiiliä (noin 430 € + ALV) ei tarvita.
 - **Ennallaan:** CETOP-pohjalaatta, BAV-713, VMP, letkut, säiliö, suodatin ja jäähdytin.
 
 **Hinta ja tila:** pumppu 190 €. Lisäksi tarvitaan FXDC, magneettiventtiili ja liittimet, mutta
-BPV jää pois (ks. [kustannusvertailu](#kustannusvertailu-arvio)). Mitään ei ole päätetty. F1-61 ohitusventtiilillä on
-edelleen voimassa oleva suunnitelma.
+BPV jää pois (ks. [kustannusvertailu](#kustannusvertailu-arvio)). **Päätös 2026-10-27:** P2 on PVH57,
+ja kaupat on sovittu. F1-61-vaihtoehto on arkistoitu.
 
 ## Kumpi on monimutkaisempi: F1-61 vai PVH57
 
@@ -97,7 +98,7 @@ siinä, kuinka paljon järjestelmää pitää ymmärtää.
 **Mitä PVH57:llä saavutetaan:** lähinnä pienempi lämpö, kun keulapotkuria käytetään korkeilla
 kierroksilla (arviolta 2–3 kW eikä noin 38 kW [laskelma]). Keulapotkuria käytetään lyhyitä hetkiä ja
 yleensä satamassa matalilla kierroksilla, jolloin hyötysuhteella on vähemmän väliä (ks.
-[p2-pump-options: Käyttöjakso](p2-pump-options.md#käyttöjakso-miksi-hyötysuhteella-on-vähemmän-väliä-kuin-luulisi)).
+[p2-pump-options: Käyttöjakso](archive/p2-pump-options.md#käyttöjakso-miksi-hyötysuhteella-on-vähemmän-väliä-kuin-luulisi)).
 Ankkurivinssin kanssa PVH57 ei ole automaattisesti parempi (ks.
 [Ankkurivinssi](#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä)).
 
@@ -120,7 +121,7 @@ usein korkeilla kierroksilla, tai jos tavoitteeksi tulee jokin
 - **PVH57:** pumppu tuottaa vain sen, mitä venttiili päästää läpi, joten lämpöä syntyy vähän millä
   tahansa kierroksilla.
 - Kummassakin tapauksessa keulapotkurin portaaton ohjaus vaatii proportionaaliventtiilin ja ohjaimen,
-  koska BAV-713 on on/off-venttiili (ks. [p2-pump-options, vaihtoehto E](p2-pump-options.md)).
+  koska BAV-713 on on/off-venttiili (ks. [p2-pump-options, vaihtoehto E](archive/p2-pump-options.md)).
 
 ### Mitä vain PVH57 tekee järkevästi
 
@@ -331,7 +332,7 @@ PTO ─ HRC150 ─ PVH57 ─ 2-tie kompensoitu virtauksensäätö ~34 l/min ─ 
   letkujen häviö [datalehti Sun FXDC, kuvaajasta luettu; työntövoima arvio noin 4 % / 10 bar].
 - **Lämpö keulapotkurin käytössä 1800 rpm:llä** on arviolta 2–3 kW (35 l/min × (250 − kuorman paine),
   kun kuorma on noin 200 bar). F1-61:llä se on noin 38 kW, ks.
-  [p2-pump-options](p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061) [laskelma].
+  [p2-pump-options](archive/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061) [laskelma].
 - **Ohjausjärjestys:** 2/2 kiinni → BAV-713 suunta. Pois: BAV-713 keskelle → 2/2 auki. **2/2:n
   pitää olla auki aina, kun BAV-713 on keskellä.** Muuten pumppu seisoo 250 barissa nollatuotolla,
   mikä kuluttaa luettelon kuvaajan mukaan noin 10 kW.
@@ -571,8 +572,7 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 | Pumppu | käytetty 100–300 € | 190 € (tori.fi) |
 | Tyhjäkierto | BPV-F1 noin 430 € + ALV | 2/2-magneettiventtiili ja kuristin, arviolta 100–200 € |
 | Virtauksen rajoitus | VPR3 (olemassa) | Sun FXDC noin 83–89 $ (Hydrotech, USA, 2026-10-25, toimitus vasta 2027) ja linjarunko DAW/S **⚠ hinta ei tiedossa**; Suomen hinta Salhydrolta **⚠ ei tiedossa** |
-| Kytkimen pumppunapa | 8×32×36-uritettu, noin 134 € | 1,25":n kiilareikä **⚠ hinta ei tiedossa** |
-| Kytkimen PTO-napa ja hammaskehä | noin 81 € | sama |
+| Akselikytkin | Spidex 48/60, noin 215 € + ALV | HRC 150 + Taper Lock 2012 -holkit, arviolta 80–120 € + ALV (päätös 2026-10-27) |
 | Kannake (ei vielä tehty) | 10 mm:n teräslevy, laserleikkaus ja hitsaus, ISO 7653 | sama tapa, SAE C -reikäkuvio; painavampi pumppu voi vaatia lisätuennan |
 | Tiivisteet (ikä) | – | ulkoiset O-renkaat, akselitiiviste vain jos vuotaa (halpa, hinta ei tiedossa); koko sarjaa 02-102244 (noin 853 $) ei tarvita, jos kunto on myyjän kertoma, ks. [Tiivistesarja](#tiivistesarja) |
 | Muuta | – | SAE-laippaliittimet, vuotoletku |
@@ -603,7 +603,7 @@ viskositeettioletuksista [arvio]. Vertailussa käytetään Phoenixin pienempiä 
 
 **Virtaus riittää reilusti.** Suodattimen läpi kulkee apupiirin noin 33–38 l/min ja P1:n paluu
 14–37 l/min, yhteensä enintään noin 75 l/min 1800 rpm:llä [laskelma, luvut tästä dokumentista ja
-[p2-pump-options](p2-pump-options.md)]. OMTF171F10NA1:llä marginaali on noin kaksinkertainen
+[p2-pump-options](archive/p2-pump-options.md)]. OMTF171F10NA1:llä marginaali on noin kaksinkertainen
 (157 l/min), mikä on hyödyllistä kylmäkäynnistyksessä, kun öljy on paksua ja ohitusventtiili
 avautuu helpommin [arvio]. Saman runkokoon lasikuituversio OMTF112F10NA2 (55 l/min) olisi liian
 pieni, joten **runkokoon suurentaminen on perusteltu**.
@@ -694,7 +694,7 @@ tehtävillä mittauksilla (ks. avoimet kysymykset).
 
 ### Riittääkö nykyinen paperisuodatin?
 
-Vaatimus riippuu pumpusta [luettelot, ks. [p2-pump-options](p2-pump-options.md) ja
+Vaatimus riippuu pumpusta [luettelot, ks. [p2-pump-options](archive/p2-pump-options.md) ja
 [Tekniset tiedot](#tekniset-tiedot)]:
 
 | Pumppu | Puhtausvaatimus (ISO 4406) | Nykyinen OMTF112C10NA2 (selluloosa 10 µm nominaalinen) |
@@ -765,5 +765,6 @@ nykyisen rinnalle.
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
 - [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]
-- [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (ratkaisee pitkälti, kannattaako PVH57)
-- [ ] Omistajat: PVH57 vai F1-61 tai vastaava ohitusventtiilillä
+- [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (ratkaisee venttiilikokoonpanon: FXDC + LS-purku, LS + on/off vai PVG 32)
+- [x] Omistajat: PVH57 vai F1-61 → **PVH57**, kaupat sovittu (päätös 2026-10-27)
+- [ ] Omistajat: apupiirin venttiilikokoonpano PVH57:lle

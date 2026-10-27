@@ -1,6 +1,13 @@
 # Apupiirin pumppu (P2) ja PTO-kytkin — vaihtoehdot
 
-> **Tila:** **Alustava päätös 2026-10-23** ([decisions.md](../../decisions.md)): P2 on Parker F1-61, veto PTO:lta
+> **🗄 ARKISTOITU 2026-10-27.** Parker F1-61 -vaihtoehdosta luovuttiin: **P2 on Vickers PVH57**
+> -säätötilavuuspumppu (päätös 2026-10-27, kaupat sovittu), ks. [p2-variable-pump](../p2-variable-pump.md)
+> ja [decisions.md](../../../decisions.md). Dokumentti säilytetään taustaksi. Yleispätevät osat ovat
+> yhä viitekäytössä: imupuolen laskelma, herkkyys tyhjäkäyntikierroksille, käyttöjakso ja
+> paineenrajoituksen nostaminen. F1-61:tä, BPV:tä, Spidexiä ja ISO 7653 -kannaketta koskevat
+> suunnitelmat eivät ole voimassa.
+
+> **Tila:** **Alustava päätös 2026-10-23** ([decisions.md](../../../decisions.md)): P2 on Parker F1-61, veto PTO:lta
 > Spidex 48/60 -kynsikytkimellä ilman PTO-kytkintä, BPV-F1-ohitusventtiili käsiohituksella
 > (378 4179), 50 mm:n imulinja ja BPV:n vuotolinja säiliöön. **Päivitetty 2026-10-24:** Torin
 > F1-61:n kauppa peruuntui, joten P2:ksi kelpaa myös vastaava ISO 7653 -vinoakselipumppu
@@ -8,12 +15,12 @@
 > [Vaihtoehtoiset pumput](#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24).
 > **Tarkistettu 2026-10-25:** vanhentuneet kohdat (PTO-kytkin, Borelli, tyhjäkäynnin mittaus,
 > öljylaatu, VPR3:n koko) on päivitetty tai merkitty taustaksi; säätötilavuuspumppu (D) on päivitetty
-> PVH57-selvityksen mukaan ([p2-variable-pump](p2-variable-pump.md)).
+> PVH57-selvityksen mukaan ([p2-variable-pump](../p2-variable-pump.md)).
 > **2026-10-26:** päätös on **alustava**, ja koko hydraulijärjestelmä on vielä päättämättä.
 > Omistaja kallistuu hiukan **säätötilavuuspumpun** suuntaan, ks.
-> [p2-variable-pump](p2-variable-pump.md) ja [vaihtoehto D](#d-säätötilavuuksinen-aksiaalimäntäpumppu-painekompensoitu-pc).
+> [p2-variable-pump](../p2-variable-pump.md) ja [vaihtoehto D](#d-säätötilavuuksinen-aksiaalimäntäpumppu-painekompensoitu-pc).
 > Alla oleva vertailu on säilytetty taustaksi.
-> Tausta: [current-system.md §0](../current-system.md). Hinnat ovat karkeita suuntaa-antavia
+> Tausta: [current-system.md §0](../../current-system.md). Hinnat ovat karkeita suuntaa-antavia
 > arvioita; pyydä tarjoukset ennen päätöstä.
 
 ## Alustava kokoonpano (2026-10-23)
@@ -85,8 +92,8 @@ BAV-713. Pois päältä päinvastaisessa järjestyksessä. BPV:n tilaa vaihdetaa
 |---|---|
 | Veto | Advance 300:n PTO, 1:1 ensiöakselilta, Ø48 kiila-akseli → Spidex 48/60 → F1-61 omalla kannakkeella (päätös 2026-10-23; aiemmin HRC 150 ja kytkin) |
 | PTO:n momenttiraja | ≈ 420 Nm (0,044 kW/rpm) |
-| Koneen kierrokset keulapotkuria käytettäessä | Tyhjäkäynti, ~700 rpm [omistaja 2026-10-22; ei mitata, päätös 2026-10-23]; kierroslukitus palauttaa BPV:n ohitukseen ja estää keulapotkurin yli ~1000 rpm:n, hälytys yli ~1200 rpm:n ([schematic](../schematic.md)) |
-| Pumpun pyörimissuunta | **L** (vastapäivään akselin päästä), koska PTO-akseli osoittaa perään [omistaja 2026-10-24], ks. [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat) |
+| Koneen kierrokset keulapotkuria käytettäessä | Tyhjäkäynti, ~700 rpm [omistaja 2026-10-22; ei mitata, päätös 2026-10-23]; kierroslukitus palauttaa BPV:n ohitukseen ja estää keulapotkurin yli ~1000 rpm:n, hälytys yli ~1200 rpm:n ([schematic](../../schematic.md)) |
+| Pumpun pyörimissuunta | **L** (vastapäivään akselin päästä), koska PTO-akseli osoittaa perään [omistaja 2026-10-24], ks. [vessel: Pyörimissuunnat](../../../vessel/README.md#pyörimissuunnat) |
 | Mitoittava kuorma | Side-Power SH240: 264 bar × 33,8 l/min (100 %). Hyväksytty: ~90 % työntövoimasta. |
 | Paineluokka | 250 bar (kustannuspäätös); letkut 300 bar; paineenrajoitusventtiili Marchesini VMP 3/4": 350 bar, 90 l/min, jousi todennäköisesti 80–300 bar |
 | Tulevat kuormat | Ankkurivinssi (moottori olemassa, tiedot puuttuvat), 3 vapaata CETOP 3 -paikkaa |
@@ -168,7 +175,7 @@ Tyypillisiä merkkejä: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc ym., kokolu
 - **Plussat:** pienentää tilavuuttaan niin, että tuottaa vain käytetyn virtauksen. Mitään ei mene
   paineenrajoituksen yli, eikä virtauksensäätöventtiilissä synny merkittävää kuristushäviötä. VPR3 pitää kuitenkin
   korvata kaksitie-virtauksensäätöventtiilillä: sen B-portti on kytkettävä säiliöön, jolloin
-  pumppu ajaisi täydellä tuotolla, eikä B:tä saa tulpata ([p2-variable-pump](p2-variable-pump.md#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
+  pumppu ajaisi täydellä tuotolla, eikä B:tä saa tulpata ([p2-variable-pump](../p2-variable-pump.md#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
 - **Miinukset:** uutena noin 1500–3000 €; käytettynä halvempi (Vickers PVH57 190 € tori.fi:ssä
   2026-10-25). Pelkällä painekompensoinnilla pumppu pysyisi ilman virtaustarvetta 250 barissa, mutta
   **LS-purulla (pieni 2/2-magneettiventtiili LS-linjassa) se lepää noin 20 barissa**, joten kytkintä
@@ -176,7 +183,7 @@ Tyypillisiä merkkejä: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc ym., kokolu
   oman kannakkeen ja kytkinnavan (SAE C, kiila-akseli). Isompi ja painavampi (noin 36 kg).
 - **Sopivuus:** kohtalainen. Hyöty on pieni lämpö keulapotkurin käytössä korkeilla kierroksilla;
   järjestelmä on hieman vaativampi ymmärtää ja ylläpitää. Ankkurivinssin kanssa matalalla paineella
-  lämpöä voi tulla enemmän kuin F1-61:llä. Ks. [p2-variable-pump](p2-variable-pump.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57).
+  lämpöä voi tulla enemmän kuin F1-61:llä. Ks. [p2-variable-pump](../p2-variable-pump.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57).
 
 ### E. Kuormantunteva (LS) säätöpumppu ja proportionaaliset LS-venttiilit (esim. lohkoventtiili)
 
@@ -210,7 +217,7 @@ järkevä **ohjauksen varajärjestelmänä**, noin 2,5 kW, kuten 2017 suunnitelt
 
 **Tyhjäkäynti on omistajan mukaan noin 700 rpm** [omistaja 2026-10-22]; blogissa mainittu 800 rpm
 oli yläkanttiin. Tyhjäkäynti on ohjelmoitavissa moottorinohjaimeen, ks.
-[alustiedot](../../vessel/README.md#tyhjäkäyntikierrokset). Keulapotkurin työntövoima 250 barin
+[alustiedot](../../../vessel/README.md#tyhjäkäyntikierrokset). Keulapotkurin työntövoima 250 barin
 paineenrajoituksella, lämmin öljy:
 
 | Tyhjäkäynti | 43 cm³ | 46 cm³ | 51 cm³ | 60 cm³ |
@@ -304,13 +311,13 @@ Oletukset: 59,5 cm³ (päivitetty 2026-10-23, aiemmin 61), volumetrinen hyötysu
 | Tarkistus | Arvio |
 |---|---|
 | Tuotto 700 rpm:llä | noin 39,6 l/min, enemmän kuin keulapotkurin 33,8 l/min ✅ |
-| Työntövoima, paineenrajoitus 250 bar | noin 88 % (paine rajoittaa); VPR3:n omaa painehäviötä ei ole mukana **⚠ ei tiedossa**, ks. [current-system §1](../current-system.md) |
+| Työntövoima, paineenrajoitus 250 bar | noin 88 % (paine rajoittaa); VPR3:n omaa painehäviötä ei ole mukana **⚠ ei tiedossa**, ks. [current-system §1](../../current-system.md) |
 | Työntövoima, paineenrajoitus 280 bar | **noin 99 %**; pumppu kestää tämän reilusti ✅ |
 | Momentti 250 / 280 barissa | noin 249 / 279 Nm: Spidex 48/60 98 Sh A (525 Nm) ja PTO (420 Nm) riittävät (aiemmin vertailtu Borelli 30500 580 Nm; 30300 185 Nm ei) |
 | Lämpö | Ylimääräiset ~5–6 l/min menevät paineenrajoituksen yli, noin 2–3 kW lisälämpöä vain keulapotkurin käytön ajan; lyhyissä jaksoissa harmitonta |
 | Imulinja | Nykyinen 32 mm:n letku: noin 0,86 m/s 700 rpm:llä, alle Parkerin 1,0 m/s:n rajan, mutta 1000 rpm:llä 1,2 m/s. Parkerin 1,0 bar abs:n imupainevaatimus ei täyty 32 mm:n linjalla kylmällä öljyllä. **Päätetty 50 mm:n imuliitin ja -linja** (2026-10-23), ks. [Imupuoli](#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu). |
-| Kylmä öljy | ISO VG 46 on 5 °C:ssa noin 380 cSt, eli lähellä pumpun 400 cSt:n käyttörajaa. **Päätetty HVLP 32** (2026-10-23; noin 170 cSt 5 °C:ssa), ks. [hydraulic-oil](hydraulic-oil.md). |
-| Pyörimissuunta | Pumpun suunta (akselin päästä katsottuna) pitää sovittaa PTO:n suuntaan (PTO-akselin päästä katsottuna). Koska suunnan voi vaihtaa, tämä ei ole riski. PTO-akseli osoittaa perään, joten pumpun pitää olla **L**: tämä R-pumppu käännetään (päätykappale 180°), ks. [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). |
+| Kylmä öljy | ISO VG 46 on 5 °C:ssa noin 380 cSt, eli lähellä pumpun 400 cSt:n käyttörajaa. **Päätetty HVLP 32** (2026-10-23; noin 170 cSt 5 °C:ssa), ks. [hydraulic-oil](../hydraulic-oil.md). |
+| Pyörimissuunta | Pumpun suunta (akselin päästä katsottuna) pitää sovittaa PTO:n suuntaan (PTO-akselin päästä katsottuna). Koska suunnan voi vaihtaa, tämä ei ole riski. PTO-akseli osoittaa perään, joten pumpun pitää olla **L**: tämä R-pumppu käännetään (päätykappale 180°), ks. [vessel: Pyörimissuunnat](../../../vessel/README.md#pyörimissuunnat). |
 | Kiinnitys | ISO 7653 -laippa omaan kannakkeeseen ja 8×32×36-hammasakseli Spidex-napaan SPI-48A-KL-A8X32X36 (päätös 2026-10-23), ks. [Veto PTO:lta](#veto-ptolta-suoraan-f1-61lle-bpv-vaihtoehto-ei-kytkintä). (Aiemmin selvitetty sovitus Borellin 30500 -kytkimeen ei ole enää tarpeen.) |
 
 **Arvio (2026-10-22):** pumppu sopi hyvin, ja 100 eurolla se kannatti ostaa, jos kunto oli hyvä.
@@ -369,7 +376,7 @@ pyörii silloin noin 2230 rpm.
 **Johtopäätös: keulapotkuria käytetään vain tyhjäkäynnillä, ja se varmistetaan kierroslukituksella**
 (ESP32 PDM ja Signal K):
 
-Päivitetty 2026-10-23 BPV:lle (alun perin PTO-kytkimelle), ks. [schematic](../schematic.md):
+Päivitetty 2026-10-23 BPV:lle (alun perin PTO-kytkimelle), ks. [schematic](../../schematic.md):
 
 1. BPV syöttöasentoon vain alle noin 1000 rpm:ssä.
 2. Yli noin 1000 rpm:ssä keulapotkurin venttiili estetään, 2/2-venttiili avataan ja BPV palautetaan
@@ -478,7 +485,7 @@ Salhydron tarjouksen kytkimestä ja sovitteista. Kytkimen kanssa BPV on lisävar
 mutta 430 €:lla se on silloin kallis varmistus verrattuna kierroslukitukseen ja hälytykseen.
 Hammaspyöräpumppuun (vaihtoehto A) BPV:tä ei saa; sille vastaava ratkaisu olisi kytkin.
 
-**Päätös 2026-10-23:** BPV ilman PTO-kytkintä ([decisions.md](../../decisions.md)). Salhydron
+**Päätös 2026-10-23:** BPV ilman PTO-kytkintä ([decisions.md](../../../decisions.md)). Salhydron
 kytkintarjousta ei enää tarvita.
 
 ### Veto PTO:lta suoraan F1-61:lle (BPV-vaihtoehto, ei kytkintä)
@@ -590,7 +597,7 @@ hitsaus** [omistaja 2026-10-23]. Suunnittelun lähtötiedot:
   vuodessa [luettelo s. 79].
 - **Pyörivä kytkin vaatii kiinteän suojakotelon.** Ilman kytkintä akseli pyörii aina, kun kone käy,
   ja se voi tarttua vaatteisiin tai käteen.
-- Pumpun pyörimissuunta (R/L) sovitetaan PTO:n pyörimissuuntaan: PTO-akseli osoittaa perään, joten pumppu on **L** ([vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat)).
+- Pumpun pyörimissuunta (R/L) sovitetaan PTO:n pyörimissuuntaan: PTO-akseli osoittaa perään, joten pumppu on **L** ([vessel: Pyörimissuunnat](../../../vessel/README.md#pyörimissuunnat)).
 - Pätevän henkilön pitää tarkistaa kannake, linjaus ja suojaus ennen käyttöönottoa.
 
 **Jos kytkin olisi pidetty** (Borelli 30500; ei voimassa, kytkimestä luovuttiin 2026-10-23), HRC 150 tulee PTO:n ja kytkimen Ø42-ensiöakselin väliin, ja
@@ -648,9 +655,9 @@ kuumana**.
   täysiaukkoinen palloventtiili. 38 mm on vähimmäisratkaisu, jos keulapotkuria käytetään vain
   tyhjäkäynnillä ja pumppu irrotetaan (kytkin tai BPV) korkeammilla kierroksilla.
 - **HVLP 32 -öljy** (päätetty 2026-10-23; HV 32 = HVLP 32). Komponenttien öljyvaatimukset on koottu
-  tiedostoon [hydraulic-oil](hydraulic-oil.md); orbitrolin oma datalehti on vielä tarkistamatta.
+  tiedostoon [hydraulic-oil](../hydraulic-oil.md); orbitrolin oma datalehti on vielä tarkistamatta.
 - Imupuolen parannus ei vähennä keulapotkurin käytön lämpökuormaa korkeilla kierroksilla, joten
-  kierroslukitus tarvitaan silti. Lämpökuorma ja jäähdytys: [oil-cooling.md](oil-cooling.md).
+  kierroslukitus tarvitaan silti. Lämpökuorma ja jäähdytys: [oil-cooling.md](../oil-cooling.md).
 
 ## Kytkinvaihtoehdot
 
@@ -843,7 +850,7 @@ mekaaninen hyötysuhde 95 %. Tarve 33,8 l/min (keulapotkuri 100 %), PTO noin 420
    pitää pienen jäähdytysvirran ja ilmaa imulinjan seisokin jälkeen. BAV-713:ssa ei ole LS-porttia,
    mutta **venttiileitä ei tarvitse vaihtaa:** LS-purku 2/2-magneettiventtiilillä ja VPR3:n tilalle
    kaksitie-virtauksensäätöventtiili riittävät, kuten PVH57:n selvityksessä
-   ([p2-variable-pump](p2-variable-pump.md), päivitetty 2026-10-25). Uutena kallein; 27 kg.
+   ([p2-variable-pump](../p2-variable-pump.md), päivitetty 2026-10-25). Uutena kallein; 27 kg.
 4. **Linjaan asennettava purkuventtiili BPV-L** (378 1487; 350 bar, 250 l/min, 24 VDC 14 W, BSP 1"):
    sopii mille tahansa vakiopumpulle, mutta koko tuotto kulkee silti imuletkun kautta säiliöön.
    Toiminta on sama kuin nykyisellä Rexroth-2/2-venttiilillä, joten se ei tuo Vegalle mitään uutta.
@@ -917,7 +924,7 @@ HDS-64 UNI 280 bar) ovat eri laipalla; valitse **ISO**-malli.
 - **Pyörimissuunta on tärkein asia ennen käytetyn ostoa.** Sunfabia ja OMFB:tä ei voi kääntää, joten
   PTO:n suunta (akselin päästä katsottuna) pitää tietää ennen kauppaa. F1, A17FO ja XPi sallivat
   virheen. **Vegaan tarvitaan L-pumppu** (kone vastapäivään vauhtipyörän päästä, PTO-akseli
-  osoittaa perään), ks. [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). Varmista PTO:n suunta
+  osoittaa perään), ks. [vessel: Pyörimissuunnat](../../../vessel/README.md#pyörimissuunnat). Varmista PTO:n suunta
   teippiliuskalla ennen kiinteäsuuntaisen pumpun ostoa.
 - **Itseimevä raja on Sunfabilla ja OMFB:llä matalampi** (1900 rpm jatkuva) kuin F1-61:llä. Jos
   ohitusventtiili jää syöttöasentoon, pumppu kavitoi matkakierroksilla nopeammin. Kierroslukitus ja
@@ -991,7 +998,7 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
    vuotoletkujen liittimet vaihtuvat.
 2. **Hydro Leduc XPi 63** vasta, kun ohitusasennon suurin kierrosluku on selvitetty.
 3. **Osta L-pumppu** (vastapäivään pumpun akselin päästä katsottuna), ks.
-   [vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat). Sunfab- ja OMFB-pumpun voi ostaa heti, kun
+   [vessel: Pyörimissuunnat](../../../vessel/README.md#pyörimissuunnat). Sunfab- ja OMFB-pumpun voi ostaa heti, kun
    sopiva L-mallinen löytyy; varmista ensin PTO:n suunta teippiliuskalla.
 4. Jos käytettyä ohitusventtiiliä ei löydy, uusi maksaa noin 430–490 € + ALV. Laske se mukaan
    kokonaishintaan, kun vertaat käytettyjä pumppuja.
@@ -1001,7 +1008,7 @@ SCP DIN (terässarja) on SAP DIN:n edeltäjä, ja SBP mainitaan sopivaksi myös 
 kierroksilla putoaisi noin 38 kW:sta noin 2–3 kW:iin. Kannake ja kytkimen pumppunapa
 suunniteltaisiin silloin SAE C -laipalle ja kiila-akselille; kumpaakaan ei ole vielä tehty
 [omistaja 2026-10-25], joten tämä ei ole lisätyötä. Lisäksi tarvitaan kotelovuotolinja ja VPR3:n
-tilalle kaksitiekompensoitu virtauksensäätöventtiili, ks. [p2-variable-pump.md](p2-variable-pump.md).
+tilalle kaksitiekompensoitu virtauksensäätöventtiili, ks. [p2-variable-pump.md](../p2-variable-pump.md).
 
 ## Pumppuvaihtoehtojen vertailu
 
@@ -1009,11 +1016,11 @@ tilalle kaksitiekompensoitu virtauksensäätöventtiili, ks. [p2-variable-pump.m
 |---|---|---|---|---|---|---|
 | Pumpun hinta (suuntaa-antava) | € | € | €€ (käytettynä €) | €€€ (käytettynä €, PVH57 190 €) | €€€€ (venttiileineen) | €–€€ |
 | Muutokset piiriin | ei | kierrosohjaus | oma kannake, ohitusventtiili ja vuotolinja (päätetty) | kotelovuotolinja; VPR3 → kaksitieventtiili; LS-purku 2/2 | uusi venttiilipaketti | lisäventtiilit |
-| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~82–85 % (FXDC vie noin 8 bar, [p2-variable-pump](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)) | ~85–88 % (ei virtauksensäätöä potkurilinjassa, [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md)) | ~88 % |
+| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~82–85 % (FXDC vie noin 8 bar, [p2-variable-pump](../p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)) | ~85–88 % (ei virtauksensäätöä potkurilinjassa, [aux-circuit-ls-onoff](../aux-circuit-ls-onoff.md)) | ~88 % |
 | Hyötysuhde käytön aikana | ~80–85 % | ~80–85 % | ~90–95 % | ~88–92 % | paras | ~80–85 % |
 | Öljyn puhtausvaatimus | sietää | sietää | kohtalainen | tiukka | tiukka | sietää |
 | Proportionaalinen ohjaus | ei | ei | ei | ei | **kyllä** | ei |
-| Sopivuus nykyiseen linjaan | **hyvä** | kohtalainen | **hyvä (valittu)** | kohtalainen ([selvitys](p2-variable-pump.md)) | laajuuden muutos | tilanteen mukaan |
+| Sopivuus nykyiseen linjaan | **hyvä** | kohtalainen | **hyvä (valittu)** | kohtalainen ([selvitys](../p2-variable-pump.md)) | laajuuden muutos | tilanteen mukaan |
 
 *Työntövoimat sisältävät BAV-713:n, letkujen ja suodattimen arvioidut häviöt, mutta **eivät
 VPR3:n omaa painehäviötä** (vaihtoehdot A–C ja F; **⚠ ei tiedossa**). D:ssä mukana on FXDC:n noin
@@ -1028,7 +1035,7 @@ näyttää [arvio, 2026-10-26].*
 - [ ] P2:n lopullinen valinta: kiinteä F1-61 tai vastaava ohitusventtiilillä vai säätötilavuuspumppu (omistaja kallistuu säätötilavuuspumppuun 2026-10-26)
 - [x] ~~Parker F1-061 (tori.fi, 100 €): osto~~ kauppa peruuntui [omistaja 2026-10-24]
 - [ ] **P2-pumpun hankinta käytettynä:** F1-61, Sunfab SAP 056/064 DIN, OMFB/Hyva HDS-55/64 ISO tai Rexroth A17FO 063, mieluiten ohitusventtiilin kanssa (ks. [vaihtoehdot](#vaihtoehtoiset-pumput-muilta-valmistajilta-selvitys-2026-10-24))
-- [ ] Säätötilavuuspumppu (Vickers PVH57) vai F1-61 tai vastaava: ks. [p2-variable-pump.md](p2-variable-pump.md#avoimet-kysymykset)
+- [ ] Säätötilavuuspumppu (Vickers PVH57) vai F1-61 tai vastaava: ks. [p2-variable-pump.md](../p2-variable-pump.md#avoimet-kysymykset)
 - [ ] Hinnat uusille ohitusventtiileille: Sunfab SBP-1-M (28 V), OMFB 108-200-24494 / 24485, Rexroth R930062926 + kela D36
 - [ ] Hydro Leduc XPi 63: suurin kierrosluku ohitusasennossa (pumpun raja 2300 rpm, kone 2400 rpm)
 - [ ] VOAC / Volvo F1-61 (vanhempi): sopiiko nykyinen BPV-F1
@@ -1046,11 +1053,11 @@ näyttää [arvio, 2026-10-26].*
 - [ ] Pumppukannakkeen suunnittelu (omistajat; 10 mm teräslevy, laserleikkaus ja hitsaus, ei koneistusta): ISO 7653 -laippa Ø80 (PVH57:llä SAE C), säätövara linjaukseen, Spidex 140 mm, suojakotelo. Ei vielä aloitettu [omistaja 2026-10-25]
 - [x] Kone ja merivaihde jäykästi runkoon; kannake runkoon [omistaja 2026-10-23]
 - [ ] Säiliön liitännät: 50 mm:n imu-ulosotto (uuteen kohtaan, vanha 32 mm jää P1:lle) ja täysiaukkoinen palloventtiili, imulinja mahdollisimman lyhyt; BPV:n vuotolinjan paluu öljypinnan alle
-- [x] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **pumppu L** ([vessel: Pyörimissuunnat](../../vessel/README.md#pyörimissuunnat)). **Tärkeä ennen käytetyn pumpun ostoa:** Sunfab SAP ja OMFB HDS ovat kiinteäsuuntaisia
+- [x] PTO:n pyörimissuunta: vastakkainen koneeseen nähden [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **pumppu L** ([vessel: Pyörimissuunnat](../../../vessel/README.md#pyörimissuunnat)). **Tärkeä ennen käytetyn pumpun ostoa:** Sunfab SAP ja OMFB HDS ovat kiinteäsuuntaisia
 - [x] VPR3: kolmitie-prioriteettiventtiili; suurin tulovirtaus koon mukaan 60–200 l/min [datalehti VPR3]
 - [x] Asennetun VPR3:n koko: 3/4" [omistaja 2026-10-23]
 - [x] Paluusuodattimen virtausluokitus: OMTF112C10NA2, 100 l/min, ohitus 1,7 bar [omistaja 2026-10-26], jälleenmyyjän tiedot
-- [x] Öljy: HVLP 32 (päätös 2026-10-23), ks. [hydraulic-oil.md](hydraulic-oil.md)
+- [x] Öljy: HVLP 32 (päätös 2026-10-23), ks. [hydraulic-oil.md](../hydraulic-oil.md)
 - [x] ~~Salhydro: Borelli 30501/30502 -tarjous~~ ei tarpeen (päätös 2026-10-23)
 - [ ] Ankkurivinssin moottorin tiedot ja odotettu käyttöaika (pitkät jaksot muuttavat lämpötilannetta)
 - [x] ~~Side-Power SH240:n hydraulimoottorin suurin paine~~: ei tarvita, paineenrajoitus pysyy 250 barissa

@@ -4,7 +4,11 @@
 > arvioita.
 
 Liittyy: [vaatimukset §10.1](../requirements.md#101-anturit), [kaaviot](../schematic.md),
-[P2:n BPV](p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
+[P2:n BPV](archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili) (arkistoitu).
+
+> **⚠ 2026-10-27:** P2 on **Vickers PVH57**, eikä BPV:tä tule. 2B2 sijoitetaan PVH57:n
+> painelähtöön; BPV:hen liittyvät perustelut ovat taustaa, ja anturin käyttö PVH57:llä on kuvattu
+> kohdassa 1 (vaihtoehto C).
 
 ## Nykytila
 

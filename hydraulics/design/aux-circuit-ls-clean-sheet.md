@@ -1,7 +1,7 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu ja proportionaalinen LS-lohkoventtiili
 
-> **Tila:** ajatuskoe 2026-10-25, päivitetty 2026-10-27 (PVG 32 -ehdokas, tarjous 200 €, ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)), **ei päätetty**. Päätetty kokoonpano on yhä F1-61 tai vastaava
-> ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). PVH57:n käyttö olemassa olevien
+> **Tila:** ajatuskoe 2026-10-25, päivitetty 2026-10-27 (PVG 32 -ehdokas, tarjous 200 €, ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)), **ei päätetty**. **Pumppu on päätetty 2026-10-27: PVH57** (F1-61-vaihtoehto
+> [arkistoitu](archive/p2-pump-options.md)); venttiilikokoonpano on yhä auki. PVH57:n käyttö olemassa olevien
 > venttiilien kanssa on selvitetty tiedostossa [p2-variable-pump](p2-variable-pump.md). Tässä
 > kysytään, miten apupiiri rakennettaisiin, jos olemassa olevia venttiileitä ei tarvitsisi käyttää
 > uudelleen [omistaja 2026-10-25, kysymys].
@@ -90,7 +90,7 @@ saa asetetun virtauksensa paineesta riippumatta, kunhan pumpun tuotto riittää.
   ([oil-cooling](oil-cooling.md)). Lämpökuorma pienenee selvästi: esim. pesuri jatkuvasti noin
   30 l/min × noin 25 bar säätövaraa ≈ 1,3 kW sekä moottorin häviöt [arvio]. Vertailuksi nykyisen
   suunnitelman ylimäärän kuristus keulapotkuria käytettäessä 1800 rpm:llä on noin 38 kW
-  ([p2-pump-options](p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)).
+  ([p2-pump-options](archive/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061)).
 - **Kierroslukitusta ei tarvita lämmön takia,** koska pumppu ei tuota ylimäärää millään
   kierroksilla. Karat rajaavat virtauksen noin 40 l/minuun, joten pumpun 2400 rpm:n imuraja ei tule
   vastaan [arvio; **⚠ kysy Danfossilta** pienen iskun kierrosrajasta, ks. p2-variable-pump].
@@ -133,7 +133,7 @@ Sama ajatus kuin [pressure-monitoring](pressure-monitoring.md):
 
 Teknisesti paras ratkaisu on **PVH57 ja proportionaalinen LS-lohkoventtiili**, jos tavoitteena on
 vähintään kaksi seuraavista: portaaton keulapotkuri, ankkurivinssi, pitkäkestoinen painepesu. Jos
-tavoitteena on edelleen on/off-keulapotkuri ja mahdollisesti vinssi, nykyinen F1-61
+tavoitteena on edelleen on/off-keulapotkuri ja mahdollisesti vinssi, (arkistoitu) F1-61
 ohitusventtiilillä tai [PVH57:n pienin muutos](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)
 on halvempi ja riittää.
 

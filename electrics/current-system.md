@@ -27,7 +27,7 @@
 | Kuorma | Teho / virta | Huomiot | Lähde |
 |---|---|---|---|
 | Hydrauliikan varapumppu (ohjauksen vara) | 2,5 kW, 24 V (~100 A tai yli) | 65 A:n laturi ei jaksa syöttää sitä pitkään | [blogi 2017-07-04] |
-| PTO-kytkimen toimilaite (suunnitteilla) | **⚠ ei tiedossa** | Jos mekaaninen kytkin ohjataan 24 V:n toimilaitteella | [hydraulics/design/p2-pump-options.md](../hydraulics/design/p2-pump-options.md) |
+| ~~PTO-kytkimen toimilaite~~ | – | Ei tarpeen: PTO-kytkintä ei tule (päätös 2026-10-23), P2 on PVH57 (päätös 2026-10-27) | [hydraulics/design/archive/p2-pump-options.md](../hydraulics/design/archive/p2-pump-options.md) |
 | Keulapotkuri | — | Hydraulinen, PTO-vetoinen; sähkökuormana vain venttiilien solenoidit | [blogi 2018-11-12] |
 
 ## 4. Valvonta, verkot ja tehonjako

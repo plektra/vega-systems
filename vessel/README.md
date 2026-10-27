@@ -85,7 +85,7 @@ löytyneisiin tietoihin (haettu 2026-10-22):
   ([lähde](https://www.cat.com/en_US/products/new/power-systems/marine-power-systems/commercial-propulsion-engines/18408926.html))
 
 PTO-pumpun mitoitus riippuu tyhjäkäynnistä suoraan: 700 rpm:llä tarvitaan noin 51 cm³:n pumppu, ks.
-[hydraulics/design/p2-pump-options.md](../hydraulics/design/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
+[hydraulics/design/archive/p2-pump-options.md](../hydraulics/design/archive/p2-pump-options.md#herkkyys-tyhjäkäyntikierroksille).
 Vahvista lukema mittaamalla, kun kone käy, esim. Signal K:n moottoritiedoista. Caterpillar-huolto
 voi todennäköisesti nostaa ohjelmoitua tyhjäkäyntiä tarvittaessa.
 

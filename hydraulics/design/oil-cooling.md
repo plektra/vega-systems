@@ -2,7 +2,13 @@
 
 > **Tila:** Selvitys, päivitetty 2026-10-23 ja 2026-10-26 (paluulinjan letkukoko ja paluiden yhdistäminen). Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
 > on kerrottu kunkin taulukon yhteydessä. Tausta: [current-system.md](../current-system.md),
-> [p2-pump-options.md](p2-pump-options.md).
+> [p2-pump-options.md](archive/p2-pump-options.md) (arkistoitu).
+>
+> **⚠ 2026-10-27:** P2 on nyt **Vickers PVH57** (säätötilavuuspumppu), ei F1-61. Alla olevat
+> F1-61:n ja BPV:n lämpölaskelmat ovat taustaa: PVH57 on ajossa valmiustilassa ja tuottaa
+> keulapotkuria käytettäessä vain tarvittavan virtauksen (lämpö arviolta 2–3 kW 38 kW:n sijaan,
+> ks. [p2-variable-pump](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)).
+> Valmiustilan häviöteho **⚠ ei tiedossa**. Jäähdyttimen mitoitus kannattaa tarkistaa PVH57:lle.
 
 ## Yhteenveto
 
@@ -32,7 +38,7 @@ Kaikki teho, jota toimilaitteet eivät muuta työksi, päätyy öljyyn:
 
 Oletukset: Parker F1-061 (laskettu 61 cm³:llä; todellinen 59,5 cm³ antaa noin 2,5 % pienemmät lämmöt) PTO:lla 1:1, paineenrajoitus 250 bar, 80 l öljyä, säiliön ja
 letkujen teräs mukana lämpökapasiteetissa, ei jäähdytintä. Ks. myös
-[p2-pump-options.md](p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061).
+[p2-pump-options.md](archive/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061).
 
 **Keulapotkuri käytössä:**
 
@@ -53,7 +59,7 @@ konehuoneessa:
 | Ohjauspumppu matka-ajossa (~0,5 kW) | noin 55–60 °C (40–45 °C:n konehuoneessa 65–70 °C) |
 | Kytkin päällä tyhjäkäynnillä, keulapotkuri ei käytössä (~0,7 kW) | noin 65 °C |
 | Kytkin päällä 1800 rpm:llä, vapaakierto auki (~2 kW) | **yli 100 °C** |
-| **Alustava ratkaisu (2026-10-23):** ajossa BPV:n ohitus, pumppu kiertää tyhjänä | **⚠ ei tiedossa** (Parker ei ilmoita ohitustilan lämpöä); mitataan ensimmäisellä kaudella |
+| ~~Alustava ratkaisu (2026-10-23): ajossa BPV:n ohitus~~ → PVH57 valmiustilassa (2026-10-27) | **⚠ ei tiedossa** (Parker ei ilmoita ohitustilan lämpöä); mitataan ensimmäisellä kaudella |
 
 Viimeisessä tapauksessa lämpeneminen on hidasta: 40 → 75 °C noin 1 tunnissa (kuorman mukaan
 45–90 min), 20 → 75 °C noin 1,5 tunnissa. Kytkimen unohtuminen päälle koko matkan ajaksi
@@ -62,7 +68,7 @@ ylikuumentaa öljyn, mutta lyhyt hetki ei.
 Parker F1:n **BPV-ohitusventtiili** pienentäisi viimeisen tapauksen lämpökuormaa ja läpivirtausta
 huomattavasti, koska öljy kiertää silloin pumpun päätykappaleessa eikä koko piirin kautta (tarkka
 luku **⚠ ei tiedossa**), ks.
-[p2-pump-options.md](p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
+[p2-pump-options.md](archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
 
 ## Bowman EC100 -jäähdytin (omistajilla varalla; malli ⚠ EC100 vai EC80)
 
