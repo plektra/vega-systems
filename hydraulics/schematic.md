@@ -80,7 +80,7 @@ Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61
 
 | Tunnus | Osa | Tiedot | Lähde |
 |---|---|---|---|
-| 3E1 | Öljynjäähdytin Bowman EC100 tai EC80 **⚠** | suunnitteilla, ei päätetty; merivesi 25–50 l/min | [oil-cooling](design/oil-cooling.md) |
+| 3E1 | Öljynjäähdytin Bowman EC100 (3249-2, 07/88) | suunnitteilla, ei päätetty; merivesi 25–50 l/min | [oil-cooling](design/oil-cooling.md) |
 | 3V1 | Jäähdyttimen ohitusventtiili | 3–4 bar, rinnakkain jäähdyttimen kanssa | [oil-cooling](design/oil-cooling.md#paluulinja-asennus) |
 | 3V3 | Merivesihaaran virtauksenrajoitus | 30–40 l/min; vakiovirtausventtiili tai käsiventtiili **⚠ päättämättä** | [oil-cooling](design/oil-cooling.md#merivesi) |
 | 3V4 | Kuristus merivesipäälinjaan | ohjaa osan virtauksesta haaraan | [oil-cooling](design/oil-cooling.md#merivesi) |
@@ -178,7 +178,7 @@ flowchart LR
   R2(["Piiri 2:<br/>PVG 32:n T-portti"])
   RET["3Z3 paluukeräin<br/>T-liittimet, 1#quot; läpi"]
   GAU["3G1 paluupaineen<br/>mittari (ehdotus)"]
-  COOL["Öljynjäähdytin<br/>Bowman EC100 / EC80 ⚠"]
+  COOL["Öljynjäähdytin<br/>Bowman EC100"]
   BYP["Ohitus 3–4 bar"]
   FILT["Paluusuodatin"]
   TANK[("Säiliö")]

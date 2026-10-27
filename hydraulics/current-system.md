@@ -269,7 +269,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Säiliön kannen komponentit | Virtauksensäätöventtiilit, paluusuodatin, täyttö- ja huohotinkorkki | [blogi 2017-04-10] |
 | Paluusuodatin | **OMT OMTF112C10NA2**, 10 µm, säiliön kanteen asennettava, 1" BSP; painemittarillinen, nykyisessä paikassa vaikea lukea. Jälleenmyyjän mukaan 100 l/min, ohitusventtiili 1,7 bar, vaihtoelementti CR112C10R; `C10` = selluloosa, 10 µm nominaalinen **⚠ tarkista** OMT:n luettelosta | [blogi 2017-04-10], [omistaja 2026-10-26], [jälleenmyyjä Phoenix Hydraulics](https://www.phoenixhydraulics.co.uk/omtf112c10na2.html) |
 | Putkitus | Pitkät vedot 15×2-tarkkuusteräsputkella, muuten letkut | [blogi 2017-04-01] |
-| Öljynjäähdytin | Ei kummassakaan piirissä. **Varalla Bowman EC100 tai EC80 ⚠** (pronssiset päätykannet, ex-Masson-vaihteisto, putket kunnossa), suunniteltu yhteiseen paluulinjaan, ks. [oil-cooling.md](design/oil-cooling.md) | [omistaja 2026-10-22] |
+| Öljynjäähdytin | Ei kummassakaan piirissä. **Varalla Bowman EC100** (kilpi EC10[0]-3249-2, 07/88, runko 185 mm; pronssiset päätykannet, ex-Masson-vaihteisto, putket kunnossa), suunniteltu yhteiseen paluulinjaan, ks. [oil-cooling.md](design/oil-cooling.md) | [omistaja 2026-10-22], [omistaja 2026-10-27] |
 | Päivätankki (polttoaine) | 150 l, hydraulisäiliön alla | [blogi 2017-04-19] |
 | Päätoimittaja | SixTek (hydrauliikkapumppu.fi) | [blogi 2017-04-01] |
 
@@ -392,5 +392,5 @@ Avoimet:
 - [ ] Pohjalaatan painearvo Flowfitilta: vahvista, että kestää 250 bar (teräs, todennäköisesti 250–350 bar)
 - [x] ~~VMP:n nykyinen asetus~~: säädetään käyttöönotossa 250 bariin [omistaja 2026-10-23]
 - [ ] **Käyttöönoton säädöt:** VMP 250 bariin painemittarilla (2G1) keulapotkuri jumitettuna tai BAV-713 ääriasennossa; orbitrolin paineenrajoitus pienimpään arvoon, jolla peräsin kääntyy ääriasentoihin ajossa, kuitenkin enintään sylinterin ja letkujen painearvon
-- [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä; **onko varalla oleva malli EC100 vai EC80** (EC80: noin puolet tehosta) (ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
+- [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (malli vahvistettu EC100:ksi [omistaja 2026-10-27]; vetojen määrä ⚠, ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

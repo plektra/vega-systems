@@ -1,6 +1,6 @@
 # Hydrauliöljyn lämpökuorma ja jäähdytys
 
-> **Tila:** Selvitys, päivitetty 2026-10-23, 2026-10-26 (paluulinjan letkukoko ja paluiden yhdistäminen) ja 2026-10-27 (jäähdyttimen asento, U11:n vuotolinja). Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
+> **Tila:** Selvitys, päivitetty 2026-10-23, 2026-10-26 (paluulinjan letkukoko ja paluiden yhdistäminen) ja 2026-10-27 (jäähdyttimen asento, U11:n vuotolinja, malli EC100 tunnistettu). Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
 > on kerrottu kunkin taulukon yhteydessä. Tausta: [current-system.md](../current-system.md),
 > [p2-pump-options.md](archive/p2-pump-options.md) (arkistoitu).
 >
@@ -18,8 +18,9 @@
 - **Säiliö ja letkut luovuttavat itsestään vain noin 0,5 kW**, joten pienetkin jatkuvat kuormat
   nostavat öljyn pitkällä matkalla korkealle.
 - **Varalla oleva Bowman EC100** kestää 92 l/min ja jäähdyttää merivedellä noin 7–9 kW. Se
-  riittää kaikkiin jatkuviin kuormiin ja keulapotkurin käyttöön tyhjäkäynnillä. **⚠ Malli voi olla
-  myös EC80** (noin puolet tehosta, noin 3,5–4,5 kW), ks. [Malli](#malli-ec100-vai-ec80--tarkista).
+  riittää kaikkiin jatkuviin kuormiin ja keulapotkurin käyttöön tyhjäkäynnillä. Tyyppikilven ja
+  rungon pituuden perusteella kyseessä on **EC100 eikä EC80** (2026-10-27), ks.
+  [Malli](#malli-ec100-vai-ec80).
 - **Suositus:** EC100 kaikkien piirien yhteiseen paluulinjaan ohitusventtiilin kanssa, merivesi
   koneen merivesipiiristä. Lisäksi kierroslukitus ja öljyn lämpötila-anturi.
 
@@ -70,7 +71,7 @@ huomattavasti, koska öljy kiertää silloin pumpun päätykappaleessa eikä kok
 luku **⚠ ei tiedossa**), ks.
 [p2-pump-options.md](archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
 
-## Bowman EC100 -jäähdytin (omistajilla varalla; malli ⚠ EC100 vai EC80)
+## Bowman EC100 -jäähdytin (omistajilla varalla)
 
 Omistajien tiedot [omistaja 2026-10-22]: Bowman EC100 -sarjan öljynjäähdytin, **pronssiset
 päätykannet** (marine-versio), ollut aiemmin käytössä **Masson-vaihteiston öljynjäähdyttimenä**.
@@ -100,10 +101,23 @@ s. 1–2, luettu kuvana ja tekstinä):
 - ✅ käytännössä jatkuvaan keulapotkurin käyttöön tyhjäkäynnillä (~8 kW);
 - ❌ ei keulapotkurin käyttöön 1000–1800 rpm:llä (16–38 kW), joten kierroslukitus tarvitaan silti.
 
-### Malli: EC100 vai EC80? **⚠ tarkista**
+### Malli: EC100 vai EC80?
 
-Omistajat eivät ole varmoja, onko varalla oleva jäähdytin EC100 vai pienempi EC80
-[omistaja 2026-10-23]. Bowmanin luettelo samoilla ehdoilla (ISO VG 37 -öljy, öljy ulos 50 °C,
+**Ratkaistu 2026-10-27: EC100.** Tyyppikilvessä lukee omistajan mukaan *EC10, 3249-2*, ja valmistus
+on 07/88. Jäähdytinrungon pituus ilman päätylaippoja on **185 mm** [omistaja 2026-10-27]. Päättely [arvio]:
+
+- EC80:n kokonaispituus päätykansineen on vain 174 mm, joten 185 mm:n runko ei voi olla EC80.
+  EC100:n kokonaispituus on 260 mm, josta päätykansiin jää noin 2 × 37 mm, mikä on uskottavaa.
+- Koodin loppuosa **-2** vastaa luettelon EC100-koodeja (EC100-xxxx-**2**; EC80:llä -1).
+- Kilven *EC10* on todennäköisesti *EC100*, jonka viimeinen numero on kulunut tai jäänyt
+  lukematta **⚠ tarkista** kilvestä.
+- Välikoodi **3249** on vanha (1988) versiokoodi. Sitä ei löytynyt nykyisistä luetteloista, joten
+  vetojen määrä (1-, 2- vai 3-vetoinen) ja tarkka teho ovat **⚠ ei tiedossa**. Laskelmat olettavat
+  nykyisen merivesiversion (3-vetoinen) arvot. Vetojen määrän näkee päätykannen väliseinistä, ja
+  Bowman tai Lancing Marine voi kertoa koodin merkityksen.
+
+Alla on alkuperäinen vertailu. Omistajat eivät olleet varmoja, onko jäähdytin EC100 vai pienempi
+EC80 [omistaja 2026-10-23]. Bowmanin luettelo samoilla ehdoilla (ISO VG 37 -öljy, öljy ulos 50 °C,
 öljyn painehäviö 1 bar, vesi sisään 25 °C, veden painehäviö 0,5 bar)
 ([EC Series Product Profile](https://ej-bowman.com/wp-content/uploads/2023/05/EC-Series-Product-Profile.pdf), luettu tekstinä):
 
@@ -303,7 +317,8 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 ## Avoimet kysymykset
 
 - [ ] Jäähdyttimen tarkka paikka ja paluulinjan letkupituus (arvio 2–3 m säiliöstä [omistaja 2026-10-26]); paluiden yhdistämiskohta
-- [ ] Onko varalla oleva jäähdytin EC100 vai EC80 (pituus 26 vs. 17 cm, öljyliitäntä 3/4" vs. 1/2"), ja tyyppikilven koko koodi (vesiversio, vedot)
+- [x] Onko varalla oleva jäähdytin EC100 vai EC80: **EC100** (kilpi EC10[0]-3249-2, 07/88, runko 185 mm) [omistaja 2026-10-27]
+- [ ] Koodin 3249 merkitys ja vetojen määrä (Bowman / Lancing Marine, tai päätykannen väliseinistä)
 - [x] Koneen merivesipumpun tuotto: noin 70 l/min 650 rpm:llä [omistaja 2026-10-22]
 - [x] 650 rpm on koneen kierrosluku; pumppu on koneen etupään voimanulosotossa kiinteällä välityksellä
 - [ ] Vahvista merivesipumpun tuotto (verkkohaun arvo ~70 l/min 650 rpm) ja välityssuhde
