@@ -30,7 +30,7 @@
 
 ```
                                     ┌───────── proportionaalinen LS-lohkoventtiili (esim. Danfoss PVG 32) ─────────┐
-PTO 1:1 ─ Spidex ─ PVH57 (LS) ──P──►│ tulomoduuli: paineenrajoitin (varaventtiili), LS-rajoitin, P-mittari          │
+PTO 1:1 ─ HRC150 ─ PVH57 (LS) ──P──►│ tulomoduuli: paineenrajoitin (varaventtiili), LS-rajoitin, P-mittari          │
                     │   ▲           │ 1. keulapotkuri  A/B  – moottorikara (A,B→T keskellä), isku-/imuventtiilit    │──► keula (1/2", olemassa)
                     │   └── LS ─────│ 2. ankkurivinssi A/B  – moottorikara, jarrun avaus; jarruventtiili moottorilla │──► vinssi
                     │               │ 3. painepesuri   A    – yksisuuntainen, virtaus rajattu                        │──► pesuri
@@ -48,7 +48,7 @@ PTO 1:1 ─ Spidex ─ PVH57 (LS) ──P──►│ tulomoduuli: paineenrajoit
 
 ### 1. Pumppu: PVH57, LS-säädin (V), suoraan PTO:lta
 
-- Veto ja imu kuten nyt on päätetty: Spidex 48/60, oma kannake (SAE C -laippa, noin 36 kg
+- Veto ja imu kuten nyt on päätetty: HRC 150 -joustokytkin kartioholkeilla (päätös 2026-10-27), oma kannake (SAE C -laippa, noin 36 kg
   **⚠ tarkista**), 50 mm:n imulinja, säiliö noin 1 m pumpun yläpuolella
   ([p2-variable-pump](p2-variable-pump.md#sopivuus-vegaan-laskelma)).
 - Paineenrajoitin (painekompensaattori) 250 bar päätöksen 2026-10-21 mukaisesti.
@@ -116,7 +116,7 @@ Sama ajatus kuin [pressure-monitoring](pressure-monitoring.md):
 
 - **Poistuu:** CETOP-pohjalaatta, BAV-713, VPR3, OD15, VMP ja BPV-ohitusventtiili, sekä
   PVH57-selvityksen 2/2-, 3/2- ja FXDC-ratkaisut, joita tarvitaan vanhojen osien kanssa.
-- **Säilyy:** säiliö, 50 mm:n imu, Spidex ja kannake, keulapotkurin 1/2":n letkut, jäähdytin.
+- **Säilyy:** säiliö, 50 mm:n imu, kytkin ja kannake, keulapotkurin 1/2":n letkut, jäähdytin.
 - **Mahdollisuus, joka vaatii omistajien päätöksen:** PVG 32:n P-portin paineluokka on 350 bar
   (PVSI-päätylevyllä; PVS-päätylevyllä 300 bar) [datalehti PVG 32 s. 12], ja PVH-luettelon mukaan LS-järjestelmän paineenrajoitin voi olla 280 bar. Silloin
   keulapotkuri pääsisi lähemmäs täyttä työntöä nykyisen noin 85–88 %:n sijaan. Edellyttää, että
@@ -189,7 +189,7 @@ osoittautuu avoimen keskiasennon malliksi, moduuli vaihdetaan (esim. 157B5111, G
 keskiasento, pilottiöljy PVE:ille **⚠ tarkista** Danfossin ohjeesta) **⚠ hinta ei tiedossa**.
 
 ```
-PTO ─ Spidex ─ PVH57 ──P──► PVG 32 [pumppumoduuli ─ lohko 1 (PVEH): keulapotkuri ─ lohkot 2–5 ─ päätylevy]
+PTO ─ HRC150 ─ PVH57 ──P──► PVG 32 [pumppumoduuli ─ lohko 1 (PVEH): keulapotkuri ─ lohkot 2–5 ─ päätylevy]
                 │   ▲                                  │ A/B 1/2" (olemassa)
                 │   └──── LS 1/4" ─────────────────────┘ └──► keulapotkuri
                 └─ kotelovuoto ─► säiliö         T ─► jäähdytin ─► paluusuodatin ─► säiliö
@@ -199,7 +199,7 @@ Venttiilin kuormantunto korvaa PVH57-selvityksen apuventtiilit: **FXDC, LS-linja
 Ø0,8 mm:n kuristin ja VMP jäävät pois**, samoin CETOP-pohjalaatta, BAV-713, VPR3 ja OD15.
 
 **Pumpun puoli** (sama kuin muissa PVH57-reiteissä, ks. [p2-variable-pump](p2-variable-pump.md#asennusjärjestys)):
-Spidex 48/60 ja 1,25":n pumppunapa, kannake SAE C -laipalle, 50 mm:n imu, kotelovuotoletku.
+HRC 150 ja Taper Lock 2012 -holkit 48 mm / 1 1/4" (päätös 2026-10-27), kannake SAE C -laipalle, 50 mm:n imu, kotelovuotoletku.
 
 **Venttiilin liitännät:**
 

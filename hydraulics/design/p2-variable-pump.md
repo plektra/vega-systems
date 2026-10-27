@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä PVH57:lle, mutta todennäköisesti riittää F1-61:lle; ehdokas OMTF171F10NA1; puhtausvaatimus 250 barissa 16/14/12), **ei päätetty**. Alustava päätös on yhä F1-61 tai vastaava
+> **Tila:** selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta) ja 2026-10-27 (akselikytkin HRC 150, päätös) ja 2026-10-26 (FXDC:n painehäviö ja asetus datalehden kuvaajasta; nykyinen paluusuodatin ei riitä PVH57:lle, mutta todennäköisesti riittää F1-61:lle; ehdokas OMTF171F10NA1; puhtausvaatimus 250 barissa 16/14/12), **ei päätetty**. Alustava päätös on yhä F1-61 tai vastaava
 > ohitusventtiilillä ([p2-pump-options](p2-pump-options.md)). **2026-10-26:** omistaja kallistuu hiukan
 > säätötilavuuspumpun suuntaan; koko hydraulijärjestelmä on vielä päättämättä [omistaja 2026-10-26]. Tässä arvioidaan, sopisiko
 > käytetty Vickers PVH57 -säätötilavuuspumppu P2:ksi, ja mitä se vaatisi.
@@ -282,10 +282,10 @@ Oletukset: volumetrinen hyötysuhde 95 %, mekaaninen 90 %, tyhjäkäynti 700 rpm
 | Tarkistus | Tulos |
 |---|---|
 | Tuotto 700 rpm:llä | noin 38 l/min, enemmän kuin keulapotkurin 33,8 l/min ✅ |
-| Momentti 250 barissa | noin 254 Nm; PTO noin 420 Nm ✅; Spidex 98 Sh A (525 Nm) riittää (tarve kertoimilla noin 430 Nm) ✅ |
+| Momentti 250 barissa | noin 254 Nm; PTO noin 420 Nm ✅; HRC 150 (noin 600 Nm **⚠ vahvista**) riittää (tarve kertoimilla noin 430 Nm) ✅ |
 | Pyörimissuunta | L ✅ |
 | Kierrosluku | koneen 2400 rpm on tasan mobiiliversion rajalla, kun imupaine on vähintään 0 bar. Säiliö on noin 1 m pumpun yläpuolella ja imulinja 50 mm. Täydellä iskulla 2400 rpm:llä (noin 138 l/min) imupaine olisi kylmällä öljyllä arviolta 0…−0,03 bar. **Vegan käytössä täyttä iskua ei tule korkeilla kierroksilla**: ajossa pumppu on valmiustilassa ja keulapotkuria käytettäessä virtaus on rajattu noin 35 l/minuun. Luettelo ei kerro, saako pienemmällä iskulla pyöriä nopeammin **⚠ kysy Danfossilta**. |
-| Laippa ja akseli | SAE C ja kiila-akseli: **ei ISO 7653 eikä 8×32×36**. Kannake ja Spidexin pumppunapa suunnitellaan PVH57:lle; kumpaakaan ei ole vielä tehty [omistaja 2026-10-25] |
+| Laippa ja akseli | SAE C ja kiila-akseli: **ei ISO 7653 eikä 8×32×36**. Kannake suunnitellaan PVH57:lle; kytkimeksi HRC 150 kartioholkeilla (päätös 2026-10-27) [omistaja 2026-10-25, 2026-10-27] |
 | Paino | noin 36 kg (F1-61 8,5 kg): kannake mitoitetaan tälle painolle ja tärinälle; reaktiomomentti noin 254 Nm on lähes sama kuin F1-61:llä (noin 250 Nm) [laskelma] |
 
 ## Miten LS-linjaa käytetään
@@ -313,7 +313,7 @@ tulpata** [omistaja 2026-10-25]; datalehti ei anna tulppausta käyttötavaksi. S
 ### Suositus: kaksitiekompensoitu virtauksensäätö ja LS-purku
 
 ```
-PTO ─ Spidex ─ PVH57 ─ 2-tie kompensoitu virtauksensäätö ~34 l/min ─ CETOP P (VMP) ─ BAV-713 ─ keulapotkuri
+PTO ─ HRC150 ─ PVH57 ─ 2-tie kompensoitu virtauksensäätö ~34 l/min ─ CETOP P (VMP) ─ BAV-713 ─ keulapotkuri
                 │  │
                 │  └─ LS-portti ─┬─ kuristin Ø0,8 ─ pumpun lähtö
                 │                └─ 2/2-magneettiventtiili (NO) ─ säiliö
@@ -435,8 +435,8 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 
 | # | Osa | Huom. |
 |---|---|---|
-| 1 | Spidex 48/60 PTO-napa (48 H7 + kiila) ja hammaskehä 98 Sh A | sama kuin F1-suunnitelmassa |
-| 2 | Spidex/Rotex 48 -pumppunapa 1,25":n (31,75 mm) kiilareiällä | F1-reitin 8×32×36-navan sijaan (kumpaakaan ei ole hankittu); vakio-osana tuumareiällä tai esiporattuna ja sorvattuna **⚠ tarkista saatavuus** |
+| 1 | **HRC 150 -joustokytkin** (päätös 2026-10-27): kaksi napaa Taper Lock -holkeille (F tai H asennuksen mukaan) ja elastinen välikappale | korvaa F1-suunnitelman Spidex 48/60:n; ks. alla |
+| 2 | Taper Lock 2012 -kartioholkit: **48 mm** (PTO) ja **1 1/4"** (pumppu, 31,75 mm), kiilaurat | vakio-osia, ei koneistusta; **⚠ tarkista** koodit ja 48 mm:n holkin kiilauran syvyys |
 | 3 | Kannake SAE C -nelireikälaipalle | F1-reitin ISO 7653 -kannakkeen sijaan (ei vielä tehty); sama tapa: 10 mm:n teräslevy, laserleikkaus ja hitsaus. Pumppu noin 36 kg; mitat asennuspiirustuksesta (Eaton M-2206-S) **⚠** |
 | 4 | Imuliitin: SAE-laippa, O-rengas, pultit ja supistus 50 mm:n letkuun | laipan koko pumpusta **⚠** |
 | 5 | Painelähdön SAE-laippa ja liitin 3/4":n painelinjaan | koko pumpusta **⚠** |
@@ -446,7 +446,7 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | 9 | Kaksitiekompensoitu virtauksensäätöventtiili noin 34 l/min: Sun FXDC (`L`/`K`, säädettävä ±25 %) valurautaisessa linjarungossa **DAW/S** (T-5A, 3/4" BSPP) | VPR3:n tilalle; alumiininen DAW ei kelpaa (210 bar) |
 | 10 | (valinnainen) 3/2-magneettiventtiili, suoraan toimiva, 24 V, ja 1/4":n letku pohjalaatan mittariliitäntään | vain jos ankkurivinssiä käytetään pitkään matalalla paineella, ks. [Ankkurivinssi](#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
 
-**Vaihtoehto riveille 1–2: HRC 150 kartioholkeilla** (selvitys 2026-10-27, ei päätetty). PVH57:n
+**Rivit 1–2: HRC 150 kartioholkeilla** (selvitys ja päätös 2026-10-27; korvaa PVH57-reitissä Spidexin). PVH57:n
 akseli on lieriömäinen kiila-akseli, joten Spidexin etu (valmis 8×32×36-napa F1-61:lle) ei enää
 päde. HRC 150:n H- tai F-napaan käy **Taper Lock 2012 -kartioholkki** (reikä 14–50 mm), jota saa
 vakiona sekä **48 mm:n** (PTO) että **1 1/4":n** (pumppu) kiilaurallisena: ei koneistusta
@@ -480,8 +480,8 @@ huomioon kannakkeessa.
    akselin pitää pyöriä käsin tasaisesti. Ulkoiset O-renkaat vaihdetaan liitäntöjä tehtäessä.
    Hydrauliikkakorjaamon koeajo kannattaa (ks. [Tiivistesarja](#tiivistesarja)).
 2. **Kannake ja kytkin.** Kannake 10 mm:n teräslevystä laserleikkaamalla ja hitsaamalla SAE C
-   -reikäkuviolle ja noin 36 kg:n pumpulle **⚠ tarkista paino**. Spidex 48/60: PTO-napa,
-   hammaskehä 98 Sh A ja pumppunapa 1,25":n kiila-akselille. Linjaus kytkimen sallimiin rajoihin
+   -reikäkuviolle ja noin 36 kg:n pumpulle **⚠ tarkista paino**. HRC 150 (päätös 2026-10-27): navat
+   ja Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) sekä elastinen välikappale. Linjaus kytkimen sallimiin rajoihin
    ([current-system §0](../current-system.md)) ja suojakotelo pyörivälle kytkimelle. Laipan mitat
    asennuspiirustuksesta **⚠ ei vielä saatu**.
 3. **Imulinja.** 50 mm:n letku SAE-laipalla ja supistuksella pumpun imuaukkoon (koko
@@ -751,7 +751,9 @@ nykyisen rinnalle.
 - [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
-- [ ] Akselikytkin PVH57:lle: HRC 150 + Taper Lock 2012 -holkit (48 mm ja 1 1/4") vs. Spidex/Rotex 48 -napa 1,25":n kiilareiällä; holkkien hinta ja kiilauran syvyys 48 mm:n holkissa
+- [x] Akselikytkin PVH57:lle: HRC 150 + Taper Lock 2012 -holkit (päätös 2026-10-27)
+- [ ] HRC 150: valmistajan luettelosta nimellismomentti, sallitut linjausvirheet ja pituus kannakkeen suunnitteluun; F- vai H-navat asennustilan mukaan
+- [ ] Taper Lock 2012 -holkit 48 mm ja 1 1/4": koodit, hinta ja kiilauran syvyys 48 mm:n holkissa (PTO-akselin kiila)
 - [x] Paluusuodattimen suodatusaste vs. 16/14/12 (aiemmin 17/15/13): nykyinen OMTF112C10NA2 on 10 µm, arviolta selluloosa nominaalinen, **ei riitä** sellaisenaan [omistaja 2026-10-26]
 - [x] ~~Lasikuituelementti: virtauskesto, kun P1:n paluu kulkee samasta suodattimesta~~ OMTF112F10 (55 l/min) liian pieni; ehdokas OMTF171F10NA1 (157 l/min), ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1)
 - [ ] Sopiiko lasikuituelementti CR112F10R nykyiseen OMTF112C10NA2:n runkoon

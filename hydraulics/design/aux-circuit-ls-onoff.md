@@ -65,7 +65,7 @@ vaihtoventtiilien malli.
 ## Kaavio
 
 ```
-PTO ─ Spidex ─ PVH57 (LS-säädin, 250 bar) ──P──┬─ varaventtiili ~270 bar ──► T
+PTO ─ HRC150 ─ PVH57 (LS-säädin, 250 bar) ──P──┬─ varaventtiili ~270 bar ──► T
         │   ▲                                  ├─ 1 keulapotkuri: ────────────── 4/3 on/off, A,B→T keskellä ─► keula
         │   │                                  ├─ 2 vinssi:       FXDC (vinssin virtaus) ─ 4/3 on/off, A,B→T ─ jarruventtiili ─► moottori
         │   │                                  └─ 3 pesuri:       FXDC (pesurin virtaus) ─ on/off ─► moottori
@@ -88,7 +88,7 @@ ei päätetty, ei rakentamiseen.** Pätevän henkilön pitää tarkistaa kaavio 
 
 | Tunnus | Osa | Tiedot | Vaihe |
 |---|---|---|---|
-| 2M1, 2Z3 | Advance 300 PTO, Spidex 48/60 | kuten [arkki 2](../schematic.md#arkki-2-piiri-2-apupiiri-ja-keulapotkuri); pumppunapa 1,25":n kiilareiällä | 1 |
+| 2M1, 2Z3 | Advance 300 PTO, HRC 150 -joustokytkin (päätös 2026-10-27) | kuten [arkki 2](../schematic.md#arkki-2-piiri-2-apupiiri-ja-keulapotkuri); Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) | 1 |
 | 2P10 | Vickers PVH57, LS-säädin (V) | 57,4 cm³; painekompensaattori 250 bar, LS-paine-ero noin 20 bar; kotelovuoto omana letkuna säiliöön | 1 |
 | 2V0, 2B1 | Imun palloventtiili, imupaineanturi | imu 50 mm, kuten arkki 2 | 1 |
 | 2G1 | Painemittari | P-linja | 1 |
@@ -276,7 +276,7 @@ tai 250 bar, kumpi on pienempi.**
 | Kustannus | pienin | suurin | lähellä pienintä |
 
 **Poistuu nykysuunnitelmasta:** VPR3, OD15, BPV sekä PVH57-selvityksen 2/2- ja 3/2-ratkaisut.
-**Säilyy:** CETOP-pohjalaatta, BAV-713, VMP, säiliö, 50 mm:n imu, Spidex ja kannake, letkut ja
+**Säilyy:** CETOP-pohjalaatta, BAV-713, VMP, säiliö, 50 mm:n imu, kytkin ja kannake, letkut ja
 jäähdytin. **Uutta:** kaksi FXDC:tä runkoineen (vinssi ja pesuri) (FXDC noin 83–89 $ USA:ssa 2026-10-25,
 valurautaisen DAW/S-rungon hinta **⚠ ei tiedossa**), muutama vaihtoventtiili, vuotokuristin ja
 vinssin jarruventtiili.

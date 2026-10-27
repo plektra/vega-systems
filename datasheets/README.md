@@ -79,7 +79,7 @@ käyttöohjeista ja tuotesivuista.
 | BAV-713 | ks. omistajien datalehdet (`Teollisuusventtiilit.pdf`) | 60 l/min, 350 bar; painehäviö puuttuu | [current-system §3.4](../hydraulics/current-system.md) |
 | **Danfoss PVG 32 Technical Information 520L0344** | [PDF (gatech.edu)](https://imdl.gatech.edu/jfrankel/docs/Sauer-Danfoss/520L0344_PVG32.pdf) (luettu tekstinä) | P 350 bar (PVS-päätylevyllä 300), T 25/40 bar; pumppumoduulit 157B5xxx (avoin/suljettu keskiasento, PVPV 157B5938 G 1"); paineenrajoitin noin 30 bar järjestelmäpaineen yläpuolelle; PVE 22–30 V, signaali 0,5 × U keskellä, 0,25–0,75 × U; karat vaihdettavia ja samat kaikille sähköohjauksille; PVLP 157B2xxx; PVAS 157B800x; PVPX 157B4238 | [aux-circuit-ls-clean-sheet](../hydraulics/design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
 | Kramp: PVE's for PVG 32 (ristiviittaus) | [PDF](https://documents.kramp.com/PVE_cross_reference_EN.pdf) | 157B4024 = PVEH 24 V, 157B4224 = PVEO 24 V (sarja 0, poistunut); korvaavat sarjan 4 koodit | sama |
-| HRC 150 -joustokytkin | — | **⚠ Datalehti puuttuu** (nimellismomentti, suurin reikä napatyypeittäin) | [current-system](../hydraulics/current-system.md) |
+| HRC 150 -joustokytkin | — | **⚠ Datalehti puuttuu** (nimellismomentti, linjausvirheet, pituus). Jälleenmyyjien mukaan noin 600 Nm; Taper Lock 2012 -holkki, reikä 14–50 mm ([BEP, HRC-luettelo](https://bepltd.com/cdn/shop/files/HRC-COUPLING.pdf)) | [p2-variable-pump](../hydraulics/design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) (PVH57:n kytkin, päätös 2026-10-27) |
 
 ## Omistajien datalehdet (`datasheets/local/`)
 
@@ -123,4 +123,5 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 - [ ] BAV-713:n painehäviökäyrä
 - [ ] CETOP 3 -pohjalaatan painearvo (ei Flowfitin mittapiirustuksessa)
 - [x] ~~HRC 150 -joustokytkin~~: ei tarpeen, veto Spidex 48/60 -kytkimellä (päätös 2026-10-23)
+- [ ] HRC 150 -joustokytkimen valmistajan luettelo (PVH57-reitin kytkin, päätös 2026-10-27)
 - [ ] Caterpillar 3126B -merimoottorin tekniset tiedot (merivesipumppu, tyhjäkäynti)
