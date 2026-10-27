@@ -446,6 +446,19 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 | 9 | Kaksitiekompensoitu virtauksensäätöventtiili noin 34 l/min: Sun FXDC (`L`/`K`, säädettävä ±25 %) valurautaisessa linjarungossa **DAW/S** (T-5A, 3/4" BSPP) | VPR3:n tilalle; alumiininen DAW ei kelpaa (210 bar) |
 | 10 | (valinnainen) 3/2-magneettiventtiili, suoraan toimiva, 24 V, ja 1/4":n letku pohjalaatan mittariliitäntään | vain jos ankkurivinssiä käytetään pitkään matalalla paineella, ks. [Ankkurivinssi](#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
 
+**Vaihtoehto riveille 1–2: HRC 150 kartioholkeilla** (selvitys 2026-10-27, ei päätetty). PVH57:n
+akseli on lieriömäinen kiila-akseli, joten Spidexin etu (valmis 8×32×36-napa F1-61:lle) ei enää
+päde. HRC 150:n H- tai F-napaan käy **Taper Lock 2012 -kartioholkki** (reikä 14–50 mm), jota saa
+vakiona sekä **48 mm:n** (PTO) että **1 1/4":n** (pumppu) kiilaurallisena: ei koneistusta
+[jälleenmyyjät, **⚠ tarkista** holkkikoodit; 48 mm:n holkissa kiilaura voi olla matala].
+Momentti noin 600 Nm (nimellinen, **⚠ vahvista**), tarve kertoimilla noin 430 Nm ✅ [laskelma].
+Hinnat: napa noin 19 € + ALV ([atlantis-pt](https://atlantis-pt.abstore.pl/couplings-semi-coupling-hub-hrc-150,c225,p263,en.html)),
+elastinen osa noin 10 £ + ALV ([Cromwell](https://cromwell.co.uk/shop/bearings-and-transmissions/couplings/hrc150i-coupling-insert/p/DUN6956364E)),
+holkit **⚠ hinta ei tiedossa** (arviolta 10–25 € kpl). Yhteensä arviolta **noin 80–120 € + ALV**
+eli selvästi halvempi kuin Spidex (noin 215 € + ALV ja pumppunapa, jonka saatavuus 1,25":n
+reiällä on epävarma). HRC 150 on halkaisijaltaan isompi (150 mm vs. 105 mm), mikä otetaan
+huomioon kannakkeessa.
+
 **Poistuu tai muuttuu:**
 - **VPR3 poistetaan** (B-porttia ei saa tulpata, ks. [VPR3:n portit](#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
 - **Rexroth OD15 -vapaakiertoventtiili poistetaan.** Jännitteettömänä se on auki säiliöön. Jos LS:n
@@ -738,7 +751,7 @@ nykyisen rinnalle.
 - [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
-- [ ] Spidex/Rotex 48 -napa 1,25":n kiilareiällä: saatavuus ja hinta
+- [ ] Akselikytkin PVH57:lle: HRC 150 + Taper Lock 2012 -holkit (48 mm ja 1 1/4") vs. Spidex/Rotex 48 -napa 1,25":n kiilareiällä; holkkien hinta ja kiilauran syvyys 48 mm:n holkissa
 - [x] Paluusuodattimen suodatusaste vs. 16/14/12 (aiemmin 17/15/13): nykyinen OMTF112C10NA2 on 10 µm, arviolta selluloosa nominaalinen, **ei riitä** sellaisenaan [omistaja 2026-10-26]
 - [x] ~~Lasikuituelementti: virtauskesto, kun P1:n paluu kulkee samasta suodattimesta~~ OMTF112F10 (55 l/min) liian pieni; ehdokas OMTF171F10NA1 (157 l/min), ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1)
 - [ ] Sopiiko lasikuituelementti CR112F10R nykyiseen OMTF112C10NA2:n runkoon
