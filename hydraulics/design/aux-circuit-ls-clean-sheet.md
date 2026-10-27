@@ -161,6 +161,7 @@ Kuvista luetut arvot on merkitty *kuvasta*; merkinnät ovat likaisia ja osin ep�
 | Käsiohjaus | Toisella puolella käsivipujen kannat ilman vipuja **⚠ tarkista** | kuvasta |
 | Karat | **⚠ ei tiedossa**; selviää kokoonpanokoodista | – |
 | Pumppumoduuli | Autossa kytkettynä **säätötilavuuspumppuun** [myyjä 2026-10-27] → todennäköisesti **suljetun keskiasennon** malli, joka sopii PVH57:lle. Moduulin oma koodi (157B5…) **⚠ tarkista** rungosta. Kuvassa kyljessä liitin, todennäköisesti käytössä ollut LS-portti; ylhäällä P- ja T-portit, M-portti ja tulpattu lisäportti; etupinnalla todennäköisesti paineenrajoittimen säätöruuvi | [myyjä 2026-10-27], kuvasta |
+| Paino | **noin 22–23 kg** [laskelma]: PVP 3,1 kg + 5 × PVB 3,05 kg + 4 × PVEO 0,6 kg + PVEH noin 1 kg **⚠ arvio** + päätylevy, kiristyspultit ja vipujen kannat noin 1 kg **⚠ arvio** | Danfossin tekninen ohje (ranskankielinen BC152886483664fr, hakutuloksen ote), [paro.nl: PVEO 157B4228](https://paro.nl/library/components/danfoss/157b4228-pvg32-pveo) |
 | Kunto | likainen, **osa porteista auki ilman tulppia** → puhdistus ja koestus välttämättömiä | kuvasta |
 | Toiminta purettaessa | **Ei kokeiltu:** auton keulapumpun kardaani oli rikki, kun auto tuli purkuun, joten venttiiliä ei voitu ajaa. Toimintakunto ja vuodot **⚠ ei tiedossa** | [myyjä 2026-10-27] |
 | Käyttö autossa | Hiekoittimessa oli nopeudensäätö → todennäköisesti se oli ainoa portaaton toiminto ja PVEH-lohko, muut on/off. Sopii kuvista luettuun (1 × PVEH, 4 × PVEO) | [myyjä 2026-10-27] |
