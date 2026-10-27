@@ -345,7 +345,7 @@ Avoimet:
 - [x] PTO:n pyörimissuunta: **vastakkainen koneen pyörimissuuntaan nähden** [omistaja 2026-10-23]; kone pyörii vastapäivään vauhtipyörän päästä katsottuna [datalehti 3126B, 2026-10-24]; PTO-akseli osoittaa perään [omistaja 2026-10-24] → **P2-pumppu on L**. Ennen kiinteäsuuntaisen pumpun ostoa suunta kannattaa varmistaa teippiliuskalla, ks. [vessel: Pyörimissuunnat](../vessel/README.md#pyörimissuunnat). PVH57 on L ✅.
 - [x] Valitun pumpun imupaine: PVH57 mobiili 2400 rpm imupaineella 0 bar, 2000 rpm −0,17 bar (Eaton V-PUPI-TM008-E1 s. 7)
 - [x] Mitä öljyä järjestelmässä nyt on: **Teboil Hydraulic Lift 32** (ISO VG 32, DIN 51524-3 HVLP, ISO 6743-4 HV) [omistaja 2026-10-27]
-- [ ] Nykyisen öljyn ikä ja kunto; tarvitaanko huuhtelu, kun öljy on samaa luokkaa kuin uusi (ks. [hydraulic-oil](design/hydraulic-oil.md))
+- [ ] Nykyisen öljyn kunto (ikä noin 7 vuotta, alle 200 h [omistaja 2026-10-27]); tarvitaanko huuhtelu, kun öljy on samaa luokkaa kuin uusi (ks. [hydraulic-oil](design/hydraulic-oil.md))
 - [x] Hydrauliöljyn tyyppi ja luokka: **HVLP 32** (päätös 2026-10-23), ks. [hydraulic-oil.md](design/hydraulic-oil.md)
 - [ ] Öljytuote (Teboil 32S / Neste 32 Super, VI) ja vanhan öljyn tyhjennys ja huuhtelu
 - [x] BAV-713: fluiconnecto BAV-IC3-713, 60 l/min, 350 bar

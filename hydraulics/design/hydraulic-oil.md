@@ -8,8 +8,9 @@ Liittyy: [vaatimukset §9](../requirements.md#9-öljy-puhtaus-ja-huolto),
 [öljynjäähdytys](oil-cooling.md).
 
 **Järjestelmässä nyt oleva öljy: Teboil Hydraulic Lift 32**: ISO VG 32, DIN 51524-3 (HVLP),
-ISO 6743-4 HV [omistaja 2026-10-27]. Öljyn ikä ja kunto ovat **⚠ ei tiedossa**, ja VI:tä ei löytynyt
-(Teboilin sivua ei saatu auki). Tämän selvityksen "VG 46" on vanhojen laskelmien oletus, ei
+ISO 6743-4 HV [omistaja 2026-10-27]. Öljy on **noin 7 vuotta vanhaa, käyttöä alle 200 tuntia**
+[omistaja 2026-10-27]. Kunto (vesi, epäpuhtaudet) on **⚠ ei tiedossa**, ja VI:tä ei löytynyt (Teboilin sivua
+ei saatu auki). Tämän selvityksen "VG 46" on vanhojen laskelmien oletus, ei
 veneessä oleva öljy.
 
 **Mitä tästä seuraa [arvio]:** nykyinen öljy on **samaa luokkaa kuin päätetty HVLP 32**. Uusi öljy
@@ -20,6 +21,21 @@ puhtaan öljyn). Halvempi vaihtoehto on ottaa näyte ja jättää huuhtelu pois,
 eikä siinä ole vettä: tyhjennetään säiliö ja letkut ja täytetään uudella, tai säästetään
 huuhteluun varattu noin 20 l (noin 100 €). Päätös kuuluu omistajille; voimassa oleva päätös
 (2026-10-23) on vaihto ja huuhtelu.
+
+**Iän ja tuntien perusteella [arvio]:** alle 200 tuntia on vähän, joten polymeerien hajoaminen ja
+kuluminen ovat todennäköisesti vähäisiä. Seitsemän vuoden seisonnan riski on lähinnä
+**kosteus** (lämpötilavaihtelut tiivistävät vettä säiliöön huohottimen kautta) ja lisäaineiden
+vanheneminen. Siksi ehdotus:
+
+1. **Näyte ennen päätöstä:** säiliön pohjalta lasipurkkiin. Kirkas ja vaalea öljy on hyvä merkki;
+   samea tai maitomainen kertoo vedestä, ja pohjalle laskeutuva vesi tai sakka näkyy vuorokaudessa.
+   Pohjan vesi lasketaan joka tapauksessa pois. Laboratorioanalyysi (vesi ppm, ISO 4406) antaa
+   varmuuden; hinta **⚠ ei tiedossa**.
+2. **Jos öljy on kirkasta:** vanha öljy kelpaa **käyttöönoton huuhteluöljyksi**. Uudet pumput ajetaan
+   sisään ja letkut huuhdellaan vanhalla öljyllä uuden suodattimen läpi, ja sen jälkeen öljy
+   vaihdetaan uuteen ja suodatinelementti vaihdetaan. Erillistä 20 litran huuhteluöljyä ei tarvita.
+3. **Jos öljy on sameaa tai siinä on vettä:** toimitaan voimassa olevan päätöksen mukaan, eli
+   tyhjennys, huuhtelu ja uusi öljy.
 
 ## Merkinnät
 
@@ -105,7 +121,8 @@ yksityisaluksessa, ja ne ovat kalliimpia.
 ## Avoimet kysymykset
 
 - [x] Mitä öljyä järjestelmässä nyt on: Teboil Hydraulic Lift 32 (HVLP, ISO VG 32) [omistaja 2026-10-27]
-- [ ] Nykyisen öljyn ikä ja kunto (näyte: kirkkaus, vesi), Hydraulic Lift 32:n VI
+- [x] Nykyisen öljyn ikä: noin 7 vuotta, alle 200 tuntia [omistaja 2026-10-27]
+- [ ] Nykyisen öljyn kunto (näyte: kirkkaus, vesi), Hydraulic Lift 32:n VI
 - [ ] Omistajat: tarvitaanko huuhtelu, kun vanha öljy on samaa luokkaa (säästö noin 20 l)
 - [ ] Teboil 32S:n ja Neste Hydraulic 32 Superin VI ja leikkauskestävyys (tuotetiedotteet)
 - [ ] Orbitrolin HKUS 160/4 viskositeettialue omasta datalehdestä
