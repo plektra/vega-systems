@@ -262,7 +262,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Säiliö | Flowfit 100 l, saumaton teräs (Flowfit Weldless Steel Tanks, tyyppi A/B/C **⚠ tarkista**), 50×50×5-kulmarautakannakkeilla kaariin | [blogi 2017-04-01], [datalehti Flowfit] |
+| Säiliö | Flowfit 100 l, saumaton teräs (Flowfit Weldless Steel Tanks, tyyppi A/B/C **⚠ tarkista**), 50×50×5-kulmarautakannakkeilla kaariin. **Syvyys kannesta pohjaan 365 mm** | [blogi 2017-04-01], [datalehti Flowfit], [omistaja 2026-10-27] |
 | Öljymäärä | 80 l | [blogi 2017-07-04] |
 | Öljyn tyyppi ja luokka | Nykyinen **⚠ ei tiedossa**. Uusi: **HVLP 32** [päätös 2026-10-23], ks. [hydraulic-oil.md](design/hydraulic-oil.md) | |
 | Imulinjat | Suunnitelma 2017: 2 × 1" (konepumput) ja 1 × 3/4" (sähköpumppu), kussakin palloventtiili. **2026: P2:n ulosotto on 32 mm:n letkun kokoinen; P1:n imulinja 25 mm, 320 cm.** | [blogi 2017-04-10], [omistaja 2026-10-22], [omistaja 2026-10-23] |

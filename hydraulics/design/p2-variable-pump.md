@@ -630,7 +630,14 @@ suositusarvon (noin 2–3 m/s) [yleistieto]; lyhyellä (< 0,5 m) linjalla paineh
 - **Upotussyvyys 244 mm** (nykyinen 150 mm): suodattimen alapään pitää olla öljypinnan alla myös
   pienimmällä öljymäärällä (muuten paluuöljy vaahtoaa ja sekoittaa ilmaa), mutta se ei saa osua
   pohjaan tai väliseinään, eikä paluuvirta saa suuntautua suoraan imu-ulosottoihin (P2:n 50 mm,
-  P1:n 32 mm). Säiliön sisäkorkeus ja öljypinnan etäisyys kannesta **⚠ ei tiedossa**.
+  P1:n 32 mm). **Säiliön syvyys kannesta pohjaan 365 mm** [omistaja 2026-10-27]. Suodattimen alapää jää
+  siis noin 120 mm pohjan yläpuolelle, eli pohjaan se ei osu. Öljypinnan pitää pienimmälläkin
+  öljymäärällä olla selvästi yli 120 mm pohjasta. Jos 100 litraa vastaa koko 365 mm:n syvyyttä
+  (suora säiliö), 1 cm öljyä on noin 2,7 l, ja 80 litran täytöllä pinta on noin 290 mm pohjasta
+  [laskelma, arvio]. Upotukselle jää silloin noin 170 mm, ja pienemmälläkin öljymäärällä (esim.
+  60 l, noin 220 mm) noin 100 mm. **Syvyyden puolesta OMTF171 sopii** [arvio]. Tarkista vielä
+  öljypinnan todellinen korkeus ja se, ettei suodattimen alapää suuntaa paluuvirtaa imu-ulosottoihin
+  tai osu väliseinään.
 - **Kannen paksuus ja jäykkyys** suuremman reiän ympärillä **⚠ tarkista** (säiliön tyyppi A/B/C
   ei ole tiedossa).
 
@@ -679,7 +686,7 @@ kupin alla (tyypillisesti 10–15 cm) ja kiinnityskannake.
 | | Uusi kanteen asennettava (OMTF171F10NA1) | Linjasuodatin, nykyinen jää |
 |---|---|---|
 | Säiliön kansi | reikä Ø 86 → Ø 129 mm, uudet pulttireiät; kansi ehkä uusittava (laserleikkaus) | ei muutoksia |
-| Upotussyvyys | 244 mm, tarkistettava säiliöstä | ennallaan (150 mm) |
+| Upotussyvyys | 244 mm; säiliön syvyys 365 mm riittää [arvio] | ennallaan (150 mm) |
 | Virtauskesto | 157 l/min (Phoenix) | valitaan noin 100 l/min tai enemmän |
 | Suodatusvaiheita | yksi | kaksi (lasikuitu + nykyinen) |
 | Paluulinjan vastapaine | pienempi | hieman suurempi (yksi suodatin lisää) |
@@ -761,7 +768,8 @@ nykyisen rinnalle.
 - [ ] OMTF171F10NA1: beta-arvo, ohitusventtiilin asetus (1,7 vai 3 bar), pulttijako ja laipan ulkohalkaisija (OMT:n luettelo tai STEP-tiedosto), elementin CR171F10R hinta
 - [ ] Linjasuodatin (jos kansi ei salli OMTF171:tä): malli, beta-arvo, virtauskesto noin 100 l/min, hinta; paikka ja kannake paluulinjassa
 - [ ] Omistajat: uusi kanteen asennettava suodatin vai linjasuodatin (ratkeaa kannen mittauksilla)
-- [ ] Veneellä: säiliön sisäkorkeus, öljypinnan etäisyys kannesta pienimmällä öljymäärällä, tila kannella Ø 129 mm:n reiälle ja laipalle, nykyisten pulttireikien jako
+- [x] Säiliön syvyys kannesta pohjaan: 365 mm [omistaja 2026-10-27]
+- [ ] Veneellä: öljypinnan etäisyys kannesta pienimmällä öljymäärällä, imu-ulosottojen ja mahdollisen väliseinän paikka suodattimen kohdalla, tila kannella Ø 129 mm:n reiälle ja laipalle, nykyisten pulttireikien jako
 - [x] Voiko VPR3:n B-portin tulpata: **ei**, B kytketään aina säiliöön tai toiselle toimilaitteelle [omistaja 2026-10-25], [datalehti VPR3]
 - [ ] Ankkurivinssin moottorin kierrostilavuus, käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
 - [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]
