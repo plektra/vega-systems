@@ -115,6 +115,11 @@ on 07/88. Jäähdytinrungon pituus ilman päätylaippoja on **185 mm** [omistaja
 
   ![Vaipan valumerkintä EC10](../img/oil-cooler-ec10-casting.jpg)
   *Vaipan valumerkintä "EC10" [omistaja 2026-10-27].*
+- Tyyppikilvessä on vain koodi **3249-2** ja päiväys **7/88** (E. J. Bowman (B'ham) Ltd); mallin
+  nimeä kilvessä ei ole.
+
+  ![Bowmanin tyyppikilpi 3249-2, 7/88](../img/oil-cooler-plate.jpg)
+  *Tyyppikilpi [omistaja 2026-10-27].*
 - Välikoodi **3249** on vanha (1988) versiokoodi. Sitä ei löytynyt nykyisistä luetteloista, joten
   vetojen määrä (1-, 2- vai 3-vetoinen) ja tarkka teho ovat **⚠ ei tiedossa**. Laskelmat olettavat
   nykyisen merivesiversion (3-vetoinen) arvot. Vetojen määrän näkee päätykannen väliseinistä, ja
