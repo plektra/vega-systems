@@ -68,7 +68,7 @@ loads:
   - id: WLS
     name: Ankkurivinssi
     in_scope: true                 # vahvistamatta
-    existing: ei kytketty; voimansiirto rakennetaan uusiksi; moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli ei tiedossa [omistaja 2026-10-27]
+    existing: ei kytketty; ketjuveto kahdella ketjulla ja erillinen mekaaninen jarru; sähkömoottori (tukilaakeriyksikön kautta, suoraveto tai planeettavaihde, ei varmaa) korvataan hydraulimoottorilla, ketjuveto säilytetään; moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli ei tiedossa [omistaja 2026-10-27]
     criticality: high
     actuator: motor
     motor:
@@ -83,8 +83,8 @@ loads:
       run_time_min: null
       cycles_per_hour: null
     control: on_off
-    fail_state: pitää kuorman (jarru / jarruventtiili)
-    source: null
+    fail_state: pitää kuorman (vinssin mekaaninen jarru, tyyppi ei tiedossa / jarruventtiili moottorilla)
+    source: omistaja 2026-10-27
     notes: "Omistajien listalla mahdollisena apupiirin kuormana [omistaja 2026-10-25]; CETOP-pohjalaatan vapaa paikka."
 
   - id: PWW

@@ -1,7 +1,7 @@
 # Vega — hydrauliikan nykytila (lähtötilanne)
 
 > **Tila:** Koottu Plektra-blogista (2016–2021) ja omistajien antamista tiedoista lokakuussa 2026
-> (ks. §0). Päivitetty 2026-10-27: U11:n vuotolinja uusiksi suoraan säiliöön, ankkurivinssi ei kytketty (voimansiirto uusiksi); **P2 on Vickers PVH57** (päätös, kaupat sovittu), kytkin HRC 150; venttiileiksi PVG 32 (ykkösvaihtoehto); F1-61-selvitys arkistoitu. 2026-10-26: P2:n valinta (F1-61) on alustava, omistaja kallistuu säätötilavuuspumppuun; säiliön öljypinta vähintään 1 m pumppujen yläpuolella; paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (alustava päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
+> (ks. §0). Päivitetty 2026-10-27: ankkurivinssissä kahden ketjun ketjuveto ja erillinen mekaaninen jarru, sähkömoottori korvataan hydraulimoottorilla; U11:n vuotolinja uusiksi suoraan säiliöön, ankkurivinssi ei kytketty (voimansiirto uusiksi); **P2 on Vickers PVH57** (päätös, kaupat sovittu), kytkin HRC 150; venttiileiksi PVG 32 (ykkösvaihtoehto); F1-61-selvitys arkistoitu. 2026-10-26: P2:n valinta (F1-61) on alustava, omistaja kallistuu säätötilavuuspumppuun; säiliön öljypinta vähintään 1 m pumppujen yläpuolella; paluusuodattimen malli OMTF112C10NA2; 2026-10-24: P2 = Parker F1-61 tai vastaava ISO 7653 -vinoakselipumppu ohitusventtiilillä (Torin kauppa peruuntui); 2026-10-23: P2 = Parker F1-61 + BPV-F1, Spidex-kytkin, 50 mm imulinja (alustava päätös); P1:n imulinja 25 mm × 3,2 m ja muutosehdotus ([p1-steering-pump.md](design/p1-steering-pump.md)). Kohdat, joissa on merkintä **⚠ tarkista**, pitää tarkistaa veneellä.
 >
 > **Hydraulipumput on irrotettu** (lokakuu 2026); muu järjestelmä (säiliö, venttiilit, orbitroli,
 > sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Luvut 3.1–3.5 kuvaavat viimeisintä
@@ -256,7 +256,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Keulapotkuri | **Side-Power SH240/250TC-U11**: 250 mm:n tunneli, kaksi vastakkain pyörivää potkuria, hydraulimoottori U11. Työntövoima enintään **240 kg** (kevyt käyttö) / **220 kg** (raskas käyttö) [ohje Sleipner 2746 35 2025]; vanhemmassa esitteessä 220 / 200 kg. Hydraulinen teho 14,9 kW, **käyttöaika jatkuva**. Vaihteisto pronssia, öljykylpy omasta säiliöstä (EP 90, säiliö vesilinjan yläpuolelle); joustokytkin moottorin ja vetoakselin välissä. U11:n liitännät: A ja B 3/4" BSP, **vuotolinja 1/4" BSP pakollinen** (ylempi vuotoliitäntä; moottorin kotelo täytetään öljyllä ennen käynnistystä). Vain suorakierteiset liittimet, mieluiten pehmeätiivisteiset; ei kierreteippiä tai -tiivistettä. | Moottorin vuotolinja (1/4") on **kytketty hydrauliikan paluulinjaan** [omistaja 2026-10-23]. Liitoskohta suhteessa jäähdyttimeen ja suodattimeen **⚠ tarkista**; moottorin kotelon suurin sallittu paine **⚠ ei tiedossa** (ei asennusohjeessa) |
 | Keulapotkurin tarve (U11) | 60 %: 26,2 l/min × 158 bar · 80 %: 30,2 l/min × 211 bar · **100 %: 33,8 l/min × 264 bar** (≈ 14,9 kW hydraulista) [datalehti Side-Power SH Series v1.0.0 2017] | Prosentit ovat osuus suurimmasta työntövoimasta (100 % ≈ 240 kg asennusohjeen mukaan) |
 | Saavutettu (hihnaveto) | ~160–170 bar, mikä riitti kääntämään aluksen laiturissa | [blogi 2018-11-12] |
-| Ankkurivinssi | **Ei kytketty**; voimansiirto vinssille rakennetaan uusiksi. Moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli **⚠ ei tiedossa** | [blogi 2017-04-01], [omistaja 2026-10-27] |
+| Ankkurivinssi | **Ei kytketty**. Vinssissä on **ketjuveto välityksineen kahdella ketjulla** ja **erillinen mekaaninen jarru** (tyyppi ja sijainti **⚠ ei tiedossa**). Voimanlähteenä on ollut sähkömoottori tukilaakeriyksikön kautta: joko suoraveto tai yksikössä on planeettavaihde **⚠ tarkista**. Sähkömoottori poistetaan ja korvataan hydraulimoottorilla uuden sovitteen kautta; ketjuveto on tarkoitus säilyttää. Moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli **⚠ ei tiedossa** | [blogi 2017-04-01], [omistaja 2026-10-27] |
 
 ### 3.5 Säiliö, öljy ja putkisto
 
@@ -356,6 +356,11 @@ Avoimet:
 - [x] Paineenrajoitus pysyy 250 barissa (päätös 2026-10-21, vahvistettu 2026-10-23)
 - [x] Onko ankkurivinssi kytketty? Ei; voimansiirto rakennetaan uusiksi [omistaja 2026-10-27]
 - [ ] Ylimääräiseksi jääneen hydraulimoottorin merkki, malli ja kierrostilavuus (tyyppikilpi): sopiiko ankkurivinssille
+- [ ] Ankkurivinssin kokonaisvälitys: onko tukilaakeriyksikössä planeettavaihde (pyöritä tuloakselia 10 kierrosta ja laske lähtöakselin kierrokset), kummankin ketjun hammasluvut ja ketjukoko
+- [ ] Ankkurivinssin ketjupyörän halkaisija ja ankkuriketjun koko; ankkurin ja ketjun paino
+- [ ] Poistettavan sähkömoottorin tyyppikilpi (kW, rpm): mille nopeudelle välitys on suunniteltu
+- [ ] Ankkurivinssin mekaaninen jarru: käsikäyttöinen (esim. nauhajarru) vai automaattinen, ja onko se ketjuvedon jälkeen ketjupyörän puolella (pitää ankkurin, vaikka vetoketju katkeaa)
+- [ ] Ankkurivinssin vetoketjujen ja ketjupyörien kunto, kiristys ja voitelu; suojakotelo
 - [x] Sähköinen varapumppu P3 on kytketty: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
 - [x] P1:n painelinjassa on vastaventtiili ennen T-haaraa [omistaja 2026-10-23]
 - [x] Piirin 1 painelinjat 1/2" [omistaja 2026-10-23]
