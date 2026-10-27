@@ -1,15 +1,25 @@
 # Hydrauliöljyn valinta
 
-> **Tila:** selvitys 2026-10-23. **Päätetty 2026-10-23: HVLP 32** (tuote valitaan VI:n perusteella). Viskositeetit [laskelma, Walther-yhtälö],
+> **Tila:** selvitys 2026-10-23, päivitetty 2026-10-27 (nykyinen öljy tunnistettu). **Päätetty 2026-10-23: HVLP 32** (tuote valitaan VI:n perusteella). Viskositeetit [laskelma, Walther-yhtälö],
 > komponenttien rajat datalehdistä, tuotetiedot jälleenmyyjien sivuilta (haettu 2026-10-23).
 
 Liittyy: [vaatimukset §9](../requirements.md#9-öljy-puhtaus-ja-huolto),
 [P1:n imulinja](p1-steering-pump.md), [P2:n imupuoli](archive/p2-pump-options.md#imupuoli-letkun-koko-ja-pituus-sekä-öljylaatu),
 [öljynjäähdytys](oil-cooling.md).
 
-**Järjestelmässä nyt oleva öljy: ⚠ ei tiedossa.** Säiliö, venttiilit ja letkut ovat paikallaan
-(vain pumput irrotettu), joten öljyn voi tarkistaa säiliön tarrasta, kuiteista tai näytteestä.
-Tämän selvityksen "VG 46" on vanhojen laskelmien oletus, ei veneessä oleva öljy.
+**Järjestelmässä nyt oleva öljy: Teboil Hydraulic Lift 32**: ISO VG 32, DIN 51524-3 (HVLP),
+ISO 6743-4 HV [omistaja 2026-10-27]. Öljyn ikä ja kunto ovat **⚠ ei tiedossa**, ja VI:tä ei löytynyt
+(Teboilin sivua ei saatu auki). Tämän selvityksen "VG 46" on vanhojen laskelmien oletus, ei
+veneessä oleva öljy.
+
+**Mitä tästä seuraa [arvio]:** nykyinen öljy on **samaa luokkaa kuin päätetty HVLP 32**. Uusi öljy
+(esim. Teboil Hydraulic Oil 32S) on siis yhteensopiva, eikä huuhtelua tarvita öljylaadun
+vaihtumisen takia. Vaihdon perusteeksi jäävät öljyn tuntematon ikä, polymeerien hajoaminen
+(HV-öljy ohenee vanhetessaan), mahdollinen vesi ja epäpuhtaudet sekä uudet pumput (PVH57 vaatii
+puhtaan öljyn). Halvempi vaihtoehto on ottaa näyte ja jättää huuhtelu pois, jos öljy on kirkas
+eikä siinä ole vettä: tyhjennetään säiliö ja letkut ja täytetään uudella, tai säästetään
+huuhteluun varattu noin 20 l (noin 100 €). Päätös kuuluu omistajille; voimassa oleva päätös
+(2026-10-23) on vaihto ja huuhtelu.
 
 ## Merkinnät
 
@@ -94,7 +104,9 @@ yksityisaluksessa, ja ne ovat kalliimpia.
 
 ## Avoimet kysymykset
 
-- [ ] Mitä öljyä järjestelmässä nyt on (merkki, luokka, ikä)?
+- [x] Mitä öljyä järjestelmässä nyt on: Teboil Hydraulic Lift 32 (HVLP, ISO VG 32) [omistaja 2026-10-27]
+- [ ] Nykyisen öljyn ikä ja kunto (näyte: kirkkaus, vesi), Hydraulic Lift 32:n VI
+- [ ] Omistajat: tarvitaanko huuhtelu, kun vanha öljy on samaa luokkaa (säästö noin 20 l)
 - [ ] Teboil 32S:n ja Neste Hydraulic 32 Superin VI ja leikkauskestävyys (tuotetiedotteet)
 - [ ] Orbitrolin HKUS 160/4 viskositeettialue omasta datalehdestä
 - [ ] Sleipnerin öljysuositus (HS 6468 -ohje) keulapotkurijärjestelmälle

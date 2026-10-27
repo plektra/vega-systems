@@ -111,6 +111,7 @@ Larin koneella (eivät GitHubissa); arvot on poimittu tähän.
 - [x] BPV-F1:n asennusohje MSG30-8227-INST
 - [ ] BPV-F1:n ohitusasennon painehäviö (ei julkaistu; kysy Parkerilta)
 - [ ] Teboil Hydraulic Oil 32S:n ja Neste Hydraulic 32 Superin tuotetiedotteet (VI, leikkauskestävyys)
+- [ ] Teboil Hydraulic Lift 32:n tuotetiedote (VI; järjestelmässä nyt oleva öljy)
 - [ ] Sleipnerin hydraulijärjestelmän käyttöohje HS 6468 (öljysuositus; vanha linkki 404)
 - [x] Side-Power SH -sarjan tuote-esite (suorituskyky)
 - [x] Sleipner SH240 -asennusohje (2025)
