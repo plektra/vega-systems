@@ -1,6 +1,6 @@
 # Hydrauliöljyn lämpökuorma ja jäähdytys
 
-> **Tila:** Selvitys, päivitetty 2026-10-23 ja 2026-10-26 (paluulinjan letkukoko ja paluiden yhdistäminen). Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
+> **Tila:** Selvitys, päivitetty 2026-10-23, 2026-10-26 (paluulinjan letkukoko ja paluiden yhdistäminen) ja 2026-10-27 (jäähdyttimen asento, U11:n vuotolinja). Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
 > on kerrottu kunkin taulukon yhteydessä. Tausta: [current-system.md](../current-system.md),
 > [p2-pump-options.md](archive/p2-pump-options.md) (arkistoitu).
 >
@@ -152,10 +152,9 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
 ## Paluulinja-asennus
 
 1. **Kaikki paluut yhteen linjaan:** VPR3:n ylimäärä, 2/2-venttiili, BAV-713:n T, RPF3:n ylimäärä ja
-   orbitrolin T → EC100 → paluusuodatin → säiliö. **Myös U11:n vuotolinja on kytketty paluulinjaan**
-   [omistaja 2026-10-23]: jos se liittyy ennen jäähdytintä ja ohitusventtiiliä, moottorin kotelo saa
-   saman vastapaineen (kylmänä jopa 3–4 bar + suodatin); kotelon raja **⚠ ei tiedossa**. Vuotolinja
-   kannattaa liittää suodattimen jälkeen tai suoraan säiliöön. Normaalisti virtaus on noin 15–60 l/min. 1800 rpm:llä
+   orbitrolin T → EC100 → paluusuodatin → säiliö. U11:n vuotolinja on nyt kytketty paluulinjaan
+   [omistaja 2026-10-23], mutta se **tehdään uusiksi suoraan säiliöön** [omistaja 2026-10-27], joten kotelo ei saa
+   paluulinjan vastapainetta. Normaalisti virtaus on noin 15–60 l/min. 1800 rpm:llä
    kytkin päällä virtaus olisi noin 125 l/min, ja ylimäärä kulkee ohitusventtiilin kautta.
 2. **Ohitusventtiili** (takaiskuventtiili) jäähdyttimen rinnalle, avautuu noin 3–4 barissa. Suojaa
    jäähdytintä kylmältä, paksulta öljyltä ja virtapiikeiltä.
@@ -169,6 +168,23 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
    [omistaja 2026-10-26] (ks. [Paluulinjan letkukoko](#paluulinjan-letkukoko)).
 7. **Paluut yhdistetään yhdeksi 1":n linjaksi venttiililohkon lähellä** (ks.
    [Paluiden yhdistäminen](#paluiden-yhdistäminen)).
+8. **Asento ja seisova merivesi** [arvio; Bowmanin asennusohjetta ei saatu luettua]:
+   - Asento ei ole kriittinen, kunhan **putkisto pysyy täynnä vettä** eikä vesipuolelle jää
+     ilmataskua. Bowmanin luettelon mukaan jäähdytin asennetaan niin, että se on täynnä vettä, ja
+     **merivesi kytketään vastavirtaan** öljyyn nähden. Merivesi poistuu ylemmästä liitännästä, ja
+     poistoon pitää olla vapaa virtaus [datalehti Bowman, hakutuloksen tiivistelmä ⚠ tarkista].
+   - **Pystyjuoksu, johon merivesi jää seisomaan, on tavallinen tilanne:** koneen oma jäähdytin ja
+     merivaihteen jäähdytin ovat sammutettuna samoin täynnä merivettä. 90/10-kupronikkeliputket
+     ja sinkkianodi on tehty tähän. Pystyasennossa vesi tulee alhaalta ja lähtee ylhäältä, jolloin
+     ilma poistuu itsestään.
+   - **Vältä kohtaa, jossa vesi pääsee osin valumaan pois** ja putkisto jää puoliksi kuivaksi. Raja
+     on syöpymisherkin, ja ilmatasku heikentää jäähdytystä seuraavassa käynnistyksessä.
+   - **Talveksi** jäähdyttimen merivesipuoli tyhjennetään ja huuhdellaan makealla vedellä
+     (jäätyminen; pitkään seisova merivesi syövyttää kupronikkelia). Siksi alapäähän tai
+     alimpaan kohtaan kannattaa jättää tyhjennysmahdollisuus.
+   - Älä käytä ruostumattomia teräsputkia tai -liittimiä merivesipuolella jäähdyttimen kanssa
+     (galvaaninen pari; Bowmanin luettelon suositus [⚠ tarkista]). Öljypuolen paine pidetään
+     merivesipuolta suurempana, jolloin vuoto ei päästä vettä öljyyn.
 
 ### Paluulinjan letkukoko
 
@@ -296,3 +312,4 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 - [x] Merivaihde jäähdytetään samasta merivesipiiristä omalla lämmönvaihtimellaan
 - [ ] Paluulinjojen yhdistäminen ja ohitusventtiilin valinta
 - [ ] Tarvitaanko termostaattinen ohitus kylmän meriveden aikaan
+- [ ] Bowmanin asennusohje (HOC IOMG): asennusasento, tyhjennystulpat ja talvisäilytys; kohta 8 perustuu hakutulosten tiivistelmään

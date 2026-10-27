@@ -80,7 +80,7 @@ mitoitukseen vaikuttavat arvot.
 
 | Parametri | Arvo | Yksikkö |
 |---|---|---|
-| Koneen merkki ja malli | Caterpillar 3126B, säädetty 350 hv (**⚠ tarkista**) | |
+| Koneen merkki ja malli | Caterpillar 3126B, säädetty 350 hv | [omistaja 2026-10-27] |
 | Koneiden määrä | 1 | |
 | Tyhjäkäynti / suurin | ~700 (**⚠ tarkista** mittaamalla) / ~2400 (matka ~1800) | rpm |
 | Käytettävissä olevat voimanulosotot | Etupään hihnat → ohjauspumppu P1 (vain pienelle teholle; luisti yli ~9 kW:lla). Advance 300:n PTO → apupiirin pumppu P2. | |
@@ -119,7 +119,7 @@ Omistajien lista mahdollisesti tulevista laitteista [omistaja 2026-10-25]:
 | ID | Toiminto | Tila | Kriittisyys | Huomiot |
 |---|---|---|---|---|
 | BTH | Keulapotkuri | olemassa | korkea | Side-Power SH240-U11, 264 bar × 33,8 l/min; pohjalaatan paikka 1 (BAV-713) |
-| WLS | Ankkurivinssi | mahdollinen | korkea | Hydraulimoottori olemassa, tiedot puuttuvat. Kuorman pito vaaditaan (§7). Ks. [p2-variable-pump § Ankkurivinssi](design/p2-variable-pump.md#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
+| WLS | Ankkurivinssi | mahdollinen | korkea | Ei kytketty; voimansiirto vinssille rakennetaan uusiksi. Moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli **⚠ ei tiedossa** [omistaja 2026-10-27]. Kuorman pito vaaditaan (§7). Ks. [p2-variable-pump § Ankkurivinssi](design/p2-variable-pump.md#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
 | PWW | Painepesuri | mahdollinen | matala | Hydraulimoottorilla käytetty pesuri; laite ei vielä valittu. **Jatkuva kuorma**, joten öljyn lämpö ratkaisee (ks. [oil-cooling](design/oil-cooling.md)); käytetään satamassa tyhjäkäynnillä |
 | DAV | Nosturi / jollan daavitti | epätodennäköinen | keskitaso | Kuorman pito vaaditaan (kuormanpitoventtiilit, §7) |
 

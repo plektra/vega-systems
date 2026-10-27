@@ -28,7 +28,7 @@ omistajien suoraan antama tieto.
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Pääkone | Caterpillar 3126B, asennettu 2012. Teho **säädetty 350 hv:hen** omistajan muistin mukaan (blogissa 420 hv, joka on luultavasti mallin nimellisteho) **⚠ tarkista** koneen tyyppikilvestä tai Caterpillar-huollosta | [perustiedot], [omistaja 2026-10-22] |
+| Pääkone | Caterpillar 3126B, asennettu 2012. Teho **säädetty 350 hv:hen** (vahvistettu; blogin 420 hv on mallin nimellisteho) | [perustiedot], [omistaja 2026-10-22], [omistaja 2026-10-27] |
 | Kampiakselin pyörimissuunta | **Vastapäivään vauhtipyörän päästä katsottuna** (eli myötäpäivään koneen etupäästä katsottuna); Caterpillarin vakiosuunta | [datalehti 3126B Marine Propulsion](https://www.dieselpartsdirect.com/documents/caterpillar-specs/cat-3126b-propulsion.pdf) |
 | Kierrosalue | Tyhjäkäynti (ks. alla) – **suurin noin 2400 rpm** (350 hv:n säädöllä), matka ~1800 rpm | [blogi 2018-11-12], [omistaja 2026-10-22] |
 | Vauhtipyörä / kytkinkoppa | SAE 11-1/2 -vauhtipyörä, luultavasti SAE #3 -koppa, sovitelaippa SAE 14:ään | [blogi 2021-02-08] |
@@ -95,5 +95,5 @@ Tarkemmin: [electrics/current-system.md](../electrics/current-system.md).
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| DC-jännite | 24 V (päätelty 24 V:n hydrauliikan varapumpusta) **⚠ tarkista** | [blogi 2018-11-12] |
+| DC-jännite | 24 V (vahvistettu) | [blogi 2018-11-12], [omistaja 2026-10-27] |
 | Koneen laturi | 65 A | [blogi 2017-07-04] |

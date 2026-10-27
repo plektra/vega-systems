@@ -1,13 +1,13 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22. Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-27 (24 V vahvistettu). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Järjestelmäjännite | 24 V **⚠ tarkista** (päätelty 24 V:n hydrauliikan varapumpusta) | [blogi 2018-11-12] |
+| Järjestelmäjännite | 24 V (vahvistettu) | [blogi 2018-11-12], [omistaja 2026-10-27] |
 | Käyttöakut | 2 kpl (tyyppi ja kapasiteetti **⚠ ei tiedossa**) | [blogi 2017-04-10] |
 | Käynnistysakut | 2 kpl (tyyppi ja kapasiteetti **⚠ ei tiedossa**) | [blogi 2017-04-10] |
 | Akkujen sijainti | Kannen alla telineessä konehuoneen styyrpuurin puolella | [blogi 2017-04-10] |
@@ -45,7 +45,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 
 ## 5. Avoimet kysymykset
 
-- [ ] Vahvista 24 V:n DC-jännite
+- [x] Vahvista 24 V:n DC-jännite: 24 V [omistaja 2026-10-27]
 - [ ] Akkujen tyypit ja kapasiteetit (käyttö ja käynnistys)
 - [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit
 - [ ] Generaattori ja maasähkö: asennettu vai suunnitteilla?

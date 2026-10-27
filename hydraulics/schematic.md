@@ -94,7 +94,7 @@ Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61
 **Arkkeja 2 ja 3 piirtäessä esiin tulleet asiat (päivitetty 2026-10-27):**
 
 - Vuotolinjat (PVH57:n kotelovuoto ja U11) on piirretty suoraan säiliöön öljypinnan alle. U11:n
-  vuotolinja on nyt paluulinjassa, ja liitoskohta pitää tarkistaa.
+  vuotolinja tehdään uusiksi suoraan säiliöön [omistaja 2026-10-27].
 - PVG 32:n T-portin suurin paine on 25 bar staattinen: paluulinjan jäähdytin, ohitus ja suodatin
   pitävät sen alle, kunhan kylmäkäynnistyksen paluupaine tarkistetaan (3G1).
 - Arkki 3:n merkinnät päivitettiin 2026-10-27 (PVG:n T-portti, PVH57:n kotelovuoto); alkuperäinen
@@ -156,7 +156,7 @@ flowchart LR
   CTRL -.-> S1
   CTRL -.-> S2
   PVP -->|"T G 3/4"| RET
-  THR -->|"vuotolinja 1/4#quot;<br/>(kohta ⚠)"| TANK
+  THR -->|"vuotolinja 1/4#quot;<br/>suoraan säiliöön"| TANK
 
   subgraph PVG ["Danfoss PVG 32, 5 lohkoa"]
     PVP

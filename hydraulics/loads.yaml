@@ -68,7 +68,7 @@ loads:
   - id: WLS
     name: Ankkurivinssi
     in_scope: true                 # vahvistamatta
-    existing: hydraulimoottori asennettu; merkki ja kierrostilavuus eivät tiedossa
+    existing: ei kytketty; voimansiirto rakennetaan uusiksi; moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli ei tiedossa [omistaja 2026-10-27]
     criticality: high
     actuator: motor
     motor:

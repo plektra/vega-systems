@@ -635,9 +635,8 @@ suositusarvon (noin 2–3 m/s) [yleistieto]; lyhyellä (< 0,5 m) linjalla paineh
   ei ole tiedossa).
 
 **Muut vaikutukset:** ohitusventtiilin asetus (1,7 tai 3 bar) lisää paluulinjan vastapainetta
-enintään saman verran; orbitrolin T-linjan 25 barin raja ei ole vaarassa. Jos U11:n vuotolinja
-liittyy paluulinjaan ennen suodatinta, kotelon paine nousee tämän verran (avoin kysymys
-[current-system](../current-system.md)).
+enintään saman verran; orbitrolin T-linjan 25 barin raja ei ole vaarassa. U11:n vuotolinja
+tehdään uusiksi suoraan säiliöön [omistaja 2026-10-27], joten vastapaine ei vaikuta sen koteloon.
 
 **Suositus:** OMTF171F10NA1 sopii, jos säiliön mitat sallivat. Halvempaa saman rungon
 vaihtoehtoa ei ole: OMTF112:n lasikuituelementti on liian pieni Vegan virralle. Jos kannessa ei ole
