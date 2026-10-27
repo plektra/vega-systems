@@ -68,7 +68,7 @@ loads:
   - id: WLS
     name: Ankkurivinssi
     in_scope: true                 # vahvistamatta
-    existing: ei kytketty; ketjuveto kahdella ketjulla ja käsikäyttöinen hihna-/kitkajarru (nauhajarru) ketjupyörän akselilla; vapaa pudotus; räikkälukitus (omistajan muistin mukaan, tarkista); käsikampi; sähkömoottori (tukilaakeriyksikön kautta, suoraveto tai planeettavaihde, ei varmaa) korvataan hydraulimoottorilla, ketjuveto säilytetään; moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli ei tiedossa [omistaja 2026-10-27]
+    existing: ei kytketty; ketjuveto kahdella ketjulla ja käsikäyttöinen hihna-/kitkajarru (nauhajarru) ketjupyörän akselilla; vapaa pudotus; räikkälukitus (omistajan muistin mukaan, tarkista); käsikampi välitysakselilla (myös moottorin voima kulkee välitysakselin ja hammaspyörävälityksen kautta ketjupyörän akselille); sähkömoottori (tukilaakeriyksikön kautta, suoraveto tai planeettavaihde, ei varmaa) korvataan hydraulimoottorilla, ketjuveto säilytetään; moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori, malli ei tiedossa [omistaja 2026-10-27]
     criticality: high
     actuator: motor
     motor:
