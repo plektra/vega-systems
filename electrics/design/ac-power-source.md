@@ -244,6 +244,19 @@ Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta h
      silta suunnitellaan erikseen.
   6. **Kokoa ja painoa:** 25 kg ja 454 × 384 × 305 mm, IP23 eli kuiva paikka.
 
+  **Sijoitus:** luultavasti konehuoneeseen, tarkka paikka vielä auki [omistaja 2026-10-28].
+  Konehuoneessa huomioitavaa (**⚠ arvio**, tarkistetaan paikan päällä):
+  - **Lämpö:** konehuone on ajossa kuuma. Datalehti ei kerro, missä ympäristön lämpötilassa
+    5000 VA on mitoitettu (eristysluokka A, 105 °C), joten kuumassa tilassa jatkuvaa
+    kuormitettavuutta voi joutua pienentämään. Maasähköllä kone ei yleensä käy, mikä helpottaa.
+    Valitse viileä paikka, jossa ilma kiertää kotelon ympäri.
+  - **Vesi ja kosteus:** IP23 ei kestä roiskeita. Pidä kaukana pilssistä, merivesipumpusta,
+    -putkista ja -letkuista sekä akselitiivisteestä, ja mieluiten koneen yläpuolisella tasolla.
+  - **Kiinnitys:** 25 kg eristetyillä kiinnikkeillä rungosta (ks. kohta 2), ja kiinnityksen
+    pitää kestää aallokko ja tärinä.
+  - **Lyhyet kaapelit:** mahdollisimman lähelle maasähkön tuloliitintä ja Mass Combia.
+  - **Huoltoon pääsy:** ensiön johdonsuojan pitää olla kuitattavissa.
+
   **Hyödyt samasta kytkennästä:** ei galvaanista yhteyttä laiturin maahan (runko ja anodit
   säästyvät), laiturin väärä napaisuus ei haittaa, ja maasähkön vikavirrat eivät kulje rungon
   kautta. Kelluvaan lähtöön verrattuna ensimmäinen eristysvika laukaisee vikavirtasuojan heti
@@ -328,7 +341,7 @@ akuston noin kolmasosaan.
 - [x] Erotusmuuntaja WM5002: datalehti saatu (pehmokäynnistys on, SL35) [datalehti Airlink WM5002]
 - [x] WM5002:n CTE-toisio: keskipisteen maasilta irrotetaan, jolloin lähtö on 230 V [omistaja 2026-10-28, Airlinkin sähköposti]
 - [ ] Saako WM5002:n toision toisen pään maadoittaa nollaksi (Airlink, sähköasentaja)?
-- [ ] WM5002:n sijoituspaikka (kuiva, IP23, 25 kg)
+- [ ] WM5002:n tarkka sijoituspaikka konehuoneessa (kuiva, IP23, 25 kg, eristetyt kiinnikkeet)
 - [ ] Tyyppikilven malli on **WM5002 MCB**: onko ensiön suojana MCB-johdonsuoja datalehden SP30-painikesuojan sijaan? (**⚠ tarkista** kotelon sisältä)
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
