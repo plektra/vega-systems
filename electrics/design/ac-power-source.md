@@ -12,6 +12,7 @@
 | Sähkökiuas (harkinnassa; ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h | [omistaja 2026-10-28] |
 | Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa;** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
 | Maasähkö | **⚠ ei tiedossa** | |
+| Erotusmuuntaja | Airlink WM5002, 230/230 V, 5000 VA; olemassa, ei kytketty, ks. kohta 2.6 | [omistaja 2026-10-28] |
 | Kuinka monta vuorokautta ankkurissa ilman ajoa | **⚠ ei tiedossa** | |
 | DC-jännite | 24 V | [vessel/README.md](../../vessel/README.md#sähköjärjestelmän-perustiedot) |
 
@@ -34,7 +35,7 @@ LiFePO4-akuston käytettävissä oleva osuus 80 %, jännite 24 V.
 | Akkuvirta kiukaan ollessa päällä | 2300 / 0,9 / 24 ≈ 106 A |
 | Kiukaan vaatima kapasiteetti | 5,1 kWh / 24 V ≈ 213 Ah käytettävissä → ≈ 265 Ah nimelliskapasiteettia |
 | Akusto | Muut kuormat mukaan lukien noin 400–650 Ah, ks. kohdat 2.1 ja 4 |
-| Invertteri | Kiukaalle yksin riittäisi 3 kW; muiden kuormien kanssa noin 5 kW, ks. kohta 2.2 |
+| Invertteri | Noin 3,5 kW, ks. kohta 2.2 |
 
 ### 2.1 Koko ankkurivuorokauden energiatarve [laskelma]
 
@@ -107,6 +108,40 @@ valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
 **Arvio:** laite sopii Vegalle myös sähköruoanlaitolla, kun kiuasta tai vedenkeitintä ei käytetä
 yhtä aikaa täysillä olevan lieden ja uunin kanssa. Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
 (MasterBus) **⚠ tarkista**.
+
+### 2.6 Olemassa oleva erotusmuuntaja: Airlink WM5002
+
+Vegalla on erotusmuuntaja, jota ei ole vielä kytketty [omistaja 2026-10-28]. Valmistajan sivu ei
+avautunut istunnosta; tiedot ovat Airlinkin tuoteluettelosta ja sisarmallin WM5000 sivulta
+(**⚠ tarkista** WM5002:n omat arvot), ks. [datasheets](../../datasheets/README.md#sähköjärjestelmä).
+
+| Ominaisuus | Arvo |
+|---|---|
+| Jännite | 230 V → 230 V |
+| Teho | 5000 VA (≈ 21,7 A, 230 V) [laskelma] |
+| Tyyppi | Teollisuuskäyttöön tarkoitettu koteloitu erotusmuuntaja; ei Airlinkin veneilysarjaa |
+| Kotelo, paino | Sisarmalli WM5000: teräs, IP23, noin 25 kg |
+| Standardi | EN 61558-2-23 (sarja) |
+
+**Käyttö Vegalla:** muuntaja kytketään maasähkön tuloliittimen ja Mass Combin AC-tulon väliin.
+Se erottaa veneen sähköverkon maasähköverkosta. **Teräsrunkoisessa veneessä tämä on tärkeää:**
+ilman erotusta laiturin suojamaa yhdistää rungon muihin veneisiin ja laiturin rakenteisiin, ja
+rungon ja niiden välillä voi kulkea galvaanista ja vuotovirtaa, joka syövyttää runkoa ja anodeja.
+Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta heikompi).
+
+- **Teho riittää:** 5000 VA on enemmän kuin tavallinen 16 A:n maasähkö (≈ 3,7 kVA) [laskelma].
+  Mass Combin Power Assist rajoittaa maasähkövirran asetettuun arvoon.
+- **Sopii myös generaattorille,** jos sellainen myöhemmin tulee, mutta generaattori ei sitä tarvitse.
+- **Kotelo IP23** (sisarmallin tieto) suojaa vain tippuvalta vedeltä. Asenna kuivaan paikkaan, ei
+  pilssin tai merivesiputkien lähelle.
+- **Kytkentävirta:** 5 kVA:n muuntaja voi kytkettäessä laukaista laiturin johdonsuojan tai
+  vikavirtasuojan. Pehmokäynnistystä ei ole mainittu (**⚠ ei tiedossa**); veneilymuuntajissa se on
+  usein vakiona.
+- **Maadoitus:** muuntajan toisiopuolen nolla kytketään veneen suojamaahan, ja toisiopuolelle
+  tarvitaan oma vikavirtasuoja. Laiturin suojamaata ei kytketä runkoon.
+
+⚠ **Turvallisuus:** 230 V:n maasähkö ja muuntaja voivat aiheuttaa hengenvaarallisen sähköiskun.
+Kytkennän ja maadoituksen saa tehdä ja tarkastaa vain pätevä sähköasentaja ennen käyttöönottoa.
 
 ### 2.3 Lataus ajossa [laskelma]
 
@@ -234,7 +269,8 @@ akuston noin kolmasosaan.
 - [x] Mitkä laitteet ovat olemassa: vain jääkaappi [omistaja 2026-10-28]
 - [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi, kiuas ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu-, diesel- tai puulämmitteisiä?
 - [ ] Kuinka monta vuorokautta ollaan tyypillisesti ankkurissa ajamatta?
-- [ ] Onko maasähköä laiturissa?
+- [ ] Onko maasähköä laiturissa, ja millä sulakkeella (esim. 10 A / 16 A)?
+- [ ] Erotusmuuntaja WM5002: tyyppikilven arvot, sijoituspaikka ja onko siinä pehmokäynnistys
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
 - [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)
