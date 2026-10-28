@@ -22,7 +22,7 @@
 | AC-sähkön tarve | Ajossa ja ankkurissa. Suurin ankkurikuorma 2,3 kW:n sähkökiuas, kerrallaan noin 2 h. Olemassa on vain jääkaappi; muut AC-laitteet ovat harkinnassa: [loads.yaml](loads.yaml). Vaihtoehdot: [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
 | Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Invertteri | **⚠ ei tiedossa**; ehdokas Mastervolt Mass Combi Ultra 24/3500-100, ks. [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
-| Erotusmuuntaja | Airlink WM5002, 230/230 V CTE, 5000 VA, IP23, 25 kg. **Olemassa, ei kytketty.** CTE-toisio pitää selvittää ennen käyttöä, ks. [design/ac-power-source.md](design/ac-power-source.md#26-olemassa-oleva-erotusmuuntaja-airlink-wm5002) | [omistaja 2026-10-28], [datasheets](../datasheets/README.md#sähköjärjestelmä) |
+| Erotusmuuntaja | Airlink WM5002, 230/230 V CTE, 5000 VA, IP23, 25 kg. **Olemassa, ei kytketty.** CTE-toisio muutetaan 230 V:ksi irrottamalla keskipisteen maasilta (Airlink); toision nollan maadoitus vielä varmistettava, ks. [design/ac-power-source.md](design/ac-power-source.md#26-olemassa-oleva-erotusmuuntaja-airlink-wm5002) | [omistaja 2026-10-28], [datasheets](../datasheets/README.md#sähköjärjestelmä) |
 
 ## 3. Suuret DC-kuormat
 

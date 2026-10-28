@@ -203,9 +203,17 @@ Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta h
   ja nollajohtimen olevan erotettu toisistaan; yksinapaiset johdonsuojat ja kytkimet jättäisivät
   CTE-verkossa toisen johtimen jännitteiseksi (115 V maahan). Mass Combin siirtorele ja
   vikavirtasuojat on myös suunniteltu nolla–vaihe-verkkoon (**⚠ tarkista** Mastervoltilta).
-  **Selvitettävä sähköasentajan kanssa:** voiko keskipisteen maadoituksen irrottaa ja maadoittaa
-  toision toisen pään (jolloin siitä tulee nolla), vai onko keskipiste kiinteästi kytketty
-  käämiin tai koteloon. Tarvittaessa Airlinkiltä voi kysyä muutosta tai vaihtaa veneilymallin.
+  **Airlinkin vastaus** [omistaja 2026-10-28, Airlinkin sähköposti]: *"The 'CTE' indicates that
+  it has a centre-tapped output which is connected to ground, hence the label reads 115-0-115V. If
+  you only require an untapped 230V output, you just disconnect the 0V (Green) output terminal from
+  its link to the ground connection."* Eli kun toision keskipisteen (0 V, vihreä liitin) ja maan
+  välinen silta irrotetaan, lähtö on maasta erotettu 230 V. **CTE ei siis estä muuntajan käyttöä.**
+
+  **Pelkkä sillan irrotus jättää lähdön kellumaan** (kumpikaan johdin ei ole maadoitettu). Silloin
+  ensimmäinen eristysvika ei laukaise vikavirtasuojaa, vaan jää huomaamatta. Veneen verkossa
+  (ISO 13297 -tyyppinen ratkaisu) toision **toinen pää kytketään suojamaahan**, jolloin siitä tulee
+  nolla [laskelma/yleinen käytäntö, **⚠ tarkista** sähköasentajalta]. **Kysy Airlinkiltä vielä,**
+  saako toision pään maadoittaa (pitäisi onnistua turvaerotusmuuntajassa, mutta vahvista).
 - **Maadoitus (ISO 13297 -tyyppinen ratkaisu):** toision nolla kytketään veneen suojamaahan ja
   runkoon, toisiolle tulee oma vikavirtasuoja, eikä laiturin suojamaata kytketä runkoon.
 
@@ -284,7 +292,8 @@ akuston noin kolmasosaan.
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Onko kotilaiturin maasähkö 1-vaiheinen 230 V, ja onko siinä vikavirtasuoja?
 - [x] Erotusmuuntaja WM5002: datalehti saatu (pehmokäynnistys on, SL35) [datalehti Airlink WM5002]
-- [ ] WM5002:n CTE-toisio: voiko sen muuttaa nolla–vaihe-kytkennäksi (sähköasentaja, Airlink)?
+- [x] WM5002:n CTE-toisio: keskipisteen maasilta irrotetaan, jolloin lähtö on 230 V [omistaja 2026-10-28, Airlinkin sähköposti]
+- [ ] Saako WM5002:n toision toisen pään maadoittaa nollaksi (Airlink, sähköasentaja)?
 - [ ] WM5002:n sijoituspaikka (kuiva, IP23, 25 kg)
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
