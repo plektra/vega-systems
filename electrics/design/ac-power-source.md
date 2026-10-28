@@ -100,7 +100,26 @@ Koko ankkurivuorokauden (≈ 12,7 kWh) palautus vie 65 A:n ja 200 A:n latureilla
 Litiumakusto vaatii latureille sopivan latauksensäädön (ulkoinen säädin tai DC-DC-laturi) ja
 laturin lämpötilan valvonnan, koska litium ottaa virtaa vastaan täydellä teholla pitkään.
 
-## 3. Vaihtoehdot
+### 2.4 Litiumakuston hintataso (haettu 2026-10-28)
+
+Verkkokauppojen hinnat; ne vaihtelevat, ja osa sivuista voi olla vanhentuneita. Hinnat ovat vain
+akuista tai kennoista; mukana eivät ole BMS, kotelointi, sulakkeet, kaapelointi ja asennus.
+
+| Taso | Esimerkki ja lähde | Hinta | ≈ €/kWh | 650 Ah (≈ 16,6 kWh) | 400 Ah (≈ 10 kWh) |
+|---|---|---|---|---|---|
+| Merkkiakku | Victron LiFePO4 25,6 V / 200 Ah Smart-a, 5,12 kWh, 56 kg, tarvitsee erillisen BMS:n ([Solarkontor, DE](https://solarkontor.de/en/products/victron-smart-a-lithium-ionen-200-ah-batterie-lifepo4-25-6v)) | 2 190 € sis. ALV (DE) | ≈ 430 | ≈ 7 000 € (3–4 akkua) | ≈ 4 400 € (2 akkua) |
+| Edullinen valmisakku | LiTime, Power Queen, Vatrer 24 V / 200 Ah, sisäinen BMS ([LiTime](https://www.litime.com/products/24v-200ah-lifepo4-lithium-battery), [Power Queen](https://ipowerqueen.com/products/power-queen-24v-200ah-lifepo4-battery), [Vatrer](https://www.vatrerpower.com/products/vatrer-24v-200ah-trolling-motor-lifepo4-lithium-battery)) | 765–900 USD, USA, ilman ALV:tä ja rahtia | ≈ 150–175 USD | ≈ 2 500–2 900 USD + ALV ja rahti | ≈ 1 500–1 800 USD + ALV ja rahti |
+| Omat kennot (8S) | EVE MB31 3,2 V / 314 Ah ([Akkula.fi](https://akkula.fi/tuote/eve-mb31-grade-a-lifepo4-314ah-32v-1kwh-prismaattinen-akkukenno-ruuviliitoksin/)) | 129,95 €/kenno | ≈ 130 | ≈ 2 100 € (16 kennoa, 628 Ah) | ≈ 1 050 € (8 kennoa, 314 Ah) |
+
+Huomioita:
+
+- **LiFePO4-akkua ei saa ladata pakkasella.** Jos akusto on veneessä talvella tai alkukeväällä
+  kylmässä, tarvitaan lämmitys tai BMS, joka estää latauksen alle 0 °C:ssa.
+- **Omista kennoista koottu akusto** on selvästi halvin, mutta BMS, kotelointi ja sulakkeet pitää
+  mitoittaa ja rakentaa itse. Selvitä vakuutusyhtiöltä, hyväksyykö se itse kootun akuston.
+- Edullisten valmisakkujen hinnat ovat USA:n verkkokaupoista; EU-hintaa ei tarkistettu.
+
+
 
 | | A. Laturi, akusto ja invertteri | B. Dieselgeneraattori | C. Hydrauligeneraattori |
 |---|---|---|---|
@@ -172,4 +191,4 @@ akuston noin kolmasosaan.
 - [ ] Onko maasähköä laiturissa?
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, ja millainen kiinnike tarvitaan
-- [ ] Hinnat vaihtoehdoille A ja B
+- [ ] Hinnat vaihtoehdoille A ja B (litiumakuston hintataso haettu, ks. kohta 2.4; laturi, invertteri ja generaattori puuttuvat)
