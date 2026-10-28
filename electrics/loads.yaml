@@ -9,13 +9,18 @@
 #   power_W_estimate: tyypillinen teho, kun omaa arvoa ei ole (arvio, ei mitattu)
 #   use_h_per_day:    arvioitu käyttöaika ankkurivuorokaudessa täydellä teholla
 #   at_anchor:        käytetäänkö ankkurissa akustolta tai generaattorilta
+#   status:           existing (olemassa) | candidate (harkinnassa, ei päätetty)
 #   source:           mistä luvut ovat peräisin
 
 schema_version: 1
 
+# Vain jääkaappi on olemassa; muut ovat harkinnassa eikä niiden asentamisesta ole päätetty
+# [omistaja 2026-10-28].
+
 loads:
   - id: SAUNA
     name: Sähkökiuas
+    status: candidate
     power_W: 2300
     use_h_per_day: 2               # kerrallaan noin 2 h; täysi teho koko ajan on yläraja
     at_anchor: true
@@ -23,6 +28,7 @@ loads:
 
   - id: WATER_HEATER
     name: Vedenlämmittimen sähkövastus
+    status: candidate
     power_W: 3000
     use_h_per_day: null
     at_anchor: null                # suositus: ei akustolta, ks. design/ac-power-source.md
@@ -31,6 +37,7 @@ loads:
 
   - id: FRIDGE
     name: Jääkaappi, noin 130 l ja pakastelokero
+    status: existing
     power_W: null
     power_W_estimate: 100          # käydessä; termostaatti katkoo
     energy_kWh_per_day_estimate: 0.8
@@ -39,6 +46,7 @@ loads:
 
   - id: STOVE
     name: Liesi
+    status: candidate
     power_W: null
     power_W_estimate: 3000         # kaikki levyt päällä; levyjen määrä ⚠ ei tiedossa
     use_h_per_day: 0.5             # vastaa noin 1 h keskimäärin puolella teholla
@@ -47,6 +55,7 @@ loads:
 
   - id: OVEN
     name: Uuni
+    status: candidate
     power_W: null
     power_W_estimate: 2000
     use_h_per_day: 0.5
@@ -55,6 +64,7 @@ loads:
 
   - id: KETTLE
     name: Vedenkeitin
+    status: candidate
     power_W: null
     power_W_estimate: 2000
     use_h_per_day: 0.1
@@ -63,6 +73,7 @@ loads:
 
   - id: COFFEE
     name: Kahvinkeitin
+    status: candidate
     power_W: null
     power_W_estimate: 1000
     use_h_per_day: 0.25
@@ -71,6 +82,7 @@ loads:
 
   - id: HOOD
     name: Liesituuletin
+    status: candidate
     power_W: null
     power_W_estimate: 100
     use_h_per_day: 1
@@ -79,6 +91,7 @@ loads:
 
   - id: EXHAUST_FAN
     name: Poistoilmapuhallin
+    status: candidate
     power_W: null
     power_W_estimate: 40
     use_h_per_day: null
@@ -87,6 +100,7 @@ loads:
 
   - id: HRV
     name: Ilmanvaihtokone
+    status: candidate
     power_W: null
     power_W_estimate: 50
     use_h_per_day: 24
@@ -95,6 +109,7 @@ loads:
 
   - id: TV
     name: Televisio
+    status: candidate
     power_W: null
     power_W_estimate: 80
     use_h_per_day: 3
@@ -103,6 +118,7 @@ loads:
 
   - id: CHARGERS
     name: Laturit (kannettava tietokone ym.)
+    status: candidate
     power_W: null
     power_W_estimate: 100
     use_h_per_day: 3
@@ -111,6 +127,7 @@ loads:
 
   - id: OIL_BURNER
     name: Öljykäyttöisen lämmityslaitteen poltin
+    status: candidate
     power_W: null
     current_A_max: 1               # alle 1 A, 230 V → alle 230 W
     power_W_estimate: 200

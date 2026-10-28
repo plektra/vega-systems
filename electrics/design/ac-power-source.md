@@ -1,6 +1,6 @@
 # AC-sähkön lähde: hydrauligeneraattori, dieselgeneraattori vai akusto ja invertteri
 
-> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-28 (AC-kuormien lista). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
+> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-28 (AC-kuormien lista; vain jääkaappi olemassa). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
 > tarjouksista ennen päätöstä.
 
 ## 1. Tarve
@@ -9,14 +9,17 @@
 |---|---|---|
 | Milloin AC-sähköä tarvitaan | Ajossa ja ankkurissa | [omistaja 2026-10-28] |
 | Generaattori | Ei asennettu; tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
-| Sähkökiuas (ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h | [omistaja 2026-10-28] |
-| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
+| Sähkökiuas (harkinnassa; ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h | [omistaja 2026-10-28] |
+| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa;** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
 | Maasähkö | **⚠ ei tiedossa** | |
 | Kuinka monta vuorokautta ankkurissa ilman ajoa | **⚠ ei tiedossa** | |
 | DC-jännite | 24 V | [vessel/README.md](../../vessel/README.md#sähköjärjestelmän-perustiedot) |
 
 Kokonaistarve on alle 10 kVA. Kiuas on suurin energiankuluttaja ankkurissa, mutta sähköruoanlaitto,
 ilmanvaihtokone ja lämmityksen poltin kuluttavat yhdessä lähes yhtä paljon (ks. kohta 2.1).
+
+Koska vain jääkaappi on olemassa, laitevalinnat ovat vielä auki. **Jokainen sähkölaite kasvattaa
+akustoa, ja juuri nyt on halvin hetki valita laitteet energiankulutuksen perusteella.**
 
 ## 2. Kiukaan energiatarve akustosta [laskelma]
 
@@ -34,6 +37,9 @@ LiFePO4-akuston käytettävissä oleva osuus 80 %, jännite 24 V.
 | Invertteri | Kiukaalle yksin riittäisi 3 kW; muiden kuormien kanssa noin 5 kW, ks. kohta 2.2 |
 
 ### 2.1 Koko ankkurivuorokauden energiatarve [laskelma]
+
+Laskelma on **yläraja**: siinä ovat mukana kaikki harkinnassa olevat laitteet. Pelkkä olemassa
+oleva jääkaappi vie noin 0,8 kWh/vrk (≈ 0,9 kWh akustosta, arvio).
 
 Vain kiukaan, vedenlämmittimen (3 kW) ja polttimen virran (alle 1 A) arvot ovat omistajalta. Muiden
 laitteiden tehot ja kaikki käyttöajat ovat **arvioita** tyypillisistä kodinkoneista
@@ -120,9 +126,11 @@ asennus vaatii oman polttoaine-, pakokaasu- ja merivesijärjestelmän.
 
 ## 4. Suositus (ei päätös)
 
-Kuormalistan perusteella akusto ja invertteri tarvitaan **joka tapauksessa**: yöllä jääkaappi,
-ilmanvaihtokone ja lämmityksen poltin käyvät jatkuvasti, eikä generaattoria haluta ajaa yöllä.
-Ratkaistava on, riittääkö ajo lataukseen vai tarvitaanko lisäksi dieselgeneraattori.
+Akusto ja invertteri tarvitaan joka tapauksessa, koska jääkaappi käy ankkurissa myös yöllä, eikä
+generaattoria haluta ajaa yöllä. **Akuston ja invertterin koko ratkeaa vasta, kun päätetään, mitkä
+laitteet asennetaan ja ovatko ne sähköllä toimivia.** Alla olevat koot koskevat tilannetta, jossa
+kaikki harkinnassa olevat laitteet asennetaan sähköisinä. Ratkaistava on lisäksi, riittääkö ajo
+lataukseen vai tarvitaanko dieselgeneraattori.
 
 1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–200 A) pääkoneeseen, noin 5 kW:n invertteri
    tai kuormanhallinta, ja litiumakusto. Akuston koko riippuu ankkuripäivistä:
@@ -145,9 +153,10 @@ akuston noin kolmasosaan.
 ## 5. Avoimet kysymykset
 
 - [x] Muut AC-kuormat: lista saatu [omistaja 2026-10-28], ks. [loads.yaml](../loads.yaml)
-- [ ] Tehot laitteiden tyyppikilvistä (liesi ja levyjen määrä, uuni, vedenkeitin, kahvinkeitin, jääkaappi, ilmanvaihtokone, puhaltimet, televisio)
+- [ ] Jääkaapin teho ja energiankulutus tyyppikilvestä; muiden laitteiden tehot, kun ne valitaan
 - [ ] Onko vedenlämmittimessä koneen jäähdytysvesikierukka?
-- [ ] Ovatko sähköliesi ja sähkökiuas päätettyjä, vai harkitaanko kaasu- tai diesellientä ja puukiuasta?
+- [x] Mitkä laitteet ovat olemassa: vain jääkaappi [omistaja 2026-10-28]
+- [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi, kiuas ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu-, diesel- tai puulämmitteisiä?
 - [ ] Kuinka monta vuorokautta ollaan tyypillisesti ankkurissa ajamatta?
 - [ ] Onko maasähköä laiturissa?
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
