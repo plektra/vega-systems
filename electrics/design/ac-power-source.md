@@ -11,7 +11,7 @@
 | Generaattori | Ei asennettu; tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
 | Sähkökiuas (harkinnassa; ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h | [omistaja 2026-10-28] |
 | Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa;** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
-| Maasähkö | **⚠ ei tiedossa** | |
+| Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Erotusmuuntaja | Airlink WM5002, 230/230 V, 5000 VA; olemassa, ei kytketty, ks. kohta 2.6 | [omistaja 2026-10-28] |
 | Kuinka monta vuorokautta ankkurissa ilman ajoa | **⚠ ei tiedossa** | |
 | DC-jännite | 24 V | [vessel/README.md](../../vessel/README.md#sähköjärjestelmän-perustiedot) |
@@ -100,8 +100,8 @@ valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
 |---|---|---|
 | Invertteri | 3500 W jatkuva @ 40 °C, huippu 7000 W | Kiuas (2,3 kW), jääkaappi, ilmanvaihto, televisio ja laturit yhtä aikaa onnistuvat. Myös liesi ja uuni yhdessä (enintään noin 3 kW [omistaja 2026-10-28]) pienkuormineen mahtuvat. Ei riitä, jos lieden ja uunin lisäksi päällä on vedenkeitin, kahvinkeitin tai kiuas. |
 | Akkuvirta | – | 3500 W:lla noin 160 A (hyötysuhde 92 %, **⚠ arvio**), huipussa yli 300 A. Akuston BMS:n, kaapeleiden ja sulakkeen pitää kestää se. |
-| Laturi | 100 A @ 28,5 V (≈ 2,9 kW) | Maasähköstä tai generaattorista täysi ankkurivuorokausi (≈ 12,7 kWh) latautuu noin 4,5 tunnissa. |
-| Power Assist | on | Rajoittaa maasähkön tai generaattorin kuormaa ja täydentää akuilta. Mahdollistaa pienemmän generaattorin. |
+| Laturi | 100 A @ 28,5 V (≈ 2,9 kW) | Maasähköstä tai generaattorista täysi ankkurivuorokausi (≈ 12,7 kWh) latautuu noin 4,5 tunnissa. Täysi lataus ottaa verkosta arviolta noin 3,1 kW eli noin 13,5 A (hyötysuhde noin 92 %, **⚠ arvio**), joten 15 A:n maasähköllä sille ja muille kuormille ei jää yhtä aikaa tilaa; Power Assist ja tulovirran raja hoitavat tämän. |
+| Power Assist | on | Rajoittaa maasähkön tai generaattorin kuormaa ja täydentää akuilta. Mahdollistaa pienemmän generaattorin. **Kotilaiturin 15 A:lla tulovirran raja asetetaan noin 14 A:iin** [laskelma]; laturi hidastaa ensin, ja suuret kuormat (esim. kiuas ja vedenlämmitin yhtä aikaa, noin 23 A) saavat loput akustosta invertterin rajoissa. |
 | Rinnankytkentä | enintään 10 kpl | Jos sähköliesi valitaan, toisen yksikön voi lisätä myöhemmin (yhteensä 7000 W). |
 | Hinta | 3 126 € ([SVB24](https://www.svb24.com/en/mastervolt-mass-combi-ultra-charger-inverter-24-v-3500-w-100-a.html)); 3 549 £ sis. ALV ([Chas the Boat, UK](https://shop.chastheboat.co.uk/products/mass-combi-ultra-inverter-charger-24-3500-100-38023500)) | Haettu 2026-10-28 |
 
@@ -191,7 +191,7 @@ ilman erotusta laiturin suojamaa yhdistää rungon muihin veneisiin ja laiturin 
 rungon ja niiden välillä voi kulkea galvaanista ja vuotovirtaa, joka syövyttää runkoa ja anodeja.
 Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta heikompi).
 
-- **Teho riittää:** 5000 VA on enemmän kuin tavallinen 16 A:n maasähkö (≈ 3,7 kVA) [laskelma].
+- **Teho riittää:** 5000 VA on enemmän kuin kotilaiturin 15 A:n maasähkö (≈ 3,45 kVA) [laskelma].
   Mass Combin Power Assist rajoittaa maasähkövirran asetettuun arvoon.
 - **Kytkentävirta on rajoitettu** (SL35-pehmokäynnistin), joten laiturin johdonsuojan ei pitäisi
   laueta muuntajaa kytkettäessä.
@@ -281,7 +281,8 @@ akuston noin kolmasosaan.
 - [x] Mitkä laitteet ovat olemassa: vain jääkaappi [omistaja 2026-10-28]
 - [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi, kiuas ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu-, diesel- tai puulämmitteisiä?
 - [ ] Kuinka monta vuorokautta ollaan tyypillisesti ankkurissa ajamatta?
-- [ ] Onko maasähköä laiturissa, ja millä sulakkeella (esim. 10 A / 16 A)?
+- [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
+- [ ] Onko kotilaiturin maasähkö 1-vaiheinen 230 V, ja onko siinä vikavirtasuoja?
 - [x] Erotusmuuntaja WM5002: datalehti saatu (pehmokäynnistys on, SL35) [datalehti Airlink WM5002]
 - [ ] WM5002:n CTE-toisio: voiko sen muuttaa nolla–vaihe-kytkennäksi (sähköasentaja, Airlink)?
 - [ ] WM5002:n sijoituspaikka (kuiva, IP23, 25 kg)

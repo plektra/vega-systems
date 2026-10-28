@@ -99,7 +99,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 | Käyttöakuston kapasiteetti | TBD | Ah |
 | Hydrauliikalle käytettävissä oleva jatkuva DC-virta | TBD | A |
 | Generaattori (AC) | Ei asennettu [omistaja 2026-10-28]; hydrauligeneraattoria ei suositella, ks. [ac-power-source.md](../electrics/design/ac-power-source.md) | kVA, V, Hz |
-| Maasähkö | TBD | A, V, Hz |
+| Maasähkö | Kotilaiturissa 15 A:n sulake [omistaja 2026-10-28], ks. [ac-power-source.md](../electrics/design/ac-power-source.md) | A, V, Hz |
 
 ## 5. Hydrauliset kuormat (yhteenveto)
 

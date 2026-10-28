@@ -20,7 +20,7 @@
 |---|---|---|
 | Generaattori | **Ei asennettu.** Tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
 | AC-sähkön tarve | Ajossa ja ankkurissa. Suurin ankkurikuorma 2,3 kW:n sähkökiuas, kerrallaan noin 2 h. Olemassa on vain jääkaappi; muut AC-laitteet ovat harkinnassa: [loads.yaml](loads.yaml). Vaihtoehdot: [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
-| Maasähkö | **⚠ ei tiedossa** | |
+| Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Invertteri | **⚠ ei tiedossa**; ehdokas Mastervolt Mass Combi Ultra 24/3500-100, ks. [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
 | Erotusmuuntaja | Airlink WM5002, 230/230 V CTE, 5000 VA, IP23, 25 kg. **Olemassa, ei kytketty.** CTE-toisio pitää selvittää ennen käyttöä, ks. [design/ac-power-source.md](design/ac-power-source.md#26-olemassa-oleva-erotusmuuntaja-airlink-wm5002) | [omistaja 2026-10-28], [datasheets](../datasheets/README.md#sähköjärjestelmä) |
 
@@ -51,6 +51,6 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Akkujen tyypit ja kapasiteetit (käyttö ja käynnistys)
 - [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
-- [ ] Maasähkö: onko laiturissa?
+- [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Pääkeskus ja jakelun rakenne
 - [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä
