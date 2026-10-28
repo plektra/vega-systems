@@ -222,6 +222,32 @@ Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta h
   vihreän keskipisteliittimen maasilta irrotetaan, ja vihreä jää kytkemättä; musta = nolla (N),
   joka sillataan veneen suojamaahan; punainen = vaihe (L) → Mass Combin AC-tulo. Kumpi pää
   valitaan nollaksi, on sähköisesti yhdentekevää, kunhan valinta merkitään.
+
+  **Kytkennän haitat ja huomioitavat** (yleinen tieto ja arviot, **⚠ tarkista** sähköasentajalta):
+
+  1. **Laiturin vikavirtasuoja ei suojaa veneen verkkoa.** Se näkee vain maasähkökaapelin ja
+     muuntajan ensiön. Toisiopuolelle tarvitaan oma vikavirtasuoja (30 mA) ja johdonsuoja
+     heti muuntajan jälkeen.
+  2. **Muuntajan kotelo on eristettävä rungosta.** Kotelo ja ensiön suojamaa kytketään laiturin
+     suojamaahan. Jos teräskotelo on kiinni teräsrungossa, laiturin suojamaa yhdistyy runkoon ja
+     erotus menetetään. Tarvitaan eristetyt kiinnikkeet. Onko käämien välissä maadoitettava
+     suojavaippa, **⚠ ei tiedossa**.
+  3. **Tyhjäkäyntihäviö.** Muuntaja ottaa virtaa ja lämpenee myös ilman kuormaa, arviolta
+     50–100 W (noin 1–2 % 5 kVA:sta, **⚠ arvio**), eli noin 1–2 kWh vuorokaudessa, kun se on
+     kytkettynä maasähköön. Lämpö jää asennustilaan.
+  4. **Jännite laskee hieman kuormitettuna** (säätö 2 % datalehden mukaan). Mass Combin tulo
+     sallii 184–275 V, joten tämä ei haittaa.
+  5. **Nollan ja suojamaan silta saa olla vain yhdessä paikassa kerrallaan.** Maasähköllä silta
+     on muuntajan toisiolla. Mass Combi tekee invertterikäytössä oman siltansa sisäisellä
+     releellä (**⚠ tarkista** Mastervoltin ohjeesta), eikä toinen kiinteä silta saa jäädä
+     rinnalle. Myöhemmin asennettava generaattori ei kulje muuntajan kautta, joten sen syötön
+     silta suunnitellaan erikseen.
+  6. **Kokoa ja painoa:** 25 kg ja 454 × 384 × 305 mm, IP23 eli kuiva paikka.
+
+  **Hyödyt samasta kytkennästä:** ei galvaanista yhteyttä laiturin maahan (runko ja anodit
+  säästyvät), laiturin väärä napaisuus ei haittaa, ja maasähkön vikavirrat eivät kulje rungon
+  kautta. Kelluvaan lähtöön verrattuna ensimmäinen eristysvika laukaisee vikavirtasuojan heti
+  eikä jää piileväksi.
 - **Maadoitus (ISO 13297 -tyyppinen ratkaisu):** toision nolla kytketään veneen suojamaahan ja
   runkoon, toisiolle tulee oma vikavirtasuoja, eikä laiturin suojamaata kytketä runkoon.
 
