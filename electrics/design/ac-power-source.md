@@ -1,6 +1,6 @@
 # AC-sähkön lähde: hydrauligeneraattori, dieselgeneraattori vai akusto ja invertteri
 
-> **Tila:** Selvitys, aloitettu 2026-10-28. Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
+> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-28 (AC-kuormien lista). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
 > tarjouksista ennen päätöstä.
 
 ## 1. Tarve
@@ -9,14 +9,14 @@
 |---|---|---|
 | Milloin AC-sähköä tarvitaan | Ajossa ja ankkurissa | [omistaja 2026-10-28] |
 | Generaattori | Ei asennettu; tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
-| Suurin ankkurissa käytettävä laite | Sähkökiuas 2,3 kW, päällä kerrallaan noin 2 h | [omistaja 2026-10-28] |
-| Muut AC-kuormat | **⚠ ei tiedossa** | |
+| Sähkökiuas (ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h | [omistaja 2026-10-28] |
+| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
 | Maasähkö | **⚠ ei tiedossa** | |
 | Kuinka monta vuorokautta ankkurissa ilman ajoa | **⚠ ei tiedossa** | |
 | DC-jännite | 24 V | [vessel/README.md](../../vessel/README.md#sähköjärjestelmän-perustiedot) |
 
-Kokonaistarve on alle 10 kVA. Kiuas on suurin yksittäinen kuorma, ja se mitoittaa ankkuriajan
-energiatarpeen.
+Kokonaistarve on alle 10 kVA. Kiuas on suurin energiankuluttaja ankkurissa, mutta sähköruoanlaitto,
+ilmanvaihtokone ja lämmityksen poltin kuluttavat yhdessä lähes yhtä paljon (ks. kohta 2.1).
 
 ## 2. Kiukaan energiatarve akustosta [laskelma]
 
@@ -30,10 +30,44 @@ LiFePO4-akuston käytettävissä oleva osuus 80 %, jännite 24 V.
 | Energia akustosta | 4,6 / 0,9 ≈ 5,1 kWh |
 | Akkuvirta kiukaan ollessa päällä | 2300 / 0,9 / 24 ≈ 106 A |
 | Kiukaan vaatima kapasiteetti | 5,1 kWh / 24 V ≈ 213 Ah käytettävissä → ≈ 265 Ah nimelliskapasiteettia |
-| Ehdotettu akusto | **noin 300–400 Ah 24 V LiFePO4** (≈ 7–10 kWh), jotta muillekin kuormille jää varaa |
-| Invertteri | jatkuva teho **vähintään 3 kW** (kiuas ja pieni marginaali) |
+| Akusto | Muut kuormat mukaan lukien noin 400–650 Ah, ks. kohdat 2.1 ja 4 |
+| Invertteri | Kiukaalle yksin riittäisi 3 kW; muiden kuormien kanssa noin 5 kW, ks. kohta 2.2 |
 
-### Lataus ajossa [laskelma]
+### 2.1 Koko ankkurivuorokauden energiatarve [laskelma]
+
+Vain kiukaan, vedenlämmittimen (3 kW) ja polttimen virran (alle 1 A) arvot ovat omistajalta. Muiden
+laitteiden tehot ja kaikki käyttöajat ovat **arvioita** tyypillisistä kodinkoneista
+([loads.yaml](../loads.yaml)); ne pitää korvata laitteiden tyyppikilpien arvoilla. Poistoilmapuhallin
+puuttuu summasta, koska sen käyttöaikaa ei tiedetä. Vedenlämmittimen vastus on jätetty pois, ks.
+kohta 4.
+
+| Kuormaryhmä | kWh/vrk (arvio) |
+|---|---|
+| Sähkökiuas, 2 h | 4,6 |
+| Ruoanlaitto: liesi, uuni, vedenkeitin, kahvinkeitin, liesituuletin | 3,1 |
+| Ilmanvaihtokone, 24 h | 1,2 |
+| Öljylämmityksen poltin, 6 h lämmityskaudella | 1,2 |
+| Jääkaappi | 0,8 |
+| Televisio ja laturit | 0,5 |
+| **Yhteensä AC** | **≈ 11,4** |
+| **Akustosta** (invertterin hyötysuhde 90 %) | **≈ 12,7 kWh** |
+| Ilman kiuasta, akustosta | ≈ 7,5 kWh |
+
+| Akustotarve yhdelle ankkurivuorokaudelle (80 % käytettävissä, 24 V) | Ah |
+|---|---|
+| Saunan kanssa | ≈ 660 Ah (≈ 16 kWh nimellistä) |
+| Ilman saunaa | ≈ 390 Ah (≈ 9,4 kWh nimellistä) |
+
+### 2.2 Huipputeho ja invertteri [laskelma]
+
+Kiuas yksin mahtuu 3 kW:n invertteriin, mutta ruoanlaitossa kuormat osuvat päällekkäin: esim. liesi
+(arvio 3 kW) ja vedenkeitin (arvio 2 kW) ovat yhdessä noin 5 kW. **Invertterin pitää olla noin 5 kW**
+(**⚠ arvio**, tarkistetaan tyyppikilvistä), tai sitten tarvitaan kuormanhallinta, joka estää
+suurten kuormien yhtäaikaisen käytön (esim. kiuas ja vedenlämmitin pois, kun liesi on päällä).
+Kuormanhallinnan voisi tehdä omilla ESP32-PDM-moduuleilla ([current-system.md](../current-system.md#4-valvonta-verkot-ja-tehonjako)).
+5 kW:n invertteri ottaa 24 V:n akustosta noin 230 A, mikä vaatii järeät kaapelit ja sulakkeet.
+
+### 2.3 Lataus ajossa [laskelma]
 
 Oletus: laturi antaa lämpimänä noin 75 % nimellisvirrastaan 28 V:n latausjännitteellä (**⚠ arvio**).
 
@@ -43,6 +77,9 @@ Oletus: laturi antaa lämpimänä noin 75 % nimellisvirrastaan 28 V:n latausjän
 | Nykyinen 65 A ja toinen 150 A | ≈ 4,5 kW | ≈ 1,1 h ajoa |
 | Nykyinen 65 A ja toinen 200 A | ≈ 5,6 kW | ≈ 0,9 h ajoa |
 
+Koko ankkurivuorokauden (≈ 12,7 kWh) palautus vie 65 A:n ja 200 A:n latureilla noin 2,3 h ajoa ja
+65 A:n ja 150 A:n latureilla noin 2,8 h.
+
 Litiumakusto vaatii latureille sopivan latauksensäädön (ulkoinen säädin tai DC-DC-laturi) ja
 laturin lämpötilan valvonnan, koska litium ottaa virtaa vastaan täydellä teholla pitkään.
 
@@ -51,7 +88,7 @@ laturin lämpötilan valvonnan, koska litium ottaa virtaa vastaan täydellä teh
 | | A. Laturi, akusto ja invertteri | B. Dieselgeneraattori | C. Hydrauligeneraattori |
 |---|---|---|---|
 | Sähköä ajossa | ✅ | ✅ | ✅ |
-| Kiuas ankkurissa | ✅ yksi saunavuoro latausta kohden | ✅ rajoittamatta | ❌ vaatii pääkoneen käymään |
+| Kiuas ankkurissa | ✅ yksi ankkurivuorokausi latausta kohden, jos akusto on noin 660 Ah | ✅ rajoittamatta | ❌ vaatii pääkoneen käymään |
 | Monta päivää ankkurissa ilman ajoa | ❌ akusto loppuu | ✅ | ❌ |
 | Käyttää olemassa olevia osia | osittain: 24 V:n järjestelmä | ❌ | ✅ PVH57 (P2) |
 | Asennus | laturin kiinnike, kaapelit, akusto, invertteri | polttoaine-, pakokaasu- ja merivesiputket, ilmanvaihto, äänieristys | letkut, venttiili, generaattori |
@@ -75,29 +112,44 @@ Vegan tarpeeseen:
 
 ### B. Dieselgeneraattori
 
-Ainoa vaihtoehto, joka antaa kiukaalle sähköä rajoittamatta useana päivänä ilman ajoa. Kiukaalle
-ja pienille kuormille riittäisi noin 4–6 kVA:n kone (**⚠ arvio**). Tila on valmiina, mutta
+Ainoa vaihtoehto, joka antaa sähköä rajoittamatta useana päivänä ilman ajoa. Kun generaattorin
+rinnalla on akusto ja invertteri, generaattoria ei tarvitse ajaa jatkuvasti: se käy esim. saunan ja
+ruoanlaiton ajan ja lataa samalla akustoa, ja yöt mennään akuilla. Silloin noin 6 kVA:n kone riittää
+(**⚠ arvio**, tarkistetaan, kun tyyppikilpien tehot tiedetään). Tila on valmiina, mutta
 asennus vaatii oman polttoaine-, pakokaasu- ja merivesijärjestelmän.
 
 ## 4. Suositus (ei päätös)
 
-1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–200 A) pääkoneeseen, noin 300–400 Ah:n
-   LiFePO4-akusto ja vähintään 3 kW:n invertteri. Yksi saunavuoro ankkurissa onnistuu, ja noin tunnin
-   ajo lataa sen takaisin. Iso akusto parantaa samalla ohjauksen 2,5 kW:n sähköisen varapumpun
-   käyttöaikaa ([current-system.md](../current-system.md#3-suuret-dc-kuormat)), jota nykyinen
-   65 A:n laturi ei jaksa syöttää.
-2. **Vaihe 2 tarvittaessa: pieni dieselgeneraattori** paapuurin puolelle varattuun tilaan, jos
-   ankkurissa ollaan usein monta vuorokautta ajamatta. Pidä tila varattuna.
-3. **Hydrauligeneraattoria ei suositella** Vegan tarpeeseen.
+Kuormalistan perusteella akusto ja invertteri tarvitaan **joka tapauksessa**: yöllä jääkaappi,
+ilmanvaihtokone ja lämmityksen poltin käyvät jatkuvasti, eikä generaattoria haluta ajaa yöllä.
+Ratkaistava on, riittääkö ajo lataukseen vai tarvitaanko lisäksi dieselgeneraattori.
 
-Halvin tapa lämmittää sauna on puukiuas, joka ei kuormita sähköjärjestelmää lainkaan. Se kannattaa
-huomioida, jos sähkökiuas ei ole jo päätetty.
+1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–200 A) pääkoneeseen, noin 5 kW:n invertteri
+   tai kuormanhallinta, ja litiumakusto. Akuston koko riippuu ankkuripäivistä:
+   - **noin 400 Ah**, jos saunotaan vain ajopäivinä tai satamassa maasähköllä;
+   - **noin 650 Ah**, jos halutaan yksi täysi ankkurivuorokausi saunoineen ilman ajoa.
+
+   Ajo lataa täyden vuorokauden kulutuksen noin 2,5 tunnissa. Iso akusto parantaa samalla ohjauksen
+   2,5 kW:n sähköisen varapumpun käyttöaikaa ([current-system.md](../current-system.md#3-suuret-dc-kuormat)).
+2. **Vaihe 2: noin 6 kVA:n dieselgeneraattori** paapuurin puolelle varattuun tilaan, jos ankkurissa
+   ollaan usein yli vuorokausi ajamatta. Silloin akusto voi jäädä noin 400 Ah:iin. Pidä tila varattuna.
+3. **Hydrauligeneraattoria ei suositella** Vegan tarpeeseen.
+4. **Vedenlämmittimen 3 kW:n vastusta ei kannata käyttää akustolta.** Yksi tunti vie noin 3,3 kWh
+   akustosta. Käytä sitä maasähköllä tai generaattorilla. Jos lämmittimessä on koneen
+   jäähdytysvesikierukka, vesi lämpenee ajossa ilmaiseksi.
+
+**Halvempia vaihtoehtoja**, jos akusto kasvaa liian kalliiksi: sähköruoanlaitto (noin 3 kWh/vrk) ja
+kiuas (4,6 kWh/vrk) ovat suurimmat kuormat. Kaasu- tai dieselliesi ja puukiuas pienentäisivät
+akuston noin kolmasosaan.
 
 ## 5. Avoimet kysymykset
 
-- [ ] Muut AC-kuormat ankkurissa ja ajossa (liesi, vedenlämmitin, jääkaappi, työkalut)
+- [x] Muut AC-kuormat: lista saatu [omistaja 2026-10-28], ks. [loads.yaml](../loads.yaml)
+- [ ] Tehot laitteiden tyyppikilvistä (liesi ja levyjen määrä, uuni, vedenkeitin, kahvinkeitin, jääkaappi, ilmanvaihtokone, puhaltimet, televisio)
+- [ ] Onko vedenlämmittimessä koneen jäähdytysvesikierukka?
+- [ ] Ovatko sähköliesi ja sähkökiuas päätettyjä, vai harkitaanko kaasu- tai diesellientä ja puukiuasta?
 - [ ] Kuinka monta vuorokautta ollaan tyypillisesti ankkurissa ajamatta?
 - [ ] Onko maasähköä laiturissa?
-- [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 300–400 Ah:n litiumakusto
+- [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, ja millainen kiinnike tarvitaan
 - [ ] Hinnat vaihtoehdoille A ja B

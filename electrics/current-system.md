@@ -19,7 +19,7 @@
 | Kohde | Arvo | Lähde |
 |---|---|---|
 | Generaattori | **Ei asennettu.** Tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
-| AC-sähkön tarve | Ajossa ja ankkurissa. Suurin ankkurikuorma 2,3 kW:n sähkökiuas, kerrallaan noin 2 h. Vaihtoehdot: [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
+| AC-sähkön tarve | Ajossa ja ankkurissa. Suurin ankkurikuorma 2,3 kW:n sähkökiuas, kerrallaan noin 2 h. Muut AC-kuormat: [loads.yaml](loads.yaml). Vaihtoehdot: [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
 | Maasähkö | **⚠ ei tiedossa** | |
 | Invertteri | **⚠ ei tiedossa** | |
 

@@ -1,0 +1,119 @@
+# Vegan sähkökuormien rekisteri (AC)
+#
+# Kuormakohtaisten lukujen ensisijainen lähde. Taustat ja laskelmat: design/ac-power-source.md.
+# Avaimet ovat englanniksi; yksiköt ovat avaimen nimessä. Tuntematon arvo = null. Pidä tiedosto
+# validina YAML:na.
+#
+# Kenttien selitykset
+#   power_W:          omistajan tai datalehden ilmoittama teho (null = ei tiedossa)
+#   power_W_estimate: tyypillinen teho, kun omaa arvoa ei ole (arvio, ei mitattu)
+#   use_h_per_day:    arvioitu käyttöaika ankkurivuorokaudessa täydellä teholla
+#   at_anchor:        käytetäänkö ankkurissa akustolta tai generaattorilta
+#   source:           mistä luvut ovat peräisin
+
+schema_version: 1
+
+loads:
+  - id: SAUNA
+    name: Sähkökiuas
+    power_W: 2300
+    use_h_per_day: 2               # kerrallaan noin 2 h; täysi teho koko ajan on yläraja
+    at_anchor: true
+    source: "[omistaja 2026-10-28]"
+
+  - id: WATER_HEATER
+    name: Vedenlämmittimen sähkövastus
+    power_W: 3000
+    use_h_per_day: null
+    at_anchor: null                # suositus: ei akustolta, ks. design/ac-power-source.md
+    source: "[omistaja 2026-10-28]"
+    notes: "Onko vedenlämmittimessä lisäksi koneen jäähdytysvesikierukka? ⚠ ei tiedossa"
+
+  - id: FRIDGE
+    name: Jääkaappi, noin 130 l ja pakastelokero
+    power_W: null
+    power_W_estimate: 100          # käydessä; termostaatti katkoo
+    energy_kWh_per_day_estimate: 0.8
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho ja kulutus arvio"
+
+  - id: STOVE
+    name: Liesi
+    power_W: null
+    power_W_estimate: 3000         # kaikki levyt päällä; levyjen määrä ⚠ ei tiedossa
+    use_h_per_day: 0.5             # vastaa noin 1 h keskimäärin puolella teholla
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: OVEN
+    name: Uuni
+    power_W: null
+    power_W_estimate: 2000
+    use_h_per_day: 0.5
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: KETTLE
+    name: Vedenkeitin
+    power_W: null
+    power_W_estimate: 2000
+    use_h_per_day: 0.1
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: COFFEE
+    name: Kahvinkeitin
+    power_W: null
+    power_W_estimate: 1000
+    use_h_per_day: 0.25
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: HOOD
+    name: Liesituuletin
+    power_W: null
+    power_W_estimate: 100
+    use_h_per_day: 1
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: EXHAUST_FAN
+    name: Poistoilmapuhallin
+    power_W: null
+    power_W_estimate: 40
+    use_h_per_day: null
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: HRV
+    name: Ilmanvaihtokone
+    power_W: null
+    power_W_estimate: 50
+    use_h_per_day: 24
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: TV
+    name: Televisio
+    power_W: null
+    power_W_estimate: 80
+    use_h_per_day: 3
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: CHARGERS
+    name: Laturit (kannettava tietokone ym.)
+    power_W: null
+    power_W_estimate: 100
+    use_h_per_day: 3
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; teho arvio"
+
+  - id: OIL_BURNER
+    name: Öljykäyttöisen lämmityslaitteen poltin
+    power_W: null
+    current_A_max: 1               # alle 1 A, 230 V → alle 230 W
+    power_W_estimate: 200
+    use_h_per_day: 6               # lämmityskaudella; arvio
+    at_anchor: true
+    source: "[omistaja 2026-10-28]; käyttöaika arvio"
