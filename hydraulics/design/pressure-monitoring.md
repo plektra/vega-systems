@@ -78,6 +78,24 @@ mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salam
 - Jos mittari on mittauspisteen yläpuolella, letkuun jäänyt ilma nousee mittarille ja vaimentaa
   lukemaa; ilmaa mittarin päästä. Imupuolella vuotava mittariliitos imee ilmaa linjaan.
 
+**Mittausletkujen ilmaus** (1G2, 2G2) [arvio, yleinen käytäntö]:
+
+1. **Reititys:** letku nousee tasaisesti mittauspisteeltä mittarille, ilman välissä olevia
+   kohoumia, joihin ilma jää loukkuun. Ilma kerääntyy silloin mittarin päähän, josta se poistetaan.
+2. **Esitäyttö:** täytä letku HVLP 32:lla ennen kytkemistä (suppilo tai ruisku), ja kytke ensin
+   mittauspisteen pää.
+3. **Ilmaus säiliön paineella, kone sammutettuna:** öljypinta on vähintään 1 m pumppujen
+   yläpuolella, joten imulinjassa on pysähdyksissä pieni ylipaine. Kun imulinjan palloventtiili on
+   auki, avaa mittarin liitintä taulun päästä puoli kierrosta ja anna öljyn valua liinaan, kunnes
+   kuplia ei tule; kiristä. **Ei koskaan pumpun käydessä:** silloin imupuolella on alipaine, ja
+   avattu liitin imee ilmaa pumppuun.
+4. **Tarkistus:** kone sammutettuna mittarin pitää näyttää öljypinnan korkeutta vastaavaa pientä
+   ylipainetta, noin 0,085 bar metriä kohden (≥ 1 m → noin +0,09 bar tai enemmän, korjattuna
+   mittarin ja mittauspisteen korkeuserolla). Käynnistyksen jälkeen neulan pitää liikkua heti ja
+   tasaisesti; hidas tai vaimea lukema kertoo letkuun jääneestä ilmasta.
+5. Ilmaus tehdään käyttöönotossa järjestelmän täytön jälkeen ja aina, kun mittausletku on ollut
+   irti.
+
 **Ohjeita:**
 
 - **Mahdollisimman lähelle pumpun imuaukkoa**, palloventtiilin ja muiden liittimien jälkeen, koska
