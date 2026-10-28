@@ -109,52 +109,6 @@ valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
 yhtä aikaa täysillä olevan lieden ja uunin kanssa. Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
 (MasterBus) **⚠ tarkista**.
 
-### 2.6 Olemassa oleva erotusmuuntaja: Airlink WM5002
-
-Vegalla on erotusmuuntaja, jota ei ole vielä kytketty [omistaja 2026-10-28]. Arvot on luettu
-valmistajan datalehden ([datalehti Airlink WM5002](https://airlinktransformers.com/product/datasheet-pdf/enclosed-isolating-transformer-wm5002))
-sivun kuvasta, ks. [datasheets](../../datasheets/README.md#sähköjärjestelmä).
-
-| Ominaisuus | Arvo |
-|---|---|
-| Kuvaus | "5000VA 230v to 230v CTE Hardwired" |
-| Teho | 5000 VA |
-| Ensiö | 230 V, 22 A, ruuviliittimet (PA220, 3-napainen) |
-| Toisio | 230 V, **CTE** (keskipiste maadoitettu), ruuviliittimet |
-| Ensiön suojaus | Painettava johdonsuoja SP30 |
-| Kytkentävirran rajoitus | **SL35 30 A surge limiter** (pehmokäynnistys) |
-| Kotelo | P6, teollisuus, lattia- tai seinäasennus, **IP23** |
-| Mitat, paino | 454 × 384 × 305 mm (k × p × l), 25 kg |
-| Jännitteensäätö | 0,02 (≈ 2 %) |
-| Standardi | Turvaerotusmuuntaja EN 61558-2-23 (tuotetyyppi) ja EN 61558-2-6 (vaatimustenmukaisuusvakuutus); eristysluokka A, 105 °C |
-
-**Käyttö Vegalla:** muuntaja kytketään maasähkön tuloliittimen ja Mass Combin AC-tulon väliin.
-Se erottaa veneen sähköverkon maasähköverkosta. **Teräsrunkoisessa veneessä tämä on tärkeää:**
-ilman erotusta laiturin suojamaa yhdistää rungon muihin veneisiin ja laiturin rakenteisiin, ja
-rungon ja niiden välillä voi kulkea galvaanista ja vuotovirtaa, joka syövyttää runkoa ja anodeja.
-Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta heikompi).
-
-- **Teho riittää:** 5000 VA on enemmän kuin tavallinen 16 A:n maasähkö (≈ 3,7 kVA) [laskelma].
-  Mass Combin Power Assist rajoittaa maasähkövirran asetettuun arvoon.
-- **Kytkentävirta on rajoitettu** (SL35-pehmokäynnistin), joten laiturin johdonsuojan ei pitäisi
-  laueta muuntajaa kytkettäessä.
-- **Kotelo IP23** suojaa vain tippuvalta vedeltä. Asenna kuivaan paikkaan, ei pilssin tai
-  merivesiputkien lähelle. 25 kg vaatii tukevan kiinnityksen, joka kestää aallokon.
-- **⚠ CTE-toisio on ongelma veneessä.** CTE tarkoittaa, että toision keskipiste on maadoitettu:
-  kummankin lähtöjohtimen jännite maahan on 115 V, eikä kumpikaan ole nolla. Muuntaja on tehty
-  työmaakäyttöön. Veneen 230 V:n verkko olettaa yhden johtimen olevan nolla (sininen) ja vaihe-
-  ja nollajohtimen olevan erotettu toisistaan; yksinapaiset johdonsuojat ja kytkimet jättäisivät
-  CTE-verkossa toisen johtimen jännitteiseksi (115 V maahan). Mass Combin siirtorele ja
-  vikavirtasuojat on myös suunniteltu nolla–vaihe-verkkoon (**⚠ tarkista** Mastervoltilta).
-  **Selvitettävä sähköasentajan kanssa:** voiko keskipisteen maadoituksen irrottaa ja maadoittaa
-  toision toisen pään (jolloin siitä tulee nolla), vai onko keskipiste kiinteästi kytketty
-  käämiin tai koteloon. Tarvittaessa Airlinkiltä voi kysyä muutosta tai vaihtaa veneilymallin.
-- **Maadoitus (ISO 13297 -tyyppinen ratkaisu):** toision nolla kytketään veneen suojamaahan ja
-  runkoon, toisiolle tulee oma vikavirtasuoja, eikä laiturin suojamaata kytketä runkoon.
-
-⚠ **Turvallisuus:** 230 V:n maasähkö ja muuntaja voivat aiheuttaa hengenvaarallisen sähköiskun.
-Kytkennän ja maadoituksen saa tehdä ja tarkastaa vain pätevä sähköasentaja ennen käyttöönottoa.
-
 ### 2.3 Lataus ajossa [laskelma]
 
 Oletus: laturi antaa lämpimänä noin 75 % nimellisvirrastaan 28 V:n latausjännitteellä (**⚠ arvio**).
@@ -211,6 +165,52 @@ hihnaveto sen** (usein tarvitaan leveä moniurahihna).
 **Johtopäätös [laskelma]:** 150–175 A riittää. 200 A:n laturi lyhentäisi täyden ankkurivuorokauden
 latausta vain noin 2,8 tunnista 2,3 tuntiin, mutta 24 V:n 200 A:n laturit maksavat moninkertaisesti.
 Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja asennusta (**⚠ arvio**).
+
+### 2.6 Olemassa oleva erotusmuuntaja: Airlink WM5002
+
+Vegalla on erotusmuuntaja, jota ei ole vielä kytketty [omistaja 2026-10-28]. Arvot on luettu
+valmistajan datalehden ([datalehti Airlink WM5002](https://airlinktransformers.com/product/datasheet-pdf/enclosed-isolating-transformer-wm5002))
+sivun kuvasta, ks. [datasheets](../../datasheets/README.md#sähköjärjestelmä).
+
+| Ominaisuus | Arvo |
+|---|---|
+| Kuvaus | "5000VA 230v to 230v CTE Hardwired" |
+| Teho | 5000 VA |
+| Ensiö | 230 V, 22 A, ruuviliittimet (PA220, 3-napainen) |
+| Toisio | 230 V, **CTE** (keskipiste maadoitettu), ruuviliittimet |
+| Ensiön suojaus | Painettava johdonsuoja SP30 |
+| Kytkentävirran rajoitus | **SL35 30 A surge limiter** (pehmokäynnistys) |
+| Kotelo | P6, teollisuus, lattia- tai seinäasennus, **IP23** |
+| Mitat, paino | 454 × 384 × 305 mm (k × p × l), 25 kg |
+| Jännitteensäätö | 0,02 (≈ 2 %) |
+| Standardi | Turvaerotusmuuntaja EN 61558-2-23 (tuotetyyppi) ja EN 61558-2-6 (vaatimustenmukaisuusvakuutus); eristysluokka A, 105 °C |
+
+**Käyttö Vegalla:** muuntaja kytketään maasähkön tuloliittimen ja Mass Combin AC-tulon väliin.
+Se erottaa veneen sähköverkon maasähköverkosta. **Teräsrunkoisessa veneessä tämä on tärkeää:**
+ilman erotusta laiturin suojamaa yhdistää rungon muihin veneisiin ja laiturin rakenteisiin, ja
+rungon ja niiden välillä voi kulkea galvaanista ja vuotovirtaa, joka syövyttää runkoa ja anodeja.
+Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta heikompi).
+
+- **Teho riittää:** 5000 VA on enemmän kuin tavallinen 16 A:n maasähkö (≈ 3,7 kVA) [laskelma].
+  Mass Combin Power Assist rajoittaa maasähkövirran asetettuun arvoon.
+- **Kytkentävirta on rajoitettu** (SL35-pehmokäynnistin), joten laiturin johdonsuojan ei pitäisi
+  laueta muuntajaa kytkettäessä.
+- **Kotelo IP23** suojaa vain tippuvalta vedeltä. Asenna kuivaan paikkaan, ei pilssin tai
+  merivesiputkien lähelle. 25 kg vaatii tukevan kiinnityksen, joka kestää aallokon.
+- **⚠ CTE-toisio on ongelma veneessä.** CTE tarkoittaa, että toision keskipiste on maadoitettu:
+  kummankin lähtöjohtimen jännite maahan on 115 V, eikä kumpikaan ole nolla. Muuntaja on tehty
+  työmaakäyttöön. Veneen 230 V:n verkko olettaa yhden johtimen olevan nolla (sininen) ja vaihe-
+  ja nollajohtimen olevan erotettu toisistaan; yksinapaiset johdonsuojat ja kytkimet jättäisivät
+  CTE-verkossa toisen johtimen jännitteiseksi (115 V maahan). Mass Combin siirtorele ja
+  vikavirtasuojat on myös suunniteltu nolla–vaihe-verkkoon (**⚠ tarkista** Mastervoltilta).
+  **Selvitettävä sähköasentajan kanssa:** voiko keskipisteen maadoituksen irrottaa ja maadoittaa
+  toision toisen pään (jolloin siitä tulee nolla), vai onko keskipiste kiinteästi kytketty
+  käämiin tai koteloon. Tarvittaessa Airlinkiltä voi kysyä muutosta tai vaihtaa veneilymallin.
+- **Maadoitus (ISO 13297 -tyyppinen ratkaisu):** toision nolla kytketään veneen suojamaahan ja
+  runkoon, toisiolle tulee oma vikavirtasuoja, eikä laiturin suojamaata kytketä runkoon.
+
+⚠ **Turvallisuus:** 230 V:n maasähkö ja muuntaja voivat aiheuttaa hengenvaarallisen sähköiskun.
+Kytkennän ja maadoituksen saa tehdä ja tarkastaa vain pätevä sähköasentaja ennen käyttöönottoa.
 
 ## 3. Vaihtoehdot
 
