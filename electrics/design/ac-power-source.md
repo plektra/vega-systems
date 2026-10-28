@@ -166,6 +166,28 @@ hihnaveto sen** (usein tarvitaan leveä moniurahihna).
 latausta vain noin 2,8 tunnista 2,3 tuntiin, mutta 24 V:n 200 A:n laturit maksavat moninkertaisesti.
 Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja asennusta (**⚠ arvio**).
 
+#### Alpha 24/150 Evo, Alpha Pro III ja Mass Combi Ultra yhdessä (haettu 2026-10-28)
+
+- **Yhteensopivuus:** Alpha Pro III -säädin ja Mass Combi Ultra ovat molemmat MasterBus-laitteita
+  ([Alpha Pro III](https://www.mastervolt.com/products/alpha-pro-mb-charge-regulator1/alpha-pro-iii/),
+  [Mass Combi Ultra](https://www.mastervolt.com/products/mass-combi-ultra/)), joten ne voivat olla
+  samassa väylässä ja näkyä samassa näytössä. Sähköisesti ne eivät tarvitse yhteyttä: Combi lataa
+  maasähköltä, laturi ajossa, samaan akustoon.
+- **Säädin tarvitaan.** Litium ottaa täyttä virtaa vastaan pitkään, ja ilman ulkoista säädintä
+  laturi ylikuumenee. Alpha Pro III: 12/24 V, kenttävirta 20 A, litiumprofiili säädettävin
+  jännittein, akun lämpötila-anturi (6 m) ja laturin lämpötilan valvonta, MasterBus
+  ([Mastervolt Polska](https://mastervoltpolska.pl/en/mastervolt-alpha-pro-iii-masterbus-12-24v-20a-field-current-id291.html)).
+  Valitse versio **"including charge regulator"** ([Alpha 24/150 Evo](https://www.mastervolt.com/products/alternators-24v/alpha-24-150-evo-including-charge-regulator/)).
+- **⚠ BMS:n katkaisu on laturille vaarallinen.** Jos litiumakuston BMS katkaisee latauksen laturin
+  ladatessa, jännitepiikki voi rikkoa laturin ja elektroniikan. Säätimen pitää saada tieto BMS:ltä
+  ja sammuttaa kenttävirta ensin. Alpha Pro III lukee Mastervoltin omaa MLI Ultra -akkua
+  MasterBusin kautta; muun valmistajan akun tai omista kennoista kootun akuston kanssa tarvitaan
+  BMS:n ohjauslähtö säätimen sallintatuloon (**⚠ tarkista** Alpha Pro III:n ohjeesta) tai
+  CAN-yhteensopiva säädin (esim. Wakespeed WS500).
+- **Nykyinen 65 A:n laturi** kannattaa jättää lataamaan käynnistysakkuja; uusi laturi lataa
+  käyttöakustoa.
+- **Signal K:** MasterBusista NMEA 2000:aan tarvitaan liitäntälaite (**⚠ tarkista** saatavuus).
+
 ### 2.6 Olemassa oleva erotusmuuntaja: Airlink WM5002
 
 Vegalla on erotusmuuntaja, jota ei ole vielä kytketty [omistaja 2026-10-28]. Arvot on luettu
@@ -345,4 +367,5 @@ akuston noin kolmasosaan.
 - [ ] Tyyppikilven malli on **WM5002 MCB**: onko ensiön suojana MCB-johdonsuoja datalehden SP30-painikesuojan sijaan? (**⚠ tarkista** kotelon sisältä)
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
+- [ ] Akuston BMS:n ja laturin säätimen yhteistoiminta (katkaisu ennen kuin BMS irrottaa akuston)
 - [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)
