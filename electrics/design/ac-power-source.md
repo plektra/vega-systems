@@ -184,16 +184,43 @@ Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja ase
   MasterBusin kautta; muun valmistajan akun tai omista kennoista kootun akuston kanssa tarvitaan
   BMS:n ohjauslähtö säätimen sallintatuloon (**⚠ tarkista** Alpha Pro III:n ohjeesta) tai
   CAN-yhteensopiva säädin (esim. Wakespeed WS500).
-  **BMS-viestin vastaanotto (haettu 2026-10-28; käyttöohjetta ei saatu luettua):** Alpha Evo
-  -laturissa itsessään ei ole tuloa BMS:lle; ohjaus tapahtuu Alpha Pro III -säätimen kautta.
-  Hakutulosten käyttöohjeotteiden mukaan säädin käynnistyy **Reg on** -liittimestä (ruskea johdin)
-  virtalukon kautta, ja ohje mainitsee lisäkytkimen sarjaan laturin sammuttamiseksi käsin
-  ([Alpha Pro -käyttöohje, manualslib](https://www.manualslib.com/manual/3394219/Mastervolt-Alpha-Pro.html)).
-  **BMS:n "lataus sallittu" -relekosketin voidaan siis luultavasti kytkeä Reg on -johtimeen
-  sarjaan** (**⚠ tarkista** käyttöohjeesta ja Mastervoltilta). D+ on vain merkkivalo- ja
-  hälytyslähtö. MasterBusin kautta säädin lukee Mastervoltin MLI Ultra -akkua; muun BMS:n
-  latauksenestoa MasterBusin kautta ei löytynyt. Relekoskettimen pitää avautua **ennen** kuin
-  BMS katkaisee akuston (BMS:n ennakkovaroituslähtö tai viive katkaisuun).
+  **BMS-viestin vastaanotto** ([käyttöohje Alpha Pro III, 10000021727_03](https://www.emarinesolutions.com.au/assets/files/10000021727_01-manualAlphaPro-EN.pdf);
+  omistajien toimittama PDF, versio _03, teksti poimittu PDF:stä): Alpha Evo -laturissa itsessään
+  ei ole tuloa BMS:lle; ohjaus tapahtuu Alpha Pro III -säätimen kautta. Tapoja on kaksi:
+
+  1. **MasterBus-tapahtuma "Stop charge"** (ohje 6.3.7): *"This event pauses the charging process
+     and forces the field current to 0%. This event is used in combination with the stop charge
+     event of Lithium-ion batteries. When charging can be resumed, the process continues from this
+     point forward."* Tapahtuman voi lähettää mikä tahansa MasterBus-laite: Mastervoltin MLI Ultra
+     -akku suoraan, tai muun valmistajan BMS:n relekosketin MasterBusin digitaalitulomoduulin
+     kautta (**⚠ tarkista** sopiva Mastervoltin moduuli). Sama tapahtuma voidaan luultavasti
+     ohjata myös Mass Combi Ultralle (**⚠ tarkista**), jolloin yksi BMS-signaali pysäyttää
+     molemmat laturit. **Suositeltava tapa:** säädin pysyy päällä ja jatkaa latausta, kun BMS
+     sallii.
+  2. **Reg on -johdin** (ruskea, ohje 4.2.2): *"The 'reg on' wire should be interrupted with a relay
+     or an ungrounded oil pressure switch."* Johdin menee 2 A:n sulakkeen kautta ladattavan akun
+     plusnapaan ja on samalla säätimen jännitteenmittaus (ero akun napoihin enintään 0,01 V, ohje
+     5.5.3). BMS:n "lataus sallittu" -relekoskettimen voi kytkeä sarjaan virtalukon tai
+     öljynpainekytkimen kanssa. Tällöin säädin sammuu kokonaan. Koskettimen pitää olla laadukas,
+     jotta mittaus ei vääristy.
+
+  Kummassakin tavassa signaalin pitää tulla **ennen** kuin BMS irrottaa akuston (BMS:n
+  ennakkovaroituslähtö tai viive katkaisuun).
+
+  **Muuta käyttöohjeesta:**
+  - Akkutyypit: Flooded, Gel, AGM, Lithium-ion ja User defined (valitaan MasterBusin kautta).
+    Lithium-ion (MLI) -profiili 24 V:lla: bulk ja absorptio 28,5 V, kellunta 27,0 V, paluu
+    bulkkiin 26,5 V [ohjeen 12 V:n arvot × 2]. Muun valmistajan LiFePO4:lle käytetään User defined
+    -asetusta akun valmistajan arvoilla (säätöalue 16–32 V).
+  - Säätimessä on yksi lämpötilatulo. Litium ei tarvitse akun lämpötilakompensointia, joten tulo
+    voidaan käyttää **laturin lämpötila-anturille** (41500400, lisävaruste): ensimmäisessä rajassa
+    teho pienenee, toisessa lataus loppuu (ohje 5.4). Ohjeen mukaan anturi ei kuitenkaan
+    täysin suojaa laturia, koska se mittaa koteloa eikä käämejä.
+  - **Power curve** (ohje 5.3) rajoittaa kenttävirran 20 %:iin alle valitun laturin kierrosluvun,
+    mikä estää hihnan luistamista tyhjäkäynnillä (700 rpm).
+  - Säädin on N-tyypin (negatiivinen kenttäohjaus) latureille, ja se tarvitsee kaksi
+    MasterBus-päätevastusta väylän päihin.
+
   **Sterling Alternator Protection Device (APD24)**
   ([sterling-power.com](https://sterling-power.com/products/alternator-open-circuit-protection-device);
   haettu 2026-10-28): rinnankytkettävä suojalaite, joka leikkaa laturin jännitepiikin, kun kuorma
@@ -387,5 +414,7 @@ akuston noin kolmasosaan.
 - [ ] Tyyppikilven malli on **WM5002 MCB**: onko ensiön suojana MCB-johdonsuoja datalehden SP30-painikesuojan sijaan? (**⚠ tarkista** kotelon sisältä)
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
-- [ ] Akuston BMS:n ja laturin säätimen yhteistoiminta: BMS:n relekosketin Alpha Pro III:n Reg on -tuloon? Lue Alpha Pro III:n käyttöohje (ei auennut istunnosta)
+- [x] Pystyykö Alpha Pro III ottamaan vastaan BMS:n viestin: kyllä, MasterBus "Stop charge" -tapahtuma tai Reg on -johdin [käyttöohje Alpha Pro III]
+- [ ] Akuston ja BMS:n valinta: MLI Ultra (suora MasterBus) vai muu BMS ja MasterBusin digitaalitulomoduuli; BMS:ssä ennakkovaroitus ennen katkaisua
+- [ ] Voiko Mass Combi Ultra ottaa vastaan saman "Stop charge" -tapahtuman?
 - [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)
