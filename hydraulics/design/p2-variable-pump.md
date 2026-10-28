@@ -487,7 +487,8 @@ huomioon kannakkeessa.
    ([current-system §0](../current-system.md)) ja suojakotelo pyörivälle kytkimelle. Laipan mitat
    asennuspiirustuksesta **⚠ ei vielä saatu**.
 3. **Imulinja.** 50 mm:n letku SAE-laipalla ja supistuksella pumpun imuaukkoon (koko
-   **⚠ tarkista pumpusta**); palloventtiili säilyy linjassa.
+   **⚠ tarkista pumpusta**); palloventtiili säilyy linjassa. Säiliön päässä: hitsattava muhvi →
+   90°:n kulma → palloventtiili → letkukara [omistaja 2026-10-28], ks. [hankintalista](../procurement.md).
 4. **Kotelovuoto.** Ylimmästä vuotoportista oma letku (vähintään noin 1/2") säiliöön öljypinnan
    alle. **Ei yhteiseen paluulinjaan.**
 5. **Painelinja.** Pumpulta FXDC:lle (linjarungossa) ja siitä CETOP-pohjalaatan P-porttiin.

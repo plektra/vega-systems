@@ -5,6 +5,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | Tiedosto | Sisältö |
 |---|---|
 | [schematic.md](schematic.md) | **Kaaviot**: ISO 1219 -arkit 1–3 (ohjaus, apupiiri PVH57 + PVG 32, paluu ja jäähdytys; luonnos) osaluetteloineen sekä lohkokaaviot |
+| [procurement.md](procurement.md) | **Hankintalista**: kaikki tarvittavat osat, tila (olemassa, hankitaan, ehdollinen) ja tunnetut hinnat |
 | [current-system.md](current-system.md) | Lähtötilanne, nykyinen remonttitilanne (§0), vaikutukset suunnitteluun, avoimet kysymykset |
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
