@@ -273,7 +273,7 @@ Q250 tai Q140, eikä tässä koodissa ole lisäkoodia.
 | Teho paineenrajoituksella, nollatuotto | noin 10 kW 1800 rpm:llä ja 250 barissa (luettu kuvaajasta *Input power, cutoff* karkeasti) **⚠ tarkista** | s. 8 |
 | Öljy | viskositeetti 16–40 cSt optimi, kylmäkäynnistys ≤ 5000 cSt, hetkellisesti ≤ 104 °C | s. 31 |
 | Puhtaus (säätötilavuuksinen mäntäpumppu) | 18/16/14 (≤ 140 bar), **17/15/13 (140–210 bar)**, 16/14/12 (yli 210 bar) | s. 31 |
-| Asennus | vaakaan, suora veto joustavalla kytkimellä; linjaus asennuspiirustuksen toleransseihin | s. 31 |
+| Asennus | **akseli vaakaan** (*"Mounting attitude should be horizontal"*); pystyasennus vain erikoisversiona (lisäkoodi `057`, ylimääräinen vuotoportti), jota tässä pumpussa ei ole. Suora veto joustavalla kytkimellä; linjaus asennuspiirustuksen toleransseihin. Kiertoasentoa akselin ympäri luettelo ei määrää; suositus [arvio]: kuten piirustuksessa, säädin ylhäällä ja vuotoportit ylhäällä ja alhaalla, jolloin imu ja lähtö ovat kyljissä ja vuotolinja otetaan **ylemmästä** portista, jotta kotelo pysyy täynnä | s. 21, 30, 31 |
 | Paino | noin 36 kg (jälleenmyyjät) **⚠ tarkista** | jälleenmyyjät |
 | Imuaukko | **2" SAE J518 code 61** -nelireikälaippa (reikäväli 77,77 × 42,88 mm, kierre `F`-mallissa 1/2-13 UNC; `M`-mallissa M12). **Korjaus:** jälleenmyyjien 2 1/2" oli väärin. Imu on pumpun takapäässä venttiililohkon kyljessä; kummalla puolella, riippuu pyörimissuunnasta **⚠ tarkista pumpusta** | s. 21–22 (*kuvana*) |
 | Painelähtö | **1" SAE J518 code 61** -laippa (reikäväli 52,37 × 26,19 mm, kierre 3/8-16 UNC / M10×1,5) | s. 21–22 |
