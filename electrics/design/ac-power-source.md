@@ -399,6 +399,38 @@ lataukseen vai tarvitaanko dieselgeneraattori.
 kiuas (4,6 kWh/vrk) ovat suurimmat kuormat. Kaasu- tai dieselliesi ja puukiuas pienentäisivät
 akuston noin kolmasosaan.
 
+### 4.1 Halvin toimiva kokoonpano [laskelma, hinnat haettu 2026-10-28]
+
+Ehdotus, ei päätös. Hinnat kohdista 2.2, 2.4 ja 2.5; sis. ALV, ellei toisin mainita.
+
+| Osa | Halvin toimiva | Hinta | Mastervolt-kokonaisuus | Hinta |
+|---|---|---|---|---|
+| Erotusmuuntaja | Olemassa oleva WM5002 | 0 € (+ vikavirtasuoja, kiinnikkeet) | sama | 0 € |
+| Akusto | 8 × EVE MB31 314 Ah, 8S (≈ 8 kWh) | ≈ 1 040 € | 2 × Victron 25,6 V / 200 Ah (≈ 10 kWh) | ≈ 4 380 € |
+| BMS, kotelo, sulakkeet | Oma kokoonpano; BMS:ssä latauksenesto ennen katkaisua | **⚠ ei tiedossa** | Victronin erillinen BMS | **⚠ ei tiedossa** |
+| Toinen laturi ja säädin | Prestolite 24 V / 175 A ja Alpha Pro III | ≈ 1 304 € + 330–450 USD | Alpha 24/150 Evo ja Alpha Pro III | ≈ 2 862 € |
+| Invertterilaturi | Mass Combi Ultra 24/3500-100 | ≈ 3 126 € | sama | ≈ 3 126 € |
+| Laturin varasuoja | Sterling APD24 | **⚠ ei tiedossa** | sama | **⚠ ei tiedossa** |
+| **Tiedossa olevat yhteensä** | | **≈ 5 900 €** | | **≈ 10 400 €** |
+
+Lisäksi molemmissa: laturin kiinnike ja hihna, DC-kaapelit ja -sulakkeet, MasterBus-kaapelit,
+asennus. Ehdot halvimmalle:
+
+- **Prestoliten kenttäohjaus pitää olla N-tyyppiä** (negatiivinen), jotta Alpha Pro III sopii
+  (**⚠ tarkista**). Muuten säätimeksi tarvitaan toinen malli.
+- **Omista kennoista koottu akusto:** BMS:n valinta ja kokoaminen vaativat osaamista, ja
+  vakuutusyhtiöltä kannattaa varmistaa, hyväksyykö se itse kootun akuston.
+- **Invertterilaturi on suurin yksittäinen kustannus.** Halvempia 24 V / 3 kW:n
+  invertterilatureita on muiltakin valmistajilta, mutta niiden hintoja ja sopivuutta ei ole
+  selvitetty; silloin MasterBus-tapahtuma "Stop charge" ei toimi, ja BMS-ohjaus tehdään Reg on
+  -johtimen kautta.
+- **Vielä halvempi vaihe 0:** jos sähkökiuasta ja -liettä ei asenneta, toista laturia ei
+  välttämättä tarvita. Pelkkä jääkaappi ja pienkuormat (≈ 1–2 kWh/vrk, arvio) latautuvat
+  maasähköllä ja ajossa nykyisestä laturista DC-DC-laturin kautta (hinta ja koko **⚠ ei
+  tiedossa**). Toisen laturin voi lisätä myöhemmin.
+- **Suurin säästö tulee laitevalinnoista:** puukiuas sekä kaasu- tai dieselliesi pienentävät
+  akuston, laturin ja invertterin tarvetta enemmän kuin mikään osavalinta.
+
 ## 5. Avoimet kysymykset
 
 - [x] Muut AC-kuormat: lista saatu [omistaja 2026-10-28], ks. [loads.yaml](../loads.yaml)
