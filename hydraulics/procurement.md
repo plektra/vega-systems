@@ -132,7 +132,7 @@ siirretään P2:n vanhaan 32 mm:n letkuun ja ulosottoon.
 | 7.2 | P2:n lähtöpaineanturi 2B2, 0–400 bar | 1 | ehdotus, prioriteetti 1 | ❓ | **⚠ ei tiedossa** | [pressure-monitoring](design/pressure-monitoring.md#suositus) |
 | 7.3 | Ohjauspaineen anturi 1B2, 0–250 bar | 1 | ehdotus | ❓ | **⚠ ei tiedossa** | sama |
 | 7.4 | Mittausliittimet (1T1, 2T1, 2T2, 3G2) ja kannettava mittari | 4 + 1 | ehdotus; P1:n imupuolelle (1T2) kiinteä mittari pikaliittimen sijaan, koska pikaliittimen tiiviys alipaineessa on epävarma | ❓ | noin 5–15 € / kpl [arvio] | sama |
-| 7.5 | Mittausletku 1/4" (esim. Minimess-mittausletku tai ohut hydrauliletku) ja liittimet | 2 | 1G2:lle ja 2G2:lle; pituus mittaritaulun paikan mukaan **⚠** | 🛒 päätetty | **⚠ ei tiedossa** | [päätös 2026-10-28](../decisions.md) |
+| 7.5 | Mittausletku 1/4" (esim. Minimess-mittausletku tai ohut hydrauliletku) ja liittimet | 2 | 1G2:lle ja 2G2:lle; pituus mittaritaulun paikan mukaan **⚠**, suositus enintään noin 3 m; taulu imuaukkojen korkeudelle, koska 1 m:n korkeusero muuttaa lukemaa noin 0,085 bar, ks. [pressure-monitoring](design/pressure-monitoring.md#imupaineen-mittaus) | 🛒 päätetty | **⚠ ei tiedossa** | [päätös 2026-10-28](../decisions.md) |
 | 7.6 | Mittaritaulu tai kiinnityslevy (Ø63 mm:n mittareille) | 1 | 1G2 ja 2G2; luettavaan paikkaan konehuoneessa, paikka **⚠ ei päätetty**; 1G1 ja 2G1 voi siirtää samaan tauluun | 🛒 päätetty | **⚠ ei tiedossa** | [päätös 2026-10-28](../decisions.md) |
 
 ## 8. Öljy

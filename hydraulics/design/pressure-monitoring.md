@@ -65,6 +65,19 @@ mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salam
 
 **Päätetty 2026-10-28:** kummallekin pumpulle kiinteä kaksoispainemittari (1G2, 2G2) mittaritauluun 1/4":n mittausletkulla; mittauspiste pumpun imuliittimessä. Osat: [hankintalista](../procurement.md#imupuolen-kaksoispainemittarit).
 
+**Mittausletkun pituus ja korkeus** [laskelma, öljyn tiheys 870 kg/m³]:
+
+- Letkussa ei virtaa öljyä, joten **pituus ei vaikuta lukemaan**, vain lukema asettuu hitaammin.
+  Ehdoton pituusraja tulee lähinnä valmiiden mittausletkujen pituuksista ja siitä, että pitkä letku
+  on vaikea ilmata ja siinä on enemmän liitoksia. Käytännön suositus [arvio]: **enintään noin 3 m**.
+- **Korkeusero vaikuttaa:** öljypatsas on noin **0,085 bar metriä kohden**. Jos mittari on 1 m
+  mittauspisteen yläpuolella, se näyttää noin 0,085 bar todellista pienempää (enemmän alipainetta),
+  ja 1 m alapuolella saman verran suurempaa. Imupuolen mittausalueella (noin −0,3…0 bar) tämä on
+  merkittävä, joten **mittaritaulu mahdollisimman lähelle pumppujen imuaukkojen korkeutta**, tai
+  korkeusero kirjataan tauluun korjauksena.
+- Jos mittari on mittauspisteen yläpuolella, letkuun jäänyt ilma nousee mittarille ja vaimentaa
+  lukemaa; ilmaa mittarin päästä. Imupuolella vuotava mittariliitos imee ilmaa linjaan.
+
 **Ohjeita:**
 
 - **Mahdollisimman lähelle pumpun imuaukkoa**, palloventtiilin ja muiden liittimien jälkeen, koska
