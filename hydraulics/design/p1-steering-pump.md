@@ -2,7 +2,7 @@
 
 > **Tila:** selvitys 2026-10-23. **Päätetty 2026-10-23: kohdat 1, 3, 4 ja 5** (32 mm:n imulinja,
 > täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohta 6: välitystä ei muuteta; kohta 7 avoinna. Imulinjan mitat [omistaja 2026-10-23],
-> laskelmat [laskelma]. 2026-10-26: öljypinta vähintään 1 m pumppujen yläpuolella [omistaja], joten laskelman oletus pätee. Ohjaus on turvallisuuskriittinen: **pätevän henkilön pitää tarkistaa
+> laskelmat [laskelma]. 2026-10-28: 32 mm:n täysiaukkoinen palloventtiili on jo olemassa P2:n nykyisessä imulinjassa säiliön ulosotolla ja jää P1:lle [omistaja 2026-10-28]. 2026-10-26: öljypinta vähintään 1 m pumppujen yläpuolella [omistaja], joten laskelman oletus pätee. Ohjaus on turvallisuuskriittinen: **pätevän henkilön pitää tarkistaa
 > ohjauspiirin muutokset ennen rakentamista.**
 
 Liittyy: [current-system §3.3](../current-system.md#33-piiri-1--ohjaus),
@@ -86,15 +86,15 @@ koska säiliö on silloin tyhjä ja auki.
 |---|---|---|---|
 | 1 | **P1:n imulinjaksi 32 mm (1-1/4"). Käytetään P2:n nykyinen 32 mm:n imuletku (noin 3 m) ja sen säiliöulosotto, kun P2 siirtyy 50 mm:n linjaan.** | Kylmäkäynnistyksen kavitaatioriski poistuu, ja linja saa pidentyä 5 metriin. Osat ovat jo olemassa. **⚠ Edellyttää**, että P2:n 50 mm:n ulosotto tehdään uuteen kohtaan eikä vanhaa suurentamalla; muuten P1 tarvitsee oman 32 mm:n ulosoton. | Pieni: suora 32 mm → 3/4" BSP -liitin suoraan P1:n imuaukkoon |
 | 2 | Jos 32 mm ei sovi, **pidä nykyinen 25 mm:n linja enintään 3,2 m:n pituisena** ja käytä HV 32 -öljyä. Älä kierrä konetta yli noin 1800 rpm:n, ennen kuin öljy on lämmennyt (noin 20 °C). | Riittää ilman uusia osia, mutta jättää kylmäkäytölle rajoituksen | Ei mitään |
-| 3 | **Täysiaukkoinen palloventtiili** P1:n imu-ulosottoon, ja ulosotto vähintään 50 mm minimiöljypinnan alle eikä paluiden lähelle | Kuristava venttiili tai ilmaa imevä ulosotto syö koko marginaalin | Pieni |
+| 3 | **Täysiaukkoinen palloventtiili** P1:n imu-ulosottoon, ja ulosotto vähintään 50 mm minimiöljypinnan alle eikä paluiden lähelle | Kuristava venttiili tai ilmaa imevä ulosotto syö koko marginaalin | Ei uutta osaa: P2:n nykyisessä imulinjassa säiliön ulosotolla on jo 32 mm:n täysiaukkoinen palloventtiili, joka jää P1:lle [omistaja 2026-10-28] |
 | 4 | **HV 32 -öljy** koko järjestelmään (jo suositeltu P2:n takia) | Suurin yksittäinen parannus P1:n imuun kylmänä. Huom. HV 32 ohenee noin 70 °C:ssa alle P1:n 12 cSt:n minimin, joten lämpötilahälytys 70 °C pysyy ([vaatimukset](../requirements.md)). | Öljy vaihdetaan joka tapauksessa |
 | 5 | **Imupaineen tarkistus käyttöönotossa:** alipainemittari (−1…0 bar) P1:n imuaukolle, ja koeajo kylmänä 700 ja 1800 rpm:llä | Laskelma perustuu oletettuun säiliön korkeuteen ja liitinhäviöihin. Mittaus kertoo todellisen marginaalin. | Mittari ~20–40 € (arvio) |
 | 6 | **Hihnavälitys:** ~~pienennetäänkö 1:1,15:een~~ **ei muuteta** (päätös 2026-10-23) | P1 pyörii nyt 2400 rpm:llä noin 2980 rpm (raja 3000). Imun kannalta muutos on pieni. | Hihnapyörä |
 | 7 | **Hihnaveto ja kannake:** vanha kannake kantoi kahta pumppua peräkkäin. Kun vanha P2 poistuu hihnoilta, tarkistetaan kannakkeen ja tukilaakerin kiinnitys ja hihnojen kireys yhdelle pumpulle. | Ohjauksen ainoa pumppu, hihnan katkeaminen = ohjaus vain hätäjärjestelmillä | Työtä |
 
 **Päätetty 2026-10-23: 1 + 3 + 4 + 5** ([päätösloki](../../decisions.md)).
-Alkuperäinen suositus: Kohta 1 maksaa lähes vain liittimet, koska letku ja säiliön ulosotto
-vapautuvat P2:lta. Säiliön öljypinta on vähintään 1 m P1:n yläpuolella [omistaja 2026-10-26].
+Alkuperäinen suositus: Kohta 1 maksaa lähes vain liittimet, koska letku, säiliön ulosotto ja
+sen palloventtiili vapautuvat P2:lta [omistaja 2026-10-28]. Säiliön öljypinta on vähintään 1 m P1:n yläpuolella [omistaja 2026-10-26].
 
 ### Vikatilanteet (ohjaus)
 
@@ -110,6 +110,7 @@ vapautuvat P2:lta. Säiliön öljypinta on vähintään 1 m P1:n yläpuolella [o
 - [x] Säiliön öljypinnan korkeus suhteessa P1:n imuaukkoon: vähintään 1 m [omistaja 2026-10-26]
 - [x] P2:n vanha 32 mm:n imuletku mahtuu P1:lle; pumpun päähän tarvitaan uusi letkukara/letkuliitin [omistaja 2026-10-23]
 - [x] Päätös: P1:n imulinja 32 mm (2026-10-23)
+- [x] 32 mm:n täysiaukkoinen palloventtiili: on jo P2:n nykyisessä imulinjassa säiliön ulosotolla, jää P1:lle [omistaja 2026-10-28]
 - [ ] Säiliö: P2:n 50 mm:n ulosotto uuteen kohtaan, jotta vanha 32 mm:n ulosotto jää P1:lle
-- [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)), 32 mm:n täysiaukkoinen palloventtiili (jos nykyinen on 25 mm), alipainemittari (−1…0 bar)
+- [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)) ja alipainemittari (−1…0 bar)
 - [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)

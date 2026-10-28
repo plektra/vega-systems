@@ -1,6 +1,6 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
-> **Tila:** päivitetty 2026-10-27: **arkki 2 piirretty uudelleen** (P2 = Vickers PVH57, HRC 150, venttiileiksi Danfoss PVG 32, ykkösvaihtoehto); F1-61-kokoonpanon arkki 2 ja sen taulukot [arkistoitu](design/archive/schematic-sheet-2-f1-61.md). Aiemmin 2026-10-23 ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
+> **Tila:** päivitetty 2026-10-28: 1V5 on olemassa (P2:n nykyinen palloventtiili). 2026-10-27: **arkki 2 piirretty uudelleen** (P2 = Vickers PVH57, HRC 150, venttiileiksi Danfoss PVG 32, ykkösvaihtoehto); F1-61-kokoonpanon arkki 2 ja sen taulukot [arkistoitu](design/archive/schematic-sheet-2-f1-61.md). Aiemmin 2026-10-23 ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
 > Yhtenäinen viiva = olemassa tai päätetty, katkoviiva = suunnitteilla tai vaihtoehto.
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
 > [design/p2-variable-pump.md](design/p2-variable-pump.md), [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md), [arkisto: p2-pump-options](design/archive/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
@@ -26,7 +26,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 |---|---|---|---|
 | 1M1 | Pääkone CAT 3126B, 2 kiilahihnaa | välitys 1:1,24; kone 700–2400 rpm | [blogi 2017-07-04], [omistaja 2026-10-22] |
 | 1P1 | Ohjauspumppu Salami 2PE16D-P28P1 | 16,6 cm³/r, max 3000 rpm, imupaine ≥ 0,7 bar abs, imuaukko 3/4" | [datalehti Salami 2PE], [omistaja 2026-10-23] |
-| 1V5 | Imulinjan palloventtiili | täysiaukkoinen, auki ajossa; imu 32 mm (päätös 2026-10-23; nyt 25 mm × 3,2 m) | [p1-steering-pump.md](design/p1-steering-pump.md) |
+| 1V5 | Imulinjan palloventtiili | täysiaukkoinen 32 mm, auki ajossa; olemassa P2:n nykyisessä imulinjassa säiliön ulosotolla, jää P1:lle; imu 32 mm (päätös 2026-10-23; nyt 25 mm × 3,2 m) | [p1-steering-pump.md](design/p1-steering-pump.md), [omistaja 2026-10-28] |
 | 1V7 | P1:n vastaventtiili | ennen T-haaraa, jossa P1 ja P3 yhdistyvät | [omistaja 2026-10-23] |
 | 1V1 | Kolmitievirtauksensäätöventtiili Marchesini RPF3 | vakiovirtaus CF 20 l/min orbitrolille pumpun kierroksista riippumatta, ylimäärä EF paluuseen; koko 1/2" [omistaja 2026-10-23] | [datalehti RPF3] |
 | 1G1 | Painemittari, analoginen | P-linjan alussa heti RPF3:n CF-lähdön jälkeen | [omistaja 2026-10-23] |
