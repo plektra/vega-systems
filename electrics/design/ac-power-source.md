@@ -119,7 +119,29 @@ Huomioita:
   mitoittaa ja rakentaa itse. Selvitä vakuutusyhtiöltä, hyväksyykö se itse kootun akuston.
 - Edullisten valmisakkujen hinnat ovat USA:n verkkokaupoista; EU-hintaa ei tarkistettu.
 
+### 2.5 Toisen laturin hintataso (haettu 2026-10-28)
 
+24 V:n veneilylatureissa 200 A on harvinainen koko; tavallisia ovat 110–175 A. Verkkokauppojen
+hinnat, jotka voivat olla vanhentuneita:
+
+| Laturi | Lähde | Hinta | Huomio |
+|---|---|---|---|
+| Mastervolt Alpha 24/150 Evo ja Alpha Pro III -säädin | [Blue Bottle Marine](https://www.bluebottlemarine.com/products/mastervolt-alpha-24-150-evo-kit-c-w-alpha-pro-iii.html) | 1 476 € | säädin mukana |
+| Mastervolt Alpha 24/150 MB | [Philippi, DE](https://www.philippi-online.de/en/?p=34174) | 2 420 € sis. ALV | säädin **⚠ tarkista**, onko mukana |
+| Prestolite 24 V / 175 A | [SEIMI, FR](https://www.seimi-equipements-marine.com/en/electricity/alternators-regulators/alternators/prestolite-alternator-24-175-a/pdt_2563) | 1 304 € sis. ALV | ulkoinen säädin erikseen |
+| DelStar 24 V / 200 A | [Bermantec](https://bermantec.com/shop/products/alternators-spare-parts/marine-alternators/delstar-alternator-24v-for-mastervolt-pad-mount-1170-20201/) | hinta ei näkyvissä; toisella myyjällä noin 4 600 USD | ainoa löydetty 24 V / 200 A |
+| Ulkoinen säädin: Wakespeed WS500 | [invertersrus](https://invertersrus.com/product-category/inverter-brands/wakespeed/) | 650–820 USD | litiumille sopiva |
+| Ulkoinen säädin: Balmar MC-618 | [eMarine](https://emarineinc.com/balmar-mc-618-ms-12v.html) | 367 USD (12 V:n versio) | 24 V:n versio **⚠ tarkista** |
+
+Lisäksi tarvitaan kiinnike ja hihna CAT 3126B:n etupäähän, kaapelit ja sulake (hinta
+**⚠ ei tiedossa**). 150–175 A:n laturi ottaa koneelta arviolta 5–7 kW, joten **tarkista, kestääkö
+hihnaveto sen** (usein tarvitaan leveä moniurahihna).
+
+**Johtopäätös [laskelma]:** 150–175 A riittää. 200 A:n laturi lyhentäisi täyden ankkurivuorokauden
+latausta vain noin 2,8 tunnista 2,3 tuntiin, mutta 24 V:n 200 A:n laturit maksavat moninkertaisesti.
+Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja asennusta (**⚠ arvio**).
+
+## 3. Vaihtoehdot
 
 | | A. Laturi, akusto ja invertteri | B. Dieselgeneraattori | C. Hydrauligeneraattori |
 |---|---|---|---|
@@ -130,7 +152,7 @@ Huomioita:
 | Asennus | laturin kiinnike, kaapelit, akusto, invertteri | polttoaine-, pakokaasu- ja merivesiputket, ilmanvaihto, äänieristys | letkut, venttiili, generaattori |
 | Melu ankkurissa | ei | kyllä | pääkone käy |
 | Huolto | vähäinen | oma kone huollettavaksi | vähäinen |
-| Hinta | **⚠ ei tiedossa** | **⚠ ei tiedossa**, todennäköisesti kallein | **⚠ ei tiedossa** |
+| Hinta | akusto ks. 2.4, laturi ks. 2.5, invertteri **⚠ ei tiedossa** | **⚠ ei tiedossa**, todennäköisesti kallein | **⚠ ei tiedossa** |
 
 ### C. Hydrauligeneraattori
 
@@ -162,7 +184,7 @@ laitteet asennetaan ja ovatko ne sähköllä toimivia.** Alla olevat koot koskev
 kaikki harkinnassa olevat laitteet asennetaan sähköisinä. Ratkaistava on lisäksi, riittääkö ajo
 lataukseen vai tarvitaanko dieselgeneraattori.
 
-1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–200 A) pääkoneeseen, noin 5 kW:n invertteri
+1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–175 A, ks. kohta 2.5) pääkoneeseen, noin 5 kW:n invertteri
    tai kuormanhallinta, ja litiumakusto. Akuston koko riippuu ankkuripäivistä:
    - **noin 400 Ah**, jos saunotaan vain ajopäivinä tai satamassa maasähköllä;
    - **noin 650 Ah**, jos halutaan yksi täysi ankkurivuorokausi saunoineen ilman ajoa.
@@ -190,5 +212,5 @@ akuston noin kolmasosaan.
 - [ ] Kuinka monta vuorokautta ollaan tyypillisesti ankkurissa ajamatta?
 - [ ] Onko maasähköä laiturissa?
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
-- [ ] Mahtuuko toinen laturi koneen etupäähän, ja millainen kiinnike tarvitaan
-- [ ] Hinnat vaihtoehdoille A ja B (litiumakuston hintataso haettu, ks. kohta 2.4; laturi, invertteri ja generaattori puuttuvat)
+- [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
+- [ ] Hinnat vaihtoehdoille A ja B (akuston ja laturin hintataso haettu, ks. kohdat 2.4 ja 2.5; invertteri, kiinnike ja generaattori puuttuvat)
