@@ -121,8 +121,8 @@ LS-linjaan ei tarvita ohjattavaa magneettiventtiiliä. Ensimmäisessä vaiheessa
    1/4":n liittimeen. Se tyhjentää LS-linjan, kun venttiili palaa keskelle; keskiasennon A,B→T-yhteys
    tyhjentää linjan myös venttiilin kautta.
 
-Myöhemmin vinssi ja pesuri tuovat vaihtoventtiilit 2V11–2V13 (samaa tyyppiä). PVH57:n LS-portin
-koko **⚠ ei tiedossa** (asennuspiirustus M-2206-S).
+Myöhemmin vinssi ja pesuri tuovat vaihtoventtiilit 2V11–2V13 (samaa tyyppiä). PVH57:n LS-portti
+on SAE O-rengasportti 9/16-18 UNF 3/8":n putkelle [Eatonin luettelo V-PUPI-TM008-E1 s. 21].
 
 Kaaviota piirtäessä esiin tulleet asiat:
 

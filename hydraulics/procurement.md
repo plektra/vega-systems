@@ -19,7 +19,7 @@ veneellä · ❓ ehdollinen (tarve selviää tarkistuksesta tai päätöksestä)
 | 1.3 | HRC 150 -elastinen välikappale | 1 | | 🛒 | noin 10 £ + ALV | sama |
 | 1.4 | Taper Lock 2012 -holkki 48 mm, kiilaura | 1 | PTO:n puoli; **⚠ tarkista** koodi ja kiilauran syvyys | 🛒 | arviolta 10–25 € | sama |
 | 1.5 | Taper Lock 2012 -holkki 1 1/4", kiilaura | 1 | pumpun puoli; **⚠ tarkista** koodi | 🛒 | arviolta 10–25 € | sama |
-| 1.6 | Pumppukannake SAE C -laipalle | 1 | 10 mm:n teräslevy, laserleikkaus ja hitsaus; laipan mitat Eatonin piirustuksesta **⚠** | 🛒 omistajat suunnittelevat | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
+| 1.6 | Pumppukannake SAE C -laipalle | 1 | 10 mm:n teräslevy, laserleikkaus ja hitsaus; laippa: keskitys Ø127 mm, reikäneliö 114,5 mm, reiät Ø14,2–14,5 [Eatonin luettelo s. 21] | 🛒 omistajat suunnittelevat | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
 | 1.7 | Kytkimen suojakotelo | 1 | pyörivän kytkimen suoja | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#asennusjärjestys) |
 | 1.8 | Pumpun ulkoiset O-renkaat (portit, laipat, säädin) | sarja | vaihdetaan liitäntöjä tehtäessä; mitat **⚠ ei tiedossa** | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#tiivistesarja) |
 | 1.9 | Akselitiiviste | 1 | vain, jos vuotaa koeajossa; koko tiivistesarjaa 02-102244 (noin 853 $) ei tarvita | ❓ | **⚠ ei tiedossa** | sama |
@@ -40,7 +40,7 @@ hitsataan silloin. Muhvi tehdään **uuteen kohtaan**, jotta vanha 32 mm:n uloso
 | 2.4 | Letkukara 50 mm:n imuletkulle | 1 | palloventtiilin kierteeseen | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-10-28] |
 | 2.5 | Imuletku 50 mm | **⚠ pituus** (noin 3 m) | imuun soveltuva, ei painu kasaan alipaineessa | 🛒 **⚠ tarkista**, onko olemassa | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
 | 2.6 | Letkunkiristimet, ruostumattomat | 4 | kaksi kumpaankin päähän | 🛒 | pieni | [arvio] |
-| 2.7 | Pumpun imuliitin: SAE-laippa, O-rengas, pultit ja letkukara tai supistus 50 mm:n letkuun | 1 | laipan koko pumpusta **⚠** | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
+| 2.7 | Pumpun imuliitin: 2" SAE code 61 -laippa, O-rengas, pultit 1/2-13 UNC ja letkukara 50 mm:n letkuun | 1 | 2" code 61 [Eatonin luettelo s. 21–22]; ei supistusta | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
 | 2.8 | Mittausvälikappale letkun ja pumpun imulaipan väliin: lyhyt Ø50-teräsputki (noin 100–150 mm), jossa hitsattu 1/4" BSP -muhvi kyljessä, tai valmis 2":n T-kappale 1/4":n sivuaukolla | 1 | mahdollisimman lähellä pumppua, jotta mittaus sisältää koko linjan häviöt; BSPP ja tiivistealuslevy, ei kartiokierrettä (imupuolen vuoto imee ilmaa) | 🛒 | **⚠ ei tiedossa** | [pressure-monitoring](design/pressure-monitoring.md#imupaineen-mittaus) |
 | 2.9 | 1/4" BSP -T-kappale mittausaukkoon | 1 | anturi 2B1 ja mittarin letku samaan aukkoon | 🛒 | pieni | [arvio] |
 | 2.10 | Imupaineanturi 2B1, −1…+1 bar, 4–20 mA | 1 | Signal K:hon; varoitus alle 0 bar | 🛒 päätetty | noin 40–150 € [arvio] | [päätös 2026-10-23](../decisions.md) |
@@ -50,11 +50,11 @@ hitsataan silloin. Muhvi tehdään **uuteen kohtaan**, jotta vanha 32 mm:n uloso
 
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
-| 3.1 | Painelähdön SAE-laippa ja liitin 3/4":n letkuun | 1 | koko pumpusta **⚠** | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
+| 3.1 | Painelähdön 1" SAE code 61 -laippa, pultit 3/8-16 UNC ja supistus 3/4":n letkuun | 1 | 1" code 61 [Eatonin luettelo s. 21–22] | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
 | 3.2 | Painelinja 3/4", 3–4 m | 1 | nykyinen P2:n painelinja; päät sovitetaan PVG:n P-porttiin | 🔍 **⚠ tarkista** kunto ja painearvo | – | [current-system §5](current-system.md#5-avoimet-kysymykset) |
 | 3.3 | Sovite PVG 32:n P-porttiin | 1 | portti pumppumoduulin mukaan G 1/2, G 3/4 tai G 1 | 🛒 | **⚠ ei tiedossa** | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-keulapotkuri-tarvitsee-pvh57n-ja-tämän-venttiilin-lisäksi) |
-| 3.4 | LS-letku 1/4" ja liittimet | 1 | PVG:n LS (G 1/4) → pumpun LS-portti (koko **⚠**) | 🛒 | **⚠ ei tiedossa** | sama |
-| 3.5 | Kotelovuotoletku vähintään noin 1/2" | 1 | ylimmästä vuotoportista suoraan säiliöön öljypinnan alle, ei paluulinjaan | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#asennusjärjestys) |
+| 3.4 | LS-letku 1/4" ja liittimet | 1 | PVG:n LS (G 1/4) → pumpun LS-portti (9/16-18 UNF O-rengas, SAE -6) | 🛒 | **⚠ ei tiedossa** | sama |
+| 3.5 | Kotelovuotoletku vähintään noin 1/2" | 1 | ylimmästä vuotoportista (3/4-16 UNF O-rengas, SAE -8) suoraan säiliöön öljypinnan alle, ei paluulinjaan | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#asennusjärjestys) |
 | 3.6 | Keulapotkurin (U11) vuotolinja 1/4" | 1 | tehdään uusiksi suoraan säiliöön öljypinnan alle | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-10-27] |
 | 3.7 | Säiliön läpiviennit tai muhvit vuotolinjoille (3.5 ja 3.6) | 1–2 | putki öljypinnan alle; tehdään samalla kertaa kuin muhvi 2.1 | 🛒 **⚠ tarkista**, voiko käyttää olemassa olevia aukkoja | **⚠ ei tiedossa** | [arvio] |
 
@@ -212,7 +212,7 @@ osa niistä tarvitaan varavaihtoehdoissa, joten **ne kannattaa myydä vasta, kun
 ## Ennen tilaamista selvitettävät
 
 - [ ] PVG 32:n kokoonpanokoodi 157N553(8/B): kara, pumppumoduuli, PVLP-paikat ja P-portin koko (rivit 3.3, 4.11–4.14)
-- [ ] PVH57:n laippa- ja porttikoot (Eaton M-2206-S): imu-, paine-, vuoto- ja LS-portit (rivit 2.7, 3.1, 3.4, 3.5)
+- [x] PVH57:n laippa- ja porttikoot: imu 2", lähtö 1" (SAE code 61), vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]; tarkista pumpusta ennen tilausta
 - [ ] Veneellä: 50 mm:n palloventtiili ja sen kierre (2.1–2.4), 50 mm:n imuletku ja sen pituus (2.5), nykyisen 3/4":n painelinjan kunto (3.2), 2G1:n mittausalue (4.5), säiliön vapaat aukot vuotolinjoille (3.7)
 - [ ] Veneellä: onko säiliö maalattu sisältä, ja onko käytettävä jarrunpuhdistin klooriton ([puhdistus](#säiliön-puhdistus-hitsauksen-yhteydessä))
 - [ ] Taper Lock -holkkien koodit ja HRC 150:n napatyyppi (1.2–1.5)

@@ -6,7 +6,7 @@
 > ja [LS + on/off](aux-circuit-ls-onoff.md) ovat varavaihtoehtoja; pumpun tiedot, kytkin, kannake, suodatus ja
 > asennus pätevät kaikissa. Selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta),
 > 2026-10-26 (FXDC:n painehäviö ja asetus; paluusuodatin; puhtausvaatimus 250 barissa 16/14/12) ja 2026-10-27
-> (akselikytkin HRC 150; pumppu päätetty). Vertailut F1-61:een on jätetty perusteluiksi.
+> (akselikytkin HRC 150; pumppu päätetty) sekä 2026-10-28 (asennusmitat ja porttikoot Eatonin luettelosta: imu 2", ei 2 1/2"; huoltotiedote M-2206-S luettu kokonaan). Vertailut F1-61:een on jätetty perusteluiksi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
 > rakentamista.
 
@@ -260,7 +260,7 @@ tekstinä).
 
 Lähde: Eatonin luettelo *Industrial & Mobile Variable Displacement Piston Pumps* V-PUPI-TM008-E1
 (10/2013) ([PDF](https://www.appliedfluidpower.com/media/wysiwyg/PDFs/PVH_Series.pdf), skannattu,
-s. 7, 8 ja 31 luettu kuvina). Pumppu on **mobiiliversio**: teollisuusversiossa on aina lisäkoodi
+s. 7, 8 ja 31 luettu kuvina; asennusmitat s. 20–22 luettu kuvina 2026-10-28). Pumppu on **mobiiliversio**: teollisuusversiossa on aina lisäkoodi
 Q250 tai Q140, eikä tässä koodissa ole lisäkoodia.
 
 | Kohde | Arvo | Lähde |
@@ -275,8 +275,14 @@ Q250 tai Q140, eikä tässä koodissa ole lisäkoodia.
 | Puhtaus (säätötilavuuksinen mäntäpumppu) | 18/16/14 (≤ 140 bar), **17/15/13 (140–210 bar)**, 16/14/12 (yli 210 bar) | s. 31 |
 | Asennus | vaakaan, suora veto joustavalla kytkimellä; linjaus asennuspiirustuksen toleransseihin | s. 31 |
 | Paino | noin 36 kg (jälleenmyyjät) **⚠ tarkista** | jälleenmyyjät |
-| Imuaukko | 2 1/2" SAE-laippa (jälleenmyyjät) **⚠ tarkista pumpusta**. Pääliitännät ovat jälleenmyyjien mukaan pumpun **kyljissä** ("SP", side ports), eivät päällä tai pohjassa; kummalla puolella imu on, riippuu pyörimissuunnasta **⚠ tarkista pumpusta** | jälleenmyyjät (hakutulokset 2026-10-26) |
-| Kotelovuoto | pakollinen vuotolinja säiliöön. Jälleenmyyjien mukaan (muut PVH57-koodit) vuotoportti 3/4-16 SAE O-rengas **pohjassa**; onko ylempää vuotoporttia, **⚠ tarkista pumpusta** (jos vain pohjassa, kotelon täyttö ja ilmaus mietittävä erikseen) | M-2210-S; jälleenmyyjät |
+| Imuaukko | **2" SAE J518 code 61** -nelireikälaippa (reikäväli 77,77 × 42,88 mm, kierre `F`-mallissa 1/2-13 UNC; `M`-mallissa M12). **Korjaus:** jälleenmyyjien 2 1/2" oli väärin. Imu on pumpun takapäässä venttiililohkon kyljessä; kummalla puolella, riippuu pyörimissuunnasta **⚠ tarkista pumpusta** | s. 21–22 (*kuvana*) |
+| Painelähtö | **1" SAE J518 code 61** -laippa (reikäväli 52,37 × 26,19 mm, kierre 3/8-16 UNC / M10×1,5) | s. 21–22 |
+| LS-portti | SAE O-rengasportti 9/16-18 UNF (3/8":n putkelle); painemittariportti M10 (tulpattu) | s. 21 |
+| Asennuslaippa | SAE C nelireikä: keskitysolake Ø127,00/126,95 mm, reiät Ø14,15–14,53 mm, reikäneliö 2 × 57,25 = **114,5 mm**; pumpun pituus laipasta takapäähän noin 293 mm (mitta C) | s. 21–22 |
+| Akseli (koodi 1) | SAE C suora kiila (J744-32-1): **Ø31,75 mm**, kiila 7,93 mm, kiila-akselin pituus laipasta 56,0 mm | s. 20 |
+| Säätöruuvit | painesäädin noin 28 bar/kierros; LS-paine-ero noin 14 bar/kierros (tehdasasetus 20 bar) | s. 21; M-2206-S s. 8 |
+| Kotelovuoto | pakollinen vuotolinja säiliöön. Vuotoportti 3/4-16 UNF SAE O-rengas (1/2":n putkelle); luettelon piirustuksessa **kaksi**: alhaalla ja ylhäällä ("optional drain port"). Onko ylempi portti tässä pumpussa avattu, **⚠ tarkista pumpusta** | s. 21; M-2210-S |
+| Käyttöönotto | kotelo täytetään öljyllä jonkin portin kautta ennen käynnistystä; ilmaus avaamalla lähtöliitintä; 5–10 min kuormittamatta, öljy ei saa olla maitoista | M-2206-S s. 7 |
 
 ### Sopivuus Vegaan [laskelma]
 
@@ -440,9 +446,9 @@ Olemassa olevat osat säilyvät: CETOP-pohjalaatta, VMP, BAV-713, letkut, säili
 |---|---|---|
 | 1 | **HRC 150 -joustokytkin** (päätös 2026-10-27): kaksi napaa Taper Lock -holkeille (F tai H asennuksen mukaan) ja elastinen välikappale | korvaa F1-suunnitelman Spidex 48/60:n; ks. alla |
 | 2 | Taper Lock 2012 -kartioholkit: **48 mm** (PTO) ja **1 1/4"** (pumppu, 31,75 mm), kiilaurat | vakio-osia, ei koneistusta; **⚠ tarkista** koodit ja 48 mm:n holkin kiilauran syvyys |
-| 3 | Kannake SAE C -nelireikälaipalle | F1-reitin ISO 7653 -kannakkeen sijaan (ei vielä tehty); sama tapa: 10 mm:n teräslevy, laserleikkaus ja hitsaus. Pumppu noin 36 kg; mitat asennuspiirustuksesta (Eaton M-2206-S) **⚠** |
-| 4 | Imuliitin: SAE-laippa, O-rengas, pultit ja supistus 50 mm:n letkuun | laipan koko pumpusta **⚠** |
-| 5 | Painelähdön SAE-laippa ja liitin 3/4":n painelinjaan | koko pumpusta **⚠** |
+| 3 | Kannake SAE C -nelireikälaipalle | F1-reitin ISO 7653 -kannakkeen sijaan (ei vielä tehty); sama tapa: 10 mm:n teräslevy, laserleikkaus ja hitsaus. Pumppu noin 36 kg; laippa Ø127 mm:n keskitys ja 114,5 mm:n reikäneliö, ks. [tekniset tiedot](#tekniset-tiedot) |
+| 4 | Imuliitin: 2" SAE code 61 -laippa (UNC-pultit), O-rengas ja letkuliitin 50 mm:n letkuun | 2" = 50,8 mm, joten supistusta ei tarvita |
+| 5 | Painelähdön 1" SAE code 61 -laippa (3/8-16 UNC) ja supistus 3/4":n painelinjaan | |
 | 6 | Kotelovuotolinja (vähintään noin 1/2") ylimmästä vuotoportista säiliöön öljypinnan alle | korvaa BPV:n vuotolinjan |
 | 7 | 2/2-magneettiventtiili, auki jännitteettömänä, suoraan toimiva, 24 V | LS-purku; ainoa uusi magneettiventtiili |
 | 8 | Kuristin noin Ø0,8 mm, T-haara ja 1/4":n letkut LS-linjaan | |
@@ -486,9 +492,9 @@ huomioon kannakkeessa.
    -reikäkuviolle ja noin 36 kg:n pumpulle **⚠ tarkista paino**. HRC 150 (päätös 2026-10-27): navat
    ja Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) sekä elastinen välikappale. Linjaus kytkimen sallimiin rajoihin
    ([current-system §0](../current-system.md)) ja suojakotelo pyörivälle kytkimelle. Laipan mitat
-   asennuspiirustuksesta **⚠ ei vielä saatu**.
-3. **Imulinja.** 50 mm:n letku SAE-laipalla ja supistuksella pumpun imuaukkoon (koko
-   **⚠ tarkista pumpusta**); palloventtiili säilyy linjassa. Säiliön päässä: hitsattava muhvi →
+   ks. [tekniset tiedot](#tekniset-tiedot); tarkista mitat pumpusta ennen leikkausta.
+3. **Imulinja.** 50 mm:n letku 2":n SAE code 61 -laipalla pumpun imuaukkoon (2" = 50,8 mm, ei
+   supistusta); palloventtiili säilyy linjassa. Säiliön päässä: hitsattava muhvi →
    90°:n kulma → palloventtiili → letkukara [omistaja 2026-10-28], ks. [hankintalista](../procurement.md).
 4. **Kotelovuoto.** Ylimmästä vuotoportista oma letku (vähintään noin 1/2") säiliöön öljypinnan
    alle. **Ei yhteiseen paluulinjaan.**
@@ -757,7 +763,8 @@ nykyisen rinnalle.
 - [ ] Valmistusvuosi (sarjanumero kilvestä; myyjältä ei kysytä, Danfossilta voi kysyä tarvittaessa)
 - [ ] Tiivistesarja: sopiiko 02-102244 (vanha 02-102260) rakenteelle 10 ja yksinkertaiselle akselitiivisteelle, hinta Suomesta; vaihtoehtona pelkän akselitiivisteen ja O-renkaiden mitat
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
-- [ ] Eaton M-2206-S (PVH57:n asennuspiirustus): laipan mitat, imu-, paine- ja vuotoporttien koot ja paikat
+- [x] PVH57:n asennusmitat: laippa, imu 2", lähtö 1", vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]. M-2206-S on osaluettelo eikä sisällä mittoja.
+- [ ] Pumpusta: imun puoli, onko ylempi vuotoportti avattu, paino
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
 - [x] Akselikytkin PVH57:lle: HRC 150 + Taper Lock 2012 -holkit (päätös 2026-10-27)
