@@ -81,6 +81,12 @@ käyttöohjeista ja tuotesivuista.
 | Kramp: PVE's for PVG 32 (ristiviittaus) | [PDF](https://documents.kramp.com/PVE_cross_reference_EN.pdf) | 157B4024 = PVEH 24 V, 157B4224 = PVEO 24 V (sarja 0, poistunut); korvaavat sarjan 4 koodit | sama |
 | HRC 150 -joustokytkin | — | **⚠ Datalehti puuttuu** (nimellismomentti, linjausvirheet, pituus). Jälleenmyyjien mukaan noin 600 Nm; Taper Lock 2012 -holkki, reikä 14–50 mm ([BEP, HRC-luettelo](https://bepltd.com/cdn/shop/files/HRC-COUPLING.pdf)) | [p2-variable-pump](../hydraulics/design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) (PVH57:n kytkin, päätös 2026-10-27) |
 
+## Sähköjärjestelmä
+
+| Komponentti | Dokumentti | Tärkeimmät tiedot | Käytetään |
+|---|---|---|---|
+| **Mastervolt Mass Combi Ultra 24/3500-100 (230 V), 38023500** | [Tuotesivu, mastervolt.com](https://www.mastervolt.com/products/mass-combi-ultra/mass-combi-ultra-24-3500-100-230-v/) (ei avautunut istunnosta; arvot jälleenmyyjiltä: [SVB24](https://www.svb24.com/en/mastervolt-mass-combi-ultra-charger-inverter-24-v-3500-w-100-a.html), [Mastervolt Polska](https://mastervoltpolska.pl/en/mastervolt-mass-combi-ultra-24-3500-100-id76.html), [Hudson Marine](https://hudsonmarine.co.uk/products/mastervolt-mass-combi-ultra-24-3500-100-230-v-38023500)) | Invertteri 3500 W jatkuva @ 40 °C, huippu 7000 W; laturi 100 A @ 28,5 V, apulaturi 10 A; Power Assist; AC-tulo 184–275 V; rinnankytkentä enintään 10 kpl; 472 × 318 × 178 mm, noin 15 kg. **⚠ tarkista** valmistajan datalehdestä | [ac-power-source](../electrics/design/ac-power-source.md#22-huipputeho-ja-invertteri-laskelma) |
+
 ## Omistajien datalehdet (`datasheets/local/`)
 
 Omistajien omat PDF-kopiot nykyisen järjestelmän osista [omistaja 2026-10-22]. Tiedostot ovat vain

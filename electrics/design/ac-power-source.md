@@ -84,6 +84,25 @@ suurten kuormien yhtäaikaisen käytön (esim. kiuas ja vedenlämmitin pois, kun
 Kuormanhallinnan voisi tehdä omilla ESP32-PDM-moduuleilla ([current-system.md](../current-system.md#4-valvonta-verkot-ja-tehonjako)).
 5 kW:n invertteri ottaa 24 V:n akustosta noin 230 A, mikä vaatii järeät kaapelit ja sulakkeet.
 
+#### Ehdokas: Mastervolt Mass Combi Ultra 24/3500-100 (230 V)
+
+Omistajien harkitsema invertterilaturi [omistaja 2026-10-28]. Arvot ovat jälleenmyyjiltä, koska
+valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
+[datasheets](../../datasheets/README.md#sähköjärjestelmä).
+
+| Ominaisuus | Arvo | Mitä se tarkoittaa Vegalle [laskelma] |
+|---|---|---|
+| Invertteri | 3500 W jatkuva @ 40 °C, huippu 7000 W | Kiuas (2,3 kW), jääkaappi, ilmanvaihto, televisio ja laturit yhtä aikaa onnistuvat. Sähköliesi ja vedenkeitin yhtä aikaa (arvio 5 kW) eivät onnistu ilman kuormanhallintaa. Kaasu- tai diesellieden kanssa 3500 W riittää. |
+| Akkuvirta | – | 3500 W:lla noin 160 A (hyötysuhde 92 %, **⚠ arvio**), huipussa yli 300 A. Akuston BMS:n, kaapeleiden ja sulakkeen pitää kestää se. |
+| Laturi | 100 A @ 28,5 V (≈ 2,9 kW) | Maasähköstä tai generaattorista täysi ankkurivuorokausi (≈ 12,7 kWh) latautuu noin 4,5 tunnissa. |
+| Power Assist | on | Rajoittaa maasähkön tai generaattorin kuormaa ja täydentää akuilta. Mahdollistaa pienemmän generaattorin. |
+| Rinnankytkentä | enintään 10 kpl | Jos sähköliesi valitaan, toisen yksikön voi lisätä myöhemmin (yhteensä 7000 W). |
+| Hinta | 3 126 € ([SVB24](https://www.svb24.com/en/mastervolt-mass-combi-ultra-charger-inverter-24-v-3500-w-100-a.html)); 3 549 £ sis. ALV ([Chas the Boat, UK](https://shop.chastheboat.co.uk/products/mass-combi-ultra-inverter-charger-24-3500-100-38023500)) | Haettu 2026-10-28 |
+
+**Arvio:** laite sopii Vegalle hyvin, jos ruoanlaitto ei ole sähköllä tai suurille kuormille tehdään
+kuormanhallinta. Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
+(MasterBus) **⚠ tarkista**.
+
 ### 2.3 Lataus ajossa [laskelma]
 
 Oletus: laturi antaa lämpimänä noin 75 % nimellisvirrastaan 28 V:n latausjännitteellä (**⚠ arvio**).
@@ -152,7 +171,7 @@ Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja ase
 | Asennus | laturin kiinnike, kaapelit, akusto, invertteri | polttoaine-, pakokaasu- ja merivesiputket, ilmanvaihto, äänieristys | letkut, venttiili, generaattori |
 | Melu ankkurissa | ei | kyllä | pääkone käy |
 | Huolto | vähäinen | oma kone huollettavaksi | vähäinen |
-| Hinta | akusto ks. 2.4, laturi ks. 2.5, invertteri **⚠ ei tiedossa** | **⚠ ei tiedossa**, todennäköisesti kallein | **⚠ ei tiedossa** |
+| Hinta | akusto ks. 2.4, laturi ks. 2.5, invertterilaturi ks. 2.2 | **⚠ ei tiedossa**, todennäköisesti kallein | **⚠ ei tiedossa** |
 
 ### C. Hydrauligeneraattori
 
@@ -213,4 +232,4 @@ akuston noin kolmasosaan.
 - [ ] Onko maasähköä laiturissa?
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
-- [ ] Hinnat vaihtoehdoille A ja B (akuston ja laturin hintataso haettu, ks. kohdat 2.4 ja 2.5; invertteri, kiinnike ja generaattori puuttuvat)
+- [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)
