@@ -88,7 +88,7 @@ koska säiliö on silloin tyhjä ja auki.
 | 2 | Jos 32 mm ei sovi, **pidä nykyinen 25 mm:n linja enintään 3,2 m:n pituisena** ja käytä HV 32 -öljyä. Älä kierrä konetta yli noin 1800 rpm:n, ennen kuin öljy on lämmennyt (noin 20 °C). | Riittää ilman uusia osia, mutta jättää kylmäkäytölle rajoituksen | Ei mitään |
 | 3 | **Täysiaukkoinen palloventtiili** P1:n imu-ulosottoon, ja ulosotto vähintään 50 mm minimiöljypinnan alle eikä paluiden lähelle | Kuristava venttiili tai ilmaa imevä ulosotto syö koko marginaalin | Ei uutta osaa: P2:n nykyisessä imulinjassa säiliön ulosotolla on jo 32 mm:n täysiaukkoinen palloventtiili, joka jää P1:lle [omistaja 2026-10-28] |
 | 4 | **HV 32 -öljy** koko järjestelmään (jo suositeltu P2:n takia) | Suurin yksittäinen parannus P1:n imuun kylmänä. Huom. HV 32 ohenee noin 70 °C:ssa alle P1:n 12 cSt:n minimin, joten lämpötilahälytys 70 °C pysyy ([vaatimukset](../requirements.md)). | Öljy vaihdetaan joka tapauksessa |
-| 5 | **Imupaineen tarkistus käyttöönotossa:** alipainemittari (−1…0 bar) P1:n imuaukolle, ja koeajo kylmänä 700 ja 1800 rpm:llä | Laskelma perustuu oletettuun säiliön korkeuteen ja liitinhäviöihin. Mittaus kertoo todellisen marginaalin. | Mittari ~20–40 € (arvio) |
+| 5 | **Imupaineen tarkistus käyttöönotossa:** kiinteä kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritaulussa, mittauspiste P1:n imuaukolla (päätös 2026-10-28; aiemmin alipainemittari −1…0 bar), ja koeajo kylmänä 700 ja 1800 rpm:llä | Laskelma perustuu oletettuun säiliön korkeuteen ja liitinhäviöihin. Mittaus kertoo todellisen marginaalin. | Mittari ~20–40 € (arvio) |
 | 6 | **Hihnavälitys:** ~~pienennetäänkö 1:1,15:een~~ **ei muuteta** (päätös 2026-10-23) | P1 pyörii nyt 2400 rpm:llä noin 2980 rpm (raja 3000). Imun kannalta muutos on pieni. | Hihnapyörä |
 | 7 | **Hihnaveto ja kannake:** vanha kannake kantoi kahta pumppua peräkkäin. Kun vanha P2 poistuu hihnoilta, tarkistetaan kannakkeen ja tukilaakerin kiinnitys ja hihnojen kireys yhdelle pumpulle. | Ohjauksen ainoa pumppu, hihnan katkeaminen = ohjaus vain hätäjärjestelmillä | Työtä |
 
@@ -112,5 +112,5 @@ sen palloventtiili vapautuvat P2:lta [omistaja 2026-10-28]. Säiliön öljypinta
 - [x] Päätös: P1:n imulinja 32 mm (2026-10-23)
 - [x] 32 mm:n täysiaukkoinen palloventtiili: on jo P2:n nykyisessä imulinjassa säiliön ulosotolla, jää P1:lle [omistaja 2026-10-28]
 - [ ] Säiliö: P2:n 50 mm:n ulosotto uuteen kohtaan, jotta vanha 32 mm:n ulosotto jää P1:lle
-- [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)) ja alipainemittari (−1…0 bar)
+- [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)) ja kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritauluun, ks. [hankintalista](../procurement.md)
 - [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)

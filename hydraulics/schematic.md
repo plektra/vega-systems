@@ -36,6 +36,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 1P2, 1M2 | Varapumppu P3, sähkömoottori 24 V 2,5 kW | kytketty T-haaraan oman vastaventtiilin kautta [omistaja 2026-10-23]; kierrostilavuus **⚠ ei tiedossa** | [blogi 2017-04-01] |
 | 1V4 | P3:n vastaventtiili | ennen T-haaraa → RPF3 | [omistaja 2026-10-23] |
 | – | Piirin 1 painelinjat | **1/2"** (P1/P3 → RPF3 → orbitroli → sylinteri) | [omistaja 2026-10-23] |
+| 1G2 | P1:n imupaineen kaksoispainemittari | −1…+1,5 bar, mittauspiste P1:n imuaukolla (3/4":n T), mittari mittaritaulussa 1/4":n letkulla | [päätös 2026-10-28](../decisions.md) |
 | 1V6 | P3:n imun palloventtiili | imu 3/4" | [blogi 2017-04-10] |
 | 1Z1 | Säiliö Flowfit 100 l | 80 l öljyä | [blogi 2017-07-04] |
 
@@ -60,7 +61,8 @@ Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61
 | 2Z3 | HRC 150 -joustokytkin | Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu); momentti noin 600 Nm **⚠ vahvista** | [päätös 2026-10-27](../decisions.md), [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
 | 2P1 | Vickers PVH57C-LAF-1S-10-C12V-31 | 57,4 cm³/r, LS-säädin, paineraja 250 bar, valmiustila noin 20 bar, pyörimissuunta L; SAE C -laippa omalla kannakkeella; kotelovuoto omana letkuna säiliöön | [p2-variable-pump](design/p2-variable-pump.md#tekniset-tiedot), [päätös 2026-10-27](../decisions.md) |
 | 2V0 | Imulinjan palloventtiili | täysiaukkoinen 50 mm; todennäköisesti jo olemassa **⚠ tarkista veneellä**; imu 50 mm | [päätös 2026-10-23](../decisions.md), [omistaja 2026-10-28] |
-| 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar | [päätös 2026-10-23](../decisions.md) |
+| 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar; mittausvälikappale pumpun imulaipalla | [päätös 2026-10-23](../decisions.md) |
+| 2G2 | P2:n imupaineen kaksoispainemittari | −1…+1,5 bar, sama mittausaukko kuin 2B1, mittari mittaritaulussa 1/4":n letkulla | [päätös 2026-10-28](../decisions.md) |
 | 2B2 | P2:n lähtöpaineanturi (ehdotus) | 0–400 bar; valmiustilan ja vedon valvonta → ESP32 / Signal K | [pressure-monitoring](design/pressure-monitoring.md) |
 | 2V1 | Danfoss PVG 32, 5 lohkoa (käytetty) | P 350 bar (PVSI) / 300 bar (PVS), T enintään 25 bar staattinen; kokoonpanokoodi 157N553(8/B) **⚠ tarkista**; kunto tuntematon, puhdistus ja koestus | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
 | 2V1.0 | PVP-pumppumoduuli | suljettu keskiasento **⚠ tarkista koodista** (157B5…); sisäinen paineenrajoitin noin 280 bar (varaventtiili); P-portti G 1/2–G 1, T G 3/4, LS G 1/4, M G 1/4 | [datalehti PVG 32 s. 5, 20–22] |
@@ -220,4 +222,5 @@ flowchart LR
 - Venttiilipöydän (noin 22–23 kg) kiinnityspaikka konehuoneessa ja letkujen reititys **⚠**
 - ~~2/2-venttiilin paikka~~: omassa erillisessä rungossaan [omistaja 2026-10-23]
 - ~~Varapumpun P3 kytkentä~~: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
+- Imumittarit 1G2 ja 2G2 (päätös 2026-10-28) puuttuvat vielä SVG-kaavioista; mittaritaulun paikka **⚠**
 - Öljynjäähdytin ja merivesihaara ovat suunnitteilla. Iskuventtiileistä päätettiin 2026-10-23 F1-61-kokoonpanolle (ei lisätä); PVG 32:lla PVLP-isku- ja imuventtiilit (2V2) arvioi pätevä henkilö **⚠**

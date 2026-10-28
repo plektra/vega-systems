@@ -43,7 +43,8 @@ vastaan.
 | 3G2 | Paluulinja ennen jäähdytintä | analoginen tai mittausliitin | 0–25 bar | Orbitrolin T-linjan raja 25 bar; näyttää jäähdyttimen ohitusventtiilin avautumisen kylmällä öljyllä | 3 |
 | 3Z2 | Paluusuodattimen mittari | analoginen, **olemassa**; siirretään näkyvämmäksi vain tarvittaessa | – | Suodattimen tukkeutuminen | – |
 | 1T1 | P1:n lähtö ennen vastaventtiiliä 1V7 | mittausliitin | 0–250 bar | Vianhaku: pumppu vai RPF3; P3:n testaus erikseen | 4 |
-| 1T2 | P1:n imuaukko | mittausliitin (alipaine) | −1…0 bar | Päätetty mittaus käyttöönotossa | päätetty |
+| 1G2 | P1:n imuaukko (3/4":n T-kappale) | analoginen kaksoispainemittari mittaritaulussa, 1/4":n mittausletku | −1…+1,5 bar | Kiinteä imupaineen seuranta; korvaa 1T2:n (pikaliitin käyttöönoton mittaukseen) [päätös 2026-10-28](../../decisions.md) | päätetty |
+| 2G2 | P2:n imuaukko (mittausvälikappale, sama aukko kuin 2B1) | analoginen kaksoispainemittari mittaritaulussa, 1/4":n mittausletku | −1…+1,5 bar | Imupaine ilman sähköä 2B1:n rinnalla [päätös 2026-10-28](../../decisions.md) | päätetty |
 | 2T1, 2T2 | Keulapotkurin A- ja B-linjat pohjalaatalla | mittausliittimet | 0–400 bar | Vianhaku: potkurin paine kumpaankin suuntaan, moottorin ja venttiilin kunto | 4 |
 | 1T3, 1T4 | Ohjaussylinterin A- ja B-linjat | mittausliittimet | 0–250 bar | Vianhaku: sylinterin ja orbitrolin iskuventtiilien vuodot | 5 (valinnainen) |
 
@@ -61,6 +62,8 @@ mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salam
 - **P2 (50 mm):** lyhyt teräsputki (Ø50, noin 100–150 mm) letkukaroilla tai letkuliittimellä
   molemmissa päissä ja siihen hitsattu 1/4" BSP -hitsausmuhvi; tai valmis 2" T-kappale
   1/4"-sivuaukolla. Asennetaan Parkerin imuliittimen ja letkun väliin.
+
+**Päätetty 2026-10-28:** kummallekin pumpulle kiinteä kaksoispainemittari (1G2, 2G2) mittaritauluun 1/4":n mittausletkulla; mittauspiste pumpun imuliittimessä. Osat: [hankintalista](../procurement.md#imupuolen-kaksoispainemittarit).
 
 **Ohjeita:**
 
@@ -86,7 +89,7 @@ mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salam
    paine jää venttiilin ollessa päällä alle rajan, veto on todennäköisesti katkennut, ja ESP32
    katkaisee venttiilin virran ([aux-circuit-ls-onoff](aux-circuit-ls-onoff.md#painevalvonta-arvio)).
 2. **Digitaalinen anturi 1B2 ohjauspiiriin** nykyisen mittarin 1G1 rinnalle.
-3. **Mittausliittimet** kohtiin 1T1, 1T2, 2T1, 2T2 ja 3G2 sekä yksi kannettava mittari: halvin tapa
+3. **Mittausliittimet** kohtiin 1T1, 2T1, 2T2 ja 3G2 (imupuolella kiinteät mittarit 1G2 ja 2G2, päätös 2026-10-28) sekä yksi kannettava mittari: halvin tapa
    saada vianhakuun kattava mittaus.
 4. Paluusuodattimen nykyinen mittari riittää; siirto näkyvämmäksi tarvittaessa.
 

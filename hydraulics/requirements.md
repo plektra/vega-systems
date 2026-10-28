@@ -206,7 +206,7 @@ keulapotkuri (noin 34 l/min, 250 bar).
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
 | P2:n lähtöpaine (2B2, ehdotus, prioriteetti 1) | PVH57:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | Valmiustila noin 20 bar; hälytys, jos paine pysyy korkeana, kun mitään toimintoa ei käytetä (LS-purku jumissa). Ks. [pressure-monitoring.md](design/pressure-monitoring.md) |
-| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (PVH57 mobiili: 2400 rpm imupaineella 0 bar), hälytys alle ~−0,2 bar. **Päätetty 2026-10-23.** P1: mittaus käyttöönotossa, ei kiinteää anturia |
+| Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (PVH57 mobiili: 2400 rpm imupaineella 0 bar), hälytys alle ~−0,2 bar. **Päätetty 2026-10-23.** P1: ei kiinteää anturia. **Lisäksi kiinteät kaksoispainemittarit 1G2 (P1) ja 2G2 (P2), −1…+1,5 bar, mittaritaulussa (päätös 2026-10-28)** |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
 ### 10.2 Ohjaus

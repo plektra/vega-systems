@@ -385,7 +385,9 @@ Avoimet:
 - [x] Säiliön öljypinnan korkeus P1:een nähden: vähintään 1 m [omistaja 2026-10-26]
 - [ ] P2:n 50 mm:n ulosotto uuteen kohtaan, jotta 32 mm:n ulosotto jää P1:lle
 - [ ] Painemittaus molempiin piireihin: ehdotus digitaalisista antureista (2B2 P2:n lähtö, 1B2 ohjauspaine), mittausliittimistä ja paluulinjan mittarista, ks. [pressure-monitoring.md](design/pressure-monitoring.md)
-- [ ] Anturit: öljyn lämpötila ja P2:n imupaine (malli, ESP32/Signal K -liitäntä); P1:n imupaineen mittaus käyttöönotossa
+- [ ] Anturit: öljyn lämpötila ja P2:n imupaine (malli, ESP32/Signal K -liitäntä)
+- [x] Imupaineen mittarit: kiinteät kaksoispainemittarit 1G2 (P1) ja 2G2 (P2) mittaritauluun (päätös 2026-10-28)
+- [ ] Mittaritaulun paikka konehuoneessa ja mittausletkujen reititys
 - [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23]
 - [x] Venttiilien tehtävät: Rexrothin 2/2-patruunaventtiili kytkee paineen CETOP-pohjalaatalle, BAV-713 ohjaa suuntaa [omistaja 2026-10-22]
 - [x] CETOP-pohjalaatta: Flowfit NG6, 4-paikkainen, rinnankytketty, P/T 1/2", A/B 3/8"
