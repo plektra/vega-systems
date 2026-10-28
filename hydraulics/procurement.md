@@ -1,6 +1,6 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** koottu 2026-10-28; imupuolen mittaus täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
+> **Tila:** koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
 > ykkösvaihtoehto 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
@@ -34,7 +34,7 @@ hitsataan silloin. Muhvi tehdään **uuteen kohtaan**, jotta vanha 32 mm:n uloso
 
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
-| 2.1 | Säiliöön hitsattava muhvi, 50 mm:n linjalle | 1 | kierre palloventtiilin mukaan (esim. 2" BSP **⚠ tarkista** venttiilistä); ulosotto vähintään 50 mm minimiöljypinnan alle eikä paluiden lähelle; säiliö puhdistetaan hitsauksen jälkeen | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-10-28] |
+| 2.1 | Säiliöön hitsattava muhvi, 50 mm:n linjalle | 1 | kierre palloventtiilin mukaan (esim. 2" BSP **⚠ tarkista** venttiilistä); ulosotto vähintään 50 mm minimiöljypinnan alle eikä paluiden lähelle; säiliö puhdistetaan ennen hitsausta ja sen jälkeen, ks. [puhdistus](#säiliön-puhdistus-hitsauksen-yhteydessä) | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-10-28] |
 | 2.2 | 90°:n kulmaliitin muhvin ja palloventtiilin väliin | 1 | täysi sisähalkaisija; mieluiten pitkäsäteinen, koska imupuolen marginaali on pieni [arvio] | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-10-28] |
 | 2.3 | Täysiaukkoinen palloventtiili 50 mm (2V0) | 1 | auki ajossa | 🔍 | – | [omistaja 2026-10-28] |
 | 2.4 | Letkukara 50 mm:n imuletkulle | 1 | palloventtiilin kierteeseen | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-10-28] |
@@ -57,6 +57,57 @@ hitsataan silloin. Muhvi tehdään **uuteen kohtaan**, jotta vanha 32 mm:n uloso
 | 3.5 | Kotelovuotoletku vähintään noin 1/2" | 1 | ylimmästä vuotoportista suoraan säiliöön öljypinnan alle, ei paluulinjaan | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#asennusjärjestys) |
 | 3.6 | Keulapotkurin (U11) vuotolinja 1/4" | 1 | tehdään uusiksi suoraan säiliöön öljypinnan alle | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-10-27] |
 | 3.7 | Säiliön läpiviennit tai muhvit vuotolinjoille (3.5 ja 3.6) | 1–2 | putki öljypinnan alle; tehdään samalla kertaa kuin muhvi 2.1 | 🛒 **⚠ tarkista**, voiko käyttää olemassa olevia aukkoja | **⚠ ei tiedossa** | [arvio] |
+
+## Säiliön puhdistus hitsauksen yhteydessä
+
+Muhvi 2.1 ja mahdolliset läpiviennit 3.7 hitsataan säiliöön, jossa on ollut öljyä. Ohje perustuu
+yleiseen hitsaus- ja hydrauliikkakäytäntöön, ei säiliön valmistajan ohjeeseen [arvio]. Hitsaus
+öljyä sisältäneeseen säiliöön on tulityötä: säiliö pidetään auki ja tuuletettuna, ja paikalla on
+sammutin ja palovartija.
+
+**Ennen hitsausta:**
+
+1. Valuta öljy pois ja imeytä loput imeytysliinoilla.
+2. Pese sisäpinnat **vesiohenteisella emäksisellä rasvanpoistoaineella** (esim. konepesuun
+   tarkoitettu teollisuuspesuaine) lämpimällä vedellä ja harjalla, ja huuhtele puhtaalla vedellä.
+   Isoille pinnoille tämä on halvin ja turvallisin keino.
+3. Kuivaa heti paineilmalla tai lämpöpuhaltimella, myös saumat ja nurkat. Teräs ruostuu nopeasti.
+4. Puhdista hitsauskohta paljaaksi metalliksi sisältä ja ulkoa noin 50–100 mm:n matkalta.
+   Pistemäiseen rasvanpoistoon käy kloorittoman jarrunpuhdistimen (esim. CRC Brakleen) pieni määrä;
+   anna sen haihtua kokonaan ja tuuleta muutama minuutti ennen hitsausta.
+
+**Ei ennen hitsausta:**
+
+- **Ei kloorattua jarrun- tai osienpuhdistinta.** Hitsauskaari hajottaa kloorihiilivetyjen höyryt
+  myrkylliseksi fosgeeniksi. Tarkista ainesosat pullosta tai käyttöturvallisuustiedotteesta: jos
+  niissä on *tetrachloroethylene*, *perchloroethylene* tai *dichloromethane*, ainetta ei käytetä.
+  Brakleenista on sekä kloorillinen että klooriton versio; Euroopassa myytävä on käsittääkseni
+  klooriton **⚠ tarkista** pullosta.
+- **Ei koko säiliön pesua liuottimilla** (jarrunpuhdistin, bensiini, tinneri, asetoni). Höyryt
+  ovat ilmaa raskaampia ja jäävät säiliön pohjalle, jossa kipinä voi sytyttää ne räjähdysmäisesti.
+  Hydrauliöljyn leimahduspiste on korkea, joten öljyjäämät ovat pienempi riski kuin liuotinhöyryt.
+
+**Hitsauksen jälkeen** (nyt vaarallisinta ovat metallihiukkaset, jotka kulkeutuisivat uudelle
+PVH57:lle):
+
+1. Poista hitsausroiskeet, kuona ja hiomapöly harjalla ja kaapimella, sitten imurilla. Magneetti
+   muovipussin sisällä kerää teräspölyn.
+2. Tarkista hitsin takapuoli. Jos säiliö on maalattu sisältä (**⚠ ei tiedossa**), hio palanut maali
+   pois; maalaa uudelleen vain öljynkestävällä säiliömaalilla. Jarrunpuhdistin voi pehmentää maalia,
+   joten kokeile sitä ensin pieneen kohtaan.
+3. Pyyhi nukkaamattomalla liinalla, ei trasselilla eikä puuvillarätillä. Liuotinpyyhintään käy
+   klooriton jarrunpuhdistin tai isopropanoli, kun säiliö on jäähtynyt; tuuleta ennen täyttöä.
+4. Huuhtele seinät ja pohja muutamalla litralla öljyä (huuhteluöljy 8.1 tai HVLP 32) ja tyhjennä.
+   Huuhteluun käytetty erä ei palaa järjestelmään. Öljy poistaa veden ja pesuainejäämät ja jättää
+   suojaavan öljykalvon.
+5. Tarkista taskulampulla: puhtaalla liinalla pyyhitty pinta ei saa enää värjätä liinaa.
+6. Täytä suodattimen läpi. Käyttöönotto jatkuu huuhtelupäätöksen mukaan: koeajot huuhteluöljyllä
+   uuden suodatinelementin läpi, sitten elementin ja öljyn vaihto
+   ([päätös 2026-10-27](../decisions.md), [hydraulic-oil](design/hydraulic-oil.md)). Tavoite on
+   puhtausluokka 16/14/12.
+
+Tarvikkeet: imeytysliinat, vesiohenteinen rasvanpoistoaine, nukkaamattomat liinat, klooriton
+jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 
 ## 4. Venttiilipöytä Danfoss PVG 32 ja ohjaus
 
@@ -163,6 +214,7 @@ osa niistä tarvitaan varavaihtoehdoissa, joten **ne kannattaa myydä vasta, kun
 - [ ] PVG 32:n kokoonpanokoodi 157N553(8/B): kara, pumppumoduuli, PVLP-paikat ja P-portin koko (rivit 3.3, 4.11–4.14)
 - [ ] PVH57:n laippa- ja porttikoot (Eaton M-2206-S): imu-, paine-, vuoto- ja LS-portit (rivit 2.7, 3.1, 3.4, 3.5)
 - [ ] Veneellä: 50 mm:n palloventtiili ja sen kierre (2.1–2.4), 50 mm:n imuletku ja sen pituus (2.5), nykyisen 3/4":n painelinjan kunto (3.2), 2G1:n mittausalue (4.5), säiliön vapaat aukot vuotolinjoille (3.7)
+- [ ] Veneellä: onko säiliö maalattu sisältä, ja onko käytettävä jarrunpuhdistin klooriton ([puhdistus](#säiliön-puhdistus-hitsauksen-yhteydessä))
 - [ ] Taper Lock -holkkien koodit ja HRC 150:n napatyyppi (1.2–1.5)
 - [ ] Jäähdyttimen asennus ja paluusuodattimen malli (5.3–5.9)
 - [x] Imupuolelle kiinteät kaksoispainemittarit molempiin pumppuihin, mittaritauluun (päätös 2026-10-28)
