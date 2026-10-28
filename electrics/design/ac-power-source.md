@@ -174,7 +174,10 @@ sivun kuvasta, ks. [datasheets](../../datasheets/README.md#sähköjärjestelmä)
 
 | Ominaisuus | Arvo |
 |---|---|
-| Kuvaus | "5000VA 230v to 230v CTE Hardwired" |
+| Tyyppikilpi | **WM5002 MCB**, Safety Isolating Transformer, 5000 VA, EN 61558-2-23, Made in UK ([omistajan kuva 2026-10-28](../img/isolation-transformer-wm5002-plate.jpg)) |
+| Ensiön johtimet | 0–230 V: sininen (0) – ruskea (230 V) [tyyppikilpi] |
+| Toision johtimet | 115–0–115 V: **musta – vihreä (keskipiste) – punainen** [tyyppikilpi] |
+| Kuvaus | "5000VA 230v to 230v CTE Hardwired" [datalehti] |
 | Teho | 5000 VA |
 | Ensiö | 230 V, 22 A, ruuviliittimet (PA220, 3-napainen) |
 | Toisio | 230 V, **CTE** (keskipiste maadoitettu), ruuviliittimet |
@@ -214,6 +217,11 @@ Erotusmuuntaja on tähän paras ratkaisu (galvaaninen erotin on halvempi mutta h
   (ISO 13297 -tyyppinen ratkaisu) toision **toinen pää kytketään suojamaahan**, jolloin siitä tulee
   nolla [laskelma/yleinen käytäntö, **⚠ tarkista** sähköasentajalta]. **Kysy Airlinkiltä vielä,**
   saako toision pään maadoittaa (pitäisi onnistua turvaerotusmuuntajassa, mutta vahvista).
+
+  **Kytkentäehdotus tyyppikilven mukaan** (ei vielä hyväksytty; sähköasentaja tarkistaa):
+  vihreän keskipisteliittimen maasilta irrotetaan, ja vihreä jää kytkemättä; musta = nolla (N),
+  joka sillataan veneen suojamaahan; punainen = vaihe (L) → Mass Combin AC-tulo. Kumpi pää
+  valitaan nollaksi, on sähköisesti yhdentekevää, kunhan valinta merkitään.
 - **Maadoitus (ISO 13297 -tyyppinen ratkaisu):** toision nolla kytketään veneen suojamaahan ja
   runkoon, toisiolle tulee oma vikavirtasuoja, eikä laiturin suojamaata kytketä runkoon.
 
@@ -295,6 +303,7 @@ akuston noin kolmasosaan.
 - [x] WM5002:n CTE-toisio: keskipisteen maasilta irrotetaan, jolloin lähtö on 230 V [omistaja 2026-10-28, Airlinkin sähköposti]
 - [ ] Saako WM5002:n toision toisen pään maadoittaa nollaksi (Airlink, sähköasentaja)?
 - [ ] WM5002:n sijoituspaikka (kuiva, IP23, 25 kg)
+- [ ] Tyyppikilven malli on **WM5002 MCB**: onko ensiön suojana MCB-johdonsuoja datalehden SP30-painikesuojan sijaan? (**⚠ tarkista** kotelon sisältä)
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
 - [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)
