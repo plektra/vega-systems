@@ -184,6 +184,16 @@ Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja ase
   MasterBusin kautta; muun valmistajan akun tai omista kennoista kootun akuston kanssa tarvitaan
   BMS:n ohjauslähtö säätimen sallintatuloon (**⚠ tarkista** Alpha Pro III:n ohjeesta) tai
   CAN-yhteensopiva säädin (esim. Wakespeed WS500).
+  **Sterling Alternator Protection Device (APD24)**
+  ([sterling-power.com](https://sterling-power.com/products/alternator-open-circuit-protection-device);
+  haettu 2026-10-28): rinnankytkettävä suojalaite, joka leikkaa laturin jännitepiikin, kun kuorma
+  katoaa äkillisesti. Ei kulje päävirtaa, joten ohut johdotus riittää; 90 × 90 × 60 mm, 0,25 kg.
+  Leikkausjännitettä ja energiankestoa ei löytynyt (**⚠ ei tiedossa**). **Arvio:** halpa
+  lisäsuoja laturille, mutta ei korvaa BMS:n ohjausta säätimelle: se ei estä tilannetta, jossa
+  laturi jatkaa lataamista ilman akkua ja DC-kuormat jäävät laturin varaan, eikä se kerro
+  säätimelle, miksi BMS katkaisi. **Suositus: molemmat** – BMS:n ohjaus säätimelle ensisijaisena
+  ja APD24 varasuojana. Älä sekoita samannimiseen Sterling Pro Protect A -tuotteeseen, joka
+  kytketään laturin ja akun väliin.
 - **Nykyinen 65 A:n laturi** kannattaa jättää lataamaan käynnistysakkuja; uusi laturi lataa
   käyttöakustoa.
 - **Signal K:** MasterBusista NMEA 2000:aan tarvitaan liitäntälaite (**⚠ tarkista** saatavuus).
