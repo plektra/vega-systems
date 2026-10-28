@@ -1,6 +1,6 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
-> **Tila:** päivitetty 2026-10-28: 1V5 on olemassa (P2:n nykyinen palloventtiili). 2026-10-27: **arkki 2 piirretty uudelleen** (P2 = Vickers PVH57, HRC 150, venttiileiksi Danfoss PVG 32, ykkösvaihtoehto); F1-61-kokoonpanon arkki 2 ja sen taulukot [arkistoitu](design/archive/schematic-sheet-2-f1-61.md). Aiemmin 2026-10-23 ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
+> **Tila:** päivitetty 2026-10-28: 1V5 on olemassa (P2:n nykyinen palloventtiili); 2V0 todennäköisesti olemassa **⚠ tarkista**. 2026-10-27: **arkki 2 piirretty uudelleen** (P2 = Vickers PVH57, HRC 150, venttiileiksi Danfoss PVG 32, ykkösvaihtoehto); F1-61-kokoonpanon arkki 2 ja sen taulukot [arkistoitu](design/archive/schematic-sheet-2-f1-61.md). Aiemmin 2026-10-23 ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
 > Yhtenäinen viiva = olemassa tai päätetty, katkoviiva = suunnitteilla tai vaihtoehto.
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
 > [design/p2-variable-pump.md](design/p2-variable-pump.md), [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md), [arkisto: p2-pump-options](design/archive/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
@@ -59,7 +59,7 @@ Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61
 | 2M1 | Advance 300 PTO | 1:1, Ø48 mm kiila-akseli, ≤ 420 Nm; pyörii vastakkaiseen suuntaan kuin kone | [current-system §0](current-system.md), [omistaja 2026-10-23] |
 | 2Z3 | HRC 150 -joustokytkin | Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu); momentti noin 600 Nm **⚠ vahvista** | [päätös 2026-10-27](../decisions.md), [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
 | 2P1 | Vickers PVH57C-LAF-1S-10-C12V-31 | 57,4 cm³/r, LS-säädin, paineraja 250 bar, valmiustila noin 20 bar, pyörimissuunta L; SAE C -laippa omalla kannakkeella; kotelovuoto omana letkuna säiliöön | [p2-variable-pump](design/p2-variable-pump.md#tekniset-tiedot), [päätös 2026-10-27](../decisions.md) |
-| 2V0 | Imulinjan palloventtiili | täysiaukkoinen; imu 50 mm | [päätös 2026-10-23](../decisions.md) |
+| 2V0 | Imulinjan palloventtiili | täysiaukkoinen 50 mm; todennäköisesti jo olemassa **⚠ tarkista veneellä**; imu 50 mm | [päätös 2026-10-23](../decisions.md), [omistaja 2026-10-28] |
 | 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar | [päätös 2026-10-23](../decisions.md) |
 | 2B2 | P2:n lähtöpaineanturi (ehdotus) | 0–400 bar; valmiustilan ja vedon valvonta → ESP32 / Signal K | [pressure-monitoring](design/pressure-monitoring.md) |
 | 2V1 | Danfoss PVG 32, 5 lohkoa (käytetty) | P 350 bar (PVSI) / 300 bar (PVS), T enintään 25 bar staattinen; kokoonpanokoodi 157N553(8/B) **⚠ tarkista**; kunto tuntematon, puhdistus ja koestus | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
