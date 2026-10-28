@@ -77,12 +77,17 @@ tähän käyttöön (**⚠ arviot**, tarkistetaan valittujen akkujen datalehdist
 
 ### 2.2 Huipputeho ja invertteri [laskelma]
 
-Kiuas yksin mahtuu 3 kW:n invertteriin, mutta ruoanlaitossa kuormat osuvat päällekkäin: esim. liesi
-(arvio 3 kW) ja vedenkeitin (arvio 2 kW) ovat yhdessä noin 5 kW. **Invertterin pitää olla noin 5 kW**
-(**⚠ arvio**, tarkistetaan tyyppikilvistä), tai sitten tarvitaan kuormanhallinta, joka estää
-suurten kuormien yhtäaikaisen käytön (esim. kiuas ja vedenlämmitin pois, kun liesi on päällä).
+**Liesi ja uuni yhdessä ottavat enintään noin 3 kW** [omistaja 2026-10-28]. Niiden kanssa
+jääkaappi, ilmanvaihto, liesituuletin ja laturit tekevät yhteensä noin 3,3 kW (**⚠ arvio**), mikä
+mahtuu 3,5 kW:n invertteriin. Yli 3,5 kW mennään vain, jos samaan aikaan on päällä toinen suuri
+laite: vedenkeitin (arvio 2 kW), kahvinkeitin (arvio 1 kW), kiuas (2,3 kW) tai vedenlämmittimen
+vastus (3 kW). Siksi joko **käyttötapa** (ei vedenkeitintä lieden ollessa täysillä, ei saunaa ja
+ruoanlaittoa yhtä aikaa) tai **kuormanhallinta**, joka pudottaa kiukaan ja vedenlämmittimen pois,
+kun keittiökuorma on suuri. Aiempi arvio 5 kW:n invertteristä perustui lieden ja vedenkeittimen
+yhtäaikaiseen käyttöön.
 Kuormanhallinnan voisi tehdä omilla ESP32-PDM-moduuleilla ([current-system.md](../current-system.md#4-valvonta-verkot-ja-tehonjako)).
-5 kW:n invertteri ottaa 24 V:n akustosta noin 230 A, mikä vaatii järeät kaapelit ja sulakkeet.
+3,5 kW:n invertteri ottaa 24 V:n akustosta täydellä teholla noin 160 A, mikä vaatii järeät kaapelit
+ja sulakkeet.
 
 #### Ehdokas: Mastervolt Mass Combi Ultra 24/3500-100 (230 V)
 
@@ -92,15 +97,15 @@ valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
 
 | Ominaisuus | Arvo | Mitä se tarkoittaa Vegalle [laskelma] |
 |---|---|---|
-| Invertteri | 3500 W jatkuva @ 40 °C, huippu 7000 W | Kiuas (2,3 kW), jääkaappi, ilmanvaihto, televisio ja laturit yhtä aikaa onnistuvat. Sähköliesi ja vedenkeitin yhtä aikaa (arvio 5 kW) eivät onnistu ilman kuormanhallintaa. Kaasu- tai diesellieden kanssa 3500 W riittää. |
+| Invertteri | 3500 W jatkuva @ 40 °C, huippu 7000 W | Kiuas (2,3 kW), jääkaappi, ilmanvaihto, televisio ja laturit yhtä aikaa onnistuvat. Myös liesi ja uuni yhdessä (enintään noin 3 kW [omistaja 2026-10-28]) pienkuormineen mahtuvat. Ei riitä, jos lieden ja uunin lisäksi päällä on vedenkeitin, kahvinkeitin tai kiuas. |
 | Akkuvirta | – | 3500 W:lla noin 160 A (hyötysuhde 92 %, **⚠ arvio**), huipussa yli 300 A. Akuston BMS:n, kaapeleiden ja sulakkeen pitää kestää se. |
 | Laturi | 100 A @ 28,5 V (≈ 2,9 kW) | Maasähköstä tai generaattorista täysi ankkurivuorokausi (≈ 12,7 kWh) latautuu noin 4,5 tunnissa. |
 | Power Assist | on | Rajoittaa maasähkön tai generaattorin kuormaa ja täydentää akuilta. Mahdollistaa pienemmän generaattorin. |
 | Rinnankytkentä | enintään 10 kpl | Jos sähköliesi valitaan, toisen yksikön voi lisätä myöhemmin (yhteensä 7000 W). |
 | Hinta | 3 126 € ([SVB24](https://www.svb24.com/en/mastervolt-mass-combi-ultra-charger-inverter-24-v-3500-w-100-a.html)); 3 549 £ sis. ALV ([Chas the Boat, UK](https://shop.chastheboat.co.uk/products/mass-combi-ultra-inverter-charger-24-3500-100-38023500)) | Haettu 2026-10-28 |
 
-**Arvio:** laite sopii Vegalle hyvin, jos ruoanlaitto ei ole sähköllä tai suurille kuormille tehdään
-kuormanhallinta. Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
+**Arvio:** laite sopii Vegalle myös sähköruoanlaitolla, kun kiuasta tai vedenkeitintä ei käytetä
+yhtä aikaa täysillä olevan lieden ja uunin kanssa. Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
 (MasterBus) **⚠ tarkista**.
 
 ### 2.3 Lataus ajossa [laskelma]
@@ -203,8 +208,8 @@ laitteet asennetaan ja ovatko ne sähköllä toimivia.** Alla olevat koot koskev
 kaikki harkinnassa olevat laitteet asennetaan sähköisinä. Ratkaistava on lisäksi, riittääkö ajo
 lataukseen vai tarvitaanko dieselgeneraattori.
 
-1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–175 A, ks. kohta 2.5) pääkoneeseen, noin 5 kW:n invertteri
-   tai kuormanhallinta, ja litiumakusto. Akuston koko riippuu ankkuripäivistä:
+1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–175 A, ks. kohta 2.5) pääkoneeseen, noin 3,5 kW:n invertteri
+   (ks. kohta 2.2), ja litiumakusto. Akuston koko riippuu ankkuripäivistä:
    - **noin 400 Ah**, jos saunotaan vain ajopäivinä tai satamassa maasähköllä;
    - **noin 650 Ah**, jos halutaan yksi täysi ankkurivuorokausi saunoineen ilman ajoa.
 

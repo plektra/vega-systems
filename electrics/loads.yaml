@@ -49,6 +49,7 @@ loads:
     status: candidate
     power_W: null
     power_W_estimate: 3000         # kaikki levyt päällä; levyjen määrä ⚠ ei tiedossa
+    combined_with_oven_max_W: 3000 # liesi ja uuni yhdessä enintään noin 3 kW [omistaja 2026-10-28]
     use_h_per_day: 0.5             # vastaa noin 1 h keskimäärin puolella teholla
     at_anchor: true
     source: "[omistaja 2026-10-28]; teho arvio"
