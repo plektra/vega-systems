@@ -1,6 +1,6 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** koottu 2026-10-28 suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
+> **Tila:** koottu 2026-10-28; imupuolen mittaus täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
 > ykkösvaihtoehto 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
@@ -41,7 +41,10 @@ hitsataan silloin. Muhvi tehdään **uuteen kohtaan**, jotta vanha 32 mm:n uloso
 | 2.5 | Imuletku 50 mm | **⚠ pituus** (noin 3 m) | imuun soveltuva, ei painu kasaan alipaineessa | 🛒 **⚠ tarkista**, onko olemassa | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
 | 2.6 | Letkunkiristimet, ruostumattomat | 4 | kaksi kumpaankin päähän | 🛒 | pieni | [arvio] |
 | 2.7 | Pumpun imuliitin: SAE-laippa, O-rengas, pultit ja letkukara tai supistus 50 mm:n letkuun | 1 | laipan koko pumpusta **⚠** | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
-| 2.8 | Imupaineanturi 2B1, −1…+1 bar, ja liitin pumpun imuaukon lähelle | 1 | Signal K:hon; varoitus alle 0 bar | 🛒 päätetty | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
+| 2.8 | Mittausvälikappale letkun ja pumpun imulaipan väliin: lyhyt Ø50-teräsputki (noin 100–150 mm), jossa hitsattu 1/4" BSP -muhvi kyljessä, tai valmis 2":n T-kappale 1/4":n sivuaukolla | 1 | mahdollisimman lähellä pumppua, jotta mittaus sisältää koko linjan häviöt; BSPP ja tiivistealuslevy, ei kartiokierrettä (imupuolen vuoto imee ilmaa) | 🛒 | **⚠ ei tiedossa** | [pressure-monitoring](design/pressure-monitoring.md#imupaineen-mittaus) |
+| 2.9 | 1/4" BSP -T-kappale mittausaukkoon | 1 | anturi 2B1 ja mittarin letku samaan aukkoon | 🛒 | pieni | [arvio] |
+| 2.10 | Imupaineanturi 2B1, −1…+1 bar, 4–20 mA | 1 | Signal K:hon; varoitus alle 0 bar | 🛒 päätetty | noin 40–150 € [arvio] | [päätös 2026-10-23](../decisions.md) |
+| 2.11 | Kaksoispainemittari (vakuumi ja paine) −1…+1,5 bar, glyseriinitäytteinen, Ø63 mm, takaliitäntä | 1 | P2:n imupaine ilman sähköä; ks. [kiinnitys](#imupuolen-kaksoispainemittarit) | ❓ ehdotus | noin 15–40 € [arvio] | [pressure-monitoring](design/pressure-monitoring.md#imupaineen-mittaus) |
 
 ## 3. P2:n paine-, vuoto- ja LS-linjat
 
@@ -104,8 +107,22 @@ siirretään P2:n vanhaan 32 mm:n letkuun ja ulosottoon.
 |---|---|---|---|---|---|---|
 | 6.1 | 32 mm:n imuletku, säiliöulosotto ja täysiaukkoinen palloventtiili | – | P2:n nykyinen imulinja | ✅ | – | [omistaja 2026-10-28] |
 | 6.2 | Letkukara 32 mm ja 3/4" BSP -liitin P1:n imuaukkoon | 1 | | 🛒 | pieni | [p1-steering-pump](design/p1-steering-pump.md#avoimet-kysymykset) |
-| 6.3 | 3/4":n T-kappale, jossa 1/4":n sivuaukko | 1 | imupaineen mittaukseen | 🛒 | pieni | sama |
-| 6.4 | Alipainemittari −1…0 bar | 1 | käyttöönoton mittaus | 🛒 | noin 20–40 € [arvio] | sama |
+| 6.3 | 3/4":n T-kappale, jossa 1/4":n sivuaukko | 1 | letkukaran ja P1:n imuaukon väliin; BSPP ja tiivistealuslevy | 🛒 | pieni | sama |
+| 6.4 | Kaksoispainemittari (vakuumi ja paine) −1…+1,5 bar, glyseriinitäytteinen, Ø63 mm, takaliitäntä | 1 | pelkkä −1…0 bar:n alipainemittari ei näytä pysähdyksissä olevaa pientä ylipainetta (öljypinta vähintään 1 m pumpun yläpuolella); käyttöönotossa pakollinen, kiinteänä ehdotus | 🛒 | noin 15–40 € [arvio] | sama, [pressure-monitoring](design/pressure-monitoring.md#imupaineen-mittaus) |
+
+## Imupuolen kaksoispainemittarit
+
+Ehdotus [arvio], ei vielä päätetty:
+
+- **Mittauspiste pumpun imuliittimeen** (rivit 2.8 ja 6.3), ei säiliön päähän: vain siinä mittaus
+  sisältää letkun, kulman ja palloventtiilin häviöt, eli juuri sen paineen, jonka pumppu näkee.
+- **Mittaria ei kiinnitetä suoraan liittimeen**, vaan seinään tai pieneen mittaritauluun luettavaan
+  paikkaan ja yhdistetään 1/4":n mittausletkulla (rivit 7.5 ja 7.6). Pumppu ja letku tärisevät,
+  PTO:n kytkimen vieressä mittaria on vaikea ja vaarallista lukea käydessä, ja letku suojaa mittaria
+  iskuilta. Molemmat imumittarit voivat olla samassa taulussa, myös 2G1:n ja 1G1:n vieressä.
+- **Mittausletku täytetään öljyllä** (ilmataan mittarin päästä), ja kaikki liitokset tiivistetään
+  huolella: imupuolen vuoto imee ilmaa pumppuun.
+- Imupuolella ei tarvita paineiskun vaimenninta.
 
 ## 7. Anturit ja mittaus
 
@@ -114,7 +131,9 @@ siirretään P2:n vanhaan 32 mm:n letkuun ja ulosottoon.
 | 7.1 | Öljyn lämpötila-anturi 3B1 | 1 | varoitus 65 °C, hälytys 70 °C → ESP32 / Signal K | 🛒 päätetty | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
 | 7.2 | P2:n lähtöpaineanturi 2B2, 0–400 bar | 1 | ehdotus, prioriteetti 1 | ❓ | **⚠ ei tiedossa** | [pressure-monitoring](design/pressure-monitoring.md#suositus) |
 | 7.3 | Ohjauspaineen anturi 1B2, 0–250 bar | 1 | ehdotus | ❓ | **⚠ ei tiedossa** | sama |
-| 7.4 | Mittausliittimet (1T1, 1T2, 2T1, 2T2, 3G2) ja kannettava mittari | 5 + 1 | ehdotus | ❓ | **⚠ ei tiedossa** | sama |
+| 7.4 | Mittausliittimet (1T1, 2T1, 2T2, 3G2) ja kannettava mittari | 4 + 1 | ehdotus; P1:n imupuolelle (1T2) kiinteä mittari pikaliittimen sijaan, koska pikaliittimen tiiviys alipaineessa on epävarma | ❓ | noin 5–15 € / kpl [arvio] | sama |
+| 7.5 | Mittausletku 1/4" (esim. Minimess-mittausletku tai ohut hydrauliletku) ja liittimet | 2 | imupuolen mittareille; pituus mittaritaulun paikan mukaan **⚠** | ❓ | **⚠ ei tiedossa** | [arvio] |
+| 7.6 | Mittaritaulu tai kiinnityslevy (Ø63 mm:n mittareille) | 1 | luettavaan paikkaan konehuoneessa; paikka **⚠** | ❓ | **⚠ ei tiedossa** | [arvio] |
 
 ## 8. Öljy
 
@@ -146,3 +165,4 @@ osa niistä tarvitaan varavaihtoehdoissa, joten **ne kannattaa myydä vasta, kun
 - [ ] Veneellä: 50 mm:n palloventtiili ja sen kierre (2.1–2.4), 50 mm:n imuletku ja sen pituus (2.5), nykyisen 3/4":n painelinjan kunto (3.2), 2G1:n mittausalue (4.5), säiliön vapaat aukot vuotolinjoille (3.7)
 - [ ] Taper Lock -holkkien koodit ja HRC 150:n napatyyppi (1.2–1.5)
 - [ ] Jäähdyttimen asennus ja paluusuodattimen malli (5.3–5.9)
+- [ ] Omistajat: tuleeko imupuolelle kiinteät kaksoispainemittarit vai pelkkä käyttöönoton mittaus (P1) ja anturi (P2); mittaritaulun paikka (2.11, 6.4, 7.5–7.6)
