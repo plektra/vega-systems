@@ -184,6 +184,16 @@ Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja ase
   MasterBusin kautta; muun valmistajan akun tai omista kennoista kootun akuston kanssa tarvitaan
   BMS:n ohjauslähtö säätimen sallintatuloon (**⚠ tarkista** Alpha Pro III:n ohjeesta) tai
   CAN-yhteensopiva säädin (esim. Wakespeed WS500).
+  **BMS-viestin vastaanotto (haettu 2026-10-28; käyttöohjetta ei saatu luettua):** Alpha Evo
+  -laturissa itsessään ei ole tuloa BMS:lle; ohjaus tapahtuu Alpha Pro III -säätimen kautta.
+  Hakutulosten käyttöohjeotteiden mukaan säädin käynnistyy **Reg on** -liittimestä (ruskea johdin)
+  virtalukon kautta, ja ohje mainitsee lisäkytkimen sarjaan laturin sammuttamiseksi käsin
+  ([Alpha Pro -käyttöohje, manualslib](https://www.manualslib.com/manual/3394219/Mastervolt-Alpha-Pro.html)).
+  **BMS:n "lataus sallittu" -relekosketin voidaan siis luultavasti kytkeä Reg on -johtimeen
+  sarjaan** (**⚠ tarkista** käyttöohjeesta ja Mastervoltilta). D+ on vain merkkivalo- ja
+  hälytyslähtö. MasterBusin kautta säädin lukee Mastervoltin MLI Ultra -akkua; muun BMS:n
+  latauksenestoa MasterBusin kautta ei löytynyt. Relekoskettimen pitää avautua **ennen** kuin
+  BMS katkaisee akuston (BMS:n ennakkovaroituslähtö tai viive katkaisuun).
   **Sterling Alternator Protection Device (APD24)**
   ([sterling-power.com](https://sterling-power.com/products/alternator-open-circuit-protection-device);
   haettu 2026-10-28): rinnankytkettävä suojalaite, joka leikkaa laturin jännitepiikin, kun kuorma
@@ -377,5 +387,5 @@ akuston noin kolmasosaan.
 - [ ] Tyyppikilven malli on **WM5002 MCB**: onko ensiön suojana MCB-johdonsuoja datalehden SP30-painikesuojan sijaan? (**⚠ tarkista** kotelon sisältä)
 - [ ] Nykyisten akkujen tyyppi ja kapasiteetti; mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
-- [ ] Akuston BMS:n ja laturin säätimen yhteistoiminta (katkaisu ennen kuin BMS irrottaa akuston)
+- [ ] Akuston BMS:n ja laturin säätimen yhteistoiminta: BMS:n relekosketin Alpha Pro III:n Reg on -tuloon? Lue Alpha Pro III:n käyttöohje (ei auennut istunnosta)
 - [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)
