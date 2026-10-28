@@ -151,8 +151,10 @@ hinnat, jotka voivat olla vanhentuneita:
 
 | Laturi | Lähde | Hinta | Huomio |
 |---|---|---|---|
-| Mastervolt Alpha 24/150 Evo ja Alpha Pro III -säädin | [Blue Bottle Marine](https://www.bluebottlemarine.com/products/mastervolt-alpha-24-150-evo-kit-c-w-alpha-pro-iii.html) | 1 476 € | säädin mukana |
+| Mastervolt Alpha 24/150 Evo ja Alpha Pro III -säädin (48624152) | [Nauticsale](https://www.nauticsale.com/en/mastervolt-alpha-alternator-24-150-iv-incl-alpha-p.html); [Alter Marine, EE](https://www.marine.ee/en/a/alpha-24-150-evo-kit-c-w-alpha-pro-iii) | **2 862 € sis. ALV**; 2 933 € (EE, ei varastossa) | säädin mukana. Aiempi 1 476 €:n hinta ([Blue Bottle Marine](https://www.bluebottlemarine.com/products/mastervolt-alpha-24-150-evo-kit-c-w-alpha-pro-iii.html)) oli luultavasti valuuttamuunnos Australian dollarin hinnasta 2 399 AUD, eikä se ole EU-hinta |
 | Mastervolt Alpha 24/150 MB | [Philippi, DE](https://www.philippi-online.de/en/?p=34174) | 2 420 € sis. ALV | säädin **⚠ tarkista**, onko mukana |
+| Alpha Pro III -säädin erikseen (45513000) | [Del City, US](https://delcity.net/store/Charge-Regulator/p_960412.h_960414) | noin 330–450 USD, ilman ALV:tä | akun lämpötila-anturi mukana |
+| Laturin lämpötila-anturi 41500400 | [Zoro, US](https://zoro.com/mastervolt-alternator-temperature-sensor-41500400/i/G703077252) | noin 17–26 USD | lisävaruste |
 | Prestolite 24 V / 175 A | [SEIMI, FR](https://www.seimi-equipements-marine.com/en/electricity/alternators-regulators/alternators/prestolite-alternator-24-175-a/pdt_2563) | 1 304 € sis. ALV | ulkoinen säädin erikseen |
 | DelStar 24 V / 200 A | [Bermantec](https://bermantec.com/shop/products/alternators-spare-parts/marine-alternators/delstar-alternator-24v-for-mastervolt-pad-mount-1170-20201/) | hinta ei näkyvissä; toisella myyjällä noin 4 600 USD | ainoa löydetty 24 V / 200 A |
 | Ulkoinen säädin: Wakespeed WS500 | [invertersrus](https://invertersrus.com/product-category/inverter-brands/wakespeed/) | 650–820 USD | litiumille sopiva |
@@ -164,7 +166,7 @@ hihnaveto sen** (usein tarvitaan leveä moniurahihna).
 
 **Johtopäätös [laskelma]:** 150–175 A riittää. 200 A:n laturi lyhentäisi täyden ankkurivuorokauden
 latausta vain noin 2,8 tunnista 2,3 tuntiin, mutta 24 V:n 200 A:n laturit maksavat moninkertaisesti.
-Laturi ja säädin maksavat noin **1 500–2 500 €** ilman kiinnikettä ja asennusta (**⚠ arvio**).
+Mastervoltin laturi ja säädin maksavat EU:ssa noin **2 900 €**. Prestolite 175 A ja erillinen säädin (Alpha Pro III tai Wakespeed) maksaisivat arviolta **1 700–2 100 €**. Hinnoissa ei ole kiinnikettä, hihnaa, kaapeleita eikä asennusta (**⚠ arvio**, haettu 2026-10-28).
 
 #### Alpha 24/150 Evo, Alpha Pro III ja Mass Combi Ultra yhdessä (haettu 2026-10-28)
 
