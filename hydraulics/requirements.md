@@ -94,11 +94,11 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 
 | Parametri | Arvo | Yksikkö |
 |---|---|---|
-| DC-jännite | 24 (vahvistamatta) | V |
+| DC-jännite | 24 (vahvistettu [omistaja 2026-10-27]) | V |
 | Koneen laturi | 65 | A |
 | Käyttöakuston kapasiteetti | TBD | Ah |
 | Hydrauliikalle käytettävissä oleva jatkuva DC-virta | TBD | A |
-| Generaattori (AC) | TBD | kVA, V, Hz |
+| Generaattori (AC) | Ei asennettu [omistaja 2026-10-28]; hydrauligeneraattoria ei suositella, ks. [ac-power-source.md](../electrics/design/ac-power-source.md) | kVA, V, Hz |
 | Maasähkö | TBD | A, V, Hz |
 
 ## 5. Hydrauliset kuormat (yhteenveto)

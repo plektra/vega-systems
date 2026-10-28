@@ -137,7 +137,8 @@ usein korkeilla kierroksilla, tai jos tavoitteeksi tulee jokin
    kuristuu aina lämmöksi.
 3. **Jatkuvat kuormat koneen käydessä,** esim. hydraulisesti käytetty generaattori tai pumppu:
    vakiovirtaus kierroksista riippumatta ilman ylimäärän kuristamista. Tällaisia kuormia ei ole nyt
-   suunnitelmissa.
+   suunnitelmissa; hydrauligeneraattoria ei suositella (ks.
+   [ac-power-source.md](../../electrics/design/ac-power-source.md), 2026-10-28).
 4. **Paineen pito ilman virtausta,** esim. sylinterin pitäminen paineessa: pumppu lepää
    nollatuotolla, kun kiinteän pumpun koko tuotto menisi paineenrajoittimen yli.
 

@@ -1,6 +1,6 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-27 (24 V vahvistettu). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-28 (generaattori ei asennettu, AC-tarve). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
@@ -18,7 +18,8 @@
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Generaattori | Tila varattu konehuoneen paapuurin puolelle; **⚠ tarkista**, onko asennettu | [blogi 2017-04-19] |
+| Generaattori | **Ei asennettu.** Tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
+| AC-sähkön tarve | Ajossa ja ankkurissa. Suurin ankkurikuorma 2,3 kW:n sähkökiuas, kerrallaan noin 2 h. Vaihtoehdot: [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
 | Maasähkö | **⚠ ei tiedossa** | |
 | Invertteri | **⚠ ei tiedossa** | |
 
@@ -48,6 +49,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Vahvista 24 V:n DC-jännite: 24 V [omistaja 2026-10-27]
 - [ ] Akkujen tyypit ja kapasiteetit (käyttö ja käynnistys)
 - [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit
-- [ ] Generaattori ja maasähkö: asennettu vai suunnitteilla?
+- [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
+- [ ] Maasähkö: onko laiturissa?
 - [ ] Pääkeskus ja jakelun rakenne
 - [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä
