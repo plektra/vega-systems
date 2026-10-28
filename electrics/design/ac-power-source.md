@@ -59,10 +59,21 @@ kohta 4.
 | **Akustosta** (invertterin hyötysuhde 90 %) | **≈ 12,7 kWh** |
 | Ilman kiuasta, akustosta | ≈ 7,5 kWh |
 
-| Akustotarve yhdelle ankkurivuorokaudelle (80 % käytettävissä, 24 V) | Ah |
-|---|---|
-| Saunan kanssa | ≈ 660 Ah (≈ 16 kWh nimellistä) |
-| Ilman saunaa | ≈ 390 Ah (≈ 9,4 kWh nimellistä) |
+| Akustotarve yhdelle ankkurivuorokaudelle, 24 V | Litium (LiFePO4), 80 % käytettävissä | Lyijy (AGM tai geeli), 50 % käytettävissä |
+|---|---|---|
+| Saunan kanssa | ≈ 660 Ah (≈ 16 kWh nimellistä) | ≈ 1060 Ah (≈ 25 kWh nimellistä) |
+| Ilman saunaa | ≈ 390 Ah (≈ 9,4 kWh nimellistä) | ≈ 630 Ah (≈ 15 kWh nimellistä) |
+
+Suositukset ja Ah-luvut muualla tässä dokumentissa koskevat **litiumakustoa**. Lyijyakusto ei sovi
+tähän käyttöön (**⚠ arviot**, tarkistetaan valittujen akkujen datalehdistä):
+
+- **Lataus ajossa:** lyijyakku ottaa täyttä virtaa vastaan vain noin 80 %:n varaustilaan asti, ja
+  loppu latautuu tuntien hitaalla vaiheella. Parin tunnin ajo ei siksi täytä lyijyakustoa. Jos
+  akustoa käytetään vain 50–80 %:n välillä, käytettävissä on noin 30 %, ja saunavuorokausi
+  vaatisi noin 1800 Ah.
+- **Suuret virrat:** kiukaan noin 106 A ja invertterin noin 230 A pienentävät lyijyakun
+  käytettävissä olevaa kapasiteettia (Peukertin ilmiö). Litiumilla vaikutus on vähäinen.
+- **Paino:** 25 kWh lyijyä painaa arviolta 600–800 kg, ja 16 kWh litiumia noin 150–200 kg.
 
 ### 2.2 Huipputeho ja invertteri [laskelma]
 
