@@ -184,14 +184,14 @@ dc_loads:
     use_h_per_day: 0.2             # uimurikytkimellä; arvio
     source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
 
-  - id: FLUE_FAN
-    name: Savukaasujen poistopuhallin
+  - id: FUME_EXTRACT_FAN
+    name: Savukaasujen poistopuhallin (esim. hitsauskaasut), tilapäinen käyttö
     location: konehuone
     status: planned
     voltage_V: 24
     power_W: null
     power_W_estimate: 50
-    use_h_per_day: null            # ⚠ ei tiedossa: mihin laitteeseen puhallin liittyy ja milloin se käy
+    use_h_per_day: 0               # vain tilapäisesti töiden aikana, ei ankkurikuorma [omistaja 2026-10-29]
     source: "[omistaja 2026-10-29]; teho arvio"
 
   - id: FRESH_WATER_PUMP

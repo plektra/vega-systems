@@ -43,7 +43,7 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 | Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | Päällä jatkuvasti, myös ankkurissa |
 | Polttoaineen siirtopumppu | **⚠ ei tiedossa** (arvio noin 100 W) | Satunnainen käyttö |
 | Harmaavesisumppu ja -pumppu | **⚠ ei tiedossa** (arvio noin 120 W) | Uimurikytkin |
-| Savukaasujen poistopuhallin | **⚠ ei tiedossa** (arvio noin 50 W) | Mihin laitteeseen se liittyy? **⚠ ei tiedossa** |
+| Savukaasujen poistopuhallin | **⚠ ei tiedossa** (arvio noin 50 W) | Hitsauskaasujen ym. tilapäiseen poistoon konehuoneesta; ei ankkurikuorma [omistaja 2026-10-29] |
 | Käyttövesipumppu | **⚠ ei tiedossa** (arvio noin 150 W) | Painevesipumppu |
 | Vesikiertoisen lämmityksen kiertovesipumppu | **⚠ ei tiedossa** (arvio noin 30 W) | Käy lämmityskaudella jatkuvasti, joten se on DC-kuormista suurin energiankuluttaja |
 | Valaistus | **⚠ ei tiedossa** (arvio noin 50 W, LED) | |
@@ -51,7 +51,7 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 
 Yhteensä arviolta noin 1 kWh/vrk lämmityskaudella [laskelma], ks.
 [design/ac-power-source.md](design/ac-power-source.md#21-koko-ankkurivuorokauden-energiatarve-laskelma).
-Polttoaineen siirtopumppu ja savukaasupuhallin liittyvät myös tuleviin polttoaine- ja
+Polttoaineen siirtopumppu ja kiertovesipumppu liittyvät myös tuleviin polttoaine- ja
 lämmitysjärjestelmiin, joille ei vielä ole omaa kansiota.
 
 ## 4. Valvonta, verkot ja tehonjako
@@ -76,6 +76,6 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Pääkeskus ja jakelun rakenne
 - [ ] Mitkä suunnitelluista 24 V:n kuluttajista ovat jo olemassa, ja niiden tehot, kun laitteet valitaan
-- [ ] Mihin savukaasujen poistopuhallin liittyy (lämmityskattila, öljypoltin vai muu)?
+- [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
 - [ ] Ohjataanko 24 V:n kuluttajia PDM-lähdöiltä (esim. kamera, pumput, valaistus)?
 - [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä
