@@ -481,7 +481,7 @@ enintään vuorokausi [omistaja 2026-10-29].
 - **Asennus:** oma polttoaineen otto, märkäpakoputki, merivesiotto, äänieristys ja nollan ja
   suojamaan silta generaattorin syötölle (ei erotusmuuntajan kautta).
 
-**Arvio:** kiinteä merigeneraattori maksaa asennettuna todennäköisesti 8 000 € tai enemmän, mikä on
+**Arvio:** kiinteä merigeneraattori maksaa jo ilman asennusta noin 8 300 € (Fischer Panda 4000s Neo), asennettuna selvästi enemmän (ks. kohta 4.2), mikä on
 paljon varajärjestelmälle, jota tarvitaan vain, kun ankkuripäivän jälkeen ei ole maasähköä eikä
 ajoa. Kannattaa ensin katsoa, kuinka usein tyhjäkäyntilatausta todella tarvitaan. Jos harvoin,
 pääkone riittää varalle. Kannettava diesel- tai bensiinigeneraattori olisi halvempi, mutta
@@ -582,6 +582,28 @@ asennus. Ehdot halvimmalle:
   Jos saunotaan aluksi vain laiturissa maasähköllä, toisen laturin voi lisätä myöhemmin.
 - **Suurin jäljellä oleva säästö tulee ruoanlaitosta:** kaasu- tai dieselliesi pienentää
   akuston, laturin ja invertterin tarvetta enemmän kuin mikään osavalinta.
+
+### 4.2 Koko järjestelmän hinta: ilman generaattoria ja generaattorin kanssa [laskelma]
+
+Kaksi täydellistä kokoonpanoa samoilla hinnoilla (kohdat 2.2, 2.4, 2.5 ja B; sis. ALV). Molemmissa
+on sama akusto ja sama invertterilaturi, koska jääkaappi ja 24 V:n kuormat käyvät yöllä akuilta, ja
+generaattorikin lataa akustoa invertterilaturin kautta. **Oletus:** generaattori korvaa toisen
+laturin; ajossa lataa vain nykyinen 65 A:n laturi, ja generaattori hoitaa loput ankkurissa.
+
+| Osa | Ilman generaattoria | Generaattorin kanssa |
+|---|---|---|
+| Akusto 16 × EVE MB31, ≈ 16 kWh | ≈ 2 080 € | ≈ 2 080 € |
+| Invertterilaturi Mass Combi Ultra 24/3500-100 | ≈ 3 126 € | ≈ 3 126 € |
+| Toinen laturi Prestolite 175 A ja Alpha Pro III | ≈ 1 650 € (säädin 330–450 USD ≈ 350 €, **⚠ arvio** kurssista) | – |
+| Generaattori Fischer Panda 4000s Neo PMS, 3 kW | – | ≈ 8 314 € |
+| Generaattorin asennus: polttoaine, märkäpakoputki, merivesiotto, äänieristys | – | **⚠ ei tiedossa** |
+| **Yhteensä** | **≈ 6 900 €** | **≈ 13 500 € + generaattorin asennus** |
+
+Molemmista puuttuvat samat osat: BMS, kotelo ja sulakkeet, kaapelit sekä asennus (**⚠ ei
+tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900–1 100 € halvempia.
+
+**Ero on noin 6 600 € ja generaattorin asennus.** Jos generaattori tulee toisen laturin lisäksi
+(ajossa nopea lataus ja varalla generaattori), generaattorin kanssa noin 15 200 € + asennus.
 
 ## 5. Avoimet kysymykset
 
