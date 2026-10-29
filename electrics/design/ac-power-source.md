@@ -13,7 +13,7 @@
 | Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa, ja sähkökiuas on päätetty (2026-10-29);** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
 | Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Erotusmuuntaja | Airlink WM5002, 230/230 V, 5000 VA; olemassa, ei kytketty, ks. kohta 2.6 | [omistaja 2026-10-28] |
-| Kuinka monta vuorokautta ankkurissa ilman ajoa | **⚠ ei tiedossa** | |
+| Kuinka monta vuorokautta ankkurissa ilman ajoa | **Enintään alle vuorokausi** | [omistaja 2026-10-29] |
 | DC-jännite | 24 V | [vessel/README.md](../../vessel/README.md#sähköjärjestelmän-perustiedot) |
 
 Kokonaistarve on alle 10 kVA. Kiuas on suurin energiankuluttaja ankkurissa, mutta sähköruoanlaitto,
@@ -449,18 +449,22 @@ asennus vaatii oman polttoaine-, pakokaasu- ja merivesijärjestelmän.
 Akusto ja invertteri tarvitaan joka tapauksessa, koska jääkaappi käy ankkurissa myös yöllä, eikä
 generaattoria haluta ajaa yöllä. **Akuston ja invertterin koko ratkeaa vasta, kun päätetään, mitkä
 laitteet asennetaan ja ovatko ne sähköllä toimivia.** Alla olevat koot koskevat tilannetta, jossa
-kaikki harkinnassa olevat laitteet asennetaan sähköisinä. Ratkaistava on lisäksi, riittääkö ajo
-lataukseen vai tarvitaanko dieselgeneraattori.
+kaikki harkinnassa olevat laitteet asennetaan sähköisinä. **Koska ankkurissa ollaan enintään alle
+vuorokausi ajamatta** [omistaja 2026-10-29], ajo ja maasähkö riittävät lataukseen, eikä
+dieselgeneraattoria tarvita.
 
 1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–175 A, ks. kohta 2.5) pääkoneeseen, noin 3,5 kW:n invertteri
-   (ks. kohta 2.2), ja litiumakusto. Akuston koko riippuu ankkuripäivistä:
-   - **noin 400 Ah**, jos saunotaan vain ajopäivinä tai satamassa maasähköllä;
-   - **noin 650 Ah**, jos halutaan yksi täysi ankkurivuorokausi saunoineen ilman ajoa.
+   (ks. kohta 2.2), ja litiumakusto, joka **kestää yhden ankkurivuorokauden saunoineen**
+   [laskelma, 24 V, 80 % käytettävissä, invertteri 90 %]:
+   - kaikki harkitut laitteet sähköisinä: **noin 610 Ah** (todennäköinen kiukaan kulutus 3,7 kWh;
+     ylärajalla noin 660 Ah);
+   - kaasu- tai diesellieden kanssa (ruoanlaitto pois sähköstä): **noin 430 Ah**.
 
    Ajo lataa täyden vuorokauden kulutuksen noin 2,5 tunnissa. Iso akusto parantaa samalla ohjauksen
    2,5 kW:n sähköisen varapumpun käyttöaikaa ([current-system.md](../current-system.md#3-suuret-dc-kuormat)).
-2. **Vaihe 2: noin 6 kVA:n dieselgeneraattori** paapuurin puolelle varattuun tilaan, jos ankkurissa
-   ollaan usein yli vuorokausi ajamatta. Silloin akusto voi jäädä noin 400 Ah:iin. Pidä tila varattuna.
+2. **Dieselgeneraattoria ei tarvita,** koska ankkurissa ollaan enintään alle vuorokausi ajamatta
+   [omistaja 2026-10-29]. Generaattori olisi ollut tarpeen vasta, jos ankkurissa oltaisiin usein
+   yli vuorokausi. Paapuurin tila vapautuu muuhun käyttöön, jos omistajat niin päättävät.
 3. **Hydrauligeneraattoria ei suositella** Vegan tarpeeseen.
 4. **Vedenlämmittimen 3 kW:n vastusta ei kannata käyttää akustolta.** Yksi tunti vie noin 3,3 kWh
    akustosta. Käytä sitä maasähköllä tai generaattorilla. Jos lämmittimessä on koneen
@@ -511,7 +515,9 @@ asennus. Ehdot halvimmalle:
 - [ ] Onko vedenlämmittimessä koneen jäähdytysvesikierukka?
 - [x] Mitkä laitteet ovat olemassa: vain jääkaappi [omistaja 2026-10-28]
 - [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu- tai diesellämmitteisiä? (kiuas: sähkö, päätetty 2026-10-29)
-- [ ] Kuinka monta vuorokautta ollaan tyypillisesti ankkurissa ajamatta?
+- [x] Kuinka monta vuorokautta ollaan ankkurissa ajamatta: enintään alle vuorokausi [omistaja 2026-10-29]
+- [ ] Kuinka pitkä ajo on tyypillisesti ankkuripäivän jälkeen (riittääkö noin 2,5 h lataukseen)?
+- [ ] Päätetäänkö dieselgeneraattori pois suunnitelmasta?
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Onko kotilaiturin maasähkö 1-vaiheinen 230 V, ja onko siinä vikavirtasuoja?
 - [x] Erotusmuuntaja WM5002: datalehti saatu (pehmokäynnistys on, SL35) [datalehti Airlink WM5002]
