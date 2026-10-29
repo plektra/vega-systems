@@ -23,7 +23,7 @@ otetaan akustosta suoraan. Kaikki laitteiden tehot ja käyttöajat ovat osin arv
 |---|---|---|---|
 | A. Kaikki harkitut laitteet sähköisinä, kiuas ylärajalla (4,6 kWh) | 12,7 kWh | 2,2 kWh | **≈ 14,9 kWh** |
 | B. Kuten A, kiukaan todennäköinen kulutus (3,7 kWh) | 11,7 kWh | 2,2 kWh | **≈ 13,9 kWh** |
-| C. Kuten B, mutta kaasu- tai diesellliesi (ruoanlaitto pois sähköstä) | 8,3 kWh | 2,2 kWh | **≈ 10,5 kWh** |
+| C. Kuten B, mutta kaasu- tai dieselliesi (ruoanlaitto pois sähköstä) | 8,3 kWh | 2,2 kWh | **≈ 10,5 kWh** |
 | D. Päivä ilman saunaa, muuten kuten A | 7,5 kWh | 2,2 kWh | **≈ 9,7 kWh** |
 
 **Jätteet polttava WC** (harkinnassa) lisäisi arviolta 4–8 kWh vuorokaudessa eli noin 4,4–8,9 kWh
@@ -47,7 +47,7 @@ esim. saunapäivinä; LiFePO4 kestää sen hyvin, kun BMS katkaisee ajoissa).
 **Johtopäätös:** noin **16 kWh (≈ 630 Ah @ 25,6 V)** riittää täyteen saunapäivään kaikilla
 sähkölaitteilla, kun akustoa käytetään saunapäivänä noin 85–90 %:iin (tilanne B). Muina päivinä
 käyttö jää noin 60–75 %:iin. Kaasu- tai dieselliedellä 16 kWh riittää väljästi (C: noin 65 %).
-Polttava WC nostaisi tarpeen noin 24–30 kWh:iin, eli WC:n valinta kannattaa tehdä ennen kennojen
+Polttava WC nostaisi tarpeen noin 20–30 kWh:iin, eli WC:n valinta kannattaa tehdä ennen kennojen
 tilausta.
 
 ## 2. Itse kootut kennot
@@ -113,7 +113,7 @@ Itse koottu akusto: selvitä vakuutusyhtiöltä, hyväksyykö se sen.
 
 ## 4. Avoimet kysymykset
 
-- [ ] Tuleeko jätteet polttava WC? Se ratkaisee, riittääkö noin 16 kWh vai tarvitaanko noin 24–30 kWh
+- [ ] Tuleeko jätteet polttava WC? Se ratkaisee, riittääkö noin 16 kWh vai tarvitaanko noin 20–30 kWh
 - [ ] Liesi: sähkö vai kaasu tai diesel (vaikuttaa noin 3 kWh/vrk)
 - [ ] Mahtuuko konehuoneeseen noin 600 × 400 × 250 mm:n kennopaketti (16 kWh) koteloineen, ja mihin? Entinen akkuteline styyrpuurin puolella kannen alla [blogi 2017-04-10]?
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?

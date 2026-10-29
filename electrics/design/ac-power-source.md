@@ -42,7 +42,7 @@ kulutuksen näkee invertterilaturin tai akkumonitorin tiedoista ensimmäisillä 
 | Energia akustosta | 4,6 / 0,9 ≈ 5,1 kWh |
 | Akkuvirta kiukaan ollessa päällä | 2300 / 0,9 / 24 ≈ 106 A |
 | Kiukaan vaatima kapasiteetti | 5,1 kWh / 24 V ≈ 213 Ah käytettävissä → ≈ 265 Ah nimelliskapasiteettia |
-| Akusto | Muut kuormat mukaan lukien noin 400–650 Ah, ks. kohdat 2.1 ja 4 |
+| Akusto | Muut kuormat ja 24 V:n kuormat mukaan lukien noin 16 kWh (≈ 630 Ah @ 25,6 V), ks. [house-battery.md](house-battery.md) |
 | Invertteri | Noin 3,5 kW, ks. kohta 2.2 |
 
 ### 2.1 Koko ankkurivuorokauden energiatarve [laskelma]
@@ -500,9 +500,12 @@ dieselgeneraattoria tarvita.
 1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–175 A, ks. kohta 2.5) pääkoneeseen, noin 3,5 kW:n invertteri
    (ks. kohta 2.2), ja litiumakusto, joka **kestää yhden ankkurivuorokauden saunoineen**
    [laskelma, 24 V, 80 % käytettävissä, invertteri 90 %]:
-   - kaikki harkitut laitteet sähköisinä: **noin 610 Ah** (todennäköinen kiukaan kulutus 3,7 kWh;
-     ylärajalla noin 660 Ah);
-   - kaasu- tai diesellieden kanssa (ruoanlaitto pois sähköstä): **noin 430 Ah**.
+   - kaikki harkitut laitteet sähköisinä ja 24 V:n kuormat (noin 2,2 kWh/vrk) mukaan lukien:
+     **noin 16 kWh eli noin 630 Ah @ 25,6 V**, kun saunapäivänä käytetään noin 85–90 %
+     (päivitetty 2026-10-29; aiempi 610 Ah ei sisältänyt 24 V:n kuormia);
+   - kaasu- tai diesellieden kanssa: noin 13 kWh (≈ 510 Ah @ 25,6 V, 80 % käytössä).
+
+   Mitoitus ja itse kootut kennovaihtoehdot: [house-battery.md](house-battery.md).
 
    Ajo lataa täyden vuorokauden kulutuksen noin 2,5 tunnissa. Iso akusto parantaa samalla ohjauksen
    2,5 kW:n sähköisen varapumpun käyttöaikaa ([current-system.md](../current-system.md#3-suuret-dc-kuormat)).
@@ -543,12 +546,12 @@ Ehdotus, ei päätös. Hinnat kohdista 2.2, 2.4 ja 2.5; sis. ALV, ellei toisin m
 | Osa | Halvin toimiva | Hinta | Mastervolt-kokonaisuus | Hinta |
 |---|---|---|---|---|
 | Erotusmuuntaja | Olemassa oleva WM5002 | 0 € (+ vikavirtasuoja, kiinnikkeet) | sama | 0 € |
-| Akusto | 8 × EVE MB31 314 Ah, 8S (≈ 8 kWh) | ≈ 1 040 € | 2 × Victron 25,6 V / 200 Ah (≈ 10 kWh) | ≈ 4 380 € |
+| Akusto | 16 × EVE MB31 314 Ah, 8S2P (≈ 16 kWh), ks. [house-battery.md](house-battery.md); 8 × EVE MB56 628 Ah olisi ≈ 950–1 200 €, jos saatavilla | ≈ 2 080 € | 2 × Victron 25,6 V / 200 Ah (≈ 10 kWh) | ≈ 4 380 € |
 | BMS, kotelo, sulakkeet | Oma kokoonpano; BMS:ssä latauksenesto ennen katkaisua | **⚠ ei tiedossa** | Victronin erillinen BMS | **⚠ ei tiedossa** |
 | Toinen laturi ja säädin | Prestolite 24 V / 175 A ja Alpha Pro III | ≈ 1 304 € + 330–450 USD | Alpha 24/150 Evo ja Alpha Pro III | ≈ 2 862 € |
 | Invertterilaturi | Mass Combi Ultra 24/3500-100 | ≈ 3 126 € | sama | ≈ 3 126 € |
 | Laturin varasuoja | Sterling APD24 | **⚠ ei tiedossa** | sama | **⚠ ei tiedossa** |
-| **Tiedossa olevat yhteensä** | | **≈ 5 900 €** | | **≈ 10 400 €** |
+| **Tiedossa olevat yhteensä** | | **≈ 6 900 €** (MB56:lla ≈ 6 000 €) | | **≈ 10 400 €** |
 
 Lisäksi molemmissa: laturin kiinnike ja hihna, DC-kaapelit ja -sulakkeet, MasterBus-kaapelit,
 asennus. Ehdot halvimmalle:
@@ -590,7 +593,7 @@ asennus. Ehdot halvimmalle:
 - [ ] Saako WM5002:n toision toisen pään maadoittaa nollaksi (Airlink, sähköasentaja)?
 - [ ] WM5002:n tarkka sijoituspaikka konehuoneessa (kuiva, IP23, 25 kg, eristetyt kiinnikkeet)
 - [ ] Tyyppikilven malli on **WM5002 MCB**: onko ensiön suojana MCB-johdonsuoja datalehden SP30-painikesuojan sijaan? (**⚠ tarkista** kotelon sisältä)
-- [ ] Käynnistysakkujen tyyppi ja kapasiteetti (käyttöakut on purettu [omistaja 2026-10-29]); mahtuuko konehuoneeseen 400–650 Ah:n litiumakusto
+- [ ] Käynnistysakkujen tyyppi ja kapasiteetti (käyttöakut on purettu [omistaja 2026-10-29]); mahtuuko konehuoneeseen noin 16 kWh:n litiumakusto, ks. [house-battery.md](house-battery.md)
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
 - [x] Pystyykö Alpha Pro III ottamaan vastaan BMS:n viestin: kyllä, MasterBus "Stop charge" -tapahtuma tai Reg on -johdin [käyttöohje Alpha Pro III]
 - [ ] Akuston ja BMS:n valinta: MLI Ultra (suora MasterBus) vai muu BMS ja MasterBusin digitaalitulomoduuli; BMS:ssä ennakkovaroitus ennen katkaisua
