@@ -240,7 +240,7 @@ dc_loads:
     name: Intel NUC, Frigate (kameratallennin)
     location: konehuone
     status: existing
-    voltage_V: 24                  # Mean Well DDR-240B-24: 24 V → 24 V, 10 A (240 W), hyötysuhde noin 90 % [omistaja 2026-10-29]
+    voltage_V: 24                  # Mean Well DDR-240B-24: 24 V → 24 V, 10 A (240 W), hyötysuhde noin 90 %; syöttää myös NMEA 2000 -väylän [omistaja 2026-10-29]
     power_W: null
     power_W_estimate: 17           # akustosta muuntimen häviöineen; NUC noin 15 W, malli ⚠ ei tiedossa
     use_h_per_day: 24
