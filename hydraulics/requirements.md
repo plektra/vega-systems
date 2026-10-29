@@ -96,7 +96,7 @@ Tarkemmat tiedot: [electrics/current-system.md](../electrics/current-system.md).
 |---|---|---|
 | DC-jännite | 24 (vahvistettu [omistaja 2026-10-27]) | V |
 | Koneen laturi | 65 | A |
-| Käyttöakuston kapasiteetti | TBD | Ah |
+| Käyttöakuston kapasiteetti | TBD; vanhat käyttöakut purettu, uusi akusto suunnitteilla [omistaja 2026-10-29], ks. [ac-power-source.md](../electrics/design/ac-power-source.md) | Ah |
 | Hydrauliikalle käytettävissä oleva jatkuva DC-virta | TBD | A |
 | Generaattori (AC) | Ei asennettu [omistaja 2026-10-28]; hydrauligeneraattoria ei suositella, ks. [ac-power-source.md](../electrics/design/ac-power-source.md) | kVA, V, Hz |
 | Maasähkö | Kotilaiturissa 15 A:n sulake [omistaja 2026-10-28], ks. [ac-power-source.md](../electrics/design/ac-power-source.md) | A, V, Hz |
