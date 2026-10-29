@@ -229,9 +229,9 @@ dc_loads:
     name: Raspberry Pi 5, Signal K -palvelin
     location: konehuone
     status: existing
-    voltage_V: null                # syöttötapa (24 V → 5 V -muunnin?) ⚠ ei tiedossa
+    voltage_V: 24                  # Mean Well DDR-15G-5: 24 V → 5 V, 3 A (15 W), hyötysuhde 84 % [omistaja 2026-10-29]
     power_W: null
-    power_W_estimate: 7            # tyypillinen kuorma; virtalähteen raja 27 W
+    power_W_estimate: 8            # akustosta muuntimen häviöineen; Pi 5 noin 7 W, muunnin rajaa enintään 15 W:iin
     use_h_per_day: 24
     source: "[omistaja 2026-10-29]; teho arvio"
     notes: "Voidaan konsolidoida NUC:n kanssa; elektroniikka suunnitellaan erikseen [omistaja 2026-10-29]"
@@ -240,9 +240,9 @@ dc_loads:
     name: Intel NUC, Frigate (kameratallennin)
     location: konehuone
     status: existing
-    voltage_V: null                # syöttötapa ⚠ ei tiedossa (NUC:t ottavat tyypillisesti 12–19 V)
+    voltage_V: 24                  # Mean Well DDR-240B-24: 24 V → 24 V, 10 A (240 W), hyötysuhde noin 90 % [omistaja 2026-10-29]
     power_W: null
-    power_W_estimate: 15           # malli ⚠ ei tiedossa; kuormitettuna enemmän
+    power_W_estimate: 17           # akustosta muuntimen häviöineen; NUC noin 15 W, malli ⚠ ei tiedossa
     use_h_per_day: 24
     source: "[omistaja 2026-10-29]; teho arvio"
     notes: "Voidaan konsolidoida Raspberry Pi 5:n kanssa; elektroniikka suunnitellaan erikseen [omistaja 2026-10-29]"

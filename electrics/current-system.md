@@ -47,8 +47,8 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 | Käyttövesipumppu | **⚠ ei tiedossa** (arvio noin 150 W) | Painevesipumppu |
 | Vesikiertoisen lämmityksen kiertovesipumppu | **⚠ ei tiedossa** (arvio noin 30 W) | Käy lämmityskaudella jatkuvasti, joten se on DC-kuormista suurin energiankuluttaja |
 | Yleisvalaistus, LED-nauhat (**olemassa**) | **⚠ ei tiedossa** (arvio noin 50 W) | Teho nauhojen pituudesta ja W/m-arvosta [omistaja 2026-10-29] |
-| Raspberry Pi 5 (**olemassa**) | **⚠ ei tiedossa** (arvio noin 7 W) | Signal K -palvelin; päällä jatkuvasti [omistaja 2026-10-29] |
-| Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti [omistaja 2026-10-29] |
+| Raspberry Pi 5 (**olemassa**) | **⚠ ei tiedossa** (arvio noin 7 W, muuntimen häviöineen noin 8 W) | Signal K -palvelin; päällä jatkuvasti. Syöttö **Mean Well DDR-15G-5** (24 V → 5 V, 3 A, 15 W) [omistaja 2026-10-29]. Pi 5 tarvitsee täyteen USB-virtaan 5 A:n lähteen; 3 A:n syötöllä se rajaa USB-porttien yhteisvirran noin 600 mA:iin [laskelma, Raspberry Pi -dokumentaation mukaan **⚠ tarkista**]. Riittää, jos USB:ssä on vain kevyitä laitteita (esim. CAN- tai N2K-sovitin) |
+| Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W, muuntimen häviöineen noin 17 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti. Syöttö **Mean Well DDR-240B-24** (24 V → vakautettu 24 V, 10 A, 240 W; tulo 16,8–33,6 V) [omistaja 2026-10-29]. Muunnin on NUC:lle reilusti ylimitoitettu, joten samalla vakautetulla 24 V:lla voi syöttää myös muuta elektroniikkaa. NUC:n sallittu tulojännite mallin mukaan **⚠ tarkista** |
 | Hydrauliikan ohjaus | **⚠ ei tiedossa** | PDM, PVE-ohjausyksiköt, BAV-713:n kelat ja anturit, ks. [hydraulics/schematic.md](../hydraulics/schematic.md) |
 
 Raspberry Pi ja NUC voidaan myöhemmin yhdistää yhdeksi tietokoneeksi; elektroniikka suunnitellaan
@@ -82,7 +82,9 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Pääkeskus ja jakelun rakenne
 - [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus, polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC [omistaja 2026-10-29]
-- [ ] Raspberry Pi 5:n ja NUC:n syöttö (muuntimet 24 V:sta?) ja NUC:n malli
+- [x] Raspberry Pi 5:n ja NUC:n syöttö: Mean Well DDR-15G-5 ja DDR-240B-24 [omistaja 2026-10-29]
+- [ ] NUC:n malli ja sallittu tulojännite
+- [ ] Kumpi muunnin syöttää kumpaakin konetta (oletus: DDR-15G-5 → Pi, DDR-240B-24 → NUC) **⚠ tarkista**
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
 - [ ] Ohjataanko 24 V:n kuluttajia PDM-lähdöiltä (esim. kamera, pumput, valaistus)?
