@@ -109,6 +109,34 @@ valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
 yhtä aikaa täysillä olevan lieden ja uunin kanssa. Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
 (MasterBus) **⚠ tarkista**.
 
+#### Muut invertterilaturivaihtoehdot (haettu 2026-10-29)
+
+Hinnat verkkokaupoista, sis. ALV; tekniset arvot jälleenmyyjien sivuilta (**⚠ tarkista**
+valmistajan datalehdestä).
+
+| Malli | Jatkuva teho | Huippu | Laturi | AC-tulo | Väylä | Hinta |
+|---|---|---|---|---|---|---|
+| Mastervolt Mass Combi Ultra 24/3500-100 | 3500 W @ 40 °C | 7000 W | 100 A | – | MasterBus | ≈ 3 126 € |
+| Mastervolt CombiMaster 24/3000-60 ([Comptoir Nautique](https://en.comptoirnautique.com/inverter-charger-combinations/37694-mastervolt-combimaster-24-3000-60-230-v-0816882021886.html), [SVB24](https://www.svb24.com/en/mastervolt-combimaster-inverter-charger-24-v-3000-va-60-a.html)) | 2600 W @ 40 °C | 3900 W / 30 s | 60 A | 25 A, tulovirta säädettävä ≤ 13 A, Power Assist | MasterBus | 1 328–1 600 € |
+| Victron MultiPlus-II 24/3000/70-32 ([Europe Solar Store](https://www.europe-solarstore.com/victron-multiplus-ii-24-3000-70-32-230v-gx.html)) | 2400 W (3000 VA) | 5500 W | 70 A | 32 A, PowerAssist | VE.Bus (GX-laite) | ≈ 1 259 €; GX-versio ≈ 1 518 € |
+| Victron MultiPlus-II 24/5000/120-50 ([Offgridtec](https://www.offgridtec.com/en/multiplus-ii-24-3000-70-32-230v-gx.html), [Voelkner](https://www.voelkner.de/products/9515853/Victron-Energy-Wechselrichter-5000W-24V-230V-integrierter-Laderegler.html)) | 5000 VA (W-arvo **⚠ tarkista**) | **⚠ ei tiedossa** | 120 A | 50 A, PowerAssist | VE.Bus (GX-laite) | ≈ 1 430–2 400 € |
+
+**Vegan kuormia vasten** [laskelma]: kiuas (2,3 kW) toimii kaikilla. Liesi ja uuni yhdessä
+pienkuormineen (≈ 3,3 kW) ankkurissa onnistuvat vain Mass Combi Ultralla ja MultiPlus-II
+5000:lla; 3 kW:n luokan laitteilla ne vaativat kuormanhallintaa tai sen, ettei liettä ja uunia
+käytetä täysillä yhtä aikaa. Laiturissa PowerAssist / Power Assist täydentää 15 A:n maasähköä
+kaikissa.
+
+**Victron-vaihtoehdon erot:**
+- **Signal K:** Victronin GX-laite (esim. Cerbo GX, hinta **⚠ ei tiedossa**) toimii Venus
+  OS:llä, joka tukee Signal K:ta ja NMEA 2000:ta. Sopii omistajien olemassa olevaan
+  Signal K -järjestelmään ([current-system.md](../current-system.md#4-valvonta-verkot-ja-tehonjako)).
+- **BMS:** GX-laite voi ohjata Victronin latureita CAN-väylään kytketyn BMS:n mukaan (DVCC).
+  Tuettujen BMS:ien lista **⚠ tarkista** ennen akuston valintaa.
+- **Laturin säädin:** Alpha Pro III ei saa Victronin tapahtumia, joten BMS-ohjaus tehdään
+  Reg on -johtimen kautta, tai säätimeksi valitaan CAN-väylään liittyvä Wakespeed WS500
+  (650–820 USD, ks. kohta 2.5).
+
 ### 2.3 Lataus ajossa [laskelma]
 
 Oletus: laturi antaa lämpimänä noin 75 % nimellisvirrastaan 28 V:n latausjännitteellä (**⚠ arvio**).
@@ -420,10 +448,12 @@ asennus. Ehdot halvimmalle:
   (**⚠ tarkista**). Muuten säätimeksi tarvitaan toinen malli.
 - **Omista kennoista koottu akusto:** BMS:n valinta ja kokoaminen vaativat osaamista, ja
   vakuutusyhtiöltä kannattaa varmistaa, hyväksyykö se itse kootun akuston.
-- **Invertterilaturi on suurin yksittäinen kustannus.** Halvempia 24 V / 3 kW:n
-  invertterilatureita on muiltakin valmistajilta, mutta niiden hintoja ja sopivuutta ei ole
-  selvitetty; silloin MasterBus-tapahtuma "Stop charge" ei toimi, ja BMS-ohjaus tehdään Reg on
-  -johtimen kautta.
+- **Invertterilaturi on suurin yksittäinen kustannus.** Victron MultiPlus-II 24/5000/120-50
+  (≈ 1 430–2 400 €) antaa enemmän tehoa kuin Mass Combi Ultra noin puoleen hintaan, mutta
+  tarvitsee GX-laitteen (hinta **⚠ ei tiedossa**); MultiPlus-II 24/3000 (≈ 1 259 €) on
+  halvin, jos liettä ja uunia ei käytetä täysillä yhtä aikaa ankkurissa. Vertailu kohdassa 2.2.
+  Victronin kanssa MasterBus-tapahtuma "Stop charge" ei toimi, ja laturin BMS-ohjaus tehdään Reg
+  on -johtimen kautta tai Wakespeed-säätimellä.
 - **Vielä halvempi vaihe 0:** jos sähkökiuasta ja -liettä ei asenneta, toista laturia ei
   välttämättä tarvita. Pelkkä jääkaappi ja pienkuormat (≈ 1–2 kWh/vrk, arvio) latautuvat
   maasähköllä ja ajossa nykyisestä laturista DC-DC-laturin kautta (hinta ja koko **⚠ ei
