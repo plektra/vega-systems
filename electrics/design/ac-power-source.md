@@ -131,6 +131,22 @@ Mastervolt on CombiMaster 24/3000-60** (≈ 1 344–1 600 €), jos 2600 W riitt
 käytetä ankkurissa täysillä yhtä aikaa; sen säädettävä tulovirta (≤ 13 A) sopii kotilaiturin
 15 A:n maasähköön.
 
+**Muut valmistajat (haettu 2026-10-29; euromääräisiä hintoja ei löytynyt):**
+
+| Malli | Teho | Laturi | Hinta | Huomio |
+|---|---|---|---|---|
+| Sterling ProCombi S 24 V / 3500 W ([Beacons and Lightbars, UK](https://www.beaconsandlightbars.co.uk/product/sterling-power-products-ltd-sterling-power-pcs243500-procombi-s-24v-3500w-sine-inverter-charger-pn-17869)) | 3500 W, siniaalto | **⚠ ei tiedossa** | 1 499 £ | 30 A:n läpikytkentärele, irrotettava ohjauspaneeli. BMS-/väyläliitäntää ei löytynyt |
+| Sterling ProCombi Q ([Sterling](https://sterling-power.com/collections/inverters-and-combi-inverter-chargers/pro-combi-q)) | enintään 2500 W | – | – | **Ei suositella:** modifioitu (kvasi-)siniaalto ei sovi kaikille laitteille |
+| WhisperPower WPC 24 V / 3500 VA – 90 A ([WhisperPower](https://www.whisperpower.com/wpc-24-v-3500-va-90-a)) | 3000 VA jatkuva, 3500 VA / 30 min | 90 A | noin 3 000 USD | 28 kg |
+| WhisperPower WP Combi 24 V / 3000 W / 60 A ([JPC Direct, UK](https://www.whisperpowerspareparts.co.uk/product/wp-combi-24v-3000w-60a-230v-50hz-inverter-charger-61124360/)) | 3000 W | 60 A | 2 226 £; poistomyynnissä noin 1 500 USD | |
+| WhisperPower Supreme Combi 24 V / 3000 W ([WhisperPower](https://www.whisperpower.com/supreme-combi-24-v-3000-w-50-a)) | 3000 W | 10–50 A | **⚠ ei tiedossa** | |
+| Dolphin Charger | – | – | – | Valmistaa vain akkulatureita, ei invertterilatureita; sopisi vain erillisen invertterin pariksi |
+
+**Arvio:** mikään näistä ei ole hinnaltaan ja teholtaan Victron MultiPlus-II 24/5000:aa edullisempi.
+Sterling ProCombi S 3500 on lähin, mutta BMS-ohjaus ja väylä puuttuvat. Erillinen invertteri ja
+akkulaturi (esim. Dolphin) on mahdollinen, mutta silloin menetetään PowerAssist ja automaattinen
+maasähkön läpikytkentä.
+
 **MultiPlus vai Quattro:** Quattro-II:ssa on **kaksi AC-tuloa** (esim. maasähkö ja generaattori),
 ja laite valitsee automaattisesti käytössä olevan lähteen; MultiPlus-II:ssa on yksi. Muuten
 samankokoiset mallit vastaavat toisiaan (Quattro-II 24/5000/120-50/50: laturi 120 A, kaksi 50 A:n
