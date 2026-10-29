@@ -1,7 +1,7 @@
 # Vega — lämmityksen nykytila ja tarpeet
 
 > **Tila:** Runko, aloitettu 2026-10-29. Lämmitysjärjestelmä on suunnitteilla; laitteita ei ole
-> valittu. Täydennä tietojen karttuessa.
+> valittu, ja valinnat jäävät auki pidemmäksi aikaa [omistaja 2026-10-29]. Täydennä tietojen karttuessa.
 
 ## 1. Lämmönlähde ja jakelu
 
@@ -46,6 +46,10 @@ lämpöä tarvitaan nopeasti (esim. komentosilta), patterit muualle.
 lämmityskierron lämmönvaihdin ja 24 V:n puhallin, teho **⚠ ei tiedossa**.
 
 ## 3. Avoimet kysymykset
+
+Kaikki alla olevat jäävät auki pidemmäksi aikaa [omistaja 2026-10-29]; lämmityksen suunnittelu
+ei ole nyt ajankohtaista. Akuston mitoituksessa puhaltimet on huomioitu arviona (noin 0,8 kWh/vrk).
+
 
 - [ ] Ovatko lämmittimet vesikiertoisen lämmityksen konvektoreita, vai harkitaanko sähkölämmittimiä? (Sähkölämmittimiä ei kannata käyttää akustolta: 1 kW vie noin 1,1 kWh tunnissa)
 - [ ] Konvektori vai puhallinkonvektori kuhunkin tilaan
