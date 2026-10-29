@@ -48,7 +48,8 @@ lämmityskierron lämmönvaihdin ja 24 V:n puhallin, teho **⚠ ei tiedossa**.
 ## 3. Avoimet kysymykset
 
 Kaikki alla olevat jäävät auki pidemmäksi aikaa [omistaja 2026-10-29]; lämmityksen suunnittelu
-ei ole nyt ajankohtaista. Akuston mitoituksessa puhaltimet on huomioitu arviona (noin 0,8 kWh/vrk).
+ei ole nyt ajankohtaista. Puhallinkonvektoreita ei ole otettu mukaan akuston mitoitukseen
+([house-battery.md](../electrics/design/house-battery.md)); jos ne valitaan, ne lisäävät arviolta noin 0,8 kWh/vrk.
 
 
 - [ ] Ovatko lämmittimet vesikiertoisen lämmityksen konvektoreita, vai harkitaanko sähkölämmittimiä? (Sähkölämmittimiä ei kannata käyttää akustolta: 1 kW vie noin 1,1 kWh tunnissa)
