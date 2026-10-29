@@ -1,6 +1,6 @@
 # AC-sähkön lähde: hydrauligeneraattori, dieselgeneraattori vai akusto ja invertteri
 
-> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-28 (AC-kuormien lista; vain jääkaappi olemassa). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
+> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-29 (polttava WC ja 24 V:n kuormat lisätty kuormalistaan). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
 > tarjouksista ennen päätöstä.
 
 ## 1. Tarve
@@ -10,7 +10,7 @@
 | Milloin AC-sähköä tarvitaan | Ajossa ja ankkurissa | [omistaja 2026-10-28] |
 | Generaattori | Ei asennettu; tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
 | Sähkökiuas (**päätetty** 2026-10-29; ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h. Puukiuas ei mahdu saunaan | [omistaja 2026-10-28], [omistaja 2026-10-29] |
-| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa, ja sähkökiuas on päätetty (2026-10-29);** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
+| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW, jätteet polttava WC [omistaja 2026-10-29]. **Vain jääkaappi on olemassa, ja sähkökiuas on päätetty (2026-10-29);** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
 | Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Erotusmuuntaja | Airlink WM5002, 230/230 V, 5000 VA; olemassa, ei kytketty, ks. kohta 2.6 | [omistaja 2026-10-28] |
 | Kuinka monta vuorokautta ankkurissa ilman ajoa | **Enintään alle vuorokausi** | [omistaja 2026-10-29] |
@@ -67,6 +67,21 @@ kohta 4.
 | **Yhteensä AC** | **≈ 11,4** |
 | **Akustosta** (invertterin hyötysuhde 90 %) | **≈ 12,7 kWh** |
 | Ilman kiuasta, akustosta | ≈ 7,5 kWh |
+
+**Summasta puuttuu kaksi asiaa** [omistaja 2026-10-29]:
+
+- **Jätteet polttava WC** (harkinnassa). Mallia ei ole valittu, joten kulutus **⚠ ei tiedossa**.
+  Polttavat WC:t kuluttavat tyypillisesti noin 1–2 kWh käyntikerralta (**⚠ arvio**, tarkista
+  valitun mallin datalehdestä). Esimerkiksi neljä käyntiä vuorokaudessa olisi noin 4–8 kWh eli
+  kiukaan luokkaa tai enemmän, ja akustoa tarvittaisiin noin 200–400 Ah lisää (litium, 80 %
+  käytettävissä, invertterin hyötysuhde 90 %) [laskelma]. Polttava WC mitoittaisi siis akuston
+  yhtä paljon kuin sauna. Energiaa säästävä vaihtoehto on vesi-, tyhjiö- tai kompostikäymälä
+  septitankilla; niiden sähkönkulutus on pieni.
+- **24 V:n kuormat** (suunnitellut konehuoneen laitteet, ks. [loads.yaml](../loads.yaml),
+  `dc_loads`). Ne otetaan akustosta suoraan ilman invertteriä. Arvioiduilla tehoilla ne kuluttavat
+  lämmityskaudella yhteensä **noin 1 kWh/vrk** (**⚠ arvio**), josta suurin osa on kiertovesipumppu
+  (noin 0,7 kWh, jos se käy koko vuorokauden) ja valvontakamera (noin 0,1 kWh). Se lisää akustotarvetta
+  noin 50 Ah (litium, 80 % käytettävissä) [laskelma]. Alla olevissa Ah-luvuissa sitä ei ole mukana.
 
 | Akustotarve yhdelle ankkurivuorokaudelle, 24 V | Litium (LiFePO4), 80 % käytettävissä | Lyijy (AGM tai geeli), 50 % käytettävissä |
 |---|---|---|
@@ -557,6 +572,8 @@ asennus. Ehdot halvimmalle:
 - [x] Muut AC-kuormat: lista saatu [omistaja 2026-10-28], ks. [loads.yaml](../loads.yaml)
 - [ ] Jääkaapin teho ja energiankulutus tyyppikilvestä; muiden laitteiden tehot, kun ne valitaan
 - [ ] Onko vedenlämmittimessä koneen jäähdytysvesikierukka?
+- [ ] Jätteet polttava WC: asennetaanko, mikä malli, teho ja kulutus käyntikerralta? Vai riittääkö vähän sähköä kuluttava käymälä?
+- [ ] 24 V:n kuormien tehot, kun laitteet valitaan (ks. [loads.yaml](../loads.yaml), `dc_loads`)
 - [x] Mitkä laitteet ovat olemassa: vain jääkaappi [omistaja 2026-10-28]
 - [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu- tai diesellämmitteisiä? (kiuas: sähkö, päätetty 2026-10-29)
 - [x] Kuinka monta vuorokautta ollaan ankkurissa ajamatta: enintään alle vuorokausi [omistaja 2026-10-29]

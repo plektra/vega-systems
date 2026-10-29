@@ -1,4 +1,4 @@
-# Vegan sähkökuormien rekisteri (AC)
+# Vegan sähkökuormien rekisteri: AC (230 V, loads) ja DC (24 V, dc_loads)
 #
 # Kuormakohtaisten lukujen ensisijainen lähde. Taustat ja laskelmat: design/ac-power-source.md.
 # Avaimet ovat englanniksi; yksiköt ovat avaimen nimessä. Tuntematon arvo = null. Pidä tiedosto
@@ -8,8 +8,10 @@
 #   power_W:          omistajan tai datalehden ilmoittama teho (null = ei tiedossa)
 #   power_W_estimate: tyypillinen teho, kun omaa arvoa ei ole (arvio, ei mitattu)
 #   use_h_per_day:    arvioitu käyttöaika ankkurivuorokaudessa täydellä teholla
+#   location:         sijainti veneessä (DC-kuormat)
 #   at_anchor:        käytetäänkö ankkurissa akustolta tai generaattorilta
-#   status:           existing (olemassa) | decided (päätetty, ei vielä asennettu) | candidate (harkinnassa)
+#   status:           existing (olemassa) | decided (päätetty, ei vielä asennettu) |
+#                     planned (suunniteltu, laitetta ei valittu) | candidate (harkinnassa)
 #   source:           mistä luvut ovat peräisin
 
 schema_version: 1
@@ -136,3 +138,97 @@ loads:
     use_h_per_day: 6               # lämmityskaudella; arvio
     at_anchor: true
     source: "[omistaja 2026-10-28]; käyttöaika arvio"
+
+  - id: INCINERATING_TOILET
+    name: Jätteet polttava WC
+    status: candidate              # [omistaja 2026-10-29]
+    power_W: null                  # ⚠ ei tiedossa; malli valitsematta
+    energy_kWh_per_use: null       # ⚠ ei tiedossa; polttava WC kuluttaa tyypillisesti noin 1–2 kWh käyntikerralta (arvio, tarkista valitun mallin datalehdestä)
+    use_h_per_day: null
+    at_anchor: true
+    source: "[omistaja 2026-10-29]"
+
+# 24 V:n DC-kuormat. Suunnitellut konehuoneen kuluttajat [omistaja 2026-10-29]: lähes kaikki
+# ovat vielä toteuttamatta, eikä laitteita ole valittu. Tehot ovat tyypillisten 24 V:n
+# laitteiden arvioita, ei mitattuja; korvaa ne valittujen laitteiden datalehtien arvoilla.
+# Hydrauliikan varapumppu P3 (2,5 kW) on kuvattu tiedostossa current-system.md (kohta 3).
+
+dc_loads:
+  - id: ER_CAMERA
+    name: Konehuoneen valvontakamera
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 5
+    use_h_per_day: 24              # oletus: päällä aina, myös ankkurissa
+    source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  - id: FUEL_TRANSFER_PUMP
+    name: Polttoaineen siirtopumppu
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 100
+    use_h_per_day: null            # käytetään satunnaisesti
+    source: "[omistaja 2026-10-29]; teho arvio"
+
+  - id: GREY_WATER_PUMP
+    name: Harmaavesisumpun pumppu
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 120
+    use_h_per_day: 0.2             # uimurikytkimellä; arvio
+    source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  - id: FLUE_FAN
+    name: Savukaasujen poistopuhallin
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 50
+    use_h_per_day: null            # ⚠ ei tiedossa: mihin laitteeseen puhallin liittyy ja milloin se käy
+    source: "[omistaja 2026-10-29]; teho arvio"
+
+  - id: FRESH_WATER_PUMP
+    name: Käyttövesipumppu (painevesi)
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 150
+    use_h_per_day: 0.3             # arvio
+    source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  - id: HEATING_CIRC_PUMP
+    name: Vesikiertoisen lämmityksen kiertovesipumppu
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 30
+    use_h_per_day: 24              # lämmityskaudella; arvio
+    source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  - id: ER_LIGHTING
+    name: Konehuoneen valaistus
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 50           # LED
+    use_h_per_day: 1               # arvio
+    source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  - id: HYD_CONTROL
+    name: Hydrauliikan ohjaus (PDM, PVE-ohjausyksiköt, BAV-713:n kelat, anturit)
+    location: konehuone
+    status: planned
+    voltage_V: 24
+    power_W: null                  # ⚠ ei tiedossa; tarkista PVE:n ja kelojen datalehdistä
+    use_h_per_day: null            # vain hydrauliikkaa käytettäessä
+    source: "[omistaja 2026-10-29]; ks. hydraulics/schematic.md (2A1)"
