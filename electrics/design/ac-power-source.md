@@ -28,6 +28,14 @@ Oletukset: kiuas ottaa täyttä tehoa koko kaksi tuntia (yläraja; termostaatti 
 jälkeen, joten todellinen kulutus on todennäköisesti pienempi), invertterin hyötysuhde 90 %,
 LiFePO4-akuston käytettävissä oleva osuus 80 %, jännite 24 V.
 
+**Todennäköinen kulutus on ylärajaa pienempi** [omistaja 2026-10-29]: termostaatti katkoo
+vastukset, kun sauna on lämmin. Arvio (**⚠ arvio**, mitataan käytössä): lämpeneminen noin 1 h
+täydellä teholla (2,3 kWh) ja sen jälkeen noin 1 h keskimäärin noin 60 %:n teholla (≈ 1,4 kWh),
+yhteensä **noin 3,7 kWh** eli akustosta noin **4,1 kWh** (yläraja 5,1 kWh). Lämpenemisaika ja
+termostaatin käyttösuhde riippuvat saunan koosta ja eristyksestä. Alla olevat mitoitukset on
+laskettu ylärajalla, joten niissä on noin 1 kWh:n varmuusvara saunavuoroa kohden. Todellisen
+kulutuksen näkee invertterilaturin tai akkumonitorin tiedoista ensimmäisillä saunakerroilla.
+
 | Suure | Arvo |
 |---|---|
 | Energia kiukaalle | 2,3 kW × 2 h = 4,6 kWh |
@@ -50,7 +58,7 @@ kohta 4.
 
 | Kuormaryhmä | kWh/vrk (arvio) |
 |---|---|
-| Sähkökiuas, 2 h | 4,6 |
+| Sähkökiuas, 2 h | 4,6 (yläraja; todennäköisesti noin 3,7) |
 | Ruoanlaitto: liesi, uuni, vedenkeitin, kahvinkeitin, liesituuletin | 3,1 |
 | Ilmanvaihtokone, 24 h | 1,2 |
 | Öljylämmityksen poltin, 6 h lämmityskaudella | 1,2 |

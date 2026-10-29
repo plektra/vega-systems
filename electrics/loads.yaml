@@ -23,8 +23,9 @@ loads:
     status: decided                # päätetty 2026-10-29; puukiuas ei mahdu [omistaja 2026-10-29]
     power_W: 2300
     use_h_per_day: 2               # kerrallaan noin 2 h; täysi teho koko ajan on yläraja
+    energy_kWh_per_session_estimate: 3.7  # termostaatti katkoo [omistaja 2026-10-29]; arvio: 1 h täysi + 1 h ~60 %
     at_anchor: true
-    source: "[omistaja 2026-10-28]"
+    source: "[omistaja 2026-10-28]; kulutusarvio [laskelma]"
 
   - id: WATER_HEATER
     name: Vedenlämmittimen sähkövastus
