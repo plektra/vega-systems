@@ -119,7 +119,7 @@ valmistajan datalehdestä).
 | Mastervolt Mass Combi Ultra 24/3500-100 | 3500 W @ 40 °C | 7000 W | 100 A | – | MasterBus | ≈ 3 126 € |
 | Mastervolt CombiMaster 24/3000-60 ([Comptoir Nautique](https://en.comptoirnautique.com/inverter-charger-combinations/37694-mastervolt-combimaster-24-3000-60-230-v-0816882021886.html), [SVB24](https://www.svb24.com/en/mastervolt-combimaster-inverter-charger-24-v-3000-va-60-a.html)) | 2600 W @ 40 °C | 3900 W / 30 s | 60 A | 25 A, tulovirta säädettävä ≤ 13 A, Power Assist | MasterBus | 1 328–1 600 € |
 | Victron MultiPlus-II 24/3000/70-32 ([Europe Solar Store](https://www.europe-solarstore.com/victron-multiplus-ii-24-3000-70-32-230v-gx.html)) | 2400 W (3000 VA) | 5500 W | 70 A | 32 A, PowerAssist | VE.Bus (GX-laite) | ≈ 1 259 €; GX-versio ≈ 1 518 € |
-| Victron MultiPlus-II 24/5000/120-50 ([hintavertailu, solaranlage-tipps.de](https://www.solaranlage-tipps.de/wechselrichter/victron-multiplus-ii-24-5000-120-50-230v-5000w-wechselrichter-120a-ladegeraet-all-in-one), [Voelkner](https://www.voelkner.de/products/9515853/Victron-Energy-Wechselrichter-5000W-24V-230V-integrierter-Laderegler.html)) | 5000 VA (W-arvo **⚠ tarkista**) | **⚠ ei tiedossa** | 120 A | 50 A, PowerAssist | VE.Bus (GX-laite) | ≈ 1 430–2 400 € |
+| Victron MultiPlus-II 24/5000/120-50 (PMP242505010) ([etronixcenter](https://etronixcenter.com/en/8173170-sl105-victron-energy-victron-energy-multiplus-ii-24-5000-120-50-230v-pmp242505010-8719076052913.html), [pkys](https://shop.pkys.com/multiplus-ii-24vdc-230vac-5kva), [Solartopstore](https://www.solartopstore.com/products/victron-multiplus-ii-24-5000-120-50-230v), [solartech.eu](https://solartech.eu/en/p/inverter-24v-5000va-victron-energy-multiplus-ii-24-5000-120-50/), [Voelkner](https://www.voelkner.de/products/9515853/Victron-Energy-Wechselrichter-5000W-24V-230V-integrierter-Laderegler.html), [Herzmarine](https://herzmarine.com/?p=2453)) | 5000 VA (W-arvo **⚠ tarkista**) | **⚠ ei tiedossa** | 120 A | 50 A, PowerAssist | VE.Bus (GX-laite) | ≈ 1 700–2 400 € (1 401 € ilman ALV:tä etronixcenterissä). Hintavertailusivun 1 429 € ([solaranlage-tipps.de](https://www.solaranlage-tipps.de/wechselrichter/victron-multiplus-ii-24-5000-120-50-230v-5000w-wechselrichter-120a-ladegeraet-all-in-one), Offgridtec) ei vahvistunut kaupan sivulta. Suomalaista kauppaa ei löytynyt; EU-verkkokauppa perii kuluttajalta Suomen ALV:n 25,5 % |
 
 **Vegan kuormia vasten** [laskelma]: kiuas (2,3 kW) toimii kaikilla. Liesi ja uuni yhdessä
 pienkuormineen (≈ 3,3 kW) ankkurissa onnistuvat vain Mass Combi Ultralla ja MultiPlus-II
@@ -449,7 +449,7 @@ asennus. Ehdot halvimmalle:
 - **Omista kennoista koottu akusto:** BMS:n valinta ja kokoaminen vaativat osaamista, ja
   vakuutusyhtiöltä kannattaa varmistaa, hyväksyykö se itse kootun akuston.
 - **Invertterilaturi on suurin yksittäinen kustannus.** Victron MultiPlus-II 24/5000/120-50
-  (≈ 1 430–2 400 €) antaa enemmän tehoa kuin Mass Combi Ultra noin puoleen hintaan, mutta
+  (≈ 1 700–2 400 €) antaa enemmän tehoa kuin Mass Combi Ultra noin puoleen hintaan, mutta
   tarvitsee GX-laitteen (hinta **⚠ ei tiedossa**); MultiPlus-II 24/3000 (≈ 1 259 €) on
   halvin, jos liettä ja uunia ei käytetä täysillä yhtä aikaa ankkurissa. Vertailu kohdassa 2.2.
   Victronin kanssa MasterBus-tapahtuma "Stop charge" ei toimi, ja laturin BMS-ohjaus tehdään Reg
