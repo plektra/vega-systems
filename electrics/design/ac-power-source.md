@@ -121,6 +121,15 @@ valmistajan datalehdestä).
 | Victron MultiPlus-II 24/3000/70-32 ([Europe Solar Store](https://www.europe-solarstore.com/victron-multiplus-ii-24-3000-70-32-230v-gx.html)) | 2400 W (3000 VA) | 5500 W | 70 A | 32 A, PowerAssist | VE.Bus (GX-laite) | ≈ 1 259 €; GX-versio ≈ 1 518 € |
 | Victron MultiPlus-II 24/5000/120-50 (PMP242505010) ([etronixcenter](https://etronixcenter.com/en/8173170-sl105-victron-energy-victron-energy-multiplus-ii-24-5000-120-50-230v-pmp242505010-8719076052913.html), [pkys](https://shop.pkys.com/multiplus-ii-24vdc-230vac-5kva), [Solartopstore](https://www.solartopstore.com/products/victron-multiplus-ii-24-5000-120-50-230v), [solartech.eu](https://solartech.eu/en/p/inverter-24v-5000va-victron-energy-multiplus-ii-24-5000-120-50/), [Voelkner](https://www.voelkner.de/products/9515853/Victron-Energy-Wechselrichter-5000W-24V-230V-integrierter-Laderegler.html), [Herzmarine](https://herzmarine.com/?p=2453)) | 5000 VA (W-arvo **⚠ tarkista**) | **⚠ ei tiedossa** | 120 A | 50 A, PowerAssist | VE.Bus (GX-laite) | ≈ 1 700–2 400 € (1 401 € ilman ALV:tä etronixcenterissä). Hintavertailusivun 1 429 € ([solaranlage-tipps.de](https://www.solaranlage-tipps.de/wechselrichter/victron-multiplus-ii-24-5000-120-50-230v-5000w-wechselrichter-120a-ladegeraet-all-in-one), Offgridtec) ei vahvistunut kaupan sivulta. Suomalaista kauppaa ei löytynyt; EU-verkkokauppa perii kuluttajalta Suomen ALV:n 25,5 % |
 
+**MultiPlus vai Quattro:** Quattro-II:ssa on **kaksi AC-tuloa** (esim. maasähkö ja generaattori),
+ja laite valitsee automaattisesti käytössä olevan lähteen; MultiPlus-II:ssa on yksi. Muuten
+samankokoiset mallit vastaavat toisiaan (Quattro-II 24/5000/120-50/50: laturi 120 A, kaksi 50 A:n
+tuloa). Hinta samassa kaupassa: Quattro-II 2 339 € ja MultiPlus-II 2 085 €
+([Voelkner, Quattro-II](https://www.voelkner.de/products/9518773/Victron-Energy-Wechselrichter-Quattro-II-24-5000-120-50-50-5000W-24V-230V-integrierter-Laderegler.html)),
+muualla Quattro-II 2 289 € ([Solarkontor](https://solarkontor.de/en/products/victron-quattro-ii-24-5000-120-50-50-230v)).
+**Vegalle riittää MultiPlus**, koska generaattoria ei ole; jos sellainen myöhemmin tulee, maasähkön
+ja generaattorin väliin riittää erillinen vaihtokytkin.
+
 **Vegan kuormia vasten** [laskelma]: kiuas (2,3 kW) toimii kaikilla. Liesi ja uuni yhdessä
 pienkuormineen (≈ 3,3 kW) ankkurissa onnistuvat vain Mass Combi Ultralla ja MultiPlus-II
 5000:lla; 3 kW:n luokan laitteilla ne vaativat kuormanhallintaa tai sen, ettei liettä ja uunia
