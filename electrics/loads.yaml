@@ -357,8 +357,8 @@ dc_loads:
     source: "[omistaja 2026-10-29]"
 
   - id: CAMERA_POE
-    name: Valvontakamera (PoE)
-    location: null                 # ⚠ tarkista: sama kamera kuin ER_CAMERA vai eri?
+    name: Komentosillan valvontakamera (PoE)
+    location: komentosilta         # oma kamera kumpaankin tilaan; konehuoneen kamera on ER_CAMERA [omistaja 2026-10-29]
     status: existing
     voltage_V: 24                  # PoE konehuoneen 24 V:n virtalähteeltä (luultavasti DDR-240B-24 ⚠ tarkista)
     power_W: null

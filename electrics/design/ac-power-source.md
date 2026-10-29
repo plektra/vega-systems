@@ -81,7 +81,7 @@ kohta 4.
   `dc_loads`). Ne otetaan akustosta suoraan ilman invertteriä. Arvioiduilla tehoilla ne kuluttavat
   lämmityskaudella ankkurissa yhteensä **noin 2 kWh/vrk** (**⚠ arvio**). Suurin osa kuluu jatkuvasti
   käyviin laitteisiin: kiertovesipumppu (noin 0,7 kWh, jos se käy koko vuorokauden), Intel NUC
-  (Frigate, noin 0,4 kWh), Raspberry Pi 5 (Signal K, noin 0,2 kWh) ja valvontakamera (noin 0,1 kWh),
+  (Frigate, noin 0,4 kWh), Raspberry Pi 5 (Signal K, noin 0,2 kWh) ja kaksi valvontakameraa (noin 0,2 kWh),
   sekä valaistukseen (ankkurivalo ja sisävalot, noin 0,3 kWh). VHF:n kuuntelu ankkurissa ja
   NMEA 2000 -laitteet puuttuvat (**⚠ ei tiedossa**). Se lisää akustotarvetta noin 100 Ah (litium,
   80 % käytettävissä) [laskelma]. Alla olevissa Ah-luvuissa sitä ei ole mukana.

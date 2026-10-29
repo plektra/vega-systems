@@ -55,7 +55,7 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 
 | Kuluttaja | Teho | Huomiot |
 |---|---|---|
-| Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | Päällä jatkuvasti, myös ankkurissa |
+| Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | Ei vielä asennettu; oma kamera tulee sekä konehuoneeseen että komentosillalle [omistaja 2026-10-29]. Päällä jatkuvasti, myös ankkurissa |
 | Polttoaineen siirtopumppu (**olemassa**) | **⚠ ei tiedossa** (arvio noin 100 W) | Käytetään vain siirrettäessä polttoainetta bunkkereista päivätankkiin tai pesukierrossa; ei ankkurikuorma. Polttoainejärjestelmä on keskeneräinen, eikä bunkkereita tällä hetkellä ole [omistaja 2026-10-29] |
 | Harmaavesisumppu ja -pumppu | **⚠ ei tiedossa** (arvio noin 120 W) | Uimurikytkin |
 | Savukaasujen poistopuhallin | **⚠ ei tiedossa** (arvio noin 50 W) | Hitsauskaasujen ym. tilapäiseen poistoon konehuoneesta; ei ankkurikuorma [omistaja 2026-10-29] |
@@ -91,7 +91,7 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | Työvalo taakse | 100 W | suunniteltu | |
 | Hakuvalo | 500 W (≈ 21 A) | **olemassa, ei asennettu** | |
 | Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
-| Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | PoE, syöttö konehuoneen 24 V:n virtalähteeltä (luultavasti DDR-240B-24 **⚠ tarkista**). Sama kamera kuin kohdan 3.1 konehuoneen kamera vai eri? **⚠ tarkista** |
+| Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö konehuoneen 24 V:n virtalähteeltä (luultavasti DDR-240B-24 **⚠ tarkista**) |
 | Tutka | **⚠ ei tiedossa** | suunniteltu | |
 | Atlas, pyörivä kirkasnäkölasi | **⚠ ei tiedossa** | suunniteltu | Oman invertterin kautta |
 | Pyyhkijät | **⚠ ei tiedossa** | suunniteltu | |
@@ -145,7 +145,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Kumpi muunnin syöttää kumpaakin konetta: DDR-15G-5 → Pi, DDR-240B-24 → NUC (ja NMEA 2000 -väylä) [omistaja 2026-10-29]
 - [x] Sietävätkö NMEA 2000 -väylän laitteet 24 V: kyllä, kaikki ovat 9–32 V [omistaja 2026-10-29]
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
-- [ ] Onko PoE-valvontakamera sama kuin suunniteltu konehuoneen kamera? Mistä PoE-syöttö otetaan?
+- [x] Valvontakamerat: komentosillan kamera on olemassa, konehuoneeseen tulee oma [omistaja 2026-10-29]
+- [ ] Mistä komentosillan kameran PoE-syöttö otetaan (DDR-240B-24?)
 - [ ] VHF Sailor RT2048:n ja FM-radion muuntimen virrankulutus; NMEA 2000 -laitteiden LEN-arvot
 - [ ] **Veneellä:** pilssipumppujen tyyppikilvet (virta), sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
