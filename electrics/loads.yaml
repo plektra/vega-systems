@@ -360,7 +360,7 @@ dc_loads:
     name: Komentosillan valvontakamera (PoE)
     location: komentosilta         # oma kamera kumpaankin tilaan; konehuoneen kamera on ER_CAMERA [omistaja 2026-10-29]
     status: existing
-    voltage_V: 24                  # PoE konehuoneen 24 V:n virtalähteeltä (luultavasti DDR-240B-24 ⚠ tarkista)
+    voltage_V: 24                  # PoE, syöttö Mean Well DDR-240B-24:ltä [omistaja 2026-10-29]
     power_W: null
     power_W_estimate: 5
     use_h_per_day: 24

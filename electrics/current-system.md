@@ -63,7 +63,7 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 | Vesikiertoisen lämmityksen kiertovesipumppu | **⚠ ei tiedossa** (arvio noin 30 W) | Käy lämmityskaudella jatkuvasti, joten se on DC-kuormista suurin energiankuluttaja |
 | Yleisvalaistus, LED-nauhat (**olemassa**) | **⚠ ei tiedossa** (arvio noin 50 W) | Teho nauhojen pituudesta ja W/m-arvosta [omistaja 2026-10-29] |
 | Raspberry Pi 5 (**olemassa**) | **⚠ ei tiedossa** (arvio noin 7 W, muuntimen häviöineen noin 8 W) | Signal K -palvelin; päällä jatkuvasti. Syöttö **Mean Well DDR-15G-5** (24 V → 5 V, 3 A, 15 W) [omistaja 2026-10-29]. Pi 5 tarvitsee täyteen USB-virtaan 5 A:n lähteen; 3 A:n syötöllä se rajaa USB-porttien yhteisvirran noin 600 mA:iin [laskelma, Raspberry Pi -dokumentaation mukaan **⚠ tarkista**]. Riittää, jos USB:ssä on vain kevyitä laitteita (esim. CAN- tai N2K-sovitin) |
-| Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W, muuntimen häviöineen noin 17 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti. Syöttö **Mean Well DDR-240B-24** (24 V → vakautettu 24 V, 10 A, 240 W; tulo 16,8–33,6 V) [omistaja 2026-10-29]. Sama muunnin syöttää myös mm. **NMEA 2000 -väylän** [omistaja 2026-10-29]. NMEA 2000 -standardin väyläjännite on nimellisesti 12 V (laitteiden on toimittava noin 9–16 V:lla; **⚠ tarkista** standardista), mutta kaikki Vegan väylälaitteet toimivat 9–32 V:lla, joten 24 V on niille sopiva [omistaja 2026-10-29]. Uutta väylälaitetta valittaessa tarkista, että se sietää 24 V. NUC:n malli jätetään toistaiseksi selvittämättä, koska keskitytään sähköjärjestelmään [omistaja 2026-10-29] |
+| Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W, muuntimen häviöineen noin 17 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti. Syöttö **Mean Well DDR-240B-24** (24 V → vakautettu 24 V, 10 A, 240 W; tulo 16,8–33,6 V) [omistaja 2026-10-29]. Sama muunnin syöttää myös mm. **NMEA 2000 -väylän**, 4G-modeemin ja komentosillan PoE-kameran [omistaja 2026-10-29]. NMEA 2000 -standardin väyläjännite on nimellisesti 12 V (laitteiden on toimittava noin 9–16 V:lla; **⚠ tarkista** standardista), mutta kaikki Vegan väylälaitteet toimivat 9–32 V:lla, joten 24 V on niille sopiva [omistaja 2026-10-29]. Uutta väylälaitetta valittaessa tarkista, että se sietää 24 V. NUC:n malli jätetään toistaiseksi selvittämättä, koska keskitytään sähköjärjestelmään [omistaja 2026-10-29] |
 | 4G-modeemi Teltonika RUT240 (**olemassa**) | Noin 1–2 W käytössä, enintään noin 4,2 W [datalehti Teltonika RUT240] | Päällä jatkuvasti; tulo 9–30 VDC. Syöttö **Mean Well DDR-240B-24**:n vakautetusta 24 V:sta [omistaja 2026-10-29], joten akuston latausjännite ei vaikuta siihen |
 | Hydrauliikan ohjaus | **⚠ ei tiedossa** | PDM, PVE-ohjausyksiköt, BAV-713:n kelat ja anturit, ks. [hydraulics/schematic.md](../hydraulics/schematic.md) |
 
@@ -91,7 +91,7 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | Työvalo taakse | 100 W | suunniteltu | |
 | Hakuvalo | 500 W (≈ 21 A) | **olemassa, ei asennettu** | |
 | Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
-| Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö konehuoneen 24 V:n virtalähteeltä (luultavasti DDR-240B-24 **⚠ tarkista**) |
+| Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö **Mean Well DDR-240B-24**:ltä [omistaja 2026-10-29] |
 | Tutka | **⚠ ei tiedossa** | suunniteltu | |
 | Atlas, pyörivä kirkasnäkölasi | **⚠ ei tiedossa** | suunniteltu | Oman invertterin kautta |
 | Pyyhkijät | **⚠ ei tiedossa** | suunniteltu | |
@@ -146,7 +146,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Sietävätkö NMEA 2000 -väylän laitteet 24 V: kyllä, kaikki ovat 9–32 V [omistaja 2026-10-29]
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
 - [x] Valvontakamerat: komentosillan kamera on olemassa, konehuoneeseen tulee oma [omistaja 2026-10-29]
-- [ ] Mistä komentosillan kameran PoE-syöttö otetaan (DDR-240B-24?)
+- [x] Komentosillan kameran PoE-syöttö: DDR-240B-24 [omistaja 2026-10-29]
 - [ ] VHF Sailor RT2048:n ja FM-radion muuntimen virrankulutus; NMEA 2000 -laitteiden LEN-arvot
 - [ ] **Veneellä:** pilssipumppujen tyyppikilvet (virta), sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
