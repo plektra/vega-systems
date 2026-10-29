@@ -258,6 +258,18 @@ dc_loads:
     source: "[omistaja 2026-10-29]; teho [datalehti Teltonika RUT240 Power Consumption], käyttöteho arvio"
     notes: "Syöttö Mean Well DDR-240B-24:n vakautetusta 24 V:sta [omistaja 2026-10-29]"
 
+  - id: BILGE_PUMPS
+    name: Pilssipumput, 3 kpl, kohokytkimillä
+    location: null                 # ⚠ ei tiedossa
+    status: existing
+    quantity: 3
+    voltage_V: 24
+    current_A_each: 12             # täydellä teholla; omistajan muistikuva ⚠ tarkista tyyppikilvestä
+    power_W_each: 288              # 24 V × 12 A [laskelma]
+    use_h_per_day: null            # käy vain kohokytkimen ohjaamana; normaalisti lähes nolla
+    source: "[omistaja 2026-10-29]"
+    notes: "Turvallisuuskriittinen: syöttö suoraan akulta pääkytkimen ohi omalla sulakkeella; ei saa jäädä alijännitekatkaisun taakse"
+
   - id: HYD_CONTROL
     name: Hydrauliikan ohjaus (PDM, PVE-ohjausyksiköt, BAV-713:n kelat, anturit)
     location: konehuone

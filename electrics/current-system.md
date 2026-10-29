@@ -22,6 +22,12 @@ uusi käyttöakusto tulee, nämä kuormat siirretään sille ja käynnistysakut 
 erotusrele tai DC-DC-laturi). Siihen asti kone kannattaa varmistaa esim. alijännitekatkaisulla
 tai sillä, että CTEK on kytkettynä.
 
+**Pilssipumput ovat turvallisuuskriittisiä.** Kolme pilssipumppua (noin 12 A kukin) ottaa virtansa
+nyt käynnistysakuilta. Jos jatkuvat kuormat tyhjentävät akut, pilssipumput eivät toimi.
+Alijännitekatkaisu saa siksi katkaista vain muut kuormat, ei pilssipumppuja. Pilssipumput
+kytketään suoraan akulle pääkytkimen ohi omilla sulakkeillaan. Vikatilanteet ja kytkennät on
+hyvä tarkastuttaa pätevällä sähköasentajalla.
+
 ## 2. AC-järjestelmä
 
 | Kohde | Arvo | Lähde |
@@ -39,6 +45,7 @@ tai sillä, että CTEK on kytkettynä.
 | Hydrauliikan varapumppu (ohjauksen vara) | 2,5 kW, 24 V (~100 A tai yli) | 65 A:n laturi ei jaksa syöttää sitä pitkään | [blogi 2017-07-04] |
 | ~~PTO-kytkimen toimilaite~~ | – | Ei tarpeen: PTO-kytkintä ei tule (päätös 2026-10-23), P2 on PVH57 (päätös 2026-10-27) | [hydraulics/design/archive/p2-pump-options.md](../hydraulics/design/archive/p2-pump-options.md) |
 | Keulapotkuri | — | Hydraulinen, PTO-vetoinen; sähkökuormana vain venttiilien solenoidit | [blogi 2018-11-12] |
+| Pilssipumput, 3 kpl (**olemassa**) | 24 V, noin 12 A kukin täydellä teholla (≈ 290 W; kaikki yhtä aikaa noin 36 A) **⚠ tarkista** tyyppikilvestä | Kohokytkimet; käyvät vain tarvittaessa. Sijainnit ja syöttötapa **⚠ ei tiedossa** | [omistaja 2026-10-29] |
 
 ### 3.1 Suunnitellut 24 V:n kuluttajat konehuoneessa
 
@@ -98,6 +105,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Kumpi muunnin syöttää kumpaakin konetta: DDR-15G-5 → Pi, DDR-240B-24 → NUC (ja NMEA 2000 -väylä) [omistaja 2026-10-29]
 - [x] Sietävätkö NMEA 2000 -väylän laitteet 24 V: kyllä, kaikki ovat 9–32 V [omistaja 2026-10-29]
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
+- [ ] **Veneellä:** pilssipumppujen tyyppikilvet (virta), sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
