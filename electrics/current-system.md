@@ -85,7 +85,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 ## 5. Avoimet kysymykset
 
 - [x] Vahvista 24 V:n DC-jännite: 24 V [omistaja 2026-10-27]
-- [ ] Käynnistysakkujen tyyppi ja kapasiteetti (käyttöakut purettu [omistaja 2026-10-29])
+- [ ] **Veneellä seuraavalla käynnillä:** käynnistysakkujen tyyppikilvet (tyyppi, esim. märkä tai AGM; kapasiteetti Ah; kylmäkäynnistysvirta CCA; ikä tai valmistuspäivä), kytkentä (luultavasti 2 × 12 V sarjassa **⚠ tarkista**) ja lepojännite, kun CTEK on ollut irti muutaman tunnin. Valokuva kilvistä riittää. (Käyttöakut purettu [omistaja 2026-10-29])
 - [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit (maasähköstä nyt CTEK MULTI XT 14000 ylläpitolataukseen [omistaja 2026-10-29])
 - [x] Mitä akkuja CTEK lataa: käynnistysakkuja, koska käyttöakkuja ei ole [omistaja 2026-10-29]
 - [ ] Jääkö CTEK käynnistysakkujen ylläpitolataukseen, kun uusi (litium)käyttöakusto hankitaan?
