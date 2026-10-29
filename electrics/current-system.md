@@ -48,7 +48,7 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 | Vesikiertoisen lämmityksen kiertovesipumppu | **⚠ ei tiedossa** (arvio noin 30 W) | Käy lämmityskaudella jatkuvasti, joten se on DC-kuormista suurin energiankuluttaja |
 | Yleisvalaistus, LED-nauhat (**olemassa**) | **⚠ ei tiedossa** (arvio noin 50 W) | Teho nauhojen pituudesta ja W/m-arvosta [omistaja 2026-10-29] |
 | Raspberry Pi 5 (**olemassa**) | **⚠ ei tiedossa** (arvio noin 7 W, muuntimen häviöineen noin 8 W) | Signal K -palvelin; päällä jatkuvasti. Syöttö **Mean Well DDR-15G-5** (24 V → 5 V, 3 A, 15 W) [omistaja 2026-10-29]. Pi 5 tarvitsee täyteen USB-virtaan 5 A:n lähteen; 3 A:n syötöllä se rajaa USB-porttien yhteisvirran noin 600 mA:iin [laskelma, Raspberry Pi -dokumentaation mukaan **⚠ tarkista**]. Riittää, jos USB:ssä on vain kevyitä laitteita (esim. CAN- tai N2K-sovitin) |
-| Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W, muuntimen häviöineen noin 17 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti. Syöttö **Mean Well DDR-240B-24** (24 V → vakautettu 24 V, 10 A, 240 W; tulo 16,8–33,6 V) [omistaja 2026-10-29]. Sama muunnin syöttää myös mm. **NMEA 2000 -väylän** [omistaja 2026-10-29]. NMEA 2000 -standardin väyläjännite on nimellisesti 12 V (laitteiden on toimittava noin 9–16 V:lla; **⚠ tarkista** standardista), joten jokaisen väylälaitteen pitää sietää 24 V, ks. avoimet kysymykset. NUC:n sallittu tulojännite mallin mukaan **⚠ tarkista** |
+| Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W, muuntimen häviöineen noin 17 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti. Syöttö **Mean Well DDR-240B-24** (24 V → vakautettu 24 V, 10 A, 240 W; tulo 16,8–33,6 V) [omistaja 2026-10-29]. Sama muunnin syöttää myös mm. **NMEA 2000 -väylän** [omistaja 2026-10-29]. NMEA 2000 -standardin väyläjännite on nimellisesti 12 V (laitteiden on toimittava noin 9–16 V:lla; **⚠ tarkista** standardista), mutta kaikki Vegan väylälaitteet toimivat 9–32 V:lla, joten 24 V on niille sopiva [omistaja 2026-10-29]. Uutta väylälaitetta valittaessa tarkista, että se sietää 24 V. NUC:n malli jätetään toistaiseksi selvittämättä, koska keskitytään sähköjärjestelmään [omistaja 2026-10-29] |
 | Hydrauliikan ohjaus | **⚠ ei tiedossa** | PDM, PVE-ohjausyksiköt, BAV-713:n kelat ja anturit, ks. [hydraulics/schematic.md](../hydraulics/schematic.md) |
 
 Raspberry Pi ja NUC voidaan myöhemmin yhdistää yhdeksi tietokoneeksi; elektroniikka suunnitellaan
@@ -83,9 +83,9 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Pääkeskus ja jakelun rakenne
 - [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus, polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC [omistaja 2026-10-29]
 - [x] Raspberry Pi 5:n ja NUC:n syöttö: Mean Well DDR-15G-5 ja DDR-240B-24 [omistaja 2026-10-29]
-- [ ] NUC:n malli ja sallittu tulojännite
+- [ ] NUC:n malli ja sallittu tulojännite (jätetty toistaiseksi, [omistaja 2026-10-29])
 - [x] Kumpi muunnin syöttää kumpaakin konetta: DDR-15G-5 → Pi, DDR-240B-24 → NUC (ja NMEA 2000 -väylä) [omistaja 2026-10-29]
-- [ ] Syötetäänkö NMEA 2000 -väylään suoraan 24 V? Sietävätkö kaikki väylän laitteet (N2K-nodet, anturit, näytöt) sen? Muuten väylälle tarvitaan oma 12 V:n muunnin
+- [x] Sietävätkö NMEA 2000 -väylän laitteet 24 V: kyllä, kaikki ovat 9–32 V [omistaja 2026-10-29]
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
