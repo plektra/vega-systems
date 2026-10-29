@@ -552,6 +552,16 @@ Ehdotus, ei päätös. Hinnat kohdista 2.2, 2.4 ja 2.5; sis. ALV, ellei toisin m
 | Invertterilaturi | Mass Combi Ultra 24/3500-100 | ≈ 3 126 € | sama | ≈ 3 126 € |
 | Laturin varasuoja | Sterling APD24 | **⚠ ei tiedossa** | sama | **⚠ ei tiedossa** |
 | **Tiedossa olevat yhteensä** | | **≈ 6 900 €** (MB56:lla ≈ 6 000 €) | | **≈ 10 400 €** |
+| **Ilman invertterilaturia** (generaattorivertailuun) | | **≈ 3 700 €** (MB56:lla ≈ 2 600–2 900 €) | | **≈ 7 200 €** |
+
+**Vertailu generaattoriin** [laskelma]: myös generaattorivaihtoehto tarvitsee akuston ja
+invertterilaturin, koska jääkaappi käy yöllä akuilta ja generaattori lataa akustoa invertterilaturin
+kautta (ks. kohta B). Vaihtoehtojen todellinen hintaero on siksi **toinen laturi ja säädin
+(≈ 1 600 €) vastaan generaattori (Fischer Panda 4000s Neo ≈ 8 300 € sis. ALV) ja sen asennus**.
+Generaattorin kanssa akusto voisi olla jonkin verran pienempi, jos generaattori ajetaan saunan
+ajan, mutta yön kulutus ja aamun tarve pitää silti kattaa akuilta. Ilman invertterilaturia
+laskettu summa on vertailukelpoinen vain, jos generaattorivaihtoehdon hintaan lasketaan mukaan
+myös akusto.
 
 Lisäksi molemmissa: laturin kiinnike ja hihna, DC-kaapelit ja -sulakkeet, MasterBus-kaapelit,
 asennus. Ehdot halvimmalle:
