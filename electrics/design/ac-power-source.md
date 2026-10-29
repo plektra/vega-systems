@@ -444,6 +444,32 @@ ruoanlaiton ajan ja lataa samalla akustoa, ja yöt mennään akuilla. Silloin no
 (**⚠ arvio**, tarkistetaan, kun tyyppikilpien tehot tiedetään). Tila on valmiina, mutta
 asennus vaatii oman polttoaine-, pakokaasu- ja merivesijärjestelmän.
 
+#### Pieni noin 3 kW:n varageneraattori (selvitys 2026-10-29)
+
+Omistajien kysymys: riittäisikö varalle pieni noin 3 kW:n dieselgeneraattori, kun ankkurissa ollaan
+enintään vuorokausi [omistaja 2026-10-29].
+
+| Malli | Teho | Hinta | Lähde |
+|---|---|---|---|
+| Fischer Panda 4000s Neo PMS | 3,0 kW jatkuva, 3,4 kW enintään, 230 V | 6 815 € + ALV (8 314 € sis. ALV, ES) | [Manel Service](https://www.manelservice.com/en/marine-generator-sets/9781-fischer-panda-4000s-neo-pms-sea-generating-set-4-kva-36-kw.html) |
+| WhisperPower Piccolo 4 / 3,5 kVA | noin 3–3,5 kW, 230 V | **⚠ ei tiedossa** (tarjouspyyntö) | [WhisperPower 3,5 kVA](https://www.whisperpower.com/diesel-generators/3-5-kva-generator) |
+
+**Toimiiko 3 kW** [laskelma, **⚠ arviot**]:
+- **Kiuas (2,3 kW) toimii suoraan generaattorilta.** Liesi ja kiuas yhtä aikaa eivät, mutta
+  invertterilaturin PowerAssist täydentää akuilta.
+- **Lataus:** invertterilaturin tulovirta rajoitetaan noin 11–12 A:iin, jolloin laturiin menee
+  noin 2,5 kW ja täysi ankkurivuorokausi (≈ 11,7 kWh) latautuu noin 4,5–5 tunnissa.
+- **Polttoaine:** sama diesel kuin pääkoneella, eli bensiiniä ei tarvitse säilyttää veneessä.
+- **Asennus:** oma polttoaineen otto, märkäpakoputki, merivesiotto, äänieristys ja nollan ja
+  suojamaan silta generaattorin syötölle (ei erotusmuuntajan kautta).
+
+**Arvio:** kiinteä merigeneraattori maksaa asennettuna todennäköisesti 8 000 € tai enemmän, mikä on
+paljon varajärjestelmälle, jota tarvitaan vain, kun ankkuripäivän jälkeen ei ole maasähköä eikä
+ajoa. Kannattaa ensin katsoa, kuinka usein tyhjäkäyntilatausta todella tarvitaan. Jos harvoin,
+pääkone riittää varalle. Kannettava diesel- tai bensiinigeneraattori olisi halvempi, mutta
+kannella käytettynä melu, häkä ja polttoaineen säilytys pitää ratkaista erikseen (**⚠ ei
+selvitetty**).
+
 ## 4. Suositus (ei päätös)
 
 Akusto ja invertteri tarvitaan joka tapauksessa, koska jääkaappi käy ankkurissa myös yöllä, eikä
