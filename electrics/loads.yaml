@@ -149,7 +149,7 @@ loads:
     source: "[omistaja 2026-10-29]"
 
 # 24 V:n DC-kuormat konehuoneessa [omistaja 2026-10-29]. Olemassa ovat LED-nauhavalaistus,
-# polttoaineen siirtopumppu, Raspberry Pi 5 (Signal K) ja Intel NUC (Frigate); muut ovat suunniteltuja, eikä laitteita ole valittu. Tehot ovat tyypillisten 24 V:n
+# polttoaineen siirtopumppu, Raspberry Pi 5 (Signal K), Intel NUC (Frigate) ja 4G-modeemi; muut ovat suunniteltuja, eikä laitteita ole valittu. Tehot ovat tyypillisten 24 V:n
 # laitteiden arvioita, ei mitattuja; korvaa ne valittujen laitteiden datalehtien arvoilla.
 # Hydrauliikan varapumppu P3 (2,5 kW) on kuvattu tiedostossa current-system.md (kohta 3).
 
@@ -246,6 +246,17 @@ dc_loads:
     use_h_per_day: 24
     source: "[omistaja 2026-10-29]; teho arvio"
     notes: "Voidaan konsolidoida Raspberry Pi 5:n kanssa; elektroniikka suunnitellaan erikseen [omistaja 2026-10-29]"
+
+  - id: MODEM_4G
+    name: 4G-modeemi Teltonika RUT240
+    location: null                 # ⚠ ei tiedossa
+    status: existing
+    voltage_V: 24                  # tulo 9–30 VDC [datalehti Teltonika RUT240]
+    power_W: null
+    power_W_estimate: 2            # Teltonikan mittaus 24 V:lla: tyhjäkäynti noin 0,9 W, yksi LAN-laite ja mobiilidata noin 1,5 W, täysi kuorma noin 4,2 W
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]; teho [datalehti Teltonika RUT240 Power Consumption], käyttöteho arvio"
+    notes: "Syöttö suoraan akustolta vai DDR-240B-24:n vakautetusta 24 V:sta? ⚠ tarkista"
 
   - id: HYD_CONTROL
     name: Hydrauliikan ohjaus (PDM, PVE-ohjausyksiköt, BAV-713:n kelat, anturit)
