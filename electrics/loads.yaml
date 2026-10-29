@@ -470,3 +470,26 @@ dc_loads:
     power_W: null
     use_h_per_day: 24
     source: "[omistaja 2026-10-29]"
+
+  # Lämmitys [omistaja 2026-10-29], ks. heating/current-system.md. Jokaiseen tilaan tulee
+  # konvektori (ei sähköä) tai puhallinkonvektori (24 V:n puhallin); valinta auki.
+
+  - id: FAN_HEATERS
+    name: Puhallinkonvektorit (keulahytti, keskihytti, takahytti, komentosilta, konehuone)
+    location: kaikki tilat
+    status: candidate              # konvektori vai puhallinkonvektori, ei päätetty
+    quantity: 5                    # konehuone "luultavasti"
+    voltage_V: 24
+    power_W_each: null
+    power_W_estimate_each: 20      # arvio
+    use_h_per_day: 8               # lämmityskaudella; arvio
+    source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  - id: DEFROST_FAN
+    name: Tuulilasin huurunpoistopuhallin
+    location: komentosilta
+    status: planned
+    voltage_V: 24
+    power_W: null                  # ⚠ ei tiedossa
+    use_h_per_day: null            # ajossa tarvittaessa
+    source: "[omistaja 2026-10-29]"

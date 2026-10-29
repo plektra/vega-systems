@@ -73,8 +73,8 @@ erikseen [omistaja 2026-10-29].
 Konehuoneen kuluttajat yhteensä arviolta noin 1,5 kWh/vrk lämmityskaudella [laskelma]; kaikki 24 V:n
 kuormat (myös kohdat 3.2 ja 3.3) noin 2,2 kWh/vrk, ks.
 [design/ac-power-source.md](design/ac-power-source.md#21-koko-ankkurivuorokauden-energiatarve-laskelma).
-Polttoaineen siirtopumppu ja kiertovesipumppu liittyvät myös tuleviin polttoaine- ja
-lämmitysjärjestelmiin, joille ei vielä ole omaa kansiota.
+Polttoaineen siirtopumppu liittyy myös tulevaan polttoainejärjestelmään, jolle ei vielä ole omaa
+kansiota. Kiertovesipumppu, lämmittimien puhaltimet ja huurunpoisto: [heating/](../heating/current-system.md).
 
 ### 3.2 Komentosillalta ohjattavat 24 V:n laitteet
 
