@@ -1,6 +1,6 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (suunnitellut 24 V:n kuluttajat, polttava WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
@@ -70,10 +70,50 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 Raspberry Pi ja NUC voidaan myöhemmin yhdistää yhdeksi tietokoneeksi; elektroniikka suunnitellaan
 erikseen [omistaja 2026-10-29].
 
-Yhteensä arviolta noin 1,5 kWh/vrk lämmityskaudella [laskelma], ks.
+Konehuoneen kuluttajat yhteensä arviolta noin 1,5 kWh/vrk lämmityskaudella [laskelma]; kaikki 24 V:n
+kuormat (myös kohdat 3.2 ja 3.3) noin 2 kWh/vrk, ks.
 [design/ac-power-source.md](design/ac-power-source.md#21-koko-ankkurivuorokauden-energiatarve-laskelma).
 Polttoaineen siirtopumppu ja kiertovesipumppu liittyvät myös tuleviin polttoaine- ja
 lämmitysjärjestelmiin, joille ei vielä ole omaa kansiota.
+
+### 3.2 Komentosillalta ohjattavat 24 V:n laitteet
+
+Tehot ovat omistajan ilmoittamia enimmäistehoja [omistaja 2026-10-29]. Tarkemmat tiedot ja
+käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
+
+| Laite | Enimmäisteho | Tila | Huomiot |
+|---|---|---|---|
+| Kulkuvalot | 10 W | **toteutettu** | |
+| Ankkurivalo | 5 W | **toteutettu** | Ankkurissa yöllä |
+| Sisävalaistus | 200 W | **toteutettu** | Tyypillinen käyttö arviolta noin 50 W |
+| Kansivalaistus | 200 W | suunniteltu | |
+| Työvalo eteen | 100 W | suunniteltu | |
+| Työvalo taakse | 100 W | suunniteltu | |
+| Hakuvalo | 500 W (≈ 21 A) | **olemassa, ei asennettu** | |
+| Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
+| Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | PoE, syöttö konehuoneen 24 V:n virtalähteeltä (luultavasti DDR-240B-24 **⚠ tarkista**). Sama kamera kuin kohdan 3.1 konehuoneen kamera vai eri? **⚠ tarkista** |
+| Tutka | **⚠ ei tiedossa** | suunniteltu | |
+| Atlas, pyörivä kirkasnäkölasi | **⚠ ei tiedossa** | suunniteltu | Oman invertterin kautta |
+| Pyyhkijät | **⚠ ei tiedossa** | suunniteltu | |
+| FM-radio | **⚠ ei tiedossa** | **toteutettu** | Tavallinen autoradio 24 V → 12 V -muuntimella (malli **⚠ ei tiedossa**) |
+| VHF Sailor RT2048 | **⚠ ei tiedossa** | **toteutettu** | Käyttöjännite ja virrankulutus datalehdestä **⚠ tarkista** |
+
+Valot yhtä aikaa täysillä (kulku-, ankkuri-, sisä- ja kansivalot, työvalot ja hakuvalo) ottavat
+enintään noin 1,1 kW eli noin 46 A [laskelma]. Ankkurissa valaistus kuluttaa arviolta noin
+0,3 kWh vuorokaudessa (ankkurivalo 10 h, sisävalot noin 50 W 5 h; **⚠ arvio**).
+
+### 3.3 NMEA 2000 -väylän laitteet
+
+Suunnitellut väylälaitteet [omistaja 2026-10-29]. Ne saavat virtansa väylästä, eli
+DDR-240B-24:n vakautetusta 24 V:sta, joten jokaisen pitää sietää 24 V (ks. kohta 3.1).
+Väylävirta ilmoitetaan LEN-lukuna (1 LEN = 50 mA); laitteiden LEN-arvot **⚠ ei tiedossa**.
+
+| Laite | Huomiot |
+|---|---|
+| Polttoainemittari(t) | Polttoainejärjestelmä on keskeneräinen |
+| Peräsimen asentoanturi | Liittyy ohjaukseen ja autopilottiin, ks. [hydraulics/requirements.md](../hydraulics/requirements.md) |
+| Tuulimittari | |
+| GPS/GNSS | |
 
 ## 4. Valvonta, verkot ja tehonjako
 
@@ -105,6 +145,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Kumpi muunnin syöttää kumpaakin konetta: DDR-15G-5 → Pi, DDR-240B-24 → NUC (ja NMEA 2000 -väylä) [omistaja 2026-10-29]
 - [x] Sietävätkö NMEA 2000 -väylän laitteet 24 V: kyllä, kaikki ovat 9–32 V [omistaja 2026-10-29]
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
+- [ ] Onko PoE-valvontakamera sama kuin suunniteltu konehuoneen kamera? Mistä PoE-syöttö otetaan?
+- [ ] VHF Sailor RT2048:n ja FM-radion muuntimen virrankulutus; NMEA 2000 -laitteiden LEN-arvot
 - [ ] **Veneellä:** pilssipumppujen tyyppikilvet (virta), sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan

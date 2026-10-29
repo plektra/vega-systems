@@ -278,3 +278,175 @@ dc_loads:
     power_W: null                  # ⚠ ei tiedossa; tarkista PVE:n ja kelojen datalehdistä
     use_h_per_day: null            # vain hydrauliikkaa käytettäessä
     source: "[omistaja 2026-10-29]; ks. hydraulics/schematic.md (2A1)"
+
+  # Komentosillalta ohjattavat 24 V:n laitteet [omistaja 2026-10-29]. max_W on omistajan
+  # ilmoittama enimmäisteho; käyttöajat ovat arvioita.
+
+  - id: NAV_LIGHTS
+    name: Kulkuvalot (ajovalot)
+    location: kansi
+    status: existing
+    voltage_V: 24
+    max_W: 10
+    use_h_per_day: null            # vain ajossa pimeällä; ei ankkurikuorma
+    source: "[omistaja 2026-10-29]"
+
+  - id: ANCHOR_LIGHT
+    name: Ankkurivalo
+    location: kansi
+    status: existing
+    voltage_V: 24
+    max_W: 5
+    use_h_per_day: 10              # yöllä ankkurissa; arvio
+    source: "[omistaja 2026-10-29]; käyttöaika arvio"
+
+  - id: INTERIOR_LIGHTING
+    name: Sisävalaistus
+    location: sisätilat
+    status: existing
+    voltage_V: 24
+    max_W: 200                     # kaikki valot päällä
+    power_W_estimate: 50           # tyypillinen käyttö; arvio
+    use_h_per_day: 5               # arvio
+    source: "[omistaja 2026-10-29]; tyypillinen teho ja käyttöaika arvio"
+
+  - id: DECK_LIGHTING
+    name: Kansivalaistus
+    location: kansi
+    status: planned
+    voltage_V: 24
+    max_W: 200
+    use_h_per_day: null
+    source: "[omistaja 2026-10-29]"
+
+  - id: WORK_LIGHT_FWD
+    name: Työvalo eteen
+    location: kansi
+    status: planned
+    voltage_V: 24
+    max_W: 100
+    use_h_per_day: null
+    source: "[omistaja 2026-10-29]"
+
+  - id: WORK_LIGHT_AFT
+    name: Työvalo taakse
+    location: kansi
+    status: planned
+    voltage_V: 24
+    max_W: 100
+    use_h_per_day: null
+    source: "[omistaja 2026-10-29]"
+
+  - id: SEARCHLIGHT
+    name: Hakuvalo
+    location: kansi
+    status: existing               # olemassa, ei asennettu [omistaja 2026-10-29]
+    installed: false
+    voltage_V: 24
+    max_W: 500                     # noin 21 A 24 V:lla [laskelma]
+    use_h_per_day: null            # hetkellinen käyttö
+    source: "[omistaja 2026-10-29]"
+
+  - id: NAV_COMPUTER
+    name: Navigointitietokone ja oma näyttö
+    location: komentosilta
+    status: planned
+    voltage_V: 24
+    power_W: null                  # ⚠ ei tiedossa; laitteita ei valittu
+    use_h_per_day: null            # ajossa; ankkurissa mahdollisesti ankkurivahti
+    source: "[omistaja 2026-10-29]"
+
+  - id: CAMERA_POE
+    name: Valvontakamera (PoE)
+    location: null                 # ⚠ tarkista: sama kamera kuin ER_CAMERA vai eri?
+    status: existing
+    voltage_V: 24                  # PoE konehuoneen 24 V:n virtalähteeltä (luultavasti DDR-240B-24 ⚠ tarkista)
+    power_W: null
+    power_W_estimate: 5
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]; teho arvio"
+
+  - id: RADAR
+    name: Tutka
+    location: komentosilta
+    status: planned
+    voltage_V: 24
+    power_W: null                  # ⚠ ei tiedossa; malli valitsematta
+    use_h_per_day: null            # ajossa
+    source: "[omistaja 2026-10-29]"
+
+  - id: CLEAR_VIEW_SCREEN
+    name: Atlas, pyörivä kirkasnäkölasi (oman invertterin kautta)
+    location: komentosilta
+    status: planned
+    voltage_V: 24                  # 24 V → laitteen oma invertteri
+    power_W: null                  # ⚠ ei tiedossa
+    use_h_per_day: null            # ajossa sateella ja roiskeissa
+    source: "[omistaja 2026-10-29]"
+
+  - id: WIPERS
+    name: Tuulilasinpyyhkijät
+    location: komentosilta
+    status: planned
+    voltage_V: 24
+    power_W: null                  # ⚠ ei tiedossa
+    use_h_per_day: null
+    source: "[omistaja 2026-10-29]"
+
+  - id: FM_RADIO
+    name: FM-radio (autoradio 12 V:n muuntimella)
+    location: komentosilta
+    status: existing
+    voltage_V: 24                  # 24 V → 12 V -muunnin, malli ⚠ ei tiedossa
+    power_W: null                  # ⚠ ei tiedossa
+    use_h_per_day: null
+    source: "[omistaja 2026-10-29]"
+
+  - id: VHF
+    name: VHF-radiopuhelin Sailor RT2048
+    location: komentosilta
+    status: existing
+    voltage_V: 24                  # ⚠ tarkista käyttöjännite datalehdestä
+    power_W: null                  # ⚠ ei tiedossa; vastaanotolla pieni, lähetyksellä suurempi
+    use_h_per_day: null            # kuuntelu ajossa; ankkurissa mahdollisesti jatkuvasti
+    source: "[omistaja 2026-10-29]"
+
+  # NMEA 2000 -väylän laitteet [omistaja 2026-10-29]. Saavat virtansa väylästä
+  # (DDR-240B-24:n vakautettu 24 V); laitteiden pitää sietää 24 V.
+
+  - id: N2K_FUEL_GAUGES
+    name: Polttoainemittari(t), NMEA 2000
+    location: null
+    status: planned
+    voltage_V: 24
+    power_W: null                  # väylävirta LEN-arvosta (1 LEN = 50 mA) ⚠ ei tiedossa
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]"
+
+  - id: N2K_RUDDER_ANGLE
+    name: Peräsimen asentoanturi, NMEA 2000
+    location: peräsin
+    status: planned
+    voltage_V: 24
+    power_W: null
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]"
+    notes: "Liittyy ohjaukseen ja autopilottiin, ks. hydraulics/requirements.md"
+
+  - id: N2K_WIND
+    name: Tuulimittari, NMEA 2000
+    location: masto
+    status: planned
+    voltage_V: 24
+    power_W: null
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]"
+
+  - id: N2K_GNSS
+    name: GPS/GNSS-vastaanotin, NMEA 2000
+    location: null
+    status: planned
+    voltage_V: 24
+    power_W: null
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]"
