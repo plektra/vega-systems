@@ -148,8 +148,8 @@ loads:
     at_anchor: true
     source: "[omistaja 2026-10-29]"
 
-# 24 V:n DC-kuormat. Suunnitellut konehuoneen kuluttajat [omistaja 2026-10-29]: lähes kaikki
-# ovat vielä toteuttamatta, eikä laitteita ole valittu. Tehot ovat tyypillisten 24 V:n
+# 24 V:n DC-kuormat konehuoneessa [omistaja 2026-10-29]. Olemassa ovat LED-nauhavalaistus ja
+# polttoaineen siirtopumppu; muut ovat suunniteltuja, eikä laitteita ole valittu. Tehot ovat tyypillisten 24 V:n
 # laitteiden arvioita, ei mitattuja; korvaa ne valittujen laitteiden datalehtien arvoilla.
 # Hydrauliikan varapumppu P3 (2,5 kW) on kuvattu tiedostossa current-system.md (kohta 3).
 
@@ -167,12 +167,13 @@ dc_loads:
   - id: FUEL_TRANSFER_PUMP
     name: Polttoaineen siirtopumppu
     location: konehuone
-    status: planned
+    status: existing
     voltage_V: 24
-    power_W: null
+    power_W: null                  # ⚠ tarkista tyyppikilvestä
     power_W_estimate: 100
-    use_h_per_day: null            # käytetään satunnaisesti
+    use_h_per_day: null            # vain siirrot bunkkereista päivätankkiin ja pesukierto; ei ankkurikuorma
     source: "[omistaja 2026-10-29]; teho arvio"
+    notes: "Polttoainejärjestelmä on keskeneräinen; bunkkereita ei tällä hetkellä ole [omistaja 2026-10-29]"
 
   - id: GREY_WATER_PUMP
     name: Harmaavesisumpun pumppu
@@ -215,12 +216,12 @@ dc_loads:
     source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
 
   - id: ER_LIGHTING
-    name: Konehuoneen valaistus
+    name: Konehuoneen yleisvalaistus, LED-nauhat
     location: konehuone
-    status: planned
+    status: existing
     voltage_V: 24
-    power_W: null
-    power_W_estimate: 50           # LED
+    power_W: null                  # ⚠ tarkista: nauhojen pituus ja W/m
+    power_W_estimate: 50
     use_h_per_day: 1               # arvio
     source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
 

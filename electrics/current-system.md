@@ -34,19 +34,19 @@
 
 ### 3.1 Suunnitellut 24 V:n kuluttajat konehuoneessa
 
-Lähes kaikki ovat vielä toteuttamatta, ainoastaan suunniteltuja, eikä laitteita ole valittu
-[omistaja 2026-10-29]. Mitkä niistä ovat jo olemassa: **⚠ tarkista**. Arvioidut tehot ja
+**Olemassa ovat yleisvalaistus (LED-nauhat) ja polttoaineen siirtopumppu**; muut ovat
+suunniteltuja, eikä laitteita ole valittu [omistaja 2026-10-29]. Arvioidut tehot ja
 käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 
 | Kuluttaja | Teho | Huomiot |
 |---|---|---|
 | Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | Päällä jatkuvasti, myös ankkurissa |
-| Polttoaineen siirtopumppu | **⚠ ei tiedossa** (arvio noin 100 W) | Satunnainen käyttö |
+| Polttoaineen siirtopumppu (**olemassa**) | **⚠ ei tiedossa** (arvio noin 100 W) | Käytetään vain siirrettäessä polttoainetta bunkkereista päivätankkiin tai pesukierrossa; ei ankkurikuorma. Polttoainejärjestelmä on keskeneräinen, eikä bunkkereita tällä hetkellä ole [omistaja 2026-10-29] |
 | Harmaavesisumppu ja -pumppu | **⚠ ei tiedossa** (arvio noin 120 W) | Uimurikytkin |
 | Savukaasujen poistopuhallin | **⚠ ei tiedossa** (arvio noin 50 W) | Hitsauskaasujen ym. tilapäiseen poistoon konehuoneesta; ei ankkurikuorma [omistaja 2026-10-29] |
 | Käyttövesipumppu | **⚠ ei tiedossa** (arvio noin 150 W) | Painevesipumppu |
 | Vesikiertoisen lämmityksen kiertovesipumppu | **⚠ ei tiedossa** (arvio noin 30 W) | Käy lämmityskaudella jatkuvasti, joten se on DC-kuormista suurin energiankuluttaja |
-| Valaistus | **⚠ ei tiedossa** (arvio noin 50 W, LED) | |
+| Yleisvalaistus, LED-nauhat (**olemassa**) | **⚠ ei tiedossa** (arvio noin 50 W) | Teho nauhojen pituudesta ja W/m-arvosta [omistaja 2026-10-29] |
 | Hydrauliikan ohjaus | **⚠ ei tiedossa** | PDM, PVE-ohjausyksiköt, BAV-713:n kelat ja anturit, ks. [hydraulics/schematic.md](../hydraulics/schematic.md) |
 
 Yhteensä arviolta noin 1 kWh/vrk lämmityskaudella [laskelma], ks.
@@ -75,7 +75,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Pääkeskus ja jakelun rakenne
-- [ ] Mitkä suunnitelluista 24 V:n kuluttajista ovat jo olemassa, ja niiden tehot, kun laitteet valitaan
+- [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus ja polttoaineen siirtopumppu [omistaja 2026-10-29]
+- [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
 - [ ] Ohjataanko 24 V:n kuluttajia PDM-lähdöiltä (esim. kamera, pumput, valaistus)?
 - [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä
