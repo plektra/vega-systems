@@ -150,7 +150,8 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 
 - [ ] Tuleeko jätteet polttava WC? Se ratkaisee, riittääkö noin 16 kWh vai tarvitaanko noin 20–30 kWh
 - [ ] Liesi: sähkö vai kaasu tai diesel (vaikuttaa noin 3 kWh/vrk)
-- [ ] Mahtuuko konehuoneeseen noin 600 × 400 × 250 mm:n kennopaketti (16 kWh) koteloineen, ja mihin? Entinen akkuteline styyrpuurin puolella kannen alla [blogi 2017-04-10]?
+- [x] Mahtuuko akusto konehuoneeseen: kyllä, etenkin jos generaattorille ei tarvitse varata tilaa (paapuurin puoli) [omistaja 2026-10-29]
+- [ ] Akuston tarkka paikka konehuoneessa; riippuu osin generaattoripäätöksestä
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?
 - [ ] BMS:n valinta (releohjattu vai MOSFET, latauksen eston lähdöt, valvontaliitäntä)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
