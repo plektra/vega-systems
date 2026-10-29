@@ -462,9 +462,27 @@ dieselgeneraattoria tarvita.
 
    Ajo lataa täyden vuorokauden kulutuksen noin 2,5 tunnissa. Iso akusto parantaa samalla ohjauksen
    2,5 kW:n sähköisen varapumpun käyttöaikaa ([current-system.md](../current-system.md#3-suuret-dc-kuormat)).
-2. **Dieselgeneraattoria ei tarvita,** koska ankkurissa ollaan enintään alle vuorokausi ajamatta
-   [omistaja 2026-10-29]. Generaattori olisi ollut tarpeen vasta, jos ankkurissa oltaisiin usein
-   yli vuorokausi. Paapuurin tila vapautuu muuhun käyttöön, jos omistajat niin päättävät.
+2. **Dieselgeneraattoria ei suositella,** koska ankkurissa ollaan enintään alle vuorokausi ajamatta
+   [omistaja 2026-10-29]. **Päätös on omistajien mukaan vielä auki** [omistaja 2026-10-29], joten
+   paapuurin tila pidetään varattuna.
+
+   **Varalataus pääkoneella tyhjäkäynnillä** [omistaja 2026-10-29]: jos ankkuripäivän jälkeen ei
+   ole maasähköä eikä ajoa riittävästi, akusto ladataan käyttämällä konetta tyhjäkäynnillä
+   riittävän pitkään. Huomioitavaa (**⚠ arviot**, tarkistetaan):
+   - **Laturin tuotto tyhjäkäynnillä on rajallinen.** Laturin kierrokset = koneen kierrokset ×
+     hihnapyörien välityssuhde (**⚠ ei tiedossa**). Esim. välityksellä 2,5 laturi pyörii 700 rpm:llä
+     noin 1 750 rpm, jolloin 150 A:n laturi antaa tyypillisesti vain osan nimellisvirrastaan.
+     Tarkista valitun laturin virtakäyrä datalehdestä. Alpha Pro III:n Power curve -asetus (20 %
+     kenttävirtaa alle asetetun kierrosluvun) pitää asettaa niin, ettei se turhaan rajoita
+     latausta tyhjäkäynnillä.
+   - **Nosta kierroksia** esimerkiksi 1 000–1 200 rpm:iin, jos mahdollista: laturin tuotto kasvaa,
+     ja lataus lyhenee.
+   - **Kevyt kuorma koneelle:** 5–7 kW laturikuorma on 350 hv:n koneelle hyvin kevyt. Satunnainen
+     tyhjäkäyntilataus on hyväksyttävä, mutta toistuva pitkä tyhjäkäynti voi nokeennuttaa konetta.
+   - **Laturin lämpö:** matalilla kierroksilla laturin oma tuuletin jäähdyttää heikommin, joten
+     laturin lämpötila-anturi (41500400) on suositeltava.
+   - **Polttoaineenkulutus tyhjäkäynnillä:** **⚠ ei tiedossa**; voidaan lukea myöhemmin koneen
+     tiedoista Signal K:sta.
 3. **Hydrauligeneraattoria ei suositella** Vegan tarpeeseen.
 4. **Vedenlämmittimen 3 kW:n vastusta ei kannata käyttää akustolta.** Yksi tunti vie noin 3,3 kWh
    akustosta. Käytä sitä maasähköllä tai generaattorilla. Jos lämmittimessä on koneen
@@ -517,7 +535,8 @@ asennus. Ehdot halvimmalle:
 - [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu- tai diesellämmitteisiä? (kiuas: sähkö, päätetty 2026-10-29)
 - [x] Kuinka monta vuorokautta ollaan ankkurissa ajamatta: enintään alle vuorokausi [omistaja 2026-10-29]
 - [ ] Kuinka pitkä ajo on tyypillisesti ankkuripäivän jälkeen (riittääkö noin 2,5 h lataukseen)?
-- [ ] Päätetäänkö dieselgeneraattori pois suunnitelmasta?
+- [ ] Dieselgeneraattori: päätös auki [omistaja 2026-10-29]
+- [ ] Laturin hihnapyörien välityssuhde ja valitun laturin virtakäyrä: paljonko se lataa 700 rpm:llä ja 1 000–1 200 rpm:llä?
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Onko kotilaiturin maasähkö 1-vaiheinen 230 V, ja onko siinä vikavirtasuoja?
 - [x] Erotusmuuntaja WM5002: datalehti saatu (pehmokäynnistys on, SL35) [datalehti Airlink WM5002]
