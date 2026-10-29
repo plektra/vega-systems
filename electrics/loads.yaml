@@ -9,18 +9,18 @@
 #   power_W_estimate: tyypillinen teho, kun omaa arvoa ei ole (arvio, ei mitattu)
 #   use_h_per_day:    arvioitu käyttöaika ankkurivuorokaudessa täydellä teholla
 #   at_anchor:        käytetäänkö ankkurissa akustolta tai generaattorilta
-#   status:           existing (olemassa) | candidate (harkinnassa, ei päätetty)
+#   status:           existing (olemassa) | decided (päätetty, ei vielä asennettu) | candidate (harkinnassa)
 #   source:           mistä luvut ovat peräisin
 
 schema_version: 1
 
-# Vain jääkaappi on olemassa; muut ovat harkinnassa eikä niiden asentamisesta ole päätetty
-# [omistaja 2026-10-28].
+# Vain jääkaappi on olemassa [omistaja 2026-10-28]; sähkökiuas on päätetty [omistaja 2026-10-29].
+# Muut ovat harkinnassa eikä niiden asentamisesta ole päätetty.
 
 loads:
   - id: SAUNA
     name: Sähkökiuas
-    status: candidate
+    status: decided                # päätetty 2026-10-29; puukiuas ei mahdu [omistaja 2026-10-29]
     power_W: 2300
     use_h_per_day: 2               # kerrallaan noin 2 h; täysi teho koko ajan on yläraja
     at_anchor: true

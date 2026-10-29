@@ -9,8 +9,8 @@
 |---|---|---|
 | Milloin AC-sähköä tarvitaan | Ajossa ja ankkurissa | [omistaja 2026-10-28] |
 | Generaattori | Ei asennettu; tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
-| Sähkökiuas (harkinnassa; ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h | [omistaja 2026-10-28] |
-| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa;** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
+| Sähkökiuas (**päätetty** 2026-10-29; ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h. Puukiuas ei mahdu saunaan | [omistaja 2026-10-28], [omistaja 2026-10-29] |
+| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa, ja sähkökiuas on päätetty (2026-10-29);** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
 | Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Erotusmuuntaja | Airlink WM5002, 230/230 V, 5000 VA; olemassa, ei kytketty, ks. kohta 2.6 | [omistaja 2026-10-28] |
 | Kuinka monta vuorokautta ankkurissa ilman ajoa | **⚠ ei tiedossa** | |
@@ -459,8 +459,8 @@ lataukseen vai tarvitaanko dieselgeneraattori.
    jäähdytysvesikierukka, vesi lämpenee ajossa ilmaiseksi.
 
 **Halvempia vaihtoehtoja**, jos akusto kasvaa liian kalliiksi: sähköruoanlaitto (noin 3 kWh/vrk) ja
-kiuas (4,6 kWh/vrk) ovat suurimmat kuormat. Kaasu- tai dieselliesi ja puukiuas pienentäisivät
-akuston noin kolmasosaan.
+kiuas (4,6 kWh/vrk) ovat suurimmat kuormat. Sähkökiuas on päätetty (puukiuas ei mahdu), joten
+säästöä voi hakea enää ruoanlaitosta: kaasu- tai dieselliesi pienentäisi akustoa noin 3 kWh/vrk.
 
 ### 4.1 Halvin toimiva kokoonpano [laskelma, hinnat haettu 2026-10-28]
 
@@ -489,11 +489,11 @@ asennus. Ehdot halvimmalle:
   halvin, jos liettä ja uunia ei käytetä täysillä yhtä aikaa ankkurissa. Vertailu kohdassa 2.2.
   Victronin kanssa MasterBus-tapahtuma "Stop charge" ei toimi, ja laturin BMS-ohjaus tehdään Reg
   on -johtimen kautta tai Wakespeed-säätimellä.
-- **Vielä halvempi vaihe 0:** jos sähkökiuasta ja -liettä ei asenneta, toista laturia ei
-  välttämättä tarvita. Pelkkä jääkaappi ja pienkuormat (≈ 1–2 kWh/vrk, arvio) latautuvat
-  maasähköllä ja ajossa nykyisestä laturista DC-DC-laturin kautta (hinta ja koko **⚠ ei
-  tiedossa**). Toisen laturin voi lisätä myöhemmin.
-- **Suurin säästö tulee laitevalinnoista:** puukiuas sekä kaasu- tai dieselliesi pienentävät
+- **~~Vaihe 0 ilman toista laturia~~ ei enää riitä,** koska sähkökiuas on päätetty (2026-10-29):
+  yksi saunavuoro vie akustosta noin 5,1 kWh, jonka nykyinen 65 A:n laturi palauttaisi vasta
+  noin 3,7 tunnin ajossa. Toinen laturi tarvitaan, jos ankkurissa saunotaan ilman maasähköä.
+  Jos saunotaan aluksi vain laiturissa maasähköllä, toisen laturin voi lisätä myöhemmin.
+- **Suurin jäljellä oleva säästö tulee ruoanlaitosta:** kaasu- tai dieselliesi pienentää
   akuston, laturin ja invertterin tarvetta enemmän kuin mikään osavalinta.
 
 ## 5. Avoimet kysymykset
@@ -502,7 +502,7 @@ asennus. Ehdot halvimmalle:
 - [ ] Jääkaapin teho ja energiankulutus tyyppikilvestä; muiden laitteiden tehot, kun ne valitaan
 - [ ] Onko vedenlämmittimessä koneen jäähdytysvesikierukka?
 - [x] Mitkä laitteet ovat olemassa: vain jääkaappi [omistaja 2026-10-28]
-- [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi, kiuas ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu-, diesel- tai puulämmitteisiä?
+- [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu- tai diesellämmitteisiä? (kiuas: sähkö, päätetty 2026-10-29)
 - [ ] Kuinka monta vuorokautta ollaan tyypillisesti ankkurissa ajamatta?
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Onko kotilaiturin maasähkö 1-vaiheinen 230 V, ja onko siinä vikavirtasuoja?
