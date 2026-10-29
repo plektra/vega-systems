@@ -1,6 +1,6 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
@@ -163,7 +163,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Jääkö CTEK käynnistysakkujen ylläpitolataukseen, kun uusi (litium)käyttöakusto hankitaan?
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
-- [ ] Pääkeskus ja jakelun rakenne
+- [ ] Pääkeskus ja jakelun rakenne: ehdotus selvityksessä [design/dc-distribution.md](design/dc-distribution.md), ei päätöstä
 - [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus, polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC [omistaja 2026-10-29]
 - [x] Raspberry Pi 5:n ja NUC:n syöttö: Mean Well DDR-15G-5 ja DDR-240B-24 [omistaja 2026-10-29]
 - [ ] NUC:n malli ja sallittu tulojännite (jätetty toistaiseksi, [omistaja 2026-10-29])
