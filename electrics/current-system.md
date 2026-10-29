@@ -71,7 +71,7 @@ Raspberry Pi ja NUC voidaan myöhemmin yhdistää yhdeksi tietokoneeksi; elektro
 erikseen [omistaja 2026-10-29].
 
 Konehuoneen kuluttajat yhteensä arviolta noin 1,5 kWh/vrk lämmityskaudella [laskelma]; kaikki 24 V:n
-kuormat (myös kohdat 3.2 ja 3.3) noin 2 kWh/vrk, ks.
+kuormat (myös kohdat 3.2 ja 3.3) noin 2,2 kWh/vrk, ks.
 [design/ac-power-source.md](design/ac-power-source.md#21-koko-ankkurivuorokauden-energiatarve-laskelma).
 Polttoaineen siirtopumppu ja kiertovesipumppu liittyvät myös tuleviin polttoaine- ja
 lämmitysjärjestelmiin, joille ei vielä ole omaa kansiota.
@@ -83,7 +83,7 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 
 | Laite | Enimmäisteho | Tila | Huomiot |
 |---|---|---|---|
-| Kulkuvalot | 10 W | **toteutettu** | |
+| Kulkuvalot | 10 W | **toteutettu** | Sisältää mastovalon [omistaja 2026-10-29] |
 | Ankkurivalo | 5 W | **toteutettu** | Ankkurissa yöllä |
 | Sisävalaistus | 200 W | **toteutettu** | Tyypillinen käyttö arviolta noin 50 W |
 | Kansivalaistus | 200 W | suunniteltu | |
@@ -92,6 +92,8 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | Hakuvalo | 500 W (≈ 21 A) | **olemassa, ei asennettu** | |
 | Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
 | Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö **Mean Well DDR-240B-24**:ltä [omistaja 2026-10-29] |
+| Mastokamera | **⚠ ei tiedossa** (arvio noin 5 W) | suunniteltu | Kolmas kamera; PoE, syöttö luultavasti DDR-240B-24 **⚠ tarkista** [omistaja 2026-10-29] |
+| AIS, luokka B | **⚠ ei tiedossa** (arvio noin 3 W) | suunniteltu | Lähettävä laite; antenni mastossa [omistaja 2026-10-29] |
 | Tutka | **⚠ ei tiedossa** | suunniteltu | |
 | Atlas, pyörivä kirkasnäkölasi | **⚠ ei tiedossa** | suunniteltu | Oman invertterin kautta |
 | Pyyhkijät | **⚠ ei tiedossa** | suunniteltu | |
@@ -124,13 +126,13 @@ kaapeloinnin ja kiinnitysten suunnittelua varten; laitteiden tehot ovat kohdissa
 |---|---|---|---|
 | VHF-antenni | masto | koaksiaali VHF:lle (Sailor RT2048) | |
 | FM-antenni | masto | koaksiaali FM-radiolle | |
-| AIS-antenni | masto | koaksiaali AIS-laitteelle | AIS-laitetta ei ole listattu: vastaanotin vai lähettävä (luokka B)? **⚠ ei tiedossa** |
+| AIS-antenni | masto | koaksiaali AIS-laitteelle | AIS luokka B (kohta 3.2) [omistaja 2026-10-29] |
 | GPS/GNSS-antenni | luultavasti katto | NMEA 2000 (kohta 3.3) tai koaksiaali | |
-| Mastovalo | masto | 24 V | Kuuluuko kulkuvalojen 10 W:iin? **⚠ tarkista** |
+| Mastovalo | masto | 24 V | Osa kulkuvaloja (10 W) [omistaja 2026-10-29] |
 | Ankkurivalo | masto | 24 V, enintään 5 W | Olemassa (kohta 3.2) |
 | Kulkuvalot | katto | 24 V | Olemassa (kohta 3.2) |
 | Työvalot eteen ja taakse | masto | 24 V, 2 × enintään 100 W | |
-| Kamera | masto | PoE (Ethernet) | Kolmas kamera komentosillan ja konehuoneen lisäksi? **⚠ tarkista** |
+| Kamera | masto | PoE (Ethernet) | Oma mastokamera komentosillan ja konehuoneen kameroiden lisäksi [omistaja 2026-10-29] |
 | Tutka | masto | 24 V + data | Malli valitsematta; kaapeli mallin mukaan |
 | Tuulianturi | masto | NMEA 2000 (kohta 3.3) | |
 
@@ -170,9 +172,9 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
 - [x] Valvontakamerat: komentosillan kamera on olemassa, konehuoneeseen tulee oma [omistaja 2026-10-29]
 - [x] Komentosillan kameran PoE-syöttö: DDR-240B-24 [omistaja 2026-10-29]
-- [ ] AIS-laite: vastaanotin vai lähettävä (luokka B), malli ja virrankulutus
-- [ ] Mastokamera: kolmas kamera vai jompikumpi aiemmista?
-- [ ] Mastovalo: erillinen valo vai osa kulkuvaloja (10 W)?
+- [x] AIS: luokka B [omistaja 2026-10-29]; malli ja virrankulutus auki
+- [x] Mastokamera: oma, kolmas kamera [omistaja 2026-10-29]
+- [x] Mastovalo: osa kulkuvaloja [omistaja 2026-10-29]
 - [ ] VHF Sailor RT2048:n ja FM-radion muuntimen virrankulutus; NMEA 2000 -laitteiden LEN-arvot
 - [ ] **Veneellä:** pilssipumppujen tyyppikilvet (virta), sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]

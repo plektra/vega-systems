@@ -283,7 +283,7 @@ dc_loads:
   # ilmoittama enimmäisteho; käyttöajat ovat arvioita.
 
   - id: NAV_LIGHTS
-    name: Kulkuvalot (ajovalot)
+    name: Kulkuvalot (ajovalot), mastovalo mukaan lukien
     location: kansi
     status: existing
     voltage_V: 24
@@ -364,6 +364,26 @@ dc_loads:
     power_W: null
     power_W_estimate: 5
     use_h_per_day: 24
+    source: "[omistaja 2026-10-29]; teho arvio"
+
+  - id: MAST_CAMERA
+    name: Mastokamera (PoE)
+    location: masto
+    status: planned                # kolmas kamera komentosillan ja konehuoneen lisäksi [omistaja 2026-10-29]
+    voltage_V: 24                  # PoE; syöttö luultavasti DDR-240B-24 ⚠ tarkista
+    power_W: null
+    power_W_estimate: 5
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]; teho arvio"
+
+  - id: AIS
+    name: AIS-lähetin-vastaanotin, luokka B
+    location: komentosilta         # antenni mastossa
+    status: planned
+    voltage_V: 24                  # ⚠ tarkista valitun laitteen tuloalue
+    power_W: null                  # ⚠ ei tiedossa; malli valitsematta
+    power_W_estimate: 3            # tyypillinen luokan B laite; arvio
+    use_h_per_day: 24              # oletus: päällä myös ankkurissa
     source: "[omistaja 2026-10-29]; teho arvio"
 
   - id: RADAR
