@@ -1,6 +1,6 @@
 # Käyttöakusto: koko ja itse kootut LiFePO4-kennot
 
-> **Tila:** Selvitys, aloitettu 2026-10-29. Ei päätöstä. Kennojen hinnat ja saatavuus vaihtelevat;
+> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-29 (laajennettavuus). Ei päätöstä. Kennojen hinnat ja saatavuus vaihtelevat;
 > tarkista ennen tilausta.
 
 Vanhat käyttöakut on purettu, ja nyt kaikki 24 V:n kuormat ottavat virtansa käynnistysakuilta
@@ -111,7 +111,42 @@ käyttöönottoa.
 
 Itse koottu akusto: selvitä vakuutusyhtiöltä, hyväksyykö se sen.
 
-## 4. Avoimet kysymykset
+## 4. Laajennettavuus: aurinkopaneelit ja maasähkölaturi
+
+Kumpikin onnistuu, kun akusto ja BMS suunnitellaan alusta asti useammalle laturille.
+
+**Tärkein periaate: BMS:n pitää pystyä pysäyttämään jokainen laturi.** Kun latureita on useita
+(koneen laturi(t), invertterilaturi, aurinkosäädin, maasähkölaturi), jokaisen pitää ottaa vastaan
+BMS:n latauksen esto (väylä, kuten MasterBus tai CAN, tai ohjausjohdin), ennen kuin BMS katkaisee
+akuston. Valitse BMS, jossa on riittävästi lähtöjä, tai vedä yhteinen latauksen estosignaali,
+johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt tuleville latureille.
+
+### Aurinkopaneelit
+
+- **Mass Combi Ultrassa on oma aurinkopaneelitulo** (Pro-mallissa ei,
+  ks. [ac-power-source.md](ac-power-source.md#muut-invertterilaturivaihtoehdot-haettu-2026-10-29)).
+  Tulon teho- ja jännitealue **⚠ tarkista** datalehdestä. Muuten tarvitaan erillinen 24 V:n
+  MPPT-säädin, jossa on LiFePO4-profiili ja BMS-ohjaus.
+- **Tuotto Suomessa** (**⚠ arvio**): kesällä aurinkoisena päivänä noin 3–5 kWh jokaista
+  asennettua kilowattia (kWp) kohti, keväällä ja syksyllä selvästi vähemmän, talvella lähes nolla.
+  Esim. 400 Wp kattaa kesäpäivänä noin 1,2–2 kWh eli suuren osan 24 V:n kuormista (noin
+  2,2 kWh/vrk). Saunaan ja sähköruoanlaittoon se ei riitä, mutta vähentää ajon tai maasähkön
+  tarvetta ja pitää akuston täynnä laiturissa.
+- **Paikka on rajallinen:** katolle tulevat GNSS-antenni ja kulkuvalot, ja mastoon antennit,
+  tutka ja kamera (ks. [current-system.md](../current-system.md#34-maston-ja-katon-varustelu)).
+  Paneelien paikka, varjostus ja kiinnitys **⚠ ei tiedossa**.
+
+### Litiumakkujen maasähkölaturi
+
+- **Invertterilaturi on jo maasähkölaturi** (Mass Combi Ultra 100 A). Erillistä laturia ei
+  tarvita, jos invertterilaturi hankitaan.
+- **Erillinen 24 V:n LiFePO4-laturi** (esim. 15–30 A, jossa on LiFePO4-profiili ja ohjaustulo
+  BMS:lle) sopii, jos hankinnat tehdään **vaiheittain**: ensin akusto, BMS ja pieni maasähkölaturi,
+  invertterilaturi myöhemmin. Myöhemmin se voi jäädä varalaturiksi. Hinta **⚠ ei tiedossa**.
+- **Nykyinen CTEK MULTI XT 14000 ei sovi litiumille** (vain lyijyakuille), mutta jää
+  käynnistysakkujen ylläpitolataukseen.
+
+## 5. Avoimet kysymykset
 
 - [ ] Tuleeko jätteet polttava WC? Se ratkaisee, riittääkö noin 16 kWh vai tarvitaanko noin 20–30 kWh
 - [ ] Liesi: sähkö vai kaasu tai diesel (vaikuttaa noin 3 kWh/vrk)
@@ -120,3 +155,5 @@ Itse koottu akusto: selvitä vakuutusyhtiöltä, hyväksyykö se sen.
 - [ ] BMS:n valinta (releohjattu vai MOSFET, latauksen eston lähdöt, valvontaliitäntä)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
 - [ ] Vakuutusyhtiön kanta itse koottuun akustoon
+- [ ] Aurinkopaneelit: tuleeko niitä, ja mihin ne mahtuisivat ilman varjostusta?
+- [ ] Hankitaanko vaiheittain (ensin akusto ja pieni maasähkölaturi, invertterilaturi myöhemmin)?
