@@ -12,7 +12,7 @@
 | Käynnistysakut | 2 kpl (tyyppi ja kapasiteetti **⚠ ei tiedossa**) | [blogi 2017-04-10] |
 | Akkujen sijainti | Kannen alla telineessä konehuoneen styyrpuurin puolella | [blogi 2017-04-10] |
 | Koneen laturi | 65 A | [blogi 2017-07-04] |
-| Lataus maasähköstä | **⚠ ei tiedossa** | |
+| Lataus maasähköstä | **CTEK MULTI XT 14000**, käytössä akkujen ylläpitolataukseen. 24 V, latausjännite 28,8 V, enintään 14 A (≈ 400 W), akuille noin 28–300 Ah (ylläpitolataus enintään noin 500 Ah); vain lyijyakuille (märkä, MF, GEL, Ca/Ca, AGM), litiumtilaa ei mainita. Mitä akkuja se lataa (käyttö, käynnistys vai molemmat): **⚠ tarkista** | [omistaja 2026-10-29], [datalehti CTEK MULTI XT 14000](../datasheets/README.md#sähköjärjestelmä) |
 
 ## 2. AC-järjestelmä
 
@@ -78,7 +78,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 
 - [x] Vahvista 24 V:n DC-jännite: 24 V [omistaja 2026-10-27]
 - [ ] Akkujen tyypit ja kapasiteetit (käyttö ja käynnistys)
-- [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit
+- [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit (maasähköstä nyt CTEK MULTI XT 14000 ylläpitolataukseen [omistaja 2026-10-29])
+- [ ] Mitä akkuja CTEK lataa, ja jääkö se käyttöön käynnistysakuille, jos käyttöakusto vaihdetaan litiumiin?
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Pääkeskus ja jakelun rakenne
