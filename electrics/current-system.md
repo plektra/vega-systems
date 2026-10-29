@@ -15,7 +15,7 @@
 | Lataus maasähköstä | **CTEK MULTI XT 14000**, käytössä käynnistysakkujen ylläpitolataukseen (ainoat jäljellä olevat akut). 24 V, latausjännite 28,8 V, enintään 14 A (≈ 400 W), akuille noin 28–300 Ah (ylläpitolataus enintään noin 500 Ah); vain lyijyakuille (märkä, MF, GEL, Ca/Ca, AGM), litiumtilaa ei mainita. Mitä akkuja se lataa (käyttö, käynnistys vai molemmat): **⚠ tarkista** | [omistaja 2026-10-29], [datalehti CTEK MULTI XT 14000](../datasheets/README.md#sähköjärjestelmä) |
 
 **Huomio [laskelma]:** koska käyttöakkuja ei ole, jatkuvasti päällä olevat laitteet (Raspberry Pi,
-NUC, 4G-modeemi, NMEA 2000) purkavat käynnistysakkuja noin 25 W:lla eli noin 0,6 kWh vuorokaudessa
+NUC, 4G-modeemi, NMEA 2000, valvontakamera) purkavat käynnistysakkuja noin 30 W:lla eli noin 0,7 kWh vuorokaudessa
 (**⚠ arvio**, ks. kohta 3.1). Ilman maasähköä tai ajoa käynnistysakut tyhjenevät muutamassa
 vuorokaudessa (kapasiteetti **⚠ ei tiedossa**), ja lyijyakun syväpurku lyhentää sen ikää. Kun
 uusi käyttöakusto tulee, nämä kuormat siirretään sille ja käynnistysakut erotetaan (esim.
