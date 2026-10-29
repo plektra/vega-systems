@@ -49,7 +49,7 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 | Yleisvalaistus, LED-nauhat (**olemassa**) | **⚠ ei tiedossa** (arvio noin 50 W) | Teho nauhojen pituudesta ja W/m-arvosta [omistaja 2026-10-29] |
 | Raspberry Pi 5 (**olemassa**) | **⚠ ei tiedossa** (arvio noin 7 W, muuntimen häviöineen noin 8 W) | Signal K -palvelin; päällä jatkuvasti. Syöttö **Mean Well DDR-15G-5** (24 V → 5 V, 3 A, 15 W) [omistaja 2026-10-29]. Pi 5 tarvitsee täyteen USB-virtaan 5 A:n lähteen; 3 A:n syötöllä se rajaa USB-porttien yhteisvirran noin 600 mA:iin [laskelma, Raspberry Pi -dokumentaation mukaan **⚠ tarkista**]. Riittää, jos USB:ssä on vain kevyitä laitteita (esim. CAN- tai N2K-sovitin) |
 | Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W, muuntimen häviöineen noin 17 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti. Syöttö **Mean Well DDR-240B-24** (24 V → vakautettu 24 V, 10 A, 240 W; tulo 16,8–33,6 V) [omistaja 2026-10-29]. Sama muunnin syöttää myös mm. **NMEA 2000 -väylän** [omistaja 2026-10-29]. NMEA 2000 -standardin väyläjännite on nimellisesti 12 V (laitteiden on toimittava noin 9–16 V:lla; **⚠ tarkista** standardista), mutta kaikki Vegan väylälaitteet toimivat 9–32 V:lla, joten 24 V on niille sopiva [omistaja 2026-10-29]. Uutta väylälaitetta valittaessa tarkista, että se sietää 24 V. NUC:n malli jätetään toistaiseksi selvittämättä, koska keskitytään sähköjärjestelmään [omistaja 2026-10-29] |
-| 4G-modeemi Teltonika RUT240 (**olemassa**) | Noin 1–2 W käytössä, enintään noin 4,2 W [datalehti Teltonika RUT240] | Päällä jatkuvasti; tulo 9–30 VDC. Syöttö 24 V:sta [omistaja 2026-10-29]; suoraan akustolta vai DDR-240B-24:n kautta **⚠ tarkista**. Litiumakuston latausjännite (noin 28,5 V) mahtuu tuloalueeseen, mutta marginaali 30 V:iin on pieni; vakautettu 24 V on varmempi [laskelma] |
+| 4G-modeemi Teltonika RUT240 (**olemassa**) | Noin 1–2 W käytössä, enintään noin 4,2 W [datalehti Teltonika RUT240] | Päällä jatkuvasti; tulo 9–30 VDC. Syöttö **Mean Well DDR-240B-24**:n vakautetusta 24 V:sta [omistaja 2026-10-29], joten akuston latausjännite ei vaikuta siihen |
 | Hydrauliikan ohjaus | **⚠ ei tiedossa** | PDM, PVE-ohjausyksiköt, BAV-713:n kelat ja anturit, ks. [hydraulics/schematic.md](../hydraulics/schematic.md) |
 
 Raspberry Pi ja NUC voidaan myöhemmin yhdistää yhdeksi tietokoneeksi; elektroniikka suunnitellaan
@@ -88,7 +88,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Kumpi muunnin syöttää kumpaakin konetta: DDR-15G-5 → Pi, DDR-240B-24 → NUC (ja NMEA 2000 -väylä) [omistaja 2026-10-29]
 - [x] Sietävätkö NMEA 2000 -väylän laitteet 24 V: kyllä, kaikki ovat 9–32 V [omistaja 2026-10-29]
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
-- [ ] Saako 4G-modeemi (RUT240) virtansa suoraan akustolta vai DDR-240B-24:n kautta?
+- [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
 - [ ] Ohjataanko 24 V:n kuluttajia PDM-lähdöiltä (esim. kamera, pumput, valaistus)?
