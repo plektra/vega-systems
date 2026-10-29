@@ -115,6 +115,29 @@ Väylävirta ilmoitetaan LEN-lukuna (1 LEN = 50 mA); laitteiden LEN-arvot **⚠ 
 | Tuulimittari | |
 | GPS/GNSS | |
 
+### 3.4 Maston ja katon varustelu
+
+Mastoon ja osittain komentosillan katolle tuleva varustelu [omistaja 2026-10-29]. Lista on
+kaapeloinnin ja kiinnitysten suunnittelua varten; laitteiden tehot ovat kohdissa 3.2 ja 3.3.
+
+| Varuste | Sijainti | Sähkö / kaapeli | Huomiot |
+|---|---|---|---|
+| VHF-antenni | masto | koaksiaali VHF:lle (Sailor RT2048) | |
+| FM-antenni | masto | koaksiaali FM-radiolle | |
+| AIS-antenni | masto | koaksiaali AIS-laitteelle | AIS-laitetta ei ole listattu: vastaanotin vai lähettävä (luokka B)? **⚠ ei tiedossa** |
+| GPS/GNSS-antenni | luultavasti katto | NMEA 2000 (kohta 3.3) tai koaksiaali | |
+| Mastovalo | masto | 24 V | Kuuluuko kulkuvalojen 10 W:iin? **⚠ tarkista** |
+| Ankkurivalo | masto | 24 V, enintään 5 W | Olemassa (kohta 3.2) |
+| Kulkuvalot | katto | 24 V | Olemassa (kohta 3.2) |
+| Työvalot eteen ja taakse | masto | 24 V, 2 × enintään 100 W | |
+| Kamera | masto | PoE (Ethernet) | Kolmas kamera komentosillan ja konehuoneen lisäksi? **⚠ tarkista** |
+| Tutka | masto | 24 V + data | Malli valitsematta; kaapeli mallin mukaan |
+| Tuulianturi | masto | NMEA 2000 (kohta 3.3) | |
+
+Mastoon menee siis ainakin kolme koaksiaalikaapelia, 24 V:n syötöt valoille ja tutkalle,
+Ethernet kameralle ja mahdollisesti tutkalle sekä NMEA 2000 -pudotus tuulianturille. Kaapeleiden
+läpivientien koko ja mahdollinen jakorasia mastossa kannattaa suunnitella kerralla.
+
 ## 4. Valvonta, verkot ja tehonjako
 
 Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
@@ -147,6 +170,9 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Mitä muuta DDR-240B-24 syöttää, ja paljonko se kuormittaa muunninta
 - [x] Valvontakamerat: komentosillan kamera on olemassa, konehuoneeseen tulee oma [omistaja 2026-10-29]
 - [x] Komentosillan kameran PoE-syöttö: DDR-240B-24 [omistaja 2026-10-29]
+- [ ] AIS-laite: vastaanotin vai lähettävä (luokka B), malli ja virrankulutus
+- [ ] Mastokamera: kolmas kamera vai jompikumpi aiemmista?
+- [ ] Mastovalo: erillinen valo vai osa kulkuvaloja (10 W)?
 - [ ] VHF Sailor RT2048:n ja FM-radion muuntimen virrankulutus; NMEA 2000 -laitteiden LEN-arvot
 - [ ] **Veneellä:** pilssipumppujen tyyppikilvet (virta), sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
