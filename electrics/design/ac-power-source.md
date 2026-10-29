@@ -79,9 +79,10 @@ kohta 4.
   septitankilla; niiden sähkönkulutus on pieni.
 - **24 V:n kuormat** (suunnitellut konehuoneen laitteet, ks. [loads.yaml](../loads.yaml),
   `dc_loads`). Ne otetaan akustosta suoraan ilman invertteriä. Arvioiduilla tehoilla ne kuluttavat
-  lämmityskaudella yhteensä **noin 1 kWh/vrk** (**⚠ arvio**), josta suurin osa on kiertovesipumppu
-  (noin 0,7 kWh, jos se käy koko vuorokauden) ja valvontakamera (noin 0,1 kWh). Se lisää akustotarvetta
-  noin 50 Ah (litium, 80 % käytettävissä) [laskelma]. Alla olevissa Ah-luvuissa sitä ei ole mukana.
+  lämmityskaudella yhteensä **noin 1,5 kWh/vrk** (**⚠ arvio**). Suurin osa kuluu jatkuvasti
+  käyviin laitteisiin: kiertovesipumppu (noin 0,7 kWh, jos se käy koko vuorokauden), Intel NUC
+  (Frigate, noin 0,4 kWh), Raspberry Pi 5 (Signal K, noin 0,2 kWh) ja valvontakamera (noin 0,1 kWh).
+  Se lisää akustotarvetta noin 80 Ah (litium, 80 % käytettävissä) [laskelma]. Alla olevissa Ah-luvuissa sitä ei ole mukana.
 
 | Akustotarve yhdelle ankkurivuorokaudelle, 24 V | Litium (LiFePO4), 80 % käytettävissä | Lyijy (AGM tai geeli), 50 % käytettävissä |
 |---|---|---|

@@ -34,7 +34,7 @@
 
 ### 3.1 Suunnitellut 24 V:n kuluttajat konehuoneessa
 
-**Olemassa ovat yleisvalaistus (LED-nauhat) ja polttoaineen siirtopumppu**; muut ovat
+**Olemassa ovat yleisvalaistus (LED-nauhat), polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC**; muut ovat
 suunniteltuja, eikä laitteita ole valittu [omistaja 2026-10-29]. Arvioidut tehot ja
 käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 
@@ -47,9 +47,14 @@ käyttöajat: [loads.yaml](loads.yaml) (`dc_loads`).
 | Käyttövesipumppu | **⚠ ei tiedossa** (arvio noin 150 W) | Painevesipumppu |
 | Vesikiertoisen lämmityksen kiertovesipumppu | **⚠ ei tiedossa** (arvio noin 30 W) | Käy lämmityskaudella jatkuvasti, joten se on DC-kuormista suurin energiankuluttaja |
 | Yleisvalaistus, LED-nauhat (**olemassa**) | **⚠ ei tiedossa** (arvio noin 50 W) | Teho nauhojen pituudesta ja W/m-arvosta [omistaja 2026-10-29] |
+| Raspberry Pi 5 (**olemassa**) | **⚠ ei tiedossa** (arvio noin 7 W) | Signal K -palvelin; päällä jatkuvasti [omistaja 2026-10-29] |
+| Intel NUC (**olemassa**) | **⚠ ei tiedossa** (arvio noin 15 W; malli ei tiedossa) | Frigate-kameratallennin; päällä jatkuvasti [omistaja 2026-10-29] |
 | Hydrauliikan ohjaus | **⚠ ei tiedossa** | PDM, PVE-ohjausyksiköt, BAV-713:n kelat ja anturit, ks. [hydraulics/schematic.md](../hydraulics/schematic.md) |
 
-Yhteensä arviolta noin 1 kWh/vrk lämmityskaudella [laskelma], ks.
+Raspberry Pi ja NUC voidaan myöhemmin yhdistää yhdeksi tietokoneeksi; elektroniikka suunnitellaan
+erikseen [omistaja 2026-10-29].
+
+Yhteensä arviolta noin 1,5 kWh/vrk lämmityskaudella [laskelma], ks.
 [design/ac-power-source.md](design/ac-power-source.md#21-koko-ankkurivuorokauden-energiatarve-laskelma).
 Polttoaineen siirtopumppu ja kiertovesipumppu liittyvät myös tuleviin polttoaine- ja
 lämmitysjärjestelmiin, joille ei vielä ole omaa kansiota.
@@ -61,7 +66,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 
 | Kohde | Repo / sijainti | Huomiot |
 |---|---|---|
-| Signal K -palvelin | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Tietokeskus; Grafana-näkymät |
+| Signal K -palvelin | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Tietokeskus; Grafana-näkymät. Pyörii konehuoneen Raspberry Pi 5:llä [omistaja 2026-10-29] |
+| Kameratallennin (Frigate) | konehuoneen Intel NUC | Valvontakameran tallennus [omistaja 2026-10-29] |
 | NMEA 2000 -nodet | `plektra/vega-n2k-node1` … `node3`, `vega-n2k-node-bootstrap` | ESP32-pohjaiset N2K-nodet |
 | Tehonjako (PDM) | `ESP32-PDM`, `ESP32-PDM-v1/v2/4x4/base` (KiCad) | ESP32-tehonjakomoduulit; ehdokkaita hydrauliikan solenoidien ja PTO-kytkimen toimilaitteen ohjaukseen |
 | Asennusautomaatio | `plektra/vega-ansible` | Veneen tietokoneiden konfigurointi |
@@ -75,7 +81,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Pääkeskus ja jakelun rakenne
-- [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus ja polttoaineen siirtopumppu [omistaja 2026-10-29]
+- [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus, polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC [omistaja 2026-10-29]
+- [ ] Raspberry Pi 5:n ja NUC:n syöttö (muuntimet 24 V:sta?) ja NUC:n malli
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
 - [ ] Ohjataanko 24 V:n kuluttajia PDM-lähdöiltä (esim. kamera, pumput, valaistus)?

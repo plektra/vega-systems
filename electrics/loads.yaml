@@ -148,8 +148,8 @@ loads:
     at_anchor: true
     source: "[omistaja 2026-10-29]"
 
-# 24 V:n DC-kuormat konehuoneessa [omistaja 2026-10-29]. Olemassa ovat LED-nauhavalaistus ja
-# polttoaineen siirtopumppu; muut ovat suunniteltuja, eikä laitteita ole valittu. Tehot ovat tyypillisten 24 V:n
+# 24 V:n DC-kuormat konehuoneessa [omistaja 2026-10-29]. Olemassa ovat LED-nauhavalaistus,
+# polttoaineen siirtopumppu, Raspberry Pi 5 (Signal K) ja Intel NUC (Frigate); muut ovat suunniteltuja, eikä laitteita ole valittu. Tehot ovat tyypillisten 24 V:n
 # laitteiden arvioita, ei mitattuja; korvaa ne valittujen laitteiden datalehtien arvoilla.
 # Hydrauliikan varapumppu P3 (2,5 kW) on kuvattu tiedostossa current-system.md (kohta 3).
 
@@ -224,6 +224,28 @@ dc_loads:
     power_W_estimate: 50
     use_h_per_day: 1               # arvio
     source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  - id: SIGNALK_PI
+    name: Raspberry Pi 5, Signal K -palvelin
+    location: konehuone
+    status: existing
+    voltage_V: null                # syöttötapa (24 V → 5 V -muunnin?) ⚠ ei tiedossa
+    power_W: null
+    power_W_estimate: 7            # tyypillinen kuorma; virtalähteen raja 27 W
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]; teho arvio"
+    notes: "Voidaan konsolidoida NUC:n kanssa; elektroniikka suunnitellaan erikseen [omistaja 2026-10-29]"
+
+  - id: FRIGATE_NUC
+    name: Intel NUC, Frigate (kameratallennin)
+    location: konehuone
+    status: existing
+    voltage_V: null                # syöttötapa ⚠ ei tiedossa (NUC:t ottavat tyypillisesti 12–19 V)
+    power_W: null
+    power_W_estimate: 15           # malli ⚠ ei tiedossa; kuormitettuna enemmän
+    use_h_per_day: 24
+    source: "[omistaja 2026-10-29]; teho arvio"
+    notes: "Voidaan konsolidoida Raspberry Pi 5:n kanssa; elektroniikka suunnitellaan erikseen [omistaja 2026-10-29]"
 
   - id: HYD_CONTROL
     name: Hydrauliikan ohjaus (PDM, PVE-ohjausyksiköt, BAV-713:n kelat, anturit)
