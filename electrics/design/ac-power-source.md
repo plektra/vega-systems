@@ -625,7 +625,7 @@ tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900
 - [ ] Saako WM5002:n toision toisen pään maadoittaa nollaksi (Airlink, sähköasentaja)?
 - [ ] WM5002:n tarkka sijoituspaikka konehuoneessa (kuiva, IP23, 25 kg, eristetyt kiinnikkeet)
 - [ ] Tyyppikilven malli on **WM5002 MCB**: onko ensiön suojana MCB-johdonsuoja datalehden SP30-painikesuojan sijaan? (**⚠ tarkista** kotelon sisältä)
-- [ ] Käynnistysakkujen tyyppi ja kapasiteetti (käyttöakut on purettu [omistaja 2026-10-29]); mahtuuko konehuoneeseen noin 16 kWh:n litiumakusto, ks. [house-battery.md](house-battery.md)
+- [ ] Mahtuuko konehuoneeseen noin 16 kWh:n litiumakusto, ks. [house-battery.md](house-battery.md) (käynnistysakkujen tarkistus: [current-system.md](../current-system.md#5-avoimet-kysymykset))
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
 - [x] Pystyykö Alpha Pro III ottamaan vastaan BMS:n viestin: kyllä, MasterBus "Stop charge" -tapahtuma tai Reg on -johdin [käyttöohje Alpha Pro III]
 - [ ] Akuston ja BMS:n valinta: MLI Ultra (suora MasterBus) vai muu BMS ja MasterBusin digitaalitulomoduuli; BMS:ssä ennakkovaroitus ennen katkaisua
