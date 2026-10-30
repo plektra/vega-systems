@@ -72,7 +72,7 @@ Arvot ovat jälleenmyyjien sivuilta (haettu 2026-10-29, Akkula 2026-10-28); **�
 datalehdistä ennen tilausta. MB31:n latausalue on 0 (tai 2) – 60 °C, purku −30…60 °C.
 
 **Virtojen riittävyys** [laskelma]: 3,5 kW:n invertteri ottaa noin 160 A, 24 V:n kuormat
-hetkellisesti enintään noin 50–90 A (valot noin 46 A, pilssipumput noin 36 A, jos ne ovat
+hetkellisesti enintään noin 50–90 A (valot noin 46 A, pilssipumput enintään noin 38 A, jos ne ovat
 käyttöakustolla) ja hydrauliikan varapumppu noin 100 A. Kaikki yhtä aikaa noin 300–350 A, mikä on
 628 Ah:n akustolle noin 0,5 C, eli kennojen jatkuvan virran rajalla. Tavallisessa käytössä virrat
 ovat selvästi pienempiä.

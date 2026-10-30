@@ -1,6 +1,6 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys) ja 2026-10-30 (pilssipumppujen malli ja virrat). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
@@ -22,7 +22,8 @@ uusi käyttöakusto tulee, nämä kuormat siirretään sille ja käynnistysakut 
 erotusrele tai DC-DC-laturi). Siihen asti kone kannattaa varmistaa esim. alijännitekatkaisulla
 tai sillä, että CTEK on kytkettynä.
 
-**Pilssipumput ovat turvallisuuskriittisiä.** Kolme pilssipumppua (noin 12 A kukin) ottaa virtansa
+**Pilssipumput ovat turvallisuuskriittisiä.** Kolme pilssipumppua (SEAFLO 3500 GPH, 8 A nimellinen,
+enintään 12,5 A kukin) ottaa virtansa
 nyt käynnistysakuilta. Jos jatkuvat kuormat tyhjentävät akut, pilssipumput eivät toimi.
 Alijännitekatkaisu saa siksi katkaista vain muut kuormat, ei pilssipumppuja. Pilssipumput
 kytketään suoraan akulle pääkytkimen ohi omilla sulakkeillaan. Vikatilanteet ja kytkennät on
@@ -45,7 +46,7 @@ hyvä tarkastuttaa pätevällä sähköasentajalla.
 | Hydrauliikan varapumppu (ohjauksen vara) | 2,5 kW, 24 V (~100 A tai yli) | 65 A:n laturi ei jaksa syöttää sitä pitkään | [blogi 2017-07-04] |
 | ~~PTO-kytkimen toimilaite~~ | – | Ei tarpeen: PTO-kytkintä ei tule (päätös 2026-10-23), P2 on PVH57 (päätös 2026-10-27) | [hydraulics/design/archive/p2-pump-options.md](../hydraulics/design/archive/p2-pump-options.md) |
 | Keulapotkuri | — | Hydraulinen, PTO-vetoinen; sähkökuormana vain venttiilien solenoidit | [blogi 2018-11-12] |
-| Pilssipumput, 3 kpl (**olemassa**) | 24 V, noin 12 A kukin täydellä teholla (≈ 290 W; kaikki yhtä aikaa noin 36 A) **⚠ tarkista** tyyppikilvestä | Kohokytkimet; käyvät vain tarvittaessa. Sijainnit ja syöttötapa **⚠ ei tiedossa** | [omistaja 2026-10-29] |
+| Pilssipumput SEAFLO 01-sarja 3500 GPH, malli SFBP2-G3500-01, 3 kpl (**olemassa**) | 24 V; 8,0 A nimellinen (≈ 190 W), enintään 12,5 A (≈ 300 W) kukin; kaikki yhtä aikaa enintään noin 38 A. Virta kasvaa nostokorkeuden mukana. Käynnistysvirtaa ja sulakekokoa ei kerrota **⚠ ei tiedossa** | Erilliset kohokytkimet (asennettu); pumppu ei itse ole automaattinen. Käsin pakotettu käyttö ESP32-PDM:llä rinnan kohokytkimen kanssa (suunnitelma). Sijainnit ja syöttötapa **⚠ ei tiedossa** | [omistaja 2026-10-29], [omistaja 2026-10-30], [datalehti SEAFLO 01 Series 3500GPH](https://www.seaflomarinerv.com/index.php?m=home&c=View&a=index&aid=517) |
 
 ### 3.1 Suunnitellut 24 V:n kuluttajat konehuoneessa
 
@@ -176,9 +177,10 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Mastokamera: oma, kolmas kamera [omistaja 2026-10-29]
 - [x] Mastovalo: osa kulkuvaloja [omistaja 2026-10-29]
 - [ ] VHF Sailor RT2048:n ja FM-radion muuntimen virrankulutus; NMEA 2000 -laitteiden LEN-arvot
-- [ ] **Veneellä:** pilssipumppujen tyyppikilvet (virta), sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella?
+- [x] Pilssipumppujen malli ja virta: SEAFLO 01-sarja 3500 GPH (SFBP2-G3500-01), 8,0 A / enintään 12,5 A [omistaja 2026-10-30], [datalehti SEAFLO 01 Series 3500GPH]
+- [ ] **Veneellä:** pilssipumppujen sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella? Nykyiset sulakekoot?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
-- [ ] Ohjataanko 24 V:n kuluttajia PDM-lähdöiltä (esim. kamera, pumput, valaistus)?
+- [ ] Ohjataanko 24 V:n kuluttajia PDM-lähdöiltä (esim. kamera, pumput, valaistus)? Pilssipumput: vain käsin pakotettu käyttö PDM:llä, kohokytkinpiirit pysyvät suoraan akulla [omistaja 2026-10-30]
 - [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä

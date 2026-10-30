@@ -1,6 +1,6 @@
 # Sähkönjako: keskukset, sulakkeet ja tärkeiden kuormien syöttö
 
-> **Tila:** Selvitys, aloitettu 2026-10-29. Ei päätöstä. Kaapelien pituudet ovat **arvioita**, ja ne
+> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-30 (pilssipumppujen virrat). Ei päätöstä. Kaapelien pituudet ovat **arvioita**, ja ne
 > korvataan veneeltä mitatuilla. Akuston koko, invertteri ja toinen laturi ovat vielä auki
 > ([ac-power-source.md](ac-power-source.md), [house-battery.md](house-battery.md)), joten niiden
 > lähdöille varataan tässä vain paikka.
@@ -50,7 +50,7 @@ flowchart LR
   SB -. "erotusrele tai<br/>DC-DC-laturi" .- PJ
   SB -->|"diodi + sulake,<br/>pääkytkimen ohi"| ESS
   HB -->|"diodi + sulake"| ESS
-  ESS --> BILGE["Pilssipumput 3 × 12 A"]
+  ESS --> BILGE["Pilssipumput 3 × 8–12,5 A"]
   ESS --> KSE["Kulkuvalot, VHF"]
   PJ --> INV["Invertterilaturi<br/>noin 160 A"]
   PJ --> P3["Ohjauksen varapumppu P3<br/>noin 100 A"]
@@ -118,7 +118,7 @@ pienentää pumppujen ja valojen jännitettä. Tuote **⚠ ei valittu**.
 
 | Kuorma | Syöttö | Miksi |
 |---|---|---|
-| Pilssipumput, 3 × noin 12 A (**⚠ tarkista** tyyppikilvestä) | TK, kukin pumppu omalla sulakkeellaan; ei PDM:n eikä pääkytkimen takana | Vesivuoto on vaarallisin vika, ja silloin akut voivat olla jo heikkoina |
+| Pilssipumput SEAFLO 3500 GPH, 3 × 8 A nimellinen, enintään 12,5 A ([loads.yaml](../loads.yaml)) | TK, kukin pumppu omalla sulakkeellaan kohokytkimen kautta; ei PDM:n eikä pääkytkimen takana. Käsin pakotettu käyttö ESP32-PDM:ltä rinnan kohokytkimen kanssa [omistaja 2026-10-30] | Vesivuoto on vaarallisin vika, ja silloin akut voivat olla jo heikkoina. Kohokytkinpiiri toimii, vaikka PDM olisi rikki |
 | Kulku- ja ankkurivalot | TK | Pakollinen varuste ajossa ja ankkurissa |
 | VHF Sailor RT2048 | TK | Hätäliikenne |
 | Pilssihälytys ja yläveden hälytin | TK | Varoittaa, ennen kuin pumput eivät enää riitä. Hälytin **⚠ ei valittu** |
@@ -135,7 +135,7 @@ pienentää pumppujen ja valojen jännitettä. Tuote **⚠ ei valittu**.
 | Kone sammuu ja P3 tarvitaan | P3 käy pelkillä akuilla | 16 kWh:n käyttöakusto riittää P3:lle tunneiksi **⚠ arvio**; nykyiset käynnistysakut paljon lyhyemmin. Hätäohjaus ilman sähköä: [hydraulics/requirements.md](../../hydraulics/requirements.md) |
 | P3:n syöttö katkeaa (sulake, BMS) | Varaohjaus ei toimi | Hätärinnankytkin käynnistysakuille (kohta 3.2). P3:n sulakkeen pitää kestää käynnistysvirta laukeamatta; arvo moottorin tyyppikilvestä **⚠ tarkista** |
 | Oikosulku TK:n jälkeen | Kiskon sulake palaa, ja kaikki tärkeät kuormat sammuvat | Jokainen tärkeä kuorma omalla sulakkeellaan, jotta yksi vika ei vie muita. Kiskon syöttösulake mitoitetaan suuremmaksi kuin suurin lähtösulake |
-| Pilssipumpun kohokytkin jumittuu päälle | Pumppu tyhjentää akkuja | Pumppujen käyntiaika ja virta Signal K:hon, hälytys pitkästä käynnistä. Valvonta **⚠ ei suunniteltu** |
+| Pilssipumpun kohokytkin jumittuu päälle | Pumppu tyhjentää akkuja | Pumppujen käyntiaika ja virta Signal K:hon, hälytys pitkästä käynnistä. Ehdotus: ESP32-PDM:n pakotetun käytön lähtö näkee pumpun jännitteen myös kohokytkimen käyttämänä ja raportoi käynnit; **⚠ ei päätetty** |
 | Diodi vikaantuu poikki | Toinen syöttö puuttuu TK:sta, kukaan ei huomaa | Kummankin syötön jännitteen valvonta Signal K:hon |
 
 ### 3.2 Hätärinnankytkin
@@ -184,7 +184,7 @@ tarkistettu.
 |---|---|---|---|---|---|
 | PJ-04 Komentosillan alakeskuksen syöttö | 60 A | 6 m | 3 % | 17,5 mm² | 25 mm² |
 | PJ-05 Konehuoneen alakeskuksen syöttö | 40 A | 2 m | 3 % | 3,9 mm² | 4 mm², kuormitettavuus ratkaisee |
-| Pilssipumppu, kukin | 12 A | 8 m | 3 % | 4,7 mm² | 6 mm² |
+| Pilssipumppu, kukin (Max Draw) | 12,5 A | 8 m | 3 % | 4,9 mm² | 6 mm² |
 | Hakuvalo | 21 A | 8 m (KS → maston huippu) | 10 % | 2,4 mm² | 2,5 mm² |
 | Hakuvalo, jos halutaan täysi valoteho | 21 A | 8 m | 3 % | 8,1 mm² | 10 mm² |
 | Kansivalaistus | 8,3 A | 10 m | 10 % | 1,2 mm² | 1,5 mm² |

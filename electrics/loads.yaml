@@ -259,16 +259,22 @@ dc_loads:
     notes: "Syöttö Mean Well DDR-240B-24:n vakautetusta 24 V:sta [omistaja 2026-10-29]"
 
   - id: BILGE_PUMPS
-    name: Pilssipumput, 3 kpl, kohokytkimillä
+    name: Pilssipumput SEAFLO 01-sarja 3500 GPH, 3 kpl, erillisillä kohokytkimillä
+    model: SFBP2-G3500-01          # 24 V:n malli [omistaja 2026-10-30]
     location: null                 # ⚠ ei tiedossa
     status: existing
     quantity: 3
     voltage_V: 24
-    current_A_each: 12             # täydellä teholla; omistajan muistikuva ⚠ tarkista tyyppikilvestä
-    power_W_each: 288              # 24 V × 12 A [laskelma]
+    current_A_each: 8.0            # nimellinen [datalehti SEAFLO 01 Series 3500GPH]
+    current_A_max_each: 12.5       # "Max Draw"; virta kasvaa nostokorkeuden mukana (12 V:n käyrä 19,7 A @ 0 m → 25 A @ 7 m)
+    power_W_each: 192              # 24 V × 8,0 A [laskelma]
+    power_W_max_each: 300          # 24 V × 12,5 A [laskelma]
+    inrush_A: null                 # käynnistysvirta ⚠ ei tiedossa (ei datalehdessä)
+    fuse_A: null                   # valmistaja ei anna sulakekokoa ⚠ ei tiedossa
+    flow_GPH: 3500                 # nimellinen; outlet 1-1/2" (40 mm)
     use_h_per_day: null            # käy vain kohokytkimen ohjaamana; normaalisti lähes nolla
-    source: "[omistaja 2026-10-29]"
-    notes: "Turvallisuuskriittinen: syöttö suoraan akulta pääkytkimen ohi omalla sulakkeella; ei saa jäädä alijännitekatkaisun taakse"
+    source: "[omistaja 2026-10-29], [omistaja 2026-10-30]; [datalehti SEAFLO 01 Series 3500GPH] https://www.seaflomarinerv.com/index.php?m=home&c=View&a=index&aid=517"
+    notes: "Turvallisuuskriittinen: kohokytkinpiiri suoraan akulta pääkytkimen ohi omalla sulakkeella; ei saa jäädä alijännitekatkaisun taakse. Pumppu itsessään ei ole automaattinen; kohokytkimet ovat jo asennettuina. ESP32-PDM:ää käytetään vain käsin pakotettuun käyttöön (rinnan kohokytkimen kanssa) [omistaja 2026-10-30]. Omistajan aiempi arvio noin 12 A vastaa Max Draw -arvoa."
 
   - id: HYD_CONTROL
     name: Hydrauliikan ohjaus (PDM, PVE-ohjausyksiköt, BAV-713:n kelat, anturit)
