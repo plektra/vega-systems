@@ -185,8 +185,8 @@ tarkistettu.
 | PJ-04 Komentosillan alakeskuksen syöttö | 60 A | 6 m | 3 % | 17,5 mm² | 25 mm² |
 | PJ-05 Konehuoneen alakeskuksen syöttö | 40 A | 2 m | 3 % | 3,9 mm² | 4 mm², kuormitettavuus ratkaisee |
 | Pilssipumppu, kukin (Max Draw) | 12,5 A | 8 m | 3 % | 4,9 mm² | 6 mm² |
-| Hakuvalo | 21 A | 8 m (KS → maston huippu) | 10 % | 2,4 mm² | 2,5 mm² |
-| Hakuvalo, jos halutaan täysi valoteho | 21 A | 8 m | 3 % | 8,1 mm² | 10 mm² |
+| Hakuvalo (komentosillan katto [omistaja 2026-10-30]) | 21 A | 3 m (KS → katto) | 10 % | 0,9 mm² | 2,5 mm², kuormitettavuus ratkaisee |
+| Hakuvalo, jos halutaan täysi valoteho | 21 A | 3 m | 3 % | 3,1 mm² | 4 mm² |
 | Kansivalaistus | 8,3 A | 10 m | 10 % | 1,2 mm² | 1,5 mm² |
 | Työvalo, kumpikin | 4,2 A | 8 m | 10 % | 0,5 mm² | 1,5 mm² |
 | Kulku- ja ankkurivalot | alle 0,5 A | 8 m | 3 % | alle 0,2 mm² | 1,5 mm² mekaanisen kestävyyden vuoksi |
