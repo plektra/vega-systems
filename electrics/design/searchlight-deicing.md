@@ -1,6 +1,6 @@
 # Hakuvalon jäänpoisto
 
-> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-30 (ESP32-PDM-repon päätökset 16 ja 19). Ei päätöstä. Hakuvalon malli, polttimon tyyppi ja
+> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-30 (ESP32-PDM-repon päätökset 16 ja 19; lasin paksuus). Ei päätöstä. Hakuvalon malli, polttimon tyyppi ja
 > ohjaustapa ovat **⚠ ei tiedossa**, ja ne ratkaisevat, mikä vaihtoehto sopii. Hinnat ja tehot on
 > haettu verkosta, eikä niitä ole tarkistettu valmistajilta.
 
@@ -96,6 +96,24 @@ tarkistettava datalehdestä; liimakiinnitystä ei mainita.
 | **C2. Läpinäkyvä lämmityskalvo lasin sisäpintaan** (ITO tai metalliverkko) | Kalvo liimataan lasiin ja kytketään 24 V:iin | mitoitetaan pinta-alan mukaan | Bopla ilmoittaa kalvolleen enintään 3000 W/m², +85 °C ja läpäisyn enintään 93 % ([Bopla, transparente Folienheizung](https://www.bopla.de/fileadmin/user_upload/Transparente_Folienheizung-EN_web.pdf)); 24 V:n valmista liimakalvoa ei löytynyt. **Ei sovi halogeenivaloon**, koska lasi kuumenee yli 85 °C:n **⚠ tarkista**. Läpäisy vähentää valoa muutaman prosentin |
 | **C3. Valmis lämmitetyllä ikkunalla varustettu valo** | Esim. **Glamox SL1IR / SL2IR** (LED + lämpökamera, lämmitetty ikkuna) ([SL1IR](https://citimarinestore.com/en/glamox-marine-lightning/22177-glamox-sl1ir-led-searchlight-with-thermal-night-vision.html), [SL2IR](https://citimarinestore.com/en/glamox-marine-lightning/22171-glamox-sl2ir-led-searchlight-with-integrated-thermal-camera.html)) | **⚠ ei tiedossa** | Kallis, ja nykyinen valo jäisi käyttämättä. SL2IR:n jännite ei selvinnyt. Mukana lämpökamera, josta voi olla hyötyä muutenkin |
 
+**Etulasin paksuus on noin 5 mm** [omistaja 2026-10-30]; halkaisija **⚠ ei tiedossa**.
+
+**Miksi reunarengas ei riitä [laskelma, arvio]:** lasi johtaa lämpöä huonosti, joten reunalta
+tuleva lämpö ehtii karata lasin ulkopintaan ennen kuin se kulkee kauas keskelle. Lämmön
+tunkeutumismatka reunasta on noin 1/m, jossa m = √(h / (k · t)):
+
+| Ulkopinnan lämmönsiirto h | m | Tunkeutumismatka 1/m |
+|---|---|---|
+| 10 W/(m²·K), tyyni | noin 45 1/m | noin 22 mm |
+| 30 W/(m²·K), tuuli ja roiske | noin 77 1/m | noin 13 mm |
+
+Oletukset: lasin lämmönjohtavuus k ≈ 1,0 W/(m·K), paksuus t = 5 mm, lämpö karkaa vain
+ulkopinnasta (sisäpuolen ilma ja polttimon lämpö jätetty huomiotta), h-arvot ovat arvioita.
+Reunan lämpötilaero on noin 1/e eli noin 37 % jäljellä 1/m:n päässä reunasta, ja noin 5 % kolmen
+tunkeutumismatkan päässä. Jos lasin halkaisija on esim. 200 mm (säde 100 mm), reunarengas
+sulattaa tuulessa vain noin 2–4 cm leveän kehän, ja keskusta jää jäähän. Tämä tukee
+ESP32-PDM:n päätöstä 16: lämpö on tuotava koko lasin pinnalle (kalvo, C2).
+
 Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**). Esimerkki:
 Ø 200 mm:n lasi on 0,031 m²; 500 W/m² antaisi noin 16 W [laskelma, oletettu halkaisija].
 
@@ -136,8 +154,9 @@ Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**)
 - [ ] Polttimo: halogeeni, ksenon vai LED?
 - [ ] Ohjaus: käsikäyttöinen kahvalla vai kauko-ohjattu (moottorit)?
 - [ ] Sijainti: maston huippu vai komentosillan katto?
-- [ ] Etulasin halkaisija, paksuus ja materiaali (karkaistu lasi vai muovi); pyydetty myös ESP32-PDM-repossa
-- [ ] Miksi reunarengas ei riitä (ESP32-PDM:n päätös 16): perustelu kirjattava
+- [x] Etulasin paksuus: noin 5 mm [omistaja 2026-10-30]
+- [ ] Etulasin halkaisija ja materiaali (karkaistu lasi vai muovi); pyydetty myös ESP32-PDM-repossa
+- [x] Miksi reunarengas ei riitä (ESP32-PDM:n päätös 16): lasi johtaa lämpöä huonosti, ja reunan lämpö ulottuu vain noin 1–2 cm (kohta C, laskelma)
 - [ ] Kalvolämmittimen hinta (ESP32-PDM:n päätös 16)
 - [ ] Kuinka paljon Vegalla ajetaan pakkasella tai jäätyvässä roiskeessa (kuukaudet)?
 - [ ] Kestääkö etulasi lämpöshokin, kun jäätyneeseen lasiin sytytetään valo (valmistajalta)
