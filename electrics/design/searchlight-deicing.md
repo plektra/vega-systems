@@ -4,6 +4,13 @@
 > ohjaustapa ovat **⚠ ei tiedossa**, ja ne ratkaisevat, mikä vaihtoehto sopii. Hinnat ja tehot on
 > haettu verkosta, eikä niitä ole tarkistettu valmistajilta.
 
+**Jatka tästä (2026-10-30):** suosituksen pohjana on nyt LED ja rungon sisään asennettava 24 V:n
+PTC-lämpöpuhallin (C4), varalla kalvolämmitin (C2); halogeeni on edelleen mahdollinen (D).
+Seuraavaksi: (1) hakuvalon tyyppikilpi: valmistaja, malli, polttimo; (2) lasin halkaisija;
+(3) mahtuuko noin 70 × 30 × 30 mm:n puhallin runkoon ja missä LEDin jäähdytysrivat olisivat;
+(4) puhaltimien hinnat; (5) LED-vaihtoehtojen kandelat vs. nykyinen halogeeni. Liittyy
+ESP32-PDM:n päätöksiin 16 ja 19 (kohta alla). Kaikki avoimet kysymykset: kohta 5.
+
 Tavoite: hakuvalon pitää toimia myös syksyllä ja keväällä, kun etulasiin ja kääntömekanismiin
 tarttuu jäätä, räntää tai jäätyvää roisketta. Lähtötiedot: hakuvalo on olemassa mutta asentamatta,
 24 V, 500 W (noin 21 A) [omistaja 2026-10-29]. Sijainniksi on kaapelilaskelmissa oletettu maston
