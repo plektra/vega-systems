@@ -1,6 +1,6 @@
 # Hakuvalon jäänpoisto
 
-> **Tila:** Selvitys, aloitettu 2026-10-30. Ei päätöstä. Hakuvalon malli, polttimon tyyppi ja
+> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-30 (ESP32-PDM-repon päätökset 16 ja 19). Ei päätöstä. Hakuvalon malli, polttimon tyyppi ja
 > ohjaustapa ovat **⚠ ei tiedossa**, ja ne ratkaisevat, mikä vaihtoehto sopii. Hinnat ja tehot on
 > haettu verkosta, eikä niitä ole tarkistettu valmistajilta.
 
@@ -8,6 +8,24 @@ Tavoite: hakuvalon pitää toimia myös syksyllä ja keväällä, kun etulasiin 
 tarttuu jäätä, räntää tai jäätyvää roisketta. Lähtötiedot: hakuvalo on olemassa mutta asentamatta,
 24 V, 500 W (noin 21 A) [omistaja 2026-10-29]. Sijainniksi on kaapelilaskelmissa oletettu maston
 huippu ([dc-distribution.md 4.2](dc-distribution.md)), **⚠ tarkista**.
+
+**Liittyy ESP32-PDM-repoon** ([plektra/ESP32-PDM](https://github.com/plektra/ESP32-PDM)):
+
+- **Päätös 16 (auki):** *"an edge heater ring is not enough for de-icing; a film-type heater is
+  preferred, but cost must be reviewed before deciding"*, eli reunaan asennettava lämmitinrengas ei
+  riitä jäänpoistoon, kalvolämmitin on parempi, mutta kustannus pitää tarkistaa ennen päätöstä
+  ([decisions.md](https://github.com/plektra/ESP32-PDM/blob/main/docs/decisions.md)) [ESP32-PDM 2026-10-30].
+  Perustelua ei ole kirjattu.
+- **Päätös 19 (ehdotus):** noin 21 A:n hakuvalo vaatii suurivirtaiseen `pdm-hc2`-korttiin
+  pienemmän resistanssin MOSFETit (ehdokas onsemi NTMFS5C612NL). **Halogeenin käynnistysvirta**
+  on noin 10–15-kertainen kymmenien millisekuntien ajan, joten kortin 80 A:n nopea
+  oikosulkulaukaisu katkaisisi kylmän 500 W:n polttimon. Vaihtoehdot: LED-hakuvalo tai nopean
+  laukaisun poisto MOSFETien pulssikestoisuuden (SOA) tarkistuksen jälkeen
+  ([design-notes.md §4a](https://github.com/plektra/ESP32-PDM/blob/main/docs/design-notes.md)) [ESP32-PDM 2026-10-30].
+- PDM:n laiteohjelmistoon on suunniteltu **lämmittimen termostaattitoiminto**, ja veneeltä
+  pyydetään mittaamaan **etulasin halkaisija ja paksuus** ([CONTINUE-FROM-HERE.md](https://github.com/plektra/ESP32-PDM/blob/main/docs/CONTINUE-FROM-HERE.md)).
+
+Halogeeni vai LED ratkaisee siis sekä jäänpoiston että PDM-kortin osavalinnan.
 
 ## 1. Ensin pitää tietää polttimon tyyppi
 
@@ -74,7 +92,7 @@ tarkistettava datalehdestä; liimakiinnitystä ei mainita.
 
 | Tapa | Miten | Teho **⚠ arvio** | Huomiot |
 |---|---|---|---|
-| **C1. Lämmitin lasin reunaan** | Silikonilämmitysnauha tai PTC-elementti lasin kehyksen sisäpuolelle | noin 10–30 W | Halvin ja yksinkertaisin. Lämpö kulkee reunoilta, joten lasin keskusta sulaa viimeisenä. Valon tiiviys (IP) on palautettava avauksen jälkeen |
+| **C1. Lämmitin lasin reunaan** | Silikonilämmitysnauha tai PTC-elementti lasin kehyksen sisäpuolelle | noin 10–30 W | Halvin ja yksinkertaisin. Lämpö kulkee reunoilta, joten lasin keskusta sulaa viimeisenä. **ESP32-PDM:n päätöksen 16 mukaan reunarengas ei riitä jäänpoistoon** (ks. yllä); lasin halkaisija ja paksuus ratkaisevat, ulottuuko reunalämpö keskelle. Valon tiiviys (IP) on palautettava avauksen jälkeen |
 | **C2. Läpinäkyvä lämmityskalvo lasin sisäpintaan** (ITO tai metalliverkko) | Kalvo liimataan lasiin ja kytketään 24 V:iin | mitoitetaan pinta-alan mukaan | Bopla ilmoittaa kalvolleen enintään 3000 W/m², +85 °C ja läpäisyn enintään 93 % ([Bopla, transparente Folienheizung](https://www.bopla.de/fileadmin/user_upload/Transparente_Folienheizung-EN_web.pdf)); 24 V:n valmista liimakalvoa ei löytynyt. **Ei sovi halogeenivaloon**, koska lasi kuumenee yli 85 °C:n **⚠ tarkista**. Läpäisy vähentää valoa muutaman prosentin |
 | **C3. Valmis lämmitetyllä ikkunalla varustettu valo** | Esim. **Glamox SL1IR / SL2IR** (LED + lämpökamera, lämmitetty ikkuna) ([SL1IR](https://citimarinestore.com/en/glamox-marine-lightning/22177-glamox-sl1ir-led-searchlight-with-thermal-night-vision.html), [SL2IR](https://citimarinestore.com/en/glamox-marine-lightning/22171-glamox-sl2ir-led-searchlight-with-integrated-thermal-camera.html)) | **⚠ ei tiedossa** | Kallis, ja nykyinen valo jäisi käyttämättä. SL2IR:n jännite ei selvinnyt. Mukana lämpökamera, josta voi olla hyötyä muutenkin |
 
@@ -82,6 +100,10 @@ Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**)
 Ø 200 mm:n lasi on 0,031 m²; 500 W/m² antaisi noin 16 W [laskelma, oletettu halkaisija].
 
 ## 3. Ohjaus ja kytkentä
+
+- **Halogeenin käynnistysvirta:** kylmän 500 W:n halogeenipolttimon hetkellinen virta on noin
+  10–15 × 21 A eli noin 200–300 A kymmenien millisekuntien ajan [ESP32-PDM design-notes §4a,
+  laskelma]. Puolijohdekytkin tai sulake on mitoitettava sen mukaan (ks. PDM:n päätös 19).
 
 - **Kytkin komentosillalle** (KS-alakeskus, [dc-distribution.md 2.2](dc-distribution.md#22-komentosillan-alakeskus-ks))
   ja merkkivalo. Lämmitin ei saa jäädä huomaamatta päälle ankkurissa.
@@ -102,8 +124,11 @@ Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**)
    pieni). Kokeillaan ensimmäisenä pakkasajona.
 3. **Jos valo on kauko-ohjattu:** lisäksi 20 W:n PTC-lämmitin jalustaan (vaihtoehto B, osan hinta
    **⚠ ei tiedossa**, arviolta kymmeniä euroja).
-4. **Jos valo on LED:** lisäksi reunalämmitin lasiin (C1). Läpinäkyvä kalvo (C2) vain, jos C1 ei
-   riitä. Uusi lämmitetty valo (C3) vasta viimeisenä, koska nykyinen valo on jo olemassa.
+4. **Jos valo on LED:** lisäksi lasin lämmitys. ESP32-PDM:n päätöksen 16 mukaan reunarengas
+   (C1) ei riitä, joten lähtökohta on kalvolämmitin (C2), kunhan sen hinta on selvitetty. Uusi
+   lämmitetty valo (C3) vasta viimeisenä, koska nykyinen valo on jo olemassa.
+5. **Halogeenin etu:** lasia ei tarvitse lämmittää erikseen. **Haitta:** suuri käynnistysvirta
+   PDM-kortille (päätös 19). Valinta kannattaa tehdä yhdessä PDM:n kanssa.
 
 ## 5. Avoimet kysymykset
 
@@ -111,6 +136,8 @@ Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**)
 - [ ] Polttimo: halogeeni, ksenon vai LED?
 - [ ] Ohjaus: käsikäyttöinen kahvalla vai kauko-ohjattu (moottorit)?
 - [ ] Sijainti: maston huippu vai komentosillan katto?
-- [ ] Etulasin halkaisija ja materiaali (karkaistu lasi vai muovi)
+- [ ] Etulasin halkaisija, paksuus ja materiaali (karkaistu lasi vai muovi); pyydetty myös ESP32-PDM-repossa
+- [ ] Miksi reunarengas ei riitä (ESP32-PDM:n päätös 16): perustelu kirjattava
+- [ ] Kalvolämmittimen hinta (ESP32-PDM:n päätös 16)
 - [ ] Kuinka paljon Vegalla ajetaan pakkasella tai jäätyvässä roiskeessa (kuukaudet)?
 - [ ] Kestääkö etulasi lämpöshokin, kun jäätyneeseen lasiin sytytetään valo (valmistajalta)
