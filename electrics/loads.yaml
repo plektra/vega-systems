@@ -352,6 +352,7 @@ dc_loads:
     max_W: 500                     # noin 21 A 24 V:lla [laskelma]
     use_h_per_day: null            # hetkellinen käyttö
     source: "[omistaja 2026-10-29]"
+    notes: "Malli ja polttimo (halogeeni vai LED) ⚠ ei tiedossa. Mahdollinen jäänestolämmitin noin 20 W (0,8 A), ks. design/searchlight-deicing.md"
 
   - id: NAV_COMPUTER
     name: Navigointitietokone ja oma näyttö

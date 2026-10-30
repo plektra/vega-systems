@@ -90,7 +90,7 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | Kansivalaistus | 200 W | suunniteltu | |
 | Työvalo eteen | 100 W | suunniteltu | |
 | Työvalo taakse | 100 W | suunniteltu | |
-| Hakuvalo | 500 W (≈ 21 A) | **olemassa, ei asennettu** | |
+| Hakuvalo | 500 W (≈ 21 A) | **olemassa, ei asennettu** | Malli ja polttimon tyyppi **⚠ ei tiedossa**. Jäänpoisto: [design/searchlight-deicing.md](design/searchlight-deicing.md) |
 | Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
 | Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö **Mean Well DDR-240B-24**:ltä [omistaja 2026-10-29] |
 | Mastokamera | **⚠ ei tiedossa** (arvio noin 5 W) | suunniteltu | Kolmas kamera; PoE, syöttö luultavasti DDR-240B-24 **⚠ tarkista** [omistaja 2026-10-29] |
@@ -164,6 +164,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Jääkö CTEK käynnistysakkujen ylläpitolataukseen, kun uusi (litium)käyttöakusto hankitaan?
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
+- [ ] Hakuvalon malli, polttimo (halogeeni vai LED) ja ohjaustapa: ratkaisevat jäänpoiston, ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
 - [ ] Pääkeskus ja jakelun rakenne: ehdotus selvityksessä [design/dc-distribution.md](design/dc-distribution.md), ei päätöstä
 - [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus, polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC [omistaja 2026-10-29]
 - [x] Raspberry Pi 5:n ja NUC:n syöttö: Mean Well DDR-15G-5 ja DDR-240B-24 [omistaja 2026-10-29]
