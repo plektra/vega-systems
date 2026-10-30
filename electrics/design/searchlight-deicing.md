@@ -1,6 +1,6 @@
 # Hakuvalon jäänpoisto
 
-> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-30 (ESP32-PDM-repon päätökset 16 ja 19; lasin paksuus). Ei päätöstä. Hakuvalon malli, polttimon tyyppi ja
+> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-30 (ESP32-PDM-repon päätökset 16 ja 19; lasin paksuus; lämpöpuhallin ja LED). Ei päätöstä. Hakuvalon malli, polttimon tyyppi ja
 > ohjaustapa ovat **⚠ ei tiedossa**, ja ne ratkaisevat, mikä vaihtoehto sopii. Hinnat ja tehot on
 > haettu verkosta, eikä niitä ole tarkistettu valmistajilta.
 
@@ -117,6 +117,65 @@ ESP32-PDM:n päätöstä 16: lämpö on tuotava koko lasin pinnalle (kalvo, C2).
 Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**). Esimerkki:
 Ø 200 mm:n lasi on 0,031 m²; 500 W/m² antaisi noin 16 W [laskelma, oletettu halkaisija].
 
+### C4. Pieni lämpöpuhallin rungon sisällä (LED-valo)
+
+Puhallin puhaltaa lämmintä ilmaa etulasin **sisäpintaan**. Toisin kuin reunarengas, se lämmittää
+koko lasin pinnan, koska 5 mm:n lasi on lämmölle ohut seinä: sen lämpövastus on noin
+0,005 m²·K/W eli vain noin kuudesosa pinnan ilmavastuksesta (noin 0,033 m²·K/W, kun h ≈ 30 W/(m²·K))
+[laskelma, oletukset kuten yllä].
+
+**Tarvittava ilman lämpötila lasin sisäpinnalla, jotta ulkopinta pysyy 0 °C:ssa [laskelma, arvio]:**
+
+| Olosuhde | Lasin läpi kulkeva lämpö | Ilma lasin sisäpinnalla | Teho Ø 200 mm:n lasiin |
+|---|---|---|---|
+| −5 °C, tuuli (h ulkona 30) | noin 150 W/m² | noin +6 °C | noin 5 W |
+| −10 °C, kova tuuli ja roiske (h ulkona 50) | noin 500 W/m² | noin +19 °C | noin 16 W |
+
+Oletukset: sisäpinnan h ≈ 30 W/(m²·K) puhaltimen kanssa, lasin halkaisija 200 mm (**⚠ ei
+tiedossa**). **Suurin osa tehosta karkaa kuitenkin metallirungon kautta**, joten lämmittimen
+kokonaisteho on arviolta 20–40 W, ja ilmavirta kannattaa suunnata suoraan lasiin. Paksun jään
+sulattaminen vie selvästi enemmän; tämä on jäätymisen estoon, ei jäälohkareen sulattamiseen.
+
+**LEDin oma hukkalämpö:** LED-valon sähkötehosta suurin osa on lämpöä LEDien takana
+(osuus **⚠ tarkista** valitun valon datalehdestä). Jos sama puhallin kierrättää rungon sisällä
+ilmaa jäähdytysrivoituksesta lasille, valo pitää lasinsa sulana palaessaan lähes ilmaiseksi, ja
+erillistä lämmitintä tarvitaan vain, kun valo on sammuksissa. Tämä onnistuu, jos runko on
+suljettu ja rivoitus on sen sisällä; jos rivoitus on ulkona, lämpö menee ulkoilmaan.
+
+**Valmiita 24 V:n PTC-lämpöpuhaltimia** (kytkinkaappeihin):
+
+| Tuote | Tiedot | Lähde |
+|---|---|---|
+| Omega FCH -sarja | 20 W ja 40 W, 24 V AC/DC, PTC-keraaminen vastus, puhallin voi käydä ilman lämmitystä, käyttö enintään +70 °C | [Omega, kotelolämmittimet](https://www.omega.com/en-us/industrial-heaters/duct-and-enclosures-heaters/c/enclosure-heaters?view=list), [FCH](https://www.omega.co.uk/pptst/fch-fgc0.html) |
+| DBK (Cirrus-tyyppi) | 20 W, puhaltimelle oma piiri (24 V DC); RS:n listaama malli on 12 V DC, 72 × 27 × 27 mm | [RS 415-2931](https://uk.rs-online.com/web/p/products/4152931) |
+| DBK FG14756.1 / 50 W -malli | 20 W tai 50 W, 24 V AC/DC, ilman puhallinta (johtuminen); voidaan yhdistää erilliseen pieneen 24 V:n puhaltimeen | [RS 299-5893](https://uk.rs-online.com/web/p/heating-elements/2995893), [RS 299-5900](https://uk.rs-online.com/web/p/heating-elements/2995900) |
+
+Hinnat **⚠ ei tiedossa**. Mahtuuko puhallin valon runkoon, riippuu mallista (**⚠ ei tiedossa**).
+**Ei sovi halogeenivalon runkoon:** puhaltimet on tarkoitettu enintään noin +70 °C:seen, ja
+halogeenivalon runko kuumenee sisältä tätä kuumemmaksi **⚠ tarkista**.
+
+Puhallin pitää myös rungon sisäilman kuivana, mikä vähentää lasin sisäpuolen huurtumista.
+
+### D. Halogeeni vai LED
+
+- **Energiatehokkuus:** LED tuottaa samalla teholla moninkertaisesti valoa (yleinen tieto,
+  luokkaa 3–5 ×, **⚠ tarkista** valittavista malleista). Esimerkiksi 100–150 W:n LED voi antaa
+  saman valovirran kuin 500 W:n halogeeni, eli noin 4–6 A eikä 21 A [laskelma, arvio].
+- **Kantama riippuu valovoimasta (kandela), ei watteista.** Halogeenin pieni hehkulanka ja
+  paraboloidiheijastin antavat kapean ja pitkän keilan; LEDin keila riippuu sen optiikasta.
+  Valmistajien väitteitä: Golight Stryker LED 410 000 cd (noin 1 280 m) vs. halogeeni 200 000 cd
+  (noin 890 m) ([CCJ](https://www.ccjdigital.com/products/product/14938704/golights-remote-control-searchlights)).
+  Järeä LED-esimerkki: Luminell SLX D G3, enintään 500 W, 24 V DC (22–30 V), 1 luxin kantama
+  enintään 2 000 m ([citimarinestore](https://citimarinestore.com/en/glamox-marine-lightning/22186-luminell-slx-d-g3-searchlight-modules.html)).
+  Vertaa kandeloita datalehdistä.
+- **LED-polttimo nykyiseen runkoon:** esim. Den Haan Rotterdamin hakuvaloihin myydään
+  LED-polttimoita alkaen 369 € ([Toplicht](https://www.toplicht.de/en/commercial-shipping/search-lights/3542/led-bulbs-for-searchlights-dhr)).
+  Sopiiko vastaava Vegan valoon, riippuu mallista (**⚠ ei tiedossa**). Halogeeniheijastimeen
+  sovitettu LED ei välttämättä anna yhtä kapeaa keilaa **⚠ tarkista**.
+- **PDM-kortti:** LED poistaa käynnistysvirtaongelman ja 21 A:n MOSFET-tarpeen (ESP32-PDM:n
+  päätös 19); 4–6 A mahtuu kevyempään kanavaan.
+- **Jäänpoisto:** halogeeni sulattaa lasin itse; LED tarvitsee lämpöpuhaltimen (C4) tai kalvon (C2).
+
 ## 3. Ohjaus ja kytkentä
 
 - **Halogeenin käynnistysvirta:** kylmän 500 W:n halogeenipolttimon hetkellinen virta on noin
@@ -142,9 +201,11 @@ Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**)
    pieni). Kokeillaan ensimmäisenä pakkasajona.
 3. **Jos valo on kauko-ohjattu:** lisäksi 20 W:n PTC-lämmitin jalustaan (vaihtoehto B, osan hinta
    **⚠ ei tiedossa**, arviolta kymmeniä euroja).
-4. **Jos valo on LED:** lisäksi lasin lämmitys. ESP32-PDM:n päätöksen 16 mukaan reunarengas
-   (C1) ei riitä, joten lähtökohta on kalvolämmitin (C2), kunhan sen hinta on selvitetty. Uusi
-   lämmitetty valo (C3) vasta viimeisenä, koska nykyinen valo on jo olemassa.
+4. **Jos valo on tai siitä tehdään LED:** lisäksi lasin lämmitys. ESP32-PDM:n päätöksen 16
+   mukaan reunarengas (C1) ei riitä. **Ensisijainen ehdotus on pieni 24 V:n PTC-lämpöpuhallin
+   rungon sisällä (C4)**, joka palaessa kierrättää LEDin omaa hukkalämpöä lasille: valmis
+   kytkinkaappiosa, ei liimausta lasiin, koko lasi lämpenee. Kalvolämmitin (C2), jos puhallin ei
+   mahdu runkoon. Uusi lämmitetty valo (C3) vasta viimeisenä.
 5. **Halogeenin etu:** lasia ei tarvitse lämmittää erikseen. **Haitta:** suuri käynnistysvirta
    PDM-kortille (päätös 19). Valinta kannattaa tehdä yhdessä PDM:n kanssa.
 
@@ -158,5 +219,8 @@ Lasin pinta-alan laskemiseen tarvitaan etulasin halkaisija (**⚠ ei tiedossa**)
 - [ ] Etulasin halkaisija ja materiaali (karkaistu lasi vai muovi); pyydetty myös ESP32-PDM-repossa
 - [x] Miksi reunarengas ei riitä (ESP32-PDM:n päätös 16): lasi johtaa lämpöä huonosti, ja reunan lämpö ulottuu vain noin 1–2 cm (kohta C, laskelma)
 - [ ] Kalvolämmittimen hinta (ESP32-PDM:n päätös 16)
+- [ ] Mahtuuko pieni lämpöpuhallin (noin 70 × 30 × 30 mm) hakuvalon runkoon, ja onko LED-valon jäähdytysrivoitus rungon sisällä vai ulkona?
+- [ ] Lämpöpuhaltimien hinnat (Omega FCH, DBK)
+- [ ] Halogeeni vai LED (myös LED-polttimo nykyiseen runkoon): vertaa kandeloita
 - [ ] Kuinka paljon Vegalla ajetaan pakkasella tai jäätyvässä roiskeessa (kuukaudet)?
 - [ ] Kestääkö etulasi lämpöshokin, kun jäätyneeseen lasiin sytytetään valo (valmistajalta)
