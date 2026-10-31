@@ -34,7 +34,8 @@ BMS kestää vain 200 A, noin 260 A:n kuorma (invertteri ja P3) laukaisee myös 
 akun. Lisäksi yksi MB31-akku (314 Ah) kestää kennojen puolesta jatkuvasti vain noin 157 A (0,5 C,
 [house-battery.md](house-battery.md#2-itse-kootut-kennot)). **Kun vain toinen akku on käytössä,
 kuormaa on siis rajoitettava BMS:stä riippumatta**, esim. invertterin purkuvirran rajalla (DVCC)
-ja niin, ettei invertteriä ja P3:a käytetä täysillä yhtä aikaa [laskelma].
+ja niin, ettei invertteriä ja P3:a käytetä täysillä yhtä aikaa [laskelma]. Vaihtoehtoisesti P3
+syötetään käynnistysakuilta, jolloin ongelma pienenee selvästi ([dc-distribution.md 3.3](dc-distribution.md#33-vaihtoehto-p3-käynnistysakuilta-selvitetty-2026-10-31)).
 
 ## 2. BMS-vaihtoehdot
 

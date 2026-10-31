@@ -150,6 +150,39 @@ erittäin suuri virta. Kytkin on tarkoitettu vain hätätilanteeseen, eikä sit�
 Merkitse se selvästi. Sopivuus valitun BMS:n kanssa **⚠ tarkista** (osa BMS:istä katkaisee
 suuren latausvirran takia).
 
+### 3.3 Vaihtoehto: P3 käynnistysakuilta (selvitetty 2026-10-31)
+
+Kysymys [omistaja 2026-10-31]: syötetäänkö ohjauksen varapumppu P3 käynnistysakuilta
+käyttöakuston sijaan, koska P3 ei käy koko aikaa täydellä teholla. Ei päätöstä.
+
+**Kuormitus [laskelma, ⚠ arviot]:** P3 (24 V, 2,5 kW, noin 100 A täydellä teholla) käy varaohjauksessa
+jatkuvasti, mutta täyttä painetta tarvitaan vain ohjattaessa. Kun ruoria ei käännetä, öljy kiertää
+pienellä paineella, ja moottorin virta on arviolta 20–40 % täydestä. Jos keskivirta on noin 40–50 A,
+nykyinen 65 A:n laturi (noin 1,8 kW) kattaa sen, kun kone käy. Pumpun kierrostilavuus ja moottorin
+tyyppikilpi ovat **⚠ ei tiedossa** ([hydraulics/current-system.md](../../hydraulics/current-system.md)).
+
+| | P3 käyttöakustolta (nykyinen ehdotus) | **P3 käynnistysakuilta** |
+|---|---|---|
+| BMS | P3 on käyttöakuston BMS:n takana. P3:n käynnistyspiikki ja invertteri yhtä aikaa voivat laukaista MOSFET-BMS:n, ja yksi MB31-akku kestää vain noin 157 A ([inverter-bms.md](inverter-bms.md)) | **Ei BMS:ää.** Lyijyakku kestää käynnistyspiikit hyvin. Käyttöakuston BMS:n kuormitus pienenee noin 100 A, joten edullinen JK-BMS käy paremmin |
+| P1:n hihna katkeaa, kone käy | Toinen laturi (150–175 A) lataa käyttöakustoa | 65 A:n laturi lataa suoraan käynnistysakkuja, joten kone kattaa P3:n keskivirran (**⚠ arvio**) |
+| Kone sammuu, P3 tarvitaan | 16 kWh riittää tunneiksi | **Haitta:** P3 tyhjentää käynnistysakut, eikä kone ehkä käynnisty. Kesto riippuu käynnistysakuista (kapasiteetti **⚠ ei tiedossa**). Ratkaisu: P3:n syöttö vaihdetaan valintakytkimellä käyttöakustolle |
+| Käyttöakuston vika (BMS katkaisee) | P3 vain hätärinnankytkimellä | P3 toimii normaalisti |
+| Kaapeli | PJ-02 | Lyhyt: käynnistysakut ovat samassa paikassa konehuoneen styyrpuurissa |
+
+**Ehdotus (ei päätös):** P3 käynnistysakuilta, ja syöttöön **valintakytkin "1 = käynnistysakut,
+2 = käyttöakusto"** (esim. järeä akkukytkin ilman BOTH-asentoa, jotta akustot eivät yhdisty
+vahingossa; **⚠ tarkista** malli ja virta). Normaalisti asento 1. Jos kone on sammunut ja
+varaohjausta tarvitaan pitkään, asento 2. Lisäksi:
+
+- käynnistysakkujen jännite Signal K:hon ja hälytys, kun jännite laskee P3:n käydessä, jotta
+  käynnistysvara ei huomaamatta lopu;
+- käynnistysakkujen kapasiteetti tarkistetaan (tyyppikilvet, avoin kysymys). Tarvittaessa
+  käynnistysakuiksi valitaan suuremmat, esim. syväpurkua kestävät AGM-akut (**⚠ arvio**);
+- hätärinnankytkin (kohta 3.2) jää koneen käynnistykseen käyttöakustolta.
+
+**Turvallisuus:** P3 on ohjauksen varajärjestelmä. Valintakytkimen asento ja hälytykset kuvataan
+ohjauspaikan ohjeeseen, ja ratkaisu tarkastutetaan pätevällä sähköasentajalla ennen käyttöä.
+
 ## 4. Sulakkeet ja kaapelit
 
 ### 4.1 Periaatteet
@@ -370,6 +403,7 @@ sähköurakoitsijan kanssa ajoissa.
   maadoitettu koneen runkoon?
 - [ ] **Veneellä:** mistä koneen ohjausyksikkö saa nyt virtansa?
 - [ ] **Veneellä:** P3:n moottorin tyyppikilpi (virta, käynnistysvirta jos ilmoitettu)
+- [ ] P3:n syöttö: käyttöakusto (PJ-02) vai käynnistysakut valintakytkimellä (kohta 3.3)? Mittaa P3:n virta tyhjäkierrossa ja ohjattaessa
 - [ ] Ideaalidiodin ja hätärinnankytkimen valinta tärkeiden kuormien kiskolle
 - [ ] Pilssihälytys ja yläveden hälytin: laite ja liitäntä Signal K:hon
 - [ ] Mitkä piirit ohjataan PDM:llä ([current-system.md 5](../current-system.md#5-avoimet-kysymykset))
