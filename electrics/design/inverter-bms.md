@@ -123,12 +123,41 @@ akusto puuttuvat.
    valitun BMS:n releet tai kuivakoskettimet; 24/3000 GX:n BMS-CAN-portti, jos halvin vaihtoehto
    kiinnostaa.
 
+## 5.1 Ennen tilausta tarkistettu (2026-10-31)
+
+**MultiPlus-II 24/5000:n pienin tulovirran raja PowerAssistin kanssa: ei varmistettu.** Victronin
+virallista taulukkoa ei löytynyt haulla, eikä valmistajan sivuja voinut avata tästä istunnosta.
+Datalehden mukaan suurin tulovirta on 50 A ja PowerAssist on mukana
+([datalehti](https://www.victronenergy.com/upload/documents/Datasheet-MultiPlus-II-inverter-charger-EN-.pdf)).
+Käyttäjän mukaan 5 kW:n MultiPlussa pienin raja PowerAssistin kanssa on noin 3,9 A, ja raja riippuu
+laiteohjelmistosta ([Victron-yhteisö](https://community.victronenergy.com/questions/81434/input-current-limit-multiplus-ii.html)).
+**Johtopäätös:** todennäköisesti alle 7,5 A, mutta **⚠ tarkista** Victron-jälleenmyyjältä ennen
+tilausta. Jos raja olisi liian korkea, aggregaatilla voi silti ladata PowerAssist pois päältä, mutta
+saunaa ei voi lämmittää aggregaatin rinnalla.
+
+**JK-BMS: valitaan PB-sarjan "inverter BMS" (JK-PB2A16S20P).** Tavallisesta B2A8S20P:stä ei löytynyt
+kuivakosketinta; käyttöohjeessa on lämmitysliitäntä, mutta kuivakosketin mainitaan vain PB-sarjassa
+([manualslib B2A8S20P](https://www.manualslib.com/manual/3910494/Jk-B2a8s20p.html)). JK-PB2A16S20P:
+
+- LiFePO4 8S–16S, eli sopii 24 V:n 8S-akkuun
+- 200 A jatkuva, 350 A huippu
+- **kaksi kuivakosketinta** (esim. vika/suojaus ja alhainen varaus): toisella katkaistaan Alpha Pro
+  III:n Reg on ennen kuin BMS katkaisee
+- CAN ja RS485; protokolla valitaan sovelluksesta, ja myyjän listalla Victron on tuettu. CAN:n
+  oletusnopeus 250 kbit/s, Victronin BMS-CAN 500 kbit/s: **⚠ tarkista** asetus ja kaapelin johdinjärjestys
+- myyjä Euroopassa esim. Nkon ([Nkon](https://nkon.nl/en/jk-bms-pb2a16s20p.html)); hinta **⚠ ei tiedossa**;
+  laitteistoversio (V19 tai uudempi) tarkistetaan johtosarjaa varten
+- lähteet: [Evlithium](https://www.evlithium.com/Battery-Management-System/16s-200a-pb2a16s20p-lithium-battery-bms.html),
+  [lifepo4.com.au](https://lifepo4.com.au/shop/lifepo4-bms/jk-jikong/48v-8-24s/new-jk-bms-16s-51-2v-200a-v19-jk-pb2a16s20p-v19/),
+  [manuals.plus](https://manuals.plus/ae/1005007694975455)
+
 ## 6. Avoimet kysymykset
 
 - [x] Invertterilaturi: Victron MultiPlus-II 24/5000/120-50 ja Cerbo GX [omistaja 2026-10-31]
 - [x] BMS: JK, kaksi kappaletta [omistaja 2026-10-31]
 - [ ] **Ennen tilausta:** Victronin "Minimum input current limits": MultiPlus-II 24/5000:n pienin tulovirta PowerAssistin kanssa (tavoite alle noin 7,5 A Timco SS2200i:lle)
-- [ ] JK-malli: B2A8S20P vai muu 8S-malli; onko kuivakosketin latauksen estolle (Alpha Pro III:n Reg on); CAN-kaapelin johdinjärjestys Cerbo GX:n BMS-CAN-porttiin
+- [x] JK-malli: JK-PB2A16S20P (8S–16S, kaksi kuivakosketinta, CAN), kohta 5.1
+- [ ] JK-PB2A16S20P: hinta, laitteistoversio, CAN-nopeus ja kaapelin johdinjärjestys Cerbo GX:n BMS-CAN-porttiin
 - [ ] Kahden JK-BMS:n yhteiskäyttö Cerbo GX:n kanssa: näkyvätkö molemmat, ja ohjaako DVCC pienimmän rajan mukaan (**⚠ tarkista**)
 - [ ] Invertterin purkuvirran raja, kun vain toinen akku on käytössä (DVCC-asetus)
 - [ ] Sterling APD24 laturin varasuojaksi
