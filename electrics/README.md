@@ -5,6 +5,7 @@ DC ja AC, akut, lataus, tehonjako sekä linkit valvonta- ja ohjauselektroniikkaa
 | Tiedosto | Sisältö |
 |---|---|
 | [current-system.md](current-system.md) | Mitä sähköjärjestelmästä tiedetään, liittyvät repot ja avoimet kysymykset |
+| [boat-checklist.md](boat-checklist.md) | Tarkistuslista veneelle: mitattavat, kuvattavat ja selvitettävät asiat yhdellä käynnillä |
 | [loads.yaml](loads.yaml) | AC- ja 24 V:n kuormat: tehot ja käyttöajat (osin arvioita) |
 | [design/ac-power-source.md](design/ac-power-source.md) | AC-sähkön lähde: hydrauligeneraattori, dieselgeneraattori vai akusto ja invertteri |
 | [design/house-battery.md](design/house-battery.md) | Käyttöakuston koko ja itse kootut LiFePO4-kennot |
