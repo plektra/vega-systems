@@ -1,6 +1,6 @@
 # Sähkönjako: keskukset, sulakkeet ja tärkeiden kuormien syöttö
 
-> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31. **Päätetty 2026-10-31:** kolmitasoinen
+> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31 (sulakkeiden hintavertailu, kohta 4.5). **Päätetty 2026-10-31:** kolmitasoinen
 > rakenne ja tärkeiden kuormien kisko (kohdat 2 ja 3), tavalliset piirit ESP32-PDM:llä (kohta 4.3) ja
 > miinuksen yksi yhteyspiste runkoon (kohta 5). Sulaketyyppi ja keskusten paikat ovat auki. Kaapelien pituudet ovat **arvioita**, ja ne
 > korvataan veneeltä mitatuilla. Akuston koko, invertteri ja toinen laturi ovat vielä auki
@@ -222,6 +222,57 @@ Ehdotus: keskuksen tunnus ja juokseva numero, esim. `PJ-02` (pääjakelu), `TK-0
 näkyy kaapelin merkinnässä, keskuksen kyltissä ja tulevassa piirilistassa. Kun piirilista
 täydentyy, se kannattaa siirtää `loads.yaml`:iin kenttänä `circuit`.
 
+### 4.5 Sulakkeiden hintavertailu (haettu 2026-10-31)
+
+Hinnat on haettu verkkokaupoista 2026-10-31. Niitä ei ole pyydetty tarjouksina, ja toimituskulut
+puuttuvat. Punnat on muunnettu euroiksi kertoimella noin 1,15–1,2 (**⚠ arvio**).
+
+**Piirien määrä (⚠ arvio)** kuormalistan perusteella ([current-system.md 3.1–3.2](../current-system.md#31-suunnitellut-24-vn-kuluttajat-konehuoneessa)):
+
+- komentosillan alakeskus (KS): noin 14 piiriä;
+- konehuoneen alakeskus (KH): noin 11 piiriä;
+- yhteensä **noin 25 PDM-lähtöä**, joista useimmat ovat alle 10 A;
+- lisäksi **tärkeiden kuormien kiskolla (TK) noin 7 piiriä**: 3 pilssipumppua, kulkuvalot, ankkurivalo, VHF
+  ja pilssihälytys.
+
+**ESP32-PDM muuttaa vertailua.** PDM:n lähtö on jo kytkin ja mittaa virran. Ohjelmallinen
+"soft fuse" katkaisee ylivirralla, ja kytkinpiiri rajoittaa itse virtaa ja sammuu ylikuumetessaan.
+PDM ei kuitenkaan korvaa sulaketta: piiri rajoittaa virran vasta 38–56 A:iin, ja MOSFET vikaantuu
+yleensä oikosulkuun, joten jokainen lähtö tarvitsee kaapelin mukaan mitoitetun sulakkeen tai
+johdonsuojan ([ESP32-PDM design-notes §8](https://github.com/plektra/ESP32-PDM/blob/main/docs/design-notes.md)).
+Sulake jää siis varasuojaksi, jonka pitäisi palaa vain harvoin. Johdonsuojan etuja (palautus
+napista ja kytkintoiminto) ei PDM-lähdöissä juuri tarvita, koska PDM hoitaa ne.
+
+| Vaihtoehto | Esimerkkituote ja hinta | Noin 25 PDM-lähtöä | Huomiot |
+|---|---|---|---|
+| **A. Lattasulakerasia (ATO/ATC)** | Blue Sea 5026, 12 paikkaa, miinuskisko ja kansi: 79,90 € ([Nautisports](https://www.nautisports.com/en/boite-a-fusibles-12-circuits-avec-bus-de-masse-blue-sea-systems.html)), 92,16 € ([boat-parts.net](https://boat-parts.net/bp100-5026-sikring-block-ato-12-circuit-w-ground)). Halvempi 12 paikan rasia: 43,60 € ([Reimo](https://www.reimo.com/fi/camping-shop/asuntoauton-saehkoet-akku/sulakkeet-ja-virranjakajat/67608/tehonjakelija-jossa-12-tahtinen-sulakkeenpidin)) | 3 rasiaa: **noin 130–280 €**, ja sulakkeet ja varasulakkeet noin 20–30 € (**⚠ arvio**) | Halvin. Rasiat ja sulakkeet on mitoitettu enintään 32 V:lle, mikä riittää 24 V:n järjestelmään (latausjännite alle 30 V). Palanut sulake vaihdetaan käsin. Blue Sean rasiassa on miinuskisko, joten erillistä miinuskiskoa ei tarvita |
+| **B. DC-johdonsuoja DIN-kiskoon** | Eaton FAZ-C10/1-DC: noin 25–27 € sis. ALV ([aio.lv](https://aio.lv/en/product--eaton-279126--3919335.md), [el12.com](https://el12.com/en/elektricke-zarizeni/jistic-10a-1-pol-faz-c101-dc-279126,i68603)); toisaalla jopa 72 € ([RS, PT](https://pt.rs-online.com/web/p/interruptores-automaticos-magnetotermicos/9227172)) | **noin 640–680 €**, lisäksi DIN-kotelot ja kiskot | Kallein. Palautus napista. **Vain DC-hyväksyttyjä:** tavallinen talojohdonsuoja (esim. Schneider iC60N noin 6–9 €) on AC-laite, eikä sitä käytetä, ellei datalehti anna DC-arvoa |
+| **C. Paneelin vipusulake** | Blue Sea A-sarja 10 A (7204–7206): 9,25 £ ≈ 11 € ([Force4](https://www.force4.co.uk/item/Blue-Sea/Systems-A-Series-Toggle-Circuit-Breaker/5R15)), 65 V DC ([Overton's](https://overtons.com/blue-sea-systems-a-series-toggle-switch-circuit-breaker-single-pole-10-amp-350713.html)). Valmis 8 paikan 360-paneeli: noin 250 € ([Blue Bottle Marine](https://www.bluebottlemarine.com/products/blue-sea-circuit-breaker-dc-360-square-panel-push-button-90a-8-position.html)) | Irtokatkaisijoina noin 275 € ja oma paneeli; valmiina paneeleina noin 750–1 000 € | Sulake ja kytkin samassa. PDM-lähdöissä kytkin olisi kuitenkin toinen kytkin PDM:n rinnalla, joten hyöty jää pieneksi |
+
+**Tärkeiden kuormien kisko (noin 7 piiriä)** on eri asemassa: sen piirit eivät ole PDM:n takana,
+joten sulake on niiden ainoa suoja, ja vika halutaan palauttaa nopeasti ilman varasulaketta.
+
+| Vaihtoehto | Noin 7 piiriä |
+|---|---|
+| Lattasulakkeet ja erilliset kytkimet | noin 50–80 € (**⚠ arvio**) |
+| Blue Sea A-sarjan vipusulakkeet (sulake ja kytkin samassa) | noin 80 € ja paneelilevy |
+| Eaton FAZ-DC DIN-kiskoon ja erilliset kytkimet | noin 180–190 € ja kytkimet |
+
+Pilssipumppujen kohokytkinpiirissä ei saa olla kytkintä, jolla automaattisen käytön voi vahingossa
+sammuttaa. Pilssipumppujen sulakkeiksi sopivat siksi sulake tai johdonsuoja ilman käyttökytkintä.
+
+**Suositus (ei päätös) [laskelma]:**
+
+- **PDM-lähdöt: lattasulakerasiat (A).** Ne ovat noin 350–500 € halvempia kuin DC-johdonsuojat
+  (B), ja PDM tarjoaa jo johdonsuojan käytännön edut.
+- **Tärkeiden kuormien kisko:** Blue Sea A-sarjan vipusulakkeet. Niissä on sulake ja kytkin
+  samassa, ja ne toimivat ilman ohjelmistoa. Kokonaisuus on noin 80 €. Pilssipumpuille sulake
+  ilman kytkintä.
+- **Yhteensä noin 230–390 €** (sulakerasiat 130–280 €, sulakkeet noin 20–30 € ja TK:n vipusulakkeet noin 80 €; **⚠ arvio**).
+  Kaikki DC-johdonsuojilla toteutettuna noin 820–870 € ja kotelot.
+- ESP32-PDM-projektissa on vielä auki, tulevatko lähtöjen sulakkeet kortille vai asennukseen.
+  Jos sulakkeenpitimet tulevat kortille, erillisiä sulakerasioita tarvitaan vähemmän.
+
 ## 5. Miinus ja teräsrunko
 
 Teräsrungossa miinuksen kytkentä vaikuttaa korroosioon. Tämä kannattaa päättää ennen
@@ -293,7 +344,7 @@ sähköurakoitsijan kanssa ajoissa.
 - [x] Miinus ja runko: yksi yhteyspiste koneen runkoon [omistaja 2026-10-31]
 - [x] PDM:n rooli: tavalliset piirit ESP32-PDM:llä [omistaja 2026-10-31]
 - [ ] **Sulaketyyppi PDM:n lähtöihin:** lattasulakkeet vai DC-automaattisulakkeet? Ratkaisee hinta;
-  hintavertailu tekemättä
+  hintavertailu kohdassa 4.5 (suositus: PDM-lähdöt lattasulakkeilla, TK vipusulakkeilla)
 - [ ] **Veneellä:** resistanssi akun miinuksen ja rungon välillä; onko käynnistin ja laturi
   maadoitettu koneen runkoon?
 - [ ] **Veneellä:** mistä koneen ohjausyksikkö saa nyt virtansa?
