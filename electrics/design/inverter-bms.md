@@ -151,6 +151,30 @@ kuivakosketinta; käyttöohjeessa on lämmitysliitäntä, mutta kuivakosketin ma
   [lifepo4.com.au](https://lifepo4.com.au/shop/lifepo4-bms/jk-jikong/48v-8-24s/new-jk-bms-16s-51-2v-200a-v19-jk-pb2a16s20p-v19/),
   [manuals.plus](https://manuals.plus/ae/1005007694975455)
 
+## 5.2 Toisen laturin säädin: Alpha Pro III vai Wakespeed WS500 (selvitetty 2026-10-31)
+
+Ei päätöstä. Laturi itse (esim. Prestolite 24 V / 175 A) odottaa tilan tarkistusta veneellä.
+
+| | **Mastervolt Alpha Pro III** | **Wakespeed WS500** |
+|---|---|---|
+| Hinta | noin 330–450 USD ≈ 300–405 € ([ac-power-source 2.5](ac-power-source.md#25-toisen-laturin-hintataso-haettu-2026-10-28)) | noin 650–820 USD ≈ 585–740 € |
+| Liitäntä Victroniin | Ei. Toimii itsenäisesti | Cerbo GX:n **VE.Can**-porttiin (ei BMS-CAN-porttiin) ([Wakespeed–Cerbo GX -ohje](https://battlebornbatteries.com/wp-content/uploads/2022/11/Wakespeed-Victron-Cerbo-GX-Guide_4.29.24-1.pdf)) |
+| BMS:n ohjaus | JK:n kuivakosketin katkaisee Reg on -johtimen: lataus loppuu ennen BMS:n katkaisua | Lukee DVCC-rajat (Wakespeedin laiteohjelmisto 2.5.2+, Cerbo 3.30+); valmistaja varoittaa luottamasta pelkkään DVCC:hen, ja käyttäjien kokemukset ovat ristiriitaisia ([Victron-yhteisö](https://communityarchive.victronenergy.com/questions/266213/wakespeed-ws500-dvcc.html), [Victron-yhteisö](https://community.victronenergy.com/t/ws500-cerbogx-dvcc-integration/58020)). Myös kuivakosketinohjaus mahdollinen |
+| Latausvirran rajoitus | Ei seuraa BMS:n virtarajaa; kenttävirran raja (Power curve) ja laturin lämpötila-anturi | Seuraa BMS:n / DVCC:n virtarajaa, oma virta- ja lämpötilavalvonta |
+| Näkyvyys | Ei Victronissa eikä Signal K:ssa | Cerbo GX:ssä, VRM:ssä ja Signal K:ssa |
+| Laturin vaatimus | Kenttäohjaus N-tyyppinen (Prestolite **⚠ tarkista**) | Sopii useimpiin ulkoisella säätimellä toimiviin latureihin (**⚠ tarkista**) |
+
+**Kahden akun huomio [laskelma]:** jos toinen akku katkaisee, 175 A:n laturi lataa vain jäljelle
+jäänyttä akkua, joka kestää kennojen puolesta noin 157 A (0,5 C, **⚠ tarkista** MB31:n latausvirta
+datalehdestä). Alpha Pro III:lla tämä hoidetaan kytkemällä **kummankin JK:n kuivakosketin sarjaan
+Reg on -johtimeen**, jolloin kumman tahansa akun vika tai suojaus pysäyttää laturin. WS500 voisi
+pienentää virtaa, mutta DVCC-ohjaukseen ei kannata luottaa yksin. Sterling APD24 on lisäsuoja
+molemmissa.
+
+**Suositus (ei päätös):** **Alpha Pro III** ja molempien JK:iden kuivakoskettimet sarjassa Reg on
+-johtimeen. Se on noin 300–350 € halvempi, yksinkertainen ja toimii ilman ohjelmistoa. WS500 kannattaa,
+jos laturin tiedot halutaan Signal K:hon ja latausvirta halutaan sovittaa akuston tilaan.
+
 ## 6. Avoimet kysymykset
 
 - [x] Invertterilaturi: Victron MultiPlus-II 24/5000/120-50 ja Cerbo GX [omistaja 2026-10-31]
@@ -161,4 +185,5 @@ kuivakosketinta; käyttöohjeessa on lämmitysliitäntä, mutta kuivakosketin ma
 - [ ] Kahden JK-BMS:n yhteiskäyttö Cerbo GX:n kanssa: näkyvätkö molemmat, ja ohjaako DVCC pienimmän rajan mukaan (**⚠ tarkista**)
 - [ ] Invertterin purkuvirran raja, kun vain toinen akku on käytössä (DVCC-asetus)
 - [ ] Sterling APD24 laturin varasuojaksi
-- [ ] Säädin: Alpha Pro III Reg on -ohjauksella vai Wakespeed WS500 CAN-väylässä? (MasterBusin "Stop charge" ei ole käytössä ilman Mastervoltin invertterilaturia)
+- [ ] Säädin: Alpha Pro III Reg on -ohjauksella (suositus, kohta 5.2) vai Wakespeed WS500 Cerbo GX:n VE.Can-portissa?
+- [ ] MB31:n suurin jatkuva latausvirta datalehdestä (vaikuttaa toisen laturin kokoon, jos vain toinen akku on käytössä)

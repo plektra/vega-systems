@@ -186,6 +186,19 @@ hätärinnankytkin. Lisäksi:
 **Turvallisuus:** P3 on ohjauksen varajärjestelmä. Hätärinnankytkimen käyttö hinauksessa, P3:n
 sammutus koneen sammuessa ja hälytykset kuvataan ohjauspaikan ohjeeseen, ja ratkaisu tarkastutetaan pätevällä sähköasentajalla ennen käyttöä.
 
+### 3.4 Tärkeiden kuormien kiskon osat (selvitetty 2026-10-31)
+
+Ei päätöstä. Hinnat haettu 2026-10-31.
+
+| Osa | Ehdotus | Hinta | Huomiot |
+|---|---|---|---|
+| Ideaalidiodit (2 kpl): käyttöakusto → TK ja käynnistysakut → TK | **Victron Argo FET 100-2**, kummallekin akustolle oma (tulo = akusto, yksi lähtö = TK-kisko) | 109 € sis. ALV / kpl ([Toplicht](https://www.toplicht.de/en/shop/bordelektrik-und-elektronik/stromverteiler/batterietrennung/victron-argo-fet-batterie-trennung)) → **≈ 220 €** | MOSFET-erotin, jännitehäviö alle 0,02 V pienellä ja noin 0,1 V suuremmalla virralla; 100 A riittää noin 40–45 A:lle. Laite on tehty laturin jakamiseen akuille; käyttö akustolta kiskolle **⚠ tarkista** Victronilta (lepovirta, tulon jännitealue) |
+| Hätärinnankytkin | **Victron Battery Switch ON/OFF 275A** (VBS127010010) | noin 33–37 € ([Nkon](https://eu.nkon.nl/victron-energy-vbs127010010-275a-on-off.html), [Solartech](https://solartech.eu/en/p/main-battery-switch-battery-on-off-275a-victron-energy)) | Normaalisti auki, selvä merkintä. Vaihtoehto Blue Sea m-Series 300 A noin 45 € |
+| Pilssi- ja ylävesihälytin | **Rule 32ALA** (24 V: kohokytkin ja paneeli, ääni- ja valohälytys), kohokytkin pumppujen kohokytkimien yläpuolelle | noin 98–124 € ([Euroboatparts](https://euroboatparts.com/products/rule-high-water-bilge-alarm-w-switch-gauge-24v-32ala), [Yachtneeds](https://yachtneeds.com/rule-24v-bilge-level-alarm-with-acoustic-and-visual-indicator-ru32ala)) | Halvempi: 12/24 V:n hälytyspaneeli 30,70 € ja erillinen kohokytkin ([bootsshop.at](https://bootsshop.at/en/products/bilgealarmtafel-12-24v-mit-schalter-auto-aus-man)) |
+| Hälytys Signal K:hon | Toinen kohokytkin tai hälyttimen kosketin NMEA 2000 -noden digitaalituloon | – | Paikallinen hälytin toimii ilman ohjelmistoa; Signal K lähettää hälytyksen puhelimeen |
+
+**Arvio:** TK:n osat yhteensä noin 350–380 € (johdonsuojat ja kotelo erikseen) [laskelma].
+
 ## 4. Sulakkeet ja kaapelit
 
 ### 4.1 Periaatteet
@@ -411,7 +424,7 @@ sähköurakoitsijan kanssa ajoissa.
 - [ ] Käynnistysakkujen kapasiteetti riittää P3:lle; tarvittaessa suuremmat AGM-akut
 - [ ] Käynnistysakkujen jännitteen mittaus ja hälytys Signal K:hon
 - [ ] P3:n automaattinen katkaisu koneen sammuessa: tarvitaanko?
-- [ ] Ideaalidiodin ja hätärinnankytkimen valinta tärkeiden kuormien kiskolle
-- [ ] Pilssihälytys ja yläveden hälytin: laite ja liitäntä Signal K:hon
+- [ ] Ideaalidiodin ja hätärinnankytkimen valinta tärkeiden kuormien kiskolle (ehdotus kohdassa 3.4: Victron Argo FET 100-2 × 2, Victron 275A -kytkin); Argo FETin käyttö akustolta kiskolle tarkistetaan Victronilta
+- [ ] Pilssihälytys ja yläveden hälytin: ehdotus Rule 32ALA (kohta 3.4) ja liitäntä Signal K:hon NMEA 2000 -noden kautta
 - [ ] Mitkä piirit ohjataan PDM:llä ([current-system.md 5](../current-system.md#5-avoimet-kysymykset))
 - [ ] Mitä 230 V:n asennuksesta saa tehdä itse (Tukes) ja kuka sähköurakoitsija tarkastaa

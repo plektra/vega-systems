@@ -37,7 +37,7 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | 2.7 | Aggregaatin ja bensiinin säilytyskaappi kannella | 1 | tuulettuva, valuu laidan yli | 🛒 | **⚠ ei tiedossa** | sama |
 | 2.8 | Erotusmuuntaja Airlink WM5002 | 1 | olemassa, ei kytketty | ✅ | – | [ac-power-source 2.6](design/ac-power-source.md#26-olemassa-oleva-erotusmuuntaja-airlink-wm5002) |
 | 2.9 | Toinen laturi 24 V / 150–175 A (esim. Prestolite 175 A) | 1 | mahtuuko koneen etupäähän **⚠ tarkista** | ⏳ | noin 1 304 € (Prestolite) | [ac-power-source 2.5](design/ac-power-source.md#25-toisen-laturin-hintataso-haettu-2026-10-28) |
-| 2.10 | Säädin: Alpha Pro III tai Wakespeed WS500 | 1 | valinta auki | ⏳ | 330–450 USD tai 650–820 USD | sama |
+| 2.10 | Säädin: Mastervolt Alpha Pro III (suositus) tai Wakespeed WS500 | 1 | Alpha Pro III: molempien JK:iden kuivakoskettimet sarjassa Reg on -johtimeen | ⏳ | 330–450 USD ≈ 300–405 € (WS500 650–820 USD) | [inverter-bms 5.2](design/inverter-bms.md#52-toisen-laturin-säädin-alpha-pro-iii-vai-wakespeed-ws500-selvitetty-2026-10-31) |
 | 2.11 | Laturin lämpötila-anturi 41500400 (Alpha Pro III) | 1 | | ⏳ | noin 17–26 USD | sama |
 | 2.12 | Sterling APD24 (laturin varasuoja) | 1 | | 🛒 | **⚠ ei tiedossa** | [ac-power-source](design/ac-power-source.md) |
 | 2.13 | Laturin kiinnike ja hihna | 1 | CAT 3126B:n etupää, 5–7 kW | ⏳ | **⚠ ei tiedossa** | sama |
@@ -50,8 +50,8 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | 3.2 | Suljettu DIN-kotelo (IP-luokka) | 3 | KS, KH ja TK | 🛒 | 30–60 €/kpl **⚠ arvio** | [dc-distribution 4.5](design/dc-distribution.md#45-sulakkeiden-hintavertailu-haettu-2026-10-31) |
 | 3.3 | Suurten lähtöjen sulakkeet ja pidikkeet (MEGA, ANL tai MRBF) | noin 6 | invertteri, P3, toinen laturi, KS-, KH- ja TK-syötöt | 🛒 | **⚠ ei tiedossa** | [circuit-list](design/circuit-list.md) |
 | 3.4 | Plus- ja miinuskiskot pääjakeluun | 1 sarja | | 🛒 | **⚠ ei tiedossa** | [dc-distribution 2.1](design/dc-distribution.md#21-pääjakelu-pj-konehuone) |
-| 3.5 | Ideaalidiodi (MOSFET) tärkeiden kuormien kiskolle | 2 | noin 50 A; malli valitsematta | 🛒 | **⚠ ei tiedossa** | [dc-distribution 3](design/dc-distribution.md#3-tärkeät-kuormat-ja-vikatilanteet) |
-| 3.6 | Hätärinnankytkin (käynnistys- ja käyttöakusto) | 1 | järeä, normaalisti auki | 🛒 | **⚠ ei tiedossa** | [dc-distribution 3.2](design/dc-distribution.md#32-hätärinnankytkin) |
+| 3.5 | Ideaalidiodi: Victron Argo FET 100-2 | 2 | yksi kummallekin akustolle, lähtö TK-kiskoon; käyttötapa tarkistettava Victronilta | 🔍 | 109 €/kpl → **≈ 220 €** | [dc-distribution 3.4](design/dc-distribution.md#34-tärkeiden-kuormien-kiskon-osat-selvitetty-2026-10-31) |
+| 3.6 | Hätärinnankytkin: Victron Battery Switch ON/OFF 275A | 1 | normaalisti auki, merkitään | 🛒 | noin 33–37 € | sama |
 | 3.7 | Vipukytkimet komentosillan paneeliin | noin 4 | kulkuvalot, ankkurivalo, VHF, hakuvalon rele | 🛒 | **⚠ ei tiedossa** | [circuit-list](design/circuit-list.md) |
 | 3.8 | ESP32-PDM-kortit | noin 6 + 2 | 4-kanavaiset ja suurivirtakortit; oma projekti | ⏳ | **⚠ ei tiedossa** | [circuit-list](design/circuit-list.md#pdm-kanavien-tarve-laskelma-arvio) |
 | 3.9 | Tinattu venekaapeli (eri poikkipinnat) ja kaapelikengät | – | koot mitattujen pituuksien mukaan | ⏳ | **⚠ ei tiedossa** | [dc-distribution 4.2](design/dc-distribution.md#42-jännitehäviö-ja-kaapelin-koko-laskelma) |
@@ -66,6 +66,7 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | 4.3 | Hakuvalon suojahuppu | 1 | | 🛒 | muutamia kymmeniä euroja **⚠ arvio** | sama |
 | 4.4 | Häkävaroitin makuutiloihin | 2–3 | öljylämmitin, kaasuliesi, aggregaatti | 🛒 | **⚠ ei tiedossa** | [ac-power-source D](design/ac-power-source.md#d-kannettava-bensiiniaggregaatti-varalataukseen-selvitetty-2026-10-31) |
 | 4.5 | Kaasuhälytin ja kaasun magneettiventtiili | 1 | suositus; kaasuasennuksen osana | ❓ | **⚠ ei tiedossa** | [loads.yaml](loads.yaml) |
+| 4.8 | Pilssi- ja ylävesihälytin Rule 32ALA (24 V) | 1 | TK-07; lisäksi kosketin NMEA 2000 -nodeen | 🛒 | noin 98–124 € | [dc-distribution 3.4](design/dc-distribution.md#34-tärkeiden-kuormien-kiskon-osat-selvitetty-2026-10-31) |
 | 4.6 | Maseraattori-WC ja septin hätätyhjennyspumppu (24 V) | 1 + 1 | päätetty; mallit valitsematta | ⏳ | **⚠ ei tiedossa** | [päätös 2026-10-31](../decisions.md) |
 | 4.7 | Yhdistetty mikro- ja sähköuuni | 1 | päätetty; malli valitsematta | ⏳ | **⚠ ei tiedossa** | sama |
 
@@ -77,10 +78,11 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | MultiPlus-II 24/5000 ja Cerbo GX (2.1–2.2) | ≈ 1 960–2 710 € |
 | Aggregaatti (2.5) | 549 € |
 | Johdonsuojat ja DIN-kotelot (3.1–3.2) | ≈ 280–470 € |
-| **Yhteensä tiedossa olevat** | **≈ 4 870–5 810 €** |
+| Tärkeiden kuormien kisko: diodit, hätärinnankytkin, ylävesihälytin (3.5, 3.6, 4.8) | ≈ 350–380 € |
+| **Yhteensä tiedossa olevat** | **≈ 5 220–6 190 €** |
 | Toinen laturi ja säädin (2.9–2.11, myöhemmin) | ≈ 1 620–2 060 € |
 
-Puuttuu: JK-BMS:t, Class T -sulakkeet, pääkytkimet, suuret sulakkeet, diodit, kaapelit, kotelot ja
+Puuttuu: JK-BMS:t, Class T -sulakkeet, pääkytkimet, suuret sulakkeet, kaapelit, kotelot ja
 kiinnitykset sekä asennus. Ne ovat arviolta useita satoja euroja (**⚠ arvio**).
 
 ## Ennen tilausta selvitettävät
