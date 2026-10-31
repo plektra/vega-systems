@@ -1,6 +1,6 @@
 # AC-sähkön lähde: hydrauligeneraattori, dieselgeneraattori vai akusto ja invertteri
 
-> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC polttavan WC:n tilalle; akustotarve laskettu uudelleen). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
+> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-31 (kannettava bensiiniaggregaatti, kohta D; kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC polttavan WC:n tilalle; akustotarve laskettu uudelleen). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
 > tarjouksista ennen päätöstä.
 
 ## 1. Tarve
@@ -487,6 +487,54 @@ pääkone riittää varalle. Kannettava diesel- tai bensiinigeneraattori olisi h
 kannella käytettynä melu, häkä ja polttoaineen säilytys pitää ratkaista erikseen (**⚠ ei
 selvitetty**).
 
+### D. Kannettava bensiiniaggregaatti varalataukseen (selvitetty 2026-10-31)
+
+Kysymys [omistaja 2026-10-31]: edullinen kannettava bensiinikäyttöinen invertteriaggregaatti, jolla
+akustoa voi tarvittaessa ladata ankkurissa. Ei päätöstä.
+
+| Malli | Teho | Hinta (haettu 2026-10-31) |
+|---|---|---|
+| Stanley SIG 2000-1 | 1,8 kW jatkuva, 2,0 kW huippu, tankki 10 l | 369 € ([Motonet](https://www.motonet.fi/fi/tuote/7013840/STANLEY-SIG-2000-1-aggregaatti-invertteri-4-tahti-2000-W--2-x-230-V)) |
+| Ducar D2500iS | 2,0 kW jatkuva, 2,2 kW huippu | noin 470 € ([Taloon](https://www.taloon.com/aggregaatti-ducar-d2500is-invertteri-malli-2200-2000-w-98cc-4-tahti-2xusb)) |
+| Honda EU22i | 1,8 kW jatkuva, 2,2 kW huippu; kulutus noin 1,1–1,2 l/h täydellä teholla; noin 53 dB(A) 7 m:ssä neljäsosateholla | noin 1 500–1 690 € ([Taloon](https://www.taloon.com/invertterigeneraattori-honda-eu22i), [Hintaopas](https://hintaopas.fi/s/230v-generaattori/)) |
+
+Honda-arvot ovat jälleenmyyjiltä ([Counties Honda](https://www.countieshonda.co.nz/eu22i), [Rosebud Mowers](https://www.rosebudmowers.com.au/products/honda-eu22-2200w-4-stroke-generator)), **⚠ tarkista** käyttöohjeesta.
+
+**Mitä noin 1,8 kW:n aggregaatti antaa** [laskelma, **⚠ arviot**]:
+
+- **Lataus:** invertterilaturin tulovirran raja asetetaan aggregaatin tehon alle (noin 7 A eli
+  noin 1,6 kW). Akustoon menee noin 1,5 kWh tunnissa (laturin hyötysuhde noin 92 %). Esimerkiksi
+  5 kWh:n vaje latautuu noin 3,5 tunnissa ja vie bensiiniä noin 4 l.
+- **Sauna aggregaatin käydessä:** Power Assist / PowerAssist ottaa aggregaatilta noin 1,6 kW ja
+  akustolta loput kiukaan 2,3 kW:sta, eli akustosta noin 0,8 kW (invertterin hyötysuhde 90 %).
+  **Neljän tunnin sauna veisi akustosta vain noin 3 kWh** (ilman aggregaattia yläraja 10,2 kWh), ja
+  koko saunapäivä noin 11,5 kWh eli noin 70 % 16 kWh:n akustosta. Aggregaatti korvaisi siis
+  kolmannen akun pitkää saunaa varten ([house-battery.md](house-battery.md#herkkyys-sauna-4-h-ankkurissa-laskelma-2026-10-31)).
+- **Kytkentä:** maasähköpistokkeeseen kuten laituri: pistoke → erotusmuuntaja WM5002 →
+  invertterilaturi. Moni invertteriaggregaatti on "kelluva" (nolla ei ole maadoitettu);
+  erotusmuuntajan takana veneen oma maadoitus ei riipu siitä, mutta yhteensopivuus valitun
+  invertterilaturin kanssa **⚠ tarkista**. Tulovirran raja on voitava asettaa noin 7 A:iin
+  (**⚠ tarkista** valitusta laitteesta).
+
+**Turvallisuus:**
+
+- **Häkä (CO):** aggregaatti käytetään vain avokannella, pakokaasu poispäin luukuista, ikkunoista ja
+  tuuletusaukoista. Ei koskaan sisätiloissa, konehuoneessa tai suljetussa avotilassa. Makuutiloihin
+  häkävaroitin; se on suositeltava joka tapauksessa öljylämmittimen ja kaasulieden takia.
+- **Bensiinin säilytys:** bensiinihöyry on ilmaa raskaampaa ja kerääntyy pilssiin; teräsrunko ei
+  päästä sitä ulos. Bensiini ja aggregaatti säilytetään vain kannella tai kannen kaapissa, joka
+  tuulettuu ja valuu ulos laidan yli, ei koskaan sisätiloissa. Muuten veneen sähkölaitteet
+  (talojohdonsuojat, releet) eivät ole syttymissuojattuja (ISO 8846), ja tämä pitäisi arvioida
+  uudelleen.
+- **Tankkaus** vain kylmään koneeseen ja kannella. Vakuutusyhtiön kanta bensiinin säilytykseen
+  **⚠ tarkista**.
+
+**Verrattuna muihin:** halvin malli (noin 370 €) on halvempi kuin kolmas akku (kennot noin 1 040 € ja
+BMS) ja paljon halvempi kuin dieselgeneraattori (noin 8 300 € ja asennus). Pääkoneen tyhjäkäynti
+on ilmainen, mutta 350 hv:n kone tyhjäkäynnillä on äänekkäämpi ja nokeentuu pitkässä
+tyhjäkäynnissä. Aggregaatin haittoja ovat bensiinin säilytys, melu ankkurissa ja pienen koneen
+huolto (bensiini vanhenee seistessään).
+
 ## 4. Suositus (ei päätös)
 
 Akusto ja invertteri tarvitaan joka tapauksessa, koska jääkaappi käy ankkurissa myös yöllä, eikä
@@ -620,6 +668,8 @@ tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900
 - [x] Kuinka monta vuorokautta ollaan ankkurissa ajamatta: enintään alle vuorokausi [omistaja 2026-10-29]
 - [ ] Kuinka pitkä ajo on tyypillisesti ankkuripäivän jälkeen (riittääkö noin 2,5 h lataukseen)?
 - [ ] Dieselgeneraattori: päätös auki [omistaja 2026-10-29]
+- [ ] Kannettava bensiiniaggregaatti varalataukseen (kohta D): hankitaanko, ja missä bensiini säilytetään turvallisesti?
+- [ ] Voiko valitun invertterilaturin tulovirran rajan asettaa noin 7 A:iin, ja toimiiko se kelluvan nollan aggregaatin kanssa?
 - [ ] Laturin hihnapyörien välityssuhde ja valitun laturin virtakäyrä: paljonko se lataa 700 rpm:llä ja 1 000–1 200 rpm:llä?
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Onko kotilaiturin maasähkö 1-vaiheinen 230 V, ja onko siinä vikavirtasuoja?
