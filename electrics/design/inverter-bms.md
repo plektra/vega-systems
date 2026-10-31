@@ -175,6 +175,32 @@ molemmissa.
 -johtimeen. Se on noin 300–350 € halvempi, yksinkertainen ja toimii ilman ohjelmistoa. WS500 kannattaa,
 jos laturin tiedot halutaan Signal K:hon ja latausvirta halutaan sovittaa akuston tilaan.
 
+### 5.3 Muut säädinvaihtoehdot ja Victronin DC-DC-laturit (selvitetty 2026-10-31)
+
+**Victronilla ei ole omaa laturin säädintä.** Haulla ei löytynyt Victron-merkkistä ulkoista
+säädintä; Victronin yhteisössä sitä on toivottu ([Victron-yhteisö](https://communityarchive.victronenergy.com/idea/141731/new-product-request-alternator-external-regulator.html)).
+Victron-kokonaisuuteen liittyviä vaihtoehtoja:
+
+| Vaihtoehto | Hinta | Huomiot |
+|---|---|---|
+| Balmar MC-624 (24 V) | 504 € sis. ALV ([Philippi](https://www.philippi-online.de/en/produkt/alternator-regulator-mc-624)); USA:ssa noin 370–410 USD | Itsenäinen, kuten Alpha Pro III. Victron-liitäntää ei löytynyt |
+| Arco Zeus (12–48 V, Bluetooth) | noin 796 USD ([Defender](https://defender.com/en_us/alternator-regulators-accessories)) | Victron-yhteensopivuus **⚠ ei tiedossa** |
+| Revatek Altion | 799–889 USD ([invertersrus](https://invertersrus.com/product-category/inverter-brands/revatek/)) | **Täysi DVCC-tuki** Venus OS 3.60:sta alkaen: seuraa Cerbo GX:n latauskomentoja ([Panbo](https://panbo.com/revatek-altion-regulator-unlocks-full-victron-energy-dvcc-integration-with-venus-os-v3-60/)). 24 V:n tuki **⚠ tarkista** |
+| **Victron Orion XS 1400 -DC-DC-laturit** | **⚠ ei tiedossa** | Ks. alla |
+
+**DC-DC-vaihtoehto (Victronin tapa):** iso laturi (esim. 175 A) **omalla sisäisellä säätimellään**
+lataa käynnistysakkuja, ja Victron Orion XS 1400 -laturit (24 V → 24 V, enintään noin 50 A eli
+1,4 kW kukin, [Victron-yhteisö](https://community.victronenergy.com/t/orion-xs-1400-for-12-to-48-volt/41939))
+siirtävät energiaa käyttöakustolle. Kolme rinnan antaa noin 4,2 kW (**⚠ arvio**).
+
+- Plussat: ulkoista säädintä ei tarvita, ja laturi voi olla tavallinen; BMS ohjaa Orioneita, ja
+  laturi on lyijyakkujen puolella, joten BMS:n katkaisu ei aiheuta laturille jännitepiikkiä (APD24
+  ei välttämätön). **Iso laturi lataa suoraan käynnistysakkuja, joilta myös P3 saa virtansa**
+  (päätös 2026-10-31), joten varaohjaukselle on enemmän latausta kuin 65 A:n laturista.
+- Miinukset: kolme laitetta ja niiden kaapelointi, häviö noin 2–3 % lämpönä (**⚠ arvio**), hinta
+  **⚠ ei tiedossa**; käynnistysakkujen kaapelit ja sulake mitoitetaan laturin virralle. Orion XS:n
+  ohjaus Cerbo GX:ltä tai BMS:ltä **⚠ tarkista** datalehdestä.
+
 ## 6. Avoimet kysymykset
 
 - [x] Invertterilaturi: Victron MultiPlus-II 24/5000/120-50 ja Cerbo GX [omistaja 2026-10-31]
@@ -186,4 +212,6 @@ jos laturin tiedot halutaan Signal K:hon ja latausvirta halutaan sovittaa akusto
 - [ ] Invertterin purkuvirran raja, kun vain toinen akku on käytössä (DVCC-asetus)
 - [ ] Sterling APD24 laturin varasuojaksi
 - [ ] Säädin: Alpha Pro III Reg on -ohjauksella (suositus, kohta 5.2) vai Wakespeed WS500 Cerbo GX:n VE.Can-portissa?
+- [ ] DC-DC-vaihtoehto (kohta 5.3): Orion XS 1400:n hinta, rinnankytkentä, BMS-/Cerbo-ohjaus ja lämpö; sopiiko tavallinen 24 V / 175 A -laturi sisäisellä säätimellä
+- [ ] Revatek Altion: onko 24 V:n versio
 - [ ] MB31:n suurin jatkuva latausvirta datalehdestä (vaikuttaa toisen laturin kokoon, jos vain toinen akku on käytössä)
