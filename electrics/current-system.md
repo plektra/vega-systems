@@ -90,7 +90,7 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | Kansivalaistus | 200 W | suunniteltu | |
 | Työvalo eteen | 100 W | suunniteltu | |
 | Työvalo taakse | 100 W | suunniteltu | |
-| Hakuvalo | 500 W (≈ 21 A) | **olemassa, ei asennettu** | Vanha, todennäköisesti neuvostovalmisteinen, käsikäyttöinen, komentosillan katolla. Halogeeni säilyy (päätös 2026-10-30), kanta luultavasti GY9.5 **⚠ tarkista** [omistaja 2026-10-30]. Jäänpoisto: [design/searchlight-deicing.md](design/searchlight-deicing.md) |
+| Hakuvalo | 250 W (≈ 10,4 A) [omistaja 2026-10-31] | **olemassa, ei asennettu** | Vanha, todennäköisesti neuvostovalmisteinen, käsikäyttöinen, komentosillan katolla [omistaja 2026-10-30]. Polttimo on Philipsin 24 V:n 250 W:n projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31], luultavasti EHJ / A1/223, kanta G6.35 **⚠ tarkista**. Halogeeni säilyy (päätös 2026-10-30). Jäänpoisto: [design/searchlight-deicing.md](design/searchlight-deicing.md) |
 | Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
 | Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö **Mean Well DDR-240B-24**:ltä [omistaja 2026-10-29] |
 | Mastokamera | **⚠ ei tiedossa** (arvio noin 5 W) | suunniteltu | Kolmas kamera; PoE, syöttö luultavasti DDR-240B-24 **⚠ tarkista** [omistaja 2026-10-29] |
@@ -102,7 +102,7 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | VHF Sailor RT2048 | **⚠ ei tiedossa** | **toteutettu** | Käyttöjännite ja virrankulutus datalehdestä **⚠ tarkista** |
 
 Valot yhtä aikaa täysillä (kulku-, ankkuri-, sisä- ja kansivalot, työvalot ja hakuvalo) ottavat
-enintään noin 1,1 kW eli noin 46 A [laskelma]. Ankkurissa valaistus kuluttaa arviolta noin
+enintään noin 0,85 kW eli noin 35 A [laskelma; päivitetty 2026-10-31, hakuvalo 250 W]. Ankkurissa valaistus kuluttaa arviolta noin
 0,3 kWh vuorokaudessa (ankkurivalo 10 h, sisävalot noin 50 W 5 h; **⚠ arvio**).
 
 ### 3.3 NMEA 2000 -väylän laitteet
@@ -165,7 +165,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [x] Hakuvalon malli, polttimo ja ohjaustapa: ei tyyppikilpeä, halogeeni (säilyy), käsikäyttöinen [omistaja 2026-10-30]
-- [ ] Hakuvalon polttimon kanta (luultavasti GY9.5) ja käynnistysvirran hoito (PDM-kortti vai rele), ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
+- [x] Hakuvalon polttimo: Philips 24 V 250 W, projektorihalogeeni [omistaja 2026-10-31]
+- [ ] Hakuvalon polttimon tarkka tyyppi (luultavasti EHJ / A1/223, G6.35), varapolttimot ja käynnistysvirran hoito (PDM-kortti vai rele), ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
 - [ ] Pääkeskus ja jakelun rakenne: ehdotus selvityksessä [design/dc-distribution.md](design/dc-distribution.md), ei päätöstä
 - [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus, polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC [omistaja 2026-10-29]
 - [x] Raspberry Pi 5:n ja NUC:n syöttö: Mean Well DDR-15G-5 ja DDR-240B-24 [omistaja 2026-10-29]

@@ -349,10 +349,10 @@ dc_loads:
     status: existing               # olemassa, ei asennettu [omistaja 2026-10-29]
     installed: false
     voltage_V: 24
-    max_W: 500                     # noin 21 A 24 V:lla [laskelma]
+    max_W: 250                     # noin 10,4 A 24 V:lla [laskelma]; aiemmin virheellisesti 500
     use_h_per_day: null            # hetkellinen käyttö
-    source: "[omistaja 2026-10-29]"
-    notes: "Halogeeni, käsikäyttöinen (vipu katon läpi), vanha ja todennäköisesti neuvostovalmisteinen, ei tyyppikilpeä [omistaja 2026-10-30]. Halogeeni säilyy, LED hylätty (päätös 2026-10-30). Kanta luultavasti GY9.5 ⚠ tarkista. Ei jäänestolämmitintä; käynnistysvirta noin 200–300 A hetkellisesti. Ks. design/searchlight-deicing.md"
+    source: "[omistaja 2026-10-31]"
+    notes: "Halogeeni, käsikäyttöinen (vipu katon läpi), vanha ja todennäköisesti neuvostovalmisteinen, ei tyyppikilpeä [omistaja 2026-10-30]. Halogeeni säilyy, LED hylätty (päätös 2026-10-30). Polttimo Philips 24 V 250 W projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31], luultavasti EHJ / A1/223, kanta G6.35 ⚠ tarkista; käyttöikä noin 50 h. Ei jäänestolämmitintä; käynnistysvirta noin 100–160 A hetkellisesti. Ks. design/searchlight-deicing.md"
 
   - id: NAV_COMPUTER
     name: Navigointitietokone ja oma näyttö

@@ -1,6 +1,6 @@
 # Hakuvalon jäänpoisto
 
-> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-30 (valo on halogeeni,
+> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-31 (polttimo on Philipsin 250 W:n projektorihalogeeni, ei 500 W; aiemmin 2026-10-30: valo on halogeeni,
 > käsikäyttöinen ja komentosillan katolla; lasin halkaisija noin 350 mm; jäänpoisto siirretty
 > ESP32-PDM:stä tähän; etulasi on lasia; runko ja halogeeni säilyvät, LED hylätty). **Päätetty
 > 2026-10-30:** halogeeni ja vaihtoehto A. Hinnat ja tehot on haettu verkosta, eikä niitä ole tarkistettu
@@ -9,8 +9,8 @@
 **Jatka tästä (2026-10-30):** **päätetty:** vanha runko säilyy, polttimo pysyy halogeenina, ja
 LED-vaihto jätetään pois [omistaja 2026-10-30, [decisions.md](../../decisions.md)]. Jäänpoisto
 hoidetaan ilman lämmitintä (A): suojahuppu, lasi pois tuulesta ja valo päälle hetkeä ennen
-tarvetta. Kokeillaan ensimmäisellä pakkasajolla. Seuraavaksi: (1) varmista polttimon kanta
-(luultavasti GY9.5) ja hanki varapolttimo; (2) halogeenin käynnistysvirta PDM-kortilla
+tarvetta. Kokeillaan ensimmäisellä pakkasajolla. Seuraavaksi: (1) varmista polttimon merkinnästä tyyppi (luultavasti
+EHJ / A1/223, kanta G6.35) ja hanki varapolttimoita, koska polttimon käyttöikä on vain noin 50 h; (2) halogeenin käynnistysvirta PDM-kortilla
 (ESP32-PDM:n päätös 19) tai releellä; (3) suojahuppu. Kaikki avoimet kysymykset: kohta 5.
 
 Tavoite: hakuvalon pitää toimia myös syksyllä ja keväällä, kun etulasiin ja kääntömekanismiin
@@ -21,10 +21,10 @@ vanha runko halutaan säilyttää, joten LED jätettiin pois (kohta D).
 
 | Tieto | Arvo | Lähde |
 |---|---|---|
-| Jännite ja teho | 24 V, 500 W (noin 21 A) | [omistaja 2026-10-29] |
+| Jännite ja teho | 24 V, **250 W** (noin 10,4 A [laskelma]); aiemmin kirjattu 500 W oli virhe | [omistaja 2026-10-31] |
 | Tila | olemassa, ei asennettu | [omistaja 2026-10-29] |
 | Valmistaja ja malli | ei tyyppikilpeä; hyvin vanha, todennäköisesti valmistettu Neuvostoliitossa vuosikymmeniä sitten | [omistaja 2026-10-30] |
-| Polttimo | halogeeni; pystyssä oleva polttimo, jonka kaksi ohutta nastaa menevät kantaan. Kanta luultavasti **GY9.5** **⚠ tarkista**; polttimon tyyppi **⚠ ei tiedossa** | [omistaja 2026-10-30] |
+| Polttimo | **Philipsin 24 V:n 250 W:n halogeeni, jota käytetään projektoreissa ja piirtoheittimissä** [omistaja 2026-10-31]; pystyssä oleva polttimo, jonka kaksi ohutta nastaa menevät kantaan [omistaja 2026-10-30]. Todennäköisesti **Philips 7748XHP** eli ANSI **EHJ** / LIF **A1/223**, kanta **G6.35**: 3400 K, noin 10 000 lm, käyttöikä noin 50 h ([datalehti Philips 7748XHP](https://old.effex.ee/certificate/7748xhp.pdf)). Tyyppi **⚠ tarkista** polttimon merkinnästä | [omistaja 2026-10-31], [datalehti Philips 7748XHP] |
 | Runko | säilytetään: sopii aluksen vanhaan tyyliin ja muotokieleen | [omistaja 2026-10-30] |
 | Sijainti | komentosillan katto | [omistaja 2026-10-30] |
 | Ohjaus | käsikäyttöinen: valaisinta käännetään katon läpi tulevalla vivulla | [omistaja 2026-10-30] |
@@ -34,10 +34,12 @@ vanha runko halutaan säilyttää, joten LED jätettiin pois (kohta D).
 
 **ESP32-PDM:** jäänpoisto ei enää kuulu ESP32-PDM-projektiin, vaan sitä käsitellään vain tässä
 selvityksessä (ESP32-PDM:n päätös 16 on merkitty siirretyksi) [ESP32-PDM 2026-10-30]. PDM:ään
-liittyy edelleen **päätös 19 (ehdotus):** noin 21 A:n hakuvalo vaatii suurivirtaiseen
+liittyy edelleen **päätös 19 (ehdotus):** päätös tehtiin noin 21 A:n (500 W) hakuvalolle. Polttimo on
+kuitenkin 250 W eli noin 10,4 A [omistaja 2026-10-31], joten vaatimukset keventyvät (ks. kohta 3).
+Alkuperäinen perustelu: hakuvalo vaatii suurivirtaiseen
 `pdm-hc2`-korttiin pienemmän resistanssin MOSFETit (ehdokas onsemi NTMFS5C612NL). **Halogeenin
 käynnistysvirta** on noin 10–15-kertainen kymmenien millisekuntien ajan, joten kortin 80 A:n nopea
-oikosulkulaukaisu katkaisisi kylmän 500 W:n polttimon. Vaihtoehdot: LED-hakuvalo tai nopean
+oikosulkulaukaisu katkaisisi kylmän 500 W:n polttimon (250 W:lla käynnistysvirta on noin 100–160 A, ks. kohta 3). Vaihtoehdot: LED-hakuvalo tai nopean
 laukaisun poisto MOSFETien pulssikestoisuuden (SOA) tarkistuksen jälkeen
 ([design-notes.md §4a](https://github.com/plektra/ESP32-PDM/blob/main/docs/design-notes.md)) [ESP32-PDM 2026-10-30].
 Halogeeni vai LED ratkaisee siis sekä jäänpoiston että PDM-kortin osavalinnan.
@@ -48,13 +50,13 @@ Jäätyykö lasi ylipäätään käytön aikana, riippuu siitä, missä lampun h
 
 | Polttimo | Mihin hukkalämpö menee | Pysyykö etulasi sulana valon palaessa? |
 |---|---|---|
-| **Halogeeni** (Vegan nykyinen) | Lähes kaikki 500 W:sta on lämpöä, ja se säteilee heijastimesta suoraan etulasiin | **Kyllä, käytännössä.** Polttimo sulattaa lasin itse, kun valo on päällä [laskelma, perustelu alla] |
+| **Halogeeni** (Vegan nykyinen) | Lähes kaikki 250 W:sta on lämpöä, ja se säteilee heijastimesta suoraan etulasiin | **Kyllä, käytännössä.** Polttimo sulattaa lasin itse, kun valo on päällä [laskelma, perustelu alla] |
 | **LED** | Lämpö johdetaan LEDien takana olevaan jäähdytysrivoitukseen | **Ei.** Etulasi on lähes ulkoilman lämpöinen, ja jää ja huurre jäävät lasiin |
 
 **Perustelu halogeenille [laskelma, arvio]:** halogeenipolttimon näkyvän valon hyötysuhde on
-luokkaa 2–3 % sähkötehosta (yleinen tieto halogeenilampuista, **⚠ tarkista**), joten noin 480 W
-500 W:sta on lämpöä. Jos lasi pidettäisiin sulana erillisellä lämmittimellä, Ø 350 mm:n lasiin
-tarvittaisiin noin 15–50 W (kohta C4). Polttimon hukkalämpö on siis noin kymmenkertainen.
+luokkaa 2–3 % sähkötehosta (yleinen tieto halogeenilampuista, **⚠ tarkista**), joten noin 245 W
+250 W:sta on lämpöä. Jos lasi pidettäisiin sulana erillisellä lämmittimellä, Ø 350 mm:n lasiin
+tarvittaisiin noin 15–50 W (kohta C4). Polttimon hukkalämpö on siis noin 5–15-kertainen (päivitetty 2026-10-31: polttimo on 250 W eikä 500 W; johtopäätös pysyy).
 **Tekniikan vertailua:** Carlisle & Finchin halogeenihakuvaloissa jäänestolämmitin on vain
 *moottoroidun jalustan* sisällä, ei etulasissa ([19" halogen searchlight](https://carlislefinch.com/searchlights/19-inch-halogen-searchlight/),
 [10" LED -datalehti](https://carlislefinch.com/wp-content/uploads/2024/03/10-inch-LED-7.Pg-C.pdf)).
@@ -81,7 +83,7 @@ Sama valmistaja ei siis lämmitä halogeenimallien lasia erikseen.
   tarttumista, mutta ei estä jäätymistä. Apukeino, ei ratkaisu. Sopii Vegan valoon, koska etulasi
   on lasia [omistaja 2026-10-30].
 
-**Varoitus lämpöshokista:** jos paksusti jäätyneeseen lasiin sytytetään 500 W:n halogeeni, lasi
+**Varoitus lämpöshokista:** jos paksusti jäätyneeseen lasiin sytytetään 250 W:n halogeeni, lasi
 lämpenee epätasaisesti. Nykyaikaisten hakuvalojen etulasit ovat yleensä karkaistuja (esim. Den
 Haan Rotterdam ilmoittaa "hardened front glass", toiminta −25 °C:seen asti:
 [DHR 230DS](https://www.dhr.nl/sites/default/files/userfiles/Producten/Searchlights/Downloads/A00DOC-ZL0003%20-%20RevB.pdf)).
@@ -193,7 +195,7 @@ keilan keskikohdan **valovoima (kandela, cd)**, ei wattimäärä eikä lumenit. 
 valolähteen kirkkaudesta ja koosta suhteessa heijastimeen tai linssiin: mitä pienempi ja
 kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen optiikka].
 
-- **500 W:n halogeeni Ø 350 mm:n heijastimessa on jo luultavasti voimakas valo.** Sen valovoima
+- **250 W:n projektorihalogeeni (noin 10 000 lm) Ø 350 mm:n heijastimessa on jo luultavasti voimakas valo.** Sen valovoima
   on **⚠ ei tiedossa**; se mitataan ennen kuin LED-vaihtoehtoja verrataan (alla).
 - **LED-polttimo vanhaan heijastimeen ei todennäköisesti lisää kantamaa.** Heijastin on muotoiltu
   pienelle hehkulangalle, ja LED-sirujen valoa säteilevä pinta on eri kokoinen, eri muotoinen ja
@@ -212,8 +214,8 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
   vertailuun.
 
 - **Energiatehokkuus:** LED tuottaa samalla teholla moninkertaisesti valoa (yleinen tieto,
-  luokkaa 3–5 ×, **⚠ tarkista** valittavista malleista). Esimerkiksi 100–150 W:n LED voi antaa
-  saman valovirran kuin 500 W:n halogeeni, eli noin 4–6 A eikä 21 A [laskelma, arvio].
+  luokkaa 3–5 ×, **⚠ tarkista** valittavista malleista). Esimerkiksi 50–80 W:n LED voi antaa
+  saman valovirran kuin 250 W:n halogeeni, eli noin 2–3 A eikä 10,4 A [laskelma, arvio].
 - **Kantama riippuu valovoimasta (kandela), ei watteista.** Halogeenin pieni hehkulanka ja
   paraboloidiheijastin antavat kapean ja pitkän keilan; LEDin keila riippuu sen optiikasta.
   Valmistajien väitteitä: Golight Stryker LED 410 000 cd (noin 1 280 m) vs. halogeeni 200 000 cd
@@ -226,8 +228,8 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
   Ne on tehty DHR:n omiin runkoihin. Vegan valo on vanha neuvostovalmisteinen, joten
   sopivan LED-polttimon löytyminen riippuu kannasta (**⚠ ei tiedossa**, omistaja selvittää).
   Halogeeniheijastimeen sovitettu LED ei välttämättä anna yhtä kapeaa keilaa **⚠ tarkista**.
-- **PDM-kortti:** LED poistaa käynnistysvirtaongelman ja 21 A:n MOSFET-tarpeen (ESP32-PDM:n
-  päätös 19); 4–6 A mahtuu kevyempään kanavaan.
+- **PDM-kortti:** LED poistaisi käynnistysvirtaongelman (ESP32-PDM:n päätös 19); 2–3 A mahtuu
+  kevyempään kanavaan.
 - **Jäänpoisto:** halogeeni sulattaa lasin itse; LED tarvitsee lämpöpuhaltimen (C4, arviolta
   50–100 W) tai kalvon (C2, noin 50 W), ellei uudessa valossa ole valmiiksi lämmitettyä ikkunaa.
 - **Ulkonäkö:** uusi LED-valo korvaa vanhan valaisimen. Säilytetäänkö vanha valaisin, on omistajien
@@ -235,9 +237,10 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
 
 ## 3. Ohjaus ja kytkentä
 
-- **Halogeenin käynnistysvirta:** kylmän 500 W:n halogeenipolttimon hetkellinen virta on noin
-  10–15 × 21 A eli noin 200–300 A kymmenien millisekuntien ajan [ESP32-PDM design-notes §4a,
-  laskelma]. Puolijohdekytkin tai sulake on mitoitettava sen mukaan (ks. PDM:n päätös 19).
+- **Halogeenin käynnistysvirta:** kylmän 250 W:n halogeenipolttimon hetkellinen virta on noin
+  10–15 × 10,4 A eli noin **100–160 A** kymmenien millisekuntien ajan [ESP32-PDM design-notes §4a,
+  laskelma; päivitetty 2026-10-31, aiemmin 200–300 A 500 W:lle]. Tämä on lähellä `pdm-hc2`-kortin
+  80 A:n nopeaa laukaisua, joten ongelma pienenee mutta ei poistu. Puolijohdekytkin tai sulake on mitoitettava sen mukaan (ks. PDM:n päätös 19).
 - **Kytkin komentosillalle** (KS-alakeskus, [dc-distribution.md 2.2](dc-distribution.md#22-komentosillan-alakeskus-ks))
   ja merkkivalo. Jos lämmitin lisätään, se ei saa jäädä huomaamatta päälle ankkurissa.
 - **Automaatio (vain jos lämmitin lisätään):** ESP32-PDM:n kanava voi kytkeä lämmittimen, kun
@@ -245,8 +248,8 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
   **⚠ arvio**. Termostaattitoimintoa ei ole enää ESP32-PDM:n suunnitelmissa; se pitää tarvittaessa
   pyytää sieltä erikseen.
 - **Kaapeli:** valo on komentosillan katolla, joten kaapeli KS-alakeskukselta on lyhyt (noin 3 m,
-  **⚠ arvio**) eikä mene mastoon. 21 A:lla tarvitaan 2,5 mm² (10 %:n häviö, kuormitettavuus
-  ratkaisee) tai 4 mm² täydelle valoteholle (3 %:n häviö) [laskelma,
+  **⚠ arvio**) eikä mene mastoon. 10,4 A:lla riittää 1,5 mm² (10 %:n häviö) tai 2,5 mm²
+  täydelle valoteholle (3 %:n häviö; halogeenin valovirta laskee jyrkästi jännitteen mukana) [laskelma,
   [dc-distribution.md 4.2](dc-distribution.md)]. Lämmittimen oma johdin katolle: 1,5 mm² riittää
   [laskelma].
 - **Paloturvallisuus:** lämmitin ja sen johdot pitää kiinnittää niin, etteivät ne osu
@@ -260,25 +263,30 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
    Kokeillaan ensimmäisellä pakkasajolla: kuinka nopeasti jää sulaa ja jäätyykö katon läpivienti.
 2. **Jalustan lämmitin (B) luultavasti tarpeeton,** koska vipu ja laakeri ovat komentosillan
    sisällä. Lisätään vain, jos koeajo osoittaa nivelen jäätyvän.
-3. **Halogeenin käynnistysvirta** (noin 200–300 A kymmenien millisekuntien ajan) pitää hoitaa:
+3. **Halogeenin käynnistysvirta** (noin 100–160 A kymmenien millisekuntien ajan, 250 W) pitää hoitaa:
    joko ESP32-PDM:n `pdm-hc2`-kortilla (päätös 19: järeämmät MOSFETit ja nopean laukaisun poisto
    SOA-tarkistuksen jälkeen) tai kytkemällä valo releellä, jota PDM ohjaa. Tämä on nyt ESP32-PDM:n
    ratkaistava, koska LED-vaihtoehto on hylätty.
-4. **Varapolttimo:** kun kanta on varmistettu (luultavasti GY9.5), hanki 24 V:n 500 W:n
-   varapolttimo. Saatavuus **⚠ tarkista**.
+4. **Varapolttimot:** kun tyyppi on varmistettu polttimon merkinnästä (luultavasti EHJ / A1/223,
+   G6.35), hanki useampi varapolttimo. Projektoripolttimon käyttöikä on vain noin 50 h, ja
+   Philips-merkkisiä näyttää olevan enää vähän saatavilla. Saman tyypin muita merkkejä myydään
+   noin 10 £:lla ([BLT Direct](https://www.bltdirect.com/products/a1-223-24v-250w-projector-lamp)),
+   valovirta noin 8 500 lm **⚠ tarkista**.
 
 Jos LED-vaihto otetaan myöhemmin uudelleen esiin, lasi pitää lämmittää erikseen (C4 noin 50–100 W
 tai C2 noin 50 W), ja kirkkaampi keila vaatii todennäköisesti uuden valon (kohta D).
 
 **Turvallisuus:** hakuvalo ei ole ohjauksen kaltainen turvallisuuskriittinen järjestelmä, mutta
-500 W:n halogeeni on palovaara, jos lämmittimen johdot tai suojahuppu koskettavat kuumaa runkoa.
+250 W:n halogeeni on palovaara, jos lämmittimen johdot tai suojahuppu koskettavat kuumaa runkoa.
 Älä jätä huppua valon päälle, kun valo palaa.
 
 ## 5. Avoimet kysymykset
 
 - [x] Hakuvalon valmistaja ja malli: ei tyyppikilpeä; vanha, todennäköisesti neuvostovalmisteinen [omistaja 2026-10-30]
 - [x] Polttimo: halogeeni [omistaja 2026-10-30]
-- [ ] Polttimon kanta: luultavasti GY9.5 [omistaja 2026-10-30], varmistettava; polttimon tyyppi ja 24 V:n 500 W:n varapolttimon saatavuus
+- [x] Polttimo: Philipsin 24 V:n 250 W:n projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31] (aiemmin kirjattu 500 W oli virhe)
+- [ ] Polttimon tarkka tyyppi merkinnästä (luultavasti EHJ / A1/223, kanta G6.35; aiempi arvio GY9.5) ja varapolttimoiden hankinta (käyttöikä noin 50 h)
+- [ ] Projektoreissa polttimoa jäähdyttää yleensä puhallin. Kestääkö polttimo pitkän käytön hakuvalon rungossa ilman puhallinta? **⚠ tarkista** datalehdestä ja käytössä
 - [x] Ohjaus: käsikäyttöinen, vipu katon läpi [omistaja 2026-10-30]
 - [x] Sijainti: komentosillan katto [omistaja 2026-10-30]
 - [x] Etulasin paksuus: noin 5 mm [omistaja 2026-10-30]
@@ -290,7 +298,7 @@ tai C2 noin 50 W), ja kirkkaampi keila vaatii todennäköisesti uuden valon (koh
 - [ ] Kuinka nopeasti halogeeni sulattaa jäätyneen lasin (koeajo)
 - [x] Halogeeni vai LED: halogeeni säilyy, LED hylätty [omistaja 2026-10-30]
 - [x] Säilytetäänkö vanha valaisin: kyllä, sopii aluksen tyyliin [omistaja 2026-10-30]
-- [ ] Halogeenin käynnistysvirta (200–300 A): PDM-kortti (ESP32-PDM:n päätös 19) vai rele?
+- [ ] Halogeenin käynnistysvirta (noin 100–160 A, 250 W): PDM-kortti (ESP32-PDM:n päätös 19) vai rele?
 - [ ] Suojahupun teko tai hankinta
 - [ ] Kuinka paljon Vegalla ajetaan pakkasella tai jäätyvässä roiskeessa (kuukaudet)?
 - [ ] Kestääkö etulasi lämpöshokin paksusti jäätyneenä: lasi oletettavasti karkaistu ja kestänyt käytössä vuosikymmeniä [omistaja 2026-10-30]; varmistuu koeajossa, tarkista lasi halkeamien varalta
