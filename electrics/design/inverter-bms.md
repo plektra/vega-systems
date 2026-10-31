@@ -188,7 +188,9 @@ Victron-kokonaisuuteen liittyviä vaihtoehtoja:
 | Revatek Altion | 799–889 USD ([invertersrus](https://invertersrus.com/product-category/inverter-brands/revatek/)) | **Täysi DVCC-tuki** Venus OS 3.60:sta alkaen: seuraa Cerbo GX:n latauskomentoja ([Panbo](https://panbo.com/revatek-altion-regulator-unlocks-full-victron-energy-dvcc-integration-with-venus-os-v3-60/)). 24 V:n tuki **⚠ tarkista** |
 | **Victron Orion XS 1400 -DC-DC-laturit** | **⚠ ei tiedossa** | Ks. alla |
 
-**DC-DC-vaihtoehto (Victronin tapa):** iso laturi (esim. 175 A) **omalla sisäisellä säätimellään**
+**DC-DC-vaihtoehto (Victronin tapa):** **tarvitsee silti uuden ison laturin**; nykyinen 65 A:n laturi
+(noin 1,8 kW) ei riitä [omistaja 2026-10-31, laskelma]. Ero säädinvaihtoehtoihin on vain siinä, miten
+iso laturi kytketään. Iso laturi (esim. 175 A) **omalla sisäisellä säätimellään**
 lataa käynnistysakkuja, ja Victron Orion XS 1400 -laturit (24 V → 24 V, enintään noin 50 A eli
 1,4 kW kukin, [Victron-yhteisö](https://community.victronenergy.com/t/orion-xs-1400-for-12-to-48-volt/41939))
 siirtävät energiaa käyttöakustolle. Kolme rinnan antaa noin 4,2 kW (**⚠ arvio**).
