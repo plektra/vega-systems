@@ -127,6 +127,34 @@ käyttöakustolla). Hydrauliikan varapumppu P3 (noin 100 A) syötetään käynni
 2026-10-31). Kaikki yhtä aikaa noin 200–250 A, mikä on 628 Ah:n akustolle noin 0,3–0,4 C. Tavallisessa käytössä virrat
 ovat selvästi pienempiä.
 
+### MB56: saatavuus ja sopivuus (tarkistettu 2026-10-31)
+
+**Saatavuus [haettu 2026-10-31]:**
+
+| Myyjä | Hinta | Tilanne |
+|---|---|---|
+| Nkon (NL) | 119 €/kenno ilman ALV:tä (Grade A) | **Loppu varastosta** ([Nkon](https://www.nkon.nl/en/eve-mb56-prismatic-628ah-lifepo4-3-2v-grade-a-single-stud-2.html)) |
+| Fogstar (UK) | 99,99 £ | **Loppuunmyyty** ([Fogstar](https://www.fogstar.co.uk/collections/all/products/eve-mb56-3-2v-628ah-lifepo4-cell)) |
+| Kiinalaiset "EU stock" -myyjät | noin 95–370 USD/kenno, hinnat ja varastotiedot ristiriitaisia | Esim. [Basengreen](https://www.basengreen.com/product/eve-mb56-3-2v-628ah-high-capacity-lifepo4-single-battery-cell/), [Hakadi](https://hakadibattery.com/products/eu-stock-eve-mb56-3-2v-628ah-lifepo4-battery-lf560k-prismatic-lithium-ion-cells-for-solar-system-inverter-free-tax-and-shipping), [GoKWh](https://gokwh.com/eu-stock-mb56-eve-628ah-high-capacity-lifepo4-prismatic-battery-cells-4-pcs/), [DocanPower](https://www.docanpower.com/eve-mb56-628ah-prismatic-cell-eu-stock) |
+
+Notebookcheck huomauttaa, että Alibaban ja AliExpressin MB56-ilmoitukset eivät vastaa valmistajan
+tietoja, joten aitous on epävarma ([Notebookcheck](https://www.notebookcheck.net/2-kWh-for-around-175-EVE-s-new-MB56-cells-coming-soon.1117006.0.html)).
+
+**Hintaero [laskelma]:** 8 × MB56 Nkonilta noin 952 € ilman ALV:tä eli noin 1 195 € ALV 25,5 %:lla;
+16 × MB31 Akkulasta noin 2 080 € sis. ALV. Säästö noin 880 €, jos MB56:ta saisi luotettavalta myyjältä.
+
+**Sopivuus päätöksiin [laskelma]:** 8 × MB56 on **yksi** 8S-akku (16 kWh, yksi BMS). Se ei sovi
+päätöksiin, joiden mukaan akusto tehdään **kahtena erillisenä 8S-akkuna** ja kolmannen akun optio
+pidetään auki (2026-10-31):
+
+- yhdellä akulla on yksi BMS. Invertteri (noin 180 A) ja muut kuormat (50–90 A) ylittävät
+  JK-BMS:n 200 A:n rajan, eikä yhden BMS:n katkaisu jätä varalle toista akkua;
+- MB56:lla kahteen erilliseen akkuun tarvitaan 16 kennoa (32 kWh), ja kolmas akku nostaisi
+  akuston 48 kWh:iin. 24 kWh:n laajennusta ei voi tehdä.
+
+**Johtopäätös:** MB56 ei sovi valittuun rakenteeseen, eikä sitä nyt saa luotettavasti. **MB31
+(16 kpl, kaksi 8S-akkua)** on suositus.
+
 ### Suositus (ei päätös)
 
 - **Edullisin: 8 × EVE MB56.** Puolet halvempi kuin MB31-ratkaisu ja vähemmän liitoksia, mutta
@@ -243,7 +271,7 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 - [x] Mahtuuko akusto konehuoneeseen: kyllä, etenkin jos generaattorille ei tarvitse varata tilaa (paapuurin puoli) [omistaja 2026-10-29]
 - [ ] Akuston tarkka paikka konehuoneessa; riippuu osin generaattoripäätöksestä. Varataan tila myös kolmannelle 8S-akulle (noin 574 × 174 × 207 mm kennoja, noin 45 kg, ilman koteloa) [laskelma]
 - [ ] Saunan pituus ankkurissa: 2 h vai 4 h? Ratkaisee, hankitaanko kolmas akku
-- [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?
+- [ ] Kennot: MB31 (suositus 2026-10-31; MB56 loppu Nkonilta ja Fogstarilta eikä sovi kahden erillisen akun rakenteeseen) vai MB56?
 - [x] BMS: JK (MOSFET, CAN Cerbo GX:ään), yksi kummallekin 8S-akulle [omistaja 2026-10-31], ks. [inverter-bms.md](inverter-bms.md)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
 - [x] Kotelointi: oma kotelo [omistaja 2026-10-31]
