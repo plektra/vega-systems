@@ -83,7 +83,7 @@ Vaihtoehdot:
 
 1. **Akusto noin 24 kWh** (24 × MB31, 8S3P eli kolmas 8S-akku): kennoja noin 1 040 € lisää
    (8 × 129,95 €, Akkula 2026-10-28), lisäksi kolmas BMS (**⚠ ei tiedossa**), noin 45 kg ja
-   noin 0,04 m³ kennoja. Kattaa ylärajankin noin 77 %:n käytöllä.
+   noin 0,02 m³ kennoja (ilman koteloa). Kattaa ylärajankin noin 76 %:n käytöllä.
 2. **Pääkone tyhjäkäynnillä saunan loppuajan:** toinen laturi tuottaa tyhjäkäynnillä vain osan
    nimellisvirrastaan (välityssuhde **⚠ ei tiedossa**, ks. [ac-power-source.md 4](ac-power-source.md#4-suositus-ei-päätös)).
    Esimerkiksi 80 A × 28 V ≈ 2,2 kW kattaisi lähes koko kiukaan tehon (**⚠ arvio**).
