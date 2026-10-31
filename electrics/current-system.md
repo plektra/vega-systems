@@ -166,7 +166,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [x] Hakuvalon malli, polttimo ja ohjaustapa: ei tyyppikilpeä, halogeeni (säilyy), käsikäyttöinen [omistaja 2026-10-30]
 - [x] Hakuvalon polttimo: Philips 24 V 250 W, projektorihalogeeni [omistaja 2026-10-31]
-- [ ] Hakuvalon polttimon tarkka tyyppi (luultavasti EHJ / A1/223, G6.35), varapolttimot ja käynnistysvirran hoito (PDM-kortti vai rele), ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
+- [ ] Hakuvalon polttimon tarkka tyyppi (luultavasti EHJ / A1/223, G6.35), varapolttimot ja releen valinta (rele päätetty 2026-10-31), ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
 - [x] Jakelun rakenne: kolme tasoa (PJ, KS, KH) ja tärkeiden kuormien kisko, tavalliset piirit ESP32-PDM:llä, miinuksella yksi yhteyspiste runkoon (päätös 2026-10-31, [design/dc-distribution.md](design/dc-distribution.md))
 - [x] Sulaketyyppi: talojohdonsuojat, joiden datalehdessä on DC-arvo (päätös 2026-10-31)
 - [ ] Keskusten paikat, ks. [design/dc-distribution.md](design/dc-distribution.md#8-avoimet-kysymykset)

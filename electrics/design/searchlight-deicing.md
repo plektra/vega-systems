@@ -1,6 +1,6 @@
 # Hakuvalon jäänpoisto
 
-> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-31 (polttimo on Philipsin 250 W:n projektorihalogeeni, ei 500 W; aiemmin 2026-10-30: valo on halogeeni,
+> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-31 (hakuvalo releellä; polttimo on Philipsin 250 W:n projektorihalogeeni, ei 500 W; aiemmin 2026-10-30: valo on halogeeni,
 > käsikäyttöinen ja komentosillan katolla; lasin halkaisija noin 350 mm; jäänpoisto siirretty
 > ESP32-PDM:stä tähän; etulasi on lasia; runko ja halogeeni säilyvät, LED hylätty). **Päätetty
 > 2026-10-30:** halogeeni ja vaihtoehto A. Hinnat ja tehot on haettu verkosta, eikä niitä ole tarkistettu
@@ -10,8 +10,7 @@
 LED-vaihto jätetään pois [omistaja 2026-10-30, [decisions.md](../../decisions.md)]. Jäänpoisto
 hoidetaan ilman lämmitintä (A): suojahuppu, lasi pois tuulesta ja valo päälle hetkeä ennen
 tarvetta. Kokeillaan ensimmäisellä pakkasajolla. Seuraavaksi: (1) varmista polttimon merkinnästä tyyppi (luultavasti
-EHJ / A1/223, kanta G6.35) ja hanki varapolttimoita, koska polttimon käyttöikä on vain noin 50 h; (2) halogeenin käynnistysvirta PDM-kortilla
-(ESP32-PDM:n päätös 19) tai releellä; (3) suojahuppu. Kaikki avoimet kysymykset: kohta 5.
+EHJ / A1/223, kanta G6.35) ja hanki varapolttimoita, koska polttimon käyttöikä on vain noin 50 h; (2) hakuvalo kytketään **releellä** (päätetty 2026-10-31), releen valinta; (3) suojahuppu. Kaikki avoimet kysymykset: kohta 5.
 
 Tavoite: hakuvalon pitää toimia myös syksyllä ja keväällä, kun etulasiin ja kääntömekanismiin
 tarttuu jäätä, räntää tai jäätyvää roisketta. LED-vaihdolla haettiin myös kirkkaampaa keilaa, mutta
@@ -240,7 +239,21 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
 - **Halogeenin käynnistysvirta:** kylmän 250 W:n halogeenipolttimon hetkellinen virta on noin
   10–15 × 10,4 A eli noin **100–160 A** kymmenien millisekuntien ajan [ESP32-PDM design-notes §4a,
   laskelma; päivitetty 2026-10-31, aiemmin 200–300 A 500 W:lle]. Tämä on lähellä `pdm-hc2`-kortin
-  80 A:n nopeaa laukaisua, joten ongelma pienenee mutta ei poistu. Puolijohdekytkin tai sulake on mitoitettava sen mukaan (ks. PDM:n päätös 19).
+  80 A:n nopeaa laukaisua, joten ongelma pienenee mutta ei poistu. **Päätetty 2026-10-31: hakuvalo
+  kytketään releellä** [omistaja 2026-10-31], joten PDM:n suurivirtakanavaa ei tarvita hakuvalolle.
+  Rele: 24 V:n kela, koskettimet vähintään noin 30 A DC ja mieluiten hehkulamppukuormalle
+  luokiteltu (käynnistysvirta), esim. 24 V:n autorele **⚠ tarkista** datalehdestä. Rele sijoitetaan
+  KS-alakeskukseen johdonsuojan KS-07 taakse, jolloin 10 A:n kaapeli kulkee lyhyintä reittiä
+  katolle ja kytkimelle tulee vain ohut ohjausjohdin. Johdonsuojan käyrä tarkistetaan
+  käynnistysvirtaa vasten (C- tai D-käyrä).
+- **Releen ohjaus:** suositus on **vipukytkin komentosillalla, joka ohjaa releen kelaa suoraan**
+  (kelavirta noin 0,1–0,2 A, **⚠ arvio**). Se toimii ilman ohjelmistoa ja ilman PDM:ää. Halutessa
+  kelan voi ohjata myös PDM:n pienellä kanavalla (6050), jolloin valon tila näkyy Signal K:ssa.
+- **Vipukytkin ilman relettä:** mahdollinen, mutta ei suositella. Kytkimen pitäisi olla
+  luokiteltu vähintään noin 20 A:lle 24 V DC:llä ja hehkulamppukuormalle, koska käynnistysvirta
+  (100–160 A) ja DC:n kipinöinti kuluttavat koskettimia. Lisäksi 10 A:n kaapeli pitäisi viedä
+  paneelin kautta, mikä pidentää sitä ja lisää jännitehäviötä; halogeenin valoteho laskee
+  jyrkästi jännitteen mukana.
 - **Kytkin komentosillalle** (KS-alakeskus, [dc-distribution.md 2.2](dc-distribution.md#22-komentosillan-alakeskus-ks))
   ja merkkivalo. Jos lämmitin lisätään, se ei saa jäädä huomaamatta päälle ankkurissa.
 - **Automaatio (vain jos lämmitin lisätään):** ESP32-PDM:n kanava voi kytkeä lämmittimen, kun
@@ -264,9 +277,8 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
 2. **Jalustan lämmitin (B) luultavasti tarpeeton,** koska vipu ja laakeri ovat komentosillan
    sisällä. Lisätään vain, jos koeajo osoittaa nivelen jäätyvän.
 3. **Halogeenin käynnistysvirta** (noin 100–160 A kymmenien millisekuntien ajan, 250 W) pitää hoitaa:
-   joko ESP32-PDM:n `pdm-hc2`-kortilla (päätös 19: järeämmät MOSFETit ja nopean laukaisun poisto
-   SOA-tarkistuksen jälkeen) tai kytkemällä valo releellä, jota PDM ohjaa. Tämä on nyt ESP32-PDM:n
-   ratkaistava, koska LED-vaihtoehto on hylätty.
+   **päätetty 2026-10-31: rele** [omistaja 2026-10-31], jota ohjaa vipukytkin komentosillalla
+   (suositus) tai PDM:n pieni kanava. ESP32-PDM:n päätöstä 19 ei tarvita Vegan hakuvaloa varten.
 4. **Varapolttimot:** kun tyyppi on varmistettu polttimon merkinnästä (luultavasti EHJ / A1/223,
    G6.35), hanki useampi varapolttimo. Projektoripolttimon käyttöikä on vain noin 50 h, ja
    Philips-merkkisiä näyttää olevan enää vähän saatavilla. Saman tyypin muita merkkejä myydään
@@ -298,7 +310,8 @@ tai C2 noin 50 W), ja kirkkaampi keila vaatii todennäköisesti uuden valon (koh
 - [ ] Kuinka nopeasti halogeeni sulattaa jäätyneen lasin (koeajo)
 - [x] Halogeeni vai LED: halogeeni säilyy, LED hylätty [omistaja 2026-10-30]
 - [x] Säilytetäänkö vanha valaisin: kyllä, sopii aluksen tyyliin [omistaja 2026-10-30]
-- [ ] Halogeenin käynnistysvirta (noin 100–160 A, 250 W): PDM-kortti (ESP32-PDM:n päätös 19) vai rele?
+- [x] Halogeenin käynnistysvirta (noin 100–160 A, 250 W): rele [omistaja 2026-10-31]
+- [ ] Releen malli (24 V, vähintään noin 30 A, hehkulamppukuorma) ja ohjaus: vipukytkin suoraan (suositus) vai PDM
 - [ ] Suojahupun teko tai hankinta
 - [ ] Kuinka paljon Vegalla ajetaan pakkasella tai jäätyvässä roiskeessa (kuukaudet)?
 - [ ] Kestääkö etulasi lämpöshokin paksusti jäätyneenä: lasi oletettavasti karkaistu ja kestänyt käytössä vuosikymmeniä [omistaja 2026-10-30]; varmistuu koeajossa, tarkista lasi halkeamien varalta

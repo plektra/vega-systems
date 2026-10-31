@@ -61,6 +61,38 @@ noin 85–93 %. Koko pysyy samana, mutta varmuusvara kasvoi. Pienempi akusto ei 
 kennovaihtoehdot antavat valmiiksi noin 16 kWh, ja 80 %:n käytöllä tarve on noin 15,4–16,6 kWh.
 Polttava WC on hylätty, joten akuston kasvatusta sitä varten ei tarvita.
 
+### Herkkyys: sauna 4 h ankkurissa [laskelma, 2026-10-31]
+
+Jos saunavuoro pidennetään kahdesta neljään tuntiin (kysymys [omistaja 2026-10-31], ei päätös).
+Oletukset kuten yllä: yläraja = kiuas täydellä teholla koko ajan; todennäköinen = 1 h täysi teho ja
+sen jälkeen noin 60 % (termostaatti), **⚠ arvio**.
+
+| | Kiuas 2 h | Kiuas 4 h |
+|---|---|---|
+| Kiukaan energia, yläraja / todennäköinen | 4,6 / 3,7 kWh | 9,2 / 6,4 kWh |
+| Saunapäivä akustosta yhteensä, yläraja (E) | ≈ 13,3 kWh | **≈ 18,4 kWh** |
+| Saunapäivä akustosta yhteensä, todennäköinen (F) | ≈ 12,3 kWh | **≈ 15,3 kWh** |
+| 16 kWh:n akuston käyttö, yläraja / todennäköinen | 83 % / 76 % | **yli 100 % / 95 %** |
+| Akusto 80 %:n käytöllä, yläraja / todennäköinen | 16,6 / 15,4 kWh | **23 / 19 kWh** (≈ 900 / 750 Ah) |
+| Lataus ajossa (noin 6,7 kW, molemmat laturit) | noin 2–2,5 h | noin 3 h |
+| Lataus maasähköllä (noin 2,9 kW) | noin 4,5–5 h | noin 6,5 h |
+
+**Johtopäätös:** 16 kWh ei riitä neljän tunnin saunaan. Todennäköisellä kulutuksella akusto
+tyhjenisi lähes loppuun (95 %), jolloin ohjauksen sähköiselle varapumpulle P3 ei jäisi varaa.
+Vaihtoehdot:
+
+1. **Akusto noin 24 kWh** (24 × MB31, 8S3P eli kolmas 8S-akku): kennoja noin 1 040 € lisää
+   (8 × 129,95 €, Akkula 2026-10-28), lisäksi kolmas BMS (**⚠ ei tiedossa**), noin 45 kg ja
+   noin 0,04 m³ kennoja. Kattaa ylärajankin noin 77 %:n käytöllä.
+2. **Pääkone tyhjäkäynnillä saunan loppuajan:** toinen laturi tuottaa tyhjäkäynnillä vain osan
+   nimellisvirrastaan (välityssuhde **⚠ ei tiedossa**, ks. [ac-power-source.md 4](ac-power-source.md#4-suositus-ei-päätös)).
+   Esimerkiksi 80 A × 28 V ≈ 2,2 kW kattaisi lähes koko kiukaan tehon (**⚠ arvio**).
+3. **Pitkä sauna vain maasähköllä tai ajopäivän päätteeksi,** ankkurissa 2 h. Ei lisäkustannusta.
+
+Invertteri ei muutu: teho on sama, vain aika pitenee. Kiukaan noin 106 A on 16 kWh:n akustolle
+noin 0,17 C, joten neljän tunnin käyttö ei rasita kennoja. Akuston laajennusvara (lisälähtö ja
+tila kolmannelle akulle) kannattaa varata jo nyt, jos pitkä sauna on todennäköinen.
+
 ## 2. Itse kootut kennot
 
 Molemmat alla olevat vaihtoehdot antavat **8S, 628 Ah, noin 16,1 kWh**. Kennot ovat
@@ -96,8 +128,9 @@ ovat selvästi pienempiä.
 - **Varmin saatavuus: 16 × EVE MB31** suomalaisesta kaupasta. Kytke mieluiten **kahdeksi
   erilliseksi 8S-akuksi, kummallakin oma BMS ja sulake.** Silloin yhden BMS:n katkaisu ei
   pimennä koko venettä, ja akustoa voi kasvattaa myöhemmin kolmannella akulla. Lisäkustannus on toinen BMS.
-- **Kasvatus myöhemmin:** jos iso kuorma tulee, 24 kWh:iin pääsee 12 × MB56 tai
-  24 × MB31 (8S3P). Varaa tilaa ja sulakkeille yksi lisälähtö jo nyt.
+- **Kasvatus myöhemmin:** jos iso kuorma tulee, 24 kWh:iin pääsee 24 × MB31 (8S3P, mieluiten
+  kolmena erillisenä 8S-akkuna). MB56:lla 8S-akkuja saa vain 8 kennon erinä (16 tai 32 kWh);
+  aiempi maininta "12 × MB56" oli virhe (korjattu 2026-10-31). Varaa tilaa ja sulakkeille yksi lisälähtö jo nyt.
 
 ## 3. Mitä itse koottu akusto vaatii kennojen lisäksi
 

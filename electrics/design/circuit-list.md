@@ -74,7 +74,7 @@ Kytkentä **⚠ tarkista** ESP32-PDM-projektin kanssa.
 | KS-04 | Kansivalaistus, perä | noin 4,2 A | 6 A | 1,5 mm² | 6010 | |
 | KS-05 | Työvalo eteen | 4,2 A (100 W) | 6 A | 1,5 mm² | 6010 | |
 | KS-06 | Työvalo taakse | 4,2 A (100 W) | 6 A | 1,5 mm² | 6010 | |
-| KS-07 | Hakuvalo | 10,4 A (250 W), käynnistysvirta noin 100–160 A | 16 A, C- tai D-käyrä **⚠ tarkista** käynnistysvirtaa vasten | 2,5 mm² (3 m) | hc tai rele | Käynnistysvirta: [searchlight-deicing.md](searchlight-deicing.md#3-ohjaus-ja-kytkentä) |
+| KS-07 | Hakuvalo | 10,4 A (250 W), käynnistysvirta noin 100–160 A | 16 A, C- tai D-käyrä **⚠ tarkista** käynnistysvirtaa vasten | 2,5 mm² (3 m) | ei: **rele** (päätetty 2026-10-31), kelaa ohjaa vipukytkin (suositus) tai 6050 | Käynnistysvirta: [searchlight-deicing.md](searchlight-deicing.md#3-ohjaus-ja-kytkentä) |
 | KS-08 | Navigointitietokone ja näyttö | **⚠ ei tiedossa** | laitteen mukaan | 3 % | 6010 | |
 | KS-09 | AIS, luokka B | noin 0,1 A (3 W, **⚠ arvio**) | 2 A | 1,5 mm² | 6050 | |
 | KS-10 | Tutka | **⚠ ei tiedossa** | valmistajan ohjeen mukaan | 3 %, mastoon | 6010 tai hc | Laite valitsematta |
@@ -133,10 +133,10 @@ tarkastaa sähköalan ammattilainen.**
 
 | | 6050 | 6010 | hc |
 |---|---|---|---|
-| KS | 2 | 10 (tutka ja hakuvalo mukaan lukematta) | 1 (hakuvalo, ellei rele) |
+| KS | 2 | 10 (tutka mukaan lukematta) | – (hakuvalo releellä) |
 | KH | 3 + 5 puhallinkonvektoria | 3 | – |
 | Pilssipumppujen pakotettu käyttö | – | – | 3 |
-| **Yhteensä** | **noin 10** | **noin 13** | **noin 4** |
+| **Yhteensä** | **noin 10** | **noin 13** | **noin 3** |
 
 Neljän kanavan kortteja tarvitaan noin 6 ja suurivirtakortteja (2 kanavaa) noin 2. Ilman
 puhallinkonvektoreita 4-kanavaisia kortteja riittää noin 5. Jokaiseen kanavaan tulee lisäksi
@@ -148,7 +148,8 @@ johdonsuoja (päätös 2026-10-31).
 - [ ] Keskusten paikat (KS:n paikka ei vielä tiedossa [omistaja 2026-10-31])
 - [ ] Jaetaanko sisävalaistus ja kansivalaistus kahteen piiriin, kuten ehdotettu?
 - [ ] VHF:n, tutkan, navigointitietokoneen, pyyhkijöiden, kirkasnäkölasin ja huurunpoiston virrat, kun laitteet valitaan
-- [ ] Hakuvalo: PDM:n suurivirtakanava vai rele, ja johdonsuojan käyrä käynnistysvirtaa vasten
+- [x] Hakuvalo: rele [omistaja 2026-10-31]
+- [ ] Hakuvalon releen ohjaus (vipukytkin suoraan vai PDM) ja johdonsuojan käyrä käynnistysvirtaa vasten
 - [ ] Pilssipumppujen käynnistysvirta: riittääkö 16 A C-käyrällä?
 - [ ] Mean Well DDR-240B-24:n tulon suojaus datalehdestä
 - [ ] Koneen ohjausyksikön syöttö (veneellä)
