@@ -1,6 +1,6 @@
 # Käyttöakusto: koko ja itse kootut LiFePO4-kennot
 
-> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-29 (laajennettavuus). Ei päätöstä. Kennojen hinnat ja saatavuus vaihtelevat;
+> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, polttava WC hylätty; tarve laskettu uudelleen). Ei päätöstä. Kennojen hinnat ja saatavuus vaihtelevat;
 > tarkista ennen tilausta.
 
 Vanhat käyttöakut on purettu, ja nyt kaikki 24 V:n kuormat ottavat virtansa käynnistysakuilta
@@ -16,19 +16,26 @@ yhdelle ankkurivuorokaudelle. Ajo ja maasähkö lataavat sen.
 
 Oletukset: AC-kuormat [loads.yaml](../loads.yaml) (`loads`) ja
 [ac-power-source.md, kohta 2.1](ac-power-source.md#21-koko-ankkurivuorokauden-energiatarve-laskelma),
-invertterin hyötysuhde 90 %. 24 V:n kuormat (`dc_loads`) noin 2,2 kWh/vrk lämmityskaudella,
+invertterin hyötysuhde 90 %. 24 V:n kuormat (`dc_loads`) noin 2,3 kWh/vrk lämmityskaudella,
 otetaan akustosta suoraan. Kaikki laitteiden tehot ja käyttöajat ovat osin arvioita (**⚠ arvio**).
+
+**Päivitetty 2026-10-31:** liesi on kaasuliesi, uuni yhdistetty mikro- ja sähköuuni, ja polttava WC
+on hylätty (tilalle septi-WC 24 V:n maseraattorilla) [omistaja 2026-10-31]. Nykyinen suunnitelma on
+rivit **E–G**. Rivit A–D ovat aiempia vertailuja (24 V:n kuormat niissä 2,2 kWh).
 
 | Tilanne | AC akustosta | 24 V | **Akustosta yhteensä** |
 |---|---|---|---|
+| **E. Nykyinen suunnitelma, kiuas ylärajalla (4,6 kWh)** | 11,0 kWh | 2,3 kWh | **≈ 13,3 kWh** |
+| **F. Kuten E, kiukaan todennäköinen kulutus (3,7 kWh)** | 10,0 kWh | 2,3 kWh | **≈ 12,3 kWh** |
+| **G. Päivä ilman saunaa** | 5,9 kWh | 2,3 kWh | **≈ 8,2 kWh** |
 | A. Kaikki harkitut laitteet sähköisinä, kiuas ylärajalla (4,6 kWh) | 12,7 kWh | 2,2 kWh | **≈ 14,9 kWh** |
 | B. Kuten A, kiukaan todennäköinen kulutus (3,7 kWh) | 11,7 kWh | 2,2 kWh | **≈ 13,9 kWh** |
 | C. Kuten B, mutta kaasu- tai dieselliesi (ruoanlaitto pois sähköstä) | 8,3 kWh | 2,2 kWh | **≈ 10,5 kWh** |
 | D. Päivä ilman saunaa, muuten kuten A | 7,5 kWh | 2,2 kWh | **≈ 9,7 kWh** |
 
-**Jätteet polttava WC** (harkinnassa) lisäisi arviolta 4–8 kWh vuorokaudessa eli noin 4,4–8,9 kWh
-akustosta (**⚠ arvio**, ks. [ac-power-source.md](ac-power-source.md#21-koko-ankkurivuorokauden-energiatarve-laskelma)).
-Sitä ei ole yllä.
+**Jätteet polttava WC** olisi lisännyt arviolta 4–8 kWh vuorokaudessa; se on hylätty [omistaja
+2026-10-31]. Septi-WC:n maseraattori ja hätätyhjennyspumppu ovat mukana 24 V:n kuormissa (noin
+0,01 kWh/vrk, **⚠ arvio**).
 
 ### Nimelliskapasiteetti
 
@@ -42,13 +49,17 @@ esim. saunapäivinä; LiFePO4 kestää sen hyvin, kun BMS katkaisee ajoissa).
 | B | 17,4 kWh | ≈ 680 Ah | 15,4 kWh | ≈ 600 Ah |
 | C | 13,1 kWh | ≈ 510 Ah | 11,7 kWh | ≈ 460 Ah |
 | D | 12,1 kWh | ≈ 470 Ah | 10,8 kWh | ≈ 420 Ah |
-| A + polttava WC (8 kWh) | ≈ 30 kWh | ≈ 1 160 Ah | ≈ 26 kWh | ≈ 1 030 Ah |
+| A + polttava WC (8 kWh; hylätty 2026-10-31) | ≈ 30 kWh | ≈ 1 160 Ah | ≈ 26 kWh | ≈ 1 030 Ah |
+| **E** | **16,6 kWh** | **≈ 650 Ah** | **14,8 kWh** | **≈ 580 Ah** |
+| **F** | **15,4 kWh** | **≈ 600 Ah** | **13,7 kWh** | **≈ 530 Ah** |
+| **G** | 10,3 kWh | ≈ 400 Ah | 9,1 kWh | ≈ 360 Ah |
 
-**Johtopäätös:** noin **16 kWh (≈ 630 Ah @ 25,6 V)** riittää täyteen saunapäivään kaikilla
-sähkölaitteilla, kun akustoa käytetään saunapäivänä noin 85–90 %:iin (tilanne B). Muina päivinä
-käyttö jää noin 60–75 %:iin. Kaasu- tai dieselliedellä 16 kWh riittää väljästi (C: noin 65 %).
-Polttava WC nostaisi tarpeen noin 20–30 kWh:iin, eli WC:n valinta kannattaa tehdä ennen kennojen
-tilausta.
+**Johtopäätös (päivitetty 2026-10-31):** noin **16 kWh (≈ 628 Ah @ 25,6 V)** riittää täyteen
+saunapäivään nykyisellä suunnitelmalla. Saunapäivänä akustoa käytetään noin 76–83 % (F–E), ja
+päivänä ilman saunaa noin 51 % (G) [laskelma]. Aiemmin sähköliedellä saunapäivän käyttö oli
+noin 85–93 %. Koko pysyy samana, mutta varmuusvara kasvoi. Pienempi akusto ei kannata, koska
+kennovaihtoehdot antavat valmiiksi noin 16 kWh, ja 80 %:n käytöllä tarve on noin 15,4–16,6 kWh.
+Polttava WC on hylätty, joten akuston kasvatusta sitä varten ei tarvita.
 
 ## 2. Itse kootut kennot
 
@@ -84,9 +95,8 @@ ovat selvästi pienempiä.
   Osta tunnetulta eurooppalaiselta myyjältä (esim. Nkon) ja pyydä kennojen mittausraportti.
 - **Varmin saatavuus: 16 × EVE MB31** suomalaisesta kaupasta. Kytke mieluiten **kahdeksi
   erilliseksi 8S-akuksi, kummallakin oma BMS ja sulake.** Silloin yhden BMS:n katkaisu ei
-  pimennä koko venettä, ja akustoa voi kasvattaa myöhemmin kolmannella akulla (esim. polttavaa
-  WC:tä varten). Lisäkustannus on toinen BMS.
-- **Kasvatus myöhemmin:** jos WC tai muu iso kuorma tulee, 24 kWh:iin pääsee 12 × MB56 tai
+  pimennä koko venettä, ja akustoa voi kasvattaa myöhemmin kolmannella akulla. Lisäkustannus on toinen BMS.
+- **Kasvatus myöhemmin:** jos iso kuorma tulee, 24 kWh:iin pääsee 12 × MB56 tai
   24 × MB31 (8S3P). Varaa tilaa ja sulakkeille yksi lisälähtö jo nyt.
 
 ## 3. Mitä itse koottu akusto vaatii kennojen lisäksi
@@ -148,8 +158,8 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 
 ## 5. Avoimet kysymykset
 
-- [ ] Tuleeko jätteet polttava WC? Se ratkaisee, riittääkö noin 16 kWh vai tarvitaanko noin 20–30 kWh
-- [ ] Liesi: sähkö vai kaasu tai diesel (vaikuttaa noin 3 kWh/vrk)
+- [x] Tuleeko jätteet polttava WC: ei, tilalle septi-WC maseraattorilla [omistaja 2026-10-31]; noin 16 kWh riittää
+- [x] Liesi: kaasuliesi; uuni: yhdistetty mikro- ja sähköuuni [omistaja 2026-10-31]
 - [x] Mahtuuko akusto konehuoneeseen: kyllä, etenkin jos generaattorille ei tarvitse varata tilaa (paapuurin puoli) [omistaja 2026-10-29]
 - [ ] Akuston tarkka paikka konehuoneessa; riippuu osin generaattoripäätöksestä
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?

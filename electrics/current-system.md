@@ -1,6 +1,6 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys) ja 2026-10-30 (pilssipumppujen malli ja virrat). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys) 2026-10-30 (pilssipumppujen malli ja virrat) ja 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
@@ -34,7 +34,7 @@ hyvä tarkastuttaa pätevällä sähköasentajalla.
 | Kohde | Arvo | Lähde |
 |---|---|---|
 | Generaattori | **Ei asennettu.** Tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
-| AC-sähkön tarve | Ajossa ja ankkurissa. Suurin ankkurikuorma 2,3 kW:n sähkökiuas (päätetty 2026-10-29), kerrallaan noin 2 h. Olemassa on vain jääkaappi; muut AC-laitteet ovat harkinnassa, myös jätteet polttava WC [omistaja 2026-10-29]: [loads.yaml](loads.yaml). Vaihtoehdot: [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
+| AC-sähkön tarve | Ajossa ja ankkurissa. Suurin ankkurikuorma 2,3 kW:n sähkökiuas (päätetty 2026-10-29), kerrallaan noin 2 h. Olemassa on vain jääkaappi. Päätetty 2026-10-31: kaasuliesi, yhdistetty mikro- ja sähköuuni sekä septi-WC 24 V:n maseraattorilla ja septin hätätyhjennyspumpulla; jätteet polttava WC hylätty [omistaja 2026-10-31]. Muut AC-laitteet ovat harkinnassa: [loads.yaml](loads.yaml). Vaihtoehdot: [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
 | Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Invertteri | **⚠ ei tiedossa**; ehdokas Mastervolt Mass Combi Ultra 24/3500-100, ks. [design/ac-power-source.md](design/ac-power-source.md) | [omistaja 2026-10-28] |
 | Erotusmuuntaja | Sijoitus luultavasti konehuoneeseen, paikka auki [omistaja 2026-10-28]. Airlink WM5002 MCB ([tyyppikilpi](img/isolation-transformer-wm5002-plate.jpg)), 230 V → 115–0–115 V (musta–vihreä–punainen), 5000 VA, IP23, 25 kg. **Olemassa, ei kytketty.** CTE-toisio muutetaan 230 V:ksi irrottamalla keskipisteen maasilta (Airlink); toision nollan maadoitus vielä varmistettava, ks. [design/ac-power-source.md](design/ac-power-source.md#26-olemassa-oleva-erotusmuuntaja-airlink-wm5002) | [omistaja 2026-10-28], [datasheets](../datasheets/README.md#sähköjärjestelmä) |
@@ -188,4 +188,6 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Siirtopumpun teho tyyppikilvestä ja LED-nauhojen teho; muiden tehot, kun laitteet valitaan
 - [x] Mihin savukaasujen poistopuhallin liittyy: hitsauskaasujen ym. tilapäiseen poistoon [omistaja 2026-10-29]
 - [ ] Mitkä 24 V:n kuluttajat tarkalleen tulevat PDM-lähdöille (periaate päätetty 2026-10-31: tavalliset piirit PDM:llä, tärkeät kuormat eivät)? Pilssipumput: vain käsin pakotettu käyttö PDM:llä, kohokytkinpiirit pysyvät suoraan akulla [omistaja 2026-10-30]
+- [ ] Maseraattori-WC:n ja septin hätätyhjennyspumpun mallit, virrat ja paikat (päätetty 2026-10-31, [loads.yaml](loads.yaml))
+- [ ] Kaasuhälytin ja kaasun magneettiventtiili (suositus): mallit, ja tuleeko kaasuhälytin tärkeiden kuormien kiskoon ([design/dc-distribution.md](design/dc-distribution.md#3-tärkeät-kuormat-ja-vikatilanteet))
 - [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä

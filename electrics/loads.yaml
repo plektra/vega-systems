@@ -11,13 +11,15 @@
 #   location:         sijainti veneessä (DC-kuormat)
 #   at_anchor:        käytetäänkö ankkurissa akustolta tai generaattorilta
 #   status:           existing (olemassa) | decided (päätetty, ei vielä asennettu) |
-#                     planned (suunniteltu, laitetta ei valittu) | candidate (harkinnassa)
+#                     planned (suunniteltu, laitetta ei valittu) | candidate (harkinnassa) |
+#                     rejected (hylätty, säilytetään historian vuoksi)
 #   source:           mistä luvut ovat peräisin
 
 schema_version: 1
 
 # Vain jääkaappi on olemassa [omistaja 2026-10-28]; sähkökiuas on päätetty [omistaja 2026-10-29].
-# Muut ovat harkinnassa eikä niiden asentamisesta ole päätetty.
+# 2026-10-31: liesi on kaasuliesi, uuni yhdistetty mikro- ja sähköuuni, polttava WC hylätty
+# (tilalle septi-WC maseraattorilla, ks. dc_loads) [omistaja 2026-10-31]. Muut ovat harkinnassa.
 
 loads:
   - id: SAUNA
@@ -48,23 +50,21 @@ loads:
     source: "[omistaja 2026-10-28]; teho ja kulutus arvio"
 
   - id: STOVE
-    name: Liesi
-    status: candidate
-    power_W: null
-    power_W_estimate: 3000         # kaikki levyt päällä; levyjen määrä ⚠ ei tiedossa
-    combined_with_oven_max_W: 3000 # liesi ja uuni yhdessä enintään noin 3 kW [omistaja 2026-10-28]
-    use_h_per_day: 0.5             # vastaa noin 1 h keskimäärin puolella teholla
+    name: Kaasuliesi
+    status: decided                # päätetty 2026-10-31; aiemmin sähköliesi harkinnassa (arvio 3000 W)
+    power_W: 0                     # ei sähkökuorma; kaasuhälytin ja magneettiventtiili ks. dc_loads
+    use_h_per_day: 0
     at_anchor: true
-    source: "[omistaja 2026-10-28]; teho arvio"
+    source: "[omistaja 2026-10-31]"
 
   - id: OVEN
-    name: Uuni
-    status: candidate
-    power_W: null
-    power_W_estimate: 2000
+    name: Yhdistetty mikro- ja sähköuuni
+    status: decided                # päätetty 2026-10-31; korvaa erillisen sähköuunin
+    power_W: null                  # ⚠ ei tiedossa; malli valitsematta
+    power_W_estimate: 2000         # arvio; yhdistelmätoiminnoissa tyypillisesti noin 2–3 kW, tarkista valitusta mallista
     use_h_per_day: 0.5
     at_anchor: true
-    source: "[omistaja 2026-10-28]; teho arvio"
+    source: "[omistaja 2026-10-31]; teho arvio"
 
   - id: KETTLE
     name: Vedenkeitin
@@ -141,7 +141,7 @@ loads:
 
   - id: INCINERATING_TOILET
     name: Jätteet polttava WC
-    status: candidate              # [omistaja 2026-10-29]
+    status: rejected               # hylätty 2026-10-31: tilalle septi-WC maseraattorilla (dc_loads: MACERATOR_TOILET) [omistaja 2026-10-31]
     power_W: null                  # ⚠ ei tiedossa; malli valitsematta
     energy_kWh_per_use: null       # ⚠ ei tiedossa; polttava WC kuluttaa tyypillisesti noin 1–2 kWh käyntikerralta (arvio, tarkista valitun mallin datalehdestä)
     use_h_per_day: null
@@ -491,6 +491,49 @@ dc_loads:
     power_W_estimate_each: 20      # arvio
     use_h_per_day: 8               # lämmityskaudella; arvio
     source: "[omistaja 2026-10-29]; teho ja käyttöaika arvio"
+
+  # Käymälä ja kaasu [omistaja 2026-10-31]. Mallit valitsematta; tehot ovat tyypillisten 24 V:n
+  # laitteiden arvioita. Kaasuhälytin ja magneettiventtiili ovat suositus, ei omistajan päätös.
+
+  - id: MACERATOR_TOILET
+    name: Septi-WC, sähköinen maseraattori
+    location: null                 # ⚠ ei tiedossa
+    status: decided                # päätetty 2026-10-31
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 300          # arvio; tarkista valitun mallin datalehdestä
+    use_h_per_day: 0.03            # arvio: noin 8 huuhtelua × 15 s
+    source: "[omistaja 2026-10-31]; teho ja käyttöaika arvio"
+
+  - id: SEPTIC_EMERGENCY_PUMP
+    name: Septitankin hätätyhjennyspumppu
+    location: null                 # ⚠ ei tiedossa
+    status: decided                # päätetty 2026-10-31
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 300          # arvio
+    use_h_per_day: 0               # vain hätätilanteessa
+    source: "[omistaja 2026-10-31]; teho arvio"
+
+  - id: GAS_ALARM
+    name: Kaasuhälytin
+    location: keittiö ja pilssi    # suositus
+    status: planned                # suositus 2026-10-31, ei päätetty
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 2            # arvio
+    use_h_per_day: 24
+    source: "[laskelma]; teho arvio"
+
+  - id: GAS_SOLENOID
+    name: Kaasun magneettiventtiili (sulkuventtiili)
+    location: kaasupullokotelo     # suositus
+    status: planned                # suositus 2026-10-31, ei päätetty
+    voltage_V: 24
+    power_W: null
+    power_W_estimate: 15           # arvio; auki ollessaan kela ottaa virtaa
+    use_h_per_day: 1               # ruoanlaiton ajan
+    source: "[laskelma]; teho arvio"
 
   - id: DEFROST_FAN
     name: Tuulilasin huurunpoistopuhallin

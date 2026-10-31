@@ -58,7 +58,7 @@ flowchart LR
   PJ --> P3["Ohjauksen varapumppu P3<br/>noin 100 A"]
   PJ --> KS["Komentosillan<br/>alakeskus KS"]
   PJ --> KHK["Konehuoneen<br/>alakeskus KH"]
-  PJ --> RES["Varalähdöt<br/>(aurinko, kolmas akku, WC)"]
+  PJ --> RES["Varalähdöt<br/>(aurinko, kolmas akku)"]
   KS --> MAST["Mastojakorasia"]
 ```
 
@@ -78,7 +78,7 @@ suuria lähtöjä ja alakeskusten syötöt. Arkikäytössä siihen ei kosketa.
 | PJ-04 Komentosillan alakeskus | mitoitus noin 60 A **⚠ arvio** | Kaikki valot yhtä aikaa noin 35 A [current-system 3.2] ja elektroniikka |
 | PJ-05 Konehuoneen alakeskus | mitoitus noin 40 A **⚠ arvio** | Pumput, tietokoneet, Mean Well -muuntimet, hydrauliikan ohjaus |
 | PJ-06 Tärkeiden kuormien kisko | ks. kohta 3 | Lisäksi syöttö käynnistysakuilta |
-| PJ-07–08 Varalähdöt | – | Aurinkosäädin, kolmas akku tai polttava WC ([house-battery.md](house-battery.md#suositus-ei-päätös)) |
+| PJ-07–08 Varalähdöt | – | Aurinkosäädin tai kolmas akku ([house-battery.md](house-battery.md#suositus-ei-päätös)); polttava WC hylätty 2026-10-31 |
 
 **Shuntti** (akkumonitori) tulee käyttöakuston miinukseen niin, että kaikki kuormat ja laturit
 kulkevat sen kautta. Muuten kulutusta ei voi mitata.
@@ -328,8 +328,8 @@ vikavirtasuoja 30 mA → johdonsuojat → piirit**
   tärkeää. Toision nollan ja suojamaan kytkentä on vielä varmistamatta
   ([ac-power-source.md 2.6](ac-power-source.md#26-olemassa-oleva-erotusmuuntaja-airlink-wm5002)).
   Siitä riippuu, toimiiko vikavirtasuoja.
-- **Ehdotetut piirit:** kiuas (2,3 kW, oma piiri), jääkaappi (oma piiri), keittiö (liesi ja uuni,
-  jos sähköiset), pistorasiat, ilmanvaihto ja lämmityksen poltin.
+- **Ehdotetut piirit:** kiuas (2,3 kW, oma piiri), jääkaappi (oma piiri), yhdistetty mikro- ja
+  sähköuuni (oma piiri; liesi on kaasulla, päätetty 2026-10-31), pistorasiat, ilmanvaihto ja lämmityksen poltin.
 - **Vain maasähköllä toimivat piirit:** vedenlämmittimen 3 kW:n vastus ei kannata akustolta
   ([ac-power-source.md 4](ac-power-source.md#4-suositus-ei-päätös)). Joko invertterilaturissa on
   erillinen maasähkölähtö (**⚠ tarkista** valitusta laitteesta), tai kontaktori kytkee piirin vain,

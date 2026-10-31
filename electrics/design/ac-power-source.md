@@ -1,6 +1,6 @@
 # AC-sähkön lähde: hydrauligeneraattori, dieselgeneraattori vai akusto ja invertteri
 
-> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-29 (polttava WC ja 24 V:n kuormat lisätty kuormalistaan). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
+> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC polttavan WC:n tilalle; akustotarve laskettu uudelleen). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
 > tarjouksista ennen päätöstä.
 
 ## 1. Tarve
@@ -10,14 +10,14 @@
 | Milloin AC-sähköä tarvitaan | Ajossa ja ankkurissa | [omistaja 2026-10-28] |
 | Generaattori | Ei asennettu; tila varattu konehuoneen paapuurin puolelle | [omistaja 2026-10-28], [blogi 2017-04-19] |
 | Sähkökiuas (**päätetty** 2026-10-29; ankkurissa suurin energiankuluttaja) | 2,3 kW, päällä kerrallaan noin 2 h. Puukiuas ei mahdu saunaan | [omistaja 2026-10-28], [omistaja 2026-10-29] |
-| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, liesi, uuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW, jätteet polttava WC [omistaja 2026-10-29]. **Vain jääkaappi on olemassa, ja sähkökiuas on päätetty (2026-10-29);** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
+| Muut AC-kuormat | Jääkaappi (noin 130 l ja pakastelokero), laturit (esim. kannettava tietokone), kahvinkeitin, vedenkeitin, yhdistetty mikro- ja sähköuuni, liesituuletin, poistoilmapuhallin, ilmanvaihtokone, televisio, öljylämmityksen poltin (alle 1 A), vedenlämmittimen sähkövastus 3 kW. **Vain jääkaappi on olemassa. Päätetty: sähkökiuas (2026-10-29), kaasuliesi ja yhdistetty mikro- ja sähköuuni (2026-10-31); jätteet polttava WC hylätty, tilalle septi-WC maseraattorilla (24 V) [omistaja 2026-10-31];** muut ovat harkinnassa, eikä kaikkia välttämättä asenneta. Tehot: [loads.yaml](../loads.yaml) | [omistaja 2026-10-28] |
 | Maasähkö | Kotilaiturissa 15 A:n sulake (≈ 3,45 kVA, jos 1-vaiheinen 230 V; vaiheiden määrä **⚠ tarkista**) | [omistaja 2026-10-28] |
 | Erotusmuuntaja | Airlink WM5002, 230/230 V, 5000 VA; olemassa, ei kytketty, ks. kohta 2.6 | [omistaja 2026-10-28] |
 | Kuinka monta vuorokautta ankkurissa ilman ajoa | **Enintään alle vuorokausi** | [omistaja 2026-10-29] |
 | DC-jännite | 24 V | [vessel/README.md](../../vessel/README.md#sähköjärjestelmän-perustiedot) |
 
-Kokonaistarve on alle 10 kVA. Kiuas on suurin energiankuluttaja ankkurissa, mutta sähköruoanlaitto,
-ilmanvaihtokone ja lämmityksen poltin kuluttavat yhdessä lähes yhtä paljon (ks. kohta 2.1).
+Kokonaistarve on alle 10 kVA. Kiuas on suurin energiankuluttaja ankkurissa; ilmanvaihtokone,
+lämmityksen poltin ja sähköinen ruoanlaitto kuluttavat yhdessä vähän sitä vähemmän (ks. kohta 2.1).
 
 Koska vain jääkaappi on olemassa, laitevalinnat ovat vielä auki. **Jokainen sähkölaite kasvattaa
 akustoa, ja juuri nyt on halvin hetki valita laitteet energiankulutuksen perusteella.**
@@ -42,12 +42,13 @@ kulutuksen näkee invertterilaturin tai akkumonitorin tiedoista ensimmäisillä 
 | Energia akustosta | 4,6 / 0,9 ≈ 5,1 kWh |
 | Akkuvirta kiukaan ollessa päällä | 2300 / 0,9 / 24 ≈ 106 A |
 | Kiukaan vaatima kapasiteetti | 5,1 kWh / 24 V ≈ 213 Ah käytettävissä → ≈ 265 Ah nimelliskapasiteettia |
-| Akusto | Muut kuormat ja 24 V:n kuormat mukaan lukien noin 16 kWh (≈ 630 Ah @ 25,6 V), ks. [house-battery.md](house-battery.md) |
+| Akusto | Muut kuormat ja 24 V:n kuormat mukaan lukien noin 16 kWh (≈ 630 Ah @ 25,6 V); saunapäivänä käytössä noin 76–83 % (päivitetty 2026-10-31), ks. [house-battery.md](house-battery.md) |
 | Invertteri | Noin 3,5 kW, ks. kohta 2.2 |
 
 ### 2.1 Koko ankkurivuorokauden energiatarve [laskelma]
 
-Laskelma on **yläraja**: siinä ovat mukana kaikki harkinnassa olevat laitteet. Pelkkä olemassa
+Laskelma on **yläraja**: siinä ovat mukana kaikki harkinnassa olevat laitteet. **Päivitetty 2026-10-31:**
+liesi on kaasuliesi, ja uunin tilalle tulee yhdistetty mikro- ja sähköuuni [omistaja 2026-10-31]. Pelkkä olemassa
 oleva jääkaappi vie noin 0,8 kWh/vrk (≈ 0,9 kWh akustosta, arvio).
 
 Vain kiukaan, vedenlämmittimen (3 kW) ja polttimen virran (alle 1 A) arvot ovat omistajalta. Muiden
@@ -59,27 +60,23 @@ kohta 4.
 | Kuormaryhmä | kWh/vrk (arvio) |
 |---|---|
 | Sähkökiuas, 2 h | 4,6 (yläraja; todennäköisesti noin 3,7) |
-| Ruoanlaitto: liesi, uuni, vedenkeitin, kahvinkeitin, liesituuletin | 3,1 |
+| Ruoanlaitto: yhdistetty mikro- ja sähköuuni, vedenkeitin, kahvinkeitin, liesituuletin (liesi kaasulla) | 1,6 (aiemmin 3,1 sähköliedellä) |
 | Ilmanvaihtokone, 24 h | 1,2 |
 | Öljylämmityksen poltin, 6 h lämmityskaudella | 1,2 |
 | Jääkaappi | 0,8 |
 | Televisio ja laturit | 0,5 |
-| **Yhteensä AC** | **≈ 11,4** |
-| **Akustosta** (invertterin hyötysuhde 90 %) | **≈ 12,7 kWh** |
-| Ilman kiuasta, akustosta | ≈ 7,5 kWh |
+| **Yhteensä AC** | **≈ 9,9** (aiemmin 11,4) |
+| **Akustosta** (invertterin hyötysuhde 90 %) | **≈ 11,0 kWh** (aiemmin 12,7) |
+| Ilman kiuasta, akustosta | ≈ 5,9 kWh (aiemmin 7,5) |
 
-**Summasta puuttuu kaksi asiaa** [omistaja 2026-10-29]:
+**Summasta puuttuvat 24 V:n kuormat.** Jätteet polttava WC on hylätty [omistaja 2026-10-31]; sen
+tilalle tulee septi-WC 24 V:n maseraattorilla ja septitankin hätätyhjennyspumppu, joiden kulutus on
+hyvin pieni (noin 0,01 kWh/vrk, **⚠ arvio**). Polttava WC olisi vienyt arviolta 4–8 kWh/vrk.
 
-- **Jätteet polttava WC** (harkinnassa). Mallia ei ole valittu, joten kulutus **⚠ ei tiedossa**.
-  Polttavat WC:t kuluttavat tyypillisesti noin 1–2 kWh käyntikerralta (**⚠ arvio**, tarkista
-  valitun mallin datalehdestä). Esimerkiksi neljä käyntiä vuorokaudessa olisi noin 4–8 kWh eli
-  kiukaan luokkaa tai enemmän, ja akustoa tarvittaisiin noin 200–400 Ah lisää (litium, 80 %
-  käytettävissä, invertterin hyötysuhde 90 %) [laskelma]. Polttava WC mitoittaisi siis akuston
-  yhtä paljon kuin sauna. Energiaa säästävä vaihtoehto on vesi-, tyhjiö- tai kompostikäymälä
-  septitankilla; niiden sähkönkulutus on pieni.
 - **24 V:n kuormat** (konehuoneen ja komentosillan laitteet, ks. [loads.yaml](../loads.yaml),
   `dc_loads`). Ne otetaan akustosta suoraan ilman invertteriä. Arvioiduilla tehoilla ne kuluttavat
-  lämmityskaudella ankkurissa yhteensä **noin 2,2 kWh/vrk** (**⚠ arvio**). Suurin osa kuluu jatkuvasti
+  lämmityskaudella ankkurissa yhteensä **noin 2,3 kWh/vrk** (**⚠ arvio**; 2026-10-31 lisätty
+  maseraattori-WC, kaasuhälytin ja kaasun magneettiventtiili, yhteensä noin 0,1 kWh). Suurin osa kuluu jatkuvasti
   käyviin laitteisiin: kiertovesipumppu (noin 0,7 kWh, jos se käy koko vuorokauden), Intel NUC
   (Frigate, noin 0,4 kWh), Raspberry Pi 5 (Signal K, noin 0,2 kWh) kolme valvontakameraa (noin 0,4 kWh) ja AIS (noin 0,1 kWh),
   sekä valaistukseen (ankkurivalo ja sisävalot, noin 0,3 kWh). VHF:n kuuntelu ankkurissa ja
@@ -88,8 +85,8 @@ kohta 4.
 
 | Akustotarve yhdelle ankkurivuorokaudelle, 24 V | Litium (LiFePO4), 80 % käytettävissä | Lyijy (AGM tai geeli), 50 % käytettävissä |
 |---|---|---|
-| Saunan kanssa | ≈ 660 Ah (≈ 16 kWh nimellistä) | ≈ 1060 Ah (≈ 25 kWh nimellistä) |
-| Ilman saunaa | ≈ 390 Ah (≈ 9,4 kWh nimellistä) | ≈ 630 Ah (≈ 15 kWh nimellistä) |
+| Saunan kanssa | ≈ 540 Ah (≈ 13,8 kWh nimellistä; aiemmin 660 Ah) | ≈ 860 Ah (≈ 22 kWh nimellistä) |
+| Ilman saunaa | ≈ 290 Ah (≈ 7,4 kWh nimellistä; aiemmin 390 Ah) | ≈ 460 Ah (≈ 11,8 kWh nimellistä) |
 
 Suositukset ja Ah-luvut muualla tässä dokumentissa koskevat **litiumakustoa**. Lyijyakusto ei sovi
 tähän käyttöön (**⚠ arviot**, tarkistetaan valittujen akkujen datalehdistä):
@@ -104,14 +101,17 @@ tähän käyttöön (**⚠ arviot**, tarkistetaan valittujen akkujen datalehdist
 
 ### 2.2 Huipputeho ja invertteri [laskelma]
 
-**Liesi ja uuni yhdessä ottavat enintään noin 3 kW** [omistaja 2026-10-28]. Niiden kanssa
-jääkaappi, ilmanvaihto, liesituuletin ja laturit tekevät yhteensä noin 3,3 kW (**⚠ arvio**), mikä
-mahtuu 3,5 kW:n invertteriin. Yli 3,5 kW mennään vain, jos samaan aikaan on päällä toinen suuri
-laite: vedenkeitin (arvio 2 kW), kahvinkeitin (arvio 1 kW), kiuas (2,3 kW) tai vedenlämmittimen
-vastus (3 kW). Siksi joko **käyttötapa** (ei vedenkeitintä lieden ollessa täysillä, ei saunaa ja
-ruoanlaittoa yhtä aikaa) tai **kuormanhallinta**, joka pudottaa kiukaan ja vedenlämmittimen pois,
-kun keittiökuorma on suuri. Aiempi arvio 5 kW:n invertteristä perustui lieden ja vedenkeittimen
-yhtäaikaiseen käyttöön.
+**Päivitetty 2026-10-31:** liesi on kaasuliesi, joten suurin keittiön sähkökuorma on yhdistetty
+mikro- ja sähköuuni (arviolta noin 2–3 kW yhdistelmätoiminnoissa, **⚠ tarkista** valitusta mallista)
+[omistaja 2026-10-31]. Aiempi oletus "liesi ja uuni yhdessä enintään noin 3 kW" [omistaja 2026-10-28]
+koski sähköliettä. Uuni, jääkaappi, ilmanvaihto, liesituuletin ja laturit tekevät yhteensä noin
+2,3–3,3 kW (**⚠ arvio**), mikä mahtuu 3,5 kW:n invertteriin. Yli 3,5 kW mennään, jos samaan aikaan
+on päällä toinen suuri laite: vedenkeitin (arvio 2 kW), kahvinkeitin (arvio 1 kW), kiuas (2,3 kW) tai
+vedenlämmittimen vastus (3 kW). Siksi joko **käyttötapa** (ei saunaa ja uunia yhtä aikaa) tai
+**kuormanhallinta**, joka pudottaa kiukaan ja vedenlämmittimen pois, kun keittiökuorma on suuri.
+Kaasuliesi pienentää huippua, mutta ei poista tarvetta noin 3,5 kW:n invertterille, koska kiuas ja
+uuni ovat edelleen sähköllä. Pienempi (noin 3 kVA) invertteri riittäisi, jos kiuasta ja uunia tai
+vedenkeitintä ei koskaan käytetä yhtä aikaa.
 Kuormanhallinnan voisi tehdä omilla ESP32-PDM-moduuleilla ([current-system.md](../current-system.md#4-valvonta-verkot-ja-tehonjako)).
 3,5 kW:n invertteri ottaa 24 V:n akustosta täydellä teholla noin 160 A, mikä vaatii järeät kaapelit
 ja sulakkeet.
@@ -124,15 +124,15 @@ valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
 
 | Ominaisuus | Arvo | Mitä se tarkoittaa Vegalle [laskelma] |
 |---|---|---|
-| Invertteri | 3500 W jatkuva @ 40 °C, huippu 7000 W | Kiuas (2,3 kW), jääkaappi, ilmanvaihto, televisio ja laturit yhtä aikaa onnistuvat. Myös liesi ja uuni yhdessä (enintään noin 3 kW [omistaja 2026-10-28]) pienkuormineen mahtuvat. Ei riitä, jos lieden ja uunin lisäksi päällä on vedenkeitin, kahvinkeitin tai kiuas. |
+| Invertteri | 3500 W jatkuva @ 40 °C, huippu 7000 W | Kiuas (2,3 kW), jääkaappi, ilmanvaihto, televisio ja laturit yhtä aikaa onnistuvat. Myös yhdistetty mikro- ja sähköuuni (arviolta 2–3 kW) pienkuormineen mahtuu. Ei riitä, jos uunin lisäksi päällä on vedenkeitin tai kiuas. |
 | Akkuvirta | – | 3500 W:lla noin 160 A (hyötysuhde 92 %, **⚠ arvio**), huipussa yli 300 A. Akuston BMS:n, kaapeleiden ja sulakkeen pitää kestää se. |
-| Laturi | 100 A @ 28,5 V (≈ 2,9 kW) | Maasähköstä tai generaattorista täysi ankkurivuorokausi (≈ 12,7 kWh) latautuu noin 4,5 tunnissa. Täysi lataus ottaa verkosta arviolta noin 3,1 kW eli noin 13,5 A (hyötysuhde noin 92 %, **⚠ arvio**), joten 15 A:n maasähköllä sille ja muille kuormille ei jää yhtä aikaa tilaa; Power Assist ja tulovirran raja hoitavat tämän. |
+| Laturi | 100 A @ 28,5 V (≈ 2,9 kW) | Maasähköstä tai generaattorista täysi ankkurivuorokausi (≈ 13,3 kWh 24 V:n kuormineen, päivitetty 2026-10-31) latautuu noin 4,5–5 tunnissa. Täysi lataus ottaa verkosta arviolta noin 3,1 kW eli noin 13,5 A (hyötysuhde noin 92 %, **⚠ arvio**), joten 15 A:n maasähköllä sille ja muille kuormille ei jää yhtä aikaa tilaa; Power Assist ja tulovirran raja hoitavat tämän. |
 | Power Assist | on | Rajoittaa maasähkön tai generaattorin kuormaa ja täydentää akuilta. Mahdollistaa pienemmän generaattorin. **Kotilaiturin 15 A:lla tulovirran raja asetetaan noin 14 A:iin** [laskelma]; laturi hidastaa ensin, ja suuret kuormat (esim. kiuas ja vedenlämmitin yhtä aikaa, noin 23 A) saavat loput akustosta invertterin rajoissa. |
-| Rinnankytkentä | enintään 10 kpl | Jos sähköliesi valitaan, toisen yksikön voi lisätä myöhemmin (yhteensä 7000 W). |
+| Rinnankytkentä | enintään 10 kpl | Toisen yksikön voi lisätä myöhemmin (yhteensä 7000 W); kaasuliedellä (päätetty 2026-10-31) tarve on epätodennäköinen. |
 | Hinta | 3 126 € ([SVB24](https://www.svb24.com/en/mastervolt-mass-combi-ultra-charger-inverter-24-v-3500-w-100-a.html)); 3 549 £ sis. ALV ([Chas the Boat, UK](https://shop.chastheboat.co.uk/products/mass-combi-ultra-inverter-charger-24-3500-100-38023500)) | Haettu 2026-10-28 |
 
-**Arvio:** laite sopii Vegalle myös sähköruoanlaitolla, kun kiuasta tai vedenkeitintä ei käytetä
-yhtä aikaa täysillä olevan lieden ja uunin kanssa. Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
+**Arvio:** laite sopii Vegalle, kun kiuasta tai vedenkeitintä ei käytetä yhtä aikaa uunin kanssa
+(liesi on kaasulla, päätetty 2026-10-31). Se on samaa sarjaa kuin Mastervolt Alpha -laturit, mutta yhteensopivuus
 (MasterBus) **⚠ tarkista**.
 
 #### Muut invertterilaturivaihtoehdot (haettu 2026-10-29)
@@ -153,8 +153,8 @@ aurinkopaneelituloa ja apulaturia ([Mastervolt](https://www.mastervolt.com/produ
 teho ja laturi ovat samat, ja samassa kaupassa (SVB24) se on noin 320 € halvempi. Ultran 10 A:n
 apulaturilla voisi pitää käynnistysakut ladattuina maasähköllä; Pron kanssa siihen tarvitaan muu
 ratkaisu. Generaattorin hylkääminen ei vaikuta Ultran ja Pron väliseen valintaan. **Halvin sopiva
-Mastervolt on CombiMaster 24/3000-60** (≈ 1 344–1 600 €), jos 2600 W riittää eli liettä ja uunia ei
-käytetä ankkurissa täysillä yhtä aikaa; sen säädettävä tulovirta (≤ 13 A) sopii kotilaiturin
+Mastervolt on CombiMaster 24/3000-60** (≈ 1 344–1 600 €), jos 2600 W riittää eli kiuasta ja uunia ei
+käytetä ankkurissa yhtä aikaa (liesi on kaasulla 2026-10-31); sen säädettävä tulovirta (≤ 13 A) sopii kotilaiturin
 15 A:n maasähköön.
 
 **Muut valmistajat (haettu 2026-10-29; euromääräisiä hintoja ei löytynyt):**
@@ -182,10 +182,9 @@ muualla Quattro-II 2 289 € ([Solarkontor](https://solarkontor.de/en/products/v
 **Vegalle riittää MultiPlus**, koska generaattoria ei ole; jos sellainen myöhemmin tulee, maasähkön
 ja generaattorin väliin riittää erillinen vaihtokytkin.
 
-**Vegan kuormia vasten** [laskelma]: kiuas (2,3 kW) toimii kaikilla. Liesi ja uuni yhdessä
-pienkuormineen (≈ 3,3 kW) ankkurissa onnistuvat vain Mass Combi Ultralla ja MultiPlus-II
-5000:lla; 3 kW:n luokan laitteilla ne vaativat kuormanhallintaa tai sen, ettei liettä ja uunia
-käytetä täysillä yhtä aikaa. Laiturissa PowerAssist / Power Assist täydentää 15 A:n maasähköä
+**Vegan kuormia vasten** [laskelma]: kiuas (2,3 kW) toimii kaikilla. Liesi on kaasulla (päätetty 2026-10-31), joten keittiön
+suurin sähkökuorma on yhdistetty mikro- ja sähköuuni (arviolta 2–3 kW); kiuas ja uuni yhtä aikaa
+(≈ 4,5–5 kW) vaativat kaikilla kuormanhallintaa. Laiturissa PowerAssist / Power Assist täydentää 15 A:n maasähköä
 kaikissa.
 
 **Victron-vaihtoehdon erot:**
@@ -473,10 +472,10 @@ enintään vuorokausi [omistaja 2026-10-29].
 | WhisperPower Piccolo 4 / 3,5 kVA | noin 3–3,5 kW, 230 V | **⚠ ei tiedossa** (tarjouspyyntö) | [WhisperPower 3,5 kVA](https://www.whisperpower.com/diesel-generators/3-5-kva-generator) |
 
 **Toimiiko 3 kW** [laskelma, **⚠ arviot**]:
-- **Kiuas (2,3 kW) toimii suoraan generaattorilta.** Liesi ja kiuas yhtä aikaa eivät, mutta
+- **Kiuas (2,3 kW) toimii suoraan generaattorilta.** Uuni ja kiuas yhtä aikaa eivät, mutta
   invertterilaturin PowerAssist täydentää akuilta.
 - **Lataus:** invertterilaturin tulovirta rajoitetaan noin 11–12 A:iin, jolloin laturiin menee
-  noin 2,5 kW ja täysi ankkurivuorokausi (≈ 11,7 kWh) latautuu noin 4,5–5 tunnissa.
+  noin 2,5 kW ja täysi ankkurivuorokausi (≈ 12,3 kWh 24 V:n kuormineen, päivitetty 2026-10-31) latautuu noin 5 tunnissa.
 - **Polttoaine:** sama diesel kuin pääkoneella, eli bensiiniä ei tarvitse säilyttää veneessä.
 - **Asennus:** oma polttoaineen otto, märkäpakoputki, merivesiotto, äänieristys ja nollan ja
   suojamaan silta generaattorin syötölle (ei erotusmuuntajan kautta).
@@ -500,14 +499,16 @@ dieselgeneraattoria tarvita.
 1. **Vaihe 1: vaihtoehto A.** Toinen 24 V:n laturi (150–175 A, ks. kohta 2.5) pääkoneeseen, noin 3,5 kW:n invertteri
    (ks. kohta 2.2), ja litiumakusto, joka **kestää yhden ankkurivuorokauden saunoineen**
    [laskelma, 24 V, 80 % käytettävissä, invertteri 90 %]:
-   - kaikki harkitut laitteet sähköisinä ja 24 V:n kuormat (noin 2,2 kWh/vrk) mukaan lukien:
-     **noin 16 kWh eli noin 630 Ah @ 25,6 V**, kun saunapäivänä käytetään noin 85–90 %
-     (päivitetty 2026-10-29; aiempi 610 Ah ei sisältänyt 24 V:n kuormia);
-   - kaasu- tai diesellieden kanssa: noin 13 kWh (≈ 510 Ah @ 25,6 V, 80 % käytössä).
+   - päätetyt laitteet (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC; 2026-10-31), muut
+     harkitut laitteet sähköisinä ja 24 V:n kuormat (noin 2,3 kWh/vrk) mukaan lukien: akustosta
+     noin 12,3–13,3 kWh saunapäivänä. **Noin 16 kWh eli noin 630 Ah @ 25,6 V** riittää, ja
+     saunapäivänä käytetään noin 76–83 % (aiemmin 85–93 % sähköliedellä).
+     80 %:n käytöllä tarve olisi noin 15,4–16,6 kWh, eli 16 kWh on sopiva koko eikä sitä kannata
+     pienentää (päivitetty 2026-10-31).
 
    Mitoitus ja itse kootut kennovaihtoehdot: [house-battery.md](house-battery.md).
 
-   Ajo lataa täyden vuorokauden kulutuksen noin 2,5 tunnissa. Iso akusto parantaa samalla ohjauksen
+   Ajo lataa täyden vuorokauden kulutuksen noin 2–2,5 tunnissa. Iso akusto parantaa samalla ohjauksen
    2,5 kW:n sähköisen varapumpun käyttöaikaa ([current-system.md](../current-system.md#3-suuret-dc-kuormat)).
 2. **Dieselgeneraattoria ei suositella,** koska ankkurissa ollaan enintään alle vuorokausi ajamatta
    [omistaja 2026-10-29]. **Päätös on omistajien mukaan vielä auki** [omistaja 2026-10-29], joten
@@ -535,9 +536,9 @@ dieselgeneraattoria tarvita.
    akustosta. Käytä sitä maasähköllä tai generaattorilla. Jos lämmittimessä on koneen
    jäähdytysvesikierukka, vesi lämpenee ajossa ilmaiseksi.
 
-**Halvempia vaihtoehtoja**, jos akusto kasvaa liian kalliiksi: sähköruoanlaitto (noin 3 kWh/vrk) ja
-kiuas (4,6 kWh/vrk) ovat suurimmat kuormat. Sähkökiuas on päätetty (puukiuas ei mahdu), joten
-säästöä voi hakea enää ruoanlaitosta: kaasu- tai dieselliesi pienentäisi akustoa noin 3 kWh/vrk.
+**Halvempia vaihtoehtoja:** kaasuliesi on päätetty (2026-10-31), ja se pienensi kulutusta noin
+1,5 kWh/vrk. Suurin kuorma on nyt kiuas (4,6 kWh/vrk), joka on päätetty (puukiuas ei mahdu). Lisäsäästöä
+saa enää ilmanvaihtokoneen ja polttimen valinnasta (yhteensä noin 2,4 kWh/vrk).
 
 ### 4.1 Halvin toimiva kokoonpano [laskelma, hinnat haettu 2026-10-28]
 
@@ -573,15 +574,15 @@ asennus. Ehdot halvimmalle:
 - **Invertterilaturi on suurin yksittäinen kustannus.** Victron MultiPlus-II 24/5000/120-50
   (≈ 1 700–2 400 €) antaa enemmän tehoa kuin Mass Combi Ultra noin puoleen hintaan, mutta
   tarvitsee GX-laitteen (hinta **⚠ ei tiedossa**); MultiPlus-II 24/3000 (≈ 1 259 €) on
-  halvin, jos liettä ja uunia ei käytetä täysillä yhtä aikaa ankkurissa. Vertailu kohdassa 2.2.
+  halvin, jos kiuasta ja uunia ei käytetä yhtä aikaa ankkurissa (liesi on kaasulla 2026-10-31). Vertailu kohdassa 2.2.
   Victronin kanssa MasterBus-tapahtuma "Stop charge" ei toimi, ja laturin BMS-ohjaus tehdään Reg
   on -johtimen kautta tai Wakespeed-säätimellä.
 - **~~Vaihe 0 ilman toista laturia~~ ei enää riitä,** koska sähkökiuas on päätetty (2026-10-29):
   yksi saunavuoro vie akustosta noin 5,1 kWh, jonka nykyinen 65 A:n laturi palauttaisi vasta
   noin 3,7 tunnin ajossa. Toinen laturi tarvitaan, jos ankkurissa saunotaan ilman maasähköä.
   Jos saunotaan aluksi vain laiturissa maasähköllä, toisen laturin voi lisätä myöhemmin.
-- **Suurin jäljellä oleva säästö tulee ruoanlaitosta:** kaasu- tai dieselliesi pienentää
-  akuston, laturin ja invertterin tarvetta enemmän kuin mikään osavalinta.
+- **Kaasuliesi on päätetty** (2026-10-31), joten ruoanlaiton suurin säästö on jo käytetty.
+  16 kWh:n akusto jää nyt saunapäivänäkin noin 80 %:n käyttöön.
 
 ### 4.2 Koko järjestelmän hinta: ilman generaattoria ja generaattorin kanssa [laskelma]
 
@@ -610,10 +611,12 @@ tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900
 - [x] Muut AC-kuormat: lista saatu [omistaja 2026-10-28], ks. [loads.yaml](../loads.yaml)
 - [ ] Jääkaapin teho ja energiankulutus tyyppikilvestä; muiden laitteiden tehot, kun ne valitaan
 - [ ] Onko vedenlämmittimessä koneen jäähdytysvesikierukka?
-- [ ] Jätteet polttava WC: asennetaanko, mikä malli, teho ja kulutus käyntikerralta? Vai riittääkö vähän sähköä kuluttava käymälä?
+- [x] Jätteet polttava WC: hylätty; tilalle septi-WC maseraattorilla ja septin hätätyhjennyspumppu [omistaja 2026-10-31]
 - [ ] 24 V:n kuormien tehot, kun laitteet valitaan (ks. [loads.yaml](../loads.yaml), `dc_loads`)
 - [x] Mitkä laitteet ovat olemassa: vain jääkaappi [omistaja 2026-10-28]
-- [ ] Mitkä harkinnassa olevista laitteista asennetaan, ja ovatko liesi ja vedenlämmitin sähkökäyttöisiä vai esim. kaasu- tai diesellämmitteisiä? (kiuas: sähkö, päätetty 2026-10-29)
+- [x] Liesi: kaasuliesi; uuni: yhdistetty mikro- ja sähköuuni [omistaja 2026-10-31] (kiuas: sähkö, päätetty 2026-10-29)
+- [ ] Yhdistetyn mikro- ja sähköuunin malli ja teho (arvio 2–3 kW)
+- [ ] Mitkä muut harkinnassa olevista laitteista asennetaan, ja onko vedenlämmitin sähköllä vai esim. koneen jäähdytysvedellä?
 - [x] Kuinka monta vuorokautta ollaan ankkurissa ajamatta: enintään alle vuorokausi [omistaja 2026-10-29]
 - [ ] Kuinka pitkä ajo on tyypillisesti ankkuripäivän jälkeen (riittääkö noin 2,5 h lataukseen)?
 - [ ] Dieselgeneraattori: päätös auki [omistaja 2026-10-29]
