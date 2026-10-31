@@ -37,7 +37,7 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | 2.7 | Aggregaatin ja bensiinin säilytyskaappi kannella | 1 | tuulettuva, valuu laidan yli | 🛒 | **⚠ ei tiedossa** | sama |
 | 2.8 | Erotusmuuntaja Airlink WM5002 | 1 | olemassa, ei kytketty | ✅ | – | [ac-power-source 2.6](design/ac-power-source.md#26-olemassa-oleva-erotusmuuntaja-airlink-wm5002) |
 | 2.9 | Toinen laturi 24 V / 150–175 A (esim. Prestolite 175 A) | 1 | mahtuuko koneen etupäähän **⚠ tarkista** | ⏳ | noin 1 304 € (Prestolite) | [ac-power-source 2.5](design/ac-power-source.md#25-toisen-laturin-hintataso-haettu-2026-10-28) |
-| 2.10 | Säädin: Mastervolt Alpha Pro III (suositus) tai Wakespeed WS500 | 1 | Alpha Pro III: molempien JK:iden kuivakoskettimet sarjassa Reg on -johtimeen | ⏳ | 330–450 USD ≈ 300–405 € (WS500 650–820 USD) | [inverter-bms 5.2](design/inverter-bms.md#52-toisen-laturin-säädin-alpha-pro-iii-vai-wakespeed-ws500-selvitetty-2026-10-31) |
+| 2.10 | Säädin: Mastervolt Alpha Pro III (45513000) | 1 | päätetty 2026-10-31; molempien JK:iden kuivakoskettimet sarjassa Reg on -johtimeen; laturin kenttäohjaus N-tyyppinen **⚠ tarkista** | ⏳ | 330–450 USD ≈ 300–405 € | [päätös 2026-10-31](../decisions.md), [inverter-bms 5.2](design/inverter-bms.md#52-toisen-laturin-säädin-alpha-pro-iii-vai-wakespeed-ws500-selvitetty-2026-10-31) |
 | 2.11 | Laturin lämpötila-anturi 41500400 (Alpha Pro III) | 1 | | ⏳ | noin 17–26 USD | sama |
 | 2.12 | Sterling APD24 (laturin varasuoja) | 1 | | 🛒 | **⚠ ei tiedossa** | [ac-power-source](design/ac-power-source.md) |
 | 2.13 | Laturin kiinnike ja hihna | 1 | CAT 3126B:n etupää, 5–7 kW | ⏳ | **⚠ ei tiedossa** | sama |
@@ -80,7 +80,7 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | Johdonsuojat ja DIN-kotelot (3.1–3.2) | ≈ 280–470 € |
 | Tärkeiden kuormien kisko: diodit, hätärinnankytkin, ylävesihälytin (3.5, 3.6, 4.8) | ≈ 350–380 € |
 | **Yhteensä tiedossa olevat** | **≈ 5 220–6 190 €** |
-| Toinen laturi ja säädin (2.9–2.11, myöhemmin) | ≈ 1 620–2 060 € |
+| Toinen laturi, Alpha Pro III ja anturi (2.9–2.11, myöhemmin) | ≈ 1 620–1 730 € |
 
 Puuttuu: JK-BMS:t, Class T -sulakkeet, pääkytkimet, suuret sulakkeet, kaapelit, kotelot ja
 kiinnitykset sekä asennus. Ne ovat arviolta useita satoja euroja (**⚠ arvio**).

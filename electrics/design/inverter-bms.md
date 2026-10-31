@@ -153,7 +153,8 @@ kuivakosketinta; käyttöohjeessa on lämmitysliitäntä, mutta kuivakosketin ma
 
 ## 5.2 Toisen laturin säädin: Alpha Pro III vai Wakespeed WS500 (selvitetty 2026-10-31)
 
-Ei päätöstä. Laturi itse (esim. Prestolite 24 V / 175 A) odottaa tilan tarkistusta veneellä.
+**Päätetty 2026-10-31: Mastervolt Alpha Pro III**, ja molempien JK-BMS:ien kuivakoskettimet sarjassa
+Reg on -johtimeen [omistaja 2026-10-31, [decisions.md](../../decisions.md)]. Laturi itse (esim. Prestolite 24 V / 175 A) odottaa tilan tarkistusta veneellä.
 
 | | **Mastervolt Alpha Pro III** | **Wakespeed WS500** |
 |---|---|---|
@@ -171,7 +172,7 @@ Reg on -johtimeen**, jolloin kumman tahansa akun vika tai suojaus pysäyttää l
 pienentää virtaa, mutta DVCC-ohjaukseen ei kannata luottaa yksin. Sterling APD24 on lisäsuoja
 molemmissa.
 
-**Suositus (ei päätös):** **Alpha Pro III** ja molempien JK:iden kuivakoskettimet sarjassa Reg on
+**Päätös (2026-10-31):** **Alpha Pro III** ja molempien JK:iden kuivakoskettimet sarjassa Reg on
 -johtimeen. Se on noin 300–350 € halvempi, yksinkertainen ja toimii ilman ohjelmistoa. WS500 kannattaa,
 jos laturin tiedot halutaan Signal K:hon ja latausvirta halutaan sovittaa akuston tilaan.
 
@@ -213,7 +214,7 @@ siirtävät energiaa käyttöakustolle. Kolme rinnan antaa noin 4,2 kW (**⚠ ar
 - [ ] Kahden JK-BMS:n yhteiskäyttö Cerbo GX:n kanssa: näkyvätkö molemmat, ja ohjaako DVCC pienimmän rajan mukaan (**⚠ tarkista**)
 - [ ] Invertterin purkuvirran raja, kun vain toinen akku on käytössä (DVCC-asetus)
 - [ ] Sterling APD24 laturin varasuojaksi
-- [ ] Säädin: Alpha Pro III Reg on -ohjauksella (suositus, kohta 5.2) vai Wakespeed WS500 Cerbo GX:n VE.Can-portissa?
-- [ ] DC-DC-vaihtoehto (kohta 5.3): Orion XS 1400:n hinta, rinnankytkentä, BMS-/Cerbo-ohjaus ja lämpö; sopiiko tavallinen 24 V / 175 A -laturi sisäisellä säätimellä
-- [ ] Revatek Altion: onko 24 V:n versio
+- [x] Säädin: Alpha Pro III, JK:iden kuivakoskettimet sarjassa Reg on -johtimeen [omistaja 2026-10-31]
+- [ ] Prestoliten (tai valitun laturin) kenttäohjaus N-tyyppinen Alpha Pro III:lle
+- [x] ~~DC-DC-vaihtoehto ja Revatek Altion~~: ei jatketa, Alpha Pro III valittu 2026-10-31
 - [ ] MB31:n suurin jatkuva latausvirta datalehdestä (vaikuttaa toisen laturin kokoon, jos vain toinen akku on käytössä)
