@@ -496,9 +496,18 @@ akustoa voi tarvittaessa ladata ankkurissa. Ei päätöstä.
 |---|---|---|
 | Stanley SIG 2000-1 | 1,8 kW jatkuva, 2,0 kW huippu, tankki 10 l | 369 € ([Motonet](https://www.motonet.fi/fi/tuote/7013840/STANLEY-SIG-2000-1-aggregaatti-invertteri-4-tahti-2000-W--2-x-230-V)) |
 | Ducar D2500iS | 2,0 kW jatkuva, 2,2 kW huippu | noin 470 € ([Taloon](https://www.taloon.com/aggregaatti-ducar-d2500is-invertteri-malli-2200-2000-w-98cc-4-tahti-2xusb)) |
+| Timco 2000i | 1,6 kW jatkuva, 2,2 kW huippu | noin 360–420 € ([Netrauta](https://www.netrauta.fi/aggregaatti-timco-2000i-inventteri-digitaalinen-sis-usb-liitanta), [Taloon](https://www.taloon.com/aggregaatti-timco-2000i-inventteri-digitaalinen-sis-usb-liitanta)) |
+| Timco SS2200i Supersilent | 1,8 kW jatkuva, 2,2 kW huippu; 52–63 dB(A) 7 m:ssä; tankki 3,5 l, noin 4 h 75 %:n kuormalla (≈ 0,9 l/h [laskelma]) | 549 € ([Netrauta](https://www.netrauta.fi/aggregaatti-timco-ss2200i-supersilent), [Taloon](https://www.taloon.com/aggregaatti-timco-ss2200i-supersilent)) |
+| Timco IG3600i | 3,6 kW (jatkuvaa tehoa ei ilmoitettu **⚠ tarkista**); tankki 7 l, noin 4,5 h täydellä kuormalla (≈ 1,6 l/h); noin 22 kg | 749 € ([Netrauta](https://www.netrauta.fi/aggregaatti-timco-ig3600i-3-600-w-digitaalinen)) |
+| Timco IR3000SPG | 3 kW jatkuva, sähköstartti | noin 990 € ([Netrauta](https://www.netrauta.fi/sahkokaynnisteinen-aggregaatti-timco-ir3000spg-digitaalinen)) |
 | Honda EU22i | 1,8 kW jatkuva, 2,2 kW huippu; kulutus noin 1,1–1,2 l/h täydellä teholla; noin 53 dB(A) 7 m:ssä neljäsosateholla | noin 1 500–1 690 € ([Taloon](https://www.taloon.com/invertterigeneraattori-honda-eu22i), [Hintaopas](https://hintaopas.fi/s/230v-generaattori/)) |
 
 Honda-arvot ovat jälleenmyyjiltä ([Counties Honda](https://www.countieshonda.co.nz/eu22i), [Rosebud Mowers](https://www.rosebudmowers.com.au/products/honda-eu22-2200w-4-stroke-generator)), **⚠ tarkista** käyttöohjeesta.
+
+Timcon arvot ovat jälleenmyyjien sivuilta (haettu 2026-10-31), ei valmistajan datalehdestä. **Noin 3 kW:n
+malli** kattaisi kiukaan kokonaan ilman akustoa, mutta painaa enemmän ja maksaa noin kaksinkertaisesti.
+Timco 2000i:llä (1,6 kW) lataus on noin 1,3 kWh tunnissa, ja neljän tunnin sauna veisi akustosta noin
+4 kWh [laskelma].
 
 **Mitä noin 1,8 kW:n aggregaatti antaa** [laskelma, **⚠ arviot**]:
 
