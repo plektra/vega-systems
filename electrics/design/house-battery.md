@@ -146,6 +146,7 @@ Hinnat **⚠ ei tiedossa**; selvitetään, kun kennot ja BMS valitaan.
 | Osa | Vaatimus Vegalla |
 |---|---|
 | BMS | 8S, LiFePO4. Jatkuva virta vähintään noin 300 A, tai releohjattu BMS, joka katkaisee kontaktoreilla. **Erilliset lähdöt latauksen estolle ja kuormien katkaisulle**, jotta laturin säädin (Alpha Pro III, Reg on / MasterBus "Stop charge") ja invertterilaturi saavat varoituksen ennen kuin BMS katkaisee, ks. [ac-power-source.md](ac-power-source.md). **Latauksen esto alle 0 °C:ssa.** Mieluiten CAN-, NMEA 2000- tai Signal K -liitäntä valvontaan |
+| Kennojen väliset liitokset | **Kuparikiskot, ei kaapeleita** kennojen välillä. MB31:ssä on jälleenmyyjien mukaan yksi M6-napa (hitsattu pultti tai kierrereikä, malli **⚠ tarkista** ostettavasta erästä), ja kennon mukana tulee yleensä nikkelöity kuparikisko. Veneessä mieluiten **joustavat (laminoidut) kiskot**, jotka sietävät tärinää ja kennojen turpoamista. Kiristysmomentti jälleenmyyjien mukaan enintään noin 5–6 Nm ([Gobel Power](https://www.gobelpower.com/eu-stock-grade-a-eve-32v-314ah-mb31-rechargeable-lifepo4-battery-cell_p193.html?cPath=0), [Wistek](https://wis-tek.com/products/eve-mb31-3-2v-314ah-grade-a-brand-new-lifepo4-battery-prismatic-cell-wistekusa-stock)), **⚠ tarkista** EVE:n datalehdestä. Kaapelia käytetään vain kennorivien välillä, jos kiskot eivät ylety, ja akun pääliitännöissä |
 | Kennojen puristus | Prismaattiset kennot pitää puristaa kehikossa valmistajan ohjeen mukaan (arvo **⚠ ei tiedossa**, EVE:n datalehdestä) |
 | Pääsulake | Class T -sulake tai vastaava, jonka katkaisukyky riittää LiFePO4:n oikosulkuvirralle, mahdollisimman lähelle akun napaa |
 | Kotelo ja kiinnitys | Noin 100–110 kg kennoineen, kiinni rungossa niin, ettei se liiku kallistuksissa. Ilmanvaihto ja suoja vedeltä |
@@ -206,6 +207,7 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?
 - [ ] BMS:n valinta (releohjattu vai MOSFET, latauksen eston lähdöt, valvontaliitäntä)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
+- [ ] MB31:n napatyyppi (hitsattu M6-pultti vai kierrereikä), kiristysmomentti ja kiskojen poikkipinta EVE:n datalehdestä; joustavat kiskot erikseen, jos myyjän kiskot ovat jäykkiä
 - [ ] Vakuutusyhtiön kanta itse koottuun akustoon
 - [ ] Aurinkopaneelit: tuleeko niitä, ja mihin ne mahtuisivat ilman varjostusta?
 - [ ] Hankitaanko vaiheittain (ensin akusto ja pieni maasähkölaturi, invertterilaturi myöhemmin)?
