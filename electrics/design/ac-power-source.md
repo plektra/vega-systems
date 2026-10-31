@@ -610,7 +610,7 @@ Ehdotus, ei päätös. Hinnat kohdista 2.2, 2.4 ja 2.5; sis. ALV, ellei toisin m
 | Osa | Halvin toimiva | Hinta | Mastervolt-kokonaisuus | Hinta |
 |---|---|---|---|---|
 | Erotusmuuntaja | Olemassa oleva WM5002 | 0 € (+ vikavirtasuoja, kiinnikkeet) | sama | 0 € |
-| Akusto | 16 × EVE MB31 314 Ah, 8S2P (≈ 16 kWh), ks. [house-battery.md](house-battery.md); 8 × EVE MB56 628 Ah olisi ≈ 950–1 200 €, jos saatavilla | ≈ 2 080 € | 2 × Victron 25,6 V / 200 Ah (≈ 10 kWh) | ≈ 4 380 € |
+| Akusto | 16 × EVE MB31 314 Ah, kaksi 8S-akkua (≈ 16 kWh; päätetty 2026-10-31), ks. [house-battery.md](house-battery.md); 8 × EVE MB56 628 Ah olisi ≈ 950–1 200 €, jos saatavilla | ≈ 2 080 € | 2 × Victron 25,6 V / 200 Ah (≈ 10 kWh) | ≈ 4 380 € |
 | BMS, kotelo, sulakkeet | Oma kokoonpano; BMS:ssä latauksenesto ennen katkaisua | **⚠ ei tiedossa** | Victronin erillinen BMS | **⚠ ei tiedossa** |
 | Toinen laturi ja säädin | Prestolite 24 V / 175 A ja Alpha Pro III | ≈ 1 304 € + 330–450 USD | Alpha 24/150 Evo ja Alpha Pro III | ≈ 2 862 € |
 | Invertterilaturi | Mass Combi Ultra 24/3500-100 (vertailu; valittu 2026-10-31 Victron MultiPlus-II 24/5000 ja Cerbo GX ≈ 2 000–2 700 €, ks. [inverter-bms.md](inverter-bms.md)) | ≈ 3 126 € | sama | ≈ 3 126 € |

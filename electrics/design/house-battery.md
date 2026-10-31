@@ -1,6 +1,6 @@
 # Käyttöakusto: koko ja itse kootut LiFePO4-kennot
 
-> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, polttava WC hylätty; tarve laskettu uudelleen). Ei päätöstä. Kennojen hinnat ja saatavuus vaihtelevat;
+> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, polttava WC hylätty; tarve laskettu uudelleen). **Päätetty 2026-10-31:** 16 × EVE MB31 kahtena erillisenä 8S-akkuna, JK-BMS ja oma kotelo. Kennojen hinnat ja saatavuus vaihtelevat;
 > tarkista ennen tilausta.
 
 Vanhat käyttöakut on purettu, ja nyt kaikki 24 V:n kuormat ottavat virtansa käynnistysakuilta
@@ -155,7 +155,12 @@ pidetään auki (2026-10-31):
 **Johtopäätös:** MB56 ei sovi valittuun rakenteeseen, eikä sitä nyt saa luotettavasti. **MB31
 (16 kpl, kaksi 8S-akkua)** on suositus.
 
-### Suositus (ei päätös)
+### Suositus (päätetty 2026-10-31: 16 × MB31)
+
+**Päätös:** 16 × EVE MB31 (314 Ah) kahdeksi erilliseksi 8S-akuksi, kummallakin oma JK-BMS ja
+sulake [omistaja 2026-10-31, [decisions.md](../../decisions.md)]. Akkulan hinta 129,95 €/kenno
+(2026-10-28) eli noin 2 080 €; tarkista hinta ja eräkohtainen napatyyppi ennen tilausta.
+
 
 - **Edullisin: 8 × EVE MB56.** Puolet halvempi kuin MB31-ratkaisu ja vähemmän liitoksia, mutta
   saatavuus on epävarma, ja Alibaba-tyyppisten myyjien kennojen aitous kannattaa varmistaa.
@@ -271,7 +276,8 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 - [x] Mahtuuko akusto konehuoneeseen: kyllä, etenkin jos generaattorille ei tarvitse varata tilaa (paapuurin puoli) [omistaja 2026-10-29]
 - [ ] Akuston tarkka paikka konehuoneessa; riippuu osin generaattoripäätöksestä. Varataan tila myös kolmannelle 8S-akulle (noin 574 × 174 × 207 mm kennoja, noin 45 kg, ilman koteloa) [laskelma]
 - [ ] Saunan pituus ankkurissa: 2 h vai 4 h? Ratkaisee, hankitaanko kolmas akku
-- [ ] Kennot: MB31 (suositus 2026-10-31; MB56 loppu Nkonilta ja Fogstarilta eikä sovi kahden erillisen akun rakenteeseen) vai MB56?
+- [x] Kennot: 16 × EVE MB31, kaksi 8S-akkua [omistaja 2026-10-31]
+- [ ] Kennojen tilaus: myyjä (Akkula tai muu), hinta, Grade A -todistus ja mittausraportti (kapasiteetti, sisäresistanssi), napatyyppi
 - [x] BMS: JK (MOSFET, CAN Cerbo GX:ään), yksi kummallekin 8S-akulle [omistaja 2026-10-31], ks. [inverter-bms.md](inverter-bms.md)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
 - [x] Kotelointi: oma kotelo [omistaja 2026-10-31]
