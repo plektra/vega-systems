@@ -64,6 +64,33 @@ ja VE.Bus BMS toimivat vain Victronin omien akkujen kanssa, joten ne eivät sovi
 | Signal K | MasterBus ei liity Signal K:hon suoraan (**⚠ tarkista**) | Venus OS (Cerbo GX) näkyy Signal K:ssa | kuten B |
 | Kiukaan ja uunin samanaikaisuus | Kuormanhallinta tarvitaan | Kuormanhallinta tarvitaan | Kuormanhallinta tarvitaan; 2400 W ei riitä kiukaalle ja jääkaapille ilman marginaalia |
 
+### 3.1 Mihin Cerbo GX tarvitaan (lisätty 2026-10-31)
+
+MultiPlus-II:ssa ei ole CAN-liitäntää, joten se ei ymmärrä BMS:n viestejä suoraan. Cerbo GX on
+väylien välinen ohjain:
+
+1. **BMS → invertterilaturi (DVCC):** GX lukee BMS:n CAN-viestit (latausjännite, latausvirran ja
+   purkuvirran rajat, latauksen esto) ja ohjaa niillä MultiPlus-II:ta VE.Busin kautta. Tämä hoitaa
+   ennakkovaroituksen ennen BMS:n katkaisua ja purkuvirran rajauksen, kun vain toinen akku on
+   käytössä (kohta 1). JK-BMS:n luotettava liitäntä on juuri CAN.
+2. **Asetukset käytössä:** tulovirran raja (laituri 14 A, aggregaatti noin 7 A) vaihdetaan
+   kosketusnäytöltä tai puhelimesta.
+3. **Valvonta:** akusto, invertterilaturi ja lataus Signal K:hon (Venus OS) ja etänä VRM-portaaliin.
+
+**Vaihtoehdot ilman Cerbo GX:ää** (**⚠ tarkista** ennen valintaa):
+
+- **BMS:n releet MultiPlus-II:n aux-tuloihin** ("two-signal BMS" -asetus VEConfigure-ohjelmalla):
+  latauksen ja purun esto toimii ilman GX:ää, mutta vain päälle/pois, ei virran rajoitusta.
+  Edellyttää BMS:ää, jossa on kuivakoskettimet (JK **⚠ tarkista**). Tulovirran raja asetetaan
+  esim. Digital Multi Control -paneelilla.
+- **Venus OS Raspberry Pi:llä** ja MK3-USB-liitäntä MultiPlussaan sekä CAN-liitäntä Pi:hin
+  BMS:ää varten. Halvempi, mutta Victron ei tue sitä virallisesti, ja Pi 5:n tuki **⚠ tarkista**.
+- **Cerbo-S GX** on halvempi, mutta siinä ei ole BMS-CAN-porttia ([Signature Solar](https://signaturesolar.com/victron-energy-cerbo-s-gx)),
+  joten se ei sovi JK:n CAN-liitäntään.
+
+**Arvio:** Cerbo GX (noin 300 €) kannattaa, koska JK-BMS:n hallittu ohjaus ja purkuvirran rajaus
+toimivat sen kautta luotettavimmin, ja se tuo Victronin tiedot Signal K:hon.
+
 ## 4. Kokonaishinnat [laskelma, ⚠ arviot]
 
 Invertterilaturi, väylälaitteet ja kahden 8S-akun BMS. Kontaktorit, esivarauspiirit, kaapelit ja
