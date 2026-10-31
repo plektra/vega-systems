@@ -246,7 +246,8 @@ napista ja kytkintoiminto) ei PDM-lähdöissä juuri tarvita, koska PDM hoitaa n
 | Vaihtoehto | Esimerkkituote ja hinta | Noin 25 PDM-lähtöä | Huomiot |
 |---|---|---|---|
 | **A. Lattasulakerasia (ATO/ATC)** | Blue Sea 5026, 12 paikkaa, miinuskisko ja kansi: 79,90 € ([Nautisports](https://www.nautisports.com/en/boite-a-fusibles-12-circuits-avec-bus-de-masse-blue-sea-systems.html)), 92,16 € ([boat-parts.net](https://boat-parts.net/bp100-5026-sikring-block-ato-12-circuit-w-ground)). Halvempi 12 paikan rasia: 43,60 € ([Reimo](https://www.reimo.com/fi/camping-shop/asuntoauton-saehkoet-akku/sulakkeet-ja-virranjakajat/67608/tehonjakelija-jossa-12-tahtinen-sulakkeenpidin)) | 3 rasiaa: **noin 130–280 €**, ja sulakkeet ja varasulakkeet noin 20–30 € (**⚠ arvio**) | Halvin. Rasiat ja sulakkeet on mitoitettu enintään 32 V:lle, mikä riittää 24 V:n järjestelmään (latausjännite alle 30 V). Palanut sulake vaihdetaan käsin. Blue Sean rasiassa on miinuskisko, joten erillistä miinuskiskoa ei tarvita |
-| **B. DC-johdonsuoja DIN-kiskoon** | Eaton FAZ-C10/1-DC: noin 25–27 € sis. ALV ([aio.lv](https://aio.lv/en/product--eaton-279126--3919335.md), [el12.com](https://el12.com/en/elektricke-zarizeni/jistic-10a-1-pol-faz-c101-dc-279126,i68603)); toisaalla jopa 72 € ([RS, PT](https://pt.rs-online.com/web/p/interruptores-automaticos-magnetotermicos/9227172)) | **noin 640–680 €**, lisäksi DIN-kotelot ja kiskot | Kallein. Palautus napista. **Vain DC-hyväksyttyjä:** tavallinen talojohdonsuoja (esim. Schneider iC60N noin 6–9 €) on AC-laite, eikä sitä käytetä, ellei datalehti anna DC-arvoa |
+| **B1. DC-johdonsuoja DIN-kiskoon** (pelkkä DC-malli) | Eaton FAZ-C10/1-DC: noin 25–27 € sis. ALV ([aio.lv](https://aio.lv/en/product--eaton-279126--3919335.md), [el12.com](https://el12.com/en/elektricke-zarizeni/jistic-10a-1-pol-faz-c101-dc-279126,i68603)); toisaalla jopa 72 € ([RS, PT](https://pt.rs-online.com/web/p/interruptores-automaticos-magnetotermicos/9227172)) | **noin 640–680 €**, lisäksi DIN-kotelot ja kiskot | Kallein. Palautus napista. Ei tarpeen 24 V:lla, jos B2 käy |
+| **B2. Talojohdonsuoja, jonka datalehdessä on DC-arvo** | Schneider Acti9 iC60N 1P: datalehden mukaan 12–60 V DC, katkaisukyky 15 kA (EN 60947-2) ([datalehti A9F73110](https://elicaelectric.com/datasheet/A9F73110.pdf)); 10 A noin 6–9 € ([Taloon](https://www.taloon.com/johdonsuojakatkaisija-schneider-electric-acti9-ic60n-1-napainen-c-kayra-10a-6ka)). ABB S201: 60 V DC (UL), enintään 72 V DC (IEC) ([Standard Electric Supply](https://www.standardelectricsupply.com/Catalog/All-Products/Distribution-Equipment/Circuit-Breakers/Miniature/1295171-ABB-S201-C10)); halvemmat ABB-mallit S201S ja SH201 noin 5–11 € ([Taloon](https://www.taloon.com/johdonsuojakatkaisija-abb-1-napainen-c10a-s201s-c10), [K-Rauta](https://www.k-rauta.fi/tuote/johdonsuojakatkaisija-abb-sh201-c10/4016779630603)), niiden DC-arvo **⚠ tarkista** | **noin 150–230 €**, lisäksi suljettu DIN-kotelo (**⚠ arvio** 30–60 €/keskus) | Suunnilleen saman hintainen kuin A. Palautus napista, ei varasulakkeita. Ks. ehdot alla |
 | **C. Paneelin vipusulake** | Blue Sea A-sarja 10 A (7204–7206): 9,25 £ ≈ 11 € ([Force4](https://www.force4.co.uk/item/Blue-Sea/Systems-A-Series-Toggle-Circuit-Breaker/5R15)), 65 V DC ([Overton's](https://overtons.com/blue-sea-systems-a-series-toggle-switch-circuit-breaker-single-pole-10-amp-350713.html)). Valmis 8 paikan 360-paneeli: noin 250 € ([Blue Bottle Marine](https://www.bluebottlemarine.com/products/blue-sea-circuit-breaker-dc-360-square-panel-push-button-90a-8-position.html)) | Irtokatkaisijoina noin 275 € ja oma paneeli; valmiina paneeleina noin 750–1 000 € | Sulake ja kytkin samassa. PDM-lähdöissä kytkin olisi kuitenkin toinen kytkin PDM:n rinnalla, joten hyöty jää pieneksi |
 
 **Tärkeiden kuormien kisko (noin 7 piiriä)** on eri asemassa: sen piirit eivät ole PDM:n takana,
@@ -257,19 +258,38 @@ joten sulake on niiden ainoa suoja, ja vika halutaan palauttaa nopeasti ilman va
 | Lattasulakkeet ja erilliset kytkimet | noin 50–80 € (**⚠ arvio**) |
 | Blue Sea A-sarjan vipusulakkeet (sulake ja kytkin samassa) | noin 80 € ja paneelilevy |
 | Eaton FAZ-DC DIN-kiskoon ja erilliset kytkimet | noin 180–190 € ja kytkimet |
+| Talojohdonsuoja DC-arvolla (B2), esim. iC60N, ja erilliset kytkimet | noin 40–65 € ja kytkimet |
+
+**Talojohdonsuoja 24 V:n DC-piirissä (B2)** [päivitetty 2026-10-31; aiempi maininta, ettei iC60N sovi DC:lle, oli väärä]:
+Moni tavallinen johdonsuoja on hyväksytty myös pienelle DC-jännitteelle, ja 24 V:n järjestelmässä
+(latauksessa alle 30 V) se on käyttökelpoinen, kun:
+
+- **valitun mallin datalehdessä on DC-arvo** (jännite vähintään noin 30 V napaa kohden ja
+  DC-katkaisukyky). Pelkkä 230 V AC -merkintä ei riitä. Halvimmista malleista DC-arvo voi puuttua;
+- **magneettinen pikalaukaisu toimii DC:llä suuremmalla virralla** kuin AC:llä (tyypillisesti noin
+  1,4-kertaisella, **⚠ tarkista** datalehdestä). Kaapelia suojaa silti lämpölaukaisu, joten tällä
+  on vähän merkitystä;
+- **napaisuus** tarkistetaan datalehdestä: osa DC-malleista on napaisia, tavalliset johdonsuojat
+  yleensä eivät (**⚠ tarkista**);
+- **kotelo on suljettu ja paikka kuiva:** talojohdonsuojaa ei ole tehty kosteaan ja suolaiseen
+  ilmaan. Bensiinikonetta ei ole, joten syttymissuojattuja (ISO 8846) laitteita ei luultavasti
+  vaadita (**⚠ tarkista**).
 
 Pilssipumppujen kohokytkinpiirissä ei saa olla kytkintä, jolla automaattisen käytön voi vahingossa
 sammuttaa. Pilssipumppujen sulakkeiksi sopivat siksi sulake tai johdonsuoja ilman käyttökytkintä.
 
 **Suositus (ei päätös) [laskelma]:**
 
-- **PDM-lähdöt: lattasulakerasiat (A).** Ne ovat noin 350–500 € halvempia kuin DC-johdonsuojat
-  (B), ja PDM tarjoaa jo johdonsuojan käytännön edut.
+- **PDM-lähdöt: lattasulakerasiat (A) tai talojohdonsuojat, joiden datalehdessä on DC-arvo (B2),
+  esim. Schneider iC60N.** Ne ovat suunnilleen saman hintaisia ja noin 350–500 € halvempia kuin
+  pelkät DC-mallit (B1). B2 on siistimpi DIN-keskukseen eikä vaadi varasulakkeita; A on halvin,
+  jos sulakerasiat sopivat paikalleen paremmin. (Päivitetty 2026-10-31: B2 lisätty.)
 - **Tärkeiden kuormien kisko:** Blue Sea A-sarjan vipusulakkeet. Niissä on sulake ja kytkin
   samassa, ja ne toimivat ilman ohjelmistoa. Kokonaisuus on noin 80 €. Pilssipumpuille sulake
   ilman kytkintä.
-- **Yhteensä noin 230–390 €** (sulakerasiat 130–280 €, sulakkeet noin 20–30 € ja TK:n vipusulakkeet noin 80 €; **⚠ arvio**).
-  Kaikki DC-johdonsuojilla toteutettuna noin 820–870 € ja kotelot.
+- **Yhteensä noin 230–390 €** (A: sulakerasiat 130–280 €, sulakkeet noin 20–30 € ja TK:n
+  vipusulakkeet noin 80 €) tai noin 230–310 € ja kotelot (B2: johdonsuojat 150–230 € ja TK 80 €;
+  **⚠ arvio**). Kaikki pelkillä DC-malleilla (B1) noin 820–870 € ja kotelot.
 - ESP32-PDM-projektissa on vielä auki, tulevatko lähtöjen sulakkeet kortille vai asennukseen.
   Jos sulakkeenpitimet tulevat kortille, erillisiä sulakerasioita tarvitaan vähemmän.
 
@@ -344,7 +364,9 @@ sähköurakoitsijan kanssa ajoissa.
 - [x] Miinus ja runko: yksi yhteyspiste koneen runkoon [omistaja 2026-10-31]
 - [x] PDM:n rooli: tavalliset piirit ESP32-PDM:llä [omistaja 2026-10-31]
 - [ ] **Sulaketyyppi PDM:n lähtöihin:** lattasulakkeet vai DC-automaattisulakkeet? Ratkaisee hinta;
-  hintavertailu kohdassa 4.5 (suositus: PDM-lähdöt lattasulakkeilla, TK vipusulakkeilla)
+  hintavertailu kohdassa 4.5 (suositus: PDM-lähdöt lattasulakkeilla tai DC-arvoisilla
+  talojohdonsuojilla, TK vipusulakkeilla)
+- [ ] Jos valitaan talojohdonsuojat: tarkista valitun mallin DC-arvo datalehdestä
 - [ ] **Veneellä:** resistanssi akun miinuksen ja rungon välillä; onko käynnistin ja laturi
   maadoitettu koneen runkoon?
 - [ ] **Veneellä:** mistä koneen ohjausyksikkö saa nyt virtansa?
