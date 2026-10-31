@@ -219,8 +219,8 @@ tavalliset kytkimet, jotta ne toimivat ilman ohjelmistoa (kohta 3).
 
 Ehdotus: keskuksen tunnus ja juokseva numero, esim. `PJ-02` (pääjakelu), `TK-01`
 (tärkeät kuormat), `KS-05` (komentosilta), `KH-03` (konehuone), `AC-02` (230 V). Sama tunnus
-näkyy kaapelin merkinnässä, keskuksen kyltissä ja tulevassa piirilistassa. Kun piirilista
-täydentyy, se kannattaa siirtää `loads.yaml`:iin kenttänä `circuit`.
+näkyy kaapelin merkinnässä, keskuksen kyltissä ja tulevassa piirilistassa. Piirilista:
+[circuit-list.md](circuit-list.md) (luonnos 2026-10-31); tunnukset myös `loads.yaml`:ssa kenttänä `circuit`.
 
 ### 4.5 Sulakkeiden hintavertailu (haettu 2026-10-31)
 

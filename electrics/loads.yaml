@@ -13,6 +13,7 @@
 #   status:           existing (olemassa) | decided (päätetty, ei vielä asennettu) |
 #                     planned (suunniteltu, laitetta ei valittu) | candidate (harkinnassa) |
 #                     rejected (hylätty, säilytetään historian vuoksi)
+#   circuit:          piirin tunnus (alustava), ks. design/circuit-list.md
 #   source:           mistä luvut ovat peräisin
 
 schema_version: 1
@@ -25,6 +26,7 @@ loads:
   - id: SAUNA
     name: Sähkökiuas
     status: decided                # päätetty 2026-10-29; puukiuas ei mahdu [omistaja 2026-10-29]
+    circuit: "AC-01"            # alustava, ks. design/circuit-list.md
     power_W: 2300
     use_h_per_day: 2               # kerrallaan noin 2 h; täysi teho koko ajan on yläraja
     energy_kWh_per_session_estimate: 3.7  # termostaatti katkoo [omistaja 2026-10-29]; arvio: 1 h täysi + 1 h ~60 %
@@ -34,6 +36,7 @@ loads:
   - id: WATER_HEATER
     name: Vedenlämmittimen sähkövastus
     status: candidate
+    circuit: "AC-08"            # alustava, ks. design/circuit-list.md
     power_W: 3000
     use_h_per_day: null
     at_anchor: null                # suositus: ei akustolta, ks. design/ac-power-source.md
@@ -43,6 +46,7 @@ loads:
   - id: FRIDGE
     name: Jääkaappi, noin 130 l ja pakastelokero
     status: existing
+    circuit: "AC-02"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 100          # käydessä; termostaatti katkoo
     energy_kWh_per_day_estimate: 0.8
@@ -60,6 +64,7 @@ loads:
   - id: OVEN
     name: Yhdistetty mikro- ja sähköuuni
     status: decided                # päätetty 2026-10-31; korvaa erillisen sähköuunin
+    circuit: "AC-03"            # alustava, ks. design/circuit-list.md
     power_W: null                  # ⚠ ei tiedossa; malli valitsematta
     power_W_estimate: 2000         # arvio; yhdistelmätoiminnoissa tyypillisesti noin 2–3 kW, tarkista valitusta mallista
     use_h_per_day: 0.5
@@ -69,6 +74,7 @@ loads:
   - id: KETTLE
     name: Vedenkeitin
     status: candidate
+    circuit: "AC-04"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 2000
     use_h_per_day: 0.1
@@ -78,6 +84,7 @@ loads:
   - id: COFFEE
     name: Kahvinkeitin
     status: candidate
+    circuit: "AC-04"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 1000
     use_h_per_day: 0.25
@@ -87,6 +94,7 @@ loads:
   - id: HOOD
     name: Liesituuletin
     status: candidate
+    circuit: "AC-06"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 100
     use_h_per_day: 1
@@ -96,6 +104,7 @@ loads:
   - id: EXHAUST_FAN
     name: Poistoilmapuhallin
     status: candidate
+    circuit: "AC-06"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 40
     use_h_per_day: null
@@ -105,6 +114,7 @@ loads:
   - id: HRV
     name: Ilmanvaihtokone
     status: candidate
+    circuit: "AC-06"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 50
     use_h_per_day: 24
@@ -114,6 +124,7 @@ loads:
   - id: TV
     name: Televisio
     status: candidate
+    circuit: "AC-05"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 80
     use_h_per_day: 3
@@ -123,6 +134,7 @@ loads:
   - id: CHARGERS
     name: Laturit (kannettava tietokone ym.)
     status: candidate
+    circuit: "AC-05"            # alustava, ks. design/circuit-list.md
     power_W: null
     power_W_estimate: 100
     use_h_per_day: 3
@@ -132,6 +144,7 @@ loads:
   - id: OIL_BURNER
     name: Öljykäyttöisen lämmityslaitteen poltin
     status: candidate
+    circuit: "AC-07"            # alustava, ks. design/circuit-list.md
     power_W: null
     current_A_max: 1               # alle 1 A, 230 V → alle 230 W
     power_W_estimate: 200
@@ -158,6 +171,7 @@ dc_loads:
     name: Konehuoneen valvontakamera
     location: konehuone
     status: planned
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 5
@@ -168,6 +182,7 @@ dc_loads:
     name: Polttoaineen siirtopumppu
     location: konehuone
     status: existing
+    circuit: "KH-04"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # ⚠ tarkista tyyppikilvestä
     power_W_estimate: 100
@@ -179,6 +194,7 @@ dc_loads:
     name: Harmaavesisumpun pumppu
     location: konehuone
     status: planned
+    circuit: "KH-02"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 120
@@ -189,6 +205,7 @@ dc_loads:
     name: Savukaasujen poistopuhallin (esim. hitsauskaasut), tilapäinen käyttö
     location: konehuone
     status: planned
+    circuit: "KH-05"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 50
@@ -199,6 +216,7 @@ dc_loads:
     name: Käyttövesipumppu (painevesi)
     location: konehuone
     status: planned
+    circuit: "KH-01"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 150
@@ -209,6 +227,7 @@ dc_loads:
     name: Vesikiertoisen lämmityksen kiertovesipumppu
     location: konehuone
     status: planned
+    circuit: "KH-03"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 30
@@ -219,6 +238,7 @@ dc_loads:
     name: Konehuoneen yleisvalaistus, LED-nauhat
     location: konehuone
     status: existing
+    circuit: "KH-06"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # ⚠ tarkista: nauhojen pituus ja W/m
     power_W_estimate: 50
@@ -229,6 +249,7 @@ dc_loads:
     name: Raspberry Pi 5, Signal K -palvelin
     location: konehuone
     status: existing
+    circuit: "KH-21"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # Mean Well DDR-15G-5: 24 V → 5 V, 3 A (15 W), hyötysuhde 84 % [omistaja 2026-10-29]
     power_W: null
     power_W_estimate: 8            # akustosta muuntimen häviöineen; Pi 5 noin 7 W, muunnin rajaa enintään 15 W:iin
@@ -240,6 +261,7 @@ dc_loads:
     name: Intel NUC, Frigate (kameratallennin)
     location: konehuone
     status: existing
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # Mean Well DDR-240B-24: 24 V → 24 V, 10 A (240 W), hyötysuhde noin 90 %; syöttää myös NMEA 2000 -väylän [omistaja 2026-10-29]
     power_W: null
     power_W_estimate: 17           # akustosta muuntimen häviöineen; NUC noin 15 W, malli ⚠ ei tiedossa
@@ -251,6 +273,7 @@ dc_loads:
     name: 4G-modeemi Teltonika RUT240
     location: null                 # ⚠ ei tiedossa
     status: existing
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # tulo 9–30 VDC [datalehti Teltonika RUT240]
     power_W: null
     power_W_estimate: 2            # Teltonikan mittaus 24 V:lla: tyhjäkäynti noin 0,9 W, yksi LAN-laite ja mobiilidata noin 1,5 W, täysi kuorma noin 4,2 W
@@ -263,6 +286,7 @@ dc_loads:
     model: SFBP2-G3500-01          # 24 V:n malli [omistaja 2026-10-30]
     location: null                 # ⚠ ei tiedossa
     status: existing
+    circuit: "TK-01…TK-03"            # alustava, ks. design/circuit-list.md
     quantity: 3
     voltage_V: 24
     current_A_each: 8.0            # nimellinen [datalehti SEAFLO 01 Series 3500GPH]
@@ -280,6 +304,7 @@ dc_loads:
     name: Hydrauliikan ohjaus (PDM, PVE-ohjausyksiköt, BAV-713:n kelat, anturit)
     location: konehuone
     status: planned
+    circuit: "KH-08"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # ⚠ ei tiedossa; tarkista PVE:n ja kelojen datalehdistä
     use_h_per_day: null            # vain hydrauliikkaa käytettäessä
@@ -292,6 +317,7 @@ dc_loads:
     name: Kulkuvalot (ajovalot), mastovalo mukaan lukien
     location: kansi
     status: existing
+    circuit: "TK-04"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     max_W: 10
     use_h_per_day: null            # vain ajossa pimeällä; ei ankkurikuorma
@@ -301,6 +327,7 @@ dc_loads:
     name: Ankkurivalo
     location: kansi
     status: existing
+    circuit: "TK-05"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     max_W: 5
     use_h_per_day: 10              # yöllä ankkurissa; arvio
@@ -310,6 +337,7 @@ dc_loads:
     name: Sisävalaistus
     location: sisätilat
     status: existing
+    circuit: "KS-01, KS-02"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     max_W: 200                     # kaikki valot päällä
     power_W_estimate: 50           # tyypillinen käyttö; arvio
@@ -320,6 +348,7 @@ dc_loads:
     name: Kansivalaistus
     location: kansi
     status: planned
+    circuit: "KS-03, KS-04"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     max_W: 200
     use_h_per_day: null
@@ -329,6 +358,7 @@ dc_loads:
     name: Työvalo eteen
     location: kansi
     status: planned
+    circuit: "KS-05"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     max_W: 100
     use_h_per_day: null
@@ -338,6 +368,7 @@ dc_loads:
     name: Työvalo taakse
     location: kansi
     status: planned
+    circuit: "KS-06"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     max_W: 100
     use_h_per_day: null
@@ -347,6 +378,7 @@ dc_loads:
     name: Hakuvalo
     location: komentosillan katto   # [omistaja 2026-10-30]
     status: existing               # olemassa, ei asennettu [omistaja 2026-10-29]
+    circuit: "KS-07"            # alustava, ks. design/circuit-list.md
     installed: false
     voltage_V: 24
     max_W: 250                     # noin 10,4 A 24 V:lla [laskelma]; aiemmin virheellisesti 500
@@ -358,6 +390,7 @@ dc_loads:
     name: Navigointitietokone ja oma näyttö
     location: komentosilta
     status: planned
+    circuit: "KS-08"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # ⚠ ei tiedossa; laitteita ei valittu
     use_h_per_day: null            # ajossa; ankkurissa mahdollisesti ankkurivahti
@@ -367,6 +400,7 @@ dc_loads:
     name: Komentosillan valvontakamera (PoE)
     location: komentosilta         # oma kamera kumpaankin tilaan; konehuoneen kamera on ER_CAMERA [omistaja 2026-10-29]
     status: existing
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # PoE, syöttö Mean Well DDR-240B-24:ltä [omistaja 2026-10-29]
     power_W: null
     power_W_estimate: 5
@@ -377,6 +411,7 @@ dc_loads:
     name: Mastokamera (PoE)
     location: masto
     status: planned                # kolmas kamera komentosillan ja konehuoneen lisäksi [omistaja 2026-10-29]
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # PoE; syöttö luultavasti DDR-240B-24 ⚠ tarkista
     power_W: null
     power_W_estimate: 5
@@ -387,6 +422,7 @@ dc_loads:
     name: AIS-lähetin-vastaanotin, luokka B
     location: komentosilta         # antenni mastossa
     status: planned
+    circuit: "KS-09"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # ⚠ tarkista valitun laitteen tuloalue
     power_W: null                  # ⚠ ei tiedossa; malli valitsematta
     power_W_estimate: 3            # tyypillinen luokan B laite; arvio
@@ -397,6 +433,7 @@ dc_loads:
     name: Tutka
     location: komentosilta
     status: planned
+    circuit: "KS-10"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # ⚠ ei tiedossa; malli valitsematta
     use_h_per_day: null            # ajossa
@@ -406,6 +443,7 @@ dc_loads:
     name: Atlas, pyörivä kirkasnäkölasi (oman invertterin kautta)
     location: komentosilta
     status: planned
+    circuit: "KS-11"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # 24 V → laitteen oma invertteri
     power_W: null                  # ⚠ ei tiedossa
     use_h_per_day: null            # ajossa sateella ja roiskeissa
@@ -415,6 +453,7 @@ dc_loads:
     name: Tuulilasinpyyhkijät
     location: komentosilta
     status: planned
+    circuit: "KS-12"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # ⚠ ei tiedossa
     use_h_per_day: null
@@ -424,6 +463,7 @@ dc_loads:
     name: FM-radio (autoradio 12 V:n muuntimella)
     location: komentosilta
     status: existing
+    circuit: "KS-13"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # 24 V → 12 V -muunnin, malli ⚠ ei tiedossa
     power_W: null                  # ⚠ ei tiedossa
     use_h_per_day: null
@@ -433,6 +473,7 @@ dc_loads:
     name: VHF-radiopuhelin Sailor RT2048
     location: komentosilta
     status: existing
+    circuit: "TK-06"            # alustava, ks. design/circuit-list.md
     voltage_V: 24                  # ⚠ tarkista käyttöjännite datalehdestä
     power_W: null                  # ⚠ ei tiedossa; vastaanotolla pieni, lähetyksellä suurempi
     use_h_per_day: null            # kuuntelu ajossa; ankkurissa mahdollisesti jatkuvasti
@@ -445,6 +486,7 @@ dc_loads:
     name: Polttoainemittari(t), NMEA 2000
     location: null
     status: planned
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # väylävirta LEN-arvosta (1 LEN = 50 mA) ⚠ ei tiedossa
     use_h_per_day: 24
@@ -454,6 +496,7 @@ dc_loads:
     name: Peräsimen asentoanturi, NMEA 2000
     location: peräsin
     status: planned
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     use_h_per_day: 24
@@ -464,6 +507,7 @@ dc_loads:
     name: Tuulimittari, NMEA 2000
     location: masto
     status: planned
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     use_h_per_day: 24
@@ -473,6 +517,7 @@ dc_loads:
     name: GPS/GNSS-vastaanotin, NMEA 2000
     location: null
     status: planned
+    circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     use_h_per_day: 24
@@ -485,6 +530,7 @@ dc_loads:
     name: Puhallinkonvektorit (keulahytti, keskihytti, takahytti, komentosilta, konehuone)
     location: kaikki tilat
     status: candidate              # konvektori vai puhallinkonvektori, ei päätetty
+    circuit: "KH-07"            # alustava, ks. design/circuit-list.md
     quantity: 5                    # konehuone "luultavasti"
     voltage_V: 24
     power_W_each: null
@@ -499,6 +545,7 @@ dc_loads:
     name: Septi-WC, sähköinen maseraattori
     location: null                 # ⚠ ei tiedossa
     status: decided                # päätetty 2026-10-31
+    circuit: "KH-09"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 300          # arvio; tarkista valitun mallin datalehdestä
@@ -509,6 +556,7 @@ dc_loads:
     name: Septitankin hätätyhjennyspumppu
     location: null                 # ⚠ ei tiedossa
     status: decided                # päätetty 2026-10-31
+    circuit: "KH-10"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 300          # arvio
@@ -519,6 +567,7 @@ dc_loads:
     name: Kaasuhälytin
     location: keittiö ja pilssi    # suositus
     status: planned                # suositus 2026-10-31, ei päätetty
+    circuit: "TK-08"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 2            # arvio
@@ -529,6 +578,7 @@ dc_loads:
     name: Kaasun magneettiventtiili (sulkuventtiili)
     location: kaasupullokotelo     # suositus
     status: planned                # suositus 2026-10-31, ei päätetty
+    circuit: "KH-11"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     power_W_estimate: 15           # arvio; auki ollessaan kela ottaa virtaa
@@ -539,6 +589,7 @@ dc_loads:
     name: Tuulilasin huurunpoistopuhallin
     location: komentosilta
     status: planned
+    circuit: "KS-14"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null                  # ⚠ ei tiedossa
     use_h_per_day: null            # ajossa tarvittaessa
