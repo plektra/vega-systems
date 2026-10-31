@@ -33,7 +33,7 @@ Sama tunnus tulee kaapelin merkintään, keskuksen kylttiin ja `loads.yaml`:iin 
 |---|---|---|---|---|---|
 | PJ-00 | Käyttöakuston pääsulake | – | Class T | akuston mukaan | [house-battery.md](house-battery.md) |
 | PJ-01 | Invertterilaturi | noin 160 A, huippu yli 300 A | MEGA, ANL tai MRBF valmistajan ohjeen mukaan | valmistajan ohjeen mukaan | Laite valitsematta |
-| PJ-02 | Ohjauksen varapumppu P3 | noin 100 A, käynnistysvirta **⚠ ei tiedossa** | MEGA tai ANL, kestettävä käynnistysvirta | vähintään 16 mm² (3 m) | **Turvallisuuskriittinen** ([dc-distribution.md 3](dc-distribution.md#3-tärkeät-kuormat-ja-vikatilanteet)) |
+| ~~PJ-02~~ | – | – | – | – | P3 siirretty käynnistysakuille (KA-05), päätös 2026-10-31 |
 | PJ-03 | Toinen laturi | 150–175 A | laturin ohjeen mukaan | vähintään 35 mm² (3 m) | Tuleva |
 | PJ-04 | KS-alakeskuksen syöttö | mitoitus noin 60 A | 60 A | vähintään 25 mm² (6 m) | |
 | PJ-05 | KH-alakeskuksen syöttö | mitoitus noin 40 A | 40 A | vähintään 4–6 mm² (2 m), kuormitettavuus ratkaisee | Kaikki KH:n kuormat yhtä aikaa noin 50 A; käytännössä eivät käy yhtä aikaa (**⚠ arvio**) |
@@ -43,6 +43,7 @@ Sama tunnus tulee kaapelin merkintään, keskuksen kylttiin ja `loads.yaml`:iin 
 | KA-01 | Käynnistinmoottori | **⚠ ei tiedossa** | **⚠ tarkista**, saako käynnistyskaapelin jättää ilman sulaketta | nykyinen | Pysyy ennallaan |
 | KA-02 | Koneen ohjausyksikkö | **⚠ ei tiedossa** | **⚠ ei tiedossa** | nykyinen | **Veneellä:** mistä saa nyt virtansa |
 | KA-03 | TK:n syöttö käynnistysakuilta (ideaalidiodi, pääkytkimen ohi) | noin 40–45 A | 50 A akun vieressä | pituuden mukaan | |
+| KA-05 | Ohjauksen varapumppu P3 | noin 100 A täydellä teholla, keskimäärin arviolta 40–50 A; käynnistysvirta **⚠ ei tiedossa** | MEGA tai ANL akun vieressä, kestettävä käynnistysvirta | vähintään 16 mm² (3 m) | **Turvallisuuskriittinen.** Päätös 2026-10-31 ([dc-distribution.md 3.3](dc-distribution.md#33-p3-käynnistysakuilta-päätetty-2026-10-31)) |
 | KA-04 | Hätärinnankytkin käyttöakustoon | – | – | järeä | Normaalisti auki ([dc-distribution.md 3.2](dc-distribution.md#32-hätärinnankytkin)) |
 
 ## Tärkeiden kuormien kisko (TK)

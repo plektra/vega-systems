@@ -2,7 +2,7 @@
 
 > **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31 (sulakkeiden hintavertailu, kohta 4.5). **Päätetty 2026-10-31:** kolmitasoinen
 > rakenne ja tärkeiden kuormien kisko (kohdat 2 ja 3), tavalliset piirit ESP32-PDM:llä (kohta 4.3) ja
-> miinuksen yksi yhteyspiste runkoon (kohta 5). Sulakkeiksi talojohdonsuojat, joiden datalehdessä on DC-arvo (päätetty 2026-10-31, kohta 4.5). Keskusten paikat ovat auki. Kaapelien pituudet ovat **arvioita**, ja ne
+> miinuksen yksi yhteyspiste runkoon (kohta 5) sekä P3:n syöttö käynnistysakuilta (kohta 3.3). Sulakkeiksi talojohdonsuojat, joiden datalehdessä on DC-arvo (päätetty 2026-10-31, kohta 4.5). Keskusten paikat ovat auki. Kaapelien pituudet ovat **arvioita**, ja ne
 > korvataan veneeltä mitatuilla. Akuston koko, invertteri ja toinen laturi ovat vielä auki
 > ([ac-power-source.md](ac-power-source.md), [house-battery.md](house-battery.md)), joten niiden
 > lähdöille varataan tässä vain paikka.
@@ -55,7 +55,7 @@ flowchart LR
   ESS --> BILGE["Pilssipumput 3 × 8–12,5 A"]
   ESS --> KSE["Kulkuvalot, VHF"]
   PJ --> INV["Invertterilaturi<br/>noin 160 A"]
-  PJ --> P3["Ohjauksen varapumppu P3<br/>noin 100 A"]
+  SB --> P3["Ohjauksen varapumppu P3<br/>noin 100 A"]
   PJ --> KS["Komentosillan<br/>alakeskus KS"]
   PJ --> KHK["Konehuoneen<br/>alakeskus KH"]
   PJ --> RES["Varalähdöt<br/>(aurinko, kolmas akku)"]
@@ -73,7 +73,7 @@ suuria lähtöjä ja alakeskusten syötöt. Arkikäytössä siihen ei kosketa.
 | Lähtö | Virta | Huomiot |
 |---|---|---|
 | PJ-01 Invertterilaturi | noin 160 A jatkuva, huippu yli 300 A [ac-power-source] | Oma sulake; kaapeli ja sulake valmistajan ohjeen mukaan (**⚠ tarkista** valitun laitteen käyttöohjeesta) |
-| PJ-02 Ohjauksen varapumppu P3 | noin 100 A tai yli; käynnistysvirta suurempi **⚠ ei tiedossa** | Turvallisuuskriittinen, ks. kohta 3. Moottorin tyyppikilpi **⚠ tarkista** |
+| ~~PJ-02 Ohjauksen varapumppu P3~~ | – | **Siirretty käynnistysakuille (KA-05), päätös 2026-10-31**, ks. kohta 3.3 |
 | PJ-03 Toinen laturi | 150–175 A (tuleva) | Kytkentä ja sulake laturin ohjeen mukaan; varaa paikka nyt |
 | PJ-04 Komentosillan alakeskus | mitoitus noin 60 A **⚠ arvio** | Kaikki valot yhtä aikaa noin 35 A [current-system 3.2] ja elektroniikka |
 | PJ-05 Konehuoneen alakeskus | mitoitus noin 40 A **⚠ arvio** | Pumput, tietokoneet, Mean Well -muuntimet, hydrauliikan ohjaus |
@@ -124,7 +124,7 @@ pienentää pumppujen ja valojen jännitettä. Tuote **⚠ ei valittu**.
 | Kulku- ja ankkurivalot | TK | Pakollinen varuste ajossa ja ankkurissa |
 | VHF Sailor RT2048 | TK | Hätäliikenne |
 | Pilssihälytys ja yläveden hälytin | TK | Varoittaa, ennen kuin pumput eivät enää riitä. Hälytin **⚠ ei valittu** |
-| Ohjauksen varapumppu P3 | Pääjakelu (PJ-02) ja hätärinnankytkin käynnistysakuille | Liian suuri virta (noin 100 A) diodien kautta syötettäväksi; ks. vikatilanteet |
+| Ohjauksen varapumppu P3 | **Käynnistysakut (KA-05)**, hinauksessa käyttöakusto hätärinnankytkimellä (päätös 2026-10-31) | Ei käyttöakuston BMS:n takana; liian suuri virta (noin 100 A) diodien kautta syötettäväksi; ks. kohta 3.3 |
 | Koneen ohjausyksikkö ja käynnistys | Käynnistysakut | Kone käynnistyy ja käy, vaikka käyttöakusto olisi tyhjä tai irti. **⚠ tarkista**, mistä koneen ohjausyksikkö nyt saa virtansa |
 
 ### 3.1 Vikatilanteet
@@ -133,9 +133,9 @@ pienentää pumppujen ja valojen jännitettä. Tuote **⚠ ei valittu**.
 |---|---|---|
 | Käyttöakuston BMS katkaisee (alijännite, ylilämpö, kennovika) | Alakeskukset ja invertteri sammuvat | TK saa virran käynnistysakuilta: pilssipumput, kulkuvalot ja VHF toimivat. BMS:n ennakkovaroitus pysäyttää laturit ennen katkaisua ([ac-power-source.md](ac-power-source.md#25-toisen-laturin-hintataso-haettu-2026-10-28)) |
 | Käynnistysakut tyhjenevät tai vioittuvat | Kone ei käynnisty | TK saa virran käyttöakustolta. Kone käynnistetään hätärinnankytkimellä käyttöakustolta (kohta 3.2) |
-| P1:n hihna katkeaa ajossa | Ohjauspiirissä ei ole öljyä | P3 käynnistetään. Se ottaa noin 100 A. Tuleva 150–175 A:n laturi lataa käyttöakustoa enemmän kuin P3 kuluttaa, joten P3 voi käydä pitkään. Nykyisellä 65 A:n laturilla akut purkautuvat |
-| Kone sammuu ja P3 tarvitaan | P3 käy pelkillä akuilla | 16 kWh:n käyttöakusto riittää P3:lle tunneiksi **⚠ arvio**; nykyiset käynnistysakut paljon lyhyemmin. Hätäohjaus ilman sähköä: [hydraulics/requirements.md](../../hydraulics/requirements.md) |
-| P3:n syöttö katkeaa (sulake, BMS) | Varaohjaus ei toimi | Hätärinnankytkin käynnistysakuille (kohta 3.2). P3:n sulakkeen pitää kestää käynnistysvirta laukeamatta; arvo moottorin tyyppikilvestä **⚠ tarkista** |
+| P1:n hihna katkeaa ajossa | Ohjauspiirissä ei ole öljyä | P3 käynnistetään käynnistysakuilta. Täydellä teholla noin 100 A, keskimäärin arviolta 40–50 A (**⚠ arvio**, mitataan); 65 A:n laturi lataa käynnistysakkuja koneen käydessä. Käynnistysakkujen jännite Signal K:hon ja hälytys (kohta 3.3) |
+| Kone sammuu | Ohjausta ei tarvita ilman potkurivirtaa [omistaja 2026-10-31] | P3 sammutetaan, jotta käynnistysakut riittävät uudelleenkäynnistykseen. Hinauksessa P3 kytketään käyttöakustolle hätärinnankytkimellä. Hätäohjaus ilman sähköä: [hydraulics/requirements.md](../../hydraulics/requirements.md) |
+| P3:n syöttö katkeaa (sulake, käynnistysakkujen vika) | Varaohjaus ei toimi | Hätärinnankytkin käyttöakustoon (kohta 3.2). P3:n sulakkeen pitää kestää käynnistysvirta laukeamatta; arvo moottorin tyyppikilvestä **⚠ tarkista** |
 | Oikosulku TK:n jälkeen | Kiskon sulake palaa, ja kaikki tärkeät kuormat sammuvat | Jokainen tärkeä kuorma omalla sulakkeellaan, jotta yksi vika ei vie muita. Kiskon syöttösulake mitoitetaan suuremmaksi kuin suurin lähtösulake |
 | Pilssipumpun kohokytkin jumittuu päälle | Pumppu tyhjentää akkuja | Pumppujen käyntiaika ja virta Signal K:hon, hälytys pitkästä käynnistä. Ehdotus: ESP32-PDM:n pakotetun käytön lähtö näkee pumpun jännitteen myös kohokytkimen käyttämänä ja raportoi käynnit; **⚠ ei päätetty** |
 | Diodi vikaantuu poikki | Toinen syöttö puuttuu TK:sta, kukaan ei huomaa | Kummankin syötön jännitteen valvonta Signal K:hon |
@@ -150,10 +150,11 @@ erittäin suuri virta. Kytkin on tarkoitettu vain hätätilanteeseen, eikä sit�
 Merkitse se selvästi. Sopivuus valitun BMS:n kanssa **⚠ tarkista** (osa BMS:istä katkaisee
 suuren latausvirran takia).
 
-### 3.3 Vaihtoehto: P3 käynnistysakuilta (selvitetty 2026-10-31)
+### 3.3 P3 käynnistysakuilta (päätetty 2026-10-31)
 
 Kysymys [omistaja 2026-10-31]: syötetäänkö ohjauksen varapumppu P3 käynnistysakuilta
-käyttöakuston sijaan, koska P3 ei käy koko aikaa täydellä teholla. Ei päätöstä.
+käyttöakuston sijaan, koska P3 ei käy koko aikaa täydellä teholla. **Päätetty 2026-10-31:** P3
+syötetään käynnistysakuilta ilman valintakytkintä [omistaja 2026-10-31, [decisions.md](../../decisions.md)].
 
 **Kuormitus [laskelma, ⚠ arviot]:** P3 (24 V, 2,5 kW, noin 100 A täydellä teholla) käy varaohjauksessa
 jatkuvasti, mutta täyttä painetta tarvitaan vain ohjattaessa. Kun ruoria ei käännetä, öljy kiertää
@@ -161,7 +162,7 @@ pienellä paineella, ja moottorin virta on arviolta 20–40 % täydestä. Jos ke
 nykyinen 65 A:n laturi (noin 1,8 kW) kattaa sen, kun kone käy. Pumpun kierrostilavuus ja moottorin
 tyyppikilpi ovat **⚠ ei tiedossa** ([hydraulics/current-system.md](../../hydraulics/current-system.md)).
 
-| | P3 käyttöakustolta (nykyinen ehdotus) | **P3 käynnistysakuilta** |
+| | P3 käyttöakustolta (aiempi ehdotus) | **P3 käynnistysakuilta (valittu)** |
 |---|---|---|
 | BMS | P3 on käyttöakuston BMS:n takana. P3:n käynnistyspiikki ja invertteri yhtä aikaa voivat laukaista MOSFET-BMS:n, ja yksi MB31-akku kestää vain noin 157 A ([inverter-bms.md](inverter-bms.md)) | **Ei BMS:ää.** Lyijyakku kestää käynnistyspiikit hyvin. Käyttöakuston BMS:n kuormitus pienenee noin 100 A, joten edullinen JK-BMS käy paremmin |
 | P1:n hihna katkeaa, kone käy | Toinen laturi (150–175 A) lataa käyttöakustoa | 65 A:n laturi lataa suoraan käynnistysakkuja, joten kone kattaa P3:n keskivirran (**⚠ arvio**) |
@@ -169,7 +170,7 @@ tyyppikilpi ovat **⚠ ei tiedossa** ([hydraulics/current-system.md](../../hydra
 | Käyttöakuston vika (BMS katkaisee) | P3 vain hätärinnankytkimellä | P3 toimii normaalisti |
 | Kaapeli | PJ-02 | Lyhyt: käynnistysakut ovat samassa paikassa konehuoneen styyrpuurissa |
 
-**Ehdotus (ei päätös, päivitetty 2026-10-31):** P3 käynnistysakuilta **ilman erillistä valintakytkintä**,
+**Päätös:** P3 käynnistysakuilta **ilman erillistä valintakytkintä**,
 koska ohjausta tarvitaan vain koneen käydessä [omistaja 2026-10-31]. Hinauksen varalle riittää
 hätärinnankytkin. Lisäksi:
 
@@ -182,8 +183,8 @@ hätärinnankytkin. Lisäksi:
 - P3 sammutetaan, kun kone sammuu (ohje ohjauspaikalle; automaattinen katkaisu koneen
   käyntitiedosta on mahdollinen lisä, **⚠ ei päätetty**).
 
-**Turvallisuus:** P3 on ohjauksen varajärjestelmä. Valintakytkimen asento ja hälytykset kuvataan
-ohjauspaikan ohjeeseen, ja ratkaisu tarkastutetaan pätevällä sähköasentajalla ennen käyttöä.
+**Turvallisuus:** P3 on ohjauksen varajärjestelmä. Hätärinnankytkimen käyttö hinauksessa, P3:n
+sammutus koneen sammuessa ja hälytykset kuvataan ohjauspaikan ohjeeseen, ja ratkaisu tarkastutetaan pätevällä sähköasentajalla ennen käyttöä.
 
 ## 4. Sulakkeet ja kaapelit
 
@@ -405,7 +406,11 @@ sähköurakoitsijan kanssa ajoissa.
   maadoitettu koneen runkoon?
 - [ ] **Veneellä:** mistä koneen ohjausyksikkö saa nyt virtansa?
 - [ ] **Veneellä:** P3:n moottorin tyyppikilpi (virta, käynnistysvirta jos ilmoitettu)
-- [ ] P3:n syöttö: käyttöakusto (PJ-02) vai käynnistysakut (kohta 3.3, ehdotus ilman valintakytkintä)? Mittaa P3:n virta tyhjäkierrossa ja ohjattaessa
+- [x] P3:n syöttö: käynnistysakut ilman valintakytkintä [omistaja 2026-10-31]
+- [ ] **Veneellä:** P3:n virta pihtivirtamittarilla tyhjäkierrossa ja ohjattaessa (vahvistaa keskivirta-arvion)
+- [ ] Käynnistysakkujen kapasiteetti riittää P3:lle; tarvittaessa suuremmat AGM-akut
+- [ ] Käynnistysakkujen jännitteen mittaus ja hälytys Signal K:hon
+- [ ] P3:n automaattinen katkaisu koneen sammuessa: tarvitaanko?
 - [ ] Ideaalidiodin ja hätärinnankytkimen valinta tärkeiden kuormien kiskolle
 - [ ] Pilssihälytys ja yläveden hälytin: laite ja liitäntä Signal K:hon
 - [ ] Mitkä piirit ohjataan PDM:llä ([current-system.md 5](../current-system.md#5-avoimet-kysymykset))

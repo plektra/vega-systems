@@ -566,8 +566,9 @@ dieselgeneraattoria tarvita.
 
    Mitoitus ja itse kootut kennovaihtoehdot: [house-battery.md](house-battery.md).
 
-   Ajo lataa täyden vuorokauden kulutuksen noin 2–2,5 tunnissa. Iso akusto parantaa samalla ohjauksen
-   2,5 kW:n sähköisen varapumpun käyttöaikaa ([current-system.md](../current-system.md#3-suuret-dc-kuormat)).
+   Ajo lataa täyden vuorokauden kulutuksen noin 2–2,5 tunnissa. Ohjauksen 2,5 kW:n sähköinen
+   varapumppu P3 syötetään käynnistysakuilta (päätös 2026-10-31); käyttöakusto on sen varalla
+   hinauksessa ([dc-distribution.md 3.3](dc-distribution.md#33-p3-käynnistysakuilta-päätetty-2026-10-31)).
 2. **Dieselgeneraattoria ei suositella,** koska ankkurissa ollaan enintään alle vuorokausi ajamatta
    [omistaja 2026-10-29]. **Päätös on omistajien mukaan vielä auki** [omistaja 2026-10-29], joten
    paapuurin tila pidetään varattuna.

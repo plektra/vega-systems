@@ -78,7 +78,7 @@ sen jälkeen noin 60 % (termostaatti), **⚠ arvio**.
 | Lataus maasähköllä (noin 2,9 kW) | noin 4,5–5 h | noin 6,5 h |
 
 **Johtopäätös:** 16 kWh ei riitä neljän tunnin saunaan. Todennäköisellä kulutuksella akusto
-tyhjenisi lähes loppuun (95 %), jolloin ohjauksen sähköiselle varapumpulle P3 ei jäisi varaa.
+tyhjenisi lähes loppuun (95 %), jolloin akustolla ei olisi varaa esimerkiksi P3:lle hinauksessa (P3 on normaalisti käynnistysakuilla, päätös 2026-10-31).
 Vaihtoehdot:
 
 1. **Akusto noin 24 kWh** (24 × MB31, 8S3P eli kolmas 8S-akku): kennoja noin 1 040 € lisää
@@ -123,8 +123,8 @@ datalehdistä ennen tilausta. MB31:n latausalue on 0 (tai 2) – 60 °C, purku �
 
 **Virtojen riittävyys** [laskelma]: 3,5 kW:n invertteri ottaa noin 160 A, 24 V:n kuormat
 hetkellisesti enintään noin 50–90 A (valot noin 46 A, pilssipumput enintään noin 38 A, jos ne ovat
-käyttöakustolla) ja hydrauliikan varapumppu noin 100 A. Kaikki yhtä aikaa noin 300–350 A, mikä on
-628 Ah:n akustolle noin 0,5 C, eli kennojen jatkuvan virran rajalla. Tavallisessa käytössä virrat
+käyttöakustolla). Hydrauliikan varapumppu P3 (noin 100 A) syötetään käynnistysakuilta (päätös
+2026-10-31). Kaikki yhtä aikaa noin 200–250 A, mikä on 628 Ah:n akustolle noin 0,3–0,4 C. Tavallisessa käytössä virrat
 ovat selvästi pienempiä.
 
 ### Suositus (ei päätös)

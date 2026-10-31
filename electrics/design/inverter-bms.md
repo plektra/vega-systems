@@ -2,7 +2,7 @@
 
 > **Tila:** Selvitys, aloitettu 2026-10-31. Ei päätöstä. Hinnat on haettu verkkokaupoista ja
 > keskustelupalstoilta 2026-10-31. Dollarihinnat on muunnettu kertoimella noin 0,9 €/USD (**⚠ arvio**).
-> Ennen tilausta arvot tarkistetaan valmistajilta.
+> Ennen tilausta arvot tarkistetaan valmistajilta. Päivitetty 2026-10-31: P3 käynnistysakuilla.
 
 Tavoite: valita invertterilaturi ja käyttöakuston BMS niin, että ne toimivat yhdessä toisen laturin
 säätimen kanssa. Lähtökohdat:
@@ -26,16 +26,15 @@ Kokonaisuus tarkastutetaan pätevällä sähköasentajalla.
 |---|---|
 | **Ennakkovaroitus latauslähteille ennen katkaisua** | Jos BMS katkaisee akun laturin ladatessa, laturin jännite piikkaa (load dump) ja voi rikkoa elektroniikkaa. Laturi ja invertterilaturi pysäytetään ensin (Alpha Pro III: Reg on -johdin tai MasterBus "Stop charge"; invertterilaturi: väylä). Sterling APD24 on lisäsuoja |
 | Latauksen esto alle 0 °C:ssa | LiFePO4 ei saa latautua pakkasella |
-| Riittävä virta | Invertteri noin 160 A, P3 noin 100 A, muut 24 V:n kuormat hetkellisesti 50–90 A: yhteensä noin 300–350 A ([house-battery.md](house-battery.md)) |
+| Riittävä virta | Invertteri noin 160 A ja muut 24 V:n kuormat hetkellisesti 50–90 A: yhteensä noin 200–250 A. P3 (noin 100 A) on käynnistysakuilla (päätös 2026-10-31) |
 | Valvonta | Kennojännitteet, varaustila ja hälytykset Signal K:hon |
 
-**Kahden akun erityispiirre:** jos toinen akku katkaisee, koko kuorma siirtyy toiselle. Jos kumpikin
-BMS kestää vain 200 A, noin 260 A:n kuorma (invertteri ja P3) laukaisee myös jäljelle jääneen
-akun. Lisäksi yksi MB31-akku (314 Ah) kestää kennojen puolesta jatkuvasti vain noin 157 A (0,5 C,
-[house-battery.md](house-battery.md#2-itse-kootut-kennot)). **Kun vain toinen akku on käytössä,
-kuormaa on siis rajoitettava BMS:stä riippumatta**, esim. invertterin purkuvirran rajalla (DVCC)
-ja niin, ettei invertteriä ja P3:a käytetä täysillä yhtä aikaa [laskelma]. Vaihtoehtoisesti P3
-syötetään käynnistysakuilta, jolloin ongelma pienenee selvästi ([dc-distribution.md 3.3](dc-distribution.md#33-vaihtoehto-p3-käynnistysakuilta-selvitetty-2026-10-31)).
+**Kahden akun erityispiirre:** jos toinen akku katkaisee, koko kuorma siirtyy toiselle. Yksi MB31-akku
+(314 Ah) kestää kennojen puolesta jatkuvasti noin 157 A (0,5 C, [house-battery.md](house-battery.md#2-itse-kootut-kennot)),
+ja invertteri ottaa täydellä teholla noin 160 A. **Kun vain toinen akku on käytössä, invertterin
+purkuvirta rajataan** (esim. DVCC) [laskelma]. P3:n siirto käynnistysakuille (päätös 2026-10-31,
+[dc-distribution.md 3.3](dc-distribution.md#33-p3-käynnistysakuilta-päätetty-2026-10-31)) poisti
+aiemman ongelman, jossa invertteri ja P3 yhdessä (noin 260 A) olisivat ylittäneet 200 A:n BMS:n.
 
 ## 2. BMS-vaihtoehdot
 
@@ -47,8 +46,8 @@ syötetään käynnistysakuilta, jolloin ongelma pienenee selvästi ([dc-distrib
 | Releet laturin säätimelle | Kuivakosketin **⚠ tarkista** valitusta mallista | Ohjelmoitavat releet (lataus, purku, hälytys); niillä katkaistaan Alpha Pro III:n Reg on ennen kontaktoria |
 | Hinta / akku | noin 190–210 € ([Fruugo](https://www.fruugo.co.nz/smart-jk-b2a8s20p-with-bt-can-rs485-8s-24v-200a-lifepo4-li-ion-lto-battery-3s-8s-2a-active-balance-jk-b/p-331614392-731314084)) | 16S-mallin hinta noin 540 € ([Current Connected](https://www.currentconnected.com/item/rec-bms/)); 8S:n hinta **⚠ ei tiedossa**. Lisäksi kontaktori ja esivarauspiiri, hinnat **⚠ ei tiedossa** |
 | Kahdelle akulle | **noin 400 €** | **noin 1 100 € ja kaksi kontaktoria** (**⚠ arvio**) |
-| Plussat | Halpa, aktiivinen balansointi, Bluetooth | Veneisiin yleinen; kontaktori ei laukea lyhyistä virtapiikeistä (P3:n käynnistys); releet latauslähteille |
-| Miinukset | 200 A:n raja ja käynnistysvirtapiikit (P3) voivat laukaista BMS:n; valmistajan tuki ja dokumentaatio heikko | Kallis; käyttäjät raportoivat kytkentäongelmia esivarauksen kanssa ([Victron-yhteisö](https://communityarchive.victronenergy.com/questions/83792/rec-active-bms-relay-for-contactor.html)) |
+| Plussat | Halpa, aktiivinen balansointi, Bluetooth; 200 A riittää, kun P3 on käynnistysakuilla | Veneisiin yleinen; kontaktori ei laukea lyhyistä virtapiikeistä; releet latauslähteille |
+| Miinukset | 200 A:n raja (invertterin huippu yli 300 A jaetaan kahden akun kesken); valmistajan tuki ja dokumentaatio heikko | Kallis; käyttäjät raportoivat kytkentäongelmia esivarauksen kanssa ([Victron-yhteisö](https://communityarchive.victronenergy.com/questions/83792/rec-active-bms-relay-for-contactor.html)) |
 
 Molemmat toimivat Mastervoltin kanssa vain releiden kautta (kohta 3). Victronin oma Lynx Smart BMS
 ja VE.Bus BMS toimivat vain Victronin omien akkujen kanssa, joten ne eivät sovi itse koottuun akustoon.
@@ -84,11 +83,9 @@ akusto puuttuvat.
    pieni aggregaatti todennäköisesti toimii PowerAssistin kanssa, ja tiedot näkyvät Signal K:ssa.
    Mastervolt on perusteltu vain, jos koko järjestelmä halutaan MasterBusiin (Alpha-laturi ja
    -säädin), jolloin BMS:n kytkentä on varmistettava Mastervoltilta.
-2. **BMS:ksi REC ja kontaktorit, jos budjetti sallii; JK, jos ei.** RECin kontaktori ei laukea P3:n
-   käynnistyspiikistä, ja sen releet pysäyttävät laturin ennen katkaisua. JK on noin 700 € halvempi,
-   mutta silloin:
-   - P3:n käynnistysvirta pitää tarkistaa JK:n piikkivirtarajaa vasten (P3:n tyyppikilpi **⚠ ei
-     tiedossa**), ja
+2. **BMS:ksi JK riittää nyt, kun P3 on käynnistysakuilla (päivitetty 2026-10-31); REC on varmempi,
+   jos budjetti sallii.** JK on noin 700 € halvempi. RECin releet pysäyttävät laturin valmiiksi ennen
+   katkaisua. JK:n kanssa:
    - laturin säädin pysäytetään ennen katkaisua: Reg on -johdin JK:n kuivakoskettimelta (jos
      mallissa on sellainen) tai Wakespeed WS500 CAN-väylässä, ja Sterling APD24 lisäsuojana.
 3. **Toinen laturi:** Prestolite ja Alpha Pro III (halvin) Reg on -ohjauksella, tai Wakespeed WS500,
