@@ -78,7 +78,7 @@ suuria lähtöjä ja alakeskusten syötöt. Arkikäytössä siihen ei kosketa.
 | PJ-04 Komentosillan alakeskus | mitoitus noin 60 A **⚠ arvio** | Kaikki valot yhtä aikaa noin 35 A [current-system 3.2] ja elektroniikka |
 | PJ-05 Konehuoneen alakeskus | mitoitus noin 40 A **⚠ arvio** | Pumput, tietokoneet, Mean Well -muuntimet, hydrauliikan ohjaus |
 | PJ-06 Tärkeiden kuormien kisko | ks. kohta 3 | Lisäksi syöttö käynnistysakuilta |
-| PJ-07–08 Varalähdöt | – | Aurinkosäädin tai kolmas akku ([house-battery.md](house-battery.md#suositus-ei-päätös)); polttava WC hylätty 2026-10-31 |
+| PJ-07–08 Varalähdöt | – | PJ-07: kolmas 8S-akku (optio pidetään auki 2026-10-31, tila ja lähtö varataan), PJ-08: aurinkosäädin ([house-battery.md](house-battery.md#suositus-ei-päätös)); polttava WC hylätty 2026-10-31 |
 
 **Shuntti** (akkumonitori) tulee käyttöakuston miinukseen niin, että kaikki kuormat ja laturit
 kulkevat sen kautta. Muuten kulutusta ei voi mitata.

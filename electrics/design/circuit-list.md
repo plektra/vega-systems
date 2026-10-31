@@ -38,7 +38,8 @@ Sama tunnus tulee kaapelin merkintään, keskuksen kylttiin ja `loads.yaml`:iin 
 | PJ-04 | KS-alakeskuksen syöttö | mitoitus noin 60 A | 60 A | vähintään 25 mm² (6 m) | |
 | PJ-05 | KH-alakeskuksen syöttö | mitoitus noin 40 A | 40 A | vähintään 4–6 mm² (2 m), kuormitettavuus ratkaisee | Kaikki KH:n kuormat yhtä aikaa noin 50 A; käytännössä eivät käy yhtä aikaa (**⚠ arvio**) |
 | PJ-06 | TK:n syöttö käyttöakustolta (ideaalidiodi) | noin 40–45 A | 50 A | pituuden mukaan | Pilssipumput yhtä aikaa noin 38 A |
-| PJ-07–08 | Varalähdöt | – | – | – | Aurinkosäädin, kolmas akku |
+| PJ-07 | Varalähtö: kolmas 8S-akku (optio) | – | oma Class T tai vastaava akun vieressä | akuston mukaan | Optio pidetään auki (2026-10-31): tila ja lähtö varataan nyt |
+| PJ-08 | Varalähtö: aurinkosäädin | – | – | – | |
 | KA-01 | Käynnistinmoottori | **⚠ ei tiedossa** | **⚠ tarkista**, saako käynnistyskaapelin jättää ilman sulaketta | nykyinen | Pysyy ennallaan |
 | KA-02 | Koneen ohjausyksikkö | **⚠ ei tiedossa** | **⚠ ei tiedossa** | nykyinen | **Veneellä:** mistä saa nyt virtansa |
 | KA-03 | TK:n syöttö käynnistysakuilta (ideaalidiodi, pääkytkimen ohi) | noin 40–45 A | 50 A akun vieressä | pituuden mukaan | |

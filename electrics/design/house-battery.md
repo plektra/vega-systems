@@ -90,8 +90,10 @@ Vaihtoehdot:
 3. **Pitkä sauna vain maasähköllä tai ajopäivän päätteeksi,** ankkurissa 2 h. Ei lisäkustannusta.
 
 Invertteri ei muutu: teho on sama, vain aika pitenee. Kiukaan noin 106 A on 16 kWh:n akustolle
-noin 0,17 C, joten neljän tunnin käyttö ei rasita kennoja. Akuston laajennusvara (lisälähtö ja
-tila kolmannelle akulle) kannattaa varata jo nyt, jos pitkä sauna on todennäköinen.
+noin 0,17 C, joten neljän tunnin käyttö ei rasita kennoja. **Päätetty 2026-10-31:** optio kolmannesta 8S-akusta (noin 24 kWh yhteensä) pidetään auki
+[omistaja 2026-10-31]. Saunan pituudesta ei ole päätetty. Siksi akusto kootaan kahtena
+erillisenä 8S-akkuna, ja konehuoneesta varataan tila kolmannelle akulle sekä pääjakeluun lähtö
+(PJ-07) ja BMS-ohjaukselle valmius.
 
 ## 2. Itse kootut kennot
 
@@ -194,7 +196,8 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 - [x] Tuleeko jätteet polttava WC: ei, tilalle septi-WC maseraattorilla [omistaja 2026-10-31]; noin 16 kWh riittää
 - [x] Liesi: kaasuliesi; uuni: yhdistetty mikro- ja sähköuuni [omistaja 2026-10-31]
 - [x] Mahtuuko akusto konehuoneeseen: kyllä, etenkin jos generaattorille ei tarvitse varata tilaa (paapuurin puoli) [omistaja 2026-10-29]
-- [ ] Akuston tarkka paikka konehuoneessa; riippuu osin generaattoripäätöksestä
+- [ ] Akuston tarkka paikka konehuoneessa; riippuu osin generaattoripäätöksestä. Varataan tila myös kolmannelle 8S-akulle (noin 574 × 174 × 207 mm kennoja, noin 45 kg, ilman koteloa) [laskelma]
+- [ ] Saunan pituus ankkurissa: 2 h vai 4 h? Ratkaisee, hankitaanko kolmas akku
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?
 - [ ] BMS:n valinta (releohjattu vai MOSFET, latauksen eston lähdöt, valvontaliitäntä)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
