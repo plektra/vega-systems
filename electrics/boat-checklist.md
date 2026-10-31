@@ -42,6 +42,8 @@ jännitteisestä piiristä. Konehuoneessa varo pyöriviä osia, kun kone käy.
   ([dc-distribution.md 3.3](design/dc-distribution.md#33-p3-käynnistysakuilta-päätetty-2026-10-31))
 - [ ] **Käynnistysakkujen lepojännite**, kun CTEK on ollut irti muutaman tunnin.
 - [ ] **Hakuvalon etulasin halkaisija** tarkemmin (arvio noin 350 mm).
+- [ ] **Konehuoneen lämpötila ajossa** akuston mahdollisessa paikassa (min–max-lämpömittari pitkän
+  ajon ajaksi). Ratkaisee akuston paikan ([house-battery.md 3.1](design/house-battery.md#31-kotelointi-selvitetty-2026-10-31)).
 
 ## 3. Tyyppikilvet ja merkinnät (valokuva)
 
