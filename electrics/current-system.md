@@ -43,7 +43,7 @@ hyvä tarkastuttaa pätevällä sähköasentajalla.
 
 | Kuorma | Teho / virta | Huomiot | Lähde |
 |---|---|---|---|
-| Hydrauliikan varapumppu (ohjauksen vara) | 2,5 kW, 24 V (~100 A tai yli) | 65 A:n laturi ei jaksa syöttää sitä pitkään | [blogi 2017-07-04] |
+| Hydrauliikan varapumppu (ohjauksen vara) | 2,5 kW, 24 V (~100 A tai yli) | Syötetään käynnistysakuilta (päätös 2026-10-31, [design/dc-distribution.md 3.3](design/dc-distribution.md#33-p3-käynnistysakuilta-päätetty-2026-10-31)). Täyttä tehoa vain ohjattaessa; keskivirta arviolta 40–50 A, jonka 65 A:n laturi kattaa koneen käydessä (**⚠ arvio**, mitataan) | [blogi 2017-07-04], [omistaja 2026-10-31] |
 | ~~PTO-kytkimen toimilaite~~ | – | Ei tarpeen: PTO-kytkintä ei tule (päätös 2026-10-23), P2 on PVH57 (päätös 2026-10-27) | [hydraulics/design/archive/p2-pump-options.md](../hydraulics/design/archive/p2-pump-options.md) |
 | Keulapotkuri | — | Hydraulinen, PTO-vetoinen; sähkökuormana vain venttiilien solenoidit | [blogi 2018-11-12] |
 | Pilssipumput SEAFLO 01-sarja 3500 GPH, malli SFBP2-G3500-01, 3 kpl (**olemassa**) | 24 V; 8,0 A nimellinen (≈ 190 W), enintään 12,5 A (≈ 300 W) kukin; kaikki yhtä aikaa enintään noin 38 A. Virta kasvaa nostokorkeuden mukana. Käynnistysvirtaa ja sulakekokoa ei kerrota **⚠ ei tiedossa** | Erilliset kohokytkimet (asennettu); pumppu ei itse ole automaattinen. Käsin pakotettu käyttö ESP32-PDM:llä rinnan kohokytkimen kanssa (suunnitelma). Sijainnit ja syöttötapa **⚠ ei tiedossa** | [omistaja 2026-10-29], [omistaja 2026-10-30], [datalehti SEAFLO 01 Series 3500GPH](https://www.seaflomarinerv.com/index.php?m=home&c=View&a=index&aid=517) |
