@@ -88,13 +88,15 @@ Vaihtoehdot:
    nimellisvirrastaan (välityssuhde **⚠ ei tiedossa**, ks. [ac-power-source.md 4](ac-power-source.md#4-suositus-ei-päätös)).
    Esimerkiksi 80 A × 28 V ≈ 2,2 kW kattaisi lähes koko kiukaan tehon (**⚠ arvio**).
 3. **Pitkä sauna vain maasähköllä tai ajopäivän päätteeksi,** ankkurissa 2 h. Ei lisäkustannusta.
-4. **Kannettava bensiiniaggregaatti (noin 1,8 kW) saunan aikana:** akustosta kuluu neljän tunnin
+4. **Kannettava bensiiniaggregaatti (noin 1,8 kW) saunan aikana** (**päätetty 2026-10-31: Timco SS2200i**): akustosta kuluu neljän tunnin
    saunaan vain noin 3 kWh, ja saunapäivä jää noin 70 %:iin 16 kWh:sta. Hinta noin 370–1 700 €;
    bensiinin säilytys ja häkä pitää hoitaa, ks. [ac-power-source.md, kohta D](ac-power-source.md#d-kannettava-bensiiniaggregaatti-varalataukseen-selvitetty-2026-10-31).
 
 Invertteri ei muutu: teho on sama, vain aika pitenee. Kiukaan noin 106 A on 16 kWh:n akustolle
 noin 0,17 C, joten neljän tunnin käyttö ei rasita kennoja. **Päätetty 2026-10-31:** optio kolmannesta 8S-akusta (noin 24 kWh yhteensä) pidetään auki
-[omistaja 2026-10-31]. Saunan pituudesta ei ole päätetty. Siksi akusto kootaan kahtena
+[omistaja 2026-10-31]. Saunan pituudesta ei ole päätetty. Varalataukseen hankitaan Timco SS2200i
+(päätös 2026-10-31), jolla neljän tunnin sauna onnistuu 16 kWh:n akustolla (noin 70 %:n käyttö), joten
+kolmatta akkua ei sitä varten todennäköisesti tarvita. Siksi akusto kootaan kahtena
 erillisenä 8S-akkuna, ja konehuoneesta varataan tila kolmannelle akulle sekä pääjakeluun lähtö
 (PJ-07) ja BMS-ohjaukselle valmius.
 

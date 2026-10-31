@@ -159,7 +159,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 
 - [x] Vahvista 24 V:n DC-jännite: 24 V [omistaja 2026-10-27]
 - [ ] **Veneellä seuraavalla käynnillä:** käynnistysakkujen tyyppikilvet (tyyppi, esim. märkä tai AGM; kapasiteetti Ah; kylmäkäynnistysvirta CCA; ikä tai valmistuspäivä), kytkentä (luultavasti 2 × 12 V sarjassa **⚠ tarkista**) ja lepojännite, kun CTEK on ollut irti muutaman tunnin. Valokuva kilvistä riittää. (Käyttöakut purettu [omistaja 2026-10-29])
-- [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit (maasähköstä nyt CTEK MULTI XT 14000 ylläpitolataukseen [omistaja 2026-10-29])
+- [ ] Latauslähteet: laturi(t), maasähkölaturi, aurinkopaneelit (maasähköstä nyt CTEK MULTI XT 14000 ylläpitolataukseen [omistaja 2026-10-29]). Varalataukseen kannettava bensiiniaggregaatti Timco SS2200i (päätös 2026-10-31), ks. [design/ac-power-source.md](design/ac-power-source.md#d-kannettava-bensiiniaggregaatti-varalataukseen-selvitetty-2026-10-31)
 - [x] Mitä akkuja CTEK lataa: käynnistysakkuja, koska käyttöakkuja ei ole [omistaja 2026-10-29]
 - [ ] Jääkö CTEK käynnistysakkujen ylläpitolataukseen, kun uusi (litium)käyttöakusto hankitaan?
 - [x] Generaattori: ei asennettu [omistaja 2026-10-28]; vaihtoehdot selvityksessä [design/ac-power-source.md](design/ac-power-source.md)

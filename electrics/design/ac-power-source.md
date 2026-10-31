@@ -1,6 +1,6 @@
 # AC-sähkön lähde: hydrauligeneraattori, dieselgeneraattori vai akusto ja invertteri
 
-> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-31 (kannettava bensiiniaggregaatti, kohta D; kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC polttavan WC:n tilalle; akustotarve laskettu uudelleen). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
+> **Tila:** Selvitys, aloitettu 2026-10-28, päivitetty 2026-10-31 (Timco SS2200i varalataukseen päätetty, kohta D; kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC polttavan WC:n tilalle; akustotarve laskettu uudelleen). Ei päätöstä. Hinnat puuttuvat; ne tarkistetaan
 > tarjouksista ennen päätöstä.
 
 ## 1. Tarve
@@ -490,7 +490,8 @@ selvitetty**).
 ### D. Kannettava bensiiniaggregaatti varalataukseen (selvitetty 2026-10-31)
 
 Kysymys [omistaja 2026-10-31]: edullinen kannettava bensiinikäyttöinen invertteriaggregaatti, jolla
-akustoa voi tarvittaessa ladata ankkurissa. Ei päätöstä.
+akustoa voi tarvittaessa ladata ankkurissa. **Päätetty 2026-10-31: hankitaan Timco SS2200i Supersilent
+varalataukseen** [omistaja 2026-10-31, [decisions.md](../../decisions.md)]. Ehdot ja tarkistettavat asiat alla.
 
 | Malli | Teho | Hinta (haettu 2026-10-31) |
 |---|---|---|
@@ -677,7 +678,10 @@ tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900
 - [x] Kuinka monta vuorokautta ollaan ankkurissa ajamatta: enintään alle vuorokausi [omistaja 2026-10-29]
 - [ ] Kuinka pitkä ajo on tyypillisesti ankkuripäivän jälkeen (riittääkö noin 2,5 h lataukseen)?
 - [ ] Dieselgeneraattori: päätös auki [omistaja 2026-10-29]
-- [ ] Kannettava bensiiniaggregaatti varalataukseen (kohta D): hankitaanko, ja missä bensiini säilytetään turvallisesti?
+- [x] Kannettava bensiiniaggregaatti varalataukseen: Timco SS2200i [omistaja 2026-10-31]
+- [ ] Aggregaatin ja bensiinin säilytyspaikka kannella (tuulettuva, laidan yli valuva kaappi) ja käyttöpaikka (pakokaasut poispäin aukoista)
+- [ ] Häkävaroittimet makuutiloihin
+- [ ] Maasähköpistokkeen ja aggregaatin välinen johto ja liitin (aggregaatin pistorasia → veneen maasähköpistoke)
 - [ ] Voiko valitun invertterilaturin tulovirran rajan asettaa noin 7 A:iin, ja toimiiko se kelluvan nollan aggregaatin kanssa?
 - [ ] Laturin hihnapyörien välityssuhde ja valitun laturin virtakäyrä: paljonko se lataa 700 rpm:llä ja 1 000–1 200 rpm:llä?
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
