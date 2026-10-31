@@ -1,6 +1,8 @@
 # Sähkönjako: keskukset, sulakkeet ja tärkeiden kuormien syöttö
 
-> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-30 (pilssipumppujen virrat). Ei päätöstä. Kaapelien pituudet ovat **arvioita**, ja ne
+> **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31. **Päätetty 2026-10-31:** kolmitasoinen
+> rakenne ja tärkeiden kuormien kisko (kohdat 2 ja 3), tavalliset piirit ESP32-PDM:llä (kohta 4.3) ja
+> miinuksen yksi yhteyspiste runkoon (kohta 5). Sulaketyyppi ja keskusten paikat ovat auki. Kaapelien pituudet ovat **arvioita**, ja ne
 > korvataan veneeltä mitatuilla. Akuston koko, invertteri ja toinen laturi ovat vielä auki
 > ([ac-power-source.md](ac-power-source.md), [house-battery.md](house-battery.md)), joten niiden
 > lähdöille varataan tässä vain paikka.
@@ -29,7 +31,7 @@ sähköasentajalla ennen rakentamista.**
 
 ## 2. Ehdotettu rakenne
 
-Kolme tasoa: **pääjakelu** akkujen vieressä, **alakeskukset** siellä, missä kuormat ovat, ja
+**Päätetty 2026-10-31** [omistaja 2026-10-31, [decisions.md](../../decisions.md)]. Kolme tasoa: **pääjakelu** akkujen vieressä, **alakeskukset** siellä, missä kuormat ovat, ja
 **tärkeiden kuormien kisko**, joka saa virran kummaltakin akustolta.
 
 ```mermaid
@@ -73,7 +75,7 @@ suuria lähtöjä ja alakeskusten syötöt. Arkikäytössä siihen ei kosketa.
 | PJ-01 Invertterilaturi | noin 160 A jatkuva, huippu yli 300 A [ac-power-source] | Oma sulake; kaapeli ja sulake valmistajan ohjeen mukaan (**⚠ tarkista** valitun laitteen käyttöohjeesta) |
 | PJ-02 Ohjauksen varapumppu P3 | noin 100 A tai yli; käynnistysvirta suurempi **⚠ ei tiedossa** | Turvallisuuskriittinen, ks. kohta 3. Moottorin tyyppikilpi **⚠ tarkista** |
 | PJ-03 Toinen laturi | 150–175 A (tuleva) | Kytkentä ja sulake laturin ohjeen mukaan; varaa paikka nyt |
-| PJ-04 Komentosillan alakeskus | mitoitus noin 60 A **⚠ arvio** | Kaikki valot yhtä aikaa noin 46 A [current-system 3.2] ja elektroniikka |
+| PJ-04 Komentosillan alakeskus | mitoitus noin 60 A **⚠ arvio** | Kaikki valot yhtä aikaa noin 35 A [current-system 3.2] ja elektroniikka |
 | PJ-05 Konehuoneen alakeskus | mitoitus noin 40 A **⚠ arvio** | Pumput, tietokoneet, Mean Well -muuntimet, hydrauliikan ohjaus |
 | PJ-06 Tärkeiden kuormien kisko | ks. kohta 3 | Lisäksi syöttö käynnistysakuilta |
 | PJ-07–08 Varalähdöt | – | Aurinkosäädin, kolmas akku tai polttava WC ([house-battery.md](house-battery.md#suositus-ei-päätös)) |
@@ -208,9 +210,10 @@ syöttö, pilssipumput ja suuret kuormat.
 | Alakeskusten lähdöt, helpoin | DC-automaattisulakkeet, jotka toimivat myös kytkiminä | Kalliimpia, mutta laukeamisen jälkeen piiri palautetaan napista |
 | PDM-lähdöt | Oma ESP32-PDM ([current-system.md 4](../current-system.md#4-valvonta-verkot-ja-tehonjako)) | Ohjaus ja virran mittaus Signal K:hon. **PDM:n edessä on silti sulake**, joka suojaa syöttökaapelin |
 
-**Suositus (ei päätös):** tärkeille kuormille DC-automaattisulakkeet tai sulakkeet ja tavalliset
-kytkimet, jotta ne toimivat ilman ohjelmistoa. Muut piirit voi ohjata PDM:llä
-lattasulakkeiden takaa. Se on edullista, ja kulutus näkyy Signal K:ssa.
+**Päätetty 2026-10-31:** tavalliset piirit ohjataan **ESP32-PDM:llä** [omistaja 2026-10-31]. Sulakkeiksi
+joko lattasulakkeet tai DC-automaattisulakkeet; valinta on auki ja riippuu kustannuksista.
+Tärkeät kuormat (TK) eivät ole PDM:n takana: niille sulakkeet tai DC-automaattisulakkeet ja
+tavalliset kytkimet, jotta ne toimivat ilman ohjelmistoa (kohta 3).
 
 ### 4.4 Piirien tunnukset
 
@@ -239,8 +242,9 @@ kaapelointia.
 rungon välillä. Jos mitattu arvo on lähellä nollaa, yhteys on olemassa. Selvitä sitten, onko yhteys
 vain koneen kautta.
 
-**Suositus (ei päätös):** yksi tarkoituksellinen yhteyspiste koneen runkoon. Muut miinukset
-viedään eristettyinä miinuskiskoon. Päätös tehdään pätevän sähköasentajan kanssa.
+**Päätetty 2026-10-31:** yksi tarkoituksellinen yhteyspiste koneen runkoon. Muut miinukset
+viedään eristettyinä miinuskiskoon [omistaja 2026-10-31]. Ennen kaapelointia mitataan veneellä,
+missä yhteys nyt on, ja ratkaisu tarkastutetaan pätevällä sähköasentajalla.
 
 ## 6. 230 V:n jakelu
 
@@ -272,20 +276,24 @@ sähköurakoitsijan kanssa ajoissa.
 
 | Voidaan päättää nyt | Odottaa akuston, invertterin ja laturin valintaa |
 |---|---|
-| Keskusten määrä ja paikat (PJ, KS, KH, mastojakorasia) | Pääsulakkeen arvo ja suurten kaapeleiden koko |
-| Tärkeiden kuormien kisko ja niiden syöttö kummaltakin akustolta | BMS:n ohjauskytkennät laturille ja invertterille |
-| Miinuksen ja rungon kytkentä | Toisen laturin kiinnike ja kaapelointi |
-| Sulaketyypit ja PDM:n rooli | Aurinkosäädin ja kolmas akku (varalähdöt) |
+| ~~Keskusten määrä~~ (päätetty 2026-10-31); paikat (PJ, KS, KH, mastojakorasia) | Pääsulakkeen arvo ja suurten kaapeleiden koko |
+| ~~Tärkeiden kuormien kisko ja niiden syöttö kummaltakin akustolta~~ (päätetty 2026-10-31) | BMS:n ohjauskytkennät laturille ja invertterille |
+| ~~Miinuksen ja rungon kytkentä~~ (päätetty 2026-10-31) | Toisen laturin kiinnike ja kaapelointi |
+| Sulaketyypit (auki); ~~PDM:n rooli~~ (päätetty 2026-10-31) | Aurinkosäädin ja kolmas akku (varalähdöt) |
 | Piirien tunnukset ja kaapelien merkintä | Vain maasähköllä toimivan piirin toteutus |
 | Kaapelireitit ja läpiviennit, myös mastoon | |
 
 ## 8. Avoimet kysymykset
 
-- [ ] **Keskusten paikat:** mihin komentosillan alakeskus mahtuu? Onko veneellä vanha keskus tai
+- [ ] **Keskusten paikat:** mihin komentosillan alakeskus mahtuu? (ei vielä tiedossa [omistaja 2026-10-31]) Onko veneellä vanha keskus tai
   kaapelointia, jota voi käyttää uudelleen?
 - [ ] **Kaapelireittien pituudet** suunnilleen metreinä: akut → komentosilta, komentosilta →
   maston huippu, akut → keula ja asuintilat, akut → pilssipumput
-- [ ] **Sulaketyyppi:** lattasulakkeet ja PDM (halvempi) vai DC-automaattisulakkeet (helpompi)?
+- [x] Kolmitasoinen rakenne ja tärkeiden kuormien kisko: päätetty [omistaja 2026-10-31]
+- [x] Miinus ja runko: yksi yhteyspiste koneen runkoon [omistaja 2026-10-31]
+- [x] PDM:n rooli: tavalliset piirit ESP32-PDM:llä [omistaja 2026-10-31]
+- [ ] **Sulaketyyppi PDM:n lähtöihin:** lattasulakkeet vai DC-automaattisulakkeet? Ratkaisee hinta;
+  hintavertailu tekemättä
 - [ ] **Veneellä:** resistanssi akun miinuksen ja rungon välillä; onko käynnistin ja laturi
   maadoitettu koneen runkoon?
 - [ ] **Veneellä:** mistä koneen ohjausyksikkö saa nyt virtansa?
