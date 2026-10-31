@@ -116,7 +116,11 @@ Kuormanhallinnan voisi tehdä omilla ESP32-PDM-moduuleilla ([current-system.md](
 3,5 kW:n invertteri ottaa 24 V:n akustosta täydellä teholla noin 160 A, mikä vaatii järeät kaapelit
 ja sulakkeet.
 
-#### Ehdokas: Mastervolt Mass Combi Ultra 24/3500-100 (230 V)
+> **Päätetty 2026-10-31:** invertterilaturiksi **Victron MultiPlus-II 24/5000/120-50 ja Cerbo GX**, BMS:ksi
+> **JK** ([inverter-bms.md](inverter-bms.md), [decisions.md](../../decisions.md)). Alla oleva Mass Combi
+> Ultra -kuvaus jää vertailuksi.
+
+#### Ehdokas: Mastervolt Mass Combi Ultra 24/3500-100 (230 V) (ei valittu)
 
 Omistajien harkitsema invertterilaturi [omistaja 2026-10-28]. Arvot ovat jälleenmyyjiltä, koska
 valmistajan sivu ei avautunut (**⚠ tarkista** datalehdestä), ks.
@@ -609,7 +613,7 @@ Ehdotus, ei päätös. Hinnat kohdista 2.2, 2.4 ja 2.5; sis. ALV, ellei toisin m
 | Akusto | 16 × EVE MB31 314 Ah, 8S2P (≈ 16 kWh), ks. [house-battery.md](house-battery.md); 8 × EVE MB56 628 Ah olisi ≈ 950–1 200 €, jos saatavilla | ≈ 2 080 € | 2 × Victron 25,6 V / 200 Ah (≈ 10 kWh) | ≈ 4 380 € |
 | BMS, kotelo, sulakkeet | Oma kokoonpano; BMS:ssä latauksenesto ennen katkaisua | **⚠ ei tiedossa** | Victronin erillinen BMS | **⚠ ei tiedossa** |
 | Toinen laturi ja säädin | Prestolite 24 V / 175 A ja Alpha Pro III | ≈ 1 304 € + 330–450 USD | Alpha 24/150 Evo ja Alpha Pro III | ≈ 2 862 € |
-| Invertterilaturi | Mass Combi Ultra 24/3500-100 | ≈ 3 126 € | sama | ≈ 3 126 € |
+| Invertterilaturi | Mass Combi Ultra 24/3500-100 (vertailu; valittu 2026-10-31 Victron MultiPlus-II 24/5000 ja Cerbo GX ≈ 2 000–2 700 €, ks. [inverter-bms.md](inverter-bms.md)) | ≈ 3 126 € | sama | ≈ 3 126 € |
 | Laturin varasuoja | Sterling APD24 | **⚠ ei tiedossa** | sama | **⚠ ei tiedossa** |
 | **Tiedossa olevat yhteensä** | | **≈ 6 900 €** (MB56:lla ≈ 6 000 €) | | **≈ 10 400 €** |
 | **Ilman invertterilaturia** (generaattorivertailuun) | | **≈ 3 700 €** (MB56:lla ≈ 2 600–2 900 €) | | **≈ 7 200 €** |
@@ -683,7 +687,7 @@ tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900
 - [ ] Aggregaatin ja bensiinin säilytyspaikka kannella (tuulettuva, laidan yli valuva kaappi) ja käyttöpaikka (pakokaasut poispäin aukoista)
 - [ ] Häkävaroittimet makuutiloihin
 - [ ] Maasähköpistokkeen ja aggregaatin välinen johto ja liitin (aggregaatin pistorasia → veneen maasähköpistoke)
-- [ ] Voiko valitun invertterilaturin tulovirran rajan asettaa noin 7 A:iin, ja toimiiko se kelluvan nollan aggregaatin kanssa?
+- [ ] Voiko MultiPlus-II 24/5000:n tulovirran rajan asettaa noin 7 A:iin PowerAssistin kanssa, ja toimiiko se kelluvan nollan aggregaatin kanssa? ([inverter-bms.md](inverter-bms.md))
 - [ ] Laturin hihnapyörien välityssuhde ja valitun laturin virtakäyrä: paljonko se lataa 700 rpm:llä ja 1 000–1 200 rpm:llä?
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [ ] Onko kotilaiturin maasähkö 1-vaiheinen 230 V, ja onko siinä vikavirtasuoja?
@@ -695,6 +699,6 @@ tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900
 - [x] Mahtuuko konehuoneeseen noin 16 kWh:n litiumakusto: kyllä, etenkin jos generaattorille ei tarvitse varata tilaa [omistaja 2026-10-29], ks. [house-battery.md](house-battery.md) (käynnistysakkujen tarkistus: [current-system.md](../current-system.md#5-avoimet-kysymykset))
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
 - [x] Pystyykö Alpha Pro III ottamaan vastaan BMS:n viestin: kyllä, MasterBus "Stop charge" -tapahtuma tai Reg on -johdin [käyttöohje Alpha Pro III]
-- [ ] Akuston ja BMS:n valinta: MLI Ultra (suora MasterBus) vai muu BMS ja MasterBusin digitaalitulomoduuli; BMS:ssä ennakkovaroitus ennen katkaisua. Vertailu: [inverter-bms.md](inverter-bms.md)
-- [ ] Voiko Mass Combi Ultra ottaa vastaan saman "Stop charge" -tapahtuman?
+- [x] Invertterilaturi ja BMS: Victron MultiPlus-II 24/5000/120-50, Cerbo GX ja JK-BMS [omistaja 2026-10-31], ks. [inverter-bms.md](inverter-bms.md)
+- [x] ~~Voiko Mass Combi Ultra ottaa vastaan "Stop charge" -tapahtuman?~~ Ei enää tarpeen (Victron valittu 2026-10-31)
 - [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)

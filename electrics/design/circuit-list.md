@@ -32,7 +32,7 @@ Sama tunnus tulee kaapelin merkintään, keskuksen kylttiin ja `loads.yaml`:iin 
 | Tunnus | Lähtö | Virta | Suoja | Kaapeli | Huomiot |
 |---|---|---|---|---|---|
 | PJ-00 | Käyttöakuston pääsulake | – | Class T | akuston mukaan | [house-battery.md](house-battery.md) |
-| PJ-01 | Invertterilaturi | noin 160 A, huippu yli 300 A | MEGA, ANL tai MRBF valmistajan ohjeen mukaan | valmistajan ohjeen mukaan | Laite valitsematta |
+| PJ-01 | Invertterilaturi Victron MultiPlus-II 24/5000/120-50 (päätös 2026-10-31) | noin 180 A täydellä 4 kW:n teholla (4000 W / 0,92 / 24 V, **⚠ arvio**), huippu yli 300 A | valmistajan ohjeen mukaan **⚠ tarkista** käyttöohjeesta | valmistajan ohjeen mukaan | |
 | ~~PJ-02~~ | – | – | – | – | P3 siirretty käynnistysakuille (KA-05), päätös 2026-10-31 |
 | PJ-03 | Toinen laturi | 150–175 A | laturin ohjeen mukaan | vähintään 35 mm² (3 m) | Tuleva |
 | PJ-04 | KS-alakeskuksen syöttö | mitoitus noin 60 A | 60 A | vähintään 25 mm² (6 m) | |

@@ -1,6 +1,7 @@
 # Invertterilaturi ja BMS: yhteensopivuus
 
-> **Tila:** Selvitys, aloitettu 2026-10-31. Ei päätöstä. Hinnat on haettu verkkokaupoista ja
+> **Tila:** Selvitys, aloitettu 2026-10-31. **Päätetty 2026-10-31: Victron MultiPlus-II 24/5000/120-50,
+> Cerbo GX ja JK-BMS (kaksi, yksi kummallekin 8S-akulle)** [omistaja 2026-10-31, [decisions.md](../../decisions.md)]. Hinnat on haettu verkkokaupoista ja
 > keskustelupalstoilta 2026-10-31. Dollarihinnat on muunnettu kertoimella noin 0,9 €/USD (**⚠ arvio**).
 > Ennen tilausta arvot tarkistetaan valmistajilta. Päivitetty 2026-10-31: P3 käynnistysakuilla.
 
@@ -103,7 +104,7 @@ akusto puuttuvat.
 | **B + JK** | noin 1 700–2 400 + 300 + 400 ≈ **2 400–3 100 €** |
 | C + JK | noin 1 518 + 400 ≈ **1 900 €**, jos 24/3000 hyväksyy pienen aggregaatin |
 
-## 5. Suositus (ei päätös)
+## 5. Suositus (päätetty 2026-10-31: vaihtoehto B ja JK)
 
 1. **Invertterilaturiksi Victron MultiPlus-II 24/5000/120-50 ja Cerbo GX (B).** Se on noin
    1 000–1 400 € halvempi kuin Mass Combi Ultra, tehoa on enemmän, BMS liittyy suoraan CAN-väylään,
@@ -124,11 +125,11 @@ akusto puuttuvat.
 
 ## 6. Avoimet kysymykset
 
-- [ ] Invertterilaturin valinta: Mastervolt Mass Combi Ultra vai Victron MultiPlus-II (24/5000 tai 24/3000 GX)?
-- [ ] BMS:n valinta: REC ja kontaktorit vai JK?
-- [ ] Victronin "Minimum input current limits": MultiPlus-II 24/5000:n ja 24/3000:n pienin tulovirta PowerAssistin kanssa
-- [ ] Mastervolt: hyväksyykö Mass Combi Ultra MasterBus Digital Inputin "Stop charge" -tapahtuman, ja mikä on pienin tulovirran raja?
-- [ ] REC 8S -BMS:n hinta ja sopiva kontaktori (virta, kelajännite 24 V, hinta)
-- [ ] JK B2A8S20P: onko kuivakosketin latauksen estolle; CAN-kaapelin johdinjärjestys
-- [ ] Onko MultiPlus-II 24/3000 GX:ssä BMS-CAN-portti?
-- [ ] Säädin: Alpha Pro III Reg on -ohjauksella vai Wakespeed WS500 CAN-väylässä?
+- [x] Invertterilaturi: Victron MultiPlus-II 24/5000/120-50 ja Cerbo GX [omistaja 2026-10-31]
+- [x] BMS: JK, kaksi kappaletta [omistaja 2026-10-31]
+- [ ] **Ennen tilausta:** Victronin "Minimum input current limits": MultiPlus-II 24/5000:n pienin tulovirta PowerAssistin kanssa (tavoite alle noin 7,5 A Timco SS2200i:lle)
+- [ ] JK-malli: B2A8S20P vai muu 8S-malli; onko kuivakosketin latauksen estolle (Alpha Pro III:n Reg on); CAN-kaapelin johdinjärjestys Cerbo GX:n BMS-CAN-porttiin
+- [ ] Kahden JK-BMS:n yhteiskäyttö Cerbo GX:n kanssa: näkyvätkö molemmat, ja ohjaako DVCC pienimmän rajan mukaan (**⚠ tarkista**)
+- [ ] Invertterin purkuvirran raja, kun vain toinen akku on käytössä (DVCC-asetus)
+- [ ] Sterling APD24 laturin varasuojaksi
+- [ ] Säädin: Alpha Pro III Reg on -ohjauksella vai Wakespeed WS500 CAN-väylässä? (MasterBusin "Stop charge" ei ole käytössä ilman Mastervoltin invertterilaturia)

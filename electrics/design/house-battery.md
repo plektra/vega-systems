@@ -205,7 +205,7 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 - [ ] Akuston tarkka paikka konehuoneessa; riippuu osin generaattoripäätöksestä. Varataan tila myös kolmannelle 8S-akulle (noin 574 × 174 × 207 mm kennoja, noin 45 kg, ilman koteloa) [laskelma]
 - [ ] Saunan pituus ankkurissa: 2 h vai 4 h? Ratkaisee, hankitaanko kolmas akku
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?
-- [ ] BMS:n valinta (releohjattu vai MOSFET, latauksen eston lähdöt, valvontaliitäntä), vertailu: [inverter-bms.md](inverter-bms.md)
+- [x] BMS: JK (MOSFET, CAN Cerbo GX:ään), yksi kummallekin 8S-akulle [omistaja 2026-10-31], ks. [inverter-bms.md](inverter-bms.md)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
 - [ ] MB31:n napatyyppi (hitsattu M6-pultti vai kierrereikä), kiristysmomentti ja kiskojen poikkipinta EVE:n datalehdestä; joustavat kiskot erikseen, jos myyjän kiskot ovat jäykkiä
 - [ ] Vakuutusyhtiön kanta itse koottuun akustoon
