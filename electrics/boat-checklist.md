@@ -22,7 +22,7 @@ jännitteisestä piiristä. Konehuoneessa varo pyöriviä osia, kun kone käy.
   - [ ] akut → septi-WC:n ja maseraattorin mahdollinen paikka
   - [ ] akut → P3:n moottori
   - Lähde: [dc-distribution.md 8](design/dc-distribution.md#8-avoimet-kysymykset), [circuit-list.md](design/circuit-list.md#avoimet-kysymykset)
-- [ ] **Keskusten paikat:** mihin komentosillan alakeskus (DIN-kotelo noin **⚠** koko) mahtuu?
+- [ ] **Keskusten paikat:** mihin komentosillan alakeskus (DIN-kotelo noin 14 johdonsuojalle ja PDM-korteille) mahtuu?
   Onko veneellä vanha keskus tai kaapelointia, jota voi käyttää uudelleen? Kuva ja mitat.
 - [ ] **Akuston paikka konehuoneessa:** kaksi 8S-akkua ja tila kolmannelle (kennot kukin noin
   574 × 174 × 207 mm, noin 45 kg, ilman koteloa). Mittaa vapaa tila ja kuvaa paikka.
