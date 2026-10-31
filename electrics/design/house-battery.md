@@ -149,7 +149,7 @@ Hinnat **⚠ ei tiedossa**; selvitetään, kun kennot ja BMS valitaan.
 | Kennojen väliset liitokset | **Kuparikiskot, ei kaapeleita** kennojen välillä. MB31:ssä on jälleenmyyjien mukaan yksi M6-napa (hitsattu pultti tai kierrereikä, malli **⚠ tarkista** ostettavasta erästä), ja kennon mukana tulee yleensä nikkelöity kuparikisko. Veneessä mieluiten **joustavat (laminoidut) kiskot**, jotka sietävät tärinää ja kennojen turpoamista. Kiristysmomentti jälleenmyyjien mukaan enintään noin 5–6 Nm ([Gobel Power](https://www.gobelpower.com/eu-stock-grade-a-eve-32v-314ah-mb31-rechargeable-lifepo4-battery-cell_p193.html?cPath=0), [Wistek](https://wis-tek.com/products/eve-mb31-3-2v-314ah-grade-a-brand-new-lifepo4-battery-prismatic-cell-wistekusa-stock)), **⚠ tarkista** EVE:n datalehdestä. Kaapelia käytetään vain kennorivien välillä, jos kiskot eivät ylety, ja akun pääliitännöissä |
 | Kennojen puristus | Prismaattiset kennot pitää puristaa kehikossa valmistajan ohjeen mukaan (arvo **⚠ ei tiedossa**, EVE:n datalehdestä) |
 | Pääsulake | Class T -sulake tai vastaava, jonka katkaisukyky riittää LiFePO4:n oikosulkuvirralle, mahdollisimman lähelle akun napaa |
-| Kotelo ja kiinnitys | Noin 100–110 kg kennoineen, kiinni rungossa niin, ettei se liiku kallistuksissa. Ilmanvaihto ja suoja vedeltä |
+| Kotelo ja kiinnitys | Noin 100–110 kg kennoineen, kiinni rungossa niin, ettei se liiku kallistuksissa. Ilmanvaihto ja suoja vedeltä. Tarkemmin kohdassa 3.1 |
 | Lämmitys | Jos vene on käytössä kylmänä vuodenaikana, lämmityskalvo tai muu ratkaisu, jotta latautuminen on mahdollista |
 | Käynnistysakkujen erotus | Erotusrele tai DC-DC-laturi; käynnistysakut pysyvät lyijyakkuina, ja CTEK voi jatkaa niiden ylläpitolatausta, ks. [current-system.md](../current-system.md#1-dc-järjestelmä) |
 | Akkumonitori | Shuntti, joka mittaa todellisen kulutuksen; sillä arviot voi korvata mitatuilla |
@@ -161,6 +161,44 @@ Pilssipumppujen ja akuston kytkennät kannattaa tarkastuttaa pätevällä sähk�
 käyttöönottoa.
 
 Itse koottu akusto: selvitä vakuutusyhtiöltä, hyväksyykö se sen.
+
+### 3.1 Kotelointi (selvitetty 2026-10-31)
+
+Kysymys [omistaja 2026-10-31]. Ei päätöstä. Yksi kotelo kutakin 8S-akkua kohden (kaksi, tila
+kolmannelle). Kotelon mitoittaa kennopaketti noin 574 × 174 × 207 mm (MB31, yksi rivi) tai kaksi
+neljän kennon riviä noin 290 × 348 × 207 mm, sekä BMS, pääsulake ja kytkin.
+
+| Vaatimus | Miksi ja miten |
+|---|---|
+| **Kennojen puristus** | Prismaattiset kennot turpoavat latauksessa. Päätylevyt (esim. 10–15 mm FR4/epoksi tai alumiini eristelevyllä) ja kierretangot tai jousipuristus. Puristusvoima EVE:n datalehdestä (**⚠ ei tiedossa**) |
+| **Sähköinen eristys** | Teräsrunko ja metallikotelo johtavat. Kennojen väliin ja kennojen ja kotelon väliin eristelevyt (FR4, 0,5–1 mm), koska kennojen muovikalvo voi hankautua rikki tärinässä. Mikään metalliosa ei saa koskea kennon kuoreen |
+| **Kiinnitys runkoon** | Akku ei saa liikkua kallistuksessa, aallokossa eikä kolarissa. Kotelo pultataan runkoon tai pohjaan hitsattuun kehikkoon, ei pelkkiä hihnoja. Vaatimus esim. ABYC E-13 / ISO 10133 (**⚠ tarkista** standardista) |
+| **Napojen ja kiskojen suojaus** | Kansi tai eristävät suojat kiskoille, ettei pudonnut työkalu tai irtotavara aiheuta oikosulkua. Kotelon läpivienteihin läpivientikumit ja vedonpoistot |
+| **Vesi** | Selvästi pilssiveden yläpuolelle; suoja roiskeilta ja tippuvalta vedeltä. Ei paikkaan, johon merivesi voi päästä |
+| **Lämpötila** | Konehuone on ajossa kuuma. LiFePO4:n ikä lyhenee yli noin 35–45 °C:ssa (**⚠ tarkista** EVE:n datalehdestä; MB31:n latausalue 0 (tai 2) – 60 °C). Akut konehuoneen viileimpään kohtaan, kauas koneesta ja pakoputkesta; BMS:n lämpötila-anturit kennoihin |
+| **Ilmanvaihto** | LiFePO4 ei normaalikäytössä kaasuunnu kuten lyijyakku, mutta vikatilanteessa (ylikuumeneminen) siitä vapautuu syttyviä ja myrkyllisiä kaasuja. Kotelo tuulettuu konehuoneeseen, ja konehuoneen ilmanvaihto toimii |
+| **Pääsulake ja katkaisija kotelossa** | Class T -sulake mahdollisimman lähelle akun napaa ja akkukohtainen pääkytkin. BMS kiinni kotelossa, lähellä kennoja |
+| **Huolto** | Pääsy kiskojen kiristyksen tarkistukseen ja BMS:ään; tunnisteet (akku 1, 2, 3; piirin tunnus) |
+| **Lämmitys (tarvittaessa)** | Jos venettä käytetään pakkasella, lämmityskalvo, koska lataus estetään alle 0 °C:ssa |
+
+**Vaihtoehdot:**
+
+1. **Valmis DIY-akkukotelo 8S:lle** (teräs, mukana kennopidike, kiskot, BMS-paikka ja usein katkaisija).
+   Esimerkiksi tyhjä 24 V:n metallikotelo noin 160 USD ([Alibaba](https://www.alibaba.fr/product-detail/JKESS-Customized-24V-280Ah-300Ah-314Ah_1601659037573.html)),
+   ja valmiiksi koottu 24 V:n kotelo JK-BMS:llä ja 250 A:n katkaisijalla
+   ([Wistek](https://wis-tek.com/products/24v-mb31-8kwh-pre-assembled-battery-diy-box-with-jk-bms-wistek)); Wistekin
+   kotelo sallii vain rinnankytkennän, mikä sopii Vegan kahdelle 8S-akulle. EU-hinnat **⚠ ei tiedossa**.
+   Koteloiden sopivuus MB31-kennoille pitää tarkistaa mitoista: kaikki 8S-kotelot eivät sovi
+   ([Akkudoktor](https://akkudoktor.net/t/erfahrungen-mit-8s-plasik-batteriegehaeuse/35954)).
+   Valmiita koteloita ei ole tehty veneisiin: kiinnitys runkoon, vesi ja tärinä pitää hoitaa itse.
+2. **Oma kotelo:** kennot puristuskehikossa (FR4-päätylevyt ja kierretangot), joka pultataan
+   konehuoneeseen hitsattuun teräs- tai alumiinikehikkoon, ja eristävä kansi (esim. polykarbonaatti
+   tai vaneri, jonka alla eristelevy). Halvempi ja sovitettavissa paikkaan, mutta vaatii työtä.
+
+**Suositus (ei päätös):** oma puristuskehikko ja runkoon hitsattu kiinnityskehikko, koska paikka
+konehuoneessa ja kiinnitys teräsrunkoon pitää joka tapauksessa tehdä itse. Valmis kotelo kannattaa,
+jos sen mitat sopivat paikkaan ja kiinnityksen saa tehtyä tukevasti. Akuston kiinnitys ja
+kotelointi tarkastutetaan, ja vakuutusyhtiön kanta itse koottuun akustoon selvitetään (avoin kysymys).
 
 ## 4. Laajennettavuus: aurinkopaneelit ja maasähkölaturi
 
@@ -207,6 +245,8 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?
 - [x] BMS: JK (MOSFET, CAN Cerbo GX:ään), yksi kummallekin 8S-akulle [omistaja 2026-10-31], ks. [inverter-bms.md](inverter-bms.md)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
+- [ ] Kotelointi: oma puristuskehikko ja runkoon kiinnitetty kehikko vai valmis DIY-kotelo (kohta 3.1)? Konehuoneen viileimmän paikan lämpötila ajossa
+- [ ] Akun kiinnityksen vaatimus standardista (ABYC E-13 / ISO 10133) ja kiinnityskehikon mitoitus
 - [ ] MB31:n napatyyppi (hitsattu M6-pultti vai kierrereikä), kiristysmomentti ja kiskojen poikkipinta EVE:n datalehdestä; joustavat kiskot erikseen, jos myyjän kiskot ovat jäykkiä
 - [ ] Vakuutusyhtiön kanta itse koottuun akustoon
 - [ ] Aurinkopaneelit: tuleeko niitä, ja mihin ne mahtuisivat ilman varjostusta?
