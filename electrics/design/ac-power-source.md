@@ -694,6 +694,6 @@ tiedossa**). Ne eivät muuta lukujen eroa. MB56-kennoilla molemmat ovat noin 900
 - [x] Mahtuuko konehuoneeseen noin 16 kWh:n litiumakusto: kyllä, etenkin jos generaattorille ei tarvitse varata tilaa [omistaja 2026-10-29], ks. [house-battery.md](house-battery.md) (käynnistysakkujen tarkistus: [current-system.md](../current-system.md#5-avoimet-kysymykset))
 - [ ] Mahtuuko toinen laturi koneen etupäähän, millainen kiinnike tarvitaan, ja kestääkö hihnaveto 5–7 kW
 - [x] Pystyykö Alpha Pro III ottamaan vastaan BMS:n viestin: kyllä, MasterBus "Stop charge" -tapahtuma tai Reg on -johdin [käyttöohje Alpha Pro III]
-- [ ] Akuston ja BMS:n valinta: MLI Ultra (suora MasterBus) vai muu BMS ja MasterBusin digitaalitulomoduuli; BMS:ssä ennakkovaroitus ennen katkaisua
+- [ ] Akuston ja BMS:n valinta: MLI Ultra (suora MasterBus) vai muu BMS ja MasterBusin digitaalitulomoduuli; BMS:ssä ennakkovaroitus ennen katkaisua. Vertailu: [inverter-bms.md](inverter-bms.md)
 - [ ] Voiko Mass Combi Ultra ottaa vastaan saman "Stop charge" -tapahtuman?
 - [ ] Hinnat vaihtoehdoille A ja B (akusto, laturi ja invertterilaturi haettu, ks. kohdat 2.2, 2.4 ja 2.5; kiinnike ja generaattori puuttuvat)
