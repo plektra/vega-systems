@@ -164,7 +164,8 @@ Itse koottu akusto: selvitä vakuutusyhtiöltä, hyväksyykö se sen.
 
 ### 3.1 Kotelointi (selvitetty 2026-10-31)
 
-Kysymys [omistaja 2026-10-31]. Ei päätöstä. Yksi kotelo kutakin 8S-akkua kohden (kaksi, tila
+Kysymys [omistaja 2026-10-31]. **Päätetty 2026-10-31: tehdään oma kotelo** (vaihtoehto 2) [omistaja
+2026-10-31, [decisions.md](../../decisions.md)]. Yksi kotelo kutakin 8S-akkua kohden (kaksi, tila
 kolmannelle). Kotelon mitoittaa kennopaketti noin 574 × 174 × 207 mm (MB31, yksi rivi) tai kaksi
 neljän kennon riviä noin 290 × 348 × 207 mm, sekä BMS, pääsulake ja kytkin.
 
@@ -195,7 +196,7 @@ neljän kennon riviä noin 290 × 348 × 207 mm, sekä BMS, pääsulake ja kytki
    konehuoneeseen hitsattuun teräs- tai alumiinikehikkoon, ja eristävä kansi (esim. polykarbonaatti
    tai vaneri, jonka alla eristelevy). Halvempi ja sovitettavissa paikkaan, mutta vaatii työtä.
 
-**Suositus (ei päätös):** oma puristuskehikko ja runkoon hitsattu kiinnityskehikko, koska paikka
+**Päätös 2026-10-31 (oma kotelo), alkuperäinen perustelu:** oma puristuskehikko ja runkoon hitsattu kiinnityskehikko, koska paikka
 konehuoneessa ja kiinnitys teräsrunkoon pitää joka tapauksessa tehdä itse. Valmis kotelo kannattaa,
 jos sen mitat sopivat paikkaan ja kiinnityksen saa tehtyä tukevasti. Akuston kiinnitys ja
 kotelointi tarkastutetaan, ja vakuutusyhtiön kanta itse koottuun akustoon selvitetään (avoin kysymys).
@@ -245,7 +246,9 @@ johon kaikki laturit kytketään. Varaa myös DC-jakoon ja sulakkeisiin lähdöt
 - [ ] Kennot: MB56 (halvempi, saatavuus epävarma) vai MB31 (kaksi erillistä akkua)?
 - [x] BMS: JK (MOSFET, CAN Cerbo GX:ään), yksi kummallekin 8S-akulle [omistaja 2026-10-31], ks. [inverter-bms.md](inverter-bms.md)
 - [ ] Kennojen puristusvoima EVE:n datalehdestä
-- [ ] Kotelointi: oma puristuskehikko ja runkoon kiinnitetty kehikko vai valmis DIY-kotelo (kohta 3.1)? Konehuoneen viileimmän paikan lämpötila ajossa
+- [x] Kotelointi: oma kotelo [omistaja 2026-10-31]
+- [ ] Oman kotelon suunnitelma: puristuskehikon mitat ja materiaalit (päätylevyt, kierretangot, eristelevyt), kansi, kiinnityskehikko runkoon, läpiviennit; tehdään, kun akuston paikka ja kennot on valittu
+- [ ] Konehuoneen viileimmän paikan lämpötila ajossa (tarkistuslista)
 - [ ] Akun kiinnityksen vaatimus standardista (ABYC E-13 / ISO 10133) ja kiinnityskehikon mitoitus
 - [ ] MB31:n napatyyppi (hitsattu M6-pultti vai kierrereikä), kiristysmomentti ja kiskojen poikkipinta EVE:n datalehdestä; joustavat kiskot erikseen, jos myyjän kiskot ovat jäykkiä
 - [ ] Vakuutusyhtiön kanta itse koottuun akustoon
