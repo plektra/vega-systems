@@ -2,7 +2,7 @@
 
 > **Tila:** Selvitys, aloitettu 2026-10-29, päivitetty 2026-10-31 (sulakkeiden hintavertailu, kohta 4.5). **Päätetty 2026-10-31:** kolmitasoinen
 > rakenne ja tärkeiden kuormien kisko (kohdat 2 ja 3), tavalliset piirit ESP32-PDM:llä (kohta 4.3) ja
-> miinuksen yksi yhteyspiste runkoon (kohta 5). Sulaketyyppi ja keskusten paikat ovat auki. Kaapelien pituudet ovat **arvioita**, ja ne
+> miinuksen yksi yhteyspiste runkoon (kohta 5). Sulakkeiksi talojohdonsuojat, joiden datalehdessä on DC-arvo (päätetty 2026-10-31, kohta 4.5). Keskusten paikat ovat auki. Kaapelien pituudet ovat **arvioita**, ja ne
 > korvataan veneeltä mitatuilla. Akuston koko, invertteri ja toinen laturi ovat vielä auki
 > ([ac-power-source.md](ac-power-source.md), [house-battery.md](house-battery.md)), joten niiden
 > lähdöille varataan tässä vain paikka.
@@ -211,8 +211,8 @@ syöttö, pilssipumput ja suuret kuormat.
 | PDM-lähdöt | Oma ESP32-PDM ([current-system.md 4](../current-system.md#4-valvonta-verkot-ja-tehonjako)) | Ohjaus ja virran mittaus Signal K:hon. **PDM:n edessä on silti sulake**, joka suojaa syöttökaapelin |
 
 **Päätetty 2026-10-31:** tavalliset piirit ohjataan **ESP32-PDM:llä** [omistaja 2026-10-31]. Sulakkeiksi
-joko lattasulakkeet tai DC-automaattisulakkeet; valinta on auki ja riippuu kustannuksista.
-Tärkeät kuormat (TK) eivät ole PDM:n takana: niille sulakkeet tai DC-automaattisulakkeet ja
+talojohdonsuojat, joiden datalehdessä on DC-arvo (päätetty 2026-10-31, kohta 4.5).
+Tärkeät kuormat (TK) eivät ole PDM:n takana: niille samat johdonsuojat ja
 tavalliset kytkimet, jotta ne toimivat ilman ohjelmistoa (kohta 3).
 
 ### 4.4 Piirien tunnukset
@@ -278,20 +278,20 @@ Moni tavallinen johdonsuoja on hyväksytty myös pienelle DC-jännitteelle, ja 2
 Pilssipumppujen kohokytkinpiirissä ei saa olla kytkintä, jolla automaattisen käytön voi vahingossa
 sammuttaa. Pilssipumppujen sulakkeiksi sopivat siksi sulake tai johdonsuoja ilman käyttökytkintä.
 
-**Suositus (ei päätös) [laskelma]:**
+**Päätetty 2026-10-31:** alakeskusten lähdöt suojataan **talojohdonsuojilla, joiden datalehdessä
+on DC-arvo** (B2, esim. Schneider iC60N), sekä **PDM-lähdöissä että tärkeiden kuormien kiskolla**
+[omistaja 2026-10-31, [decisions.md](../../decisions.md)]. Perustelut: hinta on lähes sama kuin
+lattasulakkeilla ja noin 400–500 € pienempi kuin pelkillä DC-malleilla, lauennut piiri palautetaan
+napista, eikä varasulakkeita tarvita.
 
-- **PDM-lähdöt: lattasulakerasiat (A) tai talojohdonsuojat, joiden datalehdessä on DC-arvo (B2),
-  esim. Schneider iC60N.** Ne ovat suunnilleen saman hintaisia ja noin 350–500 € halvempia kuin
-  pelkät DC-mallit (B1). B2 on siistimpi DIN-keskukseen eikä vaadi varasulakkeita; A on halvin,
-  jos sulakerasiat sopivat paikalleen paremmin. (Päivitetty 2026-10-31: B2 lisätty.)
-- **Tärkeiden kuormien kisko:** Blue Sea A-sarjan vipusulakkeet. Niissä on sulake ja kytkin
-  samassa, ja ne toimivat ilman ohjelmistoa. Kokonaisuus on noin 80 €. Pilssipumpuille sulake
-  ilman kytkintä.
-- **Yhteensä noin 230–390 €** (A: sulakerasiat 130–280 €, sulakkeet noin 20–30 € ja TK:n
-  vipusulakkeet noin 80 €) tai noin 230–310 € ja kotelot (B2: johdonsuojat 150–230 € ja TK 80 €;
-  **⚠ arvio**). Kaikki pelkillä DC-malleilla (B1) noin 820–870 € ja kotelot.
-- ESP32-PDM-projektissa on vielä auki, tulevatko lähtöjen sulakkeet kortille vai asennukseen.
-  Jos sulakkeenpitimet tulevat kortille, erillisiä sulakerasioita tarvitaan vähemmän.
+- **Kustannus noin 190–300 € ja kotelot** [laskelma, **⚠ arvio**]: noin 32 johdonsuojaa à 6–9 €
+  (25 PDM-lähtöä ja 7 TK:n piiriä) ja suljetut DIN-kotelot (noin 30–60 €/keskus).
+- **Tärkeiden kuormien kiskon kytkimet:** kulkuvalot, ankkurivalo ja VHF saavat erilliset kytkimet
+  komentosillan paneeliin. Pilssipumppujen johdonsuojat ovat kotelossa ilman paneelikytkintä, jotta
+  automaattista käyttöä ei voi sammuttaa vahingossa.
+- **Pääjakelun suuret lähdöt** (Class T, MEGA, ANL tai MRBF) eivät muutu.
+- **ESP32-PDM:** lähtöjen sulakkeet tulevat asennukseen, eivät kortille. Tämä vastaa
+  ESP32-PDM:n avoimeen kysymykseen "Per-output fuse strategy" Vegan osalta.
 
 ## 5. Miinus ja teräsrunko
 
@@ -350,7 +350,7 @@ sähköurakoitsijan kanssa ajoissa.
 | ~~Keskusten määrä~~ (päätetty 2026-10-31); paikat (PJ, KS, KH, mastojakorasia) | Pääsulakkeen arvo ja suurten kaapeleiden koko |
 | ~~Tärkeiden kuormien kisko ja niiden syöttö kummaltakin akustolta~~ (päätetty 2026-10-31) | BMS:n ohjauskytkennät laturille ja invertterille |
 | ~~Miinuksen ja rungon kytkentä~~ (päätetty 2026-10-31) | Toisen laturin kiinnike ja kaapelointi |
-| Sulaketyypit (auki); ~~PDM:n rooli~~ (päätetty 2026-10-31) | Aurinkosäädin ja kolmas akku (varalähdöt) |
+| ~~Sulaketyypit ja PDM:n rooli~~ (päätetty 2026-10-31) | Aurinkosäädin ja kolmas akku (varalähdöt) |
 | Piirien tunnukset ja kaapelien merkintä | Vain maasähköllä toimivan piirin toteutus |
 | Kaapelireitit ja läpiviennit, myös mastoon | |
 
@@ -363,10 +363,9 @@ sähköurakoitsijan kanssa ajoissa.
 - [x] Kolmitasoinen rakenne ja tärkeiden kuormien kisko: päätetty [omistaja 2026-10-31]
 - [x] Miinus ja runko: yksi yhteyspiste koneen runkoon [omistaja 2026-10-31]
 - [x] PDM:n rooli: tavalliset piirit ESP32-PDM:llä [omistaja 2026-10-31]
-- [ ] **Sulaketyyppi PDM:n lähtöihin:** lattasulakkeet vai DC-automaattisulakkeet? Ratkaisee hinta;
-  hintavertailu kohdassa 4.5 (suositus: PDM-lähdöt lattasulakkeilla tai DC-arvoisilla
-  talojohdonsuojilla, TK vipusulakkeilla)
-- [ ] Jos valitaan talojohdonsuojat: tarkista valitun mallin DC-arvo datalehdestä
+- [x] **Sulaketyyppi:** talojohdonsuojat, joiden datalehdessä on DC-arvo, PDM-lähdöissä ja TK:lla [omistaja 2026-10-31]
+- [ ] Johdonsuojien malli ja koko piireittäin; tarkista valitun mallin DC-arvo (jännite, katkaisukyky, napaisuus) datalehdestä
+- [ ] Suljetut DIN-kotelot (IP-luokka) KS-, KH- ja TK-keskuksille
 - [ ] **Veneellä:** resistanssi akun miinuksen ja rungon välillä; onko käynnistin ja laturi
   maadoitettu koneen runkoon?
 - [ ] **Veneellä:** mistä koneen ohjausyksikkö saa nyt virtansa?

@@ -168,7 +168,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Hakuvalon polttimo: Philips 24 V 250 W, projektorihalogeeni [omistaja 2026-10-31]
 - [ ] Hakuvalon polttimon tarkka tyyppi (luultavasti EHJ / A1/223, G6.35), varapolttimot ja käynnistysvirran hoito (PDM-kortti vai rele), ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
 - [x] Jakelun rakenne: kolme tasoa (PJ, KS, KH) ja tärkeiden kuormien kisko, tavalliset piirit ESP32-PDM:llä, miinuksella yksi yhteyspiste runkoon (päätös 2026-10-31, [design/dc-distribution.md](design/dc-distribution.md))
-- [ ] Keskusten paikat ja sulaketyyppi (lattasulakkeet vai DC-automaattisulakkeet), ks. [design/dc-distribution.md](design/dc-distribution.md#8-avoimet-kysymykset)
+- [x] Sulaketyyppi: talojohdonsuojat, joiden datalehdessä on DC-arvo (päätös 2026-10-31)
+- [ ] Keskusten paikat, ks. [design/dc-distribution.md](design/dc-distribution.md#8-avoimet-kysymykset)
 - [x] Mitkä 24 V:n kuluttajista ovat olemassa: LED-nauhavalaistus, polttoaineen siirtopumppu, Raspberry Pi 5 ja Intel NUC [omistaja 2026-10-29]
 - [x] Raspberry Pi 5:n ja NUC:n syöttö: Mean Well DDR-15G-5 ja DDR-240B-24 [omistaja 2026-10-29]
 - [ ] NUC:n malli ja sallittu tulojännite (jätetty toistaiseksi, [omistaja 2026-10-29])
