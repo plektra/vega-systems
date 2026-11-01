@@ -381,6 +381,13 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
    Aksiaalinen mitta ei ole kriittinen, koska Taper Lock -navat liukuvat akselilla ennen
    kiristystä; molempien akselien pitää vain mennä napaan riittävän syvälle (holkki 2012
    ≈ 32 mm, pumpun kiila-akseli 56 mm laipasta).
+   - **Mitoitus [laskelma, HRC150 Dunlopin luettelosta]:** navat eivät kosketa toisiaan; niiden
+     sisäpintojen väli on elementin leveys **G = 40,5 mm** (L 107,5 − 2 × C 33,5). Jos kumpikin
+     napa asennetaan akselinsa pään tasalle, pumpun napa ulottuu 56 mm:n päähän pumpun
+     laippapinnasta, ja **PTO-akselin pää on noin 56 + 40,5 = 96,5 mm laippapinnasta**. Tämä
+     on sovitteen pituus keskitysolakkeen laippapinnasta PTO-akselin päähän. Navan voi siirtää
+     akselilla taaemmas, joten mitta saa vaihdella sen mukaan, paljonko akselia jää navan
+     taakse **⚠ tarkista pumpun akselin pituus ja PTO-akselin vapaa pituus**.
    - Tulosta holkki ja keskitysolake erikseen ja yhdistä ne suoralla putkella tai tangolla.
      Pitkä tuloste kieroutuu ja taipuu. Tulosta reiät hieman ahtaiksi ja sovita ne
      viilaamalla tai hiomalla.
