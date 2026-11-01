@@ -34,7 +34,7 @@ omistajien suoraan antama tieto.
 | Vauhtipyörä / kytkinkoppa | SAE 11-1/2 -vauhtipyörä, luultavasti SAE #3 -koppa, sovitelaippa SAE 14:ään | [blogi 2021-02-08] |
 | Vaihteisto (alkuperäinen) | Masson RSD200 (1976), poistettu | [blogi 2019-01-24] |
 | Vaihteisto | Advance 300, ~5,4:1, **asennettu ja linjattu** (2026) | [blogi 2021-02-08], [omistaja 2026-10-21] |
-| Vaihteiston PTO | 1:1, ensiöakselilta (pyörii vapaalla), ei omaa kytkintä, 0,044 kW/rpm (≈ 420 Nm), Ø48 mm:n kiila-akseli. **Akseli osoittaa perään**, pyörii koneeseen nähden vastakkaiseen suuntaan → PTO-pumppu **L**, ks. [Pyörimissuunnat](#pyörimissuunnat) | [omistaja 2026-10-21], [omistaja 2026-10-23], [omistaja 2026-10-24] |
+| Vaihteiston PTO | 1:1, ensiöakselilta (pyörii vapaalla), ei omaa kytkintä, 0,044 kW/rpm (≈ 420 Nm), **Ø48h7-akseli, kiilaura 14 N9, uran syvyys 5,5 mm** (kiila 14 × 9, DIN 6885), vapaa pituus noin 60 mm ja kiilaura noin 44 mm (mitattu piirustuksesta); akselin keskiö noin 105 mm tuloakselin alapuolella ja noin 160 mm lähtöakselin yläpuolella (mitattu piirustuksesta **⚠ tarkista veneellä**). **Akseli osoittaa perään**, pyörii koneeseen nähden vastakkaiseen suuntaan → PTO-pumppu **L**, ks. [Pyörimissuunnat](#pyörimissuunnat) | [omistaja 2026-10-21], [omistaja 2026-10-23], [omistaja 2026-10-24], [datalehti Advance 300-WXT03] |
 | Akselin laakeri | Uusi laakeripukki potkuriakselille | [omistaja 2026-10-21] |
 | Koneen tilanne | Asennetaan takaisin ja linjataan vaihteistoon (lokakuu 2026) | [omistaja 2026-10-21] |
 | Koneen kiinnitys | Sekä vaihteisto että kone jäykästi runkoon | [blogi 2021-02-08], [omistaja 2026-10-23] |

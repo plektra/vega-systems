@@ -387,7 +387,8 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      laippapinnasta, ja **PTO-akselin pää on noin 56 + 40,5 = 96,5 mm laippapinnasta**. Tämä
      on sovitteen pituus keskitysolakkeen laippapinnasta PTO-akselin päähän. Navan voi siirtää
      akselilla taaemmas, joten mitta saa vaihdella sen mukaan, paljonko akselia jää navan
-     taakse **⚠ tarkista pumpun akselin pituus ja PTO-akselin vapaa pituus**.
+     taakse. PTO-akselin vapaa pituus on piirustuksen mukaan noin 60 mm (mitattu mittakaavasta,
+     [Advance 300-WXT03](../../datasheets/README.md)), joten 33,5 mm:n napa mahtuu sille ja säätövaraa jää noin 25 mm **⚠ tarkista pumpun akselin pituus ja PTO-akselin vapaa pituus veneellä**.
    - Tulosta holkki ja keskitysolake erikseen ja yhdistä ne suoralla putkella tai tangolla.
      Pitkä tuloste kieroutuu ja taipuu. Tulosta reiät hieman ahtaiksi ja sovita ne
      viilaamalla tai hiomalla.
