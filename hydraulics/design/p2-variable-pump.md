@@ -364,6 +364,42 @@ ja kuluttaisi kytkintä. Siksi:
 - Nykyiset pumput on kiinnitetty 10 mm:n teräskannakkeella koneeseen [blogi 2017-07-04], mutta
   ne ovat paljon kevyempiä (F1-61 8,5 kg), joten vertailukohta ei kata PVH57:ää.
 
+### Pumpun kohdistus
+
+Lisätty 2026-11-01 [omistajan ehdotus 2026-11-01, arvio]. Kohdistus tehdään kahdessa vaiheessa:
+ensin kannakkeen paikka tulostetulla sovitteella, sitten lopullinen linjaus oikealla pumpulla.
+
+**HRC 150:n sallimat virheet:** säteissuuntainen siirtymä 0,4 mm, kulmavirhe 1°, aksiaalinen
+0,9 mm (Fennerin HRC-taulukko [Scribdissä](https://www.scribd.com/document/430712108/HRC-Coupling),
+kulmavirhe [Kramp HRCB150FTL](https://kramp.com/shop-ro/en/p/hub-gg-hrc-150-tl-2012-f--HRCB150FTL);
+toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi noin puolet näistä:
+**siirtymä ≤ 0,2 mm** ja kulmavirhe ≤ 0,5°, jolloin elastinen välikappale kestää pitkään.
+
+1. **Kannakkeen paikka tulostetulla sovitteella (karkea, ±0,5 mm riittää).** Sovitteessa on
+   holkki PTO-akselille (sisähalkaisija 48 mm), keskitysolake Ø127 kannakkeen reikään ja
+   pituus, joka vastaa kytkimen ja pumpun akselin mittaa (laipan pinnasta PTO-akselin päähän).
+   Aksiaalinen mitta ei ole kriittinen, koska Taper Lock -navat liukuvat akselilla ennen
+   kiristystä; molempien akselien pitää vain mennä napaan riittävän syvälle (holkki 2012
+   ≈ 32 mm, pumpun kiila-akseli 56 mm laipasta).
+   - Tulosta holkki ja keskitysolake erikseen ja yhdistä ne suoralla putkella tai tangolla.
+     Pitkä tuloste kieroutuu ja taipuu. Tulosta reiät hieman ahtaiksi ja sovita ne
+     viilaamalla tai hiomalla.
+   - Pyöritä sovitetta PTO-akselin ympäri ja katso, heittääkö Ø127-olake. Heitto kertoo
+     tulostusvirheestä.
+2. **Hitsaa ensin, kohdista vasta sitten.** Hitsaus vetää enemmän kuin 0,2 mm. Hitsaa runkoon
+   kiinnitysalustat (pukit), ja pulttaa kannake niihin. Kannakkeen jalkaan **pitkittäiset
+   reiät** sivusuuntaiseen säätöön ja korkeuden säätöön **välilevyt** (ruostumattomat
+   säätölevyt, esim. 0,1–1 mm).
+3. **Lopullinen linjaus oikealla pumpulla.** Pumppu paikallaan, kytkinnavat akseleilla ilman
+   elastista välikappaletta. Pumpun paino ja kannakkeen taipuma ovat silloin mukana, joten
+   taipuma kompensoituu välilevyillä.
+   - Säteissuuntainen siirtymä: viivain tai mittakello napojen ulkokehää vasten neljässä
+     kohdassa (ylä, ala, sivut).
+   - Kulmavirhe: napojen välin erotus neljässä kohdassa rakotulkilla.
+   - Kiristä pultit, mittaa uudelleen ja tarkista linjaus koeajon jälkeen.
+4. **Taipuma:** laskettu 0,2 mm koskee ripoja vailla olevaa 10 mm:n levyä. Rivoilla se jää
+   noin sadasosamillimetreihin [laskelma]. Kummassakin tapauksessa vaiheen 3 linjaus kattaa sen.
+
 ## Miten LS-linjaa käytetään
 
 CV-säädin pitää pumpun lähtöpaineen noin 20 bar LS-portin painetta korkeampana, ja paineenrajoitin
@@ -561,7 +597,8 @@ huomioon kannakkeessa.
    ([current-system §0](../current-system.md)) ja suojakotelo pyörivälle kytkimelle. Laipan mitat
    ks. [tekniset tiedot](#tekniset-tiedot); tarkista mitat pumpusta ennen leikkausta. Keskitysreikä
    **Ø127**, ei Ø125 (Eatonin oma kannake: Ø127,05–127,15). Mallina voi käyttää
-   [FB-C4-10:n mittoja](#eatonin-jalkakannake-fb-c4-10).
+   [FB-C4-10:n mittoja](#eatonin-jalkakannake-fb-c4-10). Kohdistus ks.
+   [Pumpun kohdistus](#pumpun-kohdistus).
 3. **Imulinja.** 50 mm:n letku 2":n SAE code 61 -laipalla pumpun imuaukkoon (2" = 50,8 mm, ei
    supistusta); palloventtiili säilyy linjassa. Säiliön päässä: hitsattava muhvi →
    90°:n kulma → palloventtiili → letkukara [omistaja 2026-10-28], ks. [hankintalista](../procurement.md).

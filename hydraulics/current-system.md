@@ -85,8 +85,9 @@
    - **Vikatilat:** sähkökatko → pumppu valmiustilaan, keulapotkuri ei toimi, ks.
      [p2-variable-pump: Vikatilat](design/p2-variable-pump.md#vikatilat).
    - **Linjaus:** vaihteisto on kiinnitetty jäykästi runkoon [blogi 2021-02-08], kuten myös
-     pumppukannake. Linjaus kytkimen ja pumpun asennuspiirustuksen toleransseihin **⚠ HRC 150:n
-     sallitut virheet luettelosta**. Tarkista linjaus uudelleen koeajon jälkeen.
+     pumppukannake. Linjaus kytkimen ja pumpun asennuspiirustuksen toleransseihin: HRC 150 sallii noin 0,4 mm
+     siirtymää ja 1° kulmavirhettä **⚠ tarkista valmistajan luettelosta**, tavoite ≤ 0,2 mm, ks.
+     [pumpun kohdistus](design/p2-variable-pump.md#pumpun-kohdistus). Tarkista linjaus uudelleen koeajon jälkeen.
    - **Tila:** kytkin (halkaisija 150 mm) + pumppu (noin 36 kg). Tarkista tila suhteessa runkoon,
      vaihteistoon ja potkuriakselin laakeriin.
    - **Suojakotelo** pyörivälle kytkimelle on pakollinen.
