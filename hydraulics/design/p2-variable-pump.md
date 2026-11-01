@@ -353,8 +353,13 @@ ja kuluttaisi kytkintä. Siksi:
 - Pumpun kiinnitys: 4 × M12 (tai 1/2-13 UNC) läpi levystä muttereilla, **lujuusluokka 8.8
   riittää**: puristusvoima noin 38 kN pulttia kohti (μ = 0,12), kitkalla kantava leikkaus noin
   5,8 kN pulttia kohti, kun tarve on noin 0,8 kN leikkausta ja noin 0,7 kN vetoa (kolminkertainen
-  isku) → varmuus noin seitsenkertainen; kiristys noin 80 Nm **⚠ tarkista taulukosta**. Kovat
-  aluslaatat molemmin puolin, kierrelukite tai lukkomutteri. **Ei M14:ää:** laipan reiät
+  isku) → varmuus noin seitsenkertainen; kiristys noin 80 Nm **⚠ tarkista taulukosta**. **Kovat
+  aluslaatat** ISO 7089 M12 (Ø24, 200 HV) molemmin puolin, **ei jousilaattoja**: väljässä
+  Ø14,15–14,53 reiässä M12:n kanta (tukipinta noin Ø16,6) painaisi noin 50 mm²:lle noin 750 MPa,
+  laatan kanssa noin 290 mm² ja noin 130 MPa; jousilaatta (DIN 127, poistettu standardeista)
+  litistyy jo muutamassa kilonewtonissa eikä lukitse esikiristettyä pulttia, vaan painumallaan
+  vähentää esikiristystä. Jos laatta ei mahdu, ISO 7092 (Ø20) **⚠ tarkista pumpusta**. Lukitus
+  keskilujalla kierrelukitteella (esim. Loctite 243), lukkomutterilla tai Nord-Lock-laatoilla. **Ei M14:ää:** laipan reiät
   Ø14,15–14,53 jättäisivät vain noin 0,2 mm välystä. 10 mm:n levyyn ei kannata tehdä kierteitä.
 - Nykyiset pumput on kiinnitetty 10 mm:n teräskannakkeella koneeseen [blogi 2017-07-04], mutta
   ne ovat paljon kevyempiä (F1-61 8,5 kg), joten vertailukohta ei kata PVH57:ää.
