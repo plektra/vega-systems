@@ -350,8 +350,12 @@ ja kuluttaisi kytkintä. Siksi:
   FB-C4-10:ssä on keskellä ripa, ja sen seinät ovat noin 20–23 mm).
 - Kiinnitä jalkalevy runkoon pulteilla ripojen ja pystylevyn läheltä, jotta jalkalevy ei
   taivu.
-- Pumpun kiinnitys: 4 × 1/2-13 UNC (tai M12) läpi levystä muttereilla, 10.9-pultit. 10 mm:n
-  levyyn ei kannata tehdä kierteitä.
+- Pumpun kiinnitys: 4 × M12 (tai 1/2-13 UNC) läpi levystä muttereilla, **lujuusluokka 8.8
+  riittää**: puristusvoima noin 38 kN pulttia kohti (μ = 0,12), kitkalla kantava leikkaus noin
+  5,8 kN pulttia kohti, kun tarve on noin 0,8 kN leikkausta ja noin 0,7 kN vetoa (kolminkertainen
+  isku) → varmuus noin seitsenkertainen; kiristys noin 80 Nm **⚠ tarkista taulukosta**. Kovat
+  aluslaatat molemmin puolin, kierrelukite tai lukkomutteri. **Ei M14:ää:** laipan reiät
+  Ø14,15–14,53 jättäisivät vain noin 0,2 mm välystä. 10 mm:n levyyn ei kannata tehdä kierteitä.
 - Nykyiset pumput on kiinnitetty 10 mm:n teräskannakkeella koneeseen [blogi 2017-07-04], mutta
   ne ovat paljon kevyempiä (F1-61 8,5 kg), joten vertailukohta ei kata PVH57:ää.
 
