@@ -324,6 +324,37 @@ ja levyn paksuus (Eatonilla noin 20–23 mm, meillä 10 mm:n teräslevy jäykist
 Laserleikattu reikä ei yleensä osu suoraan 0,1 mm:n toleranssiin: leikkaa reikä hieman
 pienemmäksi ja avarra se, tai pyydä leikkaajalta mittatarkka reikä **⚠ tarkista leikkaajalta**.
 
+### Riittääkö 10 mm:n teräslevy [laskelma]
+
+Lisätty 2026-11-01. Karkea arvio. Pätevän henkilön pitää tarkistaa lopullinen kannake.
+
+**Oletukset:** L-kannake, jossa on pystylevy (pumpun laippa) ja jalkalevy runkoon. Pystylevy on
+10 mm, S235 ja 200 mm leveä. Akselin keskiö on 175 mm jalan pohjasta (kuten FB-C4-10:ssä).
+Pumppu painaa 36 kg **⚠ punnitse**, ja sen painopiste on noin 150 mm laipan takana **⚠ arvio**
+(pumpun pituus noin 293 mm).
+
+| Kuorma | Tulos |
+|---|---|
+| Pumpun paino, staattinen | taivutusmomentti noin 53 Nm pystylevyn juuressa → jännitys noin **16 MPa**; S235:n myötöraja 235 MPa ✅. Kolminkertaisellakin iskukuormalla (aallot, telakointi) noin 48 MPa ✅ |
+| Väsyminen hitsissä | noin 16 MPa yhden g:n tärinää kohti. Kuormaa kantavan pienahitsin väsymisraja on luokkaa 25–35 MPa, joten jatkuva tärinä yli noin ±1,5 g on riski ilman ripoja **⚠ arvio** |
+| Reaktiomomentti 254 Nm (250 bar) | vaikuttaa levyn tasossa: jännitys noin 4 MPa ✅. Pultteihin tulee leikkausvoimaa noin 0,8 kN pulttia kohti ✅; keskitysolake kantaa sen pääosin |
+| Taipuma | noin 0,2 mm akselin kohdalla. Linjaus tehdään pumppu paikallaan, joten taipuma ei haittaa ✅ |
+| **Ominaistaajuus ilman ripoja** | noin **15 Hz** (pumppu keikkuu eteen ja taakse). **Koneen 1. kertaluku on 700–2400 rpm = 12–40 Hz**, joten kannake resonoisi käyttöalueella ❌ |
+| Ominaistaajuus kahdella 10 mm:n kolmiorivalla (noin 150 × 150 mm) | levyn jäykkyys kasvaa noin 300-kertaiseksi. Käytännössä taajuus jää liitosten ja jalkalevyn joustojen takia alemmaksi, mutta selvästi yli 120 Hz:n (6-sylinterisen sytytystaajuus 2400 rpm:llä) **⚠ arvio** ✅ |
+
+**Johtopäätös:** 10 mm riittää lujuudeltaan, jos kannakkeessa on **jäykisteet**. Pelkkä
+10 mm:n L-levy on liian joustava: se resonoisi koneen kierrosalueella, ja tärinä rikkoisi hitsit
+ja kuluttaisi kytkintä. Siksi:
+
+- Tee pystylevyn kummallekin sivulle kolmiorivat, jotka ulottuvat jalkalevyyn (Eatonin
+  FB-C4-10:ssä on keskellä ripa, ja sen seinät ovat noin 20–23 mm).
+- Kiinnitä jalkalevy runkoon pulteilla ripojen ja pystylevyn läheltä, jotta jalkalevy ei
+  taivu.
+- Pumpun kiinnitys: 4 × 1/2-13 UNC (tai M12) läpi levystä muttereilla, 10.9-pultit. 10 mm:n
+  levyyn ei kannata tehdä kierteitä.
+- Nykyiset pumput on kiinnitetty 10 mm:n teräskannakkeella koneeseen [blogi 2017-07-04], mutta
+  ne ovat paljon kevyempiä (F1-61 8,5 kg), joten vertailukohta ei kata PVH57:ää.
+
 ## Miten LS-linjaa käytetään
 
 CV-säädin pitää pumpun lähtöpaineen noin 20 bar LS-portin painetta korkeampana, ja paineenrajoitin
@@ -794,6 +825,7 @@ nykyisen rinnalle.
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [x] PVH57:n asennusmitat: laippa, imu 2", lähtö 1", vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]. M-2206-S on osaluettelo eikä sisällä mittoja.
 - [ ] Pumpusta (pumppu nyt omistajilla 2026-11-01): kumpi pääportti on imu (2" = reikäväli 77,8 × 42,9 mm, 1" = 52,4 × 26,2 mm), onko ylempi vuotoportti avattu, paino
+- [ ] Pumpun paino vaa'alla (kannakkeen laskelma olettaa 36 kg) ja painopisteen paikka laipasta, esim. tasapainottamalla pyöröraudan päällä
 - [ ] Pumpusta: keskitysolakkeen halkaisija työntömitalla. Koodin mukaan pitäisi olla **127,0 mm** (SAE C); 125,0 mm tarkoittaisi metristä M-laippaa. Samalla reikäneliö: 114,5 mm (SAE C) vai 113,1 mm (ISO)
 - [ ] Pumpun kilvestä sarjanumero ja akselin mitat (halkaisija 1 1/4", kiilaura) kytkimen holkkien tilausta varten
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
