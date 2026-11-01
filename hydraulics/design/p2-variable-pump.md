@@ -1,6 +1,6 @@
 # P2 säätötilavuuspumppuna: Vickers PVH57 ja LS-ohjaus
 
-> **Tila:** **PÄÄTETTY 2026-10-27: P2 on Vickers PVH57** (kaupat sovittu [omistaja 2026-10-27]); Parker F1-61
+> **Tila:** **PÄÄTETTY 2026-10-27: P2 on Vickers PVH57** (kaupat sovittu [omistaja 2026-10-27]; **ostettu ja noudettu 2026-11-01, 150 €** [omistaja 2026-11-01]); Parker F1-61
 > -vaihtoehto on arkistoitu ([archive/p2-pump-options](archive/p2-pump-options.md)). **Venttiilikokoonpanon
 > ykkösvaihtoehto on [PVG 32](aux-circuit-ls-clean-sheet.md)** (päätös 2026-10-27). Tämän dokumentin FXDC + LS-purku
 > ja [LS + on/off](aux-circuit-ls-onoff.md) ovat varavaihtoehtoja; pumpun tiedot, kytkin, kannake, suodatus ja
@@ -52,9 +52,9 @@ Lämpöä syntyy keulapotkuria käytettäessä arviolta 2–3 kW 38 kW:n sijaan 
   BPV-ohitusventtiiliä (noin 430 € + ALV) ei tarvita.
 - **Ennallaan:** CETOP-pohjalaatta, BAV-713, VMP, letkut, säiliö, suodatin ja jäähdytin.
 
-**Hinta ja tila:** pumppu 190 €. Lisäksi tarvitaan FXDC, magneettiventtiili ja liittimet, mutta
+**Hinta ja tila:** pumppu ostettu 150 € (ilmoitushinta 190 €) ja noudettu [omistaja 2026-11-01]. Lisäksi tarvitaan FXDC, magneettiventtiili ja liittimet, mutta
 BPV jää pois (ks. [kustannusvertailu](#kustannusvertailu-arvio)). **Päätös 2026-10-27:** P2 on PVH57,
-ja kaupat on sovittu. F1-61-vaihtoehto on arkistoitu.
+ja kauppa toteutui 2026-11-01. F1-61-vaihtoehto on arkistoitu.
 
 ## Kumpi on monimutkaisempi: F1-61 vai PVH57
 
@@ -578,7 +578,7 @@ yhdessä: potkurin momentti kasvaa kierrosnopeuden neliössä. Sleipnerin tauluk
 
 | | F1-61-reitti | PVH57-reitti |
 |---|---|---|
-| Pumppu | käytetty 100–300 € | 190 € (tori.fi) |
+| Pumppu | käytetty 100–300 € | 150 € (ostettu tori.fi:stä 2026-11-01; ilmoitushinta 190 €) |
 | Tyhjäkierto | BPV-F1 noin 430 € + ALV | 2/2-magneettiventtiili ja kuristin, arviolta 100–200 € |
 | Virtauksen rajoitus | VPR3 (olemassa) | Sun FXDC noin 83–89 $ (Hydrotech, USA, 2026-10-25, toimitus vasta 2027) ja linjarunko DAW/S **⚠ hinta ei tiedossa**; Suomen hinta Salhydrolta **⚠ ei tiedossa** |
 | Akselikytkin | Spidex 48/60, noin 215 € + ALV | HRC 150 + Taper Lock 2012 -holkit, arviolta 80–120 € + ALV (päätös 2026-10-27) |
@@ -764,7 +764,8 @@ nykyisen rinnalle.
 - [ ] Tiivistesarja: sopiiko 02-102244 (vanha 02-102260) rakenteelle 10 ja yksinkertaiselle akselitiivisteelle, hinta Suomesta; vaihtoehtona pelkän akselitiivisteen ja O-renkaiden mitat
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [x] PVH57:n asennusmitat: laippa, imu 2", lähtö 1", vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]. M-2206-S on osaluettelo eikä sisällä mittoja.
-- [ ] Pumpusta: kumpi pääportti on imu (2" = reikäväli 77,8 × 42,9 mm, 1" = 52,4 × 26,2 mm), onko ylempi vuotoportti avattu, paino
+- [ ] Pumpusta (pumppu nyt omistajilla 2026-11-01): kumpi pääportti on imu (2" = reikäväli 77,8 × 42,9 mm, 1" = 52,4 × 26,2 mm), onko ylempi vuotoportti avattu, paino
+- [ ] Pumpun kilvestä sarjanumero ja akselin mitat (halkaisija 1 1/4", kiilaura) kytkimen holkkien tilausta varten
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))
 - [x] Akselikytkin PVH57:lle: HRC 150 + Taper Lock 2012 -holkit (päätös 2026-10-27)
@@ -783,5 +784,5 @@ nykyisen rinnalle.
 - [ ] Ankkurivinssin moottori on Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]; kierrostilavuus (noin 155,7 cm³ ⚠), käyttöpaine ja tyypillinen käyttöaika: ratkaisevat, tarvitaanko LS-linjaan 3/2-venttiili
 - [x] ~~Sun: FXDC:n pienin paine-ero, jolla asetusvirtaus pysyy~~ noin 15–20 bar 30–40 l/min:n asetuksella, noin 10 bar ≤ 23 l/min:llä; kuvaajasta luettu [datalehti Sun FXDC 2026-10-26]
 - [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (ratkaisee venttiilikokoonpanon: FXDC + LS-purku, LS + on/off vai PVG 32)
-- [x] Omistajat: PVH57 vai F1-61 → **PVH57**, kaupat sovittu (päätös 2026-10-27)
+- [x] Omistajat: PVH57 vai F1-61 → **PVH57**, kaupat sovittu (päätös 2026-10-27); ostettu ja noudettu 150 € [omistaja 2026-11-01]
 - [x] Omistajat: apupiirin venttiilikokoonpano PVH57:lle → **PVG 32** ykkösvaihtoehto (päätös 2026-10-27)

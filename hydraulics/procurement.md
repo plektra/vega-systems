@@ -1,6 +1,6 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
+> **Tila:** päivitetty 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
 > ykkösvaihtoehto 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
@@ -14,7 +14,7 @@ veneellä · ❓ ehdollinen (tarve selviää tarkistuksesta tai päätöksestä)
 
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
-| 1.1 | Vickers PVH57C-LAF-1S-10-C12V-31 | 1 | 57,4 cm³, LS-säädin, pyörimissuunta L | ✅ kaupat sovittu | 190 € | [päätös 2026-10-27](../decisions.md), [p2-variable-pump](design/p2-variable-pump.md) |
+| 1.1 | Vickers PVH57C-LAF-1S-10-C12V-31 | 1 | 57,4 cm³, LS-säädin, pyörimissuunta L | ✅ ostettu ja noudettu 2026-11-01 | 150 € [omistaja 2026-11-01] | [päätös 2026-10-27](../decisions.md), [p2-variable-pump](design/p2-variable-pump.md) |
 | 1.2 | HRC 150 -kytkimen napa (F tai H asennustilan mukaan) | 2 | Taper Lock -holkeille | 🛒 | noin 19 € + ALV / kpl | [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
 | 1.3 | HRC 150 -elastinen välikappale | 1 | | 🛒 | noin 10 £ + ALV | sama |
 | 1.4 | Taper Lock 2012 -holkki 48 mm, kiilaura | 1 | PTO:n puoli; **⚠ tarkista** koodi ja kiilauran syvyys | 🛒 | arviolta 10–25 € | sama |

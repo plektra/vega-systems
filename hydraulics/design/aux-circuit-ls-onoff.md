@@ -46,7 +46,7 @@ jäähdytin ja paluulinjan osat. Ohjauspiiri pysyy ennallaan.
 BPV:n ohjauksen vaatima paineanturi ja ohjauslogiikka.
 
 **Uudet osat, 1. vaihe (keulapotkuri):**
-- Vickers PVH57 (190 €).
+- Vickers PVH57 (ostettu 150 €, 2026-11-01).
 - Kannake ja kytkimen pumppunapa. Ne tarvitaan kummassakin reitissä, mutta PVH57:lle SAE C
   -laipalle ja 1,25":n kiila-akselille.
 - SAE-laippaliittimet, kotelovuotoletku säiliöön; keulapotkurin moottorin vuotolinja suoraan
