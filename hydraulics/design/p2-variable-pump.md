@@ -314,9 +314,10 @@ pumpun mukana. Kannake on SAE C -nelireikälaipalle, joten se sopii tähän pump
 | Jalan kiinnitysreiät | 4 × Ø11,0 läpi, upotus Ø37,0 × 1,0 mm; reikävälit 228,0 ja 101,8 mm **⚠ tarkista** (tulkittu kuvasta) |
 | Jalan paksuus | 20,5 mm |
 | Laippalevyn paksuus | noin 23 mm **⚠ tarkista** (tulkittu kuvasta) |
-| Hinta | **⚠ ei tiedossa** (vain kirjautuneille). Vertailuksi kaksireikäinen FB-C-10 (422584) maksaa noin 990 $ ([Motion](https://www.motion.com/products/sku/00389840)) |
+| Saatavuus ja hinta | **Poistunut valikoimasta**: *"This product has been discontinued and is no longer available"* ([Danfoss PowerSource 02-143419](https://powersource.danfoss.com/products/p/02-143419), luettu 2026-11-01). Hintaa ei löytynyt mistään; [Hydraulic Parts Source](https://www.hydparts.com/itemdetail/V-02-143419R) näyttää hinnan vain kirjautuneille, ja eBay, Motion ja Applied estivät automaattiset haut. Käytettynä voi löytyä eBaystä **⚠ ei tarkistettu**. Vertailuksi kaksireikäinen FB-C-10 (422584) noin 990 $ (Motion, hakutuloksen tiivistelmä) |
+| Ulkomitat ja paino (Danfoss) | korkeus 10,64" ≈ 270 mm, pituus 10,47" ≈ 266 mm, leveys 8,15" ≈ 207 mm; **29 lb ≈ 13 kg** |
 
-Valmis kannake on todennäköisesti selvästi kalliimpi kuin 150 €:n pumppu. Siksi omistajien oma
+Muiden valmistajien SAE C -jalkakannakkeet (2/4 reikää) maksavat noin 35–80 $ (esim. [Dalton](http://www.daltonhydraulic.com/hydraulic-pumps/mounting-brackets), [Splitez](https://www.splitez.com/engine_pump_adapters.html); hakutulosten tiivistelmistä, sopivuus SAE C:hen **⚠ tarkista**) tai Australiassa noin 424 AUD ([hydraulic.online](https://www.hydraulic.online/Foot-Mount-SAE-A-B-or-C-Mount-Motors-Or-Pumps-p355993370), SAE C -vaihtoehto, 7 kg). Niiden akselin keskiö on yleensä matalalla (esim. LDI FM400: 4,312" ≈ 109,5 mm), joten ne tuskin osuvat PTO:n korkeudelle ilman välialustaa. FB-C4-10 on poistunut valikoimasta. Siksi omistajien oma
 laserleikattu kannake ([päätös 2026-10-23](../../decisions.md)) on edelleen järkevämpi.
 FB-C4-10:n mitat kelpaavat kuitenkin malliksi: keskitysreiän toleranssi, 1/2-13 UNC -kiinnitys
 ja levyn paksuus (Eatonilla noin 20–23 mm, meillä 10 mm:n teräslevy jäykisteineen).
