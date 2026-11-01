@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="1200" viewBox="0 0 1720 1200" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1720" height="1200" fill="#ffffff"/>
+<text x="40" y="44" font-size="22" fill="#111" font-weight="bold" text-anchor="start">Vega – sähköjärjestelmän periaatekuva (24 V DC ja 230 V AC)</text>
+<text x="40" y="68" font-size="12" fill="#555" font-weight="normal" text-anchor="start">Periaatekuva 2026-11-01, ei asennuskuva. Sulakkeet ja kaapelit: electrics/design/circuit-list.md. Tarkastetaan pätevällä sähköasentajalla ennen rakentamista.</text>
+<rect x="40" y="110" width="180" height="64" rx="6" fill="#f2f4f7" stroke="#777" stroke-width="1.5"/>
+<text x="52" y="134" font-size="12" fill="#222" font-weight="bold" text-anchor="start">Maasähkö</text>
+<text x="52" y="150" font-size="12" fill="#222" font-weight="normal" text-anchor="start">230 V, kotilaituri 15 A</text>
+<rect x="40" y="196" width="180" height="82" rx="6" fill="#f2f4f7" stroke="#777" stroke-width="1.5"/>
+<text x="52" y="220" font-size="12" fill="#222" font-weight="bold" text-anchor="start">Timco SS2200i</text>
+<text x="52" y="236" font-size="12" fill="#222" font-weight="normal" text-anchor="start">1,8 kW, varalataus</text>
+<text x="52" y="252" font-size="12" fill="#222" font-weight="normal" text-anchor="start">vain avokannella</text>
+<path d="M 220 142 L 250 142 L 250 180 L 290 180" fill="none" stroke="#7a4a1d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 220 237 L 250 237 L 250 180" fill="none" stroke="#7a4a1d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="10 6"/>
+<circle cx="250" cy="180" r="5" fill="#7a4a1d"/>
+<text x="290" y="250" font-size="10" fill="#555" font-weight="normal" text-anchor="start">aggregaatti kytketään maasähköpistokkeeseen</text>
+<rect x="290" y="130" width="170" height="100" rx="8" fill="#ffffff" stroke="#555" stroke-width="1.5"/>
+<text x="302" y="154" font-size="15" fill="#222" font-weight="bold" text-anchor="start">Erotusmuuntaja</text>
+<text x="302" y="174" font-size="12" fill="#222" font-weight="normal" text-anchor="start">Airlink WM5002</text>
+<text x="302" y="190" font-size="12" fill="#222" font-weight="normal" text-anchor="start">230/230 V, 5 kVA</text>
+<text x="302" y="206" font-size="12" fill="#222" font-weight="normal" text-anchor="start">(olemassa)</text>
+<path d="M 460 180 L 520 180" fill="none" stroke="#7a4a1d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="468" y="172" font-size="11" fill="#555" font-weight="normal" text-anchor="start">AC in</text>
+<rect x="520" y="110" width="230" height="180" rx="8" fill="#1d5fae" stroke="#0d3b73" stroke-width="1.5"/>
+<text x="532" y="134" font-size="15" fill="#fff" font-weight="bold" text-anchor="start">MultiPlus-II</text>
+<text x="532" y="154" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">24/5000/120-50, 230 V</text>
+<text x="532" y="170" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">invertteri 4 kW</text>
+<text x="532" y="186" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">laturi 120 A</text>
+<text x="532" y="202" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">PowerAssist</text>
+<text x="532" y="218" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">tulovirta: laituri 14 A,</text>
+<text x="532" y="234" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">aggregaatti noin 7 A</text>
+<path d="M 750 180 L 820 180" fill="none" stroke="#7a4a1d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="756" y="172" font-size="11" fill="#555" font-weight="normal" text-anchor="start">AC out</text>
+<rect x="820" y="110" width="270" height="200" rx="6" fill="#fff" stroke="#777" stroke-width="1.5"/>
+<text x="832" y="134" font-size="12" fill="#222" font-weight="bold" text-anchor="start">230 V -keskus (AC)</text>
+<text x="832" y="151" font-size="12" fill="#222" font-weight="normal" text-anchor="start">vikavirtasuoja 30 mA</text>
+<text x="832" y="168" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-01 Sähkökiuas 2,3 kW</text>
+<text x="832" y="185" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-02 Jääkaappi</text>
+<text x="832" y="202" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-03 Mikro- ja sähköuuni</text>
+<text x="832" y="219" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-04 Keittiön pistorasiat</text>
+<text x="832" y="236" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-05 Muut pistorasiat</text>
+<text x="832" y="253" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-06 Ilmanvaihto, liesituuletin</text>
+<text x="832" y="270" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-07 Lämmityksen poltin</text>
+<text x="832" y="287" font-size="12" fill="#222" font-weight="normal" text-anchor="start">AC-08 Vedenlämmitin (vain maasähkö)</text>
+<rect x="1160" y="110" width="200" height="90" rx="8" fill="#1d5fae" stroke="#0d3b73" stroke-width="1.5"/>
+<text x="1172" y="134" font-size="15" fill="#fff" font-weight="bold" text-anchor="start">Cerbo GX</text>
+<text x="1172" y="154" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">DVCC: BMS ohjaa latausta</text>
+<text x="1172" y="170" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">ja purkua</text>
+<rect x="1160" y="222" width="200" height="56" rx="6" fill="#f2f4f7" stroke="#777" stroke-width="1.5"/>
+<text x="1172" y="245" font-size="12" fill="#222" font-weight="bold" text-anchor="start">Signal K / VRM</text>
+<text x="1172" y="261" font-size="12" fill="#222" font-weight="normal" text-anchor="start">valvonta ja hälytykset</text>
+<path d="M 1260 200 L 1260 222" fill="none" stroke="#1d5fae" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<path d="M 640 110 L 640 92 L 1260 92 L 1260 110" fill="none" stroke="#1d5fae" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<text x="950" y="86" font-size="11" fill="#1d5fae" font-weight="normal" text-anchor="middle">VE.Bus</text>
+<path d="M 585 290 L 585 470" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="577" y="362" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="585" y1="362" x2="585" y2="398" stroke="#d7261e" stroke-width="1.2"/>
+<text x="571" y="384" font-size="11" fill="#333" font-weight="normal" text-anchor="end">PJ-01  ≈ 180 A</text>
+<path d="M 690 290 L 690 545" fill="none" stroke="#fff" stroke-width="14" stroke-linejoin="round"/>
+<path d="M 690 290 L 690 545" fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="330" y="462" width="990" height="16" rx="3" fill="#d7261e" stroke="#8a1410" stroke-width="1.5"/>
+<text x="340" y="456" font-size="12" fill="#d7261e" font-weight="bold" text-anchor="start">Pääjakelu PJ, plus-kisko (+)</text>
+<rect x="330" y="537" width="990" height="16" rx="3" fill="#222222" stroke="#000" stroke-width="1.5"/>
+<text x="1130" y="571" font-size="12" fill="#222222" font-weight="bold" text-anchor="start">Miinuskisko (−)</text>
+<path d="M 690 290 L 690 458" fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="440" y="790" width="250" height="170" rx="8" fill="#e8f1fb" stroke="#1d5fae" stroke-width="2"/>
+<text x="454" y="826" font-size="13" fill="#222" font-weight="bold" text-anchor="start">Käyttöakku 1</text>
+<text x="454" y="842" font-size="13" fill="#222" font-weight="normal" text-anchor="start">8 × EVE MB31, 8S</text>
+<text x="454" y="858" font-size="13" fill="#222" font-weight="normal" text-anchor="start">25,6 V, 314 Ah, ≈ 8 kWh</text>
+<rect x="454" y="890" width="222" height="52" rx="5" fill="#1d5fae" stroke="#0d3b73" stroke-width="1.5"/>
+<text x="464" y="911" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">JK-PB2A16S20P (BMS)</text>
+<text x="464" y="927" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">CAN · 2 kuivakosketinta</text>
+<rect x="481" y="780" width="18" height="12" rx="2" fill="#d7261e" stroke="#8a1410" stroke-width="1.5"/>
+<rect x="631" y="780" width="18" height="12" rx="2" fill="#222222" stroke="#000" stroke-width="1.5"/>
+<path d="M 640 780 L 640 553" fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 490 780 L 490 478" fill="none" stroke="#fff" stroke-width="14" stroke-linejoin="round"/>
+<path d="M 490 780 L 490 478" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 490 531 L 490 478" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="482" y="717" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="490" y1="717" x2="490" y2="753" stroke="#d7261e" stroke-width="1.2"/>
+<text x="504" y="739" font-size="11" fill="#333" font-weight="normal" text-anchor="start">Class T</text>
+<rect x="484" y="639" width="12" height="32" fill="#fff"/>
+<circle cx="490" cy="669" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<circle cx="490" cy="641" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="490" y1="666" x2="503" y2="643" stroke="#d7261e" stroke-width="2.5"/>
+<text x="508" y="659" font-size="11" fill="#333" font-weight="normal" text-anchor="start">pääkytkin</text>
+<text x="565" y="980" font-size="11" fill="#222" font-weight="normal" text-anchor="start"></text>
+<rect x="740" y="790" width="250" height="170" rx="8" fill="#e8f1fb" stroke="#1d5fae" stroke-width="2"/>
+<text x="754" y="826" font-size="13" fill="#222" font-weight="bold" text-anchor="start">Käyttöakku 2</text>
+<text x="754" y="842" font-size="13" fill="#222" font-weight="normal" text-anchor="start">8 × EVE MB31, 8S</text>
+<text x="754" y="858" font-size="13" fill="#222" font-weight="normal" text-anchor="start">25,6 V, 314 Ah, ≈ 8 kWh</text>
+<rect x="754" y="890" width="222" height="52" rx="5" fill="#1d5fae" stroke="#0d3b73" stroke-width="1.5"/>
+<text x="764" y="911" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">JK-PB2A16S20P (BMS)</text>
+<text x="764" y="927" font-size="12" fill="#fff" font-weight="normal" text-anchor="start">CAN · 2 kuivakosketinta</text>
+<rect x="781" y="780" width="18" height="12" rx="2" fill="#d7261e" stroke="#8a1410" stroke-width="1.5"/>
+<rect x="931" y="780" width="18" height="12" rx="2" fill="#222222" stroke="#000" stroke-width="1.5"/>
+<path d="M 940 780 L 940 553" fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 790 780 L 790 478" fill="none" stroke="#fff" stroke-width="14" stroke-linejoin="round"/>
+<path d="M 790 780 L 790 478" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 790 531 L 790 478" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="782" y="717" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="790" y1="717" x2="790" y2="753" stroke="#d7261e" stroke-width="1.2"/>
+<text x="804" y="739" font-size="11" fill="#333" font-weight="normal" text-anchor="start">Class T</text>
+<rect x="784" y="639" width="12" height="32" fill="#fff"/>
+<circle cx="790" cy="669" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<circle cx="790" cy="641" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="790" y1="666" x2="803" y2="643" stroke="#d7261e" stroke-width="2.5"/>
+<text x="808" y="659" font-size="11" fill="#333" font-weight="normal" text-anchor="start">pääkytkin</text>
+<text x="865" y="980" font-size="11" fill="#222" font-weight="normal" text-anchor="start"></text>
+<rect x="1040" y="790" width="250" height="170" rx="8" fill="#fff" stroke="#999" stroke-width="1.5" stroke-dasharray="8 6"/>
+<text x="1054" y="826" font-size="13" fill="#777" font-weight="bold" text-anchor="start">Käyttöakku 3 (optio)</text>
+<text x="1054" y="842" font-size="13" fill="#777" font-weight="normal" text-anchor="start">tila ja lähtö PJ-07 varataan</text>
+<text x="1054" y="858" font-size="13" fill="#777" font-weight="normal" text-anchor="start">noin 24 kWh yhteensä</text>
+<path d="M 1090 780 L 1090 478" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/>
+<path d="M 1090 780 L 1090 478" fill="none" stroke="#d99" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 6"/>
+<text x="1082" y="700" font-size="11" fill="#777" font-weight="normal" text-anchor="end">PJ-07</text>
+<path d="M 1160 180 L 1110 180 L 1110 770 L 965 770 L 965 890" fill="none" stroke="#1d5fae" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<path d="M 665 770 L 965 770" fill="none" stroke="#1d5fae" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<path d="M 665 770 L 665 890" fill="none" stroke="#1d5fae" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<text x="1030" y="764" font-size="11" fill="#1d5fae" font-weight="normal" text-anchor="middle">BMS-CAN</text>
+<rect x="40" y="330" width="270" height="210" rx="8" fill="#f2f4f7" stroke="#777" stroke-width="1.5"/>
+<text x="52" y="352" font-size="14" fill="#222" font-weight="bold" text-anchor="start">Pääkone CAT 3126B</text>
+<rect x="52" y="366" width="120" height="46" rx="6" fill="#fff" stroke="#777" stroke-width="1.5"/>
+<text x="62" y="386" font-size="11" fill="#222" font-weight="normal" text-anchor="start">Laturi 65 A</text>
+<text x="62" y="402" font-size="11" fill="#222" font-weight="normal" text-anchor="start">(olemassa)</text>
+<rect x="182" y="366" width="116" height="46" rx="6" fill="#fff" stroke="#777" stroke-width="1.5"/>
+<text x="192" y="386" font-size="11" fill="#222" font-weight="normal" text-anchor="start">Käynnistin,</text>
+<text x="192" y="402" font-size="11" fill="#222" font-weight="normal" text-anchor="start">ohjausyksikkö</text>
+<rect x="52" y="430" width="120" height="56" rx="5" fill="#3a3f47" stroke="#222" stroke-width="1.5"/>
+<text x="62" y="450" font-size="11" fill="#fff" font-weight="normal" text-anchor="start">Alpha Pro III</text>
+<text x="62" y="466" font-size="11" fill="#fff" font-weight="normal" text-anchor="start">säädin</text>
+<rect x="182" y="430" width="116" height="56" rx="6" fill="#fff" stroke="#777" stroke-width="1.5"/>
+<text x="192" y="450" font-size="11" fill="#222" font-weight="normal" text-anchor="start">Toinen laturi</text>
+<text x="192" y="466" font-size="11" fill="#222" font-weight="normal" text-anchor="start">24 V, 150–175 A</text>
+<text x="192" y="482" font-size="11" fill="#222" font-weight="normal" text-anchor="start">(tuleva)</text>
+<text x="52" y="512" font-size="10" fill="#555" font-weight="normal" text-anchor="start">Kenttäohjaus säätimeltä laturille</text>
+<path d="M 172 456 L 182 456" fill="none" stroke="#555" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 298 470 L 330 470" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="296" y="500" font-size="11" fill="#333" font-weight="normal" text-anchor="start">PJ-03 + APD24</text>
+<rect x="150" y="600" width="160" height="66" rx="6" fill="#fff" stroke="#777" stroke-width="1.5"/>
+<text x="160" y="622" font-size="11" fill="#222" font-weight="normal" text-anchor="start">P3 ohjauksen</text>
+<text x="160" y="638" font-size="11" fill="#222" font-weight="normal" text-anchor="start">varapumppu 2,5 kW</text>
+<text x="160" y="654" font-size="11" fill="#222" font-weight="normal" text-anchor="start">≈ 100 A (keskim. 40–50 A)</text>
+<rect x="40" y="790" width="250" height="170" rx="8" fill="#f7efe6" stroke="#9a6b34" stroke-width="2"/>
+<text x="54" y="826" font-size="13" fill="#222" font-weight="bold" text-anchor="start">Käynnistysakut</text>
+<text x="54" y="842" font-size="13" fill="#222" font-weight="normal" text-anchor="start">2 × 12 V lyijy, 24 V</text>
+<text x="54" y="858" font-size="13" fill="#222" font-weight="normal" text-anchor="start">(tyyppi ⚠ tarkistettava)</text>
+<rect x="70" y="780" width="18" height="12" rx="2" fill="#d7261e" stroke="#8a1410" stroke-width="1.5"/>
+<rect x="240" y="780" width="18" height="12" rx="2" fill="#222222" stroke="#000" stroke-width="1.5"/>
+<path d="M 79 780 L 79 540" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="71" y="712" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="79" y1="712" x2="79" y2="748" stroke="#d7261e" stroke-width="1.2"/>
+<text x="65" y="734" font-size="11" fill="#333" font-weight="normal" text-anchor="end">KA-02</text>
+<text x="88" y="580" font-size="11" fill="#333" font-weight="normal" text-anchor="start">KA-01</text>
+<path d="M 79 700 L 130 700 L 130 633 L 150 633" fill="none" stroke="#d7261e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="122" y="652" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="130" y1="652" x2="130" y2="688" stroke="#d7261e" stroke-width="1.2"/>
+<text x="116" y="674" font-size="11" fill="#333" font-weight="normal" text-anchor="end">KA-05</text>
+<path d="M 249 780 L 249 720 L 345 720 L 345 553" fill="none" stroke="#222222" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="345" y1="600" x2="345" y2="612" stroke="#222222" stroke-width="2"/>
+<line x1="334.0" y1="612" x2="356.0" y2="612" stroke="#222222" stroke-width="2"/>
+<line x1="338.0" y1="617" x2="352.0" y2="617" stroke="#222222" stroke-width="2"/>
+<line x1="342.0" y1="622" x2="348.0" y2="622" stroke="#222222" stroke-width="2"/>
+<text x="338" y="682" font-size="11" fill="#333" font-weight="normal" text-anchor="end">Yksi yhteys-</text>
+<text x="338" y="696" font-size="11" fill="#333" font-weight="normal" text-anchor="end">piste runkoon</text>
+<text x="338" y="710" font-size="11" fill="#333" font-weight="normal" text-anchor="end">⚠ mitataan</text>
+<path d="M 130 700 L 130 760 L 420 760 L 420 478" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/>
+<path d="M 130 700 L 130 760 L 420 760 L 420 478" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 420 531 L 420 478" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="414" y="689" width="12" height="32" fill="#fff"/>
+<circle cx="420" cy="719" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<circle cx="420" cy="691" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="420" y1="716" x2="433" y2="693" stroke="#d7261e" stroke-width="2.5"/>
+<text x="438" y="709" font-size="11" fill="#333" font-weight="normal" text-anchor="start"></text>
+<text x="432" y="700" font-size="11" fill="#333" font-weight="normal" text-anchor="start">KA-04</text>
+<text x="432" y="714" font-size="11" fill="#333" font-weight="normal" text-anchor="start">hätäkytkin</text>
+<text x="432" y="728" font-size="11" fill="#333" font-weight="normal" text-anchor="start">(auki)</text>
+<path d="M 165 960 L 165 1020 L 1440 1020 L 1440 735" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="157" y="980" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="165" y1="980" x2="165" y2="1016" stroke="#d7261e" stroke-width="1.2"/>
+<text x="179" y="1002" font-size="11" fill="#333" font-weight="normal" text-anchor="start">KA-03</text>
+<rect x="1430" y="300" width="260" height="104" rx="6" fill="#fff" stroke="#777" stroke-width="1.5"/>
+<text x="1442" y="322" font-size="12" fill="#222" font-weight="bold" text-anchor="start">KS komentosilta</text>
+<text x="1442" y="338" font-size="12" fill="#222" font-weight="normal" text-anchor="start">KS-01…14, ESP32-PDM</text>
+<text x="1442" y="354" font-size="12" fill="#222" font-weight="normal" text-anchor="start">valot, hakuvalo (rele),</text>
+<text x="1442" y="370" font-size="12" fill="#222" font-weight="normal" text-anchor="start">navigointi, pyyhkijät</text>
+<rect x="1430" y="420" width="260" height="104" rx="6" fill="#fff" stroke="#777" stroke-width="1.5"/>
+<text x="1442" y="442" font-size="12" fill="#222" font-weight="bold" text-anchor="start">KH konehuone</text>
+<text x="1442" y="458" font-size="12" fill="#222" font-weight="normal" text-anchor="start">KH-01…11, ESP32-PDM</text>
+<text x="1442" y="474" font-size="12" fill="#222" font-weight="normal" text-anchor="start">pumput, WC, valaistus</text>
+<text x="1442" y="490" font-size="12" fill="#222" font-weight="normal" text-anchor="start">KH-20…22 jatkuvat (Signal K)</text>
+<rect x="1500" y="600" width="190" height="210" rx="6" fill="#fff5f5" stroke="#d7261e" stroke-width="2"/>
+<text x="1512" y="622" font-size="12" fill="#222" font-weight="bold" text-anchor="start">TK tärkeät kuormat</text>
+<text x="1512" y="640" font-size="12" fill="#222" font-weight="normal" text-anchor="start">ei PDM:ää, ei pääkytkintä</text>
+<text x="1512" y="658" font-size="12" fill="#222" font-weight="normal" text-anchor="start">TK-01…03 pilssipumput</text>
+<text x="1512" y="676" font-size="12" fill="#222" font-weight="normal" text-anchor="start">TK-04 kulkuvalot</text>
+<text x="1512" y="694" font-size="12" fill="#222" font-weight="normal" text-anchor="start">TK-05 ankkurivalo</text>
+<text x="1512" y="712" font-size="12" fill="#222" font-weight="normal" text-anchor="start">TK-06 VHF</text>
+<text x="1512" y="730" font-size="12" fill="#222" font-weight="normal" text-anchor="start">TK-07 ylävesihälytin</text>
+<text x="1512" y="748" font-size="12" fill="#222" font-weight="normal" text-anchor="start">TK-08 kaasuhälytin (ehd.)</text>
+<path d="M 1290 470 L 1290 352 L 1430 352" fill="none" stroke="#d7261e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1282" y="392" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="1290" y1="392" x2="1290" y2="428" stroke="#d7261e" stroke-width="1.2"/>
+<text x="1276" y="414" font-size="11" fill="#333" font-weight="normal" text-anchor="end">PJ-04 60 A</text>
+<path d="M 1320 470 L 1395 470 L 1395 472 L 1430 472" fill="none" stroke="#d7261e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1342" y="462" width="36" height="16" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="1342" y1="470" x2="1378" y2="470" stroke="#d7261e" stroke-width="1.2"/>
+<text x="1360" y="456" font-size="11" fill="#333" font-weight="normal" text-anchor="middle">PJ-05 40 A</text>
+<path d="M 1250 470 L 1250 650 L 1395 650" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/>
+<path d="M 1250 470 L 1250 650 L 1395 650" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1250 531 L 1250 650" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1242" y="592" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="1250" y1="592" x2="1250" y2="628" stroke="#d7261e" stroke-width="1.2"/>
+<text x="1236" y="614" font-size="11" fill="#333" font-weight="normal" text-anchor="end">PJ-06 50 A</text>
+<path d="M 1320 650 L 1395 650" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/>
+<path d="M 1320 650 L 1395 650" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1395" y="632" width="90" height="40" rx="5" fill="#1d5fae" stroke="#0d3b73" stroke-width="1.5"/>
+<text x="1403" y="650" font-size="10" fill="#fff" font-weight="normal" text-anchor="start">Argo FET</text>
+<text x="1403" y="663" font-size="10" fill="#fff" font-weight="normal" text-anchor="start">100-2</text>
+<path d="M 1485 652 L 1500 652" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1395" y="715" width="90" height="40" rx="5" fill="#1d5fae" stroke="#0d3b73" stroke-width="1.5"/>
+<text x="1403" y="733" font-size="10" fill="#fff" font-weight="normal" text-anchor="start">Argo FET</text>
+<text x="1403" y="746" font-size="10" fill="#fff" font-weight="normal" text-anchor="start">100-2</text>
+<path d="M 1440 755 L 1440 735" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1485 735 L 1500 735" fill="none" stroke="#d7261e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1320 545 L 1415 545 L 1415 395 L 1430 395" fill="none" stroke="#222222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1415 515 L 1430 515" fill="none" stroke="#222222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1320 545 L 1335 545 L 1335 795 L 1500 795" fill="none" stroke="#222222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 615 942 L 615 975 L 915 975 L 915 942" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 4"/>
+<path d="M 615 975 L 25 975 L 25 458 L 52 458" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="620" y="991" font-size="11" fill="#e07b00" font-weight="normal" text-anchor="start">Kuivakoskettimet sarjassa → Alpha Pro III Reg on (vika tai suojaus pysäyttää laturin)</text>
+<rect x="40" y="1060" width="1650" height="110" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1.5"/>
+<text x="54" y="1084" font-size="13" fill="#222" font-weight="bold" text-anchor="start">Merkinnät</text>
+<path d="M 60 1112 L 110 1112" fill="none" stroke="#d7261e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="120" y="1116" font-size="12" fill="#222" font-weight="normal" text-anchor="start">+ DC (24 V)</text>
+<path d="M 310 1112 L 360 1112" fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="370" y="1116" font-size="12" fill="#222" font-weight="normal" text-anchor="start">− DC</text>
+<path d="M 560 1112 L 610 1112" fill="none" stroke="#7a4a1d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="620" y="1116" font-size="12" fill="#222" font-weight="normal" text-anchor="start">230 V AC</text>
+<path d="M 810 1112 L 860 1112" fill="none" stroke="#1d5fae" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<text x="870" y="1116" font-size="12" fill="#222" font-weight="normal" text-anchor="start">VE.Bus / CAN-väylä</text>
+<path d="M 1060 1112 L 1110 1112" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="1120" y="1116" font-size="12" fill="#222" font-weight="normal" text-anchor="start">Ohjausjohdin (kuivakosketin)</text>
+<rect x="62" y="1130" width="16" height="36" rx="2" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="70" y1="1130" x2="70" y2="1166" stroke="#d7261e" stroke-width="1.2"/>
+<text x="84" y="1152" font-size="11" fill="#333" font-weight="normal" text-anchor="start">sulake (tunnus ja koko piirilistassa)</text>
+<rect x="364" y="1132" width="12" height="32" fill="#fff"/>
+<circle cx="370" cy="1162" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<circle cx="370" cy="1134" r="3.5" fill="#fff" stroke="#d7261e" stroke-width="2"/>
+<line x1="370" y1="1159" x2="383" y2="1136" stroke="#d7261e" stroke-width="2.5"/>
+<text x="388" y="1152" font-size="11" fill="#333" font-weight="normal" text-anchor="start">kytkin</text>
+<text x="510" y="1144" font-size="12" fill="#333" font-weight="normal" text-anchor="start">Sininen laatikko = Victron / JK -laite. Katkoviiva = optio tai tuleva. BMS-CAN: Victron 500 kbit/s, JK:n asetus tarkistettava.</text>
+<text x="510" y="1160" font-size="12" fill="#333" font-weight="normal" text-anchor="start">Tunnukset (PJ, KA, TK, KS, KH, AC) vastaavat piirilistaa.</text>
+</svg>

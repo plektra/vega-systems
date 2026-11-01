@@ -31,7 +31,16 @@ sähköasentajalla ennen rakentamista.**
 
 ## 2. Ehdotettu rakenne
 
-**Päätetty 2026-10-31** [omistaja 2026-10-31, [decisions.md](../../decisions.md)]. Kolme tasoa: **pääjakelu** akkujen vieressä, **alakeskukset** siellä, missä kuormat ovat, ja
+**Päätetty 2026-10-31** [omistaja 2026-10-31, [decisions.md](../../decisions.md)]. **Periaatekuva (päivitetty 2026-11-01, päätökset 2026-10-31 asti):**
+
+![Vegan sähköjärjestelmän periaatekuva](../img/system-overview.svg)
+
+Kuva on periaatekuva, ei asennuskuva: kaapelikoot, sulakkeiden arvot ja laitteiden paikat
+tarkentuvat veneeltä mitattujen tietojen jälkeen ([piirilista](circuit-list.md),
+[tarkistuslista](../boat-checklist.md)). Kuva tehdään skriptillä [`img/system-overview.py`](../img/system-overview.py).
+Alla oleva Mermaid-kaavio on yksinkertaistettu.
+
+Kolme tasoa: **pääjakelu** akkujen vieressä, **alakeskukset** siellä, missä kuormat ovat, ja
 **tärkeiden kuormien kisko**, joka saa virran kummaltakin akustolta.
 
 ```mermaid
