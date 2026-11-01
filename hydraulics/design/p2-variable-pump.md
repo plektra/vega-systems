@@ -6,7 +6,7 @@
 > ja [LS + on/off](aux-circuit-ls-onoff.md) ovat varavaihtoehtoja; pumpun tiedot, kytkin, kannake, suodatus ja
 > asennus pätevät kaikissa. Selvitys 2026-10-25, korjattu 2026-10-25 (asennusjärjestys; VPR3:n B-porttia ei saa tulpata; myyjän vastaukset kunnosta),
 > 2026-10-26 (FXDC:n painehäviö ja asetus; paluusuodatin; puhtausvaatimus 250 barissa 16/14/12) ja 2026-10-27
-> (akselikytkin HRC 150; pumppu päätetty) sekä 2026-10-28 (asennusmitat ja porttikoot Eatonin luettelosta: imu 2", ei 2 1/2"; huoltotiedote M-2206-S luettu kokonaan). Vertailut F1-61:een on jätetty perusteluiksi.
+> (akselikytkin HRC 150; pumppu päätetty) sekä 2026-10-28 (asennusmitat ja porttikoot Eatonin luettelosta: imu 2", ei 2 1/2"; huoltotiedote M-2206-S luettu kokonaan) ja 2026-11-01 (keskitys Ø127 vahvistettu, Ø125 on metrinen M-laippa; Eatonin jalkakannake FB-C4-10). Vertailut F1-61:een on jätetty perusteluiksi.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
 > rakentamista.
 
@@ -278,7 +278,7 @@ Q250 tai Q140, eikä tässä koodissa ole lisäkoodia.
 | Imuaukko | **2" SAE J518 code 61** -nelireikälaippa (reikäväli 77,77 × 42,88 mm, kierre `F`-mallissa 1/2-13 UNC; `M`-mallissa M12). **Korjaus:** jälleenmyyjien 2 1/2" oli väärin. Imu on venttiililohkon päällä tai pohjassa (ks. Asennus) **⚠ tarkista pumpusta** | s. 21–22 (*kuvana*) |
 | Painelähtö | **1" SAE J518 code 61** -laippa (reikäväli 52,37 × 26,19 mm, kierre 3/8-16 UNC / M10×1,5) | s. 21–22 |
 | LS-portti | SAE O-rengasportti 9/16-18 UNF (3/8":n putkelle); painemittariportti M10 (tulpattu) | s. 21 |
-| Asennuslaippa | SAE C nelireikä: keskitysolake Ø127,00/126,95 mm, reiät Ø14,15–14,53 mm, reikäneliö 2 × 57,25 = **114,5 mm**; pumpun pituus laipasta takapäähän noin 293 mm (mitta C) | s. 21–22 |
+| Asennuslaippa | SAE C nelireikä: keskitysolake Ø127,00/126,95 mm, reiät Ø14,15–14,53 mm, reikäneliö 2 × 57,25 = **114,5 mm**; pumpun pituus laipasta takapäähän noin 293 mm (mitta C). **Ø125 mm ei koske tätä pumppua** (2026-11-01): se on metrinen lisävaihtoehto ISO 3019/2-125B4HW (laippakoodi **M**, vain N-akselin kanssa; reikäneliö 2 × 56,57 = 113,1 mm, reiät Ø14,00–14,37). Tämän pumpun koodissa laippa on **C** = SAE J744-127-4, siis **Ø127** [Eaton TM008 s. 29; M-2206-S s. 8]. Ks. [Eatonin jalkakannake FB-C4-10](#eatonin-jalkakannake-fb-c4-10) | s. 21–22, 29 |
 | Akseli (koodi 1) | SAE C suora kiila (J744-32-1): **Ø31,75 mm**, kiila 7,93 mm, kiila-akselin pituus laipasta 56,0 mm | s. 20 |
 | Säätöruuvit | painesäädin noin 28 bar/kierros; LS-paine-ero noin 14 bar/kierros (tehdasasetus 20 bar) | s. 21; M-2206-S s. 8 |
 | Kotelovuoto | pakollinen vuotolinja säiliöön. Vuotoportti 3/4-16 UNF SAE O-rengas (1/2":n putkelle); luettelon piirustuksessa **kaksi**: alhaalla ja ylhäällä ("optional drain port"). Onko ylempi portti tässä pumpussa avattu, **⚠ tarkista pumpusta** | s. 21; M-2210-S |
@@ -296,6 +296,32 @@ Oletukset: volumetrinen hyötysuhde 95 %, mekaaninen 90 %, tyhjäkäynti 700 rpm
 | Kierrosluku | koneen 2400 rpm on tasan mobiiliversion rajalla, kun imupaine on vähintään 0 bar. Säiliö on noin 1 m pumpun yläpuolella ja imulinja 50 mm. Täydellä iskulla 2400 rpm:llä (noin 138 l/min) imupaine olisi kylmällä öljyllä arviolta 0…−0,03 bar. **Vegan käytössä täyttä iskua ei tule korkeilla kierroksilla**: ajossa pumppu on valmiustilassa ja keulapotkuria käytettäessä virtaus on rajattu noin 35 l/minuun. Luettelo ei kerro, saako pienemmällä iskulla pyöriä nopeammin **⚠ kysy Danfossilta**. |
 | Laippa ja akseli | SAE C ja kiila-akseli: **ei ISO 7653 eikä 8×32×36**. Kannake suunnitellaan PVH57:lle; kytkimeksi HRC 150 kartioholkeilla (päätös 2026-10-27) [omistaja 2026-10-25, 2026-10-27] |
 | Paino | noin 36 kg (F1-61 8,5 kg): kannake mitoitetaan tälle painolle ja tärinälle; reaktiomomentti noin 254 Nm on lähes sama kuin F1-61:llä (noin 250 Nm) [laskelma] |
+
+### Eatonin jalkakannake FB-C4-10
+
+Lisätty 2026-11-01. Lähde: Eaton V-PUPI-TM008-E1 s. 30 (*mitat luettu kuvasta*) ja
+[Hydraulic Parts Source](https://www.hydparts.com/itemdetail/V-02-143419R).
+
+Eatonin valmis jalkakannake *"Model FB-C4-10 Foot Mounting Kit for All PVH Pumps"*, **osanumero
+02-143419**. Sarjaan kuuluvat kannake ja neljä ruuvia pumpun kiinnitykseen; sitä ei toimiteta
+pumpun mukana. Kannake on SAE C -nelireikälaipalle, joten se sopii tähän pumppuun.
+
+| Mitta | Arvo |
+|---|---|
+| Keskitysreikä | Ø127,05–127,15 mm (pumpun olake Ø126,95–127,00) |
+| Pumpun kiinnitys | 4 × 1/2-13 UNC -kierre läpi, reikäneliö 114,5 mm (2 × 57,25) |
+| Akselin keskiön korkeus jalan pohjasta | 174,75 mm |
+| Jalan kiinnitysreiät | 4 × Ø11,0 läpi, upotus Ø37,0 × 1,0 mm; reikävälit 228,0 ja 101,8 mm **⚠ tarkista** (tulkittu kuvasta) |
+| Jalan paksuus | 20,5 mm |
+| Laippalevyn paksuus | noin 23 mm **⚠ tarkista** (tulkittu kuvasta) |
+| Hinta | **⚠ ei tiedossa** (vain kirjautuneille). Vertailuksi kaksireikäinen FB-C-10 (422584) maksaa noin 990 $ ([Motion](https://www.motion.com/products/sku/00389840)) |
+
+Valmis kannake on todennäköisesti selvästi kalliimpi kuin 150 €:n pumppu. Siksi omistajien oma
+laserleikattu kannake ([päätös 2026-10-23](../../decisions.md)) on edelleen järkevämpi.
+FB-C4-10:n mitat kelpaavat kuitenkin malliksi: keskitysreiän toleranssi, 1/2-13 UNC -kiinnitys
+ja levyn paksuus (Eatonilla noin 20–23 mm, meillä 10 mm:n teräslevy jäykisteineen).
+Laserleikattu reikä ei yleensä osu suoraan 0,1 mm:n toleranssiin: leikkaa reikä hieman
+pienemmäksi ja avarra se, tai pyydä leikkaajalta mittatarkka reikä **⚠ tarkista leikkaajalta**.
 
 ## Miten LS-linjaa käytetään
 
@@ -492,7 +518,9 @@ huomioon kannakkeessa.
    -reikäkuviolle ja noin 36 kg:n pumpulle **⚠ tarkista paino**. HRC 150 (päätös 2026-10-27): navat
    ja Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) sekä elastinen välikappale. Linjaus kytkimen sallimiin rajoihin
    ([current-system §0](../current-system.md)) ja suojakotelo pyörivälle kytkimelle. Laipan mitat
-   ks. [tekniset tiedot](#tekniset-tiedot); tarkista mitat pumpusta ennen leikkausta.
+   ks. [tekniset tiedot](#tekniset-tiedot); tarkista mitat pumpusta ennen leikkausta. Keskitysreikä
+   **Ø127**, ei Ø125 (Eatonin oma kannake: Ø127,05–127,15). Mallina voi käyttää
+   [FB-C4-10:n mittoja](#eatonin-jalkakannake-fb-c4-10).
 3. **Imulinja.** 50 mm:n letku 2":n SAE code 61 -laipalla pumpun imuaukkoon (2" = 50,8 mm, ei
    supistusta); palloventtiili säilyy linjassa. Säiliön päässä: hitsattava muhvi →
    90°:n kulma → palloventtiili → letkukara [omistaja 2026-10-28], ks. [hankintalista](../procurement.md).
@@ -765,6 +793,7 @@ nykyisen rinnalle.
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [x] PVH57:n asennusmitat: laippa, imu 2", lähtö 1", vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]. M-2206-S on osaluettelo eikä sisällä mittoja.
 - [ ] Pumpusta (pumppu nyt omistajilla 2026-11-01): kumpi pääportti on imu (2" = reikäväli 77,8 × 42,9 mm, 1" = 52,4 × 26,2 mm), onko ylempi vuotoportti avattu, paino
+- [ ] Pumpusta: keskitysolakkeen halkaisija työntömitalla. Koodin mukaan pitäisi olla **127,0 mm** (SAE C); 125,0 mm tarkoittaisi metristä M-laippaa. Samalla reikäneliö: 114,5 mm (SAE C) vai 113,1 mm (ISO)
 - [ ] Pumpun kilvestä sarjanumero ja akselin mitat (halkaisija 1 1/4", kiilaura) kytkimen holkkien tilausta varten
 - [x] ~~Sun FXDC:n asetusvaihtoehto~~ T (31,45–42,55 l/min) tai V; `L` = ruuvisäätö, `K` = käsinuppi, kumpikin ±25 % [datalehti Sun FXDC 2026-10-26]
 - [ ] Salhydro: FXDC:n hinta euroina ja toimitusaika; valurautaisen DAW/S-rungon hinta ja saatavuus (runkomalli selvitetty: DAW/S, T-5A, 3/4" BSPP; USA-hinnat ks. [vaihtoehdot](#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot))

@@ -19,7 +19,7 @@ veneellä · ❓ ehdollinen (tarve selviää tarkistuksesta tai päätöksestä)
 | 1.3 | HRC 150 -elastinen välikappale | 1 | | 🛒 | noin 10 £ + ALV | sama |
 | 1.4 | Taper Lock 2012 -holkki 48 mm, kiilaura | 1 | PTO:n puoli; **⚠ tarkista** koodi ja kiilauran syvyys | 🛒 | arviolta 10–25 € | sama |
 | 1.5 | Taper Lock 2012 -holkki 1 1/4", kiilaura | 1 | pumpun puoli; **⚠ tarkista** koodi | 🛒 | arviolta 10–25 € | sama |
-| 1.6 | Pumppukannake SAE C -laipalle | 1 | 10 mm:n teräslevy, laserleikkaus ja hitsaus; laippa: keskitys Ø127 mm, reikäneliö 114,5 mm, reiät Ø14,2–14,5 [Eatonin luettelo s. 21] | 🛒 omistajat suunnittelevat | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
+| 1.6 | Pumppukannake SAE C -laipalle | 1 | 10 mm:n teräslevy, laserleikkaus ja hitsaus; laippa: keskitys Ø127 mm, reikäneliö 114,5 mm, reiät Ø14,2–14,5 [Eatonin luettelo s. 21]; **ei Ø125** (se on metrinen M-laippa). Valmis Eaton FB-C4-10 (02-143419) sopii, mutta hinta ei ole tiedossa (kaksireikäinen FB-C-10 noin 990 $); mallina ks. [FB-C4-10](design/p2-variable-pump.md#eatonin-jalkakannake-fb-c4-10) | 🛒 omistajat suunnittelevat | **⚠ ei tiedossa** | [päätös 2026-10-23](../decisions.md) |
 | 1.7 | Kytkimen suojakotelo | 1 | pyörivän kytkimen suoja | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#asennusjärjestys) |
 | 1.8 | Pumpun ulkoiset O-renkaat (portit, laipat, säädin) | sarja | vaihdetaan liitäntöjä tehtäessä; mitat **⚠ ei tiedossa** | 🛒 | **⚠ ei tiedossa** | [p2-variable-pump](design/p2-variable-pump.md#tiivistesarja) |
 | 1.9 | Akselitiiviste | 1 | vain, jos vuotaa koeajossa; koko tiivistesarjaa 02-102244 (noin 853 $) ei tarvita | ❓ | **⚠ ei tiedossa** | sama |
