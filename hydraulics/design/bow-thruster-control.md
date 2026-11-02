@@ -104,7 +104,8 @@ joystickin liukuja (jakajan kautta) ──► ESP32 ADC ──► Signal K (käy
 
 | Ehdokas | Ominaisuudet | Hinta ja saatavuus | Arvio |
 |---|---|---|---|
-| **Danfoss PVREL 155U2605** | Danfossin oma potentiometriohjain PVE-venttiileille: yksi proportionaalinen toiminto, **jousipalautus keskelle, keskiasentokytkin**, IP65 paneelin yläpuolella; sarjan tiedot: syöttö 11–30 V, lähtö 0,25–0,75 (× syöttö **⚠ tarkista**), aaltoisuus enintään 5 %, virrankulutus < 80 (yksikkö puuttuu sivulta, todennäköisesti mA **⚠ tarkista**) | **426,56 € + ALV** (516,14 € sis. ALV), varastossa, toimitus EU-varastosta ([Technotrade](https://eshop.technotrade.cz/en/joystick-pvrel-155U2605)) | **Suositus.** Kytketään PVEH:hon suoraan ilman sarjavastuksia; keskiasentokytkin sallintaketjuun (§5) |
+| **JH-D202X-R2 5K** (yleinen kiinalainen teollisuusjoystick) | 2 akselia, kummassakin 5 kΩ:n potentiometri, **jousipalautus keskelle**; myydään nimellä "sealed", IP-luokka **⚠ ei tiedossa**; potentiometrin teho **⚠ tarkista** (24 V:lla ja 2 × 2,4 kΩ:n sarjavastuksilla virta noin 2,4 mA ja teho potentiometrissa noin 30 mW [laskelma]) | **noin 11–23 $ kpl** ([eBay](https://www.ebay.de/itm/397463974050), [Abra 22,52 $](https://abra-electronics.com/electromechanical/switches/arcade-game-switches/2d-2-axis-joystick-potentiometer-5k.html)); tukkuna noin 5 $ ([ship4wd](https://sourcing.ship4wd.com/product/two-dimensional-rocker-potentiometer-2d-joysticks-jh-d202x-r2r4-5k10k-optional-neutral-packaging)) | **Suositus kustannussyistä.** Käytetään yhtä akselia; liike rajataan yhteen suuntaan uraohjaimella (esim. 3D-tulostettu levy, jossa vain paapuuri–styyrpuuri-ura). Sarjavastukset §3:n mukaan. Ei keskiasentokytkintä. Ohjauspaikalla katon alla tai kumisuojan kanssa. Kannattaa ostaa kaksi (varaosa) |
+| Danfoss PVREL 155U2605 | Danfossin oma potentiometriohjain PVE-venttiileille: yksi proportionaalinen toiminto, **jousipalautus keskelle, keskiasentokytkin**, IP65 paneelin yläpuolella; sarjan tiedot: syöttö 11–30 V, lähtö 0,25–0,75 (× syöttö **⚠ tarkista**), aaltoisuus enintään 5 %, virrankulutus < 80 (yksikkö puuttuu sivulta, todennäköisesti mA **⚠ tarkista**) | **426,56 € + ALV** (516,14 € sis. ALV), varastossa, toimitus EU-varastosta ([Technotrade](https://eshop.technotrade.cz/en/joystick-pvrel-155U2605)) | Teknisesti helpoin (ei sarjavastuksia, keskiasentokytkin sallintaketjuun), mutta **omistajien mielestä liian kallis** [omistaja 2026-11-02]. Hydrauvisionilla halvempi, noin 338 € + ALV (hakutuloksen ote) |
 | Danfoss PVREL 155U2601 | jousipalautus, ei keskiasentokytkintä | 309,90 € + ALV, **poistunut** ([Technotrade](https://eshop.technotrade.cz/en/joystick-pvrel-155U2601)) | halvempi, jos jostain löytyy; kysy korvaava malli |
 | Danfoss PVREL 155U2602 | jousipalautus ja kitkajarru, ei keskiasentokytkintä; syöttö 11–30 V, lähtö 0,25–0,75, IP67 (Hydraspecma) tai IP44 (Findynamica) **⚠ ristiriita** | 591,30 € + ALV ([Findynamica](https://www.findynamica.nl/en/shop/product/joystick-pvrel-2-way-spring-returnfriction-brake-155u2602)); Suomessa [Hydraspecma](https://www.hydraspecma.com/store/fi/en/find/item/155U2602/joystick-46), hinta ei näy | kitkajarru ei sovi keulapotkurille (ohjain ei palaa itse keskelle) |
 | Matend MKF-PJS02 (kiinalainen teollisuusjoystick) | 1 tai 2 akselia, jousipalautus, potentiometri 5 tai 10 kΩ, < 36 V, IP65 paneelin yläpuolella, ±25° ([Matend](https://www.matend.com/product/mkf-pjs02-potentiometer-joystick-single-dual-axis-spring-return/)) | **⚠ ei tiedossa** (vain tarjouspyyntö) | edullinen vaihtoehto; tarvitsee sarjavastukset (§3) eikä keskiasentokytkintä ole mainittu |
@@ -114,10 +115,16 @@ joystickin liukuja (jakajan kautta) ──► ESP32 ADC ──► Signal K (käy
 Halvat 2-akseliset harrastejoystickit (muutama euro) eivät sovi: ne eivät ole tiiviitä, ja niiden
 jousi ja mekaniikka eivät kestä veneen ohjauspaikalla [arvio].
 
-**Suositus [arvio]:** PVREL 155U2605. Se maksaa enemmän kuin geneerinen joystick, mutta on tehty
-juuri PVE:lle: signaalitaso on valmiiksi oikea, ja keskiasentokytkin antaa lisäsuojan
-jumittumista vastaan (§5). Edullisempi tie on käytetty PVREL/PVRE tai Matendin kaltainen
-potentiometrijoystick ja sarjavastukset.
+**Suositus [arvio]:** JH-D202X-R2 5K, yhden akselin uraohjain ja kaksi sarjavastusta: noin
+20–40 € kotelointeineen **⚠ arvio**. PVREL on teknisesti valmiimpi, mutta omistajien mielestä liian
+kallis [omistaja 2026-11-02]. Koska keskiasentokytkintä ei ole, hätäseis on tärkein suoja jumittunutta
+ohjainta vastaan (§5). Ennen asennusta mitataan potentiometrin arvo ja keskiasennon jännite 24 V:lla
+ja noin 28 V:lla.
+
+**Vielä halvempi, mutta ei portaaton:** jousipalautteinen keinukytkin (ON–OFF–ON) ja vastusjakaja.
+Keskellä kaksi samanarvoista vastusta R antaa 0,5 × U; kytkin kytkee alempaan tai ylempään
+vastukseen rinnalle R/2:n, jolloin signaali on 0,25 × U tai 0,75 × U [laskelma]. Tämä on käytännössä
+nykyisen on/off-ohjauksen kaltainen; välinopeuksia saa lisäämällä kytkinasentoja.
 
 ## 5. Vikatilat
 
@@ -143,7 +150,7 @@ potentiometrijoystick ja sarjavastukset.
 - [ ] PVEH 520L0344: signaalitulon impedanssi, virrankulutus, vikanastan tyyppi, PWM-signaalin
       kelpoisuus, reaktioajat
 - [ ] Sarjan 0 PVEH:n (157B4024) nastajärjestys
-- [ ] Joystickin valinta: ehdokkaat kirjattu (suositus PVREL 155U2605, 426,56 € + ALV); omistajat päättävät. Tarkista PVREL:n datalehdestä lähdön suhteellisuus syöttöön, liitäntä ja keskiasentokytkimen kuormitettavuus
+- [ ] Joystickin valinta: ehdokkaat kirjattu (suositus JH-D202X-R2 5K, noin 11–23 $; PVREL liian kallis [omistaja 2026-11-02]); omistajat päättävät. Tarkista PVREL:n datalehdestä lähdön suhteellisuus syöttöön, liitäntä ja keskiasentokytkimen kuormitettavuus
 - [ ] Ohjauspaikkojen määrä ja sijainnit ([vaatimukset §10.2](../requirements.md#102-ohjaus))
 - [ ] Sallintareleen ja hätäseisin kytkentä sekä ESP32-PDM:n rooli siinä (pätevä henkilö tarkistaa)
 - [ ] Omistajat: perusohjaus suoralla joystickilla (suositus) vai heti ESP32-signaalilla
