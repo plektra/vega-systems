@@ -235,7 +235,7 @@ HRC 150 ja Taper Lock 2012 -holkit 48 mm / 1 1/4" (päätös 2026-10-27), kannak
 |---|---|
 | PVE:n käyttöjännite | 22–30 V (24 V käy) |
 | PVEH:n ohjaussignaali | **suhteellinen käyttöjännitteeseen:** keskiasento 0,5 × U, täysi 0,25 × U tai 0,75 × U |
-| Ohjain | **potentiometrijoystick samasta syötöstä** antaa signaalin suoraan ilman elektroniikkaa; vaihtoehtona ESP32 skaalatulla analogialähdöllä |
+| Ohjain | **potentiometrijoystick samasta syötöstä** antaa signaalin suoraan ilman elektroniikkaa; vaihtoehtona ESP32, jonka lähtö seuraa syöttöjännitettä. Selvitys ja suositus: [bow-thruster-control.md](bow-thruster-control.md) |
 | Liitin | Hirschmann DIN, 4-napainen (syöttö, signaali, maa, vikasignaali) |
 | Vikavalvonta | PVEH pysäyttää karan, jos signaali on alueen 15–85 % ulkopuolella (myös johdon katketessa); vikasignaali Signal K:hon hälytykseksi |
 | Pääkytkin / hätäseis | rele katkaisee PVE:iden syötön → jouset palauttavat karat keskelle |

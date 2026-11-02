@@ -212,7 +212,7 @@ keulapotkuri (noin 34 l/min, 250 bar).
 ### 10.2 Ohjaus
 
 - **Ohjauspaikat:** TBD (ohjauspisteet, langattomat kaukosäätimet, MFD, autopilotti)
-- **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja PVG 32:n PVE-yksiköille, CAN/N2K). PTO-kytkintä eikä sen toimilaitetta ole (päätös 2026-10-23).
+- **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja PVG 32:n PVE-yksiköille, CAN/N2K). PTO-kytkintä eikä sen toimilaitetta ole (päätös 2026-10-23). Keulapotkurin PVEH-ohjaus: suositus suora potentiometrijoystick ja ESP32-PDM valvojana, ks. [bow-thruster-control.md](design/bow-thruster-control.md) (ei päätetty).
 - **Autopilotin liitäntä:** solenoidiventtiiliohjaus ohjauspiirissä [omistaja 2026-10-25]; autopilotin
   merkki TBD. Ks. [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin).
 - **Lukitukset:**
