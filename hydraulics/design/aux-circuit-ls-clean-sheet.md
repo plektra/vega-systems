@@ -321,7 +321,7 @@ sekä tarkistetaan karojen liike käsin ennen koestusta ([Puhdistus ja koestus](
 - [x] Myyjä: toimiko venttiili purettaessa → ei kokeiltu (kardaani rikki); säilytetty sisällä; hiekoittimessa nopeudensäätö (todennäköisesti PVEH-lohko) [myyjä 2026-10-27]
 - [x] Myyjä: hyväksyykö 200 €:n tarjouksen → kaupat tehty 200 € + rahti 39,90 € [omistaja 2026-11-02]
 - [x] Myyjä: tulivatko PVE-liittimet mukana → kyllä [omistaja 2026-11-02]; kunto ja määrä tarkistetaan vastaanotossa
-- [ ] Myyjä: mitä muut lohkot ohjasivat
+- [x] Myyjä: mitä muut lohkot ohjasivat → ei kysytä enempää [omistaja 2026-11-02]; lohkojen karat ja toiminnot selvitetään vastaanotossa koodeista ja koestuksessa
 - [ ] Vastaanotto: tulppaa avoimet portit heti, tarkista kuljetusvauriot, lue pumppumoduulin ja peruslohkojen koodit rungosta
 - [ ] Danfoss: riittääkö PVH57:n noin 20 barin paine-ero PVG 32:n kompensaattoreille ja PVE:iden pilottiöljylle; sopiiko sarjan 4/7 PVE sarjan 0 lohkoon
 - [ ] Pätevä henkilö: PVLP-isku- ja imuventtiilien tarve ja asetus keulapotkurille
