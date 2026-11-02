@@ -267,9 +267,19 @@ Pätevän henkilön pitää tarkistaa paineasetukset, PVLP-tarve ja ohjauksen ky
    - Pese harjalla ja liuotinpesuaineella tai petrolilla, huuhtele varovasti ja kuivaa paineilmalla
      heti. **Ei painepesuria** (vesi ja lika karan tiivisteiden ohi). Pinoa ei liuoteta, koska
      nitriilitiivisteet turpoavat voimakkaista liuottimista.
-2. **Tarkistus purkamatta**
-   - Kansi auki PVE:n tai käsivivun puolelta lohko kerrallaan: karan pitää liikkua käsin molempiin
-     suuntiin ja palata jousella keskelle. Jäykkä kara viittaa likaan tai ruosteeseen.
+2. **Tarkistus purkamatta** (päivitetty 2026-11-02)
+   - **Ensin käsivivun kannasta, mitään avaamatta:** kanta on kiinni karassa, joten karaa voi
+     liikuttaa vivulla tai lyhyellä tangolla. PVE:t voivat olla paikallaan; ilman painetta ja sähköä
+     ne eivät estä käsiliikettä, mutta liike voi tuntua hieman jäykältä [arvio PVG-sarjan rakenteesta]
+     **⚠ tarkista huolto-ohjeesta**. Portit tulpattuina ja venttiili ulkoa pestynä.
+   - Vivuksi kelpaa koestukseen ilman painetta pultti tai kierretanko kannan kiinnitykseen, tai
+     3D-tulostettu vipu (PETG, kierre lämpöholkilla tai läpipultilla). Kannan kiinnityksen kierre tai
+     muoto **⚠ mittaa**. Käytössä paineen alla käytetään metallista vipua.
+   - Jos jostain lohkosta puuttuu käsivivun kanta, irrotetaan vain sen lohkon PVE (muutama ruuvi) ja
+     liikutetaan karaa sen päästä. Lohkopino pysyy kiinni, joten tiivistesarjaa ei tarvita; PVE:n alla
+     oleva O-rengas tarkistetaan. Työ tehdään puhtaassa paikassa.
+   - Tulkinta: kevyt liike ja paluu keskelle → koestukseen; jäykkä mutta palaa → likaa tai ruostetta,
+     huuhtelu tai lohkon purku; ei palaa tai jumissa → lohko puretaan (kohta 3).
    - Portit taskulampulla: ruskea vesijäämä tai ruoste → venttiili puretaan.
    - Pumppumoduulin paineenrajoittimen asetukseen ei kosketa; jos se irrotetaan, kierrokset lasketaan.
 3. **Purku vain tarvittaessa**
