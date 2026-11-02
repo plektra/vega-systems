@@ -273,8 +273,9 @@ Pätevän henkilön pitää tarkistaa paineasetukset, PVLP-tarve ja ohjauksen ky
      ne eivät estä käsiliikettä, mutta liike voi tuntua hieman jäykältä [arvio PVG-sarjan rakenteesta]
      **⚠ tarkista huolto-ohjeesta**. Portit tulpattuina ja venttiili ulkoa pestynä.
    - Vivuksi kelpaa koestukseen ilman painetta pultti tai kierretanko kannan kiinnitykseen, tai
-     3D-tulostettu vipu (PETG, kierre lämpöholkilla tai läpipultilla). Kannan kiinnityksen kierre tai
-     muoto **⚠ mittaa**. Käytössä paineen alla käytetään metallista vipua.
+     3D-tulostettu vipu (PETG, kierre lämpöholkilla tai läpipultilla). Kierre todennäköisesti M8
+     **⚠ mittaa**; mitat ja valmisosat: [pvg32-lever](pvg32-lever.md). Käytössä paineen alla käytetään
+     metallista vipua.
    - Jos jostain lohkosta puuttuu käsivivun kanta, irrotetaan vain sen lohkon PVE (muutama ruuvi) ja
      liikutetaan karaa sen päästä. Lohkopino pysyy kiinni, joten tiivistesarjaa ei tarvita; PVE:n alla
      oleva O-rengas tarkistetaan. Työ tehdään puhtaassa paikassa.

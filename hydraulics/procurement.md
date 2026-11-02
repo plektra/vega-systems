@@ -123,6 +123,7 @@ jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 | 4.8 | PVE-liittimet Hirschmann DIN 4-napainen ja johdotus | 2–5 | lohkot 1–3 ensin. Liittimet tulevat venttiilin mukana [omistaja 2026-11-02]; tarkista vastaanotossa kunto ja onko jokaiselle PVE:lle oma **⚠ tarkista**. Johdotus hankitaan | ✅ liittimet mukana; 🛒 johdotus | liittimet kaupassa mukana; johdotus **⚠ ei tiedossa** | sama |
 | 4.9 | Hätäseisrele PVE:iden 24 V:n syöttöön | 1 | | 🛒 | **⚠ ei tiedossa** | sama |
 | 4.10 | Koestus hydrauliikkakorjaamon koepenkissä | – | vaihtoehtona oma koestus | ❓ | **⚠ ei tiedossa** | [Puhdistus ja koestus](design/aux-circuit-ls-clean-sheet.md#puhdistus-ja-koestus) |
+| 4.16 | Käsivivut PVM-kantoihin (kokeiluun M8-kierretanko tai oma 3D-tulostettu vipu; käyttöön metallinen) | 1–5 | kierre todennäköisesti M8 **⚠ mittaa** | 🛒 oma valmistus | pieni; valmis Danfoss-vipu **⚠ ei tiedossa** | [pvg32-lever](design/pvg32-lever.md) |
 
 **Ehdolliset PVG 32:n osat.** Tarve selviää kokoonpanokoodista 157N553(8/B) ja kunnon tarkistuksesta:
 

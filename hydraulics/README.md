@@ -13,6 +13,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [design/archive/schematic-sheet-2-f1-61.md](design/archive/schematic-sheet-2-f1-61.md) | 🗄 **Arkistoitu 2026-10-27.** Kaavion arkki 2 F1-61 + BPV -kokoonpanolle (kuvat kansiossa `img/archive/`) |
 | [design/p2-variable-pump.md](design/p2-variable-pump.md) | P2 säätötilavuuspumppuna: Vickers PVH57 (tori.fi), LS-ohjaus, kaksitiekompensoitu virtauksensäätö, osalista; **pumppu päätetty 2026-10-27** (FXDC-kytkentä varavaihtoehto) |
 | [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md) | **Ykkösvaihtoehto (päätös 2026-10-27):** apupiiri PVH57:llä ja Danfoss PVG 32 -proportionaaliventtiilipöydällä; ehdokasventtiilin tiedot, puhdistus ja koestus |
+| [design/pvg32-lever.md](design/pvg32-lever.md) | PVG 32:n käsivipu (PVM): valmisosat, kiinnitys (todennäköisesti M8) ja oman tai 3D-tulostetun vivun suunnittelu |
 | [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md) | Ajatuskoe: apupiiri alusta alkaen PVH57:llä, LS-signaalilla kuormilta ja on/off-venttiileillä (ilman venttiilipöytää); varavaihtoehto |
 | [design/p1-steering-pump.md](design/p1-steering-pump.md) | Ohjauspumpun imulinja (päätetty 32 mm) ja P1:n muutokset P2-remontin yhteydessä |
 | [design/hydraulic-oil.md](design/hydraulic-oil.md) | Hydrauliöljyn valinta: komponenttien rajat, HV 32 / VG 46 / HV 46 -vertailu, tuotteet (päätetty HVLP 32) |
