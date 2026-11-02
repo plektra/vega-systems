@@ -151,7 +151,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 | Signal K -palvelin | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Tietokeskus; Grafana-näkymät. Pyörii konehuoneen Raspberry Pi 5:llä [omistaja 2026-10-29] |
 | Kameratallennin (Frigate) | konehuoneen Intel NUC | Valvontakameran tallennus [omistaja 2026-10-29] |
 | NMEA 2000 -nodet | `plektra/vega-n2k-node1` … `node3`, `vega-n2k-node-bootstrap` | ESP32-pohjaiset N2K-nodet |
-| Tehonjako (PDM) | `ESP32-PDM`, `ESP32-PDM-v1/v2/4x4/base` (KiCad) | ESP32-tehonjakomoduulit; ehdokkaita hydrauliikan solenoidien ja PTO-kytkimen toimilaitteen ohjaukseen |
+| Tehonjako (PDM) | `ESP32-PDM`, `ESP32-PDM-v1/v2/4x4/base` (KiCad) | ESP32-tehonjakomoduulit; ehdokkaita hydrauliikan solenoidien ja PVE-yksiköiden ohjaukseen ja valvontaan |
 | Asennusautomaatio | `plektra/vega-ansible` | Veneen tietokoneiden konfigurointi |
 | Muut | `yarrboard-hardware`, `frothfet`, `esp32-can-hat`, `SH-ESP32-hardware` | Liittyviä laitteistoprojekteja |
 
@@ -190,4 +190,4 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [ ] Mitkä 24 V:n kuluttajat tarkalleen tulevat PDM-lähdöille (periaate päätetty 2026-10-31: tavalliset piirit PDM:llä, tärkeät kuormat eivät)? Pilssipumput: vain käsin pakotettu käyttö PDM:llä, kohokytkinpiirit pysyvät suoraan akulla [omistaja 2026-10-30]
 - [ ] Maseraattori-WC:n ja septin hätätyhjennyspumpun mallit, virrat ja paikat (päätetty 2026-10-31, [loads.yaml](loads.yaml))
 - [ ] Kaasuhälytin ja kaasun magneettiventtiili (suositus): mallit, ja tuleeko kaasuhälytin tärkeiden kuormien kiskoon ([design/dc-distribution.md](design/dc-distribution.md#3-tärkeät-kuormat-ja-vikatilanteet))
-- [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PTO-kytkimen toimilaite, anturit), ja miltä PDM-lähdöiltä
+- [ ] Mitkä hydrauliikan toiminnot tarvitsevat sähköohjausta (solenoidiventtiilit, PVG 32:n PVE-yksiköt, anturit; PTO-kytkintä ei ole), ja miltä PDM-lähdöiltä

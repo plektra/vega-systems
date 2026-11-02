@@ -212,11 +212,11 @@ keulapotkuri (noin 34 l/min, 250 bar).
 ### 10.2 Ohjaus
 
 - **Ohjauspaikat:** TBD (ohjauspisteet, langattomat kaukosäätimet, MFD, autopilotti)
-- **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja kytkimen toimilaitteelle, CAN/N2K)
+- **Ohjauselektroniikka:** TBD (ESP32 PDM -lähdöt solenoideille ja PVG 32:n PVE-yksiköille, CAN/N2K). PTO-kytkintä eikä sen toimilaitetta ole (päätös 2026-10-23).
 - **Autopilotin liitäntä:** solenoidiventtiiliohjaus ohjauspiirissä [omistaja 2026-10-25]; autopilotin
   merkki TBD. Ks. [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin).
 - **Lukitukset:**
-  - Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä.
+  - ~~Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä~~: ei tarvita. PVH57 tuottaa vain tarvittavan virtauksen (keulapotkurilla noin 35 l/min), joten korkeat kierrokset eivät tuota lämpöä, ja koneen 2400 rpm on pumpun rajoissa, ks. [current-system §0 kohta 6](current-system.md) ja [p2-variable-pump](design/p2-variable-pump.md#sopivuus-vegaan-laskelma) [päivitetty 2026-11-02].
   - ~~BPV-lukitukset~~: BPV:tä ei tule, P2 on PVH57 (päätös 2026-10-27). PVG 32:lla (ykkösvaihtoehto 2026-10-27)
     erillistä LS-purkua ei tarvita; varavaihtoehdoissa ohjausjärjestys riippuu kokoonpanosta, ks. [p2-variable-pump](design/p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)
     ja [LS + on/off: kierroslukitus](design/aux-circuit-ls-onoff.md#tarvitaanko-kierroslukitus). **⚠ päätetään kokoonpanon kanssa**.
