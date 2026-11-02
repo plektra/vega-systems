@@ -117,6 +117,19 @@ joystickin liukuja (jakajan kautta) ──► ESP32 ADC ──► Signal K (käy
 | Muut teollisuusjoystickit: APEM, Megatron 829, Sentop JP50A, RS PRO 1730770 | yksiakselisia potentiometrijoystickeja, IP65 | APEM 1-akselinen noin 138 $ (yhden jälleenmyyjän sivu, päiväys epäselvä); muut **⚠ ei tiedossa** | vertailukohtia; tarkista jousipalautus ja potentiometrin arvo |
 | Käytetty Danfoss PVRE, PVREL tai PVRES | hae osanumeroilla (155U26xx, 162F13xx) tori.fi:stä ja eBaysta | **⚠ ei tiedossa**; uusi PVRES 1x noin 590–690 € + ALV | voi olla edullisin, jos löytyy |
 
+**Hall-anturijoystickit** [haettu 2026-11-02]: ei kuluvaa liukukoskettinta (esim. Matend MKF-PJS02:
+Hall yli 5 milj., potentiometri yli 2 milj. liikettä). Tavallisissa Hall-joystickeissa syöttö on
+kuitenkin 5 V ja lähtö noin 0,5–4,5 V, joka ei seuraa PVEH:n syöttöä, joten ne eivät käy suoraan.
+Suoraan käyvät vain PVE-lähdölliset mallit, esim. Danfoss JS1-H (PVE-versio: 9–36 V, lähtö
+0,25–0,75 × U, kaksi rinnakkaista anturia) ja Danfoss JS120 / Penny & Giles JC120 25–75 %:n lähdöllä
+([Danfoss JS1 -datalehti](https://www.alldatasheet.net/html-pdf/1814565/DANFOSS/JS1/1028/3/JS1.html),
+[JS120](https://manualshive.com/en/manual/danfoss/js120/3470777?page=11)); hinta **⚠ ei tiedossa**,
+todennäköisesti PVREL:n luokkaa [arvio]. Halpa 5 V:n Hall-joystick sopii vaihtoehtoon B (ESP32
+tekee signaalin). Vikatila: yhden anturin Hall-elektroniikka voi jäädä antamaan väärää mutta
+sallitulla alueella olevaa arvoa, jota PVEH:n vikavalvonta ei huomaa; JS1-H:n kaksi anturia
+suojaavat tältä. **Arvio:** potentiometrijoystick riittää keulapotkurin käyttömäärille; Hall
+harkitaan, jos ohjaus siirretään ESP32:lle.
+
 Halvat 2-akseliset harrastejoystickit (muutama euro) eivät sovi: ne eivät ole tiiviitä, ja niiden
 jousi ja mekaniikka eivät kestä veneen ohjauspaikalla [arvio].
 
