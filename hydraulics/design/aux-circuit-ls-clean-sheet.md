@@ -1,7 +1,7 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu ja proportionaalinen LS-lohkoventtiili
 
 > **Tila:** **PÄÄTETTY YKKÖSVAIHTOEHTO 2026-10-27:** apupiiri rakennetaan PVH57:llä ja käytetyllä Danfoss PVG 32:lla
-> ([Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)); kaupat toteutumassa [omistaja 2026-10-27]. Varavaihtoehdot: [LS + on/off](aux-circuit-ls-onoff.md)
+> ([Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)); **ostettu 2026-11-02, 200 € + rahti 39,90 €** [omistaja 2026-11-02]. Varavaihtoehdot: [LS + on/off](aux-circuit-ls-onoff.md)
 > ja [FXDC + LS-purku](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku). Ajatuskoe 2026-10-25, päivitetty 2026-10-26 ja 2026-10-27
 > (PVG 32 -ehdokas, tarjous, puhdistus, paino). Pumppu PVH57 päätetty 2026-10-27 (F1-61
 > [arkistoitu](archive/p2-pump-options.md)). PVH57:n käyttö olemassa olevien
@@ -147,7 +147,7 @@ on halvempi ja riittää.
 > Lisätty 2026-10-26. Tiedot luettu ilmoituksen kuvista ja Danfossin teknisestä ohjeesta
 > *PVG 32 Proportional Valve Group, Technical Information 520L0344*
 > ([PDF](https://imdl.gatech.edu/jfrankel/docs/Sauer-Danfoss/520L0344_PVG32.pdf)), jäljempänä
-> [datalehti PVG 32]. **Päätetty ykkösvaihtoehdoksi 2026-10-27; kaupat toteutumassa.**
+> [datalehti PVG 32]. **Päätetty ykkösvaihtoehdoksi 2026-10-27; ostettu 2026-11-02 (200 € + rahti 39,90 €).**
 
 Ilmoitus: <https://www.tori.fi/recommerce/forsale/item/46493298>, **400 €, tee tarjous** (tarkistettu
 2026-10-26). Ilmoituksen teksti: *"Danfors pvg 32 venttiilipöytä. Tienhoitoautosta purettu. Karojen
@@ -306,7 +306,11 @@ tarjosi **200 €** perustellen riskillä, että venttiili joutuu kierrätykseen
 Tarjous on perusteltu: pelkkä PVEH-yksikkö on uutena noin 670 € + ALV, ja karat sekä PVE:t voi
 koestaa ja tarvittaessa vaihtaa yksitellen. Myyjän mukaan venttiili oli kytkettynä
 säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole tarpeen
-[myyjä 2026-10-27]. Odottaa myyjän vastausta tarjoukseen.
+[myyjä 2026-10-27].
+
+**Päivitys 2026-11-02:** Kaupat tehty: **200 € + rahti 39,90 €**, yhteensä 239,90 € [omistaja 2026-11-02].
+Kun venttiili saapuu, tulpataan avoimet portit heti, luetaan pumppumoduulin ja peruslohkojen koodit
+sekä tarkistetaan karojen liike käsin ennen koestusta ([Puhdistus ja koestus](#puhdistus-ja-koestus)).
 
 ## Avoimet kysymykset
 
@@ -315,7 +319,9 @@ säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole t
 - [x] PVG 32:n datalehti: paineluokka, karat, PVLP, PVE-signaali luettu ohjeesta 520L0344
 - [ ] Danfossin jälleenmyyjä: kokoonpanokoodi 157N553(8/B) → pumppumoduulin tyyppi (todennäköisesti suljettu keskiasento, koska autossa oli säätötilavuuspumppu [myyjä 2026-10-27]; varmistetaan moduulin koodista), peruslohkot (PVLP-paikat, LS A/B -vaihtoventtiili), karat
 - [x] Myyjä: toimiko venttiili purettaessa → ei kokeiltu (kardaani rikki); säilytetty sisällä; hiekoittimessa nopeudensäätö (todennäköisesti PVEH-lohko) [myyjä 2026-10-27]
-- [ ] Myyjä: hyväksyykö 200 €:n tarjouksen; mitä muut lohkot ohjasivat; porttien tulppaus kuljetukseen
+- [x] Myyjä: hyväksyykö 200 €:n tarjouksen → kaupat tehty 200 € + rahti 39,90 € [omistaja 2026-11-02]
+- [ ] Myyjä: mitä muut lohkot ohjasivat; tulivatko PVE-liittimet mukana
+- [ ] Vastaanotto: tulppaa avoimet portit heti, tarkista kuljetusvauriot, lue pumppumoduulin ja peruslohkojen koodit rungosta
 - [ ] Danfoss: riittääkö PVH57:n noin 20 barin paine-ero PVG 32:n kompensaattoreille ja PVE:iden pilottiöljylle; sopiiko sarjan 4/7 PVE sarjan 0 lohkoon
 - [ ] Pätevä henkilö: PVLP-isku- ja imuventtiilien tarve ja asetus keulapotkurille
 - [ ] Vinssilohkon (lohko 2) peruslohkon koodi: onko LS A/B -paineenrajoittimet ja PVLP-paikat; OMP 160:n suurin jatkuva ja hetkellinen paine-ero rajoittimen asetusta varten

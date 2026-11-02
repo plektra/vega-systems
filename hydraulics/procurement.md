@@ -1,6 +1,6 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** päivitetty 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
+> **Tila:** päivitetty 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
 > ykkösvaihtoehto 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
@@ -113,7 +113,7 @@ jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
-| 4.1 | Danfoss PVG 32, 5 lohkoa (käytetty) | 1 | 1 × PVEH 157B4024, 4 × PVEO 157B4224 | 🛒 tarjous 200 €, odottaa myyjää | 200 € (pyyntö 400 €) | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
+| 4.1 | Danfoss PVG 32, 5 lohkoa (käytetty) | 1 | 1 × PVEH 157B4024, 4 × PVEO 157B4224 | ✅ ostettu 2026-11-02 | 200 € + rahti 39,90 € (pyyntö 400 €) [omistaja 2026-11-02] | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
 | 4.2 | Porttitulpat (muovi tai teräs) | sarja | kuljetukseen ja puhdistukseen; osa porteista on nyt auki | 🛒 | pieni | sama, [Puhdistus ja koestus](design/aux-circuit-ls-clean-sheet.md#puhdistus-ja-koestus) |
 | 4.3 | Sovitteet A/B-portit (G 1/2) → keulapotkurin 1/2":n letkut | 2 | letkut valmiina | 🛒 | **⚠ ei tiedossa** | sama |
 | 4.4 | Sovite T-portti (G 3/4) → paluukeräin | 1 | | 🛒 | **⚠ ei tiedossa** | sama |

@@ -35,7 +35,7 @@ Suunnitelmassa on kaksi piiriä:
 
 **Päätös 2026-10-27:** P2 on PVH57 (kaupat sovittu), kytkin HRC 150, 50 mm:n imulinja ja
 kotelovuotolinja säiliöön, ks. [design/p2-variable-pump.md](design/p2-variable-pump.md). Apupiirin
-venttiileiksi **Danfoss PVG 32** (ykkösvaihtoehto, päätös 2026-10-27, kaupat toteutumassa), ks.
+venttiileiksi **Danfoss PVG 32** (ykkösvaihtoehto, päätös 2026-10-27; ostettu 2026-11-02), ks.
 [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md); varalla
 [LS + on/off](design/aux-circuit-ls-onoff.md) ja FXDC + LS-purku. Aiempi alustava suunnitelma (Parker F1-61 + BPV) on
 [arkistoitu](design/archive/p2-pump-options.md).
