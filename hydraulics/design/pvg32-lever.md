@@ -8,9 +8,11 @@
 
 ## Selkokielinen yhteenveto
 
-- Danfossin käsivipu on kaksiosainen: **vivun kanta** (alumiini- tai valurautavalu, kiinni karan
-  päässä olevassa PVM-moduulissa) ja **vipu** (tanko ja musta nuppi), joka **kierretään kantaan
-  pohjaan asti**.
+- Danfossin käsivipu on kaksiosainen: **vivun kanta eli vipukuppi** (alumiini- tai valurautavalu) ja
+  **vipu** (tanko ja musta nuppi), joka **kierretään kantaan pohjaan asti**.
+- **Kuppi tulee PVM-moduulin kuusikulmaisen akselin ympärille** [omistaja 2026-11-02, kuvista] ja
+  lukitaan siihen lukitusruuvilla (varaosaluettelossa kanta "including set screw"). Kuusiokulma
+  välittää momentin, ruuvi pitää kupin paikallaan. Akselin avainväli ja pituus **⚠ mittaa**.
 - Kannan kierre on hakutulosten mukaan todennäköisesti **M8, vähintään 10 mm syvä** (tuuma-mallissa
   5/16-18) **⚠ mittaa**. Siihen käy M8-kierretanko tai oma vipu, jossa on M8-pultti tai -kierretanko.
 - Karan liike on ±7 mm ja vivun säätöalue noin ±19,5°. Voima on pieni (todennäköisesti noin 2 Nm
@@ -44,9 +46,19 @@ lukitusruuvi) ovat erillisiä osia [PVG 32 Service Parts Manual](http://www.grou
 
 ## Oman vivun suunnittelu
 
-**Mittaa ensin kannasta** (kun venttiili on saapunut): kierteen koko ja syvyys (M8-pultti tai
-kierremitta), kannan kierrereiän kulma ja kannan ulkomitat. Merkitse samalla, onko kannassa
-rajoitusruuvit.
+**Mittaa ensin** (kun venttiili on saapunut):
+- **Kuusiokulma-akseli:** avainväli (työntömitalla tai kiintoavaimilla), akselin pituus PVM:n
+  rungosta, ja onko akselissa lukitusruuvin kohdalla tasopinta tai reikä.
+- **Jos kuppi on paikallaan:** kierteen koko ja syvyys (M8-pultti tai kierremitta), kierrereiän
+  kulma ja kupin ulkomitat, sekä onko siinä rajoitusruuvit.
+
+**Jos kuppi puuttuu, tulostetaan oma kuppi:** kuusiokolo akselin avainvälillä + 0,2–0,3 mm välys
+(tulosteen mittatarkkuus, kokeile ensin lyhyt koepala), lukitusruuville **M5- tai M6-mutteri
+upotettuna** tai lämpöholkki kyljessä (ruuvin koko **⚠ valitse akselin mukaan**), ja vivulle M8-mutteri
+upotettuna. 2,2 Nm:n momentti on PETG-kupille pieni; seinämävahvuus kuusiokolon ympärillä vähintään
+noin 4 mm ja täyttö 50–100 % [arvio]. Kuusiokulma välittää momentin, joten lukitusruuvi pitää vain
+kupin akselilla. Kupin kulman (22,5° tai 37,5°) voi valita vapaasti sen mukaan, mihin suuntaan
+vivun halutaan osoittavan.
 
 **Kokeiluvipu (ilman painetta):**
 - M8-kierretanko tai M8 × 60–80 -pultti kierrettynä kantaan pohjaan, lukitusmutteri kantaa vasten.
@@ -67,6 +79,6 @@ rajoitusruuvit.
 
 ## Avoimet kysymykset
 
-- [ ] Vastaanotossa: onko kaikissa viidessä lohkossa vivun kanta; kannan kierre, syvyys ja kulma (22,5° vai 37,5°)
+- [ ] Vastaanotossa: onko kaikissa viidessä lohkossa vipukuppi vai pelkkä kuusiokulma-akseli; akselin avainväli ja pituus; kupin kierre, syvyys ja kulma (22,5° vai 37,5°)
 - [ ] Lue PVM-osio alkuperäisestä Danfossin ohjeesta (asennusohje tai varaosaluettelo): kierre, vivun pituus, käyttömomentti
 - [ ] Tarvitaanko käsiohjausta käytössä vai vain koestuksessa (vaikuttaa siihen, tehdäänkö käyttövipu vai riittääkö kokeiluvipu)
