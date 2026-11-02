@@ -308,7 +308,7 @@ koestaa ja tarvittaessa vaihtaa yksitellen. Myyjän mukaan venttiili oli kytkett
 säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole tarpeen
 [myyjä 2026-10-27].
 
-**Päivitys 2026-11-02:** Kaupat tehty: **200 € + rahti 39,90 €**, yhteensä 239,90 € [omistaja 2026-11-02].
+**Päivitys 2026-11-02:** Kaupat tehty: **200 € + rahti 39,90 €**, yhteensä 239,90 €. PVE-liittimet tulevat venttiilin mukana [omistaja 2026-11-02].
 Kun venttiili saapuu, tulpataan avoimet portit heti, luetaan pumppumoduulin ja peruslohkojen koodit
 sekä tarkistetaan karojen liike käsin ennen koestusta ([Puhdistus ja koestus](#puhdistus-ja-koestus)).
 
@@ -320,7 +320,8 @@ sekä tarkistetaan karojen liike käsin ennen koestusta ([Puhdistus ja koestus](
 - [ ] Danfossin jälleenmyyjä: kokoonpanokoodi 157N553(8/B) → pumppumoduulin tyyppi (todennäköisesti suljettu keskiasento, koska autossa oli säätötilavuuspumppu [myyjä 2026-10-27]; varmistetaan moduulin koodista), peruslohkot (PVLP-paikat, LS A/B -vaihtoventtiili), karat
 - [x] Myyjä: toimiko venttiili purettaessa → ei kokeiltu (kardaani rikki); säilytetty sisällä; hiekoittimessa nopeudensäätö (todennäköisesti PVEH-lohko) [myyjä 2026-10-27]
 - [x] Myyjä: hyväksyykö 200 €:n tarjouksen → kaupat tehty 200 € + rahti 39,90 € [omistaja 2026-11-02]
-- [ ] Myyjä: mitä muut lohkot ohjasivat; tulivatko PVE-liittimet mukana
+- [x] Myyjä: tulivatko PVE-liittimet mukana → kyllä [omistaja 2026-11-02]; kunto ja määrä tarkistetaan vastaanotossa
+- [ ] Myyjä: mitä muut lohkot ohjasivat
 - [ ] Vastaanotto: tulppaa avoimet portit heti, tarkista kuljetusvauriot, lue pumppumoduulin ja peruslohkojen koodit rungosta
 - [ ] Danfoss: riittääkö PVH57:n noin 20 barin paine-ero PVG 32:n kompensaattoreille ja PVE:iden pilottiöljylle; sopiiko sarjan 4/7 PVE sarjan 0 lohkoon
 - [ ] Pätevä henkilö: PVLP-isku- ja imuventtiilien tarve ja asetus keulapotkurille

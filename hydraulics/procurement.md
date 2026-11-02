@@ -1,6 +1,6 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** päivitetty 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
+> **Tila:** päivitetty 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €; PVE-liittimet mukana); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
 > ykkösvaihtoehto 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
@@ -120,7 +120,7 @@ jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 | 4.5 | Painemittari 2G1 M-porttiin (G 1/4) | 1 | analoginen | 🔍 nykyinen mittari, **⚠ tarkista** mittausalue ja kunto | – | [pressure-monitoring](design/pressure-monitoring.md) |
 | 4.6 | Kiinnitysteline tai -levy konehuoneeseen | 1 | venttiili noin 22–23 kg [laskelma]; paikka **⚠** | 🛒 | **⚠ ei tiedossa** | [schematic](schematic.md#avoimia-kohtia-kaaviossa) |
 | 4.7 | Potentiometrijoystick keulapotkurille | 1 | samasta 24 V:n syötöstä; signaali 0,25–0,75 × U | 🛒 | **⚠ ei tiedossa** | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md) |
-| 4.8 | PVE-liittimet Hirschmann DIN 4-napainen ja johdotus | 2–5 | lohkot 1–3 ensin | 🛒 **⚠ tarkista**, tulivatko liittimet venttiilin mukana | **⚠ ei tiedossa** | sama |
+| 4.8 | PVE-liittimet Hirschmann DIN 4-napainen ja johdotus | 2–5 | lohkot 1–3 ensin. Liittimet tulevat venttiilin mukana [omistaja 2026-11-02]; tarkista vastaanotossa kunto ja onko jokaiselle PVE:lle oma **⚠ tarkista**. Johdotus hankitaan | ✅ liittimet mukana; 🛒 johdotus | liittimet kaupassa mukana; johdotus **⚠ ei tiedossa** | sama |
 | 4.9 | Hätäseisrele PVE:iden 24 V:n syöttöön | 1 | | 🛒 | **⚠ ei tiedossa** | sama |
 | 4.10 | Koestus hydrauliikkakorjaamon koepenkissä | – | vaihtoehtona oma koestus | ❓ | **⚠ ei tiedossa** | [Puhdistus ja koestus](design/aux-circuit-ls-clean-sheet.md#puhdistus-ja-koestus) |
 
