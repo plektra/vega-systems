@@ -1,7 +1,10 @@
 # PVG 32:n käsivipu (PVM): valmisosat ja oman vivun suunnittelu
 
-> **Tila:** selvitys 2026-11-02. Ostetusta PVG 32:sta puuttuvat käsivivut, mutta vipujen kannat
-> ovat paikallaan (ilmoituksen kuvista, **⚠ tarkista** vastaanotossa). Tavoite on suunnitella oma
+> **Tila:** selvitys 2026-11-02. Ostetusta PVG 32:sta puuttuvat käsivivut. **Myös vipukupit
+> näyttävät puuttuvan:** omistajan kuvassa PVM-moduulien (mustat kotelot, punaisen maalin jäämiä)
+> päistä työntyy vain lyhyt akselin tynkä, ja lisäksi kotelossa on pieniä nuppeja tai ruuveja,
+> todennäköisesti karan liikkeen rajoitusruuvit [kuvasta 2026-11-02]. Aiempi tulkinta "kannat
+> paikallaan" oli väärä. Akselin muoto (kuusiokulma) ja koko **⚠ tarkista** lähikuvasta tai mittaamalla. Tavoite on suunnitella oma
 > vipu, ensin karojen kokeiluun ilman painetta ja tarvittaessa myöhemmin käsiohjaukseksi
 > [omistaja 2026-11-02]. Danfossin PDF:iä ei päästy lukemaan suoraan (verkkorajoitus), joten arvot
 > ovat hakutulosten otteista; tarkista ne alkuperäisestä ohjeesta tai mittaamalla.
