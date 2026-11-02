@@ -71,6 +71,11 @@ se on huonompi tapa: ohjelmistovirhe tai mittausvirhe avaa karan.
 - Potentiometrin arvon pitää olla selvästi pienempi kuin PVEH:n signaalitulon impedanssi
   (**⚠ ei tiedossa**), muuten keskiasento siirtyy.
 - Joystickin pitää olla **jousipalautteinen**, jotta irti päästetty ohjain palaa keskelle.
+- **10 kΩ:n potentiometri (esim. JH-D202X-R4) käy myös:** sarjavastukset 2 × 5,1 kΩ → noin
+  0,252–0,748 × U, virta noin 1,2 mA [laskelma]. Lähdön sisäinen vastus keskellä on noin 5 kΩ
+  (5 kΩ:n versiolla noin 2,5 kΩ), joten keskiasento on herkempi PVEH:n tulon kuormitukselle. Testi:
+  mittaa keskiasennon jännite ilman PVEH:ta ja PVEH kytkettynä; ero alle noin 1 % × U on riittävä
+  [arvio]. Jos hinta on sama, 5 kΩ on hieman varmempi.
 
 ## 4. Suositus [arvio]: suora joystick ja ESP32-PDM valvojana
 
