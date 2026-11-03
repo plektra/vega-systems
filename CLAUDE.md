@@ -35,6 +35,7 @@ hydraulics/   current-system.md, requirements.md, loads.yaml, design/, img/
 electrics/    current-system.md, … (sama rakenne kuin hydraulics)
 datasheets/   datalehtien hakemisto (linkit ja arvot; ei valmistajien PDF:iä)
 decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
+messages.md   omistajien viestit toisilleen (ks. Viestit osallistujille)
 ```
 
 - **Uusi järjestelmä** (esim. `fuel/`, `water/`, `ventilation/`, `heating/`) saa oman kansionsa
@@ -63,7 +64,9 @@ decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
    datalehdessä on muita yksiköitä.
 7. **Datalehdet:** kirjaa jokainen käytetty datalehti, käyttöohje tai tuotesivu hakemistoon
    `datasheets/README.md` (linkki, tärkeimmät arvot, missä käytetään). Älä tallenna valmistajien
-   PDF:iä repoon; omat kopiot kuuluvat git-ignoroituun kansioon `datasheets/local/`. Omistajien omat
+   PDF:iä tähän repoon. Kokonaiset PDF:t, skannatut manuaalit ja niiden tekstiversiot kuuluvat
+   yksityiseen repoon `plektra/vega-library` (paikallisesti kansiossa `datasheets/local/`, joka on
+   git-ignoroitu). Jos `vega-library` on istunnossa mukana, käytä sitä lähteenä. Omistajien omat
    kuvat ja piirustukset kuuluvat kansioon `<järjestelmä>/img/`.
 8. **Skannatut PDF:t:** moni datalehti on skannattu. Jos tekstin poiminta ei onnistu, renderöi sivut
    kuviksi ja lue ne, ja kerro mitkä arvot luettiin kuvista.
@@ -100,6 +103,24 @@ toisin.
 - **Jos tulee yhdistämiskonflikti, säilytä molempien tiedot.** Kysy käyttäjältä vain, jos versiot
   ovat ristiriidassa keskenään.
 - Kun käyttäjä sanoo "tallenna", "valmis", "save" tai "done", käytä `/save`-taitoa.
+
+## Viestit osallistujille
+
+Tiedostossa [`messages.md`](messages.md) on omistajien toisilleen jättämiä viestejä, esimerkiksi
+asennusohjeita. Toimi näin **jokaisen istunnon alussa**, ennen kuin vastaat käyttäjän asiaan:
+
+1. Lue `messages.md` ja katso, onko kohdassa **Avoimet** viestejä.
+2. Jos avoimia viestejä on, selvitä kuka käyttäjä on (ks. Git-työnkulku). Jos se on epäselvä,
+   kysy kerran ("Oletko Lari vai Ville?").
+3. Jos käyttäjälle on viesti, näytä se ennen muuta vastausta, otsikolla
+   "📬 Viesti sinulle (lähettäjä, päivä)". Auta tarvittaessa ohjeiden läpikäynnissä ja jatka
+   sitten käyttäjän asiaan.
+4. Kun käyttäjä sanoo tehneensä asian tai lukeneensa viestin, siirrä viesti kohtaan **Kuitatut**
+   päivämäärän kanssa ja tallenna se tavallisen tallennussäännön mukaan (Larin muutokset `main`iin,
+   muiden pull requestina). Älä poista viestiä.
+
+Viestit ovat julkisia kuten muukin repo: niihin ei kirjoiteta henkilötietoja eikä salasanoja.
+Kun käyttäjä pyytää jättämään viestin toiselle, lisää se kohtaan **Avoimet**.
 
 ## Repon taidot (skills)
 

@@ -12,6 +12,7 @@ viitata toisiinsa.
 | [heating/](heating/) | Tilojen lämmitys, huurunpoisto ja kiertovesilämmitys |
 | [datasheets/](datasheets/) | Hakemisto komponenttien datalehdistä: linkit ja tärkeimmät arvot |
 | [decisions.md](decisions.md) | Kaikki tähän asti tehdyt päätökset perusteluineen |
+| [messages.md](messages.md) | Omistajien viestit toisilleen; Claude näyttää ne istunnon alussa |
 | [CLAUDE.md](CLAUDE.md) | Clauden työskentelyohjeet (myös ihmisten luettavissa) |
 
 ## Näin osallistut ilman git-osaamista
@@ -66,6 +67,9 @@ rakentamista. Aineistoa käytetään omalla vastuulla.
   eivätkä ne kuulu yllä oleviin lisensseihin.
 
 ## Liittyvät repot
+
+- **`plektra/vega-library`** (yksityinen): valmistajien manuaalit, datalehdet ja skannatut ohjeet
+  kokonaisuudessaan. Omistajat voivat lisätä sen samaan Claude Code -istuntoon tämän repon kanssa.
 
 Veneen elektroniikka (Signal K, NMEA 2000 -nodet, ESP32-tehonjakokortit) on erillisissä repoissa
 osoitteessa [github.com/plektra](https://github.com/plektra). Ks.
