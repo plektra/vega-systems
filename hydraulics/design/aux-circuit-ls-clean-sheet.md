@@ -1,7 +1,7 @@
 # Apupiiri alusta alkaen: säätötilavuuspumppu ja proportionaalinen LS-lohkoventtiili
 
 > **Tila:** **PÄÄTETTY YKKÖSVAIHTOEHTO 2026-10-27:** apupiiri rakennetaan PVH57:llä ja käytetyllä Danfoss PVG 32:lla
-> ([Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)); **ostettu 2026-11-02, 200 € + rahti 39,90 €** [omistaja 2026-11-02]; **saapui 2026-11-03**, rungon merkinnät luettu ([Vastaanotto](#vastaanotto-2026-11-03-rungon-merkinnät)); **koodit tulkittu 2026-11-03 ohjeesta 520L0344: peruslohkoissa 157B6200 ei ole isku-/imuventtiilien paikkoja eikä LS A/B -rajoittimia** ([Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)). **Kaikkien viiden lohkon karat liikkuvat käsin vapaasti molempiin suuntiin** [omistaja 2026-11-03]. Varavaihtoehdot: [LS + on/off](aux-circuit-ls-onoff.md)
+> ([Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)); **ostettu 2026-11-02, 200 € + rahti 39,90 €** [omistaja 2026-11-02]; **saapui 2026-11-03**, rungon merkinnät luettu ([Vastaanotto](#vastaanotto-2026-11-03-rungon-merkinnät)); **koodit tulkittu 2026-11-03 ohjeesta 520L0344: peruslohkoissa 157B6200 ei ole isku-/imuventtiilien paikkoja eikä LS A/B -rajoittimia** ([Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)). **Kaikkien viiden lohkon karat liikkuvat käsin vapaasti molempiin suuntiin ja palaavat jousella keskelle** [omistaja 2026-11-03]. Varavaihtoehdot: [LS + on/off](aux-circuit-ls-onoff.md)
 > ja [FXDC + LS-purku](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku). Ajatuskoe 2026-10-25, päivitetty 2026-10-26 ja 2026-10-27
 > (PVG 32 -ehdokas, tarjous, puhdistus, paino). Pumppu PVH57 päätetty 2026-10-27 (F1-61
 > [arkistoitu](archive/p2-pump-options.md)). PVH57:n käyttö olemassa olevien
@@ -168,7 +168,7 @@ Kuvista luetut arvot on merkitty *kuvasta*; merkinnät ovat likaisia ja osin ep�
 | Pumppumoduuli | **157B5111: suljettu keskiasento, sisäinen pilottiöljy PVE:ille, P = G 3/4** (rungon leima 511?, ks. [Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)); sopii PVH57:lle. Myyjän mukaan autossa kytkettynä **säätötilavuuspumppuun** [myyjä 2026-10-27], mikä tukee tulkintaa. Kuvassa kyljessä liitin, todennäköisesti käytössä ollut LS-portti; ylhäällä P- ja T-portit, M-portti ja tulpattu lisäportti; etupinnalla todennäköisesti paineenrajoittimen säätöruuvi | [myyjä 2026-10-27], kuvasta |
 | Paino | **noin 23–24 kg** [laskelma, päivitetty 2026-11-03]: PVP 3,0 kg + 5 × PVB 3,1 kg + 4 × PVEO 0,6 kg + PVEH 1,0 kg + päätylevy 0,5 kg (PVS) tai 1,7 kg (PVSI) + PVAS 0,45 kg, lisäksi vipujen kannat **⚠ arvio** | [datalehti PVG 32 s. 64–65] |
 | Kunto | likainen, **osa porteista auki ilman tulppia** → puhdistus ja koestus välttämättömiä | kuvasta |
-| Karojen käsitarkistus | **Kaikkien viiden lohkon karat liikkuvat ongelmitta molempiin suuntiin**, kun niitä liikutetaan lenkkiavaimella vivun kannasta [omistaja 2026-11-03]. Karat eivät ole jumissa eivätkä tunnu ruostuneilta, joten pinoa ei tarvitse avata karojen takia. Palaavatko karat jousella keskelle, kun vipu päästetään **⚠ tarkista**. Käsiliike ei kerro, onko kara kaksi- vai yksitoiminen (karan isku on mekaanisesti sama); se selviää koodista 157N5531 tai painekokeessa | [omistaja 2026-11-03] |
+| Karojen käsitarkistus | **Kaikkien viiden lohkon karat liikkuvat ongelmitta molempiin suuntiin**, kun niitä liikutetaan lenkkiavaimella vivun kannasta [omistaja 2026-11-03]. Karat eivät ole jumissa eivätkä tunnu ruostuneilta, joten pinoa ei tarvitse avata karojen takia. **Karat palaavat jousella keskelle molemmista suunnista**, kun vipu päästetään [omistaja 2026-11-03], joten keskitysjouset toimivat: sähkökatkossa tai hätäseisissä karat palaavat keskelle, kuten vikatilojen kuvauksessa oletetaan. Käsiliike ei kerro, onko kara kaksi- vai yksitoiminen (karan isku on mekaanisesti sama); se selviää koodista 157N5531 tai painekokeessa | [omistaja 2026-11-03] |
 | Toiminta purettaessa | **Ei kokeiltu:** auton keulapumpun kardaani oli rikki, kun auto tuli purkuun, joten venttiiliä ei voitu ajaa. Toimintakunto ja vuodot **⚠ ei tiedossa** | [myyjä 2026-10-27] |
 | Käyttö autossa | Hiekoittimessa oli nopeudensäätö → todennäköisesti se oli ainoa portaaton toiminto ja PVEH-lohko, muut on/off. Sopii kuvista luettuun (1 × PVEH, 4 × PVEO) | [myyjä 2026-10-27] |
 | Pumppumoduulin paineasetus | Valukilven **PVP-kenttä: 28? bar**, viimeinen numero kulunut → todennäköisesti **280 bar**, eli sama kuin tässä suunniteltu noin 280 barin asetus. Varmistetaan koestuksessa | [omistaja 2026-11-03, kuvasta] |
@@ -371,7 +371,7 @@ Pätevän henkilön pitää tarkistaa paineasetukset, PVLP-tarve ja ohjauksen ky
 portit ovat sisältä puhtaat, suoraan koestukseen ilman purkua; puretaan vain ongelmalohkot.
 
 **Päivitys 2026-11-03:** Käsitarkistus tehty: kaikki viisi karaa liikkuvat vapaasti molempiin
-suuntiin [omistaja 2026-11-03]. Jos karat myös palaavat keskelle ja portit ovat sisältä puhtaat,
+suuntiin ja palaavat jousella keskelle [omistaja 2026-11-03]. Jos portit ovat sisältä puhtaat,
 venttiili menee koestukseen purkamatta, eikä tiivistesarjaa PVAS 157B8005 tarvita nyt.
 
 ### Arvio
@@ -407,7 +407,8 @@ sekä tarkistetaan karojen liike käsin ennen koestusta ([Puhdistus ja koestus](
 - [x] Vastaanotto: koodit luettu rungosta 2026-11-03 (peruslohkot A 6200, pumppumoduuli 511?, kilpi PVP 28? bar), ks. [Vastaanotto](#vastaanotto-2026-11-03-rungon-merkinnät)
 - [ ] Tulppaa avoimet portit ja tarkista kuljetusvauriot
 - [x] Karojen liike käsin: kaikki viisi liikkuvat vapaasti molempiin suuntiin [omistaja 2026-11-03]
-- [ ] Palaavatko karat jousella keskelle; porttien sisäpuoli taskulampulla (ruoste, vesijäämä)
+- [x] Karat palaavat jousella keskelle molemmista suunnista [omistaja 2026-11-03]
+- [ ] Porttien sisäpuoli taskulampulla (ruoste, vesijäämä)
 - [ ] Mitkä karat ovat kaksitoimisia (vinssi tarvitsee kaksitoimisen): koodista 157N5531 tai painekokeessa
 - [x] Danfossin ohje 520L0344: peruslohko 157B6200 = kompensaattori, ei PVLP-paikkoja eikä LS A/B -rajoittimia; pumppumoduuli 157B5111 = suljettu keskiasento, pilottiöljy, P G 3/4, ei PVPX:ää (2026-11-03), ks. [Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)
 - [ ] Lue leimat kahdesta muusta peruslohkosta (onko kaikissa A 6200) ja katso, kummassa päässä P/LS-valumerkinnät ovat (kilven pää = pumppumoduuli); PVS vai PVSI
