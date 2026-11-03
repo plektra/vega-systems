@@ -54,7 +54,7 @@ jännitteisestä piiristä. Konehuoneessa varo pyöriviä osia, kun kone käy.
   (välityssuhde: paljonko laturi tuottaa 700 rpm:llä).
 - [ ] **Koneen etupää:** mahtuuko toinen laturi (150–175 A), ja mihin kiinnike tulisi? Kuvat ja
   mitat. ([ac-power-source.md 2.5](design/ac-power-source.md#25-toisen-laturin-hintataso-haettu-2026-10-28))
-- [ ] **Hakuvalon polttimo:** merkintä polttimon kyljessä (luultavasti EHJ / A1/223, kanta G6.35).
+- [x] **Hakuvalon polttimo:** Philips 7748S 24V (EHJ / A1/223, kanta G6.35) [omistaja 2026-11-03].
 - [ ] **Polttoaineen siirtopumppu:** teho tai virta.
 - [ ] **Jääkaappi:** teho ja energiankulutus (kWh/vrk).
 - [ ] **WM5002:n sisältä:** onko ensiön suojana MCB-johdonsuoja vai SP30-painikesuoja?

@@ -1,6 +1,6 @@
 # Hakuvalon jäänpoisto
 
-> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-10-31 (hakuvalo releellä; polttimo on Philipsin 250 W:n projektorihalogeeni, ei 500 W; aiemmin 2026-10-30: valo on halogeeni,
+> **Tila:** Selvitys, aloitettu 2026-10-30, päivitetty 2026-11-03 (polttimo on Philips 7748S, EHJ / A1/223, G6.35); 2026-10-31 (hakuvalo releellä; polttimo on Philipsin 250 W:n projektorihalogeeni, ei 500 W; aiemmin 2026-10-30: valo on halogeeni,
 > käsikäyttöinen ja komentosillan katolla; lasin halkaisija noin 350 mm; jäänpoisto siirretty
 > ESP32-PDM:stä tähän; etulasi on lasia; runko ja halogeeni säilyvät, LED hylätty). **Päätetty
 > 2026-10-30:** halogeeni ja vaihtoehto A. Hinnat ja tehot on haettu verkosta, eikä niitä ole tarkistettu
@@ -9,8 +9,8 @@
 **Jatka tästä (2026-10-30):** **päätetty:** vanha runko säilyy, polttimo pysyy halogeenina, ja
 LED-vaihto jätetään pois [omistaja 2026-10-30, [decisions.md](../../decisions.md)]. Jäänpoisto
 hoidetaan ilman lämmitintä (A): suojahuppu, lasi pois tuulesta ja valo päälle hetkeä ennen
-tarvetta. Kokeillaan ensimmäisellä pakkasajolla. Seuraavaksi: (1) varmista polttimon merkinnästä tyyppi (luultavasti
-EHJ / A1/223, kanta G6.35) ja hanki varapolttimoita, koska polttimon käyttöikä on vain noin 50 h; (2) hakuvalo kytketään **releellä** (päätetty 2026-10-31), releen valinta; (3) suojahuppu. Kaikki avoimet kysymykset: kohta 5.
+tarvetta. Kokeillaan ensimmäisellä pakkasajolla. Seuraavaksi: (1) polttimon tyyppi on varmistettu: **Philips 7748S** eli
+EHJ / A1/223, kanta G6.35 [omistaja 2026-11-03]; hanki varapolttimoita, koska polttimon käyttöikä on vain noin 50 h; (2) hakuvalo kytketään **releellä** (päätetty 2026-10-31), releen valinta; (3) suojahuppu. Kaikki avoimet kysymykset: kohta 5.
 
 Tavoite: hakuvalon pitää toimia myös syksyllä ja keväällä, kun etulasiin ja kääntömekanismiin
 tarttuu jäätä, räntää tai jäätyvää roisketta. LED-vaihdolla haettiin myös kirkkaampaa keilaa, mutta
@@ -23,7 +23,7 @@ vanha runko halutaan säilyttää, joten LED jätettiin pois (kohta D).
 | Jännite ja teho | 24 V, **250 W** (noin 10,4 A [laskelma]); aiemmin kirjattu 500 W oli virhe | [omistaja 2026-10-31] |
 | Tila | olemassa, ei asennettu | [omistaja 2026-10-29] |
 | Valmistaja ja malli | ei tyyppikilpeä; hyvin vanha, todennäköisesti valmistettu Neuvostoliitossa vuosikymmeniä sitten | [omistaja 2026-10-30] |
-| Polttimo | **Philipsin 24 V:n 250 W:n halogeeni, jota käytetään projektoreissa ja piirtoheittimissä** [omistaja 2026-10-31]; pystyssä oleva polttimo, jonka kaksi ohutta nastaa menevät kantaan [omistaja 2026-10-30]. Todennäköisesti **Philips 7748XHP** eli ANSI **EHJ** / LIF **A1/223**, kanta **G6.35**: 3400 K, noin 10 000 lm, käyttöikä noin 50 h ([datalehti Philips 7748XHP](https://old.effex.ee/certificate/7748xhp.pdf)). Tyyppi **⚠ tarkista** polttimon merkinnästä | [omistaja 2026-10-31], [datalehti Philips 7748XHP] |
+| Polttimo | **Philipsin 24 V:n 250 W:n halogeeni, jota käytetään projektoreissa ja piirtoheittimissä** [omistaja 2026-10-31]; pystyssä oleva polttimo, jonka kaksi ohutta nastaa menevät kantaan [omistaja 2026-10-30]. Malli **Philips 7748S 24V** [omistaja 2026-11-03] eli ANSI **EHJ** / LIF **A1/223**, kanta **G6.35**: 3400 K, **9 400 lm**, käyttöikä 50 h (50 % vikaantuneita), polttoasento s90, puristeen (pinch) lämpötila enintään 400 °C ja kuvun enintään 900 °C, pituus enintään 55 mm, halkaisija enintään 13,5 mm ([datalehti Philips 7748S](https://www.esvit.cz/upload/files/000008e150/871150040987450.pdf); luettu PDF:stä renderöidystä kuvasta). Philips 7748XHP on saman tyypin tehokkaampi versio (10 000 lm) | [omistaja 2026-11-03], [datalehti Philips 7748S] |
 | Runko | säilytetään: sopii aluksen vanhaan tyyliin ja muotokieleen | [omistaja 2026-10-30] |
 | Sijainti | komentosillan katto | [omistaja 2026-10-30] |
 | Ohjaus | käsikäyttöinen: valaisinta käännetään katon läpi tulevalla vivulla | [omistaja 2026-10-30] |
@@ -279,8 +279,8 @@ kirkkaampi valolähde, sitä kapeampi ja pidemmälle kantava keila [yleinen opti
 3. **Halogeenin käynnistysvirta** (noin 100–160 A kymmenien millisekuntien ajan, 250 W) pitää hoitaa:
    **päätetty 2026-10-31: rele** [omistaja 2026-10-31], jota ohjaa vipukytkin komentosillalla
    (suositus) tai PDM:n pieni kanava. ESP32-PDM:n päätöstä 19 ei tarvita Vegan hakuvaloa varten.
-4. **Varapolttimot:** kun tyyppi on varmistettu polttimon merkinnästä (luultavasti EHJ / A1/223,
-   G6.35), hanki useampi varapolttimo. Projektoripolttimon käyttöikä on vain noin 50 h, ja
+4. **Varapolttimot:** tyyppi on varmistettu: Philips 7748S eli EHJ / A1/223, G6.35
+   [omistaja 2026-11-03]. Hanki useampi varapolttimo; mikä tahansa EHJ / A1/223 -polttimo sopii. Projektoripolttimon käyttöikä on vain noin 50 h, ja
    Philips-merkkisiä näyttää olevan enää vähän saatavilla. Saman tyypin muita merkkejä myydään
    noin 10 £:lla ([BLT Direct](https://www.bltdirect.com/products/a1-223-24v-250w-projector-lamp)),
    valovirta noin 8 500 lm **⚠ tarkista**.
@@ -297,8 +297,9 @@ tai C2 noin 50 W), ja kirkkaampi keila vaatii todennäköisesti uuden valon (koh
 - [x] Hakuvalon valmistaja ja malli: ei tyyppikilpeä; vanha, todennäköisesti neuvostovalmisteinen [omistaja 2026-10-30]
 - [x] Polttimo: halogeeni [omistaja 2026-10-30]
 - [x] Polttimo: Philipsin 24 V:n 250 W:n projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31] (aiemmin kirjattu 500 W oli virhe)
-- [ ] Polttimon tarkka tyyppi merkinnästä (luultavasti EHJ / A1/223, kanta G6.35; aiempi arvio GY9.5) ja varapolttimoiden hankinta (käyttöikä noin 50 h)
-- [ ] Projektoreissa polttimoa jäähdyttää yleensä puhallin. Kestääkö polttimo pitkän käytön hakuvalon rungossa ilman puhallinta? **⚠ tarkista** datalehdestä ja käytössä
+- [x] Polttimon tarkka tyyppi: **Philips 7748S 24V** eli EHJ / A1/223, kanta G6.35 [omistaja 2026-11-03]
+- [ ] Varapolttimoiden hankinta (käyttöikä 50 h)
+- [ ] Projektoreissa polttimoa jäähdyttää yleensä puhallin. Kestääkö polttimo pitkän käytön hakuvalon rungossa ilman puhallinta? Datalehden rajat: puriste enintään 400 °C ja kupu enintään 900 °C ([datalehti Philips 7748S]); puhallintarvetta datalehti ei kerro. **⚠ tarkista** käytössä (esim. lämpötilatarra tai mittaus kannan lähellä)
 - [x] Ohjaus: käsikäyttöinen, vipu katon läpi [omistaja 2026-10-30]
 - [x] Sijainti: komentosillan katto [omistaja 2026-10-30]
 - [x] Etulasin paksuus: noin 5 mm [omistaja 2026-10-30]

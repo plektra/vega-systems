@@ -90,7 +90,7 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | Kansivalaistus | 200 W | suunniteltu | |
 | Työvalo eteen | 100 W | suunniteltu | |
 | Työvalo taakse | 100 W | suunniteltu | |
-| Hakuvalo | 250 W (≈ 10,4 A) [omistaja 2026-10-31] | **olemassa, ei asennettu** | Vanha, todennäköisesti neuvostovalmisteinen, käsikäyttöinen, komentosillan katolla [omistaja 2026-10-30]. Polttimo on Philipsin 24 V:n 250 W:n projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31], luultavasti EHJ / A1/223, kanta G6.35 **⚠ tarkista**. Halogeeni säilyy (päätös 2026-10-30). Jäänpoisto: [design/searchlight-deicing.md](design/searchlight-deicing.md) |
+| Hakuvalo | 250 W (≈ 10,4 A) [omistaja 2026-10-31] | **olemassa, ei asennettu** | Vanha, todennäköisesti neuvostovalmisteinen, käsikäyttöinen, komentosillan katolla [omistaja 2026-10-30]. Polttimo on Philipsin 24 V:n 250 W:n projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31], malli **Philips 7748S 24V** eli EHJ / A1/223, kanta G6.35 [omistaja 2026-11-03] ([datalehti Philips 7748S](https://www.esvit.cz/upload/files/000008e150/871150040987450.pdf)). Halogeeni säilyy (päätös 2026-10-30). Jäänpoisto: [design/searchlight-deicing.md](design/searchlight-deicing.md) |
 | Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
 | Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö **Mean Well DDR-240B-24**:ltä [omistaja 2026-10-29] |
 | Mastokamera | **⚠ ei tiedossa** (arvio noin 5 W) | suunniteltu | Kolmas kamera; PoE, syöttö luultavasti DDR-240B-24 **⚠ tarkista** [omistaja 2026-10-29] |
@@ -166,7 +166,8 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Maasähkö: kotilaiturissa 15 A [omistaja 2026-10-28]
 - [x] Hakuvalon malli, polttimo ja ohjaustapa: ei tyyppikilpeä, halogeeni (säilyy), käsikäyttöinen [omistaja 2026-10-30]
 - [x] Hakuvalon polttimo: Philips 24 V 250 W, projektorihalogeeni [omistaja 2026-10-31]
-- [ ] Hakuvalon polttimon tarkka tyyppi (luultavasti EHJ / A1/223, G6.35), varapolttimot ja releen valinta (rele päätetty 2026-10-31), ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
+- [x] Hakuvalon polttimon tarkka tyyppi: Philips 7748S 24V (EHJ / A1/223, G6.35) [omistaja 2026-11-03]
+- [ ] Hakuvalon varapolttimot ja releen valinta (rele päätetty 2026-10-31), ks. [design/searchlight-deicing.md](design/searchlight-deicing.md#5-avoimet-kysymykset)
 - [x] Jakelun rakenne: kolme tasoa (PJ, KS, KH) ja tärkeiden kuormien kisko, tavalliset piirit ESP32-PDM:llä, miinuksella yksi yhteyspiste runkoon (päätös 2026-10-31, [design/dc-distribution.md](design/dc-distribution.md))
 - [x] Sulaketyyppi: talojohdonsuojat, joiden datalehdessä on DC-arvo (päätös 2026-10-31)
 - [ ] Keskusten paikat, ks. [design/dc-distribution.md](design/dc-distribution.md#8-avoimet-kysymykset)

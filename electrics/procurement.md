@@ -62,7 +62,7 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
 | 4.1 | Hakuvalon rele, 24 V, vähintään noin 30 A, hehkulamppukuorma | 1 | | 🛒 | **⚠ ei tiedossa** (autorele arviolta 10–20 €) | [päätös 2026-10-31](../decisions.md), [searchlight-deicing](design/searchlight-deicing.md#3-ohjaus-ja-kytkentä) |
-| 4.2 | Hakuvalon varapolttimot A1/223 (EHJ), 24 V 250 W, G6.35 | 3–4 | tyyppi tarkistettava polttimosta; käyttöikä noin 50 h | 🔍 | noin 9,38 £/kpl (BLT Direct) | [searchlight-deicing](design/searchlight-deicing.md) |
+| 4.2 | Hakuvalon varapolttimot A1/223 (EHJ), 24 V 250 W, G6.35 | 3–4 | nykyinen polttimo Philips 7748S [omistaja 2026-11-03]; käyttöikä 50 h | 🔍 | noin 9,38 £/kpl (BLT Direct) | [searchlight-deicing](design/searchlight-deicing.md) |
 | 4.3 | Hakuvalon suojahuppu | 1 | | 🛒 | muutamia kymmeniä euroja **⚠ arvio** | sama |
 | 4.4 | Häkävaroitin makuutiloihin | 2–3 | öljylämmitin, kaasuliesi, aggregaatti | 🛒 | **⚠ ei tiedossa** | [ac-power-source D](design/ac-power-source.md#d-kannettava-bensiiniaggregaatti-varalataukseen-selvitetty-2026-10-31) |
 | 4.5 | Kaasuhälytin ja kaasun magneettiventtiili | 1 | suositus; kaasuasennuksen osana | ❓ | **⚠ ei tiedossa** | [loads.yaml](loads.yaml) |
@@ -93,7 +93,7 @@ kiinnitykset sekä asennus. Ne ovat arviolta useita satoja euroja (**⚠ arvio**
 - [ ] **MB31:** hinta, Grade A -todistus, mittausraportti, napatyyppi; EVE:n datalehdestä puristusvoima ja kiristysmomentti
 - [ ] **Johdonsuojat:** valitun mallin DC-arvo datalehdestä
 - [ ] **Akuston ja invertterilaturin paikka** veneellä ([tarkistuslista](boat-checklist.md)) ennen kennojen ja kotelon tilausta
-- [ ] **Hakuvalon polttimon tyyppi** ennen varapolttimoiden tilausta
+- [x] **Hakuvalon polttimon tyyppi:** Philips 7748S, EHJ / A1/223, G6.35 [omistaja 2026-11-03]
 - [ ] **Vakuutusyhtiön kanta** itse koottuun akustoon ja bensiinin säilytykseen
 
 **Voi tilata jo nyt:** Timco SS2200i (2.5) ja Cerbo GX (2.2). Kennot kannattaa tilata vasta, kun
