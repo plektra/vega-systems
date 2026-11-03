@@ -131,7 +131,7 @@ jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 |---|---|---|---|---|
 | 4.11 | Keulapotkurin lohkon kara 40 l/min, avoin keskiasento (esim. 157B7102) | jos nykyinen kara on vääränlainen | noin 116 SGD + verot | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-keulapotkuri-tarvitsee-pvh57n-ja-tämän-venttiilin-lisäksi) |
 | 4.12 | Keulapotkurin isku- ja imuventtiilit: kaksoisristivirtausventtiili imuventtiileillä letkulinjaan tai moottorille (suositus [arvio]); tai peruslohko 157B6230 + 2 × PVLP (esim. 157B2280) | peruslohkossa 157B6200 ei ole PVLP-paikkoja; pätevä henkilö arvioi | **⚠ ei tiedossa** | sama |
-| 4.13 | Tiivistesarja PVAS 157B8005 | jos lohkopino avataan | **⚠ ei tiedossa** | sama |
+| 4.13 | Tiivistesarja PVAS 157B8005 | jos lohkopino avataan; karat liikkuvat vapaasti [omistaja 2026-11-03], joten luultavasti ei tarvita, ellei peruslohkoja vaihdeta | **⚠ ei tiedossa** | sama |
 | 4.14 | Pumppumoduuli, suljettu keskiasento 157B5111 | **ei tarvita**: nykyinen on rungon leiman perusteella 157B5111 [päättely 2026-11-03]; varmistetaan koestuksessa | – | sama |
 | 4.15 | PVPX 24 V, 157B4238 | **ei mahdollinen** nykyisessä pumppumoduulissa (ei PVPX-paikkaa), ei tarvita | – | sama |
 
