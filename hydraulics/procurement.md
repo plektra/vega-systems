@@ -1,6 +1,6 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** päivitetty 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €; PVE-liittimet mukana); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
+> **Tila:** päivitetty 2026-11-03 (PVG 32 saapui, rungon koodit luettu); 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €; PVE-liittimet mukana); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
 > ykkösvaihtoehto 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
@@ -113,26 +113,26 @@ jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
-| 4.1 | Danfoss PVG 32, 5 lohkoa (käytetty) | 1 | 1 × PVEH 157B4024, 4 × PVEO 157B4224 | ✅ ostettu 2026-11-02 | 200 € + rahti 39,90 € (pyyntö 400 €) [omistaja 2026-11-02] | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
+| 4.1 | Danfoss PVG 32, 5 lohkoa (käytetty) | 1 | 1 × PVEH 157B4024, 4 × PVEO 157B4224 | ✅ ostettu 2026-11-02, saapui 2026-11-03 | 200 € + rahti 39,90 € (pyyntö 400 €) [omistaja 2026-11-02] | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
 | 4.2 | Porttitulpat (muovi tai teräs) | sarja | kuljetukseen ja puhdistukseen; osa porteista on nyt auki | 🛒 | pieni | sama, [Puhdistus ja koestus](design/aux-circuit-ls-clean-sheet.md#puhdistus-ja-koestus) |
 | 4.3 | Sovitteet A/B-portit (G 1/2) → keulapotkurin 1/2":n letkut | 2 | letkut valmiina | 🛒 | **⚠ ei tiedossa** | sama |
 | 4.4 | Sovite T-portti (G 3/4) → paluukeräin | 1 | | 🛒 | **⚠ ei tiedossa** | sama |
 | 4.5 | Painemittari 2G1 M-porttiin (G 1/4) | 1 | analoginen | 🔍 nykyinen mittari, **⚠ tarkista** mittausalue ja kunto | – | [pressure-monitoring](design/pressure-monitoring.md) |
 | 4.6 | Kiinnitysteline tai -levy konehuoneeseen | 1 | venttiili noin 22–23 kg [laskelma]; paikka **⚠** | 🛒 | **⚠ ei tiedossa** | [schematic](schematic.md#avoimia-kohtia-kaaviossa) |
 | 4.7 | Potentiometrijoystick keulapotkurille | 1 | samasta 24 V:n syötöstä; signaali 0,25–0,75 × U. Suositus JH-D202X-R2 5K (jousipalautus; yksi akseli uraohjaimella) ja 2 × 2,4 kΩ:n sarjavastukset; Danfoss PVREL liian kallis [omistaja 2026-11-02] | 🛒 | noin 11–23 $ kpl (eBay, Abra 2026-11-02); kaksi kappaletta (varaosa). Vertailu: PVREL 155U2605 426,56 € + ALV | [bow-thruster-control](design/bow-thruster-control.md#joystick-ehdokkaat-haettu-2026-11-02) |
-| 4.8 | PVE-liittimet Hirschmann DIN 4-napainen ja johdotus | 2–5 | lohkot 1–3 ensin. Liittimet tulevat venttiilin mukana [omistaja 2026-11-02]; tarkista vastaanotossa kunto ja onko jokaiselle PVE:lle oma **⚠ tarkista**. Johdotus hankitaan | ✅ liittimet mukana; 🛒 johdotus | liittimet kaupassa mukana; johdotus **⚠ ei tiedossa** | sama |
+| 4.8 | PVE-liittimet Hirschmann DIN 4-napainen ja johdotus | 2–5 | lohkot 1–3 ensin. Liittimet tulevat venttiilin mukana [omistaja 2026-11-02]; **jokaisessa viidessä PVE:ssä on oma Hirschmann GDM -liitin johtoineen** [omistaja 2026-11-03, kuvista]. Johdotus hankitaan | ✅ liittimet mukana; 🛒 johdotus | liittimet kaupassa mukana; johdotus **⚠ ei tiedossa** | sama |
 | 4.9 | Hätäseisrele PVE:iden 24 V:n syöttöön | 1 | | 🛒 | **⚠ ei tiedossa** | sama |
 | 4.10 | Koestus hydrauliikkakorjaamon koepenkissä | – | vaihtoehtona oma koestus | ❓ | **⚠ ei tiedossa** | [Puhdistus ja koestus](design/aux-circuit-ls-clean-sheet.md#puhdistus-ja-koestus) |
 | 4.16 | Käsivivut PVM-kantoihin (kokeiluun M8-kierretanko tai oma 3D-tulostettu vipu; käyttöön metallinen) | 1–5 | kierre todennäköisesti M8 **⚠ mittaa** | 🛒 oma valmistus | pieni; valmis Danfoss-vipu **⚠ ei tiedossa** | [pvg32-lever](design/pvg32-lever.md) |
 
-**Ehdolliset PVG 32:n osat.** Tarve selviää kokoonpanokoodista 157N553(8/B) ja kunnon tarkistuksesta:
+**Ehdolliset PVG 32:n osat.** Tarve selviää kokoonpanokoodista 157N553(8/B), rungosta 2026-11-03 luetuista koodeista (peruslohkot A 6200 → 157B6200?, pumppumoduuli 511? → 157B511?, ks. [Vastaanotto](design/aux-circuit-ls-clean-sheet.md#vastaanotto-2026-11-03-rungon-merkinnät)) ja kunnon tarkistuksesta:
 
 | # | Osa | Milloin tarvitaan | Hinta | Lähde |
 |---|---|---|---|---|
 | 4.11 | Keulapotkurin lohkon kara 40 l/min, avoin keskiasento (esim. 157B7102) | jos nykyinen kara on vääränlainen | noin 116 SGD + verot | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-keulapotkuri-tarvitsee-pvh57n-ja-tämän-venttiilin-lisäksi) |
 | 4.12 | PVLP-isku- ja imuventtiilit lohkon 1 A/B-portteihin (esim. 157B2280, 280 bar), 2 kpl | suositus, jos lohkossa on paikat; pätevä henkilö arvioi | **⚠ ei tiedossa** | sama |
 | 4.13 | Tiivistesarja PVAS 157B8005 | jos lohkopino avataan | **⚠ ei tiedossa** | sama |
-| 4.14 | Pumppumoduuli, suljettu keskiasento (esim. 157B5111) | vain, jos nykyinen on avoimen keskiasennon malli (epätodennäköistä) | **⚠ ei tiedossa** | sama |
+| 4.14 | Pumppumoduuli, suljettu keskiasento (esim. 157B5111) | vain, jos nykyinen on avoimen keskiasennon malli (epätodennäköistä; rungon leima 511? viittaa 157B511?-moduuliin **⚠ tarkista**) | **⚠ ei tiedossa** | sama |
 | 4.15 | PVPX 24 V, 157B4238 | valinnainen sähköinen LS-purku | **⚠ ei tiedossa** | sama |
 
 ## 5. Paluu, suodatus ja jäähdytys
@@ -212,7 +212,7 @@ osa niistä tarvitaan varavaihtoehdoissa, joten **ne kannattaa myydä vasta, kun
 
 ## Ennen tilaamista selvitettävät
 
-- [ ] PVG 32:n kokoonpanokoodi 157N553(8/B): kara, pumppumoduuli, PVLP-paikat ja P-portin koko (rivit 3.3, 4.11–4.14)
+- [ ] PVG 32:n kokoonpanokoodi 157N553(8/B) ja rungon koodit 157B6200? (peruslohkot) ja 157B511? (pumppumoduuli): kara, pumppumoduuli, PVLP-paikat ja P-portin koko (rivit 3.3, 4.11–4.14)
 - [x] PVH57:n laippa- ja porttikoot: imu 2", lähtö 1" (SAE code 61), vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]; tarkista pumpusta ennen tilausta
 - [ ] Veneellä: 50 mm:n palloventtiili ja sen kierre (2.1–2.4), 50 mm:n imuletku ja sen pituus (2.5), nykyisen 3/4":n painelinjan kunto (3.2), 2G1:n mittausalue (4.5), säiliön vapaat aukot vuotolinjoille (3.7)
 - [ ] Veneellä: onko säiliö maalattu sisältä, ja onko käytettävä jarrunpuhdistin klooriton ([puhdistus](#säiliön-puhdistus-hitsauksen-yhteydessä))
