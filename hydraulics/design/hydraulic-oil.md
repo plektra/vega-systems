@@ -56,7 +56,8 @@ leikkauskestävä laatu ja vaihtaa öljy ajallaan.
 | P1 Salami 2PE | **12 cSt** (suositus 17–65) | käynnistys 800 cSt | [datalehti Salami 2PE] |
 | **P2 Vickers PVH57** (päätös 2026-10-27) | **⚠ ei tiedossa** (optimi 16–40 cSt) | kylmäkäynnistys ≤ 5000 cSt; öljy hetkellisesti ≤ 104 °C | [Eaton V-PUPI-TM008-E1 s. 31], ks. [p2-variable-pump](p2-variable-pump.md#tekniset-tiedot) |
 | ~~P2 Parker F1~~ (arkistoitu) | 10 cSt (suositus 20–30) | **400 cSt**, käynnistys 4000; öljy ≤ 75 °C | [datalehti Parker HY30-8201] |
-| Rexroth 2/2-venttiili | 20 cSt | **380 cSt** | [datalehti RE 18323-07] |
+| ~~Rexroth 2/2-venttiili (OD15)~~ (jää pois, PVG 32) | 20 cSt | 380 cSt | [datalehti RE 18323-07] |
+| **Danfoss PVG 32** (päätös 2026-10-27) | 4 cSt (käyttöalue 12–75) | 460 cSt; öljy −30…+90 °C, suositus 30–60 °C; puhtaus enintään 19/16 | [datalehti PVG 32 s. 12, 520L0344] |
 | Orbitroli HKUS | noin 10 cSt | noin 300 cSt; öljy ≤ 80 °C | M+S-ohjausyksiköiden yleistiedot [LöSi-luettelo](https://loesi.de/wp-content/uploads/2023/08/Hydrostatische-Lenkeinheiten_katalog_de-1.pdf); **⚠ tarkista** HKUS:n omasta datalehdestä |
 | Sleipner-keulapotkuri | ei viskositeettirajaa | öljy alle 75 °C, suositus 40–60 °C | [ohje Sleipner 2746 35 2025] |
 
@@ -79,6 +80,11 @@ säiliö 1 m pumpun yläpuolella, ks. [p1-steering-pump.md](p1-steering-pump.md)
 | HV 46 (VI ~150) | 420 ❌ | 295 | 119 | 22,2 | 16,4 | 14,3 | ~82 °C | −0,29 bar (rajalla) |
 
 ❌ = ylittää Rexrothin 380 cSt:n tai F1:n 400 cSt:n rajan tai alittaa Salamin imurajan (−0,3 bar).
+
+> **Päivitys 2026-11-03:** Rexrothin 2/2-venttiili ja Parker F1 jäävät pois (PVH57 ja PVG 32). Nykyisten
+> komponenttien kylmät rajat ovat väljempiä (PVG 32 460 cSt, PVH57 kylmäkäynnistys 5000 cSt), joten
+> kylmän pään rajan asettaa nyt **P1:n imu**. Johtopäätös ei muutu: HV 32:lla on paras imumarginaali,
+> ja HV 46 on P1:n imun rajalla 5 °C:ssa [laskelma yllä]. Päätös HVLP 32 (2026-10-23) pysyy.
 
 - **HV 32 on ainoa, joka pysyy kaikkien komponenttien rajoissa 0 °C:sta noin 72 °C:seen,** ja sillä
   on paras imumarginaali (P1 ja P2).

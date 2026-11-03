@@ -11,7 +11,7 @@ viitata toisiinsa.
 | [electrics/](electrics/) | Akut, lataus, tehonjako, linkit valvonta- ja ohjauselektroniikkaan |
 | [heating/](heating/) | Tilojen lämmitys, huurunpoisto ja kiertovesilämmitys |
 | [datasheets/](datasheets/) | Hakemisto komponenttien datalehdistä: linkit ja tärkeimmät arvot |
-| [decisions.md](decisions.md) | Kaikki tähän asti tehdyt päätökset perusteluineen |
+| [decisions.md](decisions.md) | Voimassa olevat päätökset perusteluineen; korvatut: [decisions-archive.md](decisions-archive.md) |
 | [messages.md](messages.md) | Omistajien viestit toisilleen; Claude näyttää ne istunnon alussa |
 | [CLAUDE.md](CLAUDE.md) | Clauden työskentelyohjeet (myös ihmisten luettavissa) |
 

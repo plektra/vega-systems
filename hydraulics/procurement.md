@@ -1,11 +1,11 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** päivitetty 2026-11-03 (PVG 32 saapui, rungon koodit luettu ja tulkittu: pumppumoduuli 157B5111, peruslohkot 157B6200 ilman PVLP-paikkoja); 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €; PVE-liittimet mukana); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28; imupuolen mittaus ja säiliön puhdistusohje hitsaukseen täydennetty samana päivänä suunnitelmadokumenteista (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32,
-> ykkösvaihtoehto 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
+> **Tila:** päivitetty 2026-11-03 (PVG 32 saapui, rungon koodit tulkittu: pumppumoduuli 157B5111, peruslohkot 157B6200 ilman PVLP-paikkoja; karat liikkuvat ja palaavat keskelle); 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €; PVE-liittimet mukana); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28 (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32, päätökset 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
-> Varavaihtoehtojen (FXDC + LS-purku, LS + on/off) osia ei ole listalla. Ne tulevat ajankohtaisiksi
-> vain, jos PVG 32:n kauppa kaatuu, ks. [p2-variable-pump](design/p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi).
+> Arkistoitujen varavaihtoehtojen (FXDC + LS-purku, LS + on/off) osia ei ole listalla. Ne tulevat
+> ajankohtaisiksi vain, jos PVG 32 osoittautuu koestuksessa korjauskelvottomaksi, ks.
+> [arkisto](design/archive/p2-fxdc-ls-unloading.md#tarvittavat-osat-pumpun-lisäksi-minimi).
 
 **Tila-sarake:** ✅ olemassa tai sovittu · 🛒 hankitaan · 🔍 todennäköisesti olemassa, tarkista
 veneellä · ❓ ehdollinen (tarve selviää tarkistuksesta tai päätöksestä) · ⏳ myöhemmin
@@ -113,7 +113,7 @@ jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
-| 4.1 | Danfoss PVG 32, 5 lohkoa (käytetty) | 1 | 1 × PVEH 157B4024, 4 × PVEO 157B4224 | ✅ ostettu 2026-11-02, saapui 2026-11-03 | 200 € + rahti 39,90 € (pyyntö 400 €) [omistaja 2026-11-02] | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
+| 4.1 | Danfoss PVG 32, 5 lohkoa (käytetty) | 1 | 1 × PVEH 157B4024, 4 × PVEO 157B4224 | ✅ ostettu 2026-11-02, saapui 2026-11-03 | 200 € + rahti 39,90 € (pyyntö 400 €) [omistaja 2026-11-02] | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ostettu-venttiili-danfoss-pvg-32-5-lohkoa-torifi) |
 | 4.2 | Porttitulpat (muovi tai teräs) | sarja | kuljetukseen ja puhdistukseen; osa porteista on nyt auki | 🛒 | pieni | sama, [Puhdistus ja koestus](design/aux-circuit-ls-clean-sheet.md#puhdistus-ja-koestus) |
 | 4.3 | Sovitteet A/B-portit (G 1/2) → keulapotkurin 1/2":n letkut | 2 | letkut valmiina | 🛒 | **⚠ ei tiedossa** | sama |
 | 4.4 | Sovite T-portti (G 3/4) → paluukeräin | 1 | | 🛒 | **⚠ ei tiedossa** | sama |
@@ -207,7 +207,7 @@ siirretään P2:n vanhaan 32 mm:n letkuun ja ulosottoon.
 ## Pois jäävät osat (voi myydä)
 
 PVG 32 -ratkaisussa nämä jäävät käyttämättä: CETOP-pohjalaatta (Flowfit NG6), BAV-713, VPR3,
-Rexroth OD15 ja 2/2-patruunaventtiili, Marchesini VMP. Jos PVG 32:n kauppa tai kunto ei onnistu,
+Rexroth OD15 ja 2/2-patruunaventtiili, Marchesini VMP. Jos PVG 32:n koestus epäonnistuu,
 osa niistä tarvitaan varavaihtoehdoissa, joten **ne kannattaa myydä vasta, kun PVG 32 on koestettu**.
 
 ## Ennen tilaamista selvitettävät

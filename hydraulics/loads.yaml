@@ -41,7 +41,7 @@ loads:
   - id: BTH
     name: Keulapotkuri
     in_scope: true
-    existing: Side-Power SH240/250TC-U11, 250 mm tunneli, kaksi vastakkain pyörivää potkuria; BAV-713 4/3 on/off-venttiili
+    existing: Side-Power SH240/250TC-U11, 250 mm tunneli, kaksi vastakkain pyörivää potkuria; vanha BAV-713 4/3 on/off-venttiili korvataan Danfoss PVG 32:n lohkolla 1 (PVEH) [päätös 2026-10-27]
     criticality: high
     actuator: motor
     motor:
@@ -59,8 +59,8 @@ loads:
       continuous: true             # asennusohje: "Maximum Operation Time: Continuous"
       run_time_min: null           # ei rajaa; käytännön raja öljyn lämpötila
       cycles_per_hour: null
-    control: on_off                # nykyinen venttiili on on/off; proportionaalinen on mahdollinen
-    fail_state: pysähtyy, moottori pyörii vapaasti (A-B-T-vapaakierto)
+    control: proportional          # PVG 32:n PVEH-lohko (päätös 2026-10-27); ohjaimen valinta auki, ks. bow-thruster-control.md
+    fail_state: pysähtyy, moottori pyörii vapaasti (avoimen keskiasennon kara, A ja B -> T; karat palaavat jousilla keskelle)
     design_pressure_bar: 250       # päätetty: ~90 % työntövoima hyväksytty, 250 barin komponentit
     source: Sleipner asennusohje 2746 35 2025; Side-Power SH Series product specification v1.0.0 2017
     notes: "Hihnavedolla saavutettiin vain ~160-170 bar; se riitti kääntämään aluksen laiturissa. Potkuri on niin syvällä, ettei se koskaan saa ilmaa lapoihin [omistaja 2026-10-26] -> ylikierrossuojaa ei tarvita."
@@ -88,7 +88,7 @@ loads:
     control: on_off
     fail_state: pitää kuorman (räikkälukitus nostossa, tarkista; jarruventtiili moottorilla, kunnes käsikäyttöinen nauhajarru kiristetään; nauhajarru pitää myös vetoketjun katkettua)
     source: omistaja 2026-10-27
-    notes: "Omistajien listalla mahdollisena apupiirin kuormana [omistaja 2026-10-25]; CETOP-pohjalaatan vapaa paikka."
+    notes: "Omistajien listalla mahdollisena apupiirin kuormana [omistaja 2026-10-25]; PVG 32:n PVEO-lohko 2. Paineraja OMP 160:lle moottorin kaksoisristivirtausventtiilillä tai peruslohkon vaihdolla (aux-circuit-ls-clean-sheet.md, 2026-11-03)."
 
   - id: PWW
     name: Painepesuri
@@ -108,7 +108,7 @@ loads:
     control: on_off
     fail_state: pysähtyy
     source: null
-    notes: "Mahdollinen apupiirin kuorma [omistaja 2026-10-25]. Käytetään satamassa tyhjäkäynnillä; CETOP-pohjalaatan vapaa paikka."
+    notes: "Mahdollinen apupiirin kuorma [omistaja 2026-10-25]. Käytetään satamassa tyhjäkäynnillä; PVG 32:n PVEO-lohko 3."
 
   - id: DAV
     name: Nosturi / jollan daavitti

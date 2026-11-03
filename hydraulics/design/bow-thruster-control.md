@@ -3,14 +3,14 @@
 > **Tila:** selvitys ja suositus 2026-11-02 (joystick-ehdokkaat lisätty samana päivänä), ei päätetty. Turvallisuuskriittinen: pätevän henkilön
 > pitää tarkistaa sallintaketju, kytkentä ja vikatilat ennen käyttöönottoa.
 
-Liittyy: [PVG 32 -selvitys: sähkö ja ohjaus](aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi),
+Liittyy: [PVG 32 -selvitys: sähkö ja ohjaus](aux-circuit-ls-clean-sheet.md#ostettu-venttiili-danfoss-pvg-32-5-lohkoa-torifi),
 [käsivipu (PVM)](pvg32-lever.md), [vaatimukset §10.2](../requirements.md#102-ohjaus),
 [sähköjärjestelmä: ESP32-PDM](../../electrics/current-system.md#4-valvonta-verkot-ja-tehonjako).
 
 ## 1. Lähtötilanne
 
 - Keulapotkuri (Side-Power SH240-U11) ohjataan **PVG 32:n lohkosta 1, jossa on PVEH 157B4024
-  (24 V, sarja 0)** [päätös 2026-10-27], [kuvasta, ks. PVG 32 -selvitys](aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi).
+  (24 V, sarja 0)** [päätös 2026-10-27], [kuvasta, ks. PVG 32 -selvitys](aux-circuit-ls-clean-sheet.md#ostettu-venttiili-danfoss-pvg-32-5-lohkoa-torifi).
   Venttiili on ostettu, ja PVE-liittimet tulevat sen mukana [omistaja 2026-11-02].
 - P2 on PVH57 ilman PTO-kytkintä; ajossa pumppu on valmiustilassa noin 20 barissa
   [päätös 2026-10-23], [päätös 2026-10-27].

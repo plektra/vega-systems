@@ -1,21 +1,18 @@
 # Painemittaus: analogiset mittarit, digitaaliset anturit ja mittausliittimet
 
-> **Tila:** ehdotus 2026-10-23, päivitetty 2026-10-26 (2B2:n käyttö vaihtoehdossa C), ei päätetty. Nykyiset mittarit [omistaja 2026-10-23]. Hinnat ovat
+> **Tila:** ehdotus 2026-10-23, päivitetty 2026-10-26 ja **2026-11-03 (mittauspisteet päivitetty PVH57:lle ja PVG 32:lle; BPV-perustelut poistettu)**, ei päätetty; imupuolen mittarit 1G2 ja 2G2 päätetty 2026-10-28. Nykyiset mittarit [omistaja 2026-10-23]. Hinnat ovat
 > arvioita.
 
 Liittyy: [vaatimukset §10.1](../requirements.md#101-anturit), [kaaviot](../schematic.md),
-[P2:n BPV](archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili) (arkistoitu).
-
-> **⚠ 2026-10-27:** P2 on **Vickers PVH57**, eikä BPV:tä tule. 2B2 sijoitetaan PVH57:n
-> painelähtöön; BPV:hen liittyvät perustelut ovat taustaa, ja anturin käyttö PVH57:llä on kuvattu
-> kohdassa 1 (vaihtoehto C).
+[PVG 32](aux-circuit-ls-clean-sheet.md). Alkuperäinen 2B2:n perustelu koski F1-61:n BPV:tä
+([arkisto](archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili)).
 
 ## Nykytila
 
 | Tunnus | Paikka | Tyyppi | Lähde |
 |---|---|---|---|
 | 1G1 | Piiri 1: P-linjan alussa heti kolmitievirtauksensäätöventtiilin (RPF3) CF-lähdön jälkeen, eli orbitrolin P-paine | analoginen | [omistaja 2026-10-23] |
-| 2G1 | Piiri 2: CETOP-pohjalaatalle tuleva P-linja | analoginen | [omistaja 2026-10-23] |
+| 2G1 | Piiri 2: CETOP-pohjalaatalle tuleva P-linja (vanha kokoonpano); **siirretään PVG 32:n pumppumoduulin M-porttiin (G 1/4)** | analoginen | [omistaja 2026-10-23] |
 | 3Z2:n mittari | Paluusuodattimen painemittari, olemassa; nykyisessä paikassa huonosti luettavissa | analoginen | [blogi 2017-04-10], [omistaja 2026-10-23] |
 
 ## Kolme mittaustapaa
@@ -34,26 +31,25 @@ vastaan.
 
 | Tunnus | Paikka | Tyyppi | Alue | Miksi | Prioriteetti |
 |---|---|---|---|---|---|
-| **2B2** | **P2:n lähtö BPV:n painelähdössä** (ennen VPR3:a) | **digitaalinen** | 0–400 bar | **BPV:n tilaa saa vaihtaa vain alle 20 barissa**: ohjauslogiikka (ESP32) tarvitsee tämän mittauksen. Lisäksi pumpun kuorma, VMP:n säätö ja vikojen havaitseminen. | **1** |
+| **2B2** | **P2:n lähtö** (PVH57:n painelinja tai PVG 32:n P-linja) | **digitaalinen** | 0–400 bar | Valmiustilan (noin 20 bar) ja vedon valvonta: jos paine jää lohkoa ohjattaessa matalaksi, veto tai LS-linja on vialla, ja ESP32 antaa hälytyksen; pumpun kuorma ja lokitus | **1** |
 | **1B2** | Piiri 1: sama kohta kuin 1G1 (T-liitin mittarin rinnalle) | **digitaalinen** | 0–250 bar | Ohjauspaineen seuranta ja lokitus, orbitrolin paineenrajoituksen säätö, ohjauksen vikojen havaitseminen; tarvitaan myös, jos autopilotti tulee | **2** |
 | 2B1 | P2:n imuaukko | digitaalinen | −1…+1 bar | [päätetty 2026-10-23] | päätetty |
 | 3B1 | Säiliö / paluu, lämpötila | digitaalinen | 0–100 °C | [päätetty 2026-10-23] | päätetty |
 | 1G1 | RPF3:n CF-lähtö | analoginen | 0–160 tai 0–250 bar | olemassa | – |
-| 2G1 | CETOP-pohjalaatan P | analoginen | 0–400 bar | olemassa | – |
+| 2G1 | PVG 32:n M-portti (pumppumoduuli) | analoginen | 0–400 bar | olemassa, siirretään; käyttöönoton säädöt ([p2-variable-pump](p2-variable-pump.md#säätö-käyttöönotossa-ilman-virtausmittaria)) | – |
 | 3G2 | Paluulinja ennen jäähdytintä | analoginen tai mittausliitin | 0–25 bar | Orbitrolin T-linjan raja 25 bar; näyttää jäähdyttimen ohitusventtiilin avautumisen kylmällä öljyllä | 3 |
 | 3Z2 | Paluusuodattimen mittari | analoginen, **olemassa**; siirretään näkyvämmäksi vain tarvittaessa | – | Suodattimen tukkeutuminen | – |
 | 1T1 | P1:n lähtö ennen vastaventtiiliä 1V7 | mittausliitin | 0–250 bar | Vianhaku: pumppu vai RPF3; P3:n testaus erikseen | 4 |
 | 1G2 | P1:n imuaukko (3/4":n T-kappale) | analoginen kaksoispainemittari mittaritaulussa, 1/4":n mittausletku | −1…+1,5 bar | Kiinteä imupaineen seuranta; korvaa 1T2:n (pikaliitin käyttöönoton mittaukseen) [päätös 2026-10-28](../../decisions.md) | päätetty |
 | 2G2 | P2:n imuaukko (mittausvälikappale, sama aukko kuin 2B1) | analoginen kaksoispainemittari mittaritaulussa, 1/4":n mittausletku | −1…+1,5 bar | Imupaine ilman sähköä 2B1:n rinnalla [päätös 2026-10-28](../../decisions.md) | päätetty |
-| 2T1, 2T2 | Keulapotkurin A- ja B-linjat pohjalaatalla | mittausliittimet | 0–400 bar | Vianhaku: potkurin paine kumpaankin suuntaan, moottorin ja venttiilin kunto | 4 |
+| 2T1, 2T2 | Keulapotkurin A- ja B-linjat PVG 32:n lohkossa 1 | mittausliittimet | 0–400 bar | Vianhaku: potkurin paine kumpaankin suuntaan, moottorin ja venttiilin kunto | 4 |
 | 1T3, 1T4 | Ohjaussylinterin A- ja B-linjat | mittausliittimet | 0–250 bar | Vianhaku: sylinterin ja orbitrolin iskuventtiilien vuodot | 5 (valinnainen) |
 
 ## Imupaineen mittaus
 
 Imupuolella paine on noin −0,3…+0,1 bar, joten tavallinen painemittari ei kelpaa, eikä
-imulinjassa ole valmiita mittausliitäntöjä: Parkerin imuliittimessä ja BPV-venttiilissä ei ole
-mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salamin P1:ssä on pelkkä
-3/4":n imuaukko.
+imulinjassa ole valmiita mittausliitäntöjä: PVH57:n imulaipan mittausaukosta ei ole tietoa
+(**⚠ tarkista pumpusta**), ja Salamin P1:ssä on pelkkä 3/4":n imuaukko.
 
 **Liitäntä:** imuletkun ja pumpun väliin lyhyt **välikappale, jossa on 1/4" BSP -sivuaukko**:
 
@@ -107,18 +103,17 @@ mittausaukkoa (asennusohje MSG30-8227 mainitsee vain vuotoliitännän), ja Salam
   tai O-renkaalla, ei kartiokierrettä tai kierreteippiä.
 - **Mittari:** yhdistelmämittari (vakuumi ja paine) **−1…+1,5 bar**, glyseriinitäytteinen, Ø63 mm;
   tai digitaalinen anturi samalla alueella (−1…+1 bar, 4–20 mA), kuten päätetty 2B1. Paineenmittaus
-  ilmoitetaan ylipaineena (0 bar = ilmanpaine): Parkerin raja 1,0 bar abs vastaa noin 0 baria ja
-  Salamin 0,7 bar abs noin −0,3 baria.
+  ilmoitetaan ylipaineena (0 bar = ilmanpaine): PVH57:n raja 2400 rpm:llä on 0 bar ja Salamin
+  0,7 bar abs noin −0,3 baria.
 - **Mittausliitin:** jos imupuolelle halutaan pikaliitin (1T2), tarkista, että liitin on tiivis myös
   alipaineessa (**⚠ tarkista valmistajalta**). Muuten kiinteä mittari tai anturi on varmempi.
 
 ## Suositus
 
-1. **Digitaalinen anturi 2B2 P2:n lähtöön.** BPV:n vaihtoehto (alle 20 bar) kannattaa varmistaa
-   ohjauslogiikassa mittauksella, ei pelkällä toimintajärjestyksellä. **Vaihtoehdossa C**
-   (PVH57, LS ja on/off-venttiilit) BPV:tä ei ole, mutta sama anturi valvoo keulapotkuria: jos
-   paine jää venttiilin ollessa päällä alle rajan, veto on todennäköisesti katkennut, ja ESP32
-   katkaisee venttiilin virran ([aux-circuit-ls-onoff](aux-circuit-ls-onoff.md#painevalvonta-arvio)).
+1. **Digitaalinen anturi 2B2 P2:n lähtöön.** Se valvoo keulapotkuria ja vinssiä: jos paine jää
+   lohkon ollessa ohjattuna alle rajan, veto tai LS-linja on todennäköisesti vialla, ja ESP32
+   antaa hälytyksen tai katkaisee PVE:iden virran (sama logiikka kuin arkistoidussa
+   [on/off-vaihtoehdossa](archive/aux-circuit-ls-onoff.md#painevalvonta-arvio)).
 2. **Digitaalinen anturi 1B2 ohjauspiiriin** nykyisen mittarin 1G1 rinnalle.
 3. **Mittausliittimet** kohtiin 1T1, 2T1, 2T2 ja 3G2 (imupuolella kiinteät mittarit 1G2 ja 2G2, päätös 2026-10-28) sekä yksi kannettava mittari: halvin tapa
    saada vianhakuun kattava mittaus.

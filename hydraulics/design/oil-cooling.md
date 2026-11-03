@@ -1,20 +1,18 @@
 # Hydrauliöljyn lämpökuorma ja jäähdytys
 
-> **Tila:** Selvitys, päivitetty 2026-10-23, 2026-10-26 (paluulinjan letkukoko ja paluiden yhdistäminen) ja 2026-10-27 (jäähdyttimen asento, U11:n vuotolinja, malli EC100 tunnistettu). Ei vielä päätöstä. Laskelmat ovat arvioita [laskelma]; oletukset
-> on kerrottu kunkin taulukon yhteydessä. Tausta: [current-system.md](../current-system.md),
-> [p2-pump-options.md](archive/p2-pump-options.md) (arkistoitu).
->
-> **⚠ 2026-10-27:** P2 on nyt **Vickers PVH57** (säätötilavuuspumppu), ei F1-61. Alla olevat
-> F1-61:n ja BPV:n lämpölaskelmat ovat taustaa: PVH57 on ajossa valmiustilassa ja tuottaa
-> keulapotkuria käytettäessä vain tarvittavan virtauksen (lämpö arviolta 2–3 kW 38 kW:n sijaan,
-> ks. [p2-variable-pump](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)).
-> Valmiustilan häviöteho **⚠ ei tiedossa**. Jäähdyttimen mitoitus kannattaa tarkistaa PVH57:lle.
+> **Tila:** Selvitys, päivitetty 2026-10-23, 2026-10-26 (paluulinjan letkukoko ja paluiden
+> yhdistäminen), 2026-10-27 (jäähdyttimen asento, U11:n vuotolinja, malli EC100 tunnistettu) ja
+> **2026-11-03 (lämpökuormat päivitetty PVH57:lle ja PVG 32:lle; F1-61:n lämpölaskelmat siirretty
+> arkistoon [archive/oil-cooling-f1-61](archive/oil-cooling-f1-61.md))**. Ei vielä päätöstä.
+> Laskelmat ovat arvioita [laskelma]; oletukset on kerrottu kunkin taulukon yhteydessä. Tausta:
+> [current-system.md](../current-system.md), [p2-variable-pump](p2-variable-pump.md).
 
 ## Yhteenveto
 
-- **Suurin lämmönlähde on ylimääräinen virtaus, joka kuristetaan korkeassa paineessa:** VPR3
-  ohjaa ylimäärän säiliöön lähes kuormapaineessa, ja loput menee paineenrajoituksen yli. Määrä
-  kasvaa koneen kierrosten mukana, mutta keulapotkurin työntövoima ei kasva.
+- **PVH57 poistaa suurimman lämmönlähteen:** se tuottaa vain sen virtauksen, jonka kuormat
+  ottavat, joten ylimäärää ei kuristeta lämmöksi koneen kierroksista riippumatta (F1-61:llä
+  1800 rpm:llä noin 38 kW, ks. [arkisto](archive/oil-cooling-f1-61.md)). Keulapotkurin käytössä
+  lämpöä syntyy arviolta **noin 3–6 kW** (häviöt pumpussa, PVG 32:ssa, letkuissa ja moottorissa).
 - **Säiliö ja letkut luovuttavat itsestään vain noin 0,5 kW**, joten pienetkin jatkuvat kuormat
   nostavat öljyn pitkällä matkalla korkealle.
 - **Varalla oleva Bowman EC100** kestää 92 l/min ja jäähdyttää merivedellä noin 7–9 kW. Se
@@ -22,34 +20,39 @@
   rungon pituuden perusteella kyseessä on **EC100 eikä EC80** (2026-10-27), ks.
   [Malli](#malli-ec100-vai-ec80).
 - **Suositus:** EC100 kaikkien piirien yhteiseen paluulinjaan ohitusventtiilin kanssa, merivesi
-  koneen merivesipiiristä. Lisäksi kierroslukitus ja öljyn lämpötila-anturi.
+  koneen merivesipiiristä, ja öljyn lämpötila-anturi. Lämmön takia kierroslukitusta ei PVH57:llä
+  tarvita.
 
 ## Mistä lämpö tulee
 
 Kaikki teho, jota toimilaitteet eivät muuta työksi, päätyy öljyyn:
 **lämpö (kW) = virtaus (l/min) × painehäviö (bar) / 600**.
 
-1. **Ylimääräinen virtaus korkeassa paineessa:** apupiirin VPR3:n ylimäärä ja paineenrajoituksen
-   ylitys. Esimerkiksi 23 l/min × 255 bar ≈ 10 kW.
+1. **Kuristus korkeassa paineessa:** PVH57:llä vain PVG 32:n kompensaattorin ja karan yli jäävä
+   paine-ero (noin 20 bar) kerrottuna kuorman virtauksella, esim. 33 l/min × 20 bar ≈ 1,1 kW.
+   Kiinteällä pumpulla (vanha järjestelmä, F1-61) koko ylimäärä kuristui lähes kuormapaineessa.
 2. **Komponenttien häviöt:** pumppu, venttiilit, letkut ja keulapotkurin moottori, yhteensä
    muutamia kilowatteja keulapotkurin käydessä.
 3. **Ohjauspiiri:** orbitrolin läpivirtaus ja RPF3:n ylimäärä, jatkuvasti noin 0,2–0,7 kW.
 
 ## Lämpökuormat ja lämpeneminen
 
-Oletukset: Parker F1-061 (laskettu 61 cm³:llä; todellinen 59,5 cm³ antaa noin 2,5 % pienemmät lämmöt) PTO:lla 1:1, paineenrajoitus 250 bar, 80 l öljyä, säiliön ja
-letkujen teräs mukana lämpökapasiteetissa, ei jäähdytintä. Ks. myös
-[p2-pump-options.md](archive/p2-pump-options.md#käyttäytyminen-eri-kierroksilla-parker-f1-061).
+> Päivitetty 2026-11-03 PVH57:lle ja PVG 32:lle [laskelma, arvio]. F1-61:n alkuperäiset taulukot:
+> [arkisto](archive/oil-cooling-f1-61.md).
 
-**Keulapotkuri käytössä:**
+**Keulapotkuri käytössä** (noin 33 l/min, pumppu noin 250 bar). Oletukset [arvio]: pumpun
+kokonaishyötysuhde noin 85–90 % (noin 1,4–2 kW), PVG 32:n kompensaattori ja kara noin 20–25 bar
+(noin 1,1–1,4 kW), letkut ja paluulinja noin 10 bar (noin 0,5 kW) sekä moottorin U11 sisäiset
+häviöt noin 10–15 % sen tehosta (noin 1–2 kW, osa lämmöstä siirtyy keulan vaihteiston kautta veteen).
+Yhteensä **noin 3–6 kW, kierroksista lähes riippumatta**. Lämpökapasiteetti on sama kuin aiemmissa
+laskelmissa (80 l öljyä, säiliön ja letkujen teräs, noin 130 kJ/°C), ei jäähdytintä:
 
-| Koneen kierrokset | Lämpö | 40 → 60 °C | 40 → 75 °C (Parker F1:n raja) |
-|---|---|---|---|
-| 700 rpm | ~8 kW | ~5,5 min | ~10 min |
-| 1000 rpm | ~16 kW | ~3 min | ~5 min |
-| 1800 rpm | ~38 kW | ~1 min | ~2 min |
+| Lämpö | 40 → 60 °C | 40 → 75 °C (Sleipnerin suositus enintään 75 °C) |
+|---|---|---|
+| ~3 kW | ~15 min | ~25 min |
+| ~6 kW | ~7 min | ~13 min |
 
-Tavallinen 1–2 minuutin manööveri tyhjäkäynnillä nostaa öljyä noin 4–7 °C.
+Tavallinen 1–2 minuutin manööveri nostaa öljyä noin 1–5 °C.
 
 **Jatkuvat kuormat.** Säiliö ja letkut luovuttavat konehuoneeseen arviolta noin 20–25 W/°C
 (säiliön pinta noin 1,7 m², letkut noin 0,5 m², luonnollinen konvektio). Tasapainolämpötilat 35 °C:n
@@ -58,18 +61,8 @@ konehuoneessa:
 | Jatkuva kuorma | Öljyn tasapainolämpötila |
 |---|---|
 | Ohjauspumppu matka-ajossa (~0,5 kW) | noin 55–60 °C (40–45 °C:n konehuoneessa 65–70 °C) |
-| Kytkin päällä tyhjäkäynnillä, keulapotkuri ei käytössä (~0,7 kW) | noin 65 °C |
-| Kytkin päällä 1800 rpm:llä, vapaakierto auki (~2 kW) | **yli 100 °C** |
-| ~~Alustava ratkaisu (2026-10-23): ajossa BPV:n ohitus~~ → PVH57 valmiustilassa (2026-10-27) | **⚠ ei tiedossa** (Parker ei ilmoita ohitustilan lämpöä); mitataan ensimmäisellä kaudella |
-
-Viimeisessä tapauksessa lämpeneminen on hidasta: 40 → 75 °C noin 1 tunnissa (kuorman mukaan
-45–90 min), 20 → 75 °C noin 1,5 tunnissa. Kytkimen unohtuminen päälle koko matkan ajaksi
-ylikuumentaa öljyn, mutta lyhyt hetki ei.
-
-Parker F1:n **BPV-ohitusventtiili** pienentäisi viimeisen tapauksen lämpökuormaa ja läpivirtausta
-huomattavasti, koska öljy kiertää silloin pumpun päätykappaleessa eikä koko piirin kautta (tarkka
-luku **⚠ ei tiedossa**), ks.
-[p2-pump-options.md](archive/p2-pump-options.md#lisävaruste-parker-bpv-f1--ohitusventtiili).
+| PVH57 valmiustilassa ajossa (noin 20 bar, lähes nollatuotto) | **⚠ ei tiedossa** (kysy Danfossilta); mitataan ensimmäisellä kaudella |
+| Ankkurivinssi tai painepesuri pitkään | riippuu kuormasta, ks. [loads.yaml](../loads.yaml); lasketaan, kun moottorien tiedot tiedetään |
 
 ## Bowman EC100 -jäähdytin (omistajilla varalla)
 
@@ -148,14 +141,13 @@ Tyyppikilven koodin numero kertoo samalla vesiversion (esim. 3875 = merivesi).
 **Jos se on EC80** [laskelma, arvio]: teho Vegalla noin puolet EC100:sta eli **noin 3,5–4,5 kW**.
 Se riittää:
 
-- ✅ jatkuviin kuormiin (ohjaus matka-ajossa noin 0,5 kW, BPV:n ohitus);
-- ✅ tavallisiin keulapotkurimanöövereihin tyhjäkäynnillä (1–2 min, noin 8 kW): öljy lämpenee
-  hitaammin kuin ilman jäähdytintä;
-- ❌ ei pitkään jatkuvaan keulapotkurin käyttöön: 8 kW:n kuormalla öljy lämpenee edelleen,
-  noin puolta hitaammin kuin ilman jäähdytintä.
+- ✅ jatkuviin kuormiin (ohjaus matka-ajossa noin 0,5 kW, PVH57:n valmiustila);
+- ✅ keulapotkurin käyttöön (noin 3–6 kW PVH57:llä, päivitetty 2026-11-03): pienellä kuormalla
+  lämpö poistuu kokonaan, suurella öljy lämpenee hitaasti;
+- ❓ pitkä vinssaus tai painepesuri: riippuu kuormasta.
 
-Vegan käytössä (satamamanööverit lyhyitä, matka-ajossa P2 ohituksella) EC80 todennäköisesti
-riittää, mutta EC100 antaa marginaalia. Uusi merivesi-EC100 maksaa noin **⚠ ei tiedossa**.
+Vegan käytössä (satamamanööverit lyhyitä, matka-ajossa P2 valmiustilassa) EC80 todennäköisesti
+riittäisi, mutta EC100 antaa marginaalia. Uusi merivesi-EC100 maksaa noin **⚠ ei tiedossa**.
 
 ## Asennustapa: paluulinja vai erillinen piiri
 
@@ -174,11 +166,11 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
 
 ## Paluulinja-asennus
 
-1. **Kaikki paluut yhteen linjaan:** VPR3:n ylimäärä, 2/2-venttiili, BAV-713:n T, RPF3:n ylimäärä ja
-   orbitrolin T → EC100 → paluusuodatin → säiliö. U11:n vuotolinja on nyt kytketty paluulinjaan
-   [omistaja 2026-10-23], mutta se **tehdään uusiksi suoraan säiliöön** [omistaja 2026-10-27], joten kotelo ei saa
-   paluulinjan vastapainetta. Normaalisti virtaus on noin 15–60 l/min. 1800 rpm:llä
-   kytkin päällä virtaus olisi noin 125 l/min, ja ylimäärä kulkee ohitusventtiilin kautta.
+1. **Kaikki paluut yhteen linjaan:** PVG 32:n T-portti, RPF3:n ylimäärä ja orbitrolin T → EC100 →
+   paluusuodatin → säiliö. U11:n vuotolinja on nyt kytketty paluulinjaan [omistaja 2026-10-23],
+   mutta se **tehdään uusiksi suoraan säiliöön** [omistaja 2026-10-27], joten kotelo ei saa
+   paluulinjan vastapainetta. Virtaus on noin 15–75 l/min (P1:n paluu kierrosten mukaan ja
+   apupiirin paluu kuorman mukaan); suuremmat piikit kulkevat ohitusventtiilin kautta.
 2. **Ohitusventtiili** (takaiskuventtiili) jäähdyttimen rinnalle, avautuu noin 3–4 barissa. Suojaa
    jäähdytintä kylmältä, paksulta öljyltä ja virtapiikeiltä.
 3. **Merivesi** koneen merivesipiiristä **rinnakkaishaarana, jonka virtaus on rajoitettu**, ks.
@@ -189,7 +181,7 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
 5. **Sinkkianodi** tarkistetaan ja vaihdetaan tarvittaessa ennen käyttöönottoa.
 6. **Paluulinja 1":n letkusta,** koska jäähdytin tulee 2–3 metrin päähän säiliöstä
    [omistaja 2026-10-26] (ks. [Paluulinjan letkukoko](#paluulinjan-letkukoko)).
-7. **Paluut yhdistetään yhdeksi 1":n linjaksi venttiililohkon lähellä** (ks.
+7. **Paluut yhdistetään yhdeksi 1":n linjaksi PVG 32:n lähellä** (ks.
    [Paluiden yhdistäminen](#paluiden-yhdistäminen)).
 8. **Asento ja seisova merivesi** [arvio; Bowmanin asennusohjetta ei saatu luettua]:
    - Asento ei ole kriittinen, kunhan **putkisto pysyy täynnä vettä** eikä vesipuolelle jää
@@ -241,17 +233,17 @@ lyhyt supistus ei haittaa. Kannen suodattimeen OMTF171 (1 1/4") 1":n letku sopii
 
 Yhdistettävät paluut [suunnitelma, ks. [schematic](../schematic.md)]:
 
-| Paluu | F1-61-reitti | PVH57-reitti (LS + on/off) |
-|---|---|---|
-| CETOP-pohjalaatan T (BAV-713, VMP) | kyllä | kyllä |
-| VPR3:n B (ylimäärä) | kyllä | ei (VPR3 poistuu) |
-| OD15 / 2/2-vapaakiertoventtiili | kyllä | ei |
-| P1: RPF3:n ylimäärä ja orbitrolin T | kyllä | kyllä |
-| **Ei paluulinjaan:** U11:n vuotolinja, PVH57:n kotelovuoto, BPV:n vuotolinja | suoraan säiliöön öljypinnan alle | sama |
+| Paluu | Paluulinjaan |
+|---|---|
+| PVG 32:n T-portti (keulapotkuri, vinssi, pesuri) | kyllä |
+| P1: RPF3:n ylimäärä ja orbitrolin T | kyllä |
+| **Ei paluulinjaan:** U11:n vuotolinja ja PVH57:n kotelovuoto | suoraan säiliöön öljypinnan alle |
 
-Paluita on siis 2–4, ja tavalliset T-liittimet riittävät [arvio]:
+(F1-61-reitin paluut, kuten VPR3:n ylimäärä ja OD15, ovat [arkistossa](archive/oil-cooling-f1-61.md).)
 
-- **Kokoa paluut yhteen venttiililohkon lähellä,** jolloin jäähdyttimelle ja säiliöön kulkee vain
+Paluita on siis kaksi tai kolme, ja tavalliset T-liittimet riittävät [arvio]:
+
+- **Kokoa paluut yhteen PVG 32:n lähellä,** jolloin jäähdyttimelle ja säiliöön kulkee vain
   yksi 1":n letku.
 - **1":n läpivirtaus suoraan T:n läpi,** pienemmät paluut (3/4" tai 1/2") T:n haaraan
   supistusnipalla. Suurin virta (apupiirin paluu) kulkee suoraan. Nopeudet ovat pieniä, joten
@@ -264,7 +256,7 @@ Paluita on siis 2–4, ja tavalliset T-liittimet riittävät [arvio]:
   [pressure-monitoring](pressure-monitoring.md)).
 - **Siistimpi vaihtoehto:** valmis paluukeräinlohko (alumiini- tai teräslohko, 1":n pääkanava ja
   useita sivuportteja), joka kiinnitetään laipioon. Vähemmän liitoksia ja vuotokohtia, mutta
-  kalliimpi; hinta **⚠ ei tiedossa**. Kahdella–neljällä paluulla T-liittimet riittävät.
+  kalliimpi; hinta **⚠ ei tiedossa**. Kahdella tai kolmella paluulla T-liittimet riittävät.
 
 ## Merivesi
 
@@ -314,17 +306,17 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 
 - **Öljyn lämpötila-anturi** (päätetty 2026-10-23) säiliöön tai paluulinjaan Signal K:hon: varoitus noin 65 °C, hälytys
   noin 70 °C. Raja tulee ohjauspumpusta: Salamin 2PE vaatii vähintään 12 cSt, ja HV 32 ohenee
-  sen alle noin 70 °C:n yläpuolella (Parker F1:n oma raja on 75 °C). Ensimmäisen kauden mittaukset
+  sen alle noin 70 °C:n yläpuolella (Sleipner suosittelee keulapotkurille enintään 75 °C). Ensimmäisen kauden mittaukset
   näyttävät todelliset lämpötilat.
 - **Paluulinjan vastapaine** (jäähdytin, ohitusventtiili, suodatin) pitää pysyä alle 25 barin, joka
   on orbitrolin (HKUS 160/4) T-linjan suurin jatkuva paine. 3–4 barin ohitusventtiilillä tämä täyttyy
   reilusti.
-- **Kierroslukitus** (päivitetty 2026-10-23: PTO-kytkimen sijaan BPV-ohitusventtiili, ks. [requirements.md §10.2](../requirements.md)). Alkuperäinen muotoilu: kytkin päälle vain alle noin
-  1000 rpm:ssä; sen yli keulapotkurin venttiili estetään ja vapaakiertoventtiili avataan; hälytys,
-  jos kytkin on päällä yli noin 1200 rpm:ssä.
+- **Kierroslukitusta ei tarvita lämmön takia** (PVH57, päivitetty 2026-11-03). Pumpun imupaine
+  rajoittaa kierroksia vain yli 2400 rpm:n, ks. [p2-variable-pump](p2-variable-pump.md#sopivuus-vegaan-laskelma).
 
 ## Avoimet kysymykset
 
+- [ ] PVH57:n valmiustilan häviöteho (Danfoss tai mittaus ensimmäisellä kaudella)
 - [ ] Jäähdyttimen tarkka paikka ja paluulinjan letkupituus (arvio 2–3 m säiliöstä [omistaja 2026-10-26]); paluiden yhdistämiskohta
 - [x] Onko varalla oleva jäähdytin EC100 vai EC80: **EC100** (valumerkintä EC10, koodi 3249-2, 07/88, runko 185 mm) [omistaja 2026-10-27]
 - [ ] Koodin 3249 merkitys ja vetojen määrä (Bowman / Lancing Marine, tai päätykannen väliseinistä)

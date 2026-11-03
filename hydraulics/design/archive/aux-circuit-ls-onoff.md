@@ -1,12 +1,17 @@
-# Apupiiri alusta alkaen: säätötilavuuspumppu, LS ja on/off-venttiilit
+# Arkisto: apupiiri LS:llä ja on/off-venttiileillä (ilman venttiilipöytää)
+
+> **🗄 Arkistoitu 2026-11-03.** Ajatuskoe ja varavaihtoehto, joka jäi pois, kun apupiirin venttiileiksi
+> valittiin Danfoss PVG 32 (päätös 2026-10-27), venttiili ostettiin (2026-11-02) ja sen karat
+> todettiin käsin toimiviksi (2026-11-03). Otetaan käyttöön vain, jos PVG 32 osoittautuu
+> koestuksessa korjauskelvottomaksi. Sisältö on arkistointipäivän tilanteen mukainen.
 
 > **Tila:** ajatuskoe 2026-10-26, päivitetty 2026-10-26 (FXDC:n kuvaaja; potkuri ei ime ilmaa; ISO 1219 -kaavio; muutosyhteenveto ja kierroslukitus), **varavaihtoehto**. **Pumppu on päätetty 2026-10-27: PVH57** (F1-61-vaihtoehto
-> [arkistoitu](archive/p2-pump-options.md)); venttiilikokoonpanon ykkösvaihtoehto on
-> [PVG 32](aux-circuit-ls-clean-sheet.md) (päätös 2026-10-27). Tämä toteutetaan, jos PVG 32 ei onnistu. Tässä kysytään, miten apupiiri
+> [arkistoitu](p2-pump-options.md)); venttiilikokoonpanon ykkösvaihtoehto on
+> [PVG 32](../aux-circuit-ls-clean-sheet.md) (päätös 2026-10-27). Tämä toteutetaan, jos PVG 32 ei onnistu. Tässä kysytään, miten apupiiri
 > rakennettaisiin alusta alkaen säätötilavuuspumpulla **ilman proportionaalista venttiilipöytää**
 > [omistaja 2026-10-26, kysymys]. Vertailukohdat: PVH57 olemassa olevilla venttiileillä
-> ([p2-variable-pump](p2-variable-pump.md)) ja PVH57 proportionaalisella LS-lohkoventtiilillä
-> ([aux-circuit-ls-clean-sheet](aux-circuit-ls-clean-sheet.md)).
+> ([p2-variable-pump](../p2-variable-pump.md)) ja PVH57 proportionaalisella LS-lohkoventtiilillä
+> ([aux-circuit-ls-clean-sheet](../aux-circuit-ls-clean-sheet.md)).
 >
 > Luvut ovat arvioita, ellei toisin merkitä. Pätevän henkilön pitää tarkistaa kytkentä,
 > säätöarvot ja erityisesti ankkurivinssin kuorman pito ennen rakentamista.
@@ -19,7 +24,7 @@
   yhdistää A- ja B-linjat säiliöön, LS-linja tyhjenee ja pumppu jää noin 20 barin valmiustilaan.
   LS-purkuventtiiliä (2/2), 3/2-valintaventtiiliä ja ohjelman ohjausjärjestystä ei tarvita.
 - **Keulapotkurilinjassa ei ole kuristinta eikä virtauksensäätöä,** joten pumppu nousee suoraan
-  250 bariin ja työntövoima on arviolta 85–88 % ([päätös 2026-10-21](../../decisions.md): noin 90 %
+  250 bariin ja työntövoima on arviolta 85–88 % ([päätös 2026-10-21](../../../decisions.md): noin 90 %
   hyväksytty). Ylikierrossuojaa ei tarvita, koska potkuri on niin syvällä, ettei se saa ilmaa
   lapoihin [omistaja 2026-10-26].
 - **Vinssi ja painepesuri saavat oman kompensoidun virtauksensäätönsä,** ja pumppu pitää paineen vain
@@ -30,7 +35,7 @@
 ## Mitä muuttuu nykyiseen suunnitelmaan verrattuna
 
 Vertailukohta on nykyinen suunnitelma (F1-61, BPV-ohitusventtiili ja VPR3,
-[p2-pump-options](archive/p2-pump-options.md)) ja veneessä jo olevat osat.
+[p2-pump-options](p2-pump-options.md)) ja veneessä jo olevat osat.
 
 **Toiminta:**
 - Pumppu tuottaa vain sen öljyn, jonka kuormat käyttävät. Ylimäärää ei kuristeta lämmöksi.
@@ -53,8 +58,8 @@ BPV:n ohjauksen vaatima paineanturi ja ohjauslogiikka.
   säiliöön.
 - LS-linja: yksi vaihtoventtiili, vuotokuristin noin Ø0,8 mm ja 1/4":n letku.
 - Lasikuitusuodatus, koska nykyinen paperisuodatin ei riitä: OMTF171F10NA1 kanteen tai
-  linjasuodatin paluulinjaan ([p2-variable-pump](p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1)).
-- 1":n paluulinja ja paluukeräin (suositeltu kummallekin reitille, [oil-cooling](oil-cooling.md#paluulinjan-letkukoko)).
+  linjasuodatin paluulinjaan ([p2-variable-pump](../p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1)).
+- 1":n paluulinja ja paluukeräin (suositeltu kummallekin reitille, [oil-cooling](../oil-cooling.md#paluulinjan-letkukoko)).
 
 **Uudet osat myöhemmin (vinssi ja pesuri):** kummallekin FXDC runkoineen, vinssille 4/3-venttiili
 ja jarruventtiili, pesurille 3/2-venttiili sekä vaihtoventtiilit asemien välille.
@@ -74,22 +79,22 @@ PTO ─ HRC150 ─ PVH57 (LS-säädin, 250 bar) ──P──┬─ varaventtiil
         └── kotelovuoto, oma letku öljypinnan alle ──► säiliö
 ```
 
-Ohjauspiiri (P1, orbitroli) pysyy erillään kuten nyt ([päätös 2017-04](../../decisions.md)).
+Ohjauspiiri (P1, orbitroli) pysyy erillään kuten nyt ([päätös 2017-04](../../../decisions.md)).
 
 ### ISO 1219 -kaavio (luonnos)
 
-![Vaihtoehto C: PVH57, LS ja on/off-venttiilit, ISO 1219 -merkein](../img/schematic-c-aux-ls-onoff.svg)
+![Vaihtoehto C: PVH57, LS ja on/off-venttiilit, ISO 1219 -merkein](../../img/archive/schematic-c-aux-ls-onoff.svg)
 
-Piirretty samoin periaattein kuin [arkit 1–3](../schematic.md): venttiilit lepoasennossa,
+Piirretty samoin periaattein kuin [arkit 1–3](../../schematic.md): venttiilit lepoasennossa,
 tunnus *piiri + tyyppi + numero*. Nykyisestä suunnitelmasta säilyvät osat pitävät tunnuksensa
 (2V3, 2V5, 2M2, 2V0, 2B1); uudet osat on numeroitu 10:stä alkaen. **Musta = ensimmäinen vaihe**
 (pumppu ja keulapotkuri), **harmaa = lisätään myöhemmin** (vinssi ja pesuri). Paluu jatkuu arkin 3
-paluukeräimeen ([schematic](../schematic.md#arkki-3-paluu-jäähdytys-ja-säiliö)). **Tila: selvitys,
+paluukeräimeen ([schematic](../../schematic.md#arkki-3-paluu-jäähdytys-ja-säiliö)). **Tila: selvitys,
 ei päätetty, ei rakentamiseen.** Pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 
 | Tunnus | Osa | Tiedot | Vaihe |
 |---|---|---|---|
-| 2M1, 2Z3 | Advance 300 PTO, HRC 150 -joustokytkin (päätös 2026-10-27) | kuten [arkistoitu arkki 2](archive/schematic-sheet-2-f1-61.md#arkki-2-piiri-2-apupiiri-ja-keulapotkuri); Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) | 1 |
+| 2M1, 2Z3 | Advance 300 PTO, HRC 150 -joustokytkin (päätös 2026-10-27) | kuten [arkistoitu arkki 2](schematic-sheet-2-f1-61.md#arkki-2-piiri-2-apupiiri-ja-keulapotkuri); Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu) | 1 |
 | 2P10 | Vickers PVH57, LS-säädin (V) | 57,4 cm³; painekompensaattori 250 bar, LS-paine-ero noin 20 bar; kotelovuoto omana letkuna säiliöön | 1 |
 | 2V0, 2B1 | Imun palloventtiili, imupaineanturi | imu 50 mm, kuten arkki 2 | 1 |
 | 2G1 | Painemittari | P-linja | 1 |
@@ -100,7 +105,7 @@ ei päätetty, ei rakentamiseen.** Pätevän henkilön pitää tarkistaa kaavio 
 | 2V19 | Vuotokuristin noin Ø0,8 mm | LS-linjasta säiliöön; LS-linja tyhjenee, kun venttiilit ovat keskellä | 1 |
 | 2M2 | Sleipner U11 (SH240) | A/B 1/2", 2 × 8,5 m; ei virtauksensäätöä; vuotolinja suoraan säiliöön | 1 |
 | 2V12, 2V13 | Vaihtoventtiilit asemien välillä | välittävät suurimman kuorman paineen pumpulle; ennen vinssiä aseman 1 signaali menee suoraan LS-linjaan | myöhemmin |
-| 2V14, 2V15, 2V11, 2V16, 2M3 | Vinssi: FXDC, 4/3 A,B→T, vaihtoventtiili, jarruventtiili, moottori | vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../loads.yaml)) | myöhemmin |
+| 2V14, 2V15, 2V11, 2V16, 2M3 | Vinssi: FXDC, 4/3 A,B→T, vaihtoventtiili, jarruventtiili, moottori | vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../../loads.yaml)) | myöhemmin |
 | 2V17, 2V18, 2M4 | Pesuri: FXDC, 3/2 (lepo A→T), moottori | pesurin tiedot **⚠ ei tiedossa**; LS-signaali suoraan A-linjasta | myöhemmin |
 
 ### LS-linjan venttiilit
@@ -135,14 +140,14 @@ Kaaviota piirtäessä esiin tulleet asiat:
 
 | # | Osa | Tehtävä | Huom. |
 |---|---|---|---|
-| 1 | PVH57, LS-säädin, painekompensaattori 250 bar | Tuottaa vain sen, mitä kuormat ottavat; tyhjäkäynnillä noin 38 l/min [laskelma, ks. [p2-variable-pump](p2-variable-pump.md#sopivuus-vegaan-laskelma)] | Veto, kannake, 50 mm:n imu ja kotelovuoto kuten [p2-variable-pump](p2-variable-pump.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
+| 1 | PVH57, LS-säädin, painekompensaattori 250 bar | Tuottaa vain sen, mitä kuormat ottavat; tyhjäkäynnillä noin 38 l/min [laskelma, ks. [p2-variable-pump](../p2-variable-pump.md#sopivuus-vegaan-laskelma)] | Veto, kannake, 50 mm:n imu ja kotelovuoto kuten [p2-variable-pump](p2-fxdc-ls-unloading.md#tarvittavat-osat-pumpun-lisäksi-minimi) |
 | 2 | 4/3 on/off -suuntaventtiilit, keskiasennossa A,B→T | Keskellä potkuri pyörii vapaasti, vinssin jarruventtiili sulkeutuu ja LS-linja tyhjenee | Keulapotkurille käy nykyinen BAV-713 |
 | 3 | Vaihtoventtiilit A/B-linjoista ja lohkojen välillä LS-porttiin | Tuo suurimman kuorman paineen pumpun säätimelle | Pieniä linjamallisia vaihtoventtiileitä, malli **⚠ valitsematta** |
 | 4 | Vuotokuristin noin Ø0,8 mm LS-linjasta säiliöön | Varmistaa, että LS-linja tyhjenee ja pumppu palaa valmiustilaan | |
-| 5 | Kaksitiekompensoitu virtauksensäätö (Sun FXDC) vinssille ja pesurille | Pitää nopeuden vakiona myös yhtäaikaisessa käytössä; keulapotkurin linjaan sitä ei tarvita (ks. alla) | FXDC ja runko DAW/S, ks. [vaihtoehdot](p2-variable-pump.md#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot). Asennus välilaattana tai linjarunkona **⚠ tarkista** |
+| 5 | Kaksitiekompensoitu virtauksensäätö (Sun FXDC) vinssille ja pesurille | Pitää nopeuden vakiona myös yhtäaikaisessa käytössä; keulapotkurin linjaan sitä ei tarvita (ks. alla) | FXDC ja runko DAW/S, ks. [vaihtoehdot](p2-fxdc-ls-unloading.md#kaksitiekompensoidun-virtauksensäätöventtiilin-vaihtoehdot). Asennus välilaattana tai linjarunkona **⚠ tarkista** |
 | 6 | Varaventtiili (nykyinen VMP) noin 270 bariin | Rajaa paineen, jos pumpun säädin jumittuu | Pätevä henkilö säätää |
-| 7 | Vinssin jarruventtiili moottorilla ja vinssin oma jarru | Kuorman pito | Vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../loads.yaml)) |
-| 8 | Jäähdytin termostaattiohituksella, paluusuodatin 10 µm lasikuitua | Mäntäpumppu vaatii 250 barissa puhtausluokan 16/14/12 (17/15/13 140–210 barissa) | Nykyinen OMTF112C10NA2 (arviolta selluloosa nominaalinen) ei riitä sellaisenaan [omistaja 2026-10-26]: ehdokas OMTF171F10NA1, ks. [p2-variable-pump](p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1). Jäähdytin: [oil-cooling](oil-cooling.md) |
+| 7 | Vinssin jarruventtiili moottorilla ja vinssin oma jarru | Kuorman pito | Vinssin tiedot **⚠ ei tiedossa** ([loads.yaml](../../loads.yaml)) |
+| 8 | Jäähdytin termostaattiohituksella, paluusuodatin 10 µm lasikuitua | Mäntäpumppu vaatii 250 barissa puhtausluokan 16/14/12 (17/15/13 140–210 barissa) | Nykyinen OMTF112C10NA2 (arviolta selluloosa nominaalinen) ei riitä sellaisenaan [omistaja 2026-10-26]: ehdokas OMTF171F10NA1, ks. [p2-variable-pump](../p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1). Jäähdytin: [oil-cooling](../oil-cooling.md) |
 
 **Miksi keulapotkurille ei tarvita virtauksensäätöä:** 250 barissa moottori ottaa itse noin
 33 l/min (interpoloitu Sleipnerin taulukosta [datalehti Side-Power SH Series v1.0.0 2017]), joten
@@ -158,7 +163,7 @@ menettää kuormansa ja ryntää. Ks. [Tarvitaanko kierroslukitus](#tarvitaanko-
 ### Tarvitaanko kierroslukitus
 
 F1-61-reitillä kierroslukitus on välttämätön lämmön takia (1800 rpm:llä noin 38 kW,
-[p2-pump-options](archive/p2-pump-options.md)). **Vaihtoehdossa C se ei ole välttämätön** [arvio]:
+[p2-pump-options](p2-pump-options.md)). **Vaihtoehdossa C se ei ole välttämätön** [arvio]:
 
 - **Kun veto on kunnossa, kierrokset eivät haittaa.** Pumppu pysyy 250 barissa ja antaa vain sen
   noin 33 l/min, jonka moottori ottaa. Lämpöä ei synny ylimäärästä, ja työntövoima on sama kuin
@@ -191,7 +196,7 @@ F1-61-reitillä kierroslukitus on välttämätön lämmön takia (1800 rpm:llä 
 3. **FXDC keulapotkurin linjaan** ylikierrossuojaksi: rajaa virtauksen noin 34 l/min:iin kaikilla
    kierroksilla, mutta vie noin 8 bar ja työntövoimasta noin 3 prosenttiyksikköä (ks. yllä).
 4. **Painevalvonta P2:n lähdön paineanturilla** (2B2, ks.
-   [pressure-monitoring](pressure-monitoring.md)): tunnistaa vian, ei tarvitse kierrostietoa.
+   [pressure-monitoring](../pressure-monitoring.md)): tunnistaa vian, ei tarvitse kierrostietoa.
 
 #### Painevalvonta [arvio]
 
@@ -218,7 +223,7 @@ venttiilin häviöihin, muutamaan kymmeneen bariin. Ero on suuri, joten raja on 
   [omistaja 2026-10-26] ja kylmä öljy vain nostaa painetta.
 
 **Miksi paineanturi eikä virtausanturi:** hydrauliikan virtausanturi maksaa arviolta satoja euroja
-ja lisää painehäviötä; paineanturi noin 40–150 € ([pressure-monitoring](pressure-monitoring.md)).
+ja lisää painehäviötä; paineanturi noin 40–150 € ([pressure-monitoring](../pressure-monitoring.md)).
 F1-61-reitillä 2B2 tarvittaisiin BPV:n ohjaukseen; vaihtoehdossa C sama anturi hoitaa tämän
 valvonnan ja paljastaa muitakin vikoja (säädin ei nosta painetta, venttiili ei avaudu, paine jää
 korkeaksi venttiilin sulkeuduttua).
@@ -236,7 +241,7 @@ pesuria ei koskaan käytetä keulapotkurin kanssa yhtä aikaa, halvempi säädet
 ## Miten 250 bar ja 20 barin marginaali sopivat yhteen
 
 PVH57:n säätimessä on kaksi karaa, jotka säätävät samaa iskunpituutta [M-2210-S s. 6, ks.
-[p2-variable-pump](p2-variable-pump.md#miten-ls-linjaa-käytetään)]:
+[p2-variable-pump](p2-fxdc-ls-unloading.md#miten-ls-linjaa-käytetään)]:
 
 1. **LS-kara** yrittää pitää pumpun lähtöpaineen noin 20 bar LS-portin painetta korkeampana.
 2. **Paineenrajoitin** pienentää iskua niin, ettei lähtöpaine ylitä 250 baria.
@@ -252,7 +257,7 @@ tai 250 bar, kumpi on pienempi.**
   virtaukselle, jolla 250 bar säilyy (noin 33 l/min). Paine-ero pumpun ja moottorin välillä on
   silloin vain BAV-713:n ja letkujen todellinen häviö (**⚠ ei mitattu**) [arvio].
 - **Siksi keulapotkurilinjassa ei saa olla kuristinta.** Kuristinvaihtoehdossa
-  ([p2-variable-pump](p2-variable-pump.md#vaihtoehto-aito-kuormantunto-säädettävällä-kuristimella))
+  ([p2-variable-pump](p2-fxdc-ls-unloading.md#vaihtoehto-aito-kuormantunto-säädettävällä-kuristimella))
   virtaus rajattiin kuristimella, joka tarvitsi 20 barin paine-eron, ja moottori sai vain noin
   230 bar (työntövoima noin 80 %).
 - **Yhtäaikaisessa käytössä:** kun keulapotkuri pitää pumpun 250 barissa, vinssin FXDC:n yli on
@@ -267,7 +272,7 @@ tai 250 bar, kumpi on pienempi.**
 
 ## Vertailu
 
-| | PVH57 + vanhat venttiilit ([p2-variable-pump](p2-variable-pump.md)) | PVG-venttiilipöytä ([aux-circuit-ls-clean-sheet](aux-circuit-ls-clean-sheet.md)) | **LS + on/off (tämä)** |
+| | PVH57 + vanhat venttiilit ([p2-variable-pump](../p2-variable-pump.md)) | PVG-venttiilipöytä ([aux-circuit-ls-clean-sheet](../aux-circuit-ls-clean-sheet.md)) | **LS + on/off (tämä)** |
 |---|---|---|---|
 | Ohjauslogiikka | 2/2 (ja 3/2) oikeassa järjestyksessä | PVE-ohjaimet | **ei mitään, pelkät kytkimet** |
 | Vika "2/2 jää kiinni", noin 10 kW lämpöä | mahdollinen | ei | **ei** |
@@ -305,4 +310,4 @@ vinssin jarruventtiili.
 - [ ] Lohkokohtaisen FXDC:n asennus CETOP-pohjalaatalle: välilaatta (malli) vai linjarunko kunkin aseman letkuun
 - [ ] Danfoss: PVH57:n kierrosraja (2400 rpm) yhtäaikaisessa käytössä, kun 38 l/min ei riitä kahdelle kuormalle tyhjäkäynnillä
 - [ ] Vaihtoventtiilien malli ja liitäntäkoko
-- [ ] Ankkurivinssin moottori (Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]), jarru ja jarruventtiili; painepesurin hydraulimoottorin virtaus ja paine ([loads.yaml](../loads.yaml))
+- [ ] Ankkurivinssin moottori (Danfoss OMP 160 (151-0031) [omistaja 2026-10-27]), jarru ja jarruventtiili; painepesurin hydraulimoottorin virtaus ja paine ([loads.yaml](../../loads.yaml))

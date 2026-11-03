@@ -1,6 +1,6 @@
 # Hydrauliikan kaavio (suunniteltu kokoonpano)
 
-> **Tila:** päivitetty 2026-10-28: 1V5 on olemassa (P2:n nykyinen palloventtiili); 2V0 todennäköisesti olemassa **⚠ tarkista**. 2026-10-27: **arkki 2 piirretty uudelleen** (P2 = Vickers PVH57, HRC 150, venttiileiksi Danfoss PVG 32, ykkösvaihtoehto); F1-61-kokoonpanon arkki 2 ja sen taulukot [arkistoitu](design/archive/schematic-sheet-2-f1-61.md). Aiemmin 2026-10-23 ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
+> **Tila:** päivitetty 2026-10-28: 1V5 on olemassa (P2:n nykyinen palloventtiili); 2V0 todennäköisesti olemassa **⚠ tarkista**. 2026-10-27: **arkki 2 piirretty uudelleen** (P2 = Vickers PVH57, HRC 150, venttiileiksi Danfoss PVG 32, päätös 2026-10-27); F1-61-kokoonpanon arkki 2 ja sen taulukot [arkistoitu](design/archive/schematic-sheet-2-f1-61.md). Aiemmin 2026-10-23 ja 2026-10-26 (paluukeräin, 1":n paluulinja). Lohkokaavio suunnitellusta järjestelmästä, ei ISO 1219 -piirrosmerkein.
 > Yhtenäinen viiva = olemassa tai päätetty, katkoviiva = suunnitteilla tai vaihtoehto.
 > Lähteet ja tarkemmat arvot: [current-system.md](current-system.md),
 > [design/p2-variable-pump.md](design/p2-variable-pump.md), [design/aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md), [arkisto: p2-pump-options](design/archive/p2-pump-options.md), [design/oil-cooling.md](design/oil-cooling.md).
@@ -8,8 +8,8 @@
 >
 > **ISO 1219 -kaaviot** (2026-10-23, luonnos): arkki 1 ohjauspiiri, arkki 2 apupiiri ja keulapotkuri,
 > arkki 3 paluu, jäähdytys ja säiliö. Alla olevat Mermaid-lohkokaaviot säilyvät yleiskuvana.
-> Varavaihtoehdon C (PVH57, LS ja on/off-venttiilit) kaavio:
-> [design/aux-circuit-ls-onoff.md](design/aux-circuit-ls-onoff.md#iso-1219--kaavio-luonnos).
+> Arkistoidun varavaihtoehdon C (PVH57, LS ja on/off-venttiilit) kaavio:
+> [arkisto: aux-circuit-ls-onoff](design/archive/aux-circuit-ls-onoff.md#iso-1219--kaavio-luonnos).
 
 ## ISO 1219 -kaaviot (luonnos)
 
@@ -64,7 +64,7 @@ Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61
 | 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar; mittausvälikappale pumpun imulaipalla | [päätös 2026-10-23](../decisions.md) |
 | 2G2 | P2:n imupaineen kaksoispainemittari | −1…+1,5 bar, sama mittausaukko kuin 2B1, mittari mittaritaulussa 1/4":n letkulla | [päätös 2026-10-28](../decisions.md) |
 | 2B2 | P2:n lähtöpaineanturi (ehdotus) | 0–400 bar; valmiustilan ja vedon valvonta → ESP32 / Signal K | [pressure-monitoring](design/pressure-monitoring.md) |
-| 2V1 | Danfoss PVG 32, 5 lohkoa (käytetty) | P 350 bar (PVSI) / 300 bar (PVS), T enintään 25 bar staattinen; kokoonpanokoodi (PVG No.) 157N5531 [omistaja 2026-11-03], karat **⚠ selvitä**; peruslohkot 157B6200: kompensaattori, A/B G 1/2, ei PVLP-paikkoja eikä LS A/B -rajoittimia [datalehti PVG 32 s. 23, 2026-11-03]; kunto tuntematon, puhdistus ja koestus | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
+| 2V1 | Danfoss PVG 32, 5 lohkoa (käytetty) | P 350 bar (PVSI) / 300 bar (PVS), T enintään 25 bar staattinen; kokoonpanokoodi (PVG No.) 157N5531 [omistaja 2026-11-03], karat **⚠ selvitä**; peruslohkot 157B6200: kompensaattori, A/B G 1/2, ei PVLP-paikkoja eikä LS A/B -rajoittimia [datalehti PVG 32 s. 23, 2026-11-03]; kunto tuntematon, puhdistus ja koestus | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ostettu-venttiili-danfoss-pvg-32-5-lohkoa-torifi) |
 | 2V1.0 | PVP-pumppumoduuli 157B5111 | suljettu keskiasento, sisäinen pilottiöljy PVE:ille, ei PVPX-paikkaa (rungossa 511? [omistaja 2026-11-03] → 157B5111 [datalehti PVG 32 s. 20]); sisäinen paineenrajoitin noin 280 bar (varaventtiili; kilvessä PVP 28? bar [omistaja 2026-11-03]); P-portti G 3/4, T G 3/4, LS G 1/4, M G 1/4 | [datalehti PVG 32 s. 5, 20] |
 | 2G1 | Painemittari, analoginen | PVP:n M-portissa (G 1/4) | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-keulapotkuri-tarvitsee-pvh57n-ja-tämän-venttiilin-lisäksi) |
 | 2V1.1, Y1 | Lohko 1: keulapotkuri, PVEH 157B4024 | kara: avoin keskiasento, A ja B → T, 40 l/min (esim. 157B7102) **⚠ tarkista nykyinen kara**; ohjaus 0,25–0,75 × U | [datalehti PVG 32 s. 15–18, 56] |
@@ -212,15 +212,14 @@ flowchart LR
 | Ajo, ei käyttöä | jännitteettömiä tai keskellä | valmiustila ~20 bar, lähes nollatuotto | LS-linja tyhjenee säiliöön, kun kaikki karat ovat keskellä; vähän lämpöä (häviöteho **⚠ ei tiedossa**) |
 | Keulapotkuri käytössä | PVEH ohjaa lohkoa 1 joystickin mukaan | paine = kuorman paine + ~20 bar, enintään 250 bar | potkuri saa noin 85–88 % työntövoimasta täydellä ohjauksella; virtaus rajautuu karan avautumaan |
 | Vinssi tai pesuri (myöhemmin) | PVEO päälle/pois | kuten yllä | kuorman pito jarruventtiilillä ja vinssin jarrulla |
-| Hätäseis tai sähkökatko | syöttö katkeaa, jouset keskelle | valmiustila | potkuri pysähtyy ja pyörii vapaasti avoimen keskiasennon kautta; käsivivut toimivat, jos kannoissa on vivut **⚠** |
+| Hätäseis tai sähkökatko | syöttö katkeaa, jouset keskelle | valmiustila | potkuri pysähtyy ja pyörii vapaasti avoimen keskiasennon kautta; käsivivut toimivat, jos kannoissa on vivut **⚠** (karojen paluu keskelle todettu käsin 2026-11-03) |
 | PVEH-vika (signaali 15–85 %:n ulkopuolella, johto poikki) | PVEH pysäyttää karan keskelle | valmiustila | vikasignaali → Signal K -hälytys |
 
 ## Avoimia kohtia kaaviossa
 
 - ~~VMP:n fyysinen paikka~~: VMP jää pois, PVP:n paineenrajoitin toimii varaventtiilinä (2026-10-27)
-- PVG 32:n pumppumoduulin tyyppi (suljettu keskiasento) ja lohkon 1 kara tarkistetaan venttiilistä **⚠**
-- Venttiilipöydän (noin 22–23 kg) kiinnityspaikka konehuoneessa ja letkujen reititys **⚠**
-- ~~2/2-venttiilin paikka~~: omassa erillisessä rungossaan [omistaja 2026-10-23]
+- ~~PVG 32:n pumppumoduulin tyyppi~~: 157B5111, suljettu keskiasento (2026-11-03); lohkon 1 kara tarkistetaan (koodi 157N5531 tai koestus) **⚠**
+- Venttiilipöydän (noin 23–24 kg) kiinnityspaikka konehuoneessa ja letkujen reititys **⚠**
 - ~~Varapumpun P3 kytkentä~~: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
 - Imumittarit 1G2 ja 2G2 (päätös 2026-10-28) puuttuvat vielä SVG-kaavioista; mittaritaulun paikka **⚠**
 - Öljynjäähdytin ja merivesihaara ovat suunnitteilla. Iskuventtiileistä päätettiin 2026-10-23 F1-61-kokoonpanolle (ei lisätä); PVG 32:lla isku- ja imuventtiilit (2V2; peruslohkoissa ei PVLP-paikkoja, 2026-11-03) arvioi pätevä henkilö **⚠**

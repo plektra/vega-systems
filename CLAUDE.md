@@ -34,7 +34,7 @@ vessel/       yhteiset tiedot (alus, kone, vaihteisto, sähköjärjestelmän per
 hydraulics/   current-system.md, requirements.md, loads.yaml, design/, img/
 electrics/    current-system.md, … (sama rakenne kuin hydraulics)
 datasheets/   datalehtien hakemisto (linkit ja arvot; ei valmistajien PDF:iä)
-decisions.md  kaikkien järjestelmien päätösloki, uusin ensin
+decisions.md  kaikkien järjestelmien päätösloki, uusin ensin (korvatut: decisions-archive.md)
 messages.md   omistajien viestit toisilleen (ks. Viestit osallistujille)
 ```
 

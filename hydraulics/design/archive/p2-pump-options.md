@@ -175,7 +175,7 @@ Tyypillisiä merkkejä: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc ym., kokolu
 - **Plussat:** pienentää tilavuuttaan niin, että tuottaa vain käytetyn virtauksen. Mitään ei mene
   paineenrajoituksen yli, eikä virtauksensäätöventtiilissä synny merkittävää kuristushäviötä. VPR3 pitää kuitenkin
   korvata kaksitie-virtauksensäätöventtiilillä: sen B-portti on kytkettävä säiliöön, jolloin
-  pumppu ajaisi täydellä tuotolla, eikä B:tä saa tulpata ([p2-variable-pump](../p2-variable-pump.md#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
+  pumppu ajaisi täydellä tuotolla, eikä B:tä saa tulpata ([p2-variable-pump](p2-fxdc-ls-unloading.md#vpr3n-portit-ja-miksi-se-ei-kelpaa)).
 - **Miinukset:** uutena noin 1500–3000 €; käytettynä halvempi (Vickers PVH57 190 € tori.fi:ssä
   2026-10-25). Pelkällä painekompensoinnilla pumppu pysyisi ilman virtaustarvetta 250 barissa, mutta
   **LS-purulla (pieni 2/2-magneettiventtiili LS-linjassa) se lepää noin 20 barissa**, joten kytkintä
@@ -183,7 +183,7 @@ Tyypillisiä merkkejä: Parker F1/F2, Sunfab SC, Danfoss/Hydro Leduc ym., kokolu
   oman kannakkeen ja kytkinnavan (SAE C, kiila-akseli). Isompi ja painavampi (noin 36 kg).
 - **Sopivuus:** kohtalainen. Hyöty on pieni lämpö keulapotkurin käytössä korkeilla kierroksilla;
   järjestelmä on hieman vaativampi ymmärtää ja ylläpitää. Ankkurivinssin kanssa matalalla paineella
-  lämpöä voi tulla enemmän kuin F1-61:llä. Ks. [p2-variable-pump](../p2-variable-pump.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57).
+  lämpöä voi tulla enemmän kuin F1-61:llä. Ks. [p2-variable-pump](p2-fxdc-ls-unloading.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57).
 
 ### E. Kuormantunteva (LS) säätöpumppu ja proportionaaliset LS-venttiilit (esim. lohkoventtiili)
 
@@ -1016,7 +1016,7 @@ tilalle kaksitiekompensoitu virtauksensäätöventtiili, ks. [p2-variable-pump.m
 |---|---|---|---|---|---|---|
 | Pumpun hinta (suuntaa-antava) | € | € | €€ (käytettynä €) | €€€ (käytettynä €, PVH57 190 €) | €€€€ (venttiileineen) | €–€€ |
 | Muutokset piiriin | ei | kierrosohjaus | oma kannake, ohitusventtiili ja vuotolinja (päätetty) | kotelovuotolinja; VPR3 → kaksitieventtiili; LS-purku 2/2 | uusi venttiilipaketti | lisäventtiilit |
-| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~82–85 % (FXDC vie noin 8 bar, [p2-variable-pump](../p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)) | ~85–88 % (ei virtauksensäätöä potkurilinjassa, [aux-circuit-ls-onoff](../aux-circuit-ls-onoff.md)) | ~88 % |
+| Työntövoima 250 barin luokassa | ~88 % | ~88 % (jos kierrokset nostetaan) | ~88 %, **~100 % 280 barissa** | ~82–85 % (FXDC vie noin 8 bar, [p2-variable-pump](p2-fxdc-ls-unloading.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)) | ~85–88 % (ei virtauksensäätöä potkurilinjassa, [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md)) | ~88 % |
 | Hyötysuhde käytön aikana | ~80–85 % | ~80–85 % | ~90–95 % | ~88–92 % | paras | ~80–85 % |
 | Öljyn puhtausvaatimus | sietää | sietää | kohtalainen | tiukka | tiukka | sietää |
 | Proportionaalinen ohjaus | ei | ei | ei | ei | **kyllä** | ei |

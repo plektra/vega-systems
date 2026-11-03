@@ -10,7 +10,8 @@ description: Kirjaa Vegan järjestelmiä koskeva päätös tiedostoon decisions.
    perustelu tai laajuus on aidosti epäselvä.
 2. **Lisää rivi `decisions.md`-taulukon alkuun:** päivä (tänään), järjestelmä, päätös, perustelu ja
    linkki dokumenttiin, jossa on lisätiedot. Kirjoita suomeksi.
-3. **Jos päätös korvaa aiemman,** älä poista vanhaa riviä. Lisää uuteen "(korvaa VVVV-KK-PP)".
+3. **Jos päätös korvaa aiemman,** älä poista vanhaa riviä. Lisää uuteen "(korvaa VVVV-KK-PP)" ja siirrä
+   vanha rivi sellaisenaan tiedostoon `decisions-archive.md` (viimeiseen sarakkeeseen, mikä sen korvasi).
 4. **Päivitä asianomaiset dokumentit:** merkitse vaihtoehto valituksi selvityksissä, päivitä
    `current-system.md` (suunnitelmat ja avoimet kysymykset), ja päivitä vaatimukset tai
    `loads.yaml`, jos arvot muuttuvat.

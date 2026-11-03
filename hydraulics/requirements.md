@@ -10,7 +10,7 @@
 |---|---|
 | Vastuuhenkilö | TBD |
 | Versio | 0.1 |
-| Päivitetty | 2026-10-25 (tulevat kuormat, autopilotti) |
+| Päivitetty | 2026-11-03 (apupiiri päivitetty PVH57:lle ja PVG 32:lle; vanhentuneet BAV-713- ja CETOP-viittaukset korjattu); 2026-10-25 (tulevat kuormat, autopilotti) |
 
 ---
 
@@ -82,7 +82,7 @@ mitoitukseen vaikuttavat arvot.
 |---|---|---|
 | Koneen merkki ja malli | Caterpillar 3126B, säädetty 350 hv | [omistaja 2026-10-27] |
 | Koneiden määrä | 1 | |
-| Tyhjäkäynti / suurin | ~700 (**⚠ tarkista** mittaamalla) / ~2400 (matka ~1800) | rpm |
+| Tyhjäkäynti / suurin | ~700 (omistajan arvio, ei mitata, päätös 2026-10-23) / ~2400 (matka ~1800) | rpm |
 | Käytettävissä olevat voimanulosotot | Etupään hihnat → ohjauspumppu P1 (vain pienelle teholle; luisti yli ~9 kW:lla). Advance 300:n PTO → apupiirin pumppu P2. | |
 | Vaihteiston PTO: välitys / suurin momentti / kytkin | 1:1 / 0,044 kW/rpm ≈ 420 Nm / ei kytkintä; pumppu pyörii aina, PVH57 valmiustilassa ajon aikana (päätös 2026-10-27; aiemmin BPV-ohitusventtiili) | – / Nm / – |
 | Pyöriikö vaihteiston PTO vapaalla? | kyllä (ensiöakselilta) | |
@@ -114,12 +114,12 @@ Omistajien lista mahdollisesti tulevista laitteista [omistaja 2026-10-25]:
 | STR | Ohjaus, orbitroli | olemassa | kriittinen | Orbitroli HKUS 160/4 + sylinteri ZS60350100 |
 | STR | Autopilotti | mahdollinen | kriittinen | Ohjaa peräsintä **suuntaventtiileillä** samassa piirissä orbitrolin rinnalla (ei erillistä autopilottipumppua) [omistaja 2026-10-25]. Kytkentäperiaate ja vikatilat: [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin) |
 
-**Piiri 2, apupiiri** (P2 PTO:lta, CETOP 3 -pohjalaatta: 1 paikka käytössä, 3 vapaana)
+**Piiri 2, apupiiri** (P2 = Vickers PVH57 PTO:lta; venttiileinä Danfoss PVG 32, 5 lohkoa: 1 × PVEH, 4 × PVEO)
 
 | ID | Toiminto | Tila | Kriittisyys | Huomiot |
 |---|---|---|---|---|
-| BTH | Keulapotkuri | olemassa | korkea | Side-Power SH240-U11, 264 bar × 33,8 l/min; pohjalaatan paikka 1 (BAV-713) |
-| WLS | Ankkurivinssi | mahdollinen | korkea | Ei kytketty. Kahden ketjun ketjuveto ja käsikäyttöinen nauhajarru ankkuriketjupyörän akselilla; vapaa pudotus, räikkälukitus (omistajan muistin mukaan, **⚠ tarkista**) ja käsikampi; sähkömoottori korvataan hydraulimoottorilla tukilaakeriyksikön akselille, ketjuveto säilytetään [omistaja 2026-10-27]. Moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori **Danfoss OMP 160 (151-0031)** [omistaja 2026-10-27]. Kuorman pito vaaditaan (§7). Ks. [p2-variable-pump § Ankkurivinssi](design/p2-variable-pump.md#ankkurivinssi-ja-muut-kuormat-samassa-kytkennässä) |
+| BTH | Keulapotkuri | olemassa | korkea | Side-Power SH240-U11, 264 bar × 33,8 l/min; PVG 32:n lohko 1 (PVEH, portaaton) |
+| WLS | Ankkurivinssi | mahdollinen | korkea | Ei kytketty. Kahden ketjun ketjuveto ja käsikäyttöinen nauhajarru ankkuriketjupyörän akselilla; vapaa pudotus, räikkälukitus (omistajan muistin mukaan, **⚠ tarkista**) ja käsikampi; sähkömoottori korvataan hydraulimoottorilla tukilaakeriyksikön akselille, ketjuveto säilytetään [omistaja 2026-10-27]. Moottoriksi selvitetään ylimääräiseksi jäänyt hydraulimoottori **Danfoss OMP 160 (151-0031)** [omistaja 2026-10-27]. Kuorman pito vaaditaan (§7). PVG 32:n PVEO-lohko; paineraja moottorin kaksoisristivirtausventtiilillä tai peruslohkon vaihdolla, ks. [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-koodit-kertovat-2026-11-03) |
 | PWW | Painepesuri | mahdollinen | matala | Hydraulimoottorilla käytetty pesuri; laite ei vielä valittu. **Jatkuva kuorma**, joten öljyn lämpö ratkaisee (ks. [oil-cooling](design/oil-cooling.md)); käytetään satamassa tyhjäkäynnillä |
 | DAV | Nosturi / jollan daavitti | epätodennäköinen | keskitaso | Kuorman pito vaaditaan (kuormanpitoventtiilit, §7) |
 
@@ -159,13 +159,18 @@ keulapotkuri (noin 34 l/min, 250 bar).
 | Painepesuri | Letkun tai pesupistoolin vika | Pesuri pysähtyy, kun suuntaventtiili palaa keskelle | |
 | Keulapotkuri | Ylikuorma / ylikuumeneminen | TBD | Paineenrajoitus, lämpösuoja |
 | Kaikki | Matala öljynpinta | Hälytys, sitten ei-kriittisten kuormien suojapysäytys | |
-| Kaikki | Korkea öljyn lämpötila | Suositeltu käyttölämpötila 40–60 °C (Sleipner); varoitus ~65 °C, hälytys ~70 °C (HV 32 -öljy ohenee 70 °C:n yläpuolella alle Salamin ohjauspumpun 12 cSt:n minimin; Parker F1:n raja 75 °C) | Öljynjäähdytin, kierroslukitus |
+| Kaikki | Korkea öljyn lämpötila | Suositeltu käyttölämpötila 40–60 °C (Sleipner); varoitus ~65 °C, hälytys ~70 °C (HV 32 -öljy ohenee 70 °C:n yläpuolella alle Salamin ohjauspumpun 12 cSt:n minimin; Sleipnerin suositus enintään 75 °C) | Öljynjäähdytin |
 
 - **Hätäpysäytyksen periaate:** TBD
 - **Kuormien prioriteetti** (mitkä pudotetaan ensin, kun teho ei riitä): TBD
 - **Keulapotkurin iskuventtiilit:** Sleipner suosittelee vahvasti iskuventtiilejä 10–15 % valitun
-  maksimipaineen yläpuolelle (suojaa, jos potkurit jumittuvat) [ohje Sleipner 2746 35 2025]. **Ei lisätä**
-  (päätös 2026-10-23): BAV-713:n kelluva keskiasento ja VMP 250 bar rajaavat painepiikit.
+  maksimipaineen yläpuolelle (suojaa, jos potkurit jumittuvat) [ohje Sleipner 2746 35 2025].
+  **Avoinna (2026-11-03):** BAV-713:lle tehty päätös olla lisäämättä iskuventtiileitä (2026-10-23) on
+  arkistoitu. PVG 32:n peruslohkoissa ei ole PVLP-paikkoja; suositus [arvio] on kaksoisristivirtausventtiili
+  imuventtiileillä tai peruslohkon vaihto, pätevä henkilö arvioi, ks.
+  [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-koodit-kertovat-2026-11-03).
+- **Ankkurivinssin paineraja:** OMP 160:n suurin paine-ero on alle järjestelmän 250 barin
+  (**⚠ datalehdestä**), joten vinssille tarvitaan oma paineraja (sama viittaus).
 - **Paineenrajoitus / suurin järjestelmäpaine:** apupiiri 250 bar (päätetty; ~90 %:n keulapotkuriteho
   hyväksytty kustannussyistä). Ohjauspiiri TBD.
 - **Suojaus tahattomalta liikkeeltä:** TBD
@@ -177,7 +182,7 @@ keulapotkuri (noin 34 l/min, 250 bar).
 | Tila voimayksikölle / säiliölle | TBD (paikka, P×L×K) |
 | Säiliön sijainti suhteessa pumppuihin | Säiliön öljypinta vähintään 1 m P1:n ja P2:n imuaukkojen yläpuolella [omistaja 2026-10-26]. Ratkaiseva on öljypinnan korkeus, ei säiliöliitännän; imuletku laskee koko matkan säiliöltä pumpulle ilman ilmaa kerääviä yläkohtia. |
 | Painobudjetti | TBD kg |
-| Putki- ja letkuvedot | Keulapotkurin A/B-linjat: 1/2" letku, asennettu (CETOP → keula). Muut TBD (laipiolävistykset, palo-osastot). |
+| Putki- ja letkuvedot | Keulapotkurin A/B-linjat: 1/2" letku, asennettu (venttiileiltä keulaan; jatkossa PVG 32:n lohkosta 1). Muut TBD (laipiolävistykset, palo-osastot). |
 | Huollettavuus | TBD (suodattimet, tarkastuslasi, ilmauspisteet) |
 | Öljynjäähdytin | Bowman EC100 (varalla, malli vahvistettu [omistaja 2026-10-27]), merivesi koneen merivesipiiristä, yhteiseen paluulinjaan ohitusventtiilin kanssa; ks. [oil-cooling.md](design/oil-cooling.md) |
 
@@ -205,7 +210,7 @@ keulapotkuri (noin 34 l/min, 250 bar).
 | Öljyn lämpötila | Säiliö / paluu | 0–100 °C | `hydraulics.<system>.temperature` | Varoitus ~65 °C, hälytys ~70 °C. **Päätetty 2026-10-23** |
 | Öljynpinta | Säiliö | % | `hydraulics.<system>.level` | TBD |
 | Suodattimen paine-ero | Paluusuodatin | kytkin / bar | `hydraulics.<system>.filter.clogged` | TBD |
-| P2:n lähtöpaine (2B2, ehdotus, prioriteetti 1) | PVH57:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | Valmiustila noin 20 bar; hälytys, jos paine pysyy korkeana, kun mitään toimintoa ei käytetä (LS-purku jumissa). Ks. [pressure-monitoring.md](design/pressure-monitoring.md) |
+| P2:n lähtöpaine (2B2, ehdotus, prioriteetti 1) | PVH57:n painelähtö | 0–400 bar | `hydraulics.<system>.pump.pressure` | Valmiustila noin 20 bar; hälytys, jos paine pysyy korkeana, kun mitään toimintoa ei käytetä (kara jumissa tai LS-linja paineistettuna). Ks. [pressure-monitoring.md](design/pressure-monitoring.md) |
 | Imupaine | P2:n imuaukko | −1…+1 bar | `hydraulics.<system>.pump.inletPressure` | Varoitus alle 0 bar (PVH57 mobiili: 2400 rpm imupaineella 0 bar), hälytys alle ~−0,2 bar. **Päätetty 2026-10-23.** P1: ei kiinteää anturia. **Lisäksi kiinteät kaksoispainemittarit 1G2 (P1) ja 2G2 (P2), −1…+1,5 bar, mittaritaulussa (päätös 2026-10-28)** |
 | Peräsinkulma | Peräsinakseli | ± ° | `steering.rudderAngle` (vakio) | |
 
@@ -217,9 +222,13 @@ keulapotkuri (noin 34 l/min, 250 bar).
   merkki TBD. Ks. [§10.3](#103-autopilotin-liitäntä-ohjauspiiriin).
 - **Lukitukset:**
   - ~~Keulapotkuri käytettävissä vain alle noin 1000 rpm:ssä~~: ei tarvita. PVH57 tuottaa vain tarvittavan virtauksen (keulapotkurilla noin 35 l/min), joten korkeat kierrokset eivät tuota lämpöä, ja koneen 2400 rpm on pumpun rajoissa, ks. [current-system §0 kohta 6](current-system.md) ja [p2-variable-pump](design/p2-variable-pump.md#sopivuus-vegaan-laskelma) [päivitetty 2026-11-02].
-  - ~~BPV-lukitukset~~: BPV:tä ei tule, P2 on PVH57 (päätös 2026-10-27). PVG 32:lla (ykkösvaihtoehto 2026-10-27)
-    erillistä LS-purkua ei tarvita; varavaihtoehdoissa ohjausjärjestys riippuu kokoonpanosta, ks. [p2-variable-pump](design/p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)
-    ja [LS + on/off: kierroslukitus](design/aux-circuit-ls-onoff.md#tarvitaanko-kierroslukitus). **⚠ päätetään kokoonpanon kanssa**.
+  - ~~BPV-lukitukset~~: BPV:tä ei tule, P2 on PVH57 (päätös 2026-10-27). PVG 32:lla (päätös 2026-10-27)
+    erillistä LS-purkua eikä ohjausjärjestystä tarvita: kun karat ovat keskellä, pumppu on
+    valmiustilassa (päivitetty 2026-11-03). Arkistoitujen varavaihtoehtojen lukitukset:
+    [FXDC + LS-purku](design/archive/p2-fxdc-ls-unloading.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku),
+    [LS + on/off](design/archive/aux-circuit-ls-onoff.md#tarvitaanko-kierroslukitus).
+  - **Hätäseis:** rele katkaisee kaikkien PVE:iden 24 V:n syötön, jolloin karat palaavat jousilla
+    keskelle (todettu käsin 2026-11-03), ks. [bow-thruster-control](design/bow-thruster-control.md).
   - Muut TBD.
 
 ### 10.3 Autopilotin liitäntä ohjauspiiriin
@@ -304,4 +313,4 @@ osaa ohjata solenoidiventtiiliä, sekä pääkytkin ruoriin.
 | # | Kohde | Tyyppi | Vastuu | Tila |
 |---|---|---|---|---|
 | 1 | Peräsimen ja ohjaussylinterin mitat | kysymys | | avoin |
-| 2 | Koneen tyhjäkäynti: omistajan mukaan noin 700 rpm, vahvistetaan mittaamalla | mittaus | | osittain |
+| 2 | Koneen tyhjäkäynti: omistajan arvio noin 700 rpm, ei mitata (päätös 2026-10-23) | oletus | | ratkaistu |

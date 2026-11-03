@@ -1,43 +1,44 @@
-# Apupiiri alusta alkaen: säätötilavuuspumppu ja proportionaalinen LS-lohkoventtiili
+# Apupiiri: Vickers PVH57 ja Danfoss PVG 32
 
-> **Tila:** **PÄÄTETTY YKKÖSVAIHTOEHTO 2026-10-27:** apupiiri rakennetaan PVH57:llä ja käytetyllä Danfoss PVG 32:lla
-> ([Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)); **ostettu 2026-11-02, 200 € + rahti 39,90 €** [omistaja 2026-11-02]; **saapui 2026-11-03**, rungon merkinnät luettu ([Vastaanotto](#vastaanotto-2026-11-03-rungon-merkinnät)); **koodit tulkittu 2026-11-03 ohjeesta 520L0344: peruslohkoissa 157B6200 ei ole isku-/imuventtiilien paikkoja eikä LS A/B -rajoittimia** ([Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)). **Kaikkien viiden lohkon karat liikkuvat käsin vapaasti molempiin suuntiin ja palaavat jousella keskelle** [omistaja 2026-11-03]. Varavaihtoehdot: [LS + on/off](aux-circuit-ls-onoff.md)
-> ja [FXDC + LS-purku](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku). Ajatuskoe 2026-10-25, päivitetty 2026-10-26 ja 2026-10-27
-> (PVG 32 -ehdokas, tarjous, puhdistus, paino). Pumppu PVH57 päätetty 2026-10-27 (F1-61
-> [arkistoitu](archive/p2-pump-options.md)). PVH57:n käyttö olemassa olevien
-> venttiilien kanssa on selvitetty tiedostossa [p2-variable-pump](p2-variable-pump.md). Tässä
-> kysytään, miten apupiiri rakennettaisiin, jos olemassa olevia venttiileitä ei tarvitsisi käyttää
-> uudelleen [omistaja 2026-10-25, kysymys].
-> Sama ilman proportionaalista venttiilipöytää, on/off-venttiileillä: [aux-circuit-ls-onoff](aux-circuit-ls-onoff.md).
+> **Tila:** **päätetty 2026-10-27** (PVH57 + PVG 32); PVG 32 **ostettu 2026-11-02** (200 € + rahti
+> 39,90 €) ja **saapui 2026-11-03**. Rungon koodit tulkittu 2026-11-03 Danfossin ohjeesta 520L0344
+> ([Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)): pumppumoduuli 157B5111 sopii
+> sellaisenaan, mutta **peruslohkoissa 157B6200 ei ole isku-/imuventtiilien paikkoja eikä
+> LS A/B -rajoittimia**. **Kaikkien viiden lohkon karat liikkuvat käsin vapaasti ja palaavat
+> jousella keskelle** [omistaja 2026-11-03]. Päivitetty 2026-11-03: ennen ostoa kirjoitettu
+> vertailu, suositus ja hinta-arvio siirretty arkistoon
+> ([archive/aux-circuit-pvg32-pre-purchase](archive/aux-circuit-pvg32-pre-purchase.md));
+> arkistoidut varavaihtoehdot: [LS + on/off](archive/aux-circuit-ls-onoff.md) ja
+> [FXDC + LS-purku](archive/p2-fxdc-ls-unloading.md). Pumppu: [p2-variable-pump](p2-variable-pump.md).
 >
-> PVG 32:n arvot on 2026-10-26 tarkistettu Danfossin teknisestä ohjeesta 520L0344 (ks.
-> [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)); muut lohkoventtiilin arvot ovat yleistietoa (**⚠ tarkista**). Pätevän
-> henkilön pitää tarkistaa kytkentä, säätöarvot ja erityisesti ankkurivinssin kuorman pito ennen
-> rakentamista.
+> PVG 32:n arvot ovat Danfossin teknisestä ohjeesta 520L0344, jäljempänä [datalehti PVG 32].
+> Pätevän henkilön pitää tarkistaa kytkentä, säätöarvot ja erityisesti ankkurivinssin kuorman pito
+> ja keulapotkurin painepiikkisuojaus ennen rakentamista.
 
 ## Selkokielinen yhteenveto
 
-- Nykyinen rakenne (pumppu → virtauksensäätö VPR3 → vapaakiertoventtiili → CETOP-pohjalaatta →
-  on/off-venttiilit) on tehty **kiinteälle pumpulle**. Säätötilavuuspumpulle luonteva rakenne on
-  **kuormantunteva (LS) järjestelmä**, jossa pumppu ja venttiilit on tehty toimimaan yhdessä.
-- Venttiilien LS-linja kertoo pumpulle suurimman kuorman paineen. Pumppu pitää paineen noin 20 bar
-  sen yläpuolella ja tuottaa vain sen, mitä venttiilit päästävät läpi.
+- Apupiiri on **kuormantunteva (LS) järjestelmä**: PVG 32:n LS-linja kertoo pumpulle suurimman
+  kuorman paineen, ja PVH57 pitää paineen noin 20 bar sen yläpuolella ja tuottaa vain sen, mitä
+  lohkot päästävät läpi.
 - **Kun mitään ei käytetä, pumppu lepää itsestään** noin 20 barissa lähes ilman tuottoa. Ohitus-,
   purku- ja vapaakiertoventtiileitä ei tarvita.
-- Yksi proportionaalinen LS-lohkoventtiili (esim. Danfoss PVG 32) korvaa CETOP-pohjalaatan,
-  BAV-713:n, VPR3:n, OD15:n, VMP:n ja BPV:n. Keulapotkuri ja vinssi saavat **portaattoman** ohjauksen.
-- **Kannattaa,** jos vähintään kaksi toteutuu: portaaton keulapotkuri, ankkurivinssi, pitkäkestoinen
-  painepesu. Muuten nykyinen suunnitelma on halvempi ja riittää.
+- PVG 32 korvaa CETOP-pohjalaatan, BAV-713:n, VPR3:n, OD15:n ja VMP:n. Keulapotkuri saa
+  **portaattoman** ohjauksen PVEH-lohkosta, vinssi ja pesuri ohjataan on/off-lohkoilla (PVEO,
+  molempiin suuntiin, kun kara on kaksitoiminen).
+- **Vielä ratkaistava:** keulapotkurin isku- ja imuventtiilit sekä vinssin paineraja (lohkoissa ei
+  paikkoja, ks. [Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)), lohkojen karat
+  (koodi 157N5531), puhdistus ja koestus, käsivivut ([pvg32-lever](pvg32-lever.md)) ja ohjaus
+  ([bow-thruster-control](bow-thruster-control.md)).
 
 ## Kaavio
 
 ```
-                                    ┌───────── proportionaalinen LS-lohkoventtiili (esim. Danfoss PVG 32) ─────────┐
-PTO 1:1 ─ HRC150 ─ PVH57 (LS) ──P──►│ tulomoduuli: paineenrajoitin (varaventtiili), LS-rajoitin, P-mittari          │
-                    │   ▲           │ 1. keulapotkuri  A/B  – moottorikara (A,B→T keskellä), isku-/imuventtiilit    │──► keula (1/2", olemassa)
-                    │   └── LS ─────│ 2. ankkurivinssi A/B  – moottorikara, jarrun avaus; jarruventtiili moottorilla │──► vinssi
-                    │               │ 3. painepesuri   A    – yksisuuntainen, virtaus rajattu                        │──► pesuri
-                    │               │ 4. varapaikka (daavitti, myöhemmin)                                           │
+                                    ┌──────────────── Danfoss PVG 32, 5 lohkoa (157N5531) ─────────────────────────┐
+PTO 1:1 ─ HRC150 ─ PVH57 (LS) ──P──►│ pumppumoduuli 157B5111: paineenrajoitin ~280 bar (varaventtiili), M-mittari   │
+                    │   ▲           │ 1. keulapotkuri  A/B  – PVEH, moottorikara (A,B→T keskellä)                   │──► (isku/imu linjaan) ──► keula
+                    │   └── LS ─────│ 2. ankkurivinssi A/B  – PVEO, moottorikara; jarruventtiili ja paineraja moott. │──► vinssi
+                    │               │ 3. painepesuri   A    – PVEO, yksisuuntainen                                   │──► pesuri
+                    │               │ 4.–5. varalla (PVEO), A/B tulpattu                                            │
                     │               └──────────────────────────── T ────────────────────────────────────────────────┘
                     │                                             │
                     │                          jäähdytin EC100 + termostaattiohitus
@@ -61,21 +62,22 @@ PTO 1:1 ─ HRC150 ─ PVH57 (LS) ──P──►│ tulomoduuli: paineenrajoit
 
 ### 2. Venttiilit: yksi proportionaalinen LS-lohkoventtiili
 
-Esimerkkinä Danfoss PVG 32 sähköisellä ohjauksella (PVE). Se on yleinen työkoneissa, joten
-käytettyjä on saatavilla. Jokaisessa lohkossa on oma painekompensaattori, joten jokainen kuorma
-saa asetetun virtauksensa paineesta riippumatta, kunhan pumpun tuotto riittää.
+Danfoss PVG 32 sähköisellä ohjauksella (PVE), ostettu käytettynä. Jokaisessa peruslohkossa
+(157B6200) on oma painekompensaattori, joten jokainen kuorma saa karan mukaisen virtauksensa
+paineesta riippumatta, kunhan pumpun tuotto riittää [datalehti PVG 32 s. 23].
 
 | Lohko | Kuorma | Kara ja lisät |
 |---|---|---|
-| 1 | Keulapotkuri | Moottorikara: keskellä A ja B ovat yhteydessä säiliöön, joten potkuri pyörii vapaasti kuten BAV-713:lla ([päätös 2026-10-23](../../decisions.md)). Isku- ja imuventtiilit A/B-portteihin. Karan koko noin 40 l/min **⚠ tarkista karavalikoima**. Portaaton työntö ilman lisäosia; **⚠ tarkista, sopiiko SH240 portaattomaan ohjaukseen**. |
-| 2 | Ankkurivinssi | Moottorikara, portaaton nopeus. **Kuorman pito vinssin omalla jarrulla ja moottoriin asennetulla jarruventtiilillä, ei venttiilin karalla.** Moottori **Danfoss OMP 160 (151-0031)** [omistaja 2026-10-27], kierrostilavuus noin 155,7 cm³ **⚠ tarkista**. Teoreettinen momentti noin **25 Nm / 10 bar** (155,7 × Δp / 20π) ja nopeus noin **6,4 rpm / l/min** (esim. 20 l/min → noin 130 rpm) [laskelma, ei hyötysuhteita]. **OMP:n suurin paine-ero on selvästi alle järjestelmän 250 barin ⚠ tarkista datalehdestä**, joten vinssilohkoon tarvitaan oma paineraja (PVG:n porttiventtiilit tai LS-paineenrajoitus). ([loads.yaml](../loads.yaml)) |
+| 1 | Keulapotkuri | Moottorikara: keskellä A ja B ovat yhteydessä säiliöön, joten potkuri pyörii vapaasti kuten BAV-713:lla. **Isku- ja imuventtiilit eivät mahdu peruslohkoon** (157B6200): kaksoisristivirtausventtiili linjaan tai lohkon vaihto, ks. [Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03). Karan koko noin 40 l/min; nykyinen kara **⚠ tarkista** (157N5531). Portaaton työntö ilman lisäosia; **⚠ tarkista, sopiiko SH240 portaattomaan ohjaukseen**. |
+| 2 | Ankkurivinssi | Moottorikara, portaaton nopeus. **Kuorman pito vinssin omalla jarrulla ja moottoriin asennetulla jarruventtiilillä, ei venttiilin karalla.** Moottori **Danfoss OMP 160 (151-0031)** [omistaja 2026-10-27], kierrostilavuus noin 155,7 cm³ **⚠ tarkista**. Teoreettinen momentti noin **25 Nm / 10 bar** (155,7 × Δp / 20π) ja nopeus noin **6,4 rpm / l/min** (esim. 20 l/min → noin 130 rpm) [laskelma, ei hyötysuhteita]. **OMP:n suurin paine-ero on selvästi alle järjestelmän 250 barin ⚠ tarkista datalehdestä**, joten vinssille tarvitaan oma paineraja: suositus moottorin päälle kaksoisristivirtausventtiili, koska peruslohkossa ei ole LS A/B -rajoittimia (2026-11-03). ([loads.yaml](../loads.yaml)) |
 | 3 | Painepesuri | Yksisuuntainen, virtaus rajattu pesurimoottorin tarpeeseen (**⚠ ei tiedossa**, laitetta ei valittu) |
-| 4 | Varapaikka | Daavitti tai muu myöhemmin; lohkoja voi lisätä jälkikäteen |
+| 4–5 | Varalla | PVEO-lohkot; A/B tulpattu. Daavitti tai muu myöhemmin, tai lohkot poistetaan pinosta (PVAS 4 lohkolle 157B8004). Varalohkoa käytetään pumpun paineenrajoittimen säätöön ([p2-variable-pump](p2-variable-pump.md#säätö-käyttöönotossa-ilman-virtausmittaria)). |
 
-- **Käsivivut:** jokaisessa lohkossa on käsivipu, jolla vinssiä ja potkuria voi käyttää, vaikka
-  sähköohjaus pettäisi.
-- **Ohjaus:** ESP32 PDM ohjaa PVE-yksiköitä (jänniteohjaus tai CAN-malli **⚠ tarkista**).
-  Keulapotkurille joystick tai keinukytkin, vinssille kytkin. Tilat Signal K:hon.
+- **Käsivivut:** jokaisessa lohkossa on vivun kanta (PVM), mutta vivut puuttuvat; niillä vinssiä ja
+  potkuria voi käyttää, vaikka sähköohjaus pettäisi, ks. [pvg32-lever](pvg32-lever.md).
+- **Ohjaus:** PVEH 157B4024 on jänniteohjattu (signaali 0,25–0,75 × syöttöjännite), PVEO:t
+  157B4224 on/off-kytkimillä [datalehti PVG 32 s. 15–18]. Keulapotkurille joystick, vinssille
+  kytkin; ESP32 PDM valvoo, tilat Signal K:hon, ks. [bow-thruster-control](bow-thruster-control.md).
 - **Lukitus ohjelmassa:** pesuria voi käyttää vain, kun keulapotkuri ja vinssi ovat pois päältä.
   Tyhjäkäynnillä 38 l/min ei riitä kahdelle kuormalle yhtä aikaa, ja silloin suurimman paineen
   kuorma (keulapotkuri) jäisi vajaaksi [arvio].
@@ -85,7 +87,7 @@ saa asetetun virtauksensa paineesta riippumatta, kunhan pumpun tuotto riittää.
 - **Suodatus:** mäntäpumppu vaatii puhtausluokan 16/14/12 yli 210 barissa (17/15/13 140–210 barissa) [Eatonin PVH-luettelo s. 31,
   ks. [p2-variable-pump](p2-variable-pump.md#tekniset-tiedot)]. Nykyinen paluusuodatin
   OMTF112C10NA2 (10 µm, arviolta selluloosa nominaalinen) ei riitä sellaisenaan [omistaja 2026-10-26], ks.
-  [p2-variable-pump](p2-variable-pump.md#kumpi-on-monimutkaisempi-f1-61-vai-pvh57). Ehdotus:
+  [p2-variable-pump](p2-variable-pump.md#riittääkö-nykyinen-paperisuodatin). Ehdotus:
   lasikuituinen paluusuodatin 10 µm (ehdokas OMTF171F10NA1, ks.
   [paluusuodattimen vaihto](p2-variable-pump.md#paluusuodattimen-vaihto-omtf171f10na1))
   tukkeumaosoittimella, säiliöön 3 µm:n huohotin, öljyn lisäys suodattimen kautta [arvio].
@@ -110,44 +112,26 @@ Sama ajatus kuin [pressure-monitoring](pressure-monitoring.md):
 | Vika | Mitä tapahtuu |
 |---|---|
 | Sähkökatko | Jouset palauttavat PVE-karat keskelle. Keulapotkuri pysähtyy ja pyörii vapaasti, vinssin jarru pitää, pumppu jää lepoon. Käsivivut toimivat edelleen. |
-| Kara jumittuu auki | PVE:n vikavalvonta antaa vikasignaalin **⚠ tarkista malli**. Hätäpysäytys katkaisee PVE:iden virran. Varaventtiili rajaa paineen. |
+| Kara jumittuu auki | PVEH:n (lohko 1) vikavalvonta antaa vikasignaalin; PVEO:issa vikavalvontaa ei ole. Hätäpysäytys katkaisee PVE:iden virran, mutta mekaanisesti jumissa oleva kara palautetaan käsivivulla. Pumppumoduulin paineenrajoitin rajaa paineen. |
 | Pumpun säädin jumittuu täydelle tuotolle | Tulomoduulin paineenrajoitin rajaa paineen; tilanne vastaa kiinteää pumppua (lämpöä), lämpötila-anturi hälyttää. |
 | Kotelovuotolinja tukkeutuu | Akselitiiviste voi vaurioitua; siksi vuotolinja on oma letkunsa. |
 | Vinssi kuormassa ja hydrauliikka menetetään | Jarruventtiili ja vinssin jarru pitävät kuorman. **Pätevä henkilö tarkistaa ennen rakentamista.** |
 
-## Mikä muuttuu nykysuunnitelmaan verrattuna
+## Avoin mahdollisuus: paine yli 250 barin
 
-- **Poistuu:** CETOP-pohjalaatta, BAV-713, VPR3, OD15, VMP ja BPV-ohitusventtiili, sekä
-  PVH57-selvityksen 2/2-, 3/2- ja FXDC-ratkaisut, joita tarvitaan vanhojen osien kanssa.
-- **Säilyy:** säiliö, 50 mm:n imu, kytkin ja kannake, keulapotkurin 1/2":n letkut, jäähdytin.
-- **Mahdollisuus, joka vaatii omistajien päätöksen:** PVG 32:n P-portin paineluokka on 350 bar
-  (PVSI-päätylevyllä; PVS-päätylevyllä 300 bar) [datalehti PVG 32 s. 12], ja PVH-luettelon mukaan LS-järjestelmän paineenrajoitin voi olla 280 bar. Silloin
-  keulapotkuri pääsisi lähemmäs täyttä työntöä nykyisen noin 85–88 %:n sijaan. Edellyttää, että
-  pumpun säätöalue sallii sen (C-jousi 70–250 bar, **⚠ tarkista Danfossilta**) ja muuttaisi
-  250 barin päätöstä (2026-10-21).
+PVG 32:n P-portin paineluokka on 350 bar (PVSI-päätylevyllä; PVS-päätylevyllä 300 bar)
+[datalehti PVG 32 s. 12], ja PVH-luettelon mukaan LS-järjestelmän paineenrajoitin voi olla 280 bar.
+Silloin keulapotkuri pääsisi lähemmäs täyttä työntöä nykyisen noin 85–89 %:n sijaan. Edellyttää,
+että pumpun säätöalue sallii sen (C-jousi 70–250 bar, **⚠ tarkista Danfossilta**), että
+päätylevy on PVSI tai pumppumoduulin 280 bar jää varaventtiiliksi riittävän kauas, ja se muuttaisi
+250 barin päätöstä (2026-10-21). **Omistajien päätettävä**; ei suositella ennen ensimmäistä kautta.
 
-## Kustannukset
-
-- LS-lohkoventtiilin hinta uutena **⚠ ei tiedossa** (arviolta useita satoja euroja lohkolta [arvio]).
-  Käytetty 5-lohkoinen PVG 32 on myynnissä 400 €:lla; omistaja tarjosi 200 € (2026-10-27), ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi).
-- Ratkaisu jättää käyttämättä toimivia osia, jotka on jo hankittu.
-
-## Suositus
-
-**Päätös 2026-10-27:** PVH57 + PVG 32 valittiin ykkösvaihtoehdoksi ([decisions.md](../../decisions.md)).
-
-Teknisesti paras ratkaisu on **PVH57 ja proportionaalinen LS-lohkoventtiili**, jos tavoitteena on
-vähintään kaksi seuraavista: portaaton keulapotkuri, ankkurivinssi, pitkäkestoinen painepesu. Jos
-tavoitteena on edelleen on/off-keulapotkuri ja mahdollisesti vinssi, (arkistoitu) F1-61
-ohitusventtiilillä tai [PVH57:n pienin muutos](p2-variable-pump.md#suositus-kaksitiekompensoitu-virtauksensäätö-ja-ls-purku)
-on halvempi ja riittää.
-
-## Ehdokas: Danfoss PVG 32, 5 lohkoa (tori.fi)
+## Ostettu venttiili: Danfoss PVG 32, 5 lohkoa (tori.fi)
 
 > Lisätty 2026-10-26. Tiedot luettu ilmoituksen kuvista ja Danfossin teknisestä ohjeesta
 > *PVG 32 Proportional Valve Group, Technical Information 520L0344*
 > ([PDF](https://imdl.gatech.edu/jfrankel/docs/Sauer-Danfoss/520L0344_PVG32.pdf)), jäljempänä
-> [datalehti PVG 32]. **Päätetty ykkösvaihtoehdoksi 2026-10-27; ostettu 2026-11-02 (200 € + rahti 39,90 €); saapui 2026-11-03.**
+> [datalehti PVG 32]. **Päätetty 2026-10-27; ostettu 2026-11-02 (200 € + rahti 39,90 €); saapui 2026-11-03.**
 
 Ilmoitus: <https://www.tori.fi/recommerce/forsale/item/46493298>, **400 €, tee tarjous** (tarkistettu
 2026-10-26). Ilmoituksen teksti: *"Danfors pvg 32 venttiilipöytä. Tienhoitoautosta purettu. Karojen
@@ -374,30 +358,16 @@ portit ovat sisältä puhtaat, suoraan koestukseen ilman purkua; puretaan vain o
 suuntiin ja palaavat jousella keskelle [omistaja 2026-11-03]. Jos portit ovat sisältä puhtaat,
 venttiili menee koestukseen purkamatta, eikä tiivistesarjaa PVAS 157B8005 tarvita nyt.
 
-### Arvio
+### Hinta
 
-400 € on kohtuullinen, jos lohkot ja PVEH ovat kunnossa: yksi uusi PVEH maksaa enemmän kuin koko
-venttiili. Venttiili sopii vain PVH57-reittiin (suljetun keskiasennon moduulilla). Ennen tarjousta
-selvitetään kokoonpanokoodilla pumppumoduulin tyyppi ja karat sekä kysytään myyjältä, toimiko PVEH
-purettaessa.
-
-**Päivitys 2026-10-27:** Myyjä ei päässyt kokeilemaan venttiiliä (keulapumpun kardaani rikki), joten
-toimintakunnosta ja vuodoista ei ole tietoa. Sisäsäilytys pienentää ruostumisen ja karojen
-jumiutumisen riskiä, mutta auki olleiden porttien kautta sisään on voinut päästä likaa. Omistaja
-tarjosi **200 €** perustellen riskillä, että venttiili joutuu kierrätykseen [omistaja 2026-10-27].
-Tarjous on perusteltu: pelkkä PVEH-yksikkö on uutena noin 670 € + ALV, ja karat sekä PVE:t voi
-koestaa ja tarvittaessa vaihtaa yksitellen. Myyjän mukaan venttiili oli kytkettynä
-säätötilavuuspumppuun, joten pumppumoduulin vaihto ei todennäköisesti ole tarpeen
-[myyjä 2026-10-27].
-
-**Päivitys 2026-11-02:** Kaupat tehty: **200 € + rahti 39,90 €**, yhteensä 239,90 €. PVE-liittimet tulevat venttiilin mukana [omistaja 2026-11-02].
-Kun venttiili saapuu, tulpataan avoimet portit heti, luetaan pumppumoduulin ja peruslohkojen koodit
-sekä tarkistetaan karojen liike käsin ennen koestusta ([Puhdistus ja koestus](#puhdistus-ja-koestus)).
+Ostettu **200 € + rahti 39,90 €** (ilmoitushinta 400 €) [omistaja 2026-11-02]; PVE-liittimet tulivat
+mukana. Uusi PVEH yksinään maksaa noin 670 € + ALV. Ennen ostoa tehty arvio ja tarjouksen
+perustelut: [arkisto](archive/aux-circuit-pvg32-pre-purchase.md).
 
 ## Avoimet kysymykset
 
-- [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (sama kysymys kuin [p2-variable-pump](p2-variable-pump.md#avoimet-kysymykset))
-- [x] Käytetyn PVG 32:n hinta ja saatavuus: 5 lohkoa, 1 × PVEH ja 4 × PVEO, 400 € (tori.fi 2026-10-26), ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)
+- [ ] Omistajat: keulapotkurin ohjaimen valinta (portaaton PVEH-ohjaus joystickilla, ks. [bow-thruster-control](bow-thruster-control.md))
+- [x] Käytetyn PVG 32:n hinta ja saatavuus: 5 lohkoa, 1 × PVEH ja 4 × PVEO, 400 € (tori.fi 2026-10-26), ks. [Ostettu venttiili](#ostettu-venttiili-danfoss-pvg-32-5-lohkoa-torifi)
 - [x] PVG 32:n datalehti: paineluokka, karat, PVLP, PVE-signaali luettu ohjeesta 520L0344
 - [ ] Danfossin jälleenmyyjä: kokoonpanokoodi (PVG No.) **157N5531** [omistaja 2026-11-03] → karat (erityisesti lohko 1: avoin keskiasento?) ja kahden lukemattoman peruslohkon tyyppi. Pumppumoduuli ja peruslohkot selvisivät rungon leimoista 2026-11-03
 - [x] Myyjä: toimiko venttiili purettaessa → ei kokeiltu (kardaani rikki); säilytetty sisällä; hiekoittimessa nopeudensäätö (todennäköisesti PVEH-lohko) [myyjä 2026-10-27]
