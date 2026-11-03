@@ -64,11 +64,11 @@ Edellinen versio (F1-61 + BPV): [arkisto](design/archive/schematic-sheet-2-f1-61
 | 2B1 | Imupaineanturi | −1…+1 bar, varoitus alle 0 bar; mittausvälikappale pumpun imulaipalla | [päätös 2026-10-23](../decisions.md) |
 | 2G2 | P2:n imupaineen kaksoispainemittari | −1…+1,5 bar, sama mittausaukko kuin 2B1, mittari mittaritaulussa 1/4":n letkulla | [päätös 2026-10-28](../decisions.md) |
 | 2B2 | P2:n lähtöpaineanturi (ehdotus) | 0–400 bar; valmiustilan ja vedon valvonta → ESP32 / Signal K | [pressure-monitoring](design/pressure-monitoring.md) |
-| 2V1 | Danfoss PVG 32, 5 lohkoa (käytetty) | P 350 bar (PVSI) / 300 bar (PVS), T enintään 25 bar staattinen; kokoonpanokoodi 157N5531 [omistaja 2026-11-03] **⚠ selvitä sisältö**; peruslohkojen leima A 6200 (157B6200?) [omistaja 2026-11-03]; kunto tuntematon, puhdistus ja koestus | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
-| 2V1.0 | PVP-pumppumoduuli | suljettu keskiasento **⚠ tarkista koodista** (rungossa 511? → 157B511? [omistaja 2026-11-03]); sisäinen paineenrajoitin noin 280 bar (varaventtiili; kilvessä PVP 28? bar [omistaja 2026-11-03]); P-portti G 1/2–G 1, T G 3/4, LS G 1/4, M G 1/4 | [datalehti PVG 32 s. 5, 20–22] |
+| 2V1 | Danfoss PVG 32, 5 lohkoa (käytetty) | P 350 bar (PVSI) / 300 bar (PVS), T enintään 25 bar staattinen; kokoonpanokoodi (PVG No.) 157N5531 [omistaja 2026-11-03], karat **⚠ selvitä**; peruslohkot 157B6200: kompensaattori, A/B G 1/2, ei PVLP-paikkoja eikä LS A/B -rajoittimia [datalehti PVG 32 s. 23, 2026-11-03]; kunto tuntematon, puhdistus ja koestus | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#ehdokas-danfoss-pvg-32-5-lohkoa-torifi) |
+| 2V1.0 | PVP-pumppumoduuli 157B5111 | suljettu keskiasento, sisäinen pilottiöljy PVE:ille, ei PVPX-paikkaa (rungossa 511? [omistaja 2026-11-03] → 157B5111 [datalehti PVG 32 s. 20]); sisäinen paineenrajoitin noin 280 bar (varaventtiili; kilvessä PVP 28? bar [omistaja 2026-11-03]); P-portti G 3/4, T G 3/4, LS G 1/4, M G 1/4 | [datalehti PVG 32 s. 5, 20] |
 | 2G1 | Painemittari, analoginen | PVP:n M-portissa (G 1/4) | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md#mitä-keulapotkuri-tarvitsee-pvh57n-ja-tämän-venttiilin-lisäksi) |
 | 2V1.1, Y1 | Lohko 1: keulapotkuri, PVEH 157B4024 | kara: avoin keskiasento, A ja B → T, 40 l/min (esim. 157B7102) **⚠ tarkista nykyinen kara**; ohjaus 0,25–0,75 × U | [datalehti PVG 32 s. 15–18, 56] |
-| 2V2 | PVLP-isku- ja imuventtiilit lohkon 1 A/B-portteihin (valinnainen) | esim. 157B2280 (280 bar); tarve ja asetus pätevä henkilö **⚠** | [datalehti PVG 32 s. 27] |
+| 2V2 | Keulapotkurin isku- ja imuventtiilit | peruslohkossa 157B6200 ei PVLP-paikkoja → kaksoisristivirtausventtiili imuventtiileillä A/B-linjoihin (suositus [arvio]) tai peruslohko 157B6230 + PVLP (esim. 157B2280); tarve ja asetus pätevä henkilö **⚠** | [datalehti PVG 32 s. 23, 27] |
 | 2V1.2, Y2 | Lohko 2: ankkurivinssi, PVEO 157B4224 | myöhemmin; jarruventtiili vinssillä, kara **⚠** | [aux-circuit-ls-clean-sheet](design/aux-circuit-ls-clean-sheet.md) |
 | 2V1.3, Y3 | Lohko 3: painepesuri, PVEO | myöhemmin; A-portti, virtaus rajattu karalla **⚠** | sama |
 | 2V1.4–2V1.5, Y4–Y5 | Lohkot 4–5, PVEO | varalla, A/B tulpattu; voidaan poistaa pinosta (PVAS 4 lohkolle 157B8004) | [datalehti PVG 32 s. 28–29] |
@@ -223,4 +223,4 @@ flowchart LR
 - ~~2/2-venttiilin paikka~~: omassa erillisessä rungossaan [omistaja 2026-10-23]
 - ~~Varapumpun P3 kytkentä~~: P1 ja P3 yhdistyvät T-haarassa kumpikin oman vastaventtiilin kautta RPF3:lle [omistaja 2026-10-23]
 - Imumittarit 1G2 ja 2G2 (päätös 2026-10-28) puuttuvat vielä SVG-kaavioista; mittaritaulun paikka **⚠**
-- Öljynjäähdytin ja merivesihaara ovat suunnitteilla. Iskuventtiileistä päätettiin 2026-10-23 F1-61-kokoonpanolle (ei lisätä); PVG 32:lla PVLP-isku- ja imuventtiilit (2V2) arvioi pätevä henkilö **⚠**
+- Öljynjäähdytin ja merivesihaara ovat suunnitteilla. Iskuventtiileistä päätettiin 2026-10-23 F1-61-kokoonpanolle (ei lisätä); PVG 32:lla isku- ja imuventtiilit (2V2; peruslohkoissa ei PVLP-paikkoja, 2026-11-03) arvioi pätevä henkilö **⚠**

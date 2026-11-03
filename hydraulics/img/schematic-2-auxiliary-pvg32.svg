@@ -234,7 +234,7 @@
 <rect x="513" y="292" width="24" height="16" stroke-width="1" stroke-dasharray="3 2"/>
 <circle cx="495" cy="300" r="2.5" fill="#000" stroke="none"/>
 <circle cx="555" cy="300" r="2.5" fill="#000" stroke="none"/>
-<text x="489" y="297" text-anchor="end" font-weight="bold" font-size="10" stroke="none" fill="#000">2V2 PVLP isku/imu</text>
+<text x="489" y="297" text-anchor="end" font-weight="bold" font-size="10" stroke="none" fill="#000">2V2 isku/imu (linjaan)</text>
 <text x="489" y="310" text-anchor="end" font-size="10" stroke="none" fill="#000">valinnainen, pätevä henk. ⚠</text>
 <path d="M657 400 V360 H635 V170 H643" stroke="#888"/>
 <path d="M673 400 V360 H695 V170 H687" stroke="#888"/>
