@@ -125,7 +125,7 @@ jarrunpuhdistin, sammutin. Hinnat **⚠ ei tiedossa**, pieniä [arvio].
 | 4.10 | Koestus hydrauliikkakorjaamon koepenkissä | – | vaihtoehtona oma koestus | ❓ | **⚠ ei tiedossa** | [Puhdistus ja koestus](design/aux-circuit-ls-clean-sheet.md#puhdistus-ja-koestus) |
 | 4.16 | Käsivivut PVM-kantoihin (kokeiluun M8-kierretanko tai oma 3D-tulostettu vipu; käyttöön metallinen) | 1–5 | kierre todennäköisesti M8 **⚠ mittaa** | 🛒 oma valmistus | pieni; valmis Danfoss-vipu **⚠ ei tiedossa** | [pvg32-lever](design/pvg32-lever.md) |
 
-**Ehdolliset PVG 32:n osat.** Tarve selviää kokoonpanokoodista 157N553(8/B), rungosta 2026-11-03 luetuista koodeista (peruslohkot A 6200 → 157B6200?, pumppumoduuli 511? → 157B511?, ks. [Vastaanotto](design/aux-circuit-ls-clean-sheet.md#vastaanotto-2026-11-03-rungon-merkinnät)) ja kunnon tarkistuksesta:
+**Ehdolliset PVG 32:n osat.** Tarve selviää kokoonpanokoodista 157N5531, rungosta 2026-11-03 luetuista koodeista (peruslohkot A 6200 → 157B6200?, pumppumoduuli 511? → 157B511?, ks. [Vastaanotto](design/aux-circuit-ls-clean-sheet.md#vastaanotto-2026-11-03-rungon-merkinnät)) ja kunnon tarkistuksesta:
 
 | # | Osa | Milloin tarvitaan | Hinta | Lähde |
 |---|---|---|---|---|
@@ -212,7 +212,7 @@ osa niistä tarvitaan varavaihtoehdoissa, joten **ne kannattaa myydä vasta, kun
 
 ## Ennen tilaamista selvitettävät
 
-- [ ] PVG 32:n kokoonpanokoodi 157N553(8/B) ja rungon koodit 157B6200? (peruslohkot) ja 157B511? (pumppumoduuli): kara, pumppumoduuli, PVLP-paikat ja P-portin koko (rivit 3.3, 4.11–4.14)
+- [ ] PVG 32:n kokoonpanokoodi 157N5531 ja rungon koodit 157B6200? (peruslohkot) ja 157B511? (pumppumoduuli): kara, pumppumoduuli, PVLP-paikat ja P-portin koko (rivit 3.3, 4.11–4.14)
 - [x] PVH57:n laippa- ja porttikoot: imu 2", lähtö 1" (SAE code 61), vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]; tarkista pumpusta ennen tilausta
 - [ ] Veneellä: 50 mm:n palloventtiili ja sen kierre (2.1–2.4), 50 mm:n imuletku ja sen pituus (2.5), nykyisen 3/4":n painelinjan kunto (3.2), 2G1:n mittausalue (4.5), säiliön vapaat aukot vuotolinjoille (3.7)
 - [ ] Veneellä: onko säiliö maalattu sisältä, ja onko käytettävä jarrunpuhdistin klooriton ([puhdistus](#säiliön-puhdistus-hitsauksen-yhteydessä))

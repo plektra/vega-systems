@@ -161,7 +161,7 @@ Kuvista luetut arvot on merkitty *kuvasta*; merkinnät ovat likaisia ja osin ep�
 |---|---|---|
 | Tyyppi | *Danfoss Proportional Valve Type PVG 32* (valukilpi) | kuvasta |
 | Lohkot | **5 työlohkoa**, pumppumoduuli ja päätylevy | kuvasta |
-| Kokoonpanokoodi | **157N553(8 tai B)** rungossa [omistaja 2026-10-26; kuvankäsittelyllä vahvistettu, N näyttää aidolta]. Valukilven No.-kentän lähikuvassa 2026-11-03 alku **157N55** näkyy selvästi, kaksi viimeistä merkkiä ovat yhä epäselviä [omistaja 2026-11-03, kuvasta]. Todennäköisesti koko venttiilin kokoonpanokoodi (Danfossilla on 157N-alkuisia kokonaisia suuntaventtiileitä, esim. 157N-5754, [parttarget](https://www.parttarget.com/Danfoss-Fluid-Power-Inc_nsn-parts_D-961428_7WXP2126-010.html)) **⚠ tarkista**. Varavaihtoehto: luettu väärin, ja kyse on pumppumoduulista 157B5938 (PVPV, suljettu keskiasento, G 1", 350 bar) | kuvasta, [datalehti PVG 32] s. 22 |
+| Kokoonpanokoodi | **157N5531** pumppumoduulin valukilven No.-kentässä [omistaja 2026-11-03, luettu venttiilistä]. Aiempi lukema ilmoituksen kuvista oli 157N553(8 tai B) [omistaja 2026-10-26]. Todennäköisesti koko venttiilin kokoonpanokoodi (Danfossilla on 157N-alkuisia kokonaisia suuntaventtiileitä, esim. 157N-5754, [parttarget](https://www.parttarget.com/Danfoss-Fluid-Power-Inc_nsn-parts_D-961428_7WXP2126-010.html)) **⚠ tarkista**; koodista selviävät lohkot, karat ja pumppumoduuli Danfossilta tai jälleenmyyjältä | [omistaja 2026-11-03] |
 | Ohjausyksiköt (PVE) | Lohko 1: **157B4024 = PVEH 24 V** (proportionaalinen, vikavalvonta); **neljä muuta: 157B4224 = PVEO 24 V** (on/off), vahvistettu lähikuvista 2026-11-03 [omistaja 2026-11-03]. Kaikki vanhaa sarjaa 0. | kuvasta, [Kramp: PVE cross reference](https://documents.kramp.com/PVE_cross_reference_EN.pdf) |
 | Käsiohjaus | Toisella puolella käsivipujen kannat ilman vipuja **⚠ tarkista** | kuvasta |
 | Karat | **⚠ ei tiedossa**; selviää kokoonpanokoodista | – |
@@ -180,7 +180,7 @@ osa leimoista on kuluneita, joten epäselvät merkit on merkitty `?`.
 
 | Kohta | Merkintä | Tulkinta | Kuva |
 |---|---|---|---|
-| Valukilpi | *PROPORTIONAL VALVE TYPE PVG 32*; No. **157N55??**, Date **161**, PVP **28? BAR** | kokoonpanokoodi (ks. yllä); pumppumoduulin paineenrajoitin todennäköisesti **280 bar** **⚠ tarkista koestuksessa** | [kuva](../img/pvg32-nameplate.jpg) |
+| Valukilpi | *PROPORTIONAL VALVE TYPE PVG 32*; No. **157N5531**, Date **161** (valussa tekstit *No.* ja *Date*, leimat niiden vieressä), PVP **28? BAR** | No. on kokoonpanokoodi (ks. yllä), Date on valmistusajan koodi [omistaja 2026-11-03]; pumppumoduulin paineenrajoitin todennäköisesti **280 bar** **⚠ tarkista koestuksessa** | [kuva](../img/pvg32-nameplate.jpg) |
 | PVEH | **24 VDC, 157B4024, 091**; Hirschmann GDM -liitin (kannessa *14 A GDM*) | PVEH 24 V, kuten aiemmin luettu | [kuva](../img/pvg32-pveh-157b4024.jpg), [liitin](../img/pvg32-pveh-connector.jpg) |
 | PVEO × 4 | **24 VDC, 157B4224**, alarivit **101, 091, 111, 111**; Hirschmann GDM -liittimet (kannessa *12 B GDM*) | kaikki neljä PVEO 24 V. **Yhden PVEO:n (101) pyöreä kupu kotelon keskellä on rikki** (muissa ehjä): kotelon tiiviys **⚠ tarkista**, ettei vettä tai likaa pääse sisään | [kuva](../img/pvg32-pveo-row.jpg) |
 | PVE-liittimet | jokaisessa viidessä PVE:ssä oma liitin johtoineen | liittimiä ei tarvitse hankkia (procurement 4.8) | samat |
@@ -189,9 +189,9 @@ osa leimoista on kuluneita, joten epäselvät merkit on merkitty `?`.
 | Pääty | valumerkinnät **P** ja **LS**; LS-kohdan vieressä kierreliitin | **⚠ tarkista**, onko kyseessä pumppumoduulin vai päätylevyn kylki | [kuva](../img/pvg32-end-p-ls.jpg) |
 
 - **"161" toistuu** kilvessä, pumppumoduulissa ja peruslohkoissa, ja PVE:issä on vastaavat
-  kolminumeroiset merkinnät (091–111). Ne ovat todennäköisesti valmistusajan koodeja, jolloin
+  kolminumeroiset merkinnät (091–111). Kilvessä 161 on *Date*-kentässä [omistaja 2026-11-03], joten ne ovat valmistusajan koodeja. Siitä päätellen
   PVE:t on tehty ennen kokoonpanoa ja venttiili on koottu kerralla eikä lohkoja ole vaihdettu
-  myöhemmin [arvio; koodin muotoa ei ole tarkistettu Danfossilta].
+  myöhemmin [arvio; päivämäärämuotoa ei ole tarkistettu Danfossilta].
 - **Kilven paineasetus sopii suunnitelmaan:** PVP-moduulin noin 280 bar on noin 30 bar PVH57:n
   250 barin yläpuolella, joten asetusta ei todennäköisesti tarvitse muuttaa [laskelma; kilven luku
   osin kulunut].
@@ -352,7 +352,7 @@ sekä tarkistetaan karojen liike käsin ennen koestusta ([Puhdistus ja koestus](
 - [ ] Omistajat: onko keulapotkurin portaaton ohjaus tavoite (sama kysymys kuin [p2-variable-pump](p2-variable-pump.md#avoimet-kysymykset))
 - [x] Käytetyn PVG 32:n hinta ja saatavuus: 5 lohkoa, 1 × PVEH ja 4 × PVEO, 400 € (tori.fi 2026-10-26), ks. [Ehdokas](#ehdokas-danfoss-pvg-32-5-lohkoa-torifi)
 - [x] PVG 32:n datalehti: paineluokka, karat, PVLP, PVE-signaali luettu ohjeesta 520L0344
-- [ ] Danfossin jälleenmyyjä: kokoonpanokoodi 157N553(8/B) → pumppumoduulin tyyppi (todennäköisesti suljettu keskiasento, koska autossa oli säätötilavuuspumppu [myyjä 2026-10-27]; varmistetaan moduulin koodista), peruslohkot (PVLP-paikat, LS A/B -vaihtoventtiili), karat
+- [ ] Danfossin jälleenmyyjä: kokoonpanokoodi **157N5531** [omistaja 2026-11-03] → pumppumoduulin tyyppi (todennäköisesti suljettu keskiasento, koska autossa oli säätötilavuuspumppu [myyjä 2026-10-27]; varmistetaan moduulin koodista), peruslohkot (PVLP-paikat, LS A/B -vaihtoventtiili), karat
 - [x] Myyjä: toimiko venttiili purettaessa → ei kokeiltu (kardaani rikki); säilytetty sisällä; hiekoittimessa nopeudensäätö (todennäköisesti PVEH-lohko) [myyjä 2026-10-27]
 - [x] Myyjä: hyväksyykö 200 €:n tarjouksen → kaupat tehty 200 € + rahti 39,90 € [omistaja 2026-11-02]
 - [x] Myyjä: tulivatko PVE-liittimet mukana → kyllä [omistaja 2026-11-02]; kunto ja määrä tarkistetaan vastaanotossa
