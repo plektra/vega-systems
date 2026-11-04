@@ -121,6 +121,22 @@
    - **Käytä pitkissä keulapotkurilinjoissa letkua, älä putkea.** Muualla käytetyn 15×2-tarkkuusputken
      sisähalkaisija on 11 mm. Tällä virtauksella nopeus olisi noin 5,9 m/s ja häviö noin kaksinkertainen
      letkuun verrattuna.
+   - **Vertailu: 3/4":n letkut keulapotkurille** (lisätty 2026-11-04) [laskelma: HVLP 32, 2 × 8,5 m,
+     33 l/min, sisähalkaisijat 12,7 ja 19 mm, vain suora letku; työntövoima noin 4 % / 10 bar]:
+
+     | Öljy | 1/2" (nykyinen) | 3/4" | Säästö | Työntövoimaa lisää noin |
+     |---|---|---|---|---|
+     | 5 °C (172 cSt) | ~22 bar | ~4 bar | ~18 bar | ~7 %-yks. |
+     | 20 °C (76 cSt) | ~10 bar | ~2 bar | ~8 bar | ~3 %-yks. |
+     | 40 °C (32 cSt) | ~4 bar | ~1 bar | ~3 bar | ~1–2 %-yks. |
+     | 60 °C (16,5 cSt) | ~5 bar | ~0,5 bar | ~4 bar | ~2 %-yks. |
+
+     Lämpimänä työntövoima nousisi arviolta noin 85–89 %:sta noin 87–91 %:iin, kylmänä selvästi
+     enemmän. Haitat: kaksi uutta 8,5 m:n letkua ja reititys, suurempi taivutussäde (SAE 100R2
+     3/4" tyypillisesti noin 240 mm vs. 1/2" noin 180 mm [yleistieto]); hinta **⚠ ei tiedossa**.
+     U11:n portit ovat 3/4" BSP; PVG 32:n G 1/2 -portteihin ja VAU:hun supistukset.
+     **Suositus [arvio]:** ei vaihdeta pelkän työntövoiman takia, jos nykyiset letkut ovat hyvässä
+     kunnossa; kun letkut uusitaan iän tai reitityksen takia, valitaan 3/4".
 9. **Keulapotkurin odotettu työntövoima lämpimällä öljyllä on noin 85–89 %, hieman alle 90 %:n
    tavoitteen.** PVH57:n säädin rajaa pumpun paineen 250 bariin. Venttiilin, letkujen ja
    paluulinjan häviöt vähennetään siitä, joten moottori saa vähemmän. Potkurin momentti kasvaa
