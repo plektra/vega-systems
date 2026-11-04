@@ -250,7 +250,7 @@ viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 
 | Putkitus | Pitkät vedot 15×2-tarkkuusteräsputkella, muuten letkut | [blogi 2017-04-01] |
 | Öljynjäähdytin | Ei kummassakaan piirissä. **Varalla Bowman EC100** (valumerkintä EC10, koodi 3249-2, 07/88, runko 185 mm; pronssiset päätykannet, ex-Masson-vaihteisto, putket kunnossa), suunniteltu yhteiseen paluulinjaan, ks. [oil-cooling.md](design/oil-cooling.md) | [omistaja 2026-10-22], [omistaja 2026-10-27] |
 | Päivätankki (polttoaine) | 150 l, hydraulisäiliön alla | [blogi 2017-04-19] |
-| Päätoimittaja | SixTek (hydrauliikkapumppu.fi) | [blogi 2017-04-01] |
+| Päätoimittaja | SixTek (hydrauliikkapumppu.fi) 2017; **yritystä ei enää ole** [omistaja 2026-11-04] | [blogi 2017-04-01], [omistaja 2026-11-04] |
 
 ### 3.6 Valmistajan vaatimukset keulapotkurin hydrauliikalle [ohje Sleipner 2746 35 2025]
 
