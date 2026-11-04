@@ -137,6 +137,25 @@
      U11:n portit ovat 3/4" BSP; PVG 32:n G 1/2 -portteihin ja VAU:hun supistukset.
      **Suositus [arvio]:** ei vaihdeta pelkän työntövoiman takia, jos nykyiset letkut ovat hyvässä
      kunnossa; kun letkut uusitaan iän tai reitityksen takia, valitaan 3/4".
+   - **Putki vai letku** (lisätty 2026-11-04) [laskelma, samat oletukset; vain suora osuus]: painehäviön
+     ratkaisee sisähalkaisija, ei materiaali (virtaus on lähes koko lämpötila-alueella laminaarinen).
+
+     | Linja (sisähalk.) | 5 °C | 20 °C | 40 °C | Nopeus |
+     |---|---|---|---|---|
+     | Putki 15×2 (11 mm) | ~39 bar | ~17 bar | ~7 bar | 5,8 m/s |
+     | Letku 1/2" (12,7 mm), nykyinen | ~22 bar | ~10 bar | ~4 bar | 4,3 m/s |
+     | Putki 18×2 (14 mm) | ~15 bar | ~7 bar | ~3 bar | 3,6 m/s |
+     | Putki 20×2 (16 mm) | ~9 bar | ~4 bar | ~1,6 bar | 2,7 m/s |
+     | Putki 22×2 (18 mm) | ~5 bar | ~2,4 bar | ~1,0 bar | 2,2 m/s |
+     | Letku 3/4" (19 mm) | ~4 bar | ~2 bar | ~0,8 bar | 1,9 m/s |
+
+     Käytännön erot [yleistieto]: putki ei vanhene, mutta sinkitty tarkkuusteräs ruostuu kosteassa
+     pilssissä (haponkestävä 316 kestää, kalliimpi); putki tarvitsee kiinnikkeet noin metrin välein ja
+     lyhyet letkut molempiin päihin tärinän ja rungon liikkeen takia; liittimet leikkausrenkailla
+     (ISO 8434-1); putken painearvo seinämän ja materiaalin mukaan vähintään VAU:n asetus (noin 300 bar)
+     **⚠ tarkista**. Letku on nopea asentaa, mutta vanhenee (vaihto tyypillisesti noin 6–10 vuoden
+     välein). **Suositus [arvio]:** jos linjat tehdään uusiksi, 22×2-putki pitkille vedoille ja lyhyet
+     letkut päihin (häviö sama kuin 3/4":n letkulla); hankalalla reitillä 3/4":n letku.
 9. **Keulapotkurin odotettu työntövoima lämpimällä öljyllä on noin 85–89 %, hieman alle 90 %:n
    tavoitteen.** PVH57:n säädin rajaa pumpun paineen 250 bariin. Venttiilin, letkujen ja
    paluulinjan häviöt vähennetään siitä, joten moottori saa vähemmän. Potkurin momentti kasvaa
