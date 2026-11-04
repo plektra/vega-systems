@@ -210,7 +210,7 @@ paikat):
      halvin ja sama ratkaisu käy vinssille. Hinta **⚠ ei tiedossa**. Venttiilin runko pitää olla
      **terästä ja vähintään noin 300–350 barin** luokkaa ja virran noin 35–40 l/min: Rexroth VSDI-30
      **ei kelpaa** (alumiinirunko, käyttöpaine enintään 210 bar, enintään 30 l/min, vaikka jousi
-     35 antaa 100–350 bar) [datalehti Rexroth RE 18308-15]. Ehdokkaita (2026-11-04, **⚠ tarkista**
+     35 antaa 100–350 bar) [datalehti Rexroth RE 18308-15]. **Paras ehdokas (2026-11-04): Marchesini VAU 1/2" (V0450)**: G 1/2, enintään 70 l/min, enintään 350 bar, **runko sinkitty teräs**, jousi 80–300 bar (50 bar/kierros) tai 50–250 bar; kaksi ristiinkytkettyä paineenrajoitinta, joiden purkuöljy menee toiseen linjaan; asennus lähelle moottoria [datalehti Marchesini VAU 5.1]. Marchesinia on Vegalla ennestään (VMP, VPR3, RPF3). Imuventtiilitön perusmalli; myös imuventtiilillinen VAUAC on olemassa (jousivaihtoehdot **⚠ tarkista**). Muita ehdokkaita (2026-11-04, **⚠ tarkista**
      datalehdestä ennen tilausta): Oudshoorn DCROMP/R40 (1/2" BSPP, 40 l/min, teräsrunko S40
      400 bar, jousi enintään 350 bar; laipoitettavissa myös OMP/OMR-moottoriin, sopisi siis vinssin
      OMP 160:lle) ja VBDC teräsrungolla (350 bar, 35 l/min) [hakutulokset].
