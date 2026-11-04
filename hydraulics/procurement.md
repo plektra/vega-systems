@@ -200,7 +200,7 @@ siirretään P2:n vanhaan 32 mm:n letkuun ja ulosottoon.
 |---|---|---|---|
 | 9.1 | Ankkurivinssin moottori Danfoss OMP 160 (151-0031) | olemassa [omistaja 2026-10-27] | ✅ |
 | 9.2 | Vinssin jarruventtiili | kuorman pito | ⏳ |
-| 9.3 | Vinssilohkon paineraja: moottorin päälle kaksoisristivirtausventtiili (suositus [arvio]) tai peruslohkon vaihto malliin 157B6203/6233 (LS A/B -rajoittimet) | peruslohko 157B6200 ilman rajoittimia (2026-11-03); asetus OMP 160:n mukaan **⚠** | ⏳ |
+| 9.3 | Vinssilohkon paineraja: moottorin päälle laipoitettava kaksoisristivirtausventtiili, esim. [Marchesini VAU 1/2" DE OMP/OMR-moottoreille, 30–180 bar (Flowfit)](https://www.flowfitonline.com/products/dual-cross-line-relief-valve-30-180-bar-for-danfoss-omp-omr-motors-vau-1-2-de-standard) (suositus [arvio]; säätöalueen sopivuus OMP 160:n paine-eroon **⚠ tarkista**), tai peruslohkon vaihto malliin 157B6203/6233 (LS A/B -rajoittimet) | peruslohko 157B6200 ilman rajoittimia (2026-11-03); asetus OMP 160:n mukaan **⚠** | ⏳ |
 | 9.4 | Vinssin ja pesurin letkut ja liittimet | | ⏳ |
 | 9.5 | Painepesuri | malli **⚠ ei tiedossa** | ⏳ |
 
