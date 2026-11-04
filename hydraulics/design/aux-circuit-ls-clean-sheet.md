@@ -172,7 +172,7 @@ osa leimoista on kuluneita, joten epäselvät merkit on merkitty `?`.
 | Peruslohkot (PVB) | pistemerkintä **A 6200 / 161**, sama ainakin kolmessa lohkossa | **157B6200: paineenkompensaattori, A/B = G 1/2, ei isku-/imuventtiilien paikkoja, ei LS A/B -rajoittimia** [datalehti PVG 32 s. 23–24, 64]. Kahden muun lohkon leima **⚠ tarkista** | [kuva](../img/pvg32-pvb-stamps.jpg) |
 | Pumppumoduuli (PVP)? | pistemerkintä **511? / 161** (luettu 5114 tai 5111) isossa kuusiokolotulpallisessa päädyssä | **157B5111** [päättely]: ohjeen sarjassa 157B511x on vain 5110–5113, joten 5114 ei ole mahdollinen. Suljettu keskiasento, pilottiöljy PVE:ille, P = G 3/4, ei PVPX-paikkaa [datalehti PVG 32 s. 20, 65]. Viimeinen numero on kulunut; 5110 (avoin keskiasento) erotetaan koestuksessa: suljetun keskiasennon moduulissa pumpun virta ei kulje tankkiin karojen ollessa keskellä | [kuva](../img/pvg32-pvp-stamp.jpg) |
 | Pääty | valumerkinnät **P** ja **LS**; LS-kohdan vieressä kierreliitin | Kilpi (PVG 32, No., Date, PVP) on pumppumoduulin päädyssä. Jos P/LS-pääty on pinon **toisessa** päässä, se on päätylevy: ohut PVS (0,5 kg, enintään 300 bar) tai paksu PVSI (1,7 kg, enintään 350 bar) [datalehti PVG 32 s. 28, 64]. Kumpikin riittää 280 barin asetukselle. **⚠ tarkista**, kummassa päässä | [kuva](../img/pvg32-end-p-ls.jpg) |
-| Työporttien puoli (yläkuva) | Jokaisessa viidessä lohkossa näkyy vain **A- ja B-portti** (kaksi riviä), ei muita tulppia tai venttiilejä. Porttien käyttö autossa (vasemmalta, pumppumoduuli oikealla isojen kulmaliittimien päässä): lohko vasemmalla A ja B nipat; 2. ja 3. A nippa, **B tulpattu kuusiokolotulpalla**; 4. ja 5. A kulmaliitin, B nippa. PVE-liittimistä vasemmanpuoleinen on muista poikkeava harmaa [omistaja 2026-11-03, kuvasta] | Muiden tulppien puuttuminen sopii tulkintaan 157B6200 (ei PVLP-paikkoja) [arvio; PVLP-paikan sijaintia ei ole tarkistettu ohjeen mittakuvasta]. **Tulpatut B-portit lohkoissa 2–3 viittaavat siihen, että niissä voi olla yksitoimiset karat** [arvio]: vinssille kannattaa valita lohko, jonka molemmat portit olivat autossa käytössä. Jos harmaa liitin kuuluu PVEH:lle, PVEH on pumppumoduulista kauimmaisessa lohkossa eikä ensimmäisessä **⚠ tarkista** | [kuva](../img/pvg32-top-ports.jpg) |
+| Työporttien puoli (yläkuva) | Jokaisessa viidessä lohkossa näkyy vain **A- ja B-portti** (kaksi riviä), ei muita tulppia tai venttiilejä. Porttien käyttö autossa (vasemmalta, pumppumoduuli oikealla isojen kulmaliittimien päässä): lohko vasemmalla A ja B nipat; 2. ja 3. A nippa, **B tulpattu kuusiokolotulpalla**; 4. ja 5. A kulmaliitin, B nippa. PVE-liittimistä vasemmanpuoleinen on muista poikkeava harmaa [omistaja 2026-11-03, kuvasta] | Muiden tulppien puuttuminen sopii tulkintaan 157B6200 (ei PVLP-paikkoja) [arvio; PVLP-paikan sijaintia ei ole tarkistettu ohjeen mittakuvasta]. **Tulpatut B-portit lohkoissa 2–3 viittaavat siihen, että niissä voi olla yksitoimiset karat** [arvio]: vinssille kannattaa valita lohko, jonka molemmat portit olivat autossa käytössä. **Harmaa liitin kuuluu PVEH:lle** (157B4024 kilvessä) [omistaja 2026-11-04], joten **PVEH on pumppumoduulista kauimmaisessa lohkossa** (5. pumppumoduulista lukien), ei ensimmäisessä. Dokumenttien "lohko 1 = keulapotkuri" tarkoittaa siis PVEH-lohkoa; numerointi tarkistetaan kytkentäkuviin | [kuva](../img/pvg32-top-ports.jpg) |
 
 - **"161" toistuu** kilvessä, pumppumoduulissa ja peruslohkoissa, ja PVE:issä on vastaavat
   kolminumeroiset merkinnät (091–111). Kilvessä 161 on *Date*-kentässä [omistaja 2026-11-03], joten ne ovat valmistusajan koodeja. Siitä päätellen
@@ -207,7 +207,13 @@ paikat):
 - **Keulapotkurin isku- ja imuventtiilit eivät mahdu lohkoon 1.** Vaihtoehdot:
   1. Kaksoisristivirtausventtiili (dual cross-over relief) imuventtiileillä letkulinjaan tai
      moottorin päälle. Ei muutoksia venttiilipöytään. **Suositus [arvio]**, koska se on luultavasti
-     halvin ja sama ratkaisu käy vinssille. Hinta **⚠ ei tiedossa**.
+     halvin ja sama ratkaisu käy vinssille. Hinta **⚠ ei tiedossa**. Venttiilin runko pitää olla
+     **terästä ja vähintään noin 300–350 barin** luokkaa ja virran noin 35–40 l/min: Rexroth VSDI-30
+     **ei kelpaa** (alumiinirunko, käyttöpaine enintään 210 bar, enintään 30 l/min, vaikka jousi
+     35 antaa 100–350 bar) [datalehti Rexroth RE 18308-15]. Ehdokkaita (2026-11-04, **⚠ tarkista**
+     datalehdestä ennen tilausta): Oudshoorn DCROMP/R40 (1/2" BSPP, 40 l/min, teräsrunko S40
+     400 bar, jousi enintään 350 bar; laipoitettavissa myös OMP/OMR-moottoriin, sopisi siis vinssin
+     OMP 160:lle) ja VBDC teräsrungolla (350 bar, 35 l/min) [hakutulokset].
   2. Lohkon 1 peruslohkon vaihto malliin **157B6230** (sama kuin 6200, mutta paikat PVLP:ille) ja
      2 × PVLP. Kara ja PVEH siirretään vanhasta lohkosta. Vaatii pinon avaamisen ja PVAS-sarjan.
      Hinta **⚠ ei tiedossa**.
@@ -382,7 +388,8 @@ perustelut: [arkisto](archive/aux-circuit-pvg32-pre-purchase.md).
 - [ ] Porttien sisäpuoli taskulampulla (ruoste, vesijäämä)
 - [ ] Mitkä karat ovat kaksitoimisia (vinssi tarvitsee kaksitoimisen): koodista 157N5531 tai painekokeessa
 - [x] Danfossin ohje 520L0344: peruslohko 157B6200 = kompensaattori, ei PVLP-paikkoja eikä LS A/B -rajoittimia; pumppumoduuli 157B5111 = suljettu keskiasento, pilottiöljy, P G 3/4, ei PVPX:ää (2026-11-03), ks. [Mitä koodit kertovat](#mitä-koodit-kertovat-2026-11-03)
-- [ ] Missä lohkossa PVEH on (pumppumoduulin vieressä vai kauimpana; harmaa liitin vasemmalla lohkossa) ja mitkä karat ovat kaksitoimisia (lohkoissa 2–3 B-portti tulpattu autossa)
+- [x] PVEH on pumppumoduulista kauimmaisessa lohkossa [omistaja 2026-11-04]
+- [ ] Mitkä karat ovat kaksitoimisia (lohkoissa 2–3 B-portti tulpattu autossa)
 - [ ] Lue leimat kahdesta muusta peruslohkosta (onko kaikissa A 6200) ja katso, kummassa päässä P/LS-valumerkinnät ovat (kilven pää = pumppumoduuli); PVS vai PVSI
 - [ ] Omistajat: keulapotkurin isku-/imuventtiilit ja vinssin paineraja: kaksoisristivirtausventtiilit moottoreille (suositus) vai peruslohkojen vaihto (157B6230 / 157B6203–6233); hinnat selvitettävä
 - [ ] Rikkinäinen kupu PVEO:ssa (merkintä 101): vaihdetaanko kansi/tulppa vai koko PVEO; käytetään varalohkossa
