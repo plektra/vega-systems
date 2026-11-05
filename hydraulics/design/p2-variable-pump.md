@@ -369,6 +369,7 @@ huomioon kannakkeessa.
 8. **Öljy.** Järjestelmä huuhdellaan ja täytetään HVLP 32:lla ([päätös 2026-10-23](../../decisions.md));
    käyttöönoton huuhteluun käytetään vanhaa öljyä (päätös 2026-10-27). **Pumpun kotelo täytetään
    öljyllä ennen ensimmäistä käynnistystä.** Imulinjan palloventtiili auki ennen käynnistystä.
+   Täyttö- ja ilmausjärjestys: [commissioning](../commissioning.md).
 9. **Käyttöönotto ja säädöt** mittarilla 2G1, ks. [seuraava luku](#säätö-käyttöönotossa-ilman-virtausmittaria).
    Pumpun paineenrajoittimen tehdasasetus on 120 bar, joten se nostetaan 250 bariin ennen
    keulapotkurin täyttä käyttöä.

@@ -7,6 +7,7 @@ Ohjaus, keulapotkuri, ankkurivinssi ja tulevat hydrauliset kuormat.
 | [schematic.md](schematic.md) | **Kaaviot**: ISO 1219 -arkit 1–3 (ohjaus, apupiiri PVH57 + PVG 32, paluu ja jäähdytys; luonnos) osaluetteloineen sekä lohkokaaviot |
 | [procurement.md](procurement.md) | **Hankintalista**: kaikki tarvittavat osat, tila (olemassa, hankitaan, ehdollinen) ja tunnetut hinnat |
 | [current-system.md](current-system.md) | Lähtötilanne, nykyinen remonttitilanne (§0), vaikutukset suunnitteluun, avoimet kysymykset |
+| [commissioning.md](commissioning.md) | **Täyttö ja ilmaus**: käyttöönoton tarkistuslista (PVH57:n kotelon täyttö, ohjaussylinterin ilmaus, huuhteluöljyn vaihto) |
 | [requirements.md](requirements.md) | Vaatimuspohja, osittain täytetty |
 | [loads.yaml](loads.yaml) | Kuormarekisteri: kunkin hydraulisen kuorman luvut (koneluettava) |
 | [design/p2-variable-pump.md](design/p2-variable-pump.md) | **P2 = Vickers PVH57** (päätetty 2026-10-27, ostettu 2026-11-01): pumpun tiedot ja kunto, LS-kytkentä PVG 32:een, HRC 150 -kytkin, kannake, asennus, käyttöönoton säädöt, vikatilat ja paluusuodatin |
