@@ -1,0 +1,452 @@
+# Vegan kulutus- ja vaihto-osat
+#
+# Kaikkien järjestelmien kuluvat ja määräajoin vaihdettavat osat, nesteet ja tarkistukset.
+# Tämä tiedosto on ensisijainen lähde. Taulukko README.md tehdään tästä komennolla
+#   python3 maintenance/render.py
+# Älä muokkaa README.md:n taulukkoa käsin.
+#
+# Avaimet ovat englanniksi, arvot suomeksi. Desimaalierotin YAML-arvoissa on piste (25.5).
+# Tuntematon arvo = null. Pidä tiedosto validina YAML:na.
+#
+# Kenttien selitykset
+#   id:              pysyvä tunniste (JÄRJESTELMÄ-KOHDE), ei muutu
+#   system:          engine | gearbox | hydraulics | bow_thruster | electrics | hull | anchor_winch | heating
+#   action:          replace (vaihto) | inspect (tarkistus) | spare (varaosa, vaihdetaan rikkoutuessa)
+#   name:            mikä osa tai neste
+#   product:         tuote, malli tai laatuluokka
+#   part_number:     osanumero (null, jos ei tiedossa)
+#   size:            mitat tai koko vapaana tekstinä (esim. hihnan profiili ja pituus)
+#   quantity:        kappalemäärä vapaana tekstinä (esim. "2 kpl, vaihdetaan parina")
+#   volume_l:        nesteen määrä litroina
+#   interval_h:      vaihtoväli koneen käyttötunteina (null = ei tunteihin sidottu tai ei tiedossa)
+#   interval_months: vaihtoväli kuukausina; kumpi täyttyy ensin
+#   due_note:        vapaa teksti seuraavasta ajankohdasta, jos sitä ei voi laskea väleistä
+#                    (esim. "käyttöönoton koeajojen jälkeen"); näytetään laskelman sijaan, jos
+#                    historiaa ei ole
+#   onboard_spares:  montako varalla veneessä
+#   history:         tehdyt vaihdot, UUSIN ENSIN: date (VVVV-KK-PP), engine_h (tuntimittari), note, source
+#   notes:           muuta
+#   source:          lähteet CLAUDE.md:n merkinnöin
+
+schema_version: 1
+
+# Koneen tuntimittarin viimeisin lukema. Päivitä aina, kun lukema kirjataan; seuraavan vaihdon
+# tunnit lasketaan tätä vasten.
+engine_hours:
+  value_h: null
+  date: null
+  source: null
+
+items:
+
+  # --- Pääkone CAT 3126B -------------------------------------------------------------------
+
+  - id: ENG-OIL
+    system: engine
+    action: replace
+    name: Moottoriöljy
+    product: Cat DEO 15W-40 tai 10W-30 (datalehden mukaan)
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: 25
+    interval_h: 500
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: >-
+      25 l ilman suodatinta, 500 h datalehden mukaan (⚠ tarkista koneen käyttö- ja huolto-ohjeesta).
+      Vuosittainen väli ⚠ ei tiedossa; alle 1000 h vuodessa kalenteriväli voi tulla vastaan ensin.
+      Vaihdetaan suodattimen kanssa.
+    source: "[datalehti 3126B Marine Propulsion](https://www.dieselpartsdirect.com/caterpillar-3126b-marine-engine-propulsion)"
+
+  - id: ENG-OIL-FILTER
+    system: engine
+    action: replace
+    name: Moottorin öljynsuodatin
+    product: Cat Advanced Efficiency -öljynsuodatin
+    part_number: 1R-1807
+    size: null
+    quantity: 1 kpl
+    volume_l: null
+    interval_h: 500
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: >-
+      Osanumero on Caterpillarin suositus 3126/3126B/C7-koneille matkailuautokäytössä, ei
+      merimoottorin luettelosta: ⚠ tarkista koneen sarjanumerolla Cat-jälleenmyyjältä tai
+      nykyisestä suodattimesta. Vaihdetaan öljyn kanssa.
+    source: "[datalehti Cat RV -suositus](https://manuals.plus/m/773fe17dac841d3dca87ad0e1415726efb6a59dcd371ccde6054a51755135a1c.pdf)"
+
+  - id: ENG-FUEL-FILTER
+    system: engine
+    action: replace
+    name: Koneen polttoainesuodatin
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: Malli ja väli ⚠ ei tiedossa; luetaan nykyisestä suodattimesta tai huolto-ohjeesta.
+    source: null
+
+  - id: ENG-FUEL-PREFILTER
+    system: engine
+    action: replace
+    name: Polttoaineen esisuodatin / vedenerotin
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: Onko erillinen esisuodatin asennettu, ⚠ tarkista. Malli ja väli ⚠ ei tiedossa.
+    source: null
+
+  - id: ENG-AIR-FILTER
+    system: engine
+    action: replace
+    name: Koneen ilmansuodatin
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: Malli ja väli ⚠ ei tiedossa.
+    source: null
+
+  - id: ENG-COOLANT
+    system: engine
+    action: replace
+    name: Koneen jäähdytysneste
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: Tyyppi, määrä ja vaihtoväli ⚠ ei tiedossa. Pakkaskestävyys tarkistetaan ennen talvea.
+    source: null
+
+  - id: ENG-IMPELLER
+    system: engine
+    action: replace
+    name: Merivesipumpun impelleri
+    product: null
+    part_number: null
+    size: null
+    quantity: 1 kpl
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: >-
+      Pumppu on koneen etupään omassa voimanulosotossa. Impellerin malli ja vaihtoväli ⚠ ei
+      tiedossa. Varaimpelleri veneeseen kannattaa, koska jäähdytys pysähtyy ilman sitä.
+    source: "[vessel/README](../vessel/README.md#voimansiirto)"
+
+  - id: ENG-HX-ANODES
+    system: engine
+    action: inspect
+    name: Lämmönvaihtimen sinkkianodit
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: Onko koneen lämmönvaihtimessa anodeja ja montako, ⚠ tarkista.
+    source: null
+
+  - id: ENG-ALT-BELT
+    system: engine
+    action: replace
+    name: Laturin hihna
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: 65 A:n laturi. Hihnan tyyppi ja koko ⚠ ei tiedossa.
+    source: null
+
+  - id: ENG-P1-BELTS
+    system: engine
+    action: replace
+    name: Ohjauspumpun P1 kiilahihnat
+    product: Optibelt Super X-Power
+    part_number: null
+    size: Profiili ja pituus ⚠ ei tiedossa; hihnapyörä 180 mm, välitys 1:1,24
+    quantity: 2 kpl, vaihdetaan parina
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: Kireys ja kunto tarkistetaan P1:n asennuksen yhteydessä
+    onboard_spares: null
+    history: []
+    notes: >-
+      Ohjauksen ainoa konevetoinen pumppu, joten varahihnasarja kannattaa pitää veneessä (P3 on
+      varalla, jos hihna katkeaa). Hihnat luistivat aiemmin vain keulapotkurin kuormalla, joka
+      siirtyy PTO:lle.
+    source: "[blogi 2017-07-04], [hydraulics/current-system](../hydraulics/current-system.md)"
+
+  # --- Vaihteisto Advance 300 --------------------------------------------------------------
+
+  - id: GBX-OIL
+    system: gearbox
+    action: replace
+    name: Vaihteistoöljy (Advance 300)
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: >-
+      Öljytyyppi, määrä ja vaihtoväli ⚠ ei tiedossa: käyttöohje puuttuu (ks.
+      datasheets/README.md). Tieto haetaan vaihteiston kilvestä tai jälleenmyyjältä.
+    source: null
+
+  # --- Hydrauliikka ------------------------------------------------------------------------
+
+  - id: HYD-OIL
+    system: hydraulics
+    action: replace
+    name: Hydrauliöljy
+    product: HVLP 32 (DIN 51524-3, VI ≥ 150), esim. Teboil Hydraulic Oil 32S
+    part_number: null
+    size: null
+    quantity: 4 × 20 l
+    volume_l: 80
+    interval_h: null
+    interval_months: null
+    due_note: >-
+      Käyttöönotto: koeajot vanhalla öljyllä (Teboil Hydraulic Lift 32) uuden suodatinelementin
+      läpi, sitten öljyn ja elementin vaihto (päätös 2026-10-27)
+    onboard_spares: null
+    history: []
+    notes: >-
+      Säiliö Flowfit 100 l. Öljy tyhjennetään myös letkuista, sylinteristä ja orbitrolista.
+      Vaihtoväli käyttöönoton jälkeen ⚠ ei tiedossa (ei päätetty).
+    source: "[blogi 2017-07-04], [päätös 2026-10-23](../decisions.md), [päätös 2026-10-27](../decisions.md)"
+
+  - id: HYD-RETURN-FILTER
+    system: hydraulics
+    action: replace
+    name: Paluusuodattimen elementti
+    product: Nykyinen runko OMT OMTF112C10NA2 (10 µm, selluloosa)
+    part_number: CR112C10R
+    size: null
+    quantity: 2 kpl käyttöönottoon (huuhtelu + öljynvaihdon jälkeen)
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: Käyttöönotossa kahdesti, ks. HYD-OIL
+    onboard_spares: null
+    history: []
+    notes: >-
+      Suodatinmalli voi vaihtua (OMTF171F10NA1 tai lasikuituelementti, hydraulics/procurement.md
+      5.8), jolloin osanumero päivitetään. Ohitusventtiili 1,7 bar: vaihda, kun painemittari
+      lähestyy ohitusrajaa lämpimällä öljyllä. Vaihtoväli muuten ⚠ ei tiedossa.
+    source: "[jälleenmyyjä Phoenix Hydraulics], [hydraulics/current-system](../hydraulics/current-system.md)"
+
+  - id: HYD-COOLER-ANODE
+    system: hydraulics
+    action: inspect
+    name: Öljynjäähdyttimen sinkkianodi (Bowman EC100)
+    product: null
+    part_number: null
+    size: null
+    quantity: 1 kpl
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: Tarkistetaan ennen käyttöönottoa, jos jäähdytin asennetaan
+    onboard_spares: null
+    history: []
+    notes: Jäähdyttimen asennus on päättämättä.
+    source: "[hydraulics/procurement](../hydraulics/procurement.md) 5.6"
+
+  # --- Keulapotkuri Side-Power SH240-U11 ---------------------------------------------------
+
+  - id: BT-ANODE
+    system: bow_thruster
+    action: replace
+    name: Keulapotkurin anodi
+    product: Side-Power SH240
+    part_number: null
+    size: null
+    quantity: 1 kpl
+    volume_l: null
+    interval_h: null
+    interval_months: 12
+    due_note: Joka kausi tai kun puolet on kulunut
+    onboard_spares: null
+    history: []
+    notes: Anodin osanumero ⚠ ei tiedossa.
+    source: "[ohje Sleipner 6572 6 2025]"
+
+  - id: BT-GEAR-OIL
+    system: bow_thruster
+    action: inspect
+    name: Keulapotkurin vaihteiston öljynpinta
+    product: EP 90
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: 12
+    due_note: Ennen jokaista kautta
+    onboard_spares: null
+    history: []
+    notes: Öljysäiliön määrä ⚠ ei tiedossa.
+    source: "[ohje Sleipner 6572 6 2025]"
+
+  - id: BT-ANTIFOULING
+    system: bow_thruster
+    action: replace
+    name: Potkurien ja vaihteiston antifouling
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: 12
+    due_note: Ennen jokaista kautta
+    onboard_spares: null
+    history: []
+    notes: Ei anodiin, tiivisteisiin eikä akseliin. Samalla tarkistetaan vuodot, potkurit ja tunneli.
+    source: "[ohje Sleipner 6572 6 2025]"
+
+  # --- Sähkö -------------------------------------------------------------------------------
+
+  - id: EL-START-BATT
+    system: electrics
+    action: inspect
+    name: Käynnistysakut
+    product: null
+    part_number: null
+    size: null
+    quantity: 2 kpl
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: >-
+      Tyyppi, kapasiteetti ja ikä ⚠ ei tiedossa (luetaan tyyppikilvistä). Ylläpitolataus CTEK MULTI
+      XT 14000.
+    source: "[electrics/current-system](../electrics/current-system.md)"
+
+  - id: EL-SEARCHLIGHT-BULB
+    system: electrics
+    action: spare
+    name: Hakuvalon polttimo
+    product: Philips 24 V 250 W halogeeni (projektori- ja piirtoheitinpolttimo)
+    part_number: null
+    size: Pystypolttimo, kaksi ohutta nastaa; kannan tyyppi ⚠ ei tiedossa
+    quantity: 1 kpl
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: Rikkoutuessa
+    onboard_spares: null
+    history: []
+    notes: null
+    source: "[omistaja 2026-10-31], [electrics/design/searchlight-deicing](../electrics/design/searchlight-deicing.md)"
+
+  # --- Runko ja potkuriakseli --------------------------------------------------------------
+
+  - id: HULL-ANODES
+    system: hull
+    action: inspect
+    name: Rungon ja potkuriakselin anodit
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: Anodien määrä, paikat ja mallit ⚠ ei tiedossa.
+    source: null
+
+  - id: SHAFT-SEAL
+    system: hull
+    action: inspect
+    name: Potkuriakselin tiiviste
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: Tiivisteen tyyppi (esim. tiivistenaru tai mekaaninen tiiviste) ⚠ ei tiedossa.
+    source: null
+
+  # --- Ankkurivinssi -----------------------------------------------------------------------
+
+  - id: WINCH-BRAKE
+    system: anchor_winch
+    action: inspect
+    name: Ankkurivinssin nauhajarrun kitkapinta
+    product: null
+    part_number: null
+    size: null
+    quantity: null
+    volume_l: null
+    interval_h: null
+    interval_months: null
+    due_note: null
+    onboard_spares: null
+    history: []
+    notes: >-
+      Turvallisuuskriittinen: jarru pitää ankkurin, vaikka vetoketju katkeaa. Kitkapinnan materiaali
+      ja kulumisraja ⚠ ei tiedossa.
+    source: "[hydraulics/current-system](../hydraulics/current-system.md)"

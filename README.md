@@ -10,6 +10,7 @@ viitata toisiinsa.
 | [hydraulics/](hydraulics/) | Ohjaus, keulapotkuri, ankkurivinssi: nykytila, vaatimukset, selvitykset |
 | [electrics/](electrics/) | Akut, lataus, tehonjako, linkit valvonta- ja ohjauselektroniikkaan |
 | [heating/](heating/) | Tilojen lämmitys, huurunpoisto ja kiertovesilämmitys |
+| [maintenance/](maintenance/) | Kulutus- ja vaihto-osat kaikista järjestelmistä: mallit, määrät, edelliset ja seuraavat vaihdot |
 | [datasheets/](datasheets/) | Hakemisto komponenttien datalehdistä: linkit ja tärkeimmät arvot |
 | [decisions.md](decisions.md) | Voimassa olevat päätökset perusteluineen; korvatut: [decisions-archive.md](decisions-archive.md) |
 | [messages.md](messages.md) | Omistajien viestit toisilleen; Claude näyttää ne istunnon alussa |

@@ -33,6 +33,7 @@ ei ohjelmistosta: Markdownia, YAML-dataa ja myöhemmin pieniä laskentaskriptej�
 vessel/       yhteiset tiedot (alus, kone, vaihteisto, sähköjärjestelmän perustiedot) — yksi totuuden lähde
 hydraulics/   current-system.md, requirements.md, loads.yaml, design/, img/
 electrics/    current-system.md, … (sama rakenne kuin hydraulics)
+maintenance/  kulutus- ja vaihto-osat: consumables.yaml (lähde) → render.py → README.md
 datasheets/   datalehtien hakemisto (linkit ja arvot; ei valmistajien PDF:iä)
 decisions.md  kaikkien järjestelmien päätösloki, uusin ensin (korvatut: decisions-archive.md)
 messages.md   omistajien viestit toisilleen (ks. Viestit osallistujille)
@@ -44,6 +45,10 @@ messages.md   omistajien viestit toisilleen (ks. Viestit osallistujille)
 - **Usean järjestelmän tarvitsema tieto** kuuluu tiedostoon `vessel/README.md`. Järjestelmien
   dokumentit linkittävät siihen eivätkä kopioi sitä.
 - **Vaihtoehtoselvitykset ja vertailut** kuuluvat kansioon `<järjestelmä>/design/<aihe>.md`.
+- **Kulutus- ja vaihto-osat** (öljyt, suodattimet, hihnat, anodit, impellerit, polttimot) ja niiden
+  vaihdot kirjataan tiedostoon `maintenance/consumables.yaml` (historia uusin ensin, tuntimittarin
+  lukema `engine_hours`-kohtaan). Aja sen jälkeen `python3 maintenance/render.py`, joka päivittää
+  taulukon `maintenance/README.md`. Älä muokkaa taulukkoa käsin.
 
 ## Dokumentointisäännöt
 

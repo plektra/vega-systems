@@ -16,6 +16,8 @@ description: Kirjaa uudet tiedot, mittaukset, kuvat, hinnat tai datalehtiarvot V
    - `<järjestelmä>/current-system.md`: taulukot, tilannekatsaus, avointen kysymysten lista;
    - `vessel/README.md`, jos muutkin järjestelmät käyttävät tietoa (kone, vaihteisto, jännitteet,
      mitat);
+   - `maintenance/consumables.yaml` kulutusosien malleille, määrille ja tehdyille vaihdoille
+     (aja sen jälkeen `python3 maintenance/render.py`);
    - `<järjestelmä>/loads.yaml` kuormien luvuille (pidä validina YAML:na, avaimet englanniksi);
    - `<järjestelmä>/requirements.md` ja `<järjestelmä>/design/*.md`, jos arvo vaikuttaa laskelmaan
      tai vertailuun.
