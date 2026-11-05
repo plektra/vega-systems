@@ -6,6 +6,8 @@
 > jossa myös tämän dokumentin aiempi päivityshistoria). Nykyinen suunnitelma: P1 hihnavetoisena
 > ohjaukselle; P2 = Vickers PVH57 (ostettu 2026-11-01) PTO:lta HRC 150 -kytkimellä; venttiileinä
 > Danfoss PVG 32 (ostettu 2026-11-02, saapui 2026-11-03, karat liikkuvat ja palaavat keskelle).
+> **2026-11-05:** P1 tarvitsee uuden ryhmän 2 tukilaakerin ja kannakkeen, mahdollisesti uuden
+> käyttöakselin (oli tandemina vanhan P2:n perässä).
 > Päätökset: [decisions.md](../decisions.md). Kohdat, joissa on merkintä **⚠ tarkista**, pitää
 > tarkistaa veneellä.
 >
@@ -237,6 +239,12 @@ myös 2400 rpm:llä.) Salamin 2PE-sarjan käyttöehdot: imupaine 0,7–2,5 bar a
 viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 800 cSt), öljy −15…+85 °C
 (NBR-tiivisteet).
 
+**P1:n asennus:** P1 oli alun perin tandemina vanhan P2:n (ryhmä 3) perässä samalla akselilla.
+Vanha tukilaakeri on ryhmän 3 eikä sovi P1:lle (ryhmä 2), joten P1 tarvitsee **uuden tukilaakerin
+ja kannakkeen**. P1:n käyttöakseli on **katkaistu** tandem-käyttöä varten, joten uusi akseli on
+mahdollisesti tarpeen [omistaja 2026-11-05]. Salamin maahantuojana on ainakin aiemmin toiminut
+Fluiconnecto (**⚠ tarkista**). Ks. [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli).
+
 ### 3.3 Piiri 1 — Ohjaus
 
 | Komponentti | Tiedot | Huomiot |
@@ -396,6 +404,7 @@ Avoimet:
 - [x] Imupaineen mittarit: kiinteät kaksoispainemittarit 1G2 (P1) ja 2G2 (P2) mittaritauluun (päätös 2026-10-28)
 - [ ] Mittaritaulun paikka konehuoneessa ja mittausletkujen reititys
 - [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23]
+- [ ] P1:n tukilaakeri (ryhmä 2) ja kannake hankittava; käyttöakseli katkaistu, uusi mahdollisesti tarpeen [omistaja 2026-11-05], ks. [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli)
 - [ ] **Käyttöönoton säädöt:** PVH57:n paineenrajoitin 120 → 250 bariin mittarilla 2G1 (ks. [p2-variable-pump](design/p2-variable-pump.md#säätö-käyttöönotossa-ilman-virtausmittaria)); orbitrolin paineenrajoitus pienimpään arvoon, jolla peräsin kääntyy ääriasentoihin ajossa, kuitenkin enintään sylinterin ja letkujen painearvon
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (malli vahvistettu EC100:ksi [omistaja 2026-10-27]; vetojen määrä ⚠, ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

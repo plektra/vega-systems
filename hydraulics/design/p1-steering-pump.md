@@ -1,7 +1,7 @@
 # Ohjauspumppu P1: imulinja ja muutokset P2-remontin yhteydessä
 
 > **Tila:** selvitys 2026-10-23. **Päätetty 2026-10-23: kohdat 1, 3, 4 ja 5** (32 mm:n imulinja,
-> täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohta 6: välitystä ei muuteta; kohta 7 avoinna. Imulinjan mitat [omistaja 2026-10-23],
+> täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohta 6: välitystä ei muuteta; kohta 7 avoinna. **2026-11-05:** P1 tarvitsee uuden ryhmän 2 tukilaakerin ja kannakkeen, mahdollisesti myös uuden käyttöakselin (ks. [kohta 7](#tukilaakeri-kannake-ja-käyttöakseli)) [omistaja 2026-11-05]. Imulinjan mitat [omistaja 2026-10-23],
 > laskelmat [laskelma]. 2026-10-28: 32 mm:n täysiaukkoinen palloventtiili on jo olemassa P2:n nykyisessä imulinjassa säiliön ulosotolla ja jää P1:lle [omistaja 2026-10-28]. 2026-10-26: öljypinta vähintään 1 m pumppujen yläpuolella [omistaja], joten laskelman oletus pätee. Ohjaus on turvallisuuskriittinen: **pätevän henkilön pitää tarkistaa
 > ohjauspiirin muutokset ennen rakentamista.**
 
@@ -13,6 +13,8 @@ Liittyy: [current-system §3.3](../current-system.md#33-piiri-1--ohjaus),
 | Kohde | Arvo | Lähde |
 |---|---|---|
 | Pumppu | Salami 2PE16D-P28P1, 16,6 cm³, max 3000 rpm | [datalehti Salami 2PE] |
+| Aiempi asennus | Tandemina vanhan kiinteätilavuuksisen P2:n (Salami 3PB33D, ryhmä 3) perässä samalla akselilla; tukilaakeri oli P2:n (ryhmä 3) | [omistaja 2026-11-05] |
+| Käyttöakseli | Katkaistu tandem-käyttöä varten; uusi akseli mahdollisesti tarpeen | [omistaja 2026-11-05] |
 | Veto | 2 kiilahihnaa, kone:pumppu 1:1,24 | [blogi 2017-07-04] |
 | Koneen kierrosalue | 700 (tyhjäkäynti, ei mitattu) – 2400 rpm | [omistaja 2026-10-22] |
 | Pienin sallittu imupaine | **0,7 bar abs ≈ −0,3 bar ylipainetta** | [datalehti Salami 2PE] |
@@ -90,11 +92,37 @@ koska säiliö on silloin tyhjä ja auki.
 | 4 | **HV 32 -öljy** koko järjestelmään (jo suositeltu P2:n takia) | Suurin yksittäinen parannus P1:n imuun kylmänä. Huom. HV 32 ohenee noin 70 °C:ssa alle P1:n 12 cSt:n minimin, joten lämpötilahälytys 70 °C pysyy ([vaatimukset](../requirements.md)). | Öljy vaihdetaan joka tapauksessa |
 | 5 | **Imupaineen tarkistus käyttöönotossa:** kiinteä kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritaulussa, mittauspiste P1:n imuaukolla (päätös 2026-10-28; aiemmin alipainemittari −1…0 bar), ja koeajo kylmänä 700 ja 1800 rpm:llä | Laskelma perustuu oletettuun säiliön korkeuteen ja liitinhäviöihin. Mittaus kertoo todellisen marginaalin. | Mittari ~20–40 € (arvio) |
 | 6 | **Hihnavälitys:** ~~pienennetäänkö 1:1,15:een~~ **ei muuteta** (päätös 2026-10-23) | P1 pyörii nyt 2400 rpm:llä noin 2980 rpm (raja 3000). Imun kannalta muutos on pieni. | Hihnapyörä |
-| 7 | **Hihnaveto ja kannake:** vanha kannake kantoi kahta pumppua peräkkäin. Kun vanha P2 poistuu hihnoilta, tarkistetaan kannakkeen ja tukilaakerin kiinnitys ja hihnojen kireys yhdelle pumpulle. | Ohjauksen ainoa pumppu, hihnan katkeaminen = ohjaus vain hätäjärjestelmillä | Työtä |
+| 7 | **Hihnaveto, tukilaakeri, kannake ja käyttöakseli:** P1 tarvitsee **uuden ryhmän 2 tukilaakerin ja sille kannakkeen**, koska vanha tukilaakeri oli ryhmän 3 P2:n eikä sovi P1:lle. **Käyttöakseli on katkaistu tandem-käyttöä varten**, joten uusi akseli on mahdollisesti tarpeen [omistaja 2026-11-05]. Lisäksi hihnojen kireys yhdelle pumpulle. Ks. [alla](#tukilaakeri-kannake-ja-käyttöakseli). | Hammaspyöräpumpun akseli ei kestä hihnan sivukuormaa ilman tukilaakeria. Ohjauksen ainoa pumppu, hihnan katkeaminen = ohjaus vain hätäjärjestelmillä | Tukilaakeri, kannake ja ehkä akseli: **⚠ ei tiedossa** |
 
 **Päätetty 2026-10-23: 1 + 3 + 4 + 5** ([päätösloki](../../decisions.md)).
 Alkuperäinen suositus: Kohta 1 maksaa lähes vain liittimet, koska letku, säiliön ulosotto ja
 sen palloventtiili vapautuvat P2:lta [omistaja 2026-10-28]. Säiliön öljypinta on vähintään 1 m P1:n yläpuolella [omistaja 2026-10-26].
+
+### Tukilaakeri, kannake ja käyttöakseli
+
+Lähtötiedot [omistaja 2026-11-05]:
+
+- P1 oli alun perin asennettu **tandemina** vanhan kiinteätilavuuksisen P2:n (Salami 3PB33D-P38P2)
+  perään samalle akselille. Hihnaveto ja tukilaakeri olivat P2:n päässä.
+- Vanha P2 oli **ryhmän 3** pumppu ja P1 on **ryhmän 2**, joten vanha tukilaakeri ei sovi P1:lle.
+  P1 tarvitsee **uuden tukilaakerin ja sille kannakkeen**.
+- P1:n **käyttöakseli on katkaistu** tandem-käyttöä varten, joten se tarvitsee mahdollisesti
+  **uuden käyttöakselin**. Tyyppikoodin mukainen kartioakseli 1:8 [datalehti Salami 2PE] ei siis
+  välttämättä vastaa pumpun nykyistä akselia (**⚠ tarkista** pumpusta).
+- Salami-pumppujen maahantuojana on ainakin aiemmin toiminut **Fluiconnecto**
+  (**⚠ tarkista**, onko edelleen).
+
+Ehdotus:
+
+1. Selvitä pumpusta, onko akselin pää kartio, ura vai lyhennetty, ja sopiiko se ryhmän 2
+   tukilaakerin kytkentään.
+2. Pyydä Fluiconnectolta (tai muulta Salami-myyjältä) tarjous **ryhmän 2 tukilaakerista** (ja
+   sopivasta akselista tai kytkimestä) sekä **vertailuksi uudesta 2PE16-pumpusta** valmiilla
+   akselilla. Jos akseli pitää vaihtaa, pumpun purku ja koestus voi tulla lähes uuden pumpun
+   hintaiseksi; hinnat **⚠ ei tiedossa**.
+3. Kannake tehdään tai sovitetaan uudelle tukilaakerille. Vanhan kannakkeen voi ehkä muokata,
+   jos sen kiinnitys koneeseen sopii (**⚠ tarkista** veneellä).
+4. Vanha ryhmän 3 tukilaakeri jää käyttämättä (voi myydä, jos sille ei löydy käyttöä).
 
 ### Vikatilanteet (ohjaus)
 
@@ -103,6 +131,7 @@ sen palloventtiili vapautuvat P2:lta [omistaja 2026-10-28]. Säiliön öljypinta
 | Imulinjan kavitaatio (kylmä öljy, liian pieni tai pitkä letku, kiinni jäänyt palloventtiili) | Ohjaus raskas tai nykivä, pumppu kuluu, pahimmillaan pumppu rikkoutuu | 32 mm:n linja, HV 32, täysiaukkoinen venttiili, imupainemittaus käyttöönotossa |
 | Imulinjan palloventtiili unohtuu kiinni | P1 käy kuivana ja rikkoutuu, ohjaus menetetään | Venttiilin asennonosoitin tai lukitus auki-asentoon, käynnistyksen tarkistuslista |
 | Hihnan katkeaminen | Ohjaus vain orbitrolilla käsipumppuna (raskas) tai hätäpinnalla | Varahihna, P3-varapumppu (kytkentä **⚠ tarkista**) |
+| Tukilaakeri tai kannake pettää, tai akselikytkentä irtoaa | Hihna löystyy tai pumppu pysähtyy; sivukuorma voi rikkoa P1:n akselin tai laakerit; ohjaus menetetään | Oikean ryhmän (2) tukilaakeri, jäykkä kannake, akselin ja kytkennän tarkistus; P3-varapumppu; pätevän henkilön tarkistus ennen käyttöönottoa |
 
 ## Avoimet kysymykset
 
@@ -114,3 +143,7 @@ sen palloventtiili vapautuvat P2:lta [omistaja 2026-10-28]. Säiliön öljypinta
 - [ ] Säiliö: P2:n 50 mm:n ulosotto uuteen kohtaan, jotta vanha 32 mm:n ulosotto jää P1:lle
 - [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)) ja kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritauluun, ks. [hankintalista](../procurement.md)
 - [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)
+- [x] Tukilaakeri: vanha oli ryhmän 3 P2:n, ei sovi P1:lle; tarvitaan uusi ryhmän 2 tukilaakeri ja kannake [omistaja 2026-11-05]
+- [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; tarvitaanko uusi akseli (tarkista akselin pää)
+- [ ] Tarjous ryhmän 2 tukilaakerista (ja akselista) sekä vertailuksi uudesta 2PE16-pumpusta, esim. Fluiconnecto (Salamin maahantuoja ainakin aiemmin, **⚠ tarkista**)
+- [ ] Kannake: tehdäänkö uusi vai muokataanko vanha
