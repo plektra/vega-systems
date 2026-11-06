@@ -133,6 +133,17 @@ Lähtötiedot [omistaja 2026-11-05]:
   kartioakselille 28; kiila-akselille tarvitaan SAE A -laippa (CS). Luettelon esimerkki:
   1700 N:n säteiskuorma 7,5 mm:n päässä laipasta, 2000 rpm → noin 1000 h ([laskelma] hihnan
   voimista **⚠ ei tehty**).
+- **Erillinen ryhmän 2 tukilaakeriyksikkö ja uraholkki sopivat akselille 28.** Akseli 28:
+  kartio 1:8, Ø16,6 mm, kierre M12 × 1,25, Woodruff-kiila 3,165 × 6,5 mm [datalehti Salami 2PE s. 14].
+  Myynnissä olevat ryhmän 2 uraholkit on tehty juuri tälle akselille: 14 hammasta ulkona,
+  1:8-kartioreikä ja 3,2 mm:n kiila, tukilaakerien SU2/C ja SU2/D väliin
+  ([Kailatec](https://kauppa.kailatec.fi/tuote/hammaspyorapumpun-ja-tukilaakerin-valinen-hammaspyora/),
+  [Lakeuden Hydro](https://www.lakeudenhydro.fi/fi/hydrauliikkakomponentit/hydraulipumput/c/1/),
+  [HTL B-2CA](https://www.htluk.co.uk/Products/002c000c0001/B-2CA); hakutuloksista 2026-11-06,
+  sivuja ei luettu). Tukilaakereiden pumppulaippa on eurooppalainen (71,5 × 96, keskitys Ø36,5)
+  ([EP-hydrauliikka](https://www.ep-hydrauliikka.fi/tuote/tukilaakeri-2-sarjan-pumpulle)), ja se
+  vastaa Salamin P1-laippaa. **Suora kiila-akseli (82 tai 85) ei sovi uraholkkiin.** Kiila-akseli
+  on tukilaakerin lähtöpuolella, ja hihnapyörä tulee siihen.
 - **Vaihtoehto:** erillinen laakeripukki ja joustava kytkin (Salami suosittaa Oldham-kytkintä).
   Silloin pumpun akselille ei tule sivukuormaa, ja akselin 82 ja nykyisen P1-laipan voi pitää.
 
@@ -168,7 +179,7 @@ Ehdotus:
 - [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)) ja kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritauluun, ks. [hankintalista](../procurement.md)
 - [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)
 - [x] Tukilaakeri: vanha oli ryhmän 3 P2:n, ei sovi P1:lle; tarvitaan uusi ryhmän 2 tukilaakeri ja kannake [omistaja 2026-11-05]
-- [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; omistajien toive suora kiila-akseli (2026-11-06). Vaihtoehdot: 82 (5/8", laippa P1 säilyy) tai 85 (3/4", SAE A -laippa)
+- [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; tukilaakeriyksikön uraholkkiin sopii alkuperäinen **akseli 28** (kartio 1:8, kiila 3,2 mm); suora kiila-akseli ei sovi (2026-11-06). Tarvitaan vetävä hammaspyörä akselilla 28
 - [ ] Tukilaakeri: Salamin laakeroitu laippa (CP/CS) vai erillinen laakeripukki ja kytkin
 - [ ] Tarjous ryhmän 2 tukilaakerista (ja akselista) sekä vertailuksi uudesta 2PE16-pumpusta, esim. Fluiconnecto (Salamin maahantuoja ainakin aiemmin, **⚠ tarkista**)
 - [ ] Kannake: tehdäänkö uusi vai muokataanko vanha
