@@ -112,6 +112,29 @@ Lähtötiedot [omistaja 2026-11-05]:
 - Salami-pumppujen maahantuojana on ainakin aiemmin toiminut **Fluiconnecto**
   (**⚠ tarkista**, onko edelleen).
 
+**Salamin 2PE-luettelon mukaan** [datalehti Salami 2PE -luettelo E0.120.0219.02.00IM04, 2026-11-06]:
+
+- **Akseli on samaa kappaletta vetävän hammaspyörän kanssa.** Uusi akseli tarkoittaa siis uutta
+  vetävää hammaspyörää (ja tiivisteitä), ei erillistä akselia.
+- **Suorat kiila-akselit** (omistajien toive 2026-11-06):
+
+  | Koodi | Akseli | Kiila | Suurin vääntö | Laippa | Laakeroitu laippa |
+  |---|---|---|---|---|---|
+  | 28 (nykyinen) | kartio 1:8 | – | 130 Nm | P1 | **CP** |
+  | **82** | 5/8" SAE A, Ø15,88 mm | 3,97 × 3,97 × 12,7 mm | **70 Nm** | **P1** tai S2 | CS (SAE A) |
+  | **85** | 3/4" SAE A, Ø19,05 mm | 4,78 × 4,78 × 12,7 mm | 130 Nm | vain S2 (SAE A) | CS |
+
+- **Vääntötarve** [laskelma, mekaaninen hyötysuhde 90 %]: orbitrolin paineenrajoituksen
+  enimmäisasetuksella 170 bar noin **50 Nm**, normaalilla alle 50 barin työpaineella alle 15 Nm.
+  Akseli 82 (70 Nm) riittää, kunhan piirin paine ei voi nousta yli noin 230 barin.
+- **Salamin oma laakeroitu laippa** (outrigger bearing) korvaa pumpun etulaipan, ja hihnapyörä
+  tulee suoraan pumpun akselille. Eurooppalaisella laipalla (CP) se on saatavana vain
+  kartioakselille 28; kiila-akselille tarvitaan SAE A -laippa (CS). Luettelon esimerkki:
+  1700 N:n säteiskuorma 7,5 mm:n päässä laipasta, 2000 rpm → noin 1000 h ([laskelma] hihnan
+  voimista **⚠ ei tehty**).
+- **Vaihtoehto:** erillinen laakeripukki ja joustava kytkin (Salami suosittaa Oldham-kytkintä).
+  Silloin pumpun akselille ei tule sivukuormaa, ja akselin 82 ja nykyisen P1-laipan voi pitää.
+
 Ehdotus:
 
 1. Selvitä pumpusta, onko akselin pää kartio, ura vai lyhennetty, ja sopiiko se ryhmän 2
@@ -144,6 +167,7 @@ Ehdotus:
 - [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)) ja kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritauluun, ks. [hankintalista](../procurement.md)
 - [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)
 - [x] Tukilaakeri: vanha oli ryhmän 3 P2:n, ei sovi P1:lle; tarvitaan uusi ryhmän 2 tukilaakeri ja kannake [omistaja 2026-11-05]
-- [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; tarvitaanko uusi akseli (tarkista akselin pää)
+- [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; omistajien toive suora kiila-akseli (2026-11-06). Vaihtoehdot: 82 (5/8", laippa P1 säilyy) tai 85 (3/4", SAE A -laippa)
+- [ ] Tukilaakeri: Salamin laakeroitu laippa (CP/CS) vai erillinen laakeripukki ja kytkin
 - [ ] Tarjous ryhmän 2 tukilaakerista (ja akselista) sekä vertailuksi uudesta 2PE16-pumpusta, esim. Fluiconnecto (Salamin maahantuoja ainakin aiemmin, **⚠ tarkista**)
 - [ ] Kannake: tehdäänkö uusi vai muokataanko vanha
