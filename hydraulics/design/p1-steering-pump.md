@@ -181,5 +181,5 @@ Ehdotus:
 - [x] Tukilaakeri: vanha oli ryhmän 3 P2:n, ei sovi P1:lle; tarvitaan uusi ryhmän 2 tukilaakeri ja kannake [omistaja 2026-11-05]
 - [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; tukilaakeriyksikön uraholkkiin sopii alkuperäinen **akseli 28** (kartio 1:8, kiila 3,2 mm); suora kiila-akseli ei sovi (2026-11-06). Tarvitaan vetävä hammaspyörä akselilla 28
 - [ ] Tukilaakeri: Salamin laakeroitu laippa (CP/CS) vai erillinen laakeripukki ja kytkin
-- [ ] Tarjous ryhmän 2 tukilaakerista (ja akselista) sekä vertailuksi uudesta 2PE16-pumpusta, esim. Fluiconnecto (Salamin maahantuoja ainakin aiemmin, **⚠ tarkista**)
+- [ ] Tarjous vetävästä hammaspyörästä (akseli 28), vertailuksi uudesta 2PE16D-P28P1:stä sekä ryhmän 2 tukilaakerista ja uraholkista: **kysely lähetetty Fluiconnectolle 2026-11-06** [omistaja 2026-11-06], samalla kysytty, ovatko he yhä Salamin maahantuoja; odotetaan vastausta
 - [ ] Kannake: tehdäänkö uusi vai muokataanko vanha
