@@ -115,7 +115,8 @@ Lähtötiedot [omistaja 2026-11-05]:
 **Salamin 2PE-luettelon mukaan** [datalehti Salami 2PE -luettelo E0.120.0219.02.00IM04, 2026-11-06]:
 
 - **Akseli on samaa kappaletta vetävän hammaspyörän kanssa.** Uusi akseli tarkoittaa siis uutta
-  vetävää hammaspyörää (ja tiivisteitä), ei erillistä akselia.
+  vetävää hammaspyörää, ei erillistä akselia. Etukantta ja tiivisteitä ei tarvitse vaihtaa
+  [omistaja 2026-11-06].
 - **Suorat kiila-akselit** (omistajien toive 2026-11-06):
 
   | Koodi | Akseli | Kiila | Suurin vääntö | Laippa | Laakeroitu laippa |
