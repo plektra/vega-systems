@@ -304,6 +304,33 @@ kulkee väylän kautta (kohta 6).
 - **Ohjelmistopäivitykset (OTA)** eivät saa jättää nodea lähettämään jatkuvasti; CAN-piirien
   TXD-aikakatkaisu (CA-IS3050G 2–8 ms) estää yhtä laitetta jumittamasta väylää pysyvästi.
 
+### 5.5a Nodejen virransyöttö (lisätty 2026-11-08)
+
+**Perussääntö [arvio]: anturinode ottaa virtansa väylästä**, eli samasta Micro-C-pudotuksesta,
+jossa data kulkee. Erillistä syöttöä ei tarvita, ja väylän yksi sulake ja yksi maadoituspiste
+pysyvät hallittuina. Rajoja on kaksi: väylän virta (kohta 3.9) ja maadoitus.
+
+**Maadoitus ratkaisee.** Väylästä syötetyn noden maa on väylän miinus (NET-C). Jos noden anturi
+on kytketty runkoon, koneeseen tai akun miinukseen, väylän miinus yhdistyy runkoon toisesta
+kohdasta, ja syntyy maadoitussilmukka (kohta 5.4).
+
+| Noden tyyppi | Syöttö | Esimerkit |
+|---|---|---|
+| **Anturit kelluvat** (eivät koske runkoon eikä akun miinukseen) | **väylästä** | DS18B20 ja BME280 (node1, tilojen lämpötilat), kaksijohtiminen magneettinen kierrosanturi, tuulianturi, potentiometrinen peräsinkulma-anturi, kuivakoskettimet (pilssihälytin, kaasuhälytin) |
+| **Anturit viittaavat akun miinukseen tai runkoon** | **veneen 24 V:sta, ja CAN-puoli erotettu** (erotettu CAN-piiri, jonka väyläpuoli saa virtansa väylästä) | akun jännite ja shuntti (node2), käynnistysakkujen ja TK-kiskon jännitteet, koneen yksijohtimiset paine- ja lämpötila-anturit (runko maana), ESP32-PDM |
+| **Paljon virtaa tai korkea jännite** | **veneen 24 V:sta** | 4–20 mA -anturit, jotka tarvitsevat yleensä vähintään noin 10–12 V silmukkajännitettä (12 V:n väylällä marginaali on pieni, **⚠ tarkista** anturin datalehdestä), lämmitetyt anturit, releitä ohjaavat nodet |
+
+- **ESP32-PDM toimii jo näin:** ohjain ja lähdöt saavat virtansa akulta, ja vain erotettu CAN-puoli
+  saa virtansa väylästä (LEN 1).
+- **node1 ja node2:ssa on erotettu CAN-piiri (ISO1044).** Mistä niiden ohjainpuoli saa virtansa,
+  **⚠ tarkista** kytkentäkaaviosta. node2 mittaa akkua, joten sen ohjainpuolen pitää saada virtansa
+  akulta, ei väylästä.
+- **Koneen anturinode N-03:** jos öljynpaine- ja lämpötila-anturit ovat yksijohtimisia ja niiden
+  maa on koneen runko, node syötetään 24 V:sta erotetulla CAN-puolella. Jos anturit ovat
+  kaksijohtimisia ja eristettyjä, väyläsyöttö riittää.
+- Veneen 24 V:sta syötetty node tarvitsee oman sulakkeen, ja se kytketään jatkuvien kuormien
+  ryhmään tai PDM-lähtöön. PDM-lähtö käy vain, jos noden saa sammuttaa.
+
 ### 5.6 Valvonta
 
 - Signal K seuraa jokaisen laitteen heartbeat-viestiä (126993) ja hälyttää, kun laite katoaa.
