@@ -26,7 +26,8 @@
    päätetty.
 3. **Väyliä on kaksi, eikä niitä yhdistetä suoraan** (kohta 4): NMEA 2000 (250 kbit/s) ja
    Victronin BMS-CAN (500 kbit/s, JK-BMS ↔ Cerbo GX). Pääkoneessa ei todennäköisesti ole
-   tiedonsiirtoväylää eikä ohjainyksikköä [omistaja 2026-11-08], joten koneen tiedot tulevat omista
+   tiedonsiirtoväylää eikä ohjainyksikköä; kone on ilmeisesti mekaanisilla yksikköinjektoreilla (MUI)
+   [omistaja 2026-11-08], joten koneen tiedot tulevat omista
    antureista ESP32-noden kautta.
 4. **Turvallisuuskriittinen toiminta ei saa riippua väylästä.** Ohjaus, keulapotkurin perusohjaus,
    pilssipumppujen kohokytkimet, kulkuvalot ja hätäseis toimivat ilman N2K:ta. Väylä tuo
@@ -355,8 +356,9 @@ käyttöönottoa.**
   paikat (mittaus 60 Ω) ja mitä laitteita siinä nyt on.
 - [x] Miten Signal K -palvelin (Pi 5) liittyy väylään: eristetty Waveshare 2-CH CAN HAT [omistaja 2026-11-08]
 - [ ] Pi:n paikka väylässä (pää vai keskellä) ja CAN HAT:n päätevastusjumpperin asento; HAT:n virrankulutus Pi:n 3 A:n syötöstä (DDR-15G-5) **⚠ ei tiedossa**
-- [x] Onko CAT 3126B:ssä J1939-liitäntä: tuskin, eikä koneessa ole ohjainyksikköä (ECU)
-  [omistaja 2026-11-08] → omat anturit (N-03)
+- [x] Onko CAT 3126B:ssä J1939-liitäntä: tuskin, eikä koneessa ole ohjainyksikköä (ECU); ilmeisesti
+  MUI eli mekaaniset yksikköinjektorit [omistaja 2026-11-08] → omat anturit (N-03). Tyyppi
+  **⚠ tarkista** tyyppikilvestä, ks. [vessel](../../vessel/README.md)
 - [ ] Koneen anturit: kierrosanturin paikka (vauhtipyörän magneettianturi vai laturin W), omat
   öljynpaine- ja lämpötila-anturit vai nykyisten mittarien anturit
 - [ ] Mastopudotuksen pituus tuulianturille (alle 6 m?).
