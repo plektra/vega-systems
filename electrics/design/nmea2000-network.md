@@ -100,6 +100,36 @@ tai Signal K:n kautta.
 Kierroslukitusta hydrauliikka ei enää tarvitse (PVH57, [requirements §10.2](../../hydraulics/requirements.md#102-ohjaus)),
 mutta kierrokset ovat hyödyllisiä lokitukseen ja hydrauliikan vianetsintään.
 
+#### Kierrosanturin valinta (lisätty 2026-11-08)
+
+Vauhtipyörän kotelon tyhjään anturipaikkaan, 126 hammasta (ks. yllä).
+
+| | **A. Passiivinen magneettianturi (VR, magnetic pickup)** (suositus [arvio]) | B. Aktiivinen Hall-anturi (gear tooth sensor) |
+|---|---|---|
+| Johtimet ja syöttö | 2 johdinta, ei syöttöä; anturi tuottaa itse vaihtojännitteen | 3 johdinta, syöttö (tyypillisesti 5–24 V) |
+| Signaali | siniaalto, jonka amplitudi kasvaa kierrosten mukana (hitaalla pieni) | kanttiaalto, toimii myös hyvin hitaalla |
+| Liitäntä ESP32:een | tarvitsee VR-rajapintapiirin, esim. **MAX9924** (mukautuva kynnys ja nollakohdan tunnistus, −40…+125 °C) ([Analog Devices](https://www.analog.com/en/products/max9924)); piirin syöttö 4,5–5,5 V, joten lähtö sovitetaan ESP32:n 3,3 V:iin **⚠ tarkista** datalehdestä | avokollektorilähtö ja ylösvetovastus suoraan ESP32:n tuloon |
+| Maadoitus (kohta 5.5a) | kelluva, joten node voi saada virtansa väylästä | anturin miinus voi yhdistyä runkoon, jos kotelo on kytketty siihen sisäisesti **⚠ tarkista**; muuten noden virta 24 V:sta |
+| Kestävyys | yksinkertaisin ja kestävin, yleinen dieselmoottoreissa ja aggregaateissa | elektroniikkaa anturin kärjessä; lämpöluokka tarkistettava |
+
+**Kierre:** SAE-vauhtipyörän kotelon anturipaikoissa yleinen kierre on **5/8"-18 UNF**, mutta
+Vegan kotelon kierre **⚠ ei tiedossa** (mitataan tai luetaan tulpasta). Esimerkkejä 5/8"-18 UNF
+-magneettiantureista: Murphy (Enovation Controls) MP-sarja
+([Enovation](https://enovationcontrols.com/products/magnetic-pickups/)), aggregaattien
+varaosa-anturit kuten GAC MSP6728C ([Fridayparts](https://www.fridayparts.com/msp6728c-magnetic-speed-pickup-sensor-engine-pick-up-5-8-18-unf-2a-threaded)).
+Hintoja **⚠ ei tarkistettu**. Tarkista myös anturin pituus: kärjen pitää ulottua hampaisiin
+lukkomutterin kanssa.
+
+**Asennus (Murphyn ohjeen mukaan):** kierretään sisään, kunnes kärki koskettaa hampaan
+päätä (kone pysähdyksissä), avataan 1/4–3/4 kierrosta ja lukitaan mutterilla. 5/8"-18:lla
+noin 1/2 kierrosta antaa noin 0,7 mm:n välin
+([Murphy / Enovation](https://support.enovationcontrols.com/hc/en-us/articles/115001361834-MP-Series-Magnetic-Pickups-Speed-Time-Sensors-Instruments);
+taulukon arvot **⚠ tarkista** ohjeesta). Väli valitaan niin, että jännite riittää käynnistyskierroksilla.
+Pyöräytä konetta koko kierros ennen käynnistystä, ettei kärki osu heittävään hampaaseen.
+
+**Kaapeli:** suojattu parikaapeli, suojavaippa maahan vain noden päässä; erillään käynnistysmoottorin
+ja laturin kaapeleista.
+
 ### 3.4 Sähköjärjestelmä
 
 | Tunnus | Laite / mittaus | Paikka | Liitäntä | PGN:t / tieto | Tila | Lähde |
