@@ -1,6 +1,6 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys) 2026-10-30 (pilssipumppujen malli ja virrat) ja 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-11-07 (NMEA 2000 -selvitys), 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys) 2026-10-30 (pilssipumppujen malli ja virrat) ja 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
@@ -111,6 +111,11 @@ Suunnitellut väylälaitteet [omistaja 2026-10-29]. Ne saavat virtansa väyläst
 DDR-240B-24:n vakautetusta 24 V:sta, joten jokaisen pitää sietää 24 V (ks. kohta 3.1).
 Väylävirta ilmoitetaan LEN-lukuna (1 LEN = 50 mA); laitteiden LEN-arvot **⚠ ei tiedossa**.
 
+> **⚠ Huom. 2026-11-07:** ESP32-PDM-kortti on suunniteltu standardin enintään 16 V:n väylälle
+> (CAN-puolen TVS-diodi SMAJ18CA), joten se ei kestä nykyistä 24 V:n väyläsyöttöä. Suositus on
+> syöttää väylä 12 V:lla erotetulla muuntimella (ei päätetty). Koko laiteluettelo, väylien
+> erottelu ja luotettavuussäännöt: [design/nmea2000-network.md](design/nmea2000-network.md).
+
 | Laite | Huomiot |
 |---|---|
 | Polttoainemittari(t) | Polttoainejärjestelmä on keskeneräinen |
@@ -150,7 +155,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 |---|---|---|
 | Signal K -palvelin | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Tietokeskus; Grafana-näkymät. Pyörii konehuoneen Raspberry Pi 5:llä [omistaja 2026-10-29] |
 | Kameratallennin (Frigate) | konehuoneen Intel NUC | Valvontakameran tallennus [omistaja 2026-10-29] |
-| NMEA 2000 -nodet | `plektra/vega-n2k-node1` … `node3`, `vega-n2k-node-bootstrap` | ESP32-pohjaiset N2K-nodet |
+| NMEA 2000 -nodet | `plektra/vega-n2k-node1` … `node3`, `vega-n2k-node-bootstrap` | ESP32-pohjaiset N2K-nodet: node1 konehuoneen olosuhteet ja releiden tila, node2 akkumittaus (INA226), node3 keskeneräinen GNSS (NMEA 0183) [koodi luettu 2026-11-07]. Laiteluettelo: [design/nmea2000-network.md](design/nmea2000-network.md) |
 | Tehonjako (PDM) | `ESP32-PDM`, `ESP32-PDM-v1/v2/4x4/base` (KiCad) | ESP32-tehonjakomoduulit; ehdokkaita hydrauliikan solenoidien ja PVE-yksiköiden ohjaukseen ja valvontaan |
 | Asennusautomaatio | `plektra/vega-ansible` | Veneen tietokoneiden konfigurointi |
 | Muut | `yarrboard-hardware`, `frothfet`, `esp32-can-hat`, `SH-ESP32-hardware` | Liittyviä laitteistoprojekteja |
@@ -183,6 +188,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 - [x] Mastokamera: oma, kolmas kamera [omistaja 2026-10-29]
 - [x] Mastovalo: osa kulkuvaloja [omistaja 2026-10-29]
 - [ ] VHF Sailor RT2048:n ja FM-radion muuntimen virrankulutus; NMEA 2000 -laitteiden LEN-arvot
+- [ ] NMEA 2000 -väylän jännite (12 V suositus vai 24 V), nykyisen runkoväylän reitti ja päätevastukset, Signal K:n CAN-liitäntä; ks. [design/nmea2000-network.md](design/nmea2000-network.md#8-avoimet-kysymykset)
 - [x] Pilssipumppujen malli ja virta: SEAFLO 01-sarja 3500 GPH (SFBP2-G3500-01), 8,0 A / enintään 12,5 A [omistaja 2026-10-30], [datalehti SEAFLO 01 Series 3500GPH]
 - [ ] **Veneellä:** pilssipumppujen sijainnit ja syöttö: suoraan akulta pääkytkimen ohi omalla sulakkeella? Nykyiset sulakekoot?
 - [x] 4G-modeemin (RUT240) syöttö: DDR-240B-24:n kautta [omistaja 2026-10-29]
