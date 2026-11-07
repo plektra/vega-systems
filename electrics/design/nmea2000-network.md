@@ -93,7 +93,7 @@ tai Signal K:n kautta.
 
 | Tunnus | Mittaus | Paikka | Liitäntä | PGN:t / tieto | Tila | Lähde |
 |---|---|---|---|---|---|---|
-| (N-03) | Kierrokset: **vauhtipyörän kotelossa on valmis paikka magneettianturille, mutta anturia ei ole** [omistaja 2026-11-08]; suositus [arvio] asentaa siihen magneettinen tai Hall-kierrosanturi, joka laskee käynnistyshammaskehän hampaita (kierteen koko ja hampaiden määrä **⚠ ei tiedossa**). Varavaihtoehto laturin W-liitäntä (epätarkempi, riippuu hihnasta ja välityksestä); öljynpaine ja jäähdytysnesteen lämpötila (omat anturit; nykyisten mittarien anturien rinnalle kytkeminen voi vääristää mittarien lukemia **⚠ tarkista**), käyttötunnit laskettuna kierroksista. Polttoaineen kulutus vain erillisellä virtausmittarilla | CAT 3126B | node | 127488, 127489 | ehdotus | [omistaja 2026-11-08] |
+| (N-03) | Kierrokset: **vauhtipyörän kotelossa on valmis paikka magneettianturille, mutta anturia ei ole** [omistaja 2026-11-08]; suositus [arvio] asentaa siihen magneettinen tai Hall-kierrosanturi, joka laskee käynnistyshammaskehän hampaita (hammaskehässä **126 hammasta**, SAE No. 3 -kotelo [omistaja 2026-11-08, koneen manuaali]; anturipaikan kierteen koko **⚠ ei tiedossa**). Taajuus = 126 × rpm / 60: käynnistyksessä noin 150 rpm → noin 315 Hz, tyhjäkäynti 700 rpm → 1 470 Hz, suurin 2400 rpm → 5 040 Hz [laskelma]; ESP32:n pulssilaskuri (PCNT) riittää hyvin. Varavaihtoehto laturin W-liitäntä (epätarkempi, riippuu hihnasta ja välityksestä); öljynpaine ja jäähdytysnesteen lämpötila (omat anturit; nykyisten mittarien anturien rinnalle kytkeminen voi vääristää mittarien lukemia **⚠ tarkista**), käyttötunnit laskettuna kierroksista. Polttoaineen kulutus vain erillisellä virtausmittarilla | CAT 3126B | node | 127488, 127489 | ehdotus | [omistaja 2026-11-08] |
 | N-20 | Koneen ja vaihteiston lisäanturit: vaihteiston öljynpaine ja -lämpötila, pakosarjan tai pakokaasun lämpötila, merivesivirtaus / impellerihälytys | konehuone | node | 127493, 130312/130316 | ehdotus | – |
 | (N-30) | Konehuoneen lämpötila ja kosteus (BME280) | konehuone | `node1` | 130311 | olemassa | [vega-n2k-node1] |
 
@@ -387,8 +387,9 @@ käyttöönottoa.**
   MUI eli mekaaniset yksikköinjektorit [omistaja 2026-11-08] → omat anturit (N-03). Tyyppi
   **⚠ tarkista** tyyppikilvestä, ks. [vessel](../../vessel/README.md)
 - [x] Kierrosanturin paikka: vauhtipyörän kotelossa on valmis paikka, anturia ei ole [omistaja 2026-11-08]
-- [ ] **Veneellä:** anturipaikan kierteen koko (kuva ja mitta tai tulpan merkinnät) ja käynnistyshammaskehän
-  hampaiden määrä (Caterpillarin osanumerosta tai laskemalla); niistä valitaan anturi ja kierrosten laskukerroin
+- [x] Käynnistyshammaskehän hampaat: 126 (SAE No. 3 -kotelo) [omistaja 2026-11-08, koneen manuaali]
+- [ ] **Veneellä:** anturipaikan kierteen koko (kuva ja mitta tai tulpan merkinnät) ja etäisyys hampaisiin; niistä
+  valitaan anturi
 - [ ] Koneen anturit: omat
   öljynpaine- ja lämpötila-anturit vai nykyisten mittarien anturit
 - [ ] Mastopudotuksen pituus tuulianturille (alle 6 m?).
