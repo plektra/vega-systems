@@ -93,7 +93,7 @@ tai Signal K:n kautta.
 
 | Tunnus | Mittaus | Paikka | Liitäntä | PGN:t / tieto | Tila | Lähde |
 |---|---|---|---|---|---|---|
-| (N-03) | Kierrokset (vauhtipyörän magneettianturi tai laturin W-liitäntä), öljynpaine ja jäähdytysnesteen lämpötila (omat anturit; nykyisten mittarien anturien rinnalle kytkeminen voi vääristää mittarien lukemia **⚠ tarkista**), käyttötunnit laskettuna kierroksista. Polttoaineen kulutus vain erillisellä virtausmittarilla | CAT 3126B | node | 127488, 127489 | ehdotus | [omistaja 2026-11-08] |
+| (N-03) | Kierrokset: **vauhtipyörän kotelossa on valmis paikka magneettianturille, mutta anturia ei ole** [omistaja 2026-11-08]; suositus [arvio] asentaa siihen magneettinen tai Hall-kierrosanturi, joka laskee käynnistyshammaskehän hampaita (kierteen koko ja hampaiden määrä **⚠ ei tiedossa**). Varavaihtoehto laturin W-liitäntä (epätarkempi, riippuu hihnasta ja välityksestä); öljynpaine ja jäähdytysnesteen lämpötila (omat anturit; nykyisten mittarien anturien rinnalle kytkeminen voi vääristää mittarien lukemia **⚠ tarkista**), käyttötunnit laskettuna kierroksista. Polttoaineen kulutus vain erillisellä virtausmittarilla | CAT 3126B | node | 127488, 127489 | ehdotus | [omistaja 2026-11-08] |
 | N-20 | Koneen ja vaihteiston lisäanturit: vaihteiston öljynpaine ja -lämpötila, pakosarjan tai pakokaasun lämpötila, merivesivirtaus / impellerihälytys | konehuone | node | 127493, 130312/130316 | ehdotus | – |
 | (N-30) | Konehuoneen lämpötila ja kosteus (BME280) | konehuone | `node1` | 130311 | olemassa | [vega-n2k-node1] |
 
@@ -359,7 +359,10 @@ käyttöönottoa.**
 - [x] Onko CAT 3126B:ssä J1939-liitäntä: tuskin, eikä koneessa ole ohjainyksikköä (ECU); ilmeisesti
   MUI eli mekaaniset yksikköinjektorit [omistaja 2026-11-08] → omat anturit (N-03). Tyyppi
   **⚠ tarkista** tyyppikilvestä, ks. [vessel](../../vessel/README.md)
-- [ ] Koneen anturit: kierrosanturin paikka (vauhtipyörän magneettianturi vai laturin W), omat
+- [x] Kierrosanturin paikka: vauhtipyörän kotelossa on valmis paikka, anturia ei ole [omistaja 2026-11-08]
+- [ ] **Veneellä:** anturipaikan kierteen koko (kuva ja mitta tai tulpan merkinnät) ja käynnistyshammaskehän
+  hampaiden määrä (Caterpillarin osanumerosta tai laskemalla); niistä valitaan anturi ja kierrosten laskukerroin
+- [ ] Koneen anturit: omat
   öljynpaine- ja lämpötila-anturit vai nykyisten mittarien anturit
 - [ ] Mastopudotuksen pituus tuulianturille (alle 6 m?).
 - [x] Cerbo GX vai Cerbo GX MK2: MK2 hyvä ajatus [omistaja 2026-11-08]
