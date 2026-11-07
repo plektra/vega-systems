@@ -29,7 +29,7 @@ asennus tarkastutetaan pätevällä sähköasentajalla ennen käyttöönottoa.
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
 | 2.1 | Victron MultiPlus-II 24/5000/120-50 230V (PMP242505010) | 1 | 4 kW, laturi 120 A, PowerAssist | 🔍 | **≈ 1 700–2 400 €** | [päätös 2026-10-31](../decisions.md), [ac-power-source 2.2](design/ac-power-source.md#22-huipputeho-ja-invertteri-laskelma) |
-| 2.2 | Victron Cerbo GX | 1 | BMS-CAN-portti (ei Cerbo-S GX) | 🛒 | noin 290–340 USD ≈ **260–310 €** | [inverter-bms 3.1](design/inverter-bms.md#31-mihin-cerbo-gx-tarvitaan-lisätty-2026-10-31) |
+| 2.2 | Victron **Cerbo GX MK2** (omistaja pitää hyvänä ajatuksena 2026-11-08) | 1 | BMS-CAN-portti (ei Cerbo-S GX); VE.Can-portti 1 galvaanisesti erotettu NMEA 2000:lle, ks. [nmea2000-network 4](design/nmea2000-network.md#4-väylät-erillään). MK2:n hinta ja BMS-CAN-portti **⚠ tarkista** | 🛒 | noin 290–340 USD ≈ **260–310 €** | [inverter-bms 3.1](design/inverter-bms.md#31-mihin-cerbo-gx-tarvitaan-lisätty-2026-10-31) |
 | 2.3 | Näyttö Cerbo GX:lle (esim. GX Touch) | 1 | valinnainen; puhelin tai Signal K riittää | ❓ | **⚠ ei tiedossa** | – |
 | 2.4 | CAN-kaapeli JK → Cerbo GX (BMS-CAN) | 1–2 | johdinjärjestys tarkistettava | 🛒 | **⚠ ei tiedossa** | [inverter-bms](design/inverter-bms.md) |
 | 2.5 | Timco SS2200i Supersilent | 1 | 1,8 kW, varalataus avokannelta | 🛒 | **549 €** | [päätös 2026-10-31](../decisions.md) |

@@ -1,6 +1,6 @@
 # NMEA 2000 ja CAN-väylät: laiteluettelo ja luotettava väylä
 
-> **Tila:** Selvitys ja laiteluettelon ensimmäinen versio, aloitettu 2026-11-07. **Mitään ei ole
+> **Tila:** Selvitys ja laiteluettelon ensimmäinen versio, aloitettu 2026-11-07, päivitetty 2026-11-08 (Pi:n CAN-HAT, ei koneen väylää, Cerbo GX MK2, 12 V harkinnassa). **Mitään ei ole
 > päätetty.** Luettelossa on omistajien kertomat laitteet, muiden dokumenttien jo suunnittelemat
 > anturit ja Clauden ehdotukset; sarake *Tila* kertoo, kumpi on kyseessä. Luettelo täydentyy, kun
 > laitteita valitaan.
@@ -22,9 +22,12 @@
    "no operating voltage above 16 V on NMEA 2000") [laskelma]. 24 V:n väylällä diodi oikosulkee
    syötön tai palaa. **Suositus [arvio]: syötetään runkoväylä 12 V:lla erotetulla 24→12 V
    -muuntimella** (kohta 5.1). Silloin käyvät kaikki kaupalliset N2K-laitteet ja PDM sellaisenaan.
-3. **Väyliä on kolme, eikä niitä yhdistetä suoraan** (kohta 4): NMEA 2000 (250 kbit/s),
-   Victronin BMS-CAN (500 kbit/s, JK-BMS ↔ Cerbo GX) ja koneen J1939 (jos 3126B:ssä on sellainen,
-   **⚠ tarkista**). Väylien välille tulee yhdyskäytävä.
+   Omistaja harkitsee 12 V:n syöttöä turvallisempana vaihtoehtona [omistaja 2026-11-08]; ei vielä
+   päätetty.
+3. **Väyliä on kaksi, eikä niitä yhdistetä suoraan** (kohta 4): NMEA 2000 (250 kbit/s) ja
+   Victronin BMS-CAN (500 kbit/s, JK-BMS ↔ Cerbo GX). Pääkoneessa ei todennäköisesti ole
+   tiedonsiirtoväylää eikä ohjainyksikköä [omistaja 2026-11-08], joten koneen tiedot tulevat omista
+   antureista ESP32-noden kautta.
 4. **Turvallisuuskriittinen toiminta ei saa riippua väylästä.** Ohjaus, keulapotkurin perusohjaus,
    pilssipumppujen kohokytkimet, kulkuvalot ja hätäseis toimivat ilman N2K:ta. Väylä tuo
    valvonnan, hälytykset ja etäohjauksen (kohta 6).
@@ -39,7 +42,7 @@
 |---|---|---|
 | Väylän syöttö | Mean Well DDR-240B-24, vakautettu 24 V; sama muunnin syöttää NUC:n, 4G-modeemin ja PoE-kamerat (piiri KH-20) | [omistaja 2026-10-29], [circuit-list](circuit-list.md) |
 | Väylälaitteiden jännitekesto | "Kaikki Vegan väylälaitteet toimivat 9–32 V:lla" (koskee nykyisiä laitteita, ei ESP32-PDM:ää, ks. kohta 1) | [omistaja 2026-10-29] |
-| Signal K -palvelin | Raspberry Pi 5, konehuone. **Liitäntä väylään ⚠ ei tiedossa** (CAN-HAT, USB-sovitin vai ESP32-yhdyskäytävä?) | [omistaja 2026-10-29] |
+| Signal K -palvelin | Raspberry Pi 5, konehuone [omistaja 2026-10-29]. Väylään **eristetyllä Waveshare 2-CH CAN HAT -kortilla** (kaksi kanavaa, MCP2515 + SN65HVD230/SI65HVD230, digitaalinen erotin ja erotettu DC/DC-muunnin CAN-puolelle, jumpperilla kytkettävä 120 Ω:n päätevastus, SocketCAN `can0`/`can1`; eristysjännitettä ei kerrota) | [omistaja 2026-11-08], [datalehti Waveshare 2-CH CAN HAT](https://www.waveshare.com/wiki/2-CH_CAN_HAT) |
 | Omat N2K-nodet | `vega-n2k-node1` ja `node2` (ESP32, erotettu CAN-piiri ISO1044, regulaattori LM7805; NMEA2000-kirjasto ttlappalainen). `node3` on keskeneräinen GNSS-node (Quectel-moduuli NMEA 0183:lla, ei vielä N2K:ta) | [vega-n2k-node1…3, koodi luettu 2026-11-07] |
 | Runkoväylän pituus, reitti, kaapeli, liittimet, päätevastukset | **⚠ ei tiedossa** | – |
 | Nykyisten laitteiden LEN-arvot | **⚠ ei tiedossa** | – |
@@ -65,9 +68,9 @@ tai Signal K:n kautta.
 
 | Tunnus | Laite | Sijainti | Liitäntä | PGN:t / tieto | Tila | Lähde |
 |---|---|---|---|---|---|---|
-| N-01 | Signal K -palvelin (Raspberry Pi 5) ja CAN-liitäntä | konehuone | N2K (sovitin **⚠ ei tiedossa**) | kuuntelee kaikkea; lähettää tarvittaessa (esim. hälytykset, kytkinkomennot 127502) | olemassa (liitäntä auki) | [omistaja 2026-10-29] |
+| N-01 | Signal K -palvelin (Raspberry Pi 5) ja Waveshare 2-CH CAN HAT (eristetty) | konehuone | N2K kanavalla `can0`; toinen kanava vapaana (varalla tai väylän testaukseen) | kuuntelee kaikkea; lähettää tarvittaessa (esim. hälytykset, kytkinkomennot 127502) | olemassa (liitäntä auki) | [omistaja 2026-10-29] |
 | N-02 | Victron Cerbo GX, VE.Can-portti | konehuone | N2K (VE.Can → NMEA 2000 -kaapeli) | akut 127506/127508, invertteri ja lataus; vaihtoehtoisesti tiedot Signal K:hon verkon (MQTT) kautta, jolloin N2K-liitäntää ei tarvita | suunniteltu (Cerbo päätetty 2026-10-31) | [decisions 2026-10-31](../../decisions.md), [inverter-bms](inverter-bms.md) |
-| N-03 | J1939 → NMEA 2000 -yhdyskäytävä (esim. Maretron J2K100, tukee Caterpillaria, vain kuuntelee J1939:ää) tai oma ESP32-node | konehuone | GW | 127488, 127489 (kierrokset, öljynpaine, jäähdytysneste, käyttötunnit), 127497 (polttoaineen kulutus) | ehdotus | [Maretron J2K100](https://www.maretron.com/products/j2k100-j1939-to-nmea-2000-gateway/) |
+| N-03 | Koneen anturinode (ESP32): kierrokset, öljynpaine, jäähdytysnesteen lämpötila, käyttötunnit | konehuone | node | 127488, 127489 | ehdotus; koneessa ei todennäköisesti ole väylää [omistaja 2026-11-08], joten J1939-yhdyskäytävää (esim. Maretron J2K100) ei tarvita | [omistaja 2026-11-08] |
 | N-04 | Navigointitietokone ja näyttö (OpenCPN tms.) | komentosilta | Signal K:n kautta (verkko), ei omaa N2K-liitäntää | – | omistajan lista | [current-system 3.2](../current-system.md#32-komentosillalta-ohjattavat-24-vn-laitteet) |
 | N-05 | Väylän valvontanode (jännite väylän kaukaisessa päässä, virheet) | runkoväylän pää | node | 127751 (DC-jännite/virta) tai Signal K | ehdotus | kohta 5.6 |
 
@@ -89,7 +92,7 @@ tai Signal K:n kautta.
 
 | Tunnus | Mittaus | Paikka | Liitäntä | PGN:t / tieto | Tila | Lähde |
 |---|---|---|---|---|---|---|
-| (N-03) | Kierrokset, öljynpaine, jäähdytysnesteen lämpötila, käyttötunnit, polttoaineen kulutus | CAT 3126B | GW, jos koneessa on J1939 (**⚠ tarkista** ECM:stä ja johtosarjasta); muuten omat anturit noden kautta | 127488, 127489 | ehdotus | – |
+| (N-03) | Kierrokset (vauhtipyörän magneettianturi tai laturin W-liitäntä), öljynpaine ja jäähdytysnesteen lämpötila (omat anturit; nykyisten mittarien anturien rinnalle kytkeminen voi vääristää mittarien lukemia **⚠ tarkista**), käyttötunnit laskettuna kierroksista. Polttoaineen kulutus vain erillisellä virtausmittarilla | CAT 3126B | node | 127488, 127489 | ehdotus | [omistaja 2026-11-08] |
 | N-20 | Koneen ja vaihteiston lisäanturit: vaihteiston öljynpaine ja -lämpötila, pakosarjan tai pakokaasun lämpötila, merivesivirtaus / impellerihälytys | konehuone | node | 127493, 130312/130316 | ehdotus | – |
 | (N-30) | Konehuoneen lämpötila ja kosteus (BME280) | konehuone | `node1` | 130311 | olemassa | [vega-n2k-node1] |
 
@@ -174,22 +177,23 @@ joten yksi syöttöpiste riittää. Lasketaan uudelleen, kun laitteet valitaan.
 |---|---|---|---|
 | **NMEA 2000** | 250 kbit/s | kohdan 3 laitteet, PDM:t, nodet, Signal K | – |
 | **BMS-CAN** (Victron) | 500 kbit/s | 2 × JK-BMS ↔ Cerbo GX:n BMS-CAN-portti | Cerbo GX välittää tiedot Signal K:hon ja tarvittaessa VE.Can/N2K:hon |
-| **J1939** (kone, jos on) | 250 kbit/s | CAT 3126B:n ECM | vain kuunteleva yhdyskäytävä N-03 |
+| ~~J1939~~ | – | ei käytössä: koneessa ei todennäköisesti ole väylää [omistaja 2026-11-08] | – |
 | ~~PVE-CAN~~ | – | ei käytössä: PVEH ohjataan jännitteellä | – |
 
 **Miksi erillään [arvio]:**
 - BMS-CAN on eri nopeudella ja eri protokollalla; JK-BMS:n liittäminen N2K-runkoon kaataisi koko
   väylän. Akun suojaus ei saa riippua navigointiväylän kunnosta, eikä päinvastoin.
-- J1939 on koneen ohjauksen väylä. N2K-laite tai väärä viesti siellä voi häiritä konetta.
-  Kuunteleva yhdyskäytävä ei lähetä mitään J1939:ään (J2K100:n datalehden mukaan).
+- Jos koneessa sittenkin on J1939-väylä, se on koneen ohjauksen väylä, eikä sitä liitetä N2K:hon
+  suoraan, vaan vain kuuntelevan yhdyskäytävän kautta (esim. Maretron J2K100).
 - Jos joskus tulee CAN-ohjattu PVE, se laitetaan omaan väylään tai yhdyskäytävän taakse.
 
 **Cerbo GX ja N2K:**
 - **Alkuperäisen Cerbo GX:n VE.Can-portit eivät ole galvaanisesti erotettuja; Cerbo GX MK2:ssa
   (2024) portti 1 on erotettu** ([Victron Marine Integration Guide](https://www.victronenergy.com/media/pg/Cerbo_GX/en/connecting-supported-non-victron-products.html),
   [Victron VE.Can ja NMEA 2000](https://www.victronenergy.com/live/ve.can:nmea-2000:start)).
-  Kun Cerbo tilataan, kannattaa valita **MK2** ja kytkeä N2K porttiin 1 (**⚠ tarkista** hinta ja
-  saatavuus). Hankintalistan rivi 2.2 päivitetään, jos omistajat hyväksyvät tämän.
+  Kun Cerbo tilataan, kannattaa valita **MK2** ja kytkeä N2K porttiin 1. **Omistaja pitää MK2:ta
+  hyvänä ajatuksena** [omistaja 2026-11-08]; hankintalistan rivi 2.2 on päivitetty MK2:ksi
+  (**⚠ tarkista** hinta, saatavuus ja että MK2:ssa on edelleen BMS-CAN-portti).
 - **VE.Can → NMEA 2000 -kaapelissa on irrotettava sulake.** Sulake paikallaan Victron syöttää
   N2K-väylää akkujännitteellä, eli Vegassa 24 V:lla. **Sulake poistetaan**, ja väylä saa virtansa
   omasta syötöstään (kohta 5.1).
@@ -268,8 +272,15 @@ kulkee väylän kautta (kohta 6).
   Erottamattomat laitteet, kuten alkuperäisen Cerbo GX:n VE.Can, yhdistävät väylän miinuksen
   oman syöttönsä miinukseen. Silloin akun miinusvirta voi kulkea väylän kautta (maadoitussilmukka),
   mikä aiheuttaa häiriöitä ja pahimmillaan kuumentaa väylän ohuita johtimia [arvio].
-- Signal K -palvelimen CAN-liitännän pitää myös olla erotettu (**⚠ tarkista**, kun sovitin
-  valitaan); Pi saa virtansa samasta 24 V:sta kuin muutkin.
+- Signal K -palvelimen CAN-liitäntä on erotettu: Waveshare 2-CH CAN HAT, jossa digitaalinen
+  erotin ja erotettu DC/DC-muunnin [omistaja 2026-11-08], [datalehti Waveshare 2-CH CAN HAT](https://www.waveshare.com/wiki/2-CH_CAN_HAT).
+  Kortin `G`-liitin on erotettu maa; se kytketään väylän miinukseen (NET-C), ei Pi:n maahan.
+- **Kortin 120 Ω:n päätevastus (jumpperi)** on päällä vain, jos Pi on runkoväylän päässä. Jos Pi
+  liitetään pudotuksella keskeltä väylää, jumpperi otetaan pois, muuten väylässä on kolme
+  päätevastusta (mittaus noin 40 Ω, kohta 5.2).
+- Kortti liitetään 4-napaisella ruuviliittimellä; se pitää viedä koteloon Micro-C-
+  paneeliliittimellä ja lyhyellä pudotuksella kuten omat nodet (kohta 5.3). Väylänopeus asetetaan
+  250 kbit/s (`ip link set can0 up type can bitrate 250000`); wikin esimerkeissä on 1 Mbit/s.
 
 ### 5.5 Osoitteet, instanssit ja ohjelmisto
 
@@ -297,8 +308,9 @@ kulkee väylän kautta (kohta 6).
 - Signal K seuraa jokaisen laitteen heartbeat-viestiä (126993) ja hälyttää, kun laite katoaa.
 - Väylän jännite mitataan **runkoväylän kaukaisesta päästä** (N-05); alenema kertoo huonosta
   liitoksesta tai liian suuresta kuormasta ennen kuin laitteet alkavat temppuilla.
-- Väylän virheet (error frames, bus-off) lokiin, jos Signal K:n CAN-liitäntä sen sallii
-  (**⚠ tarkista** sovittimesta).
+- Väylän virheet (error frames, bus-off) lokiin: MCP2515 ja SocketCAN näyttävät virhelaskurit
+  ja bus-off-tilan (`ip -details -statistics link show can0`), joten Signal K tai erillinen
+  skripti voi hälyttää niistä [arvio, **⚠ tarkista** käytännössä].
 
 ## 6. Vikatilanteet
 
@@ -323,8 +335,9 @@ käyttöönottoa.**
 1. **Väylälle oma 12 V:n syöttö erotetulla 24→12 V -muuntimella** omalla sulakkeellaan jatkuvien
    kuormien ryhmästä. Nykyinen 24 V:n syöttö DDR-240B-24:stä poistetaan väylältä, ennen kuin
    ensimmäinen ESP32-PDM liitetään.
-2. **Kolme erillistä väylää:** N2K, BMS-CAN ja J1939 vain kuuntelevan yhdyskäytävän kautta.
-3. **Cerbo GX MK2** alkuperäisen sijaan, jos hintaero on pieni, ja VE.Can-kaapelin sulake pois;
+2. **Kaksi erillistä väylää:** N2K ja BMS-CAN. Koneen tiedot omalla anturinodella (N-03), koska
+   koneessa ei todennäköisesti ole väylää.
+3. **Cerbo GX MK2** alkuperäisen sijaan (omistaja kannattaa 2026-11-08), ja VE.Can-kaapelin sulake pois;
    tai Victron-tiedot Signal K:hon verkon kautta ilman N2K-liitäntää.
 4. **Yksi suora runkoväylä** konehuoneesta komentosillalle (ja mastoon), valmiit Micro-C-kaapelit,
    päätevastukset päihin, syöttö keskelle.
@@ -336,14 +349,19 @@ käyttöönottoa.**
 ## 8. Avoimet kysymykset
 
 - [ ] **Omistajat:** väylän jännite 12 V (suositus) vai 24 V? Jos 24 V, ESP32-PDM:n CAN-puoli
-  pitää suunnitella uudelleen (kerrotaan ESP32-PDM-projektille).
+  pitää suunnitella uudelleen (kerrotaan ESP32-PDM-projektille). Omistaja harkitsee 12 V:ta
+  [omistaja 2026-11-08].
 - [ ] **Veneellä:** nykyisen runkoväylän reitti, pituus, kaapelityyppi, liittimet, päätevastusten
   paikat (mittaus 60 Ω) ja mitä laitteita siinä nyt on.
-- [ ] Miten Signal K -palvelin (Pi 5) liittyy väylään: sovittimen malli ja onko se erotettu.
-- [ ] Onko CAT 3126B:ssä J1939-liitäntä (ECM-malli, diagnostiikkaliitin), ja mitä tietoja se
-  lähettää. Yhdyskäytävä vai omat anturit?
+- [x] Miten Signal K -palvelin (Pi 5) liittyy väylään: eristetty Waveshare 2-CH CAN HAT [omistaja 2026-11-08]
+- [ ] Pi:n paikka väylässä (pää vai keskellä) ja CAN HAT:n päätevastusjumpperin asento; HAT:n virrankulutus Pi:n 3 A:n syötöstä (DDR-15G-5) **⚠ ei tiedossa**
+- [x] Onko CAT 3126B:ssä J1939-liitäntä: tuskin, eikä koneessa ole ohjainyksikköä (ECU)
+  [omistaja 2026-11-08] → omat anturit (N-03)
+- [ ] Koneen anturit: kierrosanturin paikka (vauhtipyörän magneettianturi vai laturin W), omat
+  öljynpaine- ja lämpötila-anturit vai nykyisten mittarien anturit
 - [ ] Mastopudotuksen pituus tuulianturille (alle 6 m?).
-- [ ] Cerbo GX vai Cerbo GX MK2; liitetäänkö Cerbo N2K:hon vai vain verkon kautta Signal K:hon.
+- [x] Cerbo GX vai Cerbo GX MK2: MK2 hyvä ajatus [omistaja 2026-11-08]
+- [ ] Liitetäänkö Cerbo N2K:hon (MK2:n portti 1) vai vain verkon kautta Signal K:hon.
 - [ ] Muunnin 24→12 V: malli, hinta ja erotus (ehdokkaat kohdassa 5.1).
 - [ ] Laitteiden mallit ja LEN-arvot: GNSS (valmis vai `node3`), AIS B, tuulianturi,
   peräsinkulma-anturi, polttoainemittarit.

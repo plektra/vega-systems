@@ -1,6 +1,6 @@
 # Vega — sähköjärjestelmän nykytila (lähtötilanne)
 
-> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-11-07 (NMEA 2000 -selvitys), 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys) 2026-10-30 (pilssipumppujen malli ja virrat) ja 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
+> **Tila:** Runko, aloitettu 2026-10-22, päivitetty 2026-11-08 (Pi:n CAN HAT), 2026-11-07 (NMEA 2000 -selvitys), 2026-10-29 (24 V:n kuluttajat, komentosillan laitteet, NMEA 2000 -laitteet, polttava WC, sähkönjaon selvitys) 2026-10-30 (pilssipumppujen malli ja virrat) ja 2026-10-31 (kaasuliesi, yhdistetty mikro- ja sähköuuni, septi-WC). Tiedossa on vain alla oleva, enimmäkseen vuoden 2017
 > blogista. **⚠ tarkista** -merkityt kohdat pitää tarkistaa veneellä. Täydennä tietojen karttuessa.
 
 ## 1. DC-järjestelmä
@@ -113,7 +113,7 @@ Väylävirta ilmoitetaan LEN-lukuna (1 LEN = 50 mA); laitteiden LEN-arvot **⚠ 
 
 > **⚠ Huom. 2026-11-07:** ESP32-PDM-kortti on suunniteltu standardin enintään 16 V:n väylälle
 > (CAN-puolen TVS-diodi SMAJ18CA), joten se ei kestä nykyistä 24 V:n väyläsyöttöä. Suositus on
-> syöttää väylä 12 V:lla erotetulla muuntimella (ei päätetty). Koko laiteluettelo, väylien
+> syöttää väylä 12 V:lla erotetulla muuntimella; omistaja harkitsee sitä [omistaja 2026-11-08], ei päätetty. Koko laiteluettelo, väylien
 > erottelu ja luotettavuussäännöt: [design/nmea2000-network.md](design/nmea2000-network.md).
 
 | Laite | Huomiot |
@@ -153,7 +153,7 @@ Elektroniikkaa kehitetään erillisissä repoissa osoitteessa
 
 | Kohde | Repo / sijainti | Huomiot |
 |---|---|---|
-| Signal K -palvelin | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Tietokeskus; Grafana-näkymät. Pyörii konehuoneen Raspberry Pi 5:llä [omistaja 2026-10-29] |
+| Signal K -palvelin | `signalk-server`, `signalk-grafana`, `mainorg-signalk-datasource` | Tietokeskus; Grafana-näkymät. Pyörii konehuoneen Raspberry Pi 5:llä [omistaja 2026-10-29]. NMEA 2000 -väylään eristetyllä Waveshare 2-CH CAN HAT -kortilla [omistaja 2026-11-08] |
 | Kameratallennin (Frigate) | konehuoneen Intel NUC | Valvontakameran tallennus [omistaja 2026-10-29] |
 | NMEA 2000 -nodet | `plektra/vega-n2k-node1` … `node3`, `vega-n2k-node-bootstrap` | ESP32-pohjaiset N2K-nodet: node1 konehuoneen olosuhteet ja releiden tila, node2 akkumittaus (INA226), node3 keskeneräinen GNSS (NMEA 0183) [koodi luettu 2026-11-07]. Laiteluettelo: [design/nmea2000-network.md](design/nmea2000-network.md) |
 | Tehonjako (PDM) | `ESP32-PDM`, `ESP32-PDM-v1/v2/4x4/base` (KiCad) | ESP32-tehonjakomoduulit; ehdokkaita hydrauliikan solenoidien ja PVE-yksiköiden ohjaukseen ja valvontaan |
