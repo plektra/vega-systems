@@ -50,6 +50,8 @@
 
 ## 3. Laiteluettelo
 
+> **Mihin nodeen mikäkin anturi ja ohjaus tulee:** kohta [3.11 Nodejako](#311-nodejako-lisätty-2026-11-08).
+
 **Tunnukset:** `N-xx` = NMEA 2000 -laite tai -node. Mittaukset, jotka kulkevat noden tai PDM:n
 kautta, on merkitty noden alle. Mittausten tunnukset (2B1, 3B1 jne.) ovat
 [hydrauliikan kaaviosta](../../hydraulics/schematic.md).
@@ -259,6 +261,66 @@ lisäkortti (HAT) anturien sovitukseen.**
 - **Laatu.** Omissa laitteissa samat säännöt kuin valmiissa: erotettu CAN-puoli (kohta 5.5a),
   Micro-C-liitin koteloon, yksilöllinen tunnus ja instanssit (kohta 5.5), käänteisnapaisuus- ja
   ylijännitesuojaus.
+
+### 3.11 Nodejako (lisätty 2026-11-08)
+
+Ehdotus [arvio], ei päätetty. **Periaatteet:**
+
+1. **Sijainnin mukaan:** node on lähellä antureitaan, jolloin anturijohdot ovat lyhyitä ja vain
+   NMEA 2000 -kaapeli kulkee pitkälti.
+2. **Toiminnot erillään:** hydrauliikalla, koneella ja sähköllä on omat nodensa, jotta esimerkiksi
+   hyttinoden vika tai ohjelmistopäivitys ei vie hydrauliikan valvontaa.
+3. **Syöttö maadoituksen mukaan** (kohta 5.5a): *väylä* = kelluvat anturit, syöttö väylästä;
+   *24 V* = runkoon tai akkuun kytketyt anturit tai 4–20 mA, syöttö veneen 24 V:sta omalla
+   sulakkeella, CAN-puoli erotettu.
+4. **Alusta:** HALMET koneelle ja säiliöille, SH-ESP32 muille, tarvittaessa oma lisäkortti
+   (kohta 3.10). **ESP32-PDM:ssä ei ole 4–20 mA- eikä vapaita analogiatuloja** (vain 4 kytkintuloa,
+   NTC ja oma syöttöjännite, [ESP32-PDM ARCHITECTURE](https://github.com/plektra/ESP32-PDM/blob/main/docs/ARCHITECTURE.md)),
+   joten PDM:t hoitavat lähdöt ja paneelikytkimet, eivätkä ne lue antureita.
+
+Sijainnit, joita ei vielä tiedetä (säiliöt, keittiö, hytit, ohjausventtiilien paikka), on merkitty
+**⚠**. Jako tarkistetaan, kun keskusten paikat päätetään.
+
+#### Omat anturinodet
+
+| Node | Alusta | Sijainti | Syöttö | Anturit ja tulot | Ohjaukset ja lähdöt | Tila |
+|---|---|---|---|---|---|---|
+| **S1 Kone** (N-03) | HALMET (tai SH-ESP32 ja lisäkortti) | konehuone, koneen kylki | 24 V (koneen anturit ovat koneen rungossa) | kierrokset (magneettianturi, 126 hammasta); öljynpaine; jäähdytysnesteen lämpötila; vaihteiston öljynpaine ja -lämpötila (N-20); merivesivirtauksen tai impellerin hälytys (N-20); pakokaasun lämpötila (N-20, termopari vaatii vahvistimen lisäkortille); päivätankin pinta (N-40), jos tankki on konehuoneessa **⚠** | – | ehdotus |
+| **S2 Hydrauliikka** | SH-ESP32 ja oma lisäkortti (4 × 4–20 mA, digitaalitulot) | konehuone, hydrauliikkasäiliön ja PVG 32:n lähellä **⚠** | 24 V (4–20 mA -silmukat) | 3B1 öljyn lämpötila; 2B1 P2:n imupaine; 2B2 P2:n lähtöpaine; 1B2 ohjauspaine; öljynpinta; suodattimen paine-erokytkin; PVEH:n vikasignaali; P3-varapumpun käynti (kontaktorin apukosketin) | – (lähdöt hydrauliikan PDM:llä, alla) | ehdotus |
+| **S3 Sähkö** (node2 uudistettuna tai SH-ESP32) | node2 / SH-ESP32 | konehuone, pääjakelu (PJ) | 24 V **TK-kiskosta**, jotta mittaus toimii, vaikka käyttöakusto kytkeytyy irti | käynnistysakkujen jännite (N-22); TK-kiskon molempien syöttöjen jännitteet (N-23); pilssi- ja ylävesihälyttimen kosketin (N-24), jos pilssi on lähellä **⚠**; akkujen lämpötilat (DS18B20) | – | ehdotus; node2 olemassa |
+| **node1** (N-30) | oma (ISO1044) | konehuone | nykyinen | konehuoneen lämpötila, kosteus ja ilmanpaine; kotelon lämpötila; Raspberry Pi:n virran tila | releet (3 × DC, AC); Pi:n sammutus | olemassa |
+| **S4 Komentosilta** | SH-ESP32 | komentosilta, kattopaneelin takana | 24 V (joystickin potentiometri saa syöttönsä PVEH:n 24 V:sta, joten se viittaa akun miinukseen) | keulapotkurin joystickin asento (jännitejakajan kautta, [bow-thruster-control 4](../../hydraulics/design/bow-thruster-control.md#4-suositus-arvio-suora-joystick-ja-esp32-pdm-valvojana)); komentosillan lämpötila; ulkolämpötila (N-32); NMEA 2000 -väylän jännite tällä väylän päässä (N-05); kattopaneelin sivunvaihtopainikkeet (USB HID omalle näytölle, [bridge-mfd 4.3](bridge-mfd.md#43-käyttö)) | hälytyssummeri | ehdotus |
+| **S5 Asuintilat ja lämmitys** | SH-ESP32 | asuintilojen keskellä **⚠** | väylä (kelluvat anturit) | hyttien ja salongin lämpötilat (1-Wire-ketju, N-31); lämmityksen meno- ja paluuveden lämpötila; savu- ja häkävaroittimien koskettimet (N-34); kaasuhälyttimen kosketin ja magneettiventtiilin tila (N-33), jos keittiö on lähellä **⚠** | – (puhallinkonvektorit KH-07 PDM:llä) | ehdotus |
+| **S6 Säiliöt** | HALMET | säiliöiden lähellä **⚠**; yhdistetään S1:een tai S5:een, jos säiliöt ovat lähellä | 24 V (säiliöanturit ovat yleensä runkoon kytkettyjä vastusantureita) | käyttövesi (N-41); harmaavesisumppu ja septi (N-42); polttoaine (N-40), jos ei S1:ssä | – | ehdotus |
+| node3 (GNSS-kokeilu) | oma | – | – | GNSS (varalaite) | – | keskeneräinen |
+
+#### ESP32-PDM-kortit (lähdöt ja paneelikytkimet)
+
+| Kortti | Sijainti | Lähdöt ([piirilista](circuit-list.md)) | Tulot |
+|---|---|---|---|
+| PDM KS-1…3 (4-kanavaiset) | komentosilta, alle 10 m kattopaneelista | KS-01…KS-14 (valot, AIS, FM-radio, pyyhkijät, huurunpoisto, navigointitietokone) | kattopaneelin kytkimet |
+| PDM KH-1…3 (4-kanavaiset) | konehuone, KH | KH-01…KH-07 (pumput, puhaltimet, valaistus, puhallinkonvektorit) | konehuoneen kytkimet |
+| PDM hc-1…2 (suurivirta) | lähellä TK-kiskoa | pilssipumppujen pakotettu käyttö (N-25: lähtö näkee myös kohokytkimen käynnistämän pumpun) | – |
+| **PDM Hydrauliikka** (4-kanavainen) | konehuone, PVG 32:n lähellä **⚠** | PVEO (vinssi), BAV-713:n kelat, PVEH:n sallintarele, hälytyssummeri konehuoneessa | hydrauliikan kytkimet |
+
+**⚠ Piirilistan PDM-kanavalaskelmassa ei ole hydrauliikan lähtöjä.** Tarvitaan siis
+todennäköisesti yksi 4-kanavainen kortti lisää (noin 7 + 2) [laskelma].
+
+#### Suoraan väylään liittyvät valmiit laitteet
+
+| Laite | Sijainti |
+|---|---|
+| Signal K -palvelin (Pi 5 + CAN HAT), Cerbo GX MK2 | konehuone |
+| Simrad NSS evo3, AIS, autopilotin ohjausyksikkö ja paneeli | komentosilta / kattopaneeli |
+| GNSS-antenni | katto |
+| Tuulianturi | masto |
+| Kompassi / suunta-anturi (ehdotus) | lähellä painopistettä **⚠** |
+| Kaiku ja loki (ehdotus) | pohja |
+| Peräsinkulma-anturi (autopilotin mukana) | peräsinakseli |
+
+**Yhteensä [arvio]:** 6–7 omaa anturinodea, noin 9 PDM-korttia ja 8–10 valmista laitetta, eli
+noin 25 väylälaitetta. Raja on 50 laitetta (kohta 5.2), ja väylävirran arvio (kohta 3.9) pysyy
+noin 1,5 A:ssa.
 
 ## 4. Väylät erillään
 
@@ -511,6 +573,7 @@ käyttöönottoa.**
 - [x] Cerbo GX vai Cerbo GX MK2: MK2 hyvä ajatus [omistaja 2026-11-08]
 - [ ] Liitetäänkö Cerbo N2K:hon (MK2:n portti 1) vai vain verkon kautta Signal K:hon.
 - [ ] Muunnin 24→12 V: malli, hinta ja erotus (ehdokkaat kohdassa 5.1).
+- [ ] Nodejaon sijainnit (kohta 3.11): säiliöt, keittiö (kaasuhälytin), hytit, PVG 32 ja hydrauliikkasäiliö, pilssihälytin
 - [ ] Laitteiden mallit ja LEN-arvot: GNSS (valmis vai `node3`), AIS B, tuulianturi,
   peräsinkulma-anturi, polttoainemittarit.
 - [ ] Tuleeko kompassi / suunta-anturi ja kaiku listaan (ehdotus N-14, N-15)?

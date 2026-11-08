@@ -124,6 +124,6 @@ Analogiset 1G1 ja 2G1 jäävät, jotta paineen näkee myös ilman sähköä tai 
 ## Avoimet kysymykset
 
 - [ ] Hyväksytäänkö ehdotus (2B2, 1B2, mittausliittimet, 3G2)?
-- [ ] Anturien malli ja liitäntä (4–20 mA vai 0,5–4,5 V; ESP32 PDM -kortin tulot)
+- [ ] Anturien malli ja liitäntä (4–20 mA vai 0,5–4,5 V). ESP32-PDM:ssä ei ole 4–20 mA -tuloja, joten anturit tulevat hydrauliikan omaan anturinodeen S2 (ehdotus 2026-11-08, [nmea2000-network 3.11](../../electrics/design/nmea2000-network.md#311-nodejako-lisätty-2026-11-08))
 - [ ] Signal K -polut ja NMEA 2000 -lähetys (PGN 130314, paineen lähdeluokka ⚠ tarkista)
 - [ ] 1G1:n ja 2G1:n mittausalueet ja kunto
