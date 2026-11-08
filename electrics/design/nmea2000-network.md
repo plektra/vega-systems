@@ -350,6 +350,8 @@ Omistajien suunnitelma: GNSS/RTK toteutetaan **Unicore UM982** -moduulilla ja ka
   tutkan säteestä sekä VHF- ja AIS-antenneista [arvio]. **Antennien pitää tukea myös Galileo
   E6 -taajuutta** (HAS, alla); kaikki L1/L2/L5-antennit eivät tue, **⚠ tarkista** antennin
   datalehdestä.
+- **Moduulikortti:** ehdokas [AliExpress 1005007998167643](https://www.aliexpress.com/item/1005007998167643.html)
+  [omistaja 2026-11-08]; tiedot **⚠ ei tiedossa** (sivu ei avautunut 2026-11-08).
 - **Liitäntä:** UM982 antaa NMEA 0183- ja Unicoren omat viestit sarjaliitännästä. Oma node S7
   (SH-ESP32) muuntaa ne NMEA 2000 -viesteiksi (129025, 129026, 129029, 126992, 127250, 127251,
   127257) ja välittää RTK-korjaukset moduulille. Liitäntöjen ja virrankulutuksen tarkat arvot
@@ -630,7 +632,7 @@ käyttöönottoa.**
 - [ ] Tuleeko kaiku listaan (N-15), ja tarvitaanko magneettinen varasuunta-anturi autopilotille?
 - [x] UM982:n antennit: komentosillan katolle keskelle, kölilinjan suuntaisesti noin 1,5–2,0 m:n välein [omistaja 2026-11-08]
 - [x] Tarkkuuskorjaukset: Galileo E6-HAS [omistaja 2026-11-08]
-- [ ] UM982: moduulikortin malli, laiteohjelmiston E6-HAS-tuki ja signaaliryhmä 3 6 kahden antennin suunnan kanssa; E6-taajuutta tukevat antennit
+- [ ] UM982: moduulikortin malli (ehdokas [AliExpress 1005007998167643](https://www.aliexpress.com/item/1005007998167643.html) [omistaja 2026-11-08]; sivu ei avautunut istunnosta, joten liitännät, antennit, syöttö ja hinta **⚠ ei tiedossa**), laiteohjelmiston E6-HAS-tuki ja signaaliryhmä 3 6 kahden antennin suunnan kanssa; E6-taajuutta tukevat antennit
 - [ ] Simrad NSS7 vai NSS9 evo3; tarvitseeko oma monitoiminäyttö oman CAN-liitännän (toimii ilman Pi:tä)?
 - [ ] Kattopaneelin mitat ja komentosillan PDM:ien paikka (paneelikaapeli enintään 10 m)
 - [ ] VHF Sailor RT2048:n liitäntä (NMEA 0183 vai N2K) ja tarvitseeko se GPS-sijainnin DSC:lle.
