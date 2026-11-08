@@ -106,6 +106,21 @@ joystickin liukuja (jakajan kautta) ──► ESP32 ADC ──► Signal K (käy
   Releen koskettimen pitää kestää PVEH:n virta (**⚠ tarkista** PVEH:n datalehdestä); kelan virta on
   tyypillisesti kymmeniä milliampeereja, joten pieni PDM-kanava riittää. Jos PDM:n suojausta ei
   haluta, rele jätetään kokonaan pois. **Pätevän henkilön tarkistettava.**
+- **Sallintareleen logiikka ja riippuvuus väylästä [arvio, lisätty 2026-11-08]:** hälytystiedot
+  (öljyn lämpötila 3B1, imupaine 2B1) tulevat anturinodelta S2 NMEA 2000 -väylän kautta PDM:lle
+  ([nmea2000-network 3.11](../../electrics/design/nmea2000-network.md#311-nodejako-lisätty-2026-11-08)).
+  Potkurin *toiminta* ei siis riipu väylästä, mutta *katkaisupäätös* riippuu. Siksi:
+  1. **Puuttuva, vanhentunut tai alueen ulkopuolinen arvo** (anturivika, alle 4 mA, node
+     kadonnut väylältä) antaa vain hälytyksen, ei katkaisua.
+  2. **Ei katkaisua käytön aikana:** kun joystick on poikkeutettu (asento S4:ltä tai PVEH:n
+     tilasta), PDM vain hälyttää. Sallinta pudotetaan vasta, kun joystick on keskellä, eli uusi käyttö
+     estetään, mutta käynnissä oleva liike ei katkea. Jos joystickin asentotieto puuttuu, ei katkaista.
+  3. **Viive ja hystereesi:** raja-arvon pitää ylittyä yhtäjaksoisesti (esim. 10–30 s, **⚠ arvio**).
+  4. **Ohituskytkin ruorissa** (merkitty, esim. kääntökytkin kelan johtoon), jolla automaattinen
+     katkaisu ohitetaan.
+  Yksinkertaisin vaihtoehto on jättää automaattinen katkaisu kokonaan pois ja vain hälyttää:
+  öljyn kuumeneminen muutamassa minuutissa on vähemmän vaarallista kuin potkurin katoaminen
+  rantautumisessa. Omistajat päättävät.
 - ESP32 lukee vikanastan ja joystickin asennon ja vie ne Signal K:hon. Joystickin jännite pitää
   jakaa ESP:n ADC-alueelle; suhteellisuuden vuoksi myös syöttöjännite mitataan.
 - **Käsivipu (PVM)** on varaohjaus veneen sisällä, jos sähköohjaus pettää, ks.
@@ -163,6 +178,7 @@ nykyisen on/off-ohjauksen kaltainen; välinopeuksia saa lisäämällä kytkinase
 | Signaali ei seuraa syöttöä (väärä kytkentä, kiinteä lähde) | Kara aukeaa osittain ilman ohjausta | Kytkentä aina PVEH:n omasta syötöstä; käyttöönotossa tarkistetaan keskiasento kahdella syöttöjännitteellä |
 | PVEH:n sisäinen vika, kara jumissa | Potkuri pyörii tai ei pyöri | Vikasignaali, hätäseis, venttiilin paineenrajoitin rajaa paineen |
 | ESP32-PDM vikaantuu | Valvonta ja hälytykset puuttuvat; perusohjaus toimii | Sallintareleen kytkentä niin, ettei PDM:n vika estä hätäseisiä **⚠ suunnittele** |
+| NMEA 2000 -väylä, anturinode S2 tai anturi vikaantuu (lisätty 2026-11-08) | Lepokosketinkytkennällä potkuri toimii; PDM ei saa hälytystietoja eikä katkaise. **Vaara on väärä katkaisu:** viallinen anturi tai virheellinen arvo voisi pysäyttää potkurin kesken rantautumisen | Ks. alla *Sallintareleen logiikka* |
 
 ## 6. Käyttöönotto
 
@@ -180,4 +196,5 @@ nykyisen on/off-ohjauksen kaltainen; välinopeuksia saa lisäämällä kytkinase
 - [ ] Joystickin valinta: ehdokkaat kirjattu (suositus JH-D202X-R2 5K, noin 11–23 $; PVREL liian kallis [omistaja 2026-11-02]); omistajat päättävät. Tarkista PVREL:n datalehdestä lähdön suhteellisuus syöttöön, liitäntä ja keskiasentokytkimen kuormitettavuus
 - [ ] Ohjauspaikkojen määrä ja sijainnit ([vaatimukset §10.2](../requirements.md#102-ohjaus))
 - [ ] Sallintareleen ja hätäseisin kytkentä sekä ESP32-PDM:n rooli siinä (pätevä henkilö tarkistaa)
+- [ ] Omistajat: automaattinen katkaisu hälytyksestä (logiikka yllä) vai pelkkä hälytys ja rele pois?
 - [ ] Omistajat: perusohjaus suoralla joystickilla (suositus) vai heti ESP32-signaalilla
