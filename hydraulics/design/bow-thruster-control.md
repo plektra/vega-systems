@@ -121,6 +121,55 @@ joystickin liukuja (jakajan kautta) ──► ESP32 ADC ──► Signal K (käy
   Yksinkertaisin vaihtoehto on jättää automaattinen katkaisu kokonaan pois ja vain hälyttää:
   öljyn kuumeneminen muutamassa minuutissa on vähemmän vaarallista kuin potkurin katoaminen
   rantautumisessa. Omistajat päättävät.
+
+#### Toteutus: ei katkaisua joystickin ollessa käännettynä [arvio, lisätty 2026-11-08]
+
+**Ensisijainen: johdotettu lukitus ilman ohjelmistoa.** Katkaisun voi *aloittaa* vain, kun
+joystick on keskellä, ja katkaisu pysyy päällä releen omalla pitokoskettimella:
+
+```
+PDM-lähtö (24 V) ──┬── joystickin keskiasentokytkin (kiinni vain keskellä) ──┬──► releen K1 kela ── 0 V
+                   └── K1:n sulkeutuva apukosketin (pitopiiri) ─────────────┘
+
+Hätäseis ── pääkytkin ── K1:n avautuva kosketin (NC) ── ohituskytkin rinnalla ──► PVEH 24 V
+```
+
+- **Rele K1 on kaksinapainen:** yksi avautuva kosketin (NC) PVEH:n syötölle ja yksi sulkeutuva
+  (NO) pitopiirille.
+- **Toiminta:** PDM kytkee lähtönsä päälle, kun hälytys on voimassa. Jos joystick on käännettynä,
+  keskiasentokytkin on auki, kelaan ei tule virtaa, ja potkuri toimii. Kun joystick palaa keskelle,
+  kela saa virran, NC-kosketin katkaisee PVEH:n syötön, ja NO-kosketin pitää kelan päällä, vaikka
+  joystickia käännettäisiin taas. Katkaisu päättyy vasta, kun PDM kytkee lähtönsä pois.
+- **Riippumaton väylästä ja ohjelmistosta:** ohjelmistovirhe, väylä tai anturinode S4 eivät voi
+  katkaista potkuria kesken liikkeen, koska keskiasentokytkin estää sen fyysisesti.
+- **Keskiasentokytkin:** suositeltu JH-D202X-R2 -joystick ei sisällä sellaista. Vaihtoehdot:
+  mikrokytkin, jota joystickin varsi painaa keskiasennossa (sopii suunniteltuun 3D-tulostettuun
+  uraohjaimeen), joystick jossa kytkin on valmiina (esim. Danfoss PVREL 155U2605, kallis), tai
+  ikkunavertailija joystickin signaalista (lisäelektroniikkaa, ei suositeltu). Kytkimen
+  sulkeutumisalueen pitää olla PVEH:n kuolleen alueen sisällä (**⚠ tarkista** PVEH:n datalehdestä).
+- **Vikatilat:** keskiasentokytkin jumittuu auki → PDM ei pysty katkaisemaan, potkuri toimii (hälytys
+  jää). Jumittuu kiinni → katkaisu voi tapahtua kesken käytön, kuten ilman lukitusta; ohituskytkin
+  palauttaa toiminnan. K1:n pitokosketin jumittuu kiinni → katkaisu ei vapaudu PDM:n käskystä;
+  ohituskytkin palauttaa toiminnan.
+
+**Toissijainen: ohjelmistotarkistus PDM:ssä.**
+
+- Anturinode S4 mittaa joystickin liukujan jännitteen ja syöttöjännitteen ja laskee niiden suhteen
+  (keskiasento 0,5; PVEH:n ohjausalue 0,25–0,75). Se lähettää asennon väylään, esim. NMEA 2000:n
+  keulapotkuriviestillä 128006 *Thruster Control Status* (kenttien käyttö **⚠ tarkista**) ja
+  Signal K:hon.
+- PDM kytkee lähtönsä vain, kun (1) hälytysehto on voimassa viiveen yli, (2) S4:n tuore viesti
+  (alle noin 1 s vanha) kertoo joystickin olleen keskellä (esim. 0,5 ± 0,03, **⚠ arvio**) vähintään
+  noin 2 s ja (3) ohituskytkin ei ole päällä. Puuttuva tai vanha asentotieto → ei katkaisua, vain
+  hälytys.
+- **Sallinnan palautus** (PDM-lähtö pois) tehdään myös vasta joystickin ollessa keskellä, jotta
+  potkuri ei käynnisty nykäyksellä, jos joystick on palautushetkellä käännettynä. Miten PVEH toimii,
+  kun syöttö palaa signaalin ollessa keskiasennon ulkopuolella, **⚠ tarkista** PVEH:n datalehdestä.
+- Ohjelmistotarkistus on lisäkerros; johdotettu lukitus estää katkaisun kesken käytön, vaikka
+  ohjelmisto toimisi väärin.
+
+**Hankintoihin tämän myötä:** kaksinapainen 24 V:n rele (NC + NO), keskiasennon mikrokytkin ja
+merkitty ohituskytkin. **Pätevän henkilön tarkistettava ennen rakentamista.**
 - ESP32 lukee vikanastan ja joystickin asennon ja vie ne Signal K:hon. Joystickin jännite pitää
   jakaa ESP:n ADC-alueelle; suhteellisuuden vuoksi myös syöttöjännite mitataan.
 - **Käsivipu (PVM)** on varaohjaus veneen sisällä, jos sähköohjaus pettää, ks.
@@ -198,5 +247,7 @@ nykyisen on/off-ohjauksen kaltainen; välinopeuksia saa lisäämällä kytkinase
 - [ ] Sallintareleen ja hätäseisin kytkentä sekä ESP32-PDM:n rooli siinä (pätevä henkilö tarkistaa)
 - [x] Sallintarele pidetään suunnitelmassa toistaiseksi (lepokosketin, katkaisulogiikka yllä) [päätös 2026-11-08](../../decisions.md)
 - [ ] Omistajat: lopullisesti automaattinen katkaisu vai pelkkä hälytys (rele pois)?
-- [ ] Sallintareleen malli: koskettimen virta PVEH:n mukaan (**⚠ tarkista** PVEH:n datalehdestä), kela 24 V; ohituskytkimen malli ja merkintä
+- [ ] Sallintareleen malli: kaksinapainen (NC + NO), koskettimen virta PVEH:n mukaan (**⚠ tarkista** PVEH:n datalehdestä), kela 24 V; ohituskytkimen malli ja merkintä
+- [ ] Joystickin keskiasentokytkin: mikrokytkin uraohjaimeen; kytkimen sulkeutumisalue PVEH:n kuolleen alueen sisällä
+- [ ] PVEH:n toiminta, kun syöttö palaa signaalin ollessa keskiasennon ulkopuolella (datalehti)
 - [ ] Omistajat: perusohjaus suoralla joystickilla (suositus) vai heti ESP32-signaalilla
