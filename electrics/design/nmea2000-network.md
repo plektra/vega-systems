@@ -423,6 +423,28 @@ yöajoon (kuten [bridge-mfd 4.4](bridge-mfd.md#44-näyttölaite)), ja tietokone,
 katkeamisen (SSD, automaattinen käynnistys). Navigointitietokoneen ja oman monitoiminäytön voi
 myöhemmin toteuttaa samalla tietokoneella, mutta erillisinä ne varmistavat toisiaan.
 
+### 3.14 NMEA 2000:n ja Signal K:n työnjako (lisätty 2026-11-08)
+
+**NMEA 2000 on laitteiden välinen reaaliaikainen väylä, Signal K sen päällä toimiva tietopalvelin
+[arvio].**
+
+| | NMEA 2000 | Signal K (Pi 5) |
+|---|---|---|
+| Mitä se on | 250 kbit/s:n CAN-väylä, laitteet puhuvat suoraan toisilleen | palvelin, joka kokoaa kaikki tiedot yhteen tietomalliin ja jakaa ne IP-verkossa (Wi-Fi, Ethernet, 4G) |
+| Toimii ilman tietokonetta | ✅ | ❌ (Pi:n varassa) |
+| Laitteet | merielektroniikka: Simrad, autopilotti, AIS, tuulianturi, GNSS, nodet, PDM:t | puhelimet, tabletit, oma monitoiminäyttö, OpenCPN, Grafana, etäkäyttö |
+| Tietosisältö | vakioviestit (PGN:t); muulle tiedolle valmistajakohtaiset viestit | vapaat polut, myös hydrauliikalle (`hydraulics.*`), SI-yksiköt, dokumentoitu JSON |
+| Muut lähteet | vain N2K-laitteet | Victron (Cerbo GX verkon kautta), NMEA 0183 (VHF), Wi-Fi-nodet, sää- ja karttapalvelut |
+| Historia ja lokitus | ei | tallennus (esim. InfluxDB) ja Grafana-käyrät |
+| Hälytykset | laitteiden omat | yhteiset raja-arvot, kuittaus, ilmoitus puhelimeen 4G:n kautta myös veneen ulkopuolelle |
+| Lasketut arvot ja logiikka | ei | esim. tosituuli, akkujen jäljellä oleva aika, koneen käyttötunnit, yötilan aika auringonlaskusta; automaatio (Node-RED) |
+
+**Sääntö:** turvallisuuden ja navigoinnin kannalta välttämätön kulkee NMEA 2000:ssa tai
+johdotettuna, ei Signal K:n kautta. Autopilotti saa suunnan ja sijainnin UM982:lta suoraan
+väylästä, Simrad toimii ilman Pi:tä, PDM:ien paneelikytkimet toimivat ilman väylää, ja pilssi- ja
+kaasuhälyttimillä on paikallinen summeri. Signal K tuo valvonnan, historian, etäkäytön ja
+Vegan omat tiedot (hydrauliikka, sähkö), joille NMEA 2000:ssa ei ole vakioviestejä.
+
 ## 4. Väylät erillään
 
 | Väylä | Nopeus | Laitteet | Liitos muihin |
