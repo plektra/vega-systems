@@ -203,6 +203,39 @@ GNSS, tuuli, peräsinkulma, kompassi, kaiku ja polttoainemittari (oletus 1–3 L
 kaapeli kestää 3 A syöttöpisteen kummallekin puolelle ([Actisense](https://actisense.com/news/3-fundamentals-of-designing-an-nmea-2000-network/)),
 joten yksi syöttöpiste riittää. Lasketaan uudelleen, kun laitteet valitaan.
 
+### 3.10 Omat vai valmiit laitteet (lisätty 2026-11-08)
+
+**Periaate [arvio]:** valmis laite, kun kyse on anturin fysiikasta, mekaniikasta, säänkestosta tai
+viranomaisvaatimuksista; oma laite, kun valmista ei ole tai kun kyse on Vegan omasta logiikasta.
+Välimuotona avoin valmis ESP32-laitteisto (Hat Labs), johon tehdään vain oma ohjelmisto.
+
+| Laiteryhmä | Suositus | Perustelu |
+|---|---|---|
+| GNSS, tuulianturi, kompassi / suunta, kaiku ja loki | **valmis** N2K-laite | kalibrointi, säänkesto ja anturitekniikka; valmiit ovat edullisia verrattuna omaan työhön. `node3`-GNSS kannattaa jättää kokeiluksi tai varalaitteeksi |
+| AIS (lähettävä, luokka B) | **valmis**, pakollisesti | lähettävän AIS-laitteen pitää olla tyyppihyväksytty |
+| Autopilotti ja sen peräsinkulma-anturi | **valmis**, samaa järjestelmää (esim. Simradin, jos NSS valitaan) | turvallisuuskriittinen; peräsinkulma-anturi tulee yleensä autopilotin mukana |
+| Simrad NSS, Cerbo GX, JK-BMS | valmis (päätetty tai suunniteltu) | – |
+| Koneen anturit (kierrokset, öljynpaine, jäähdytysneste) | **välimuoto: Hat Labs HALMET** (ESP32, resistiiviset ja jännitetulot sekä pulssitulot, oma N2K-liitäntä, SensESP-ohjelmisto) ([docs](https://docs.hatlabs.fi/halmet/)); valmis vaihtoehto **Actisense EMU-1** (tukee magneettianturia, ±3…±60 V, 4–50 000 Hz; syöttö 9–35/40 V; noin 450–650 £/$, lisäksi Actisense-sovitin asetuksiin) ([Force 4](https://force4.co.uk/item/Actisense/EMU-1-Engine-Monitoring-Unit/ANJ), [Navstore](https://navstore.com/products/actisense-emu-1-engine-monitoring-unit-nmea-2000)) | HALMET on todennäköisesti selvästi halvempi ja sopii Signal K -ympäristöön; sopiiko sen pulssitulo suoraan passiiviselle magneettianturille, **⚠ tarkista** HALMETin laitteistodokumentaatiosta (muuten MAX9924-sovitin, ks. 3.3). HALMETin hinta **⚠ ei tiedossa** |
+| Säiliöt (polttoaine, vesi, harmaa- ja septivesi) | **HALMET** (resistiiviset ja jänniteanturit) tai valmiit N2K-säiliöanturit | sama kortti voi lukea koneen ja säiliöiden anturit, jos ne ovat lähellä toisiaan |
+| Lämpötilat, kosteus, kuivakoskettimet (pilssi- ja kaasuhälyttimet), jännitteet | **omat nodet** (nykyiset node1 ja node2, tai Hat Labs SH-ESP32 / HALMET -pohja) | yksinkertaisia ja halpoja; valmiit N2K-laitteet maksavat moninkertaisesti |
+| Hydrauliikan anturit ja valvonta | **oma** (ESP32-PDM tai oma node) | valmista tuotetta ei ole; Vegan oma logiikka ja hälytysrajat |
+| Tehonjako ja kytkimet | **oma ESP32-PDM** (päätetty 2026-10-31) | jo pitkällä omana projektina |
+
+**Omien laitteiden hinta ei ole vain osien hinta [arvio]:**
+
+- **Ylläpito ja henkilöriippuvuus.** Omat laitteet tarvitsevat ohjelmistopäivitykset, dokumentaation
+  ja varaosat. Molempien omistajien pitää pystyä vaihtamaan viallinen node, myös sen, joka ei ole
+  rakentanut sitä. Siksi kannattaa käyttää **yhtä yhteistä node-alustaa** (sama kortti, sama
+  ohjelmistopohja, esim. SensESP ja NMEA2000-kirjasto) eikä tehdä jokaiselle mittaukselle omaa
+  piirilevyä. Pidä vähintään yksi valmiiksi ohjelmoitu varanode.
+- **Sertifiointi.** Omat laitteet eivät ole NMEA-sertifioituja. Vakio-PGN:t näkyvät yleensä myös
+  kaupallisissa näytöissä, mutta Simradin kanssa se **⚠ tarkista** käytännössä (esim. lämpötilat ja
+  kytkinpankit). Hydrauliikan kaltaiset Vega-kohtaiset tiedot näytetään omalla näytöllä Signal K:n
+  kautta ([bridge-mfd](bridge-mfd.md)).
+- **Laatu.** Omissa laitteissa samat säännöt kuin valmiissa: erotettu CAN-puoli (kohta 5.5a),
+  Micro-C-liitin koteloon, yksilöllinen tunnus ja instanssit (kohta 5.5), käänteisnapaisuus- ja
+  ylijännitesuojaus.
+
 ## 4. Väylät erillään
 
 | Väylä | Nopeus | Laitteet | Liitos muihin |
