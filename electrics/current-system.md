@@ -134,7 +134,7 @@ kaapeloinnin ja kiinnitysten suunnittelua varten; laitteiden tehot ovat kohdissa
 | VHF-antenni | masto | koaksiaali VHF:lle (Sailor RT2048) | |
 | FM-antenni | masto | koaksiaali FM-radiolle | |
 | AIS-antenni | masto | koaksiaali AIS-laitteelle | AIS luokka B (kohta 3.2) [omistaja 2026-10-29] |
-| GNSS-antennit, 2 kpl (UM982) | katto | 2 koaksiaalia moduulille | Antennien väli vähintään noin 30 cm, mieluiten 1 m tai enemmän, kölin suuntaisesti [arvio]; paikat auki [omistaja 2026-11-08] |
+| GNSS-antennit, 2 kpl (UM982) | komentosillan katto | 2 koaksiaalia moduulille | Komentosillan katon keskelle, kölilinjan suuntaisesti noin 1,5–2,0 m:n välein; korjaukset Galileo E6-HAS:lla, joten antennien pitää tukea E6-taajuutta [omistaja 2026-11-08] |
 | Mastovalo | masto | 24 V | Osa kulkuvaloja (10 W) [omistaja 2026-10-29] |
 | Ankkurivalo | masto | 24 V, enintään 5 W | Olemassa (kohta 3.2) |
 | Kulkuvalot | katto | 24 V | Olemassa (kohta 3.2) |

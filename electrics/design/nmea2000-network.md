@@ -343,24 +343,30 @@ Omistajien suunnitelma: GNSS/RTK toteutetaan **Unicore UM982** -moduulilla ja ka
   [datalehti Unicore UM982](https://en.unicore.com/uploads/file/UM982_User%20Manual_EN_R1.7.pdf). GNSS-suunta on tosisuunta, johon teräsrunko ja sähkökaapelit eivät vaikuta, joten
   erillistä magneettikompassia ei tarvita autopilotille eikä tutkan karttapäällykselle (N-14).
   Suunta toimii myös ilman RTK-korjauksia [arvio].
-- **Antennit [arvio]:** katolle tukevasti, mahdollisimman pitkälle toisistaan (tarkkuus paranee välin
-  mukana; vähintään noin 30 cm, Holybro: [H-RTK UM982](https://holybro.com/products/h-rtk-um982)),
-  mieluiten kölin suuntaisesti, esteetön taivas, erilleen tutkan säteestä ja VHF- ja AIS-antenneista.
-  Antennien väli mitataan tarkasti ja syötetään moduulille. Omistaja päättää paikat.
+- **Antennit:** komentosillan katolle, keskelle kattoa, **kölilinjan suuntaisesti noin 1,5–2,0 m:n
+  päähän toisistaan** [omistaja 2026-11-08]. Suuntatarkkuus paranee suunnilleen antennivälin
+  suhteessa: 0,1° / 1 m vastaa noin **0,05–0,07°** 1,5–2,0 m:n välillä [laskelma, oletus:
+  käänteinen verrannollisuus]. Antennien tarkka väli mitataan ja syötetään moduulille. Pidä erillään
+  tutkan säteestä sekä VHF- ja AIS-antenneista [arvio]. **Antennien pitää tukea myös Galileo
+  E6 -taajuutta** (HAS, alla); kaikki L1/L2/L5-antennit eivät tue, **⚠ tarkista** antennin
+  datalehdestä.
 - **Liitäntä:** UM982 antaa NMEA 0183- ja Unicoren omat viestit sarjaliitännästä. Oma node S7
   (SH-ESP32) muuntaa ne NMEA 2000 -viesteiksi (129025, 129026, 129029, 126992, 127250, 127251,
   127257) ja välittää RTK-korjaukset moduulille. Liitäntöjen ja virrankulutuksen tarkat arvot
   **⚠ tarkista** moduulin käyttöohjeesta.
-- **RTK-korjaukset:** navigointiin riittää tavallinen GNSS-tarkkuus (SBAS, metrin luokkaa), joten RTK
-  on lisä, esim. ankkurivahtiin ja tarkkaan ajoon [arvio]. Lähteet:
-  - **Maanmittauslaitoksen FINPOS-RTK myönnetään vain tutkimukseen ja testaukseen,** kolmeksi
-    kuukaudeksi kerrallaan, ei tuotantokäyttöön ([MML FINPOS RTK](https://www.maanmittauslaitos.fi/en/finpos/rtk)).
-    **FINPOS DGNSS on maksuton** rekisteröitymällä.
-  - Kaupalliset RTK-verkot: HxGN SmartNet, Geotrim Trimnet, Karera RTKnet, Topcon TopNet (hinnat
-    **⚠ ei tiedossa**).
-  - Yhteisöpohjainen RTK2Go (ilmainen NTRIP-palvelu; ehdot ja tukiasemien kattavuus **⚠ tarkista**).
-  - Korjaukset kulkevat 4G-modeemin (RUT240) ja verkon kautta: NTRIP-asiakas Signal K -palvelimella
-    tai S7:ssä → RTCM moduulille.
+- **Tarkkuuskorjaukset: Galileo E6-HAS** [omistaja 2026-11-08]. Galileo High Accuracy Service on
+  maksuton, ja korjaukset tulevat suoraan satelliiteista E6-B-signaalissa, joten nettiyhteyttä ei
+  tarvita. Initial Service (käytössä 24.1.2023 alkaen): vaakatarkkuus alle 20 cm (95 %), pystytarkkuus
+  alle 40 cm, alkujakso (konvergenssi) noin 300 s ([GSC: Galileo HAS](https://gsc-europa.eu/galileo/services/galileo-high-accuracy-service-has),
+  [EUSPA](https://www.euspa.europa.eu/newsroom-events/news/have-you-met-has)). UM982 tukee E6-HAS:ia;
+  E6 otetaan käyttöön signaaliryhmällä `CONFIG SIGNALGROUP 3 6` (oletus on 4/5), ja tuki voi riippua
+  laiteohjelmistosta, **⚠ tarkista** versio ([Unicore UM982](https://en.unicore.com/products/um982),
+  [ArduSimple: UM982:n asetukset](https://www.ardusimple.com/how-to-configure-unicore-um980-um981-um982)).
+  Myös se, toimiiko kahden antennin suuntalaskenta samalla signaaliryhmällä, **⚠ tarkista**.
+  - HAS on PPP-ratkaisu, ei RTK: tarkkuus on desimetrien eikä senttien luokkaa, mikä riittää hyvin
+    navigointiin ja ankkurivahtiin [arvio]. Senttitason RTK vaatisi NTRIP-korjaukset verkon kautta
+    (Maanmittauslaitoksen FINPOS-RTK vain tutkimukseen ja testaukseen, [MML](https://www.maanmittauslaitos.fi/en/finpos/rtk);
+    kaupalliset verkot tai RTK2Go), joita ei nyt suunnitella.
 - **Vikatilat:** GNSS-katkos (esim. sillan alla, häirintä) vie sijainnin ja suunnan yhtä aikaa.
   Autopilotti kytkeytyy silloin pois ja hälyttää. Jos autopilotin halutaan jatkavan katkon yli,
   tarvitaan magneettinen varasuunta-anturi (N-14). Simrad saa sijainnin samasta lähteestä; erillinen
@@ -622,7 +628,9 @@ käyttöönottoa.**
   peräsinkulma-anturi, polttoainemittarit.
 - [x] Suunta-anturi: UM982 kahdella antennilla antaa suunnan [omistaja 2026-11-08]
 - [ ] Tuleeko kaiku listaan (N-15), ja tarvitaanko magneettinen varasuunta-anturi autopilotille?
-- [ ] UM982: antennien paikat ja väli (vähintään noin 1 m, kölin suuntaisesti), moduulikortin malli, RTK-korjausten lähde (kohta 3.12)
+- [x] UM982:n antennit: komentosillan katolle keskelle, kölilinjan suuntaisesti noin 1,5–2,0 m:n välein [omistaja 2026-11-08]
+- [x] Tarkkuuskorjaukset: Galileo E6-HAS [omistaja 2026-11-08]
+- [ ] UM982: moduulikortin malli, laiteohjelmiston E6-HAS-tuki ja signaaliryhmä 3 6 kahden antennin suunnan kanssa; E6-taajuutta tukevat antennit
 - [ ] Simrad NSS7 vai NSS9 evo3; tarvitseeko oma monitoiminäyttö oman CAN-liitännän (toimii ilman Pi:tä)?
 - [ ] Kattopaneelin mitat ja komentosillan PDM:ien paikka (paneelikaapeli enintään 10 m)
 - [ ] VHF Sailor RT2048:n liitäntä (NMEA 0183 vai N2K) ja tarvitseeko se GPS-sijainnin DSC:lle.
