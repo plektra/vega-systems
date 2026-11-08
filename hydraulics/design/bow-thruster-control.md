@@ -1,6 +1,6 @@
 # Keulapotkurin portaaton ohjaus: PVEH:n ohjauselektroniikka
 
-> **Tila:** selvitys ja suositus 2026-11-02 (joystick-ehdokkaat lisätty samana päivänä), ei päätetty. Turvallisuuskriittinen: pätevän henkilön
+> **Tila:** selvitys ja suositus 2026-11-02 (joystick-ehdokkaat lisätty samana päivänä), ei päätetty; sallintarele pidetään suunnitelmassa toistaiseksi (päätös 2026-11-08). Turvallisuuskriittinen: pätevän henkilön
 > pitää tarkistaa sallintaketju, kytkentä ja vikatilat ennen käyttöönottoa.
 
 Liittyy: [PVG 32 -selvitys: sähkö ja ohjaus](aux-circuit-ls-clean-sheet.md#ostettu-venttiili-danfoss-pvg-32-5-lohkoa-torifi),
@@ -196,5 +196,7 @@ nykyisen on/off-ohjauksen kaltainen; välinopeuksia saa lisäämällä kytkinase
 - [ ] Joystickin valinta: ehdokkaat kirjattu (suositus JH-D202X-R2 5K, noin 11–23 $; PVREL liian kallis [omistaja 2026-11-02]); omistajat päättävät. Tarkista PVREL:n datalehdestä lähdön suhteellisuus syöttöön, liitäntä ja keskiasentokytkimen kuormitettavuus
 - [ ] Ohjauspaikkojen määrä ja sijainnit ([vaatimukset §10.2](../requirements.md#102-ohjaus))
 - [ ] Sallintareleen ja hätäseisin kytkentä sekä ESP32-PDM:n rooli siinä (pätevä henkilö tarkistaa)
-- [ ] Omistajat: automaattinen katkaisu hälytyksestä (logiikka yllä) vai pelkkä hälytys ja rele pois?
+- [x] Sallintarele pidetään suunnitelmassa toistaiseksi (lepokosketin, katkaisulogiikka yllä) [päätös 2026-11-08](../../decisions.md)
+- [ ] Omistajat: lopullisesti automaattinen katkaisu vai pelkkä hälytys (rele pois)?
+- [ ] Sallintareleen malli: koskettimen virta PVEH:n mukaan (**⚠ tarkista** PVEH:n datalehdestä), kela 24 V; ohituskytkimen malli ja merkintä
 - [ ] Omistajat: perusohjaus suoralla joystickilla (suositus) vai heti ESP32-signaalilla
