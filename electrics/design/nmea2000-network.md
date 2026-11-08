@@ -72,7 +72,8 @@ tai Signal K:n kautta.
 | N-01 | Signal K -palvelin (Raspberry Pi 5) ja Waveshare 2-CH CAN HAT (eristetty) | konehuone | N2K kanavalla `can0`; toinen kanava vapaana (varalla tai väylän testaukseen) | kuuntelee kaikkea; lähettää tarvittaessa (esim. hälytykset, kytkinkomennot 127502) | olemassa (liitäntä auki) | [omistaja 2026-10-29] |
 | N-02 | Victron Cerbo GX, VE.Can-portti | konehuone | N2K (VE.Can → NMEA 2000 -kaapeli) | akut 127506/127508, invertteri ja lataus; vaihtoehtoisesti tiedot Signal K:hon verkon (MQTT) kautta, jolloin N2K-liitäntää ei tarvita | suunniteltu (Cerbo päätetty 2026-10-31) | [decisions 2026-10-31](../../decisions.md), [inverter-bms](inverter-bms.md) |
 | N-03 | Koneen anturinode (ESP32): kierrokset, öljynpaine, jäähdytysnesteen lämpötila, käyttötunnit | konehuone | node | 127488, 127489 | ehdotus; koneessa ei todennäköisesti ole väylää [omistaja 2026-11-08], joten J1939-yhdyskäytävää (esim. Maretron J2K100) ei tarvita | [omistaja 2026-11-08] |
-| N-04 | Navigointitietokone ja näyttö (OpenCPN tms.) | komentosilta | Signal K:n kautta (verkko), ei omaa N2K-liitäntää | – | omistajan lista | [current-system 3.2](../current-system.md#32-komentosillalta-ohjattavat-24-vn-laitteet) |
+| N-04 | Itse toteutettu monitoiminäyttö (navigointitietokone ja näyttö) | komentosillan kattopaneeli | Signal K:n kautta (Ethernet); oma N2K-liitäntä valinnainen (kohta 5.6a) | – | omistajan lista | [omistaja 2026-11-08] |
+| N-06 | Monitoiminäyttö Simrad NSS7 evo3 tai NSS9 evo3 (luultavasti) | komentosillan kattopaneeli | N2K Micro-C, 1 LEN; syöttö omasta 24 V:n piiristä (10–31,2 V); Ethernet tutkalle | kuuntelee navigointi- ja moottoritietoja, ohjaa autopilottia, jos Simrad-yhteensopiva | omistajan lista | [omistaja 2026-11-08], [datalehti Simrad NSS evo3](https://simrad-yachting.com/simrad/series/nss-evo3) |
 | N-05 | Väylän valvontanode (jännite väylän kaukaisessa päässä, virheet) | runkoväylän pää | node | 127751 (DC-jännite/virta) tai Signal K | ehdotus | kohta 5.6 |
 
 ### 3.2 Navigointi
@@ -361,6 +362,33 @@ kohdasta, ja syntyy maadoitussilmukka (kohta 5.4).
 - Veneen 24 V:sta syötetty node tarvitsee oman sulakkeen, ja se kytketään jatkuvien kuormien
   ryhmään tai PDM-lähtöön. PDM-lähtö käy vain, jos noden saa sammuttaa.
 
+### 5.6a Komentosillan kattopaneeli (lisätty 2026-11-08)
+
+Paneeliin ruorin yläpuolelle tulevat radiot, PDM:ien käyttökytkimet ja kaksi monitoiminäyttöä
+[omistaja 2026-11-08] ([current-system 3.5](../current-system.md#35-komentosillan-kattopaneeli-lisätty-2026-11-08)).
+
+- **Runkoväylä paneelin taakse [arvio].** Paneeli on komentosillan laitteiden keskus, joten
+  runkoväylä kannattaa kuljettaa sen kautta ja liittää NSS ja mahdolliset muut komentosillan laitteet
+  lyhyillä pudotuksilla T-kappaleista paneelin takana. Jos runkoväylä päättyy komentosillalle,
+  päätevastus tulee paneelin taakse (tai mastoon, jos tuulianturin linja jatkuu sinne).
+- **Kaksi näyttöä varmistavat toisiaan [arvio].** Simrad lukee navigointitiedot (GNSS, AIS, tuuli,
+  suunta, syvyys) suoraan N2K:sta, joten se toimii, vaikka Signal K -palvelin (Pi) tai oma näyttö
+  kaatuu. Oma näyttö taas näyttää Signal K:n tiedot (hydrauliikka, sähkö, hälytykset, PDM-ohjaus),
+  joita Simrad ei näytä. Jos oma näyttö halutaan toimimaan ilman Pi:tä, se tarvitsee oman
+  CAN-liitännän väylään (erotettu, kuten Pi:n HAT).
+- **Simrad saa virtansa omasta sulakepiiristään** (24 V, 3–5 A), ei väylästä; väylästä se ottaa vain
+  1 LEN.
+- **PDM:ien paneelikytkimet:** ESP32-PDM:n paneelikaapeli on enintään 10 m, suojattu
+  monijohdinkaapeli ja vain kuivakoskettimet ([ESP32-PDM README](https://github.com/plektra/ESP32-PDM)).
+  Komentosillan PDM:t (KS) kannattaa siis sijoittaa alle 10 m:n päähän paneelista.
+- **Kaapelit paneeliin:** N2K-runko tai -pudotus, Ethernet (Simrad tutkalle ja omalle näytölle;
+  tarvittaessa kytkin), 24 V:n syötöt (näytöt, radiot), VHF:n ja FM:n koaksiaalit, PDM-
+  paneelikaapelit. **N2K ja paneelikaapelit erilleen VHF:n koaksiaalista** (ESP32-PDM:n
+  asennusohje).
+- **Lämpö:** kaksi näyttöä (noin 20 W kumpikin, arvio) ja VHF lähetyksessä umpinaisessa
+  kattopaneelissa → tuuletus paneelin taakse.
+- **Huolto:** paneelin pitää aueta tai irrota, jotta liittimiin ja T-kappaleisiin pääsee käsiksi.
+
 ### 5.6 Valvonta
 
 - Signal K seuraa jokaisen laitteen heartbeat-viestiä (126993) ja hälyttää, kun laite katoaa.
@@ -429,6 +457,8 @@ käyttöönottoa.**
 - [ ] Laitteiden mallit ja LEN-arvot: GNSS (valmis vai `node3`), AIS B, tuulianturi,
   peräsinkulma-anturi, polttoainemittarit.
 - [ ] Tuleeko kompassi / suunta-anturi ja kaiku listaan (ehdotus N-14, N-15)?
+- [ ] Simrad NSS7 vai NSS9 evo3; tarvitseeko oma monitoiminäyttö oman CAN-liitännän (toimii ilman Pi:tä)?
+- [ ] Kattopaneelin mitat ja komentosillan PDM:ien paikka (paneelikaapeli enintään 10 m)
 - [ ] VHF Sailor RT2048:n liitäntä (NMEA 0183 vai N2K) ja tarvitseeko se GPS-sijainnin DSC:lle.
 - [ ] `node2`:n nykyinen mittauskohde, kun käyttöakut on purettu.
 - [ ] Instanssitaulukon paikka ja numerointi (kohta 5.5).

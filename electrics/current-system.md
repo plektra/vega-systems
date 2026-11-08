@@ -91,7 +91,8 @@ käyttöaika-arviot: [loads.yaml](loads.yaml) (`dc_loads`).
 | Työvalo eteen | 100 W | suunniteltu | |
 | Työvalo taakse | 100 W | suunniteltu | |
 | Hakuvalo | 250 W (≈ 10,4 A) [omistaja 2026-10-31] | **olemassa, ei asennettu** | Vanha, todennäköisesti neuvostovalmisteinen, käsikäyttöinen, komentosillan katolla [omistaja 2026-10-30]. Polttimo on Philipsin 24 V:n 250 W:n projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31], malli **Philips 7748S 24V** eli EHJ / A1/223, kanta G6.35 [omistaja 2026-11-03] ([datalehti Philips 7748S](https://www.esvit.cz/upload/files/000008e150/871150040987450.pdf)). Halogeeni säilyy (päätös 2026-10-30). Jäänpoisto: [design/searchlight-deicing.md](design/searchlight-deicing.md) |
-| Navigointitietokone ja oma näyttö | **⚠ ei tiedossa** | suunniteltu | |
+| Itse toteutettu monitoiminäyttö (navigointitietokone ja näyttö) | **⚠ ei tiedossa** | suunniteltu | Kattopaneelissa ruorin yläpuolella (kohta 3.5) [omistaja 2026-11-08]; tiedot Signal K:sta verkon kautta |
+| Monitoiminäyttö Simrad NSS7 evo3 tai NSS9 evo3 (luultavasti) | noin 12–20 W (7"; jälleenmyyjien tiedot ristiriitaisia **⚠ tarkista** asennusohjeesta), suositussulake 3 A (7") / 5 A (9" evo3S) | suunniteltu | Kattopaneelissa (kohta 3.5) [omistaja 2026-11-08]. Syöttö 10–31,2 V DC, joten toimii suoraan 24 V:lla; NMEA 2000 Micro-C, 1 LEN [datalehti Simrad NSS evo3](https://simrad-yachting.com/simrad/series/nss-evo3) |
 | Valvontakamera | **⚠ ei tiedossa** (arvio noin 5 W) | **toteutettu** | Komentosillan oma kamera; konehuoneeseen tulee erillinen (kohta 3.1) [omistaja 2026-10-29]. PoE, syöttö **Mean Well DDR-240B-24**:ltä [omistaja 2026-10-29] |
 | Mastokamera | **⚠ ei tiedossa** (arvio noin 5 W) | suunniteltu | Kolmas kamera; PoE, syöttö luultavasti DDR-240B-24 **⚠ tarkista** [omistaja 2026-10-29] |
 | AIS, luokka B | **⚠ ei tiedossa** (arvio noin 3 W) | suunniteltu | Lähettävä laite; antenni mastossa [omistaja 2026-10-29] |
@@ -145,6 +146,19 @@ kaapeloinnin ja kiinnitysten suunnittelua varten; laitteiden tehot ovat kohdissa
 Mastoon menee siis ainakin kolme koaksiaalikaapelia, 24 V:n syötöt valoille ja tutkalle,
 Ethernet kameralle ja mahdollisesti tutkalle sekä NMEA 2000 -pudotus tuulianturille. Kaapeleiden
 läpivientien koko ja mahdollinen jakorasia mastossa kannattaa suunnitella kerralla.
+
+### 3.5 Komentosillan kattopaneeli (lisätty 2026-11-08)
+
+Komentosillan katon sisäpuolelle ruorin yläpuolelle on tekeillä paneeli [omistaja 2026-11-08].
+Siihen tulee ainakin:
+
+- radiot: VHF Sailor RT2048 ja FM-radio (kohta 3.2);
+- käyttökytkimet valaistukselle ym. (ESP32-PDM-korttien paneelikytkimet, [design/dc-distribution.md](design/dc-distribution.md));
+- kaksi monitoiminäyttöä: **Simrad NSS7 evo3 tai NSS9 evo3** (luultavasti) ja **itse toteutettu
+  monitoiminäyttö**.
+
+Väylä- ja kaapelointisuunnitelma paneelille: [design/nmea2000-network.md](design/nmea2000-network.md#56a-komentosillan-kattopaneeli-lisätty-2026-11-08).
+Paneelin mitat, materiaali ja kytkimien määrä **⚠ ei tiedossa**.
 
 ## 4. Valvonta, verkot ja tehonjako
 

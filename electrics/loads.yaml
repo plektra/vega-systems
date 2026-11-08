@@ -395,6 +395,18 @@ dc_loads:
     power_W: null                  # ⚠ ei tiedossa; laitteita ei valittu
     use_h_per_day: null            # ajossa; ankkurissa mahdollisesti ankkurivahti
     source: "[omistaja 2026-10-29]"
+    notes: "Itse toteutettu monitoiminäyttö komentosillan kattopaneelissa ruorin yläpuolella [omistaja 2026-11-08]"
+
+  - id: MFD_SIMRAD
+    name: Monitoiminäyttö Simrad NSS7 evo3 tai NSS9 evo3 (luultavasti)
+    location: komentosilta, kattopaneeli
+    status: planned
+    circuit: null                  # ⚠ ei vielä piirilistalla (KS)
+    voltage_V: 24                  # syöttö 10–31,2 V DC [datalehti Simrad NSS evo3]
+    power_W: 20                    # ⚠ tarkista: jälleenmyyjien tiedot 12 W nimellinen / 20–21 W enintään
+    use_h_per_day: null            # ajossa
+    source: "[omistaja 2026-11-08]"
+    notes: "NMEA 2000 Micro-C, 1 LEN; suositussulake 3 A (7\") tai 5 A (9\" evo3S)"
 
   - id: CAMERA_POE
     name: Komentosillan valvontakamera (PoE)
