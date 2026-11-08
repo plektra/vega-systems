@@ -97,6 +97,15 @@ joystickin liukuja (jakajan kautta) ──► ESP32 ADC ──► Signal K (käy
   [p2-variable-pump](p2-variable-pump.md#sopivuus-vegaan-laskelma).
 - **ESP32-PDM voi lisäksi pudottaa sallinnan** hälytyksistä (esim. öljyn lämpötila tai imupaine,
   [vaatimukset §10.1](../requirements.md#101-anturit)). Se on lisäsuoja, ei ainoa suoja.
+- **Sallintareleen kytkentä [arvio, lisätty 2026-11-08]:** PVEH:n syöttö kulkee releen
+  **lepokoskettimen (NC)** kautta. PDM katkaisee syötön *vetämällä* releen (kela jännitteiseksi),
+  eli releellä ei ohjata potkuria päälle. Silloin PDM:n vika, uudelleenkäynnistys tai ohjelmistopäivitys
+  ei pysäytä potkuria, ja PDM:n suojaus on vain lisä. Hätäseis ja pääkytkin katkaisevat syötön
+  suoraan sarjassa releestä riippumatta. Haittapuoli: jos kelan johto katkeaa, PDM ei pysty
+  katkaisemaan; PDM:n lähdön virranmittaus paljastaa katkenneen kelan (ei virtaa, kun lähtö on päällä).
+  Releen koskettimen pitää kestää PVEH:n virta (**⚠ tarkista** PVEH:n datalehdestä); kelan virta on
+  tyypillisesti kymmeniä milliampeereja, joten pieni PDM-kanava riittää. Jos PDM:n suojausta ei
+  haluta, rele jätetään kokonaan pois. **Pätevän henkilön tarkistettava.**
 - ESP32 lukee vikanastan ja joystickin asennon ja vie ne Signal K:hon. Joystickin jännite pitää
   jakaa ESP:n ADC-alueelle; suhteellisuuden vuoksi myös syöttöjännite mitataan.
 - **Käsivipu (PVM)** on varaohjaus veneen sisällä, jos sähköohjaus pettää, ks.
