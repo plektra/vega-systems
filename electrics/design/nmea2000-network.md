@@ -82,11 +82,11 @@ tai Signal K:n kautta.
 
 | Tunnus | Laite | Sijainti | Liitäntä | PGN:t / tieto | Tila | Lähde |
 |---|---|---|---|---|---|---|
-| N-10 | GPS/GNSS-vastaanotin | luultavasti katto | N2K, tai oma `node3` (Quectel, 0183 → N2K) | 129025, 129026, 129029, 126992 (aika) | omistajan lista; node3 keskeneräinen | [omistaja 2026-10-29], [vega-n2k-node3] |
+| N-10 | **GNSS/RTK: Unicore UM982 ja kaksi antennia** [omistaja 2026-11-08]: sijainti, nopeus, aika ja **suunta (heading)** antennien välisestä vektorista; suuntatarkkuus 0,1° (RMS) 1 m:n antennivälillä, päivitys 20 Hz [datalehti Unicore UM982](https://en.unicore.com/uploads/file/UM982_User%20Manual_EN_R1.7.pdf) | moduuli komentosillan katon alla, antennit katolla | oma GNSS-node **S7** (UART → N2K, kohta 3.11) | 129025, 129026, 129029, 126992, **127250 (true heading), 127251 (kääntymisnopeus)**, 127257 (pituuskallistus) | omistajan suunnitelma | [omistaja 2026-11-08] |
 | N-11 | AIS, luokka B | komentosilta, antenni mastossa | N2K (useimmissa B-luokan laitteissa myös 0183/USB) | 129038, 129039, 129040, 129794, 129809, 129810 | omistajan lista | [omistaja 2026-10-29] |
 | N-12 | Tuulianturi | masto | N2K (pudotus mastoon) | 130306 | omistajan lista | [omistaja 2026-10-29] |
 | N-13 | Peräsinkulma-anturi | peräsinakseli | N2K tai node (potentiometri / Hall → ESP32) | 127245 | omistajan lista; autopilotti tarvitsee | [omistaja 2026-10-29], [hydraulics §10.1](../../hydraulics/requirements.md#101-anturit) |
-| N-14 | Kompassi / suunta-anturi (heading, kallistus) | lähellä painopistettä, kaukana teräksestä ja kaapeleista | N2K | 127250, 127251, 127257 | **ehdotus**: autopilotti ja tutkan karttapäällys tarvitsevat suunnan. Teräsrungossa magneettikompassi vaatii kalibroinnin; GNSS-kompassi (kaksi antennia) ei välitä rungosta **⚠ arvio** | – |
+| N-14 | Kompassi / suunta-anturi | – | – | 127250 | **UM982 korvaa** (N-10, kaksi antennia). Erillinen magneettinen suunta-anturi vain varalle, jos autopilotin halutaan toimivan GNSS-katkossa (ehdotus) | [omistaja 2026-11-08] |
 | N-15 | Kaiku ja loki (syvyys, nopeus vedessä, veden lämpötila) | pohja | N2K (anturimoduuli) | 128267, 128259, 130316 | **ehdotus** | – |
 | N-16 | Autopilotin ohjausyksikkö | komentosilta / konehuone | N2K (suunta, peräsinkulma, reitti) | 127237, 127245, 127250, 129283, 129284 | omistajan lista (mahdollinen); malli auki | [hydraulics §10.3](../../hydraulics/requirements.md#103-autopilotin-liitäntä-ohjauspiiriin) |
 | N-17 | VHF Sailor RT2048 | komentosilta | **⚠ tarkista** liitäntä (todennäköisesti NMEA 0183: sijainti DSC:lle sisään) | 0183 GPS sisään | olemassa | [current-system 3.2](../current-system.md#32-komentosillalta-ohjattavat-24-vn-laitteet) |
@@ -213,7 +213,8 @@ Välimuotona avoin valmis ESP32-laitteisto (Hat Labs), johon tehdään vain oma 
 
 | Laiteryhmä | Suositus | Perustelu |
 |---|---|---|
-| GNSS, tuulianturi, kompassi / suunta, kaiku ja loki | **valmis** N2K-laite | kalibrointi, säänkesto ja anturitekniikka; valmiit ovat edullisia verrattuna omaan työhön. `node3`-GNSS kannattaa jättää kokeiluksi tai varalaitteeksi |
+| Tuulianturi, kaiku ja loki | **valmis** N2K-laite | kalibrointi, säänkesto ja anturitekniikka; valmiit ovat edullisia verrattuna omaan työhön |
+| GNSS ja suunta | **oma: UM982-moduuli, kaksi antennia ja oma node S7** [omistaja 2026-11-08] | RTK-tarkkuus ja GNSS-suunta (ei magneettista poikkeamaa teräsrungossa) edullisemmin kuin valmiina; vaatii oman N2K-ohjelmiston (kohta 3.11) |
 | AIS (lähettävä, luokka B) | **valmis**, pakollisesti | lähettävän AIS-laitteen pitää olla tyyppihyväksytty |
 | Autopilotti ja sen peräsinkulma-anturi | **valmis**, samaa järjestelmää (esim. Simradin, jos NSS valitaan) | turvallisuuskriittinen; peräsinkulma-anturi tulee yleensä autopilotin mukana |
 | Simrad NSS, Cerbo GX, JK-BMS | valmis (päätetty tai suunniteltu) | – |
@@ -292,7 +293,7 @@ Sijainnit, joita ei vielä tiedetä (säiliöt, keittiö, hytit, ohjausventtiili
 | **S4 Komentosilta** | SH-ESP32 | komentosilta, kattopaneelin takana | 24 V (joystickin potentiometri saa syöttönsä PVEH:n 24 V:sta, joten se viittaa akun miinukseen) | keulapotkurin joystickin asento (jännitejakajan kautta, [bow-thruster-control 4](../../hydraulics/design/bow-thruster-control.md#4-suositus-arvio-suora-joystick-ja-esp32-pdm-valvojana)); komentosillan lämpötila; ulkolämpötila (N-32); NMEA 2000 -väylän jännite tällä väylän päässä (N-05); kattopaneelin sivunvaihtopainikkeet (USB HID omalle näytölle, [bridge-mfd 4.3](bridge-mfd.md#43-käyttö)) | hälytyssummeri | ehdotus |
 | **S5 Asuintilat ja lämmitys** | SH-ESP32 | asuintilojen keskellä **⚠** | väylä (kelluvat anturit) | hyttien ja salongin lämpötilat (1-Wire-ketju, N-31); lämmityksen meno- ja paluuveden lämpötila; savu- ja häkävaroittimien koskettimet (N-34); kaasuhälyttimen kosketin ja magneettiventtiilin tila (N-33), jos keittiö on lähellä **⚠** | – (puhallinkonvektorit KH-07 PDM:llä) | ehdotus |
 | **S6 Säiliöt** | HALMET | säiliöiden lähellä **⚠**; yhdistetään S1:een tai S5:een, jos säiliöt ovat lähellä | 24 V (säiliöanturit ovat yleensä runkoon kytkettyjä vastusantureita) | käyttövesi (N-41); harmaavesisumppu ja septi (N-42); polttoaine (N-40), jos ei S1:ssä | – | ehdotus |
-| node3 (GNSS-kokeilu) | oma | – | – | GNSS (varalaite) | – | keskeneräinen |
+| **S7 GNSS** (korvaa node3:n kokeilun) | SH-ESP32 (UART UM982:lle) | komentosilta, katon alla antennien lähellä | 24 V (antennien koaksiaalivaippa on moduulin maassa, ja antennit kiinnitetään teräskattoon) | UM982: sijainti, nopeus, aika, suunta, kääntymisnopeus; RTK-korjaukset (RTCM) sisään verkon kautta | – | omistajan suunnitelma |
 
 #### ESP32-PDM-kortit (lähdöt ja paneelikytkimet)
 
@@ -322,15 +323,48 @@ jos sekä puhallinkonvektorit että molemmat PVEO:t tulevat PDM:lle [laskelma].
 |---|---|
 | Signal K -palvelin (Pi 5 + CAN HAT), Cerbo GX MK2 | konehuone |
 | Simrad NSS evo3, AIS, autopilotin ohjausyksikkö ja paneeli | komentosilta / kattopaneeli |
-| GNSS-antenni | katto |
+| UM982:n kaksi GNSS-antennia (node S7:n kautta) | katto |
 | Tuulianturi | masto |
-| Kompassi / suunta-anturi (ehdotus) | lähellä painopistettä **⚠** |
+| (Magneettinen suunta-anturi, vain varalle, ehdotus) | lähellä painopistettä **⚠** |
 | Kaiku ja loki (ehdotus) | pohja |
 | Peräsinkulma-anturi (autopilotin mukana) | peräsinakseli |
 
 **Yhteensä [arvio]:** 6–7 omaa anturinodea, noin 8 PDM-korttia ja 8–10 valmista laitetta, eli
 noin 25 väylälaitetta. Raja on 50 laitetta (kohta 5.2), ja väylävirran arvio (kohta 3.9) pysyy
 noin 1,5 A:ssa.
+
+### 3.12 GNSS ja suunta: UM982 (lisätty 2026-11-08)
+
+Omistajien suunnitelma: GNSS/RTK toteutetaan **Unicore UM982** -moduulilla ja kahdella antennilla
+[omistaja 2026-11-08].
+
+- **Mitä se antaa:** sijainnin, nopeuden ja ajan sekä **suunnan** kahden antennin välisestä
+  vektorista. Suuntatarkkuus on 0,1° (RMS) 1 m:n antennivälillä ja päivitystaajuus 20 Hz
+  [datalehti Unicore UM982](https://en.unicore.com/uploads/file/UM982_User%20Manual_EN_R1.7.pdf). GNSS-suunta on tosisuunta, johon teräsrunko ja sähkökaapelit eivät vaikuta, joten
+  erillistä magneettikompassia ei tarvita autopilotille eikä tutkan karttapäällykselle (N-14).
+  Suunta toimii myös ilman RTK-korjauksia [arvio].
+- **Antennit [arvio]:** katolle tukevasti, mahdollisimman pitkälle toisistaan (tarkkuus paranee välin
+  mukana; vähintään noin 30 cm, Holybro: [H-RTK UM982](https://holybro.com/products/h-rtk-um982)),
+  mieluiten kölin suuntaisesti, esteetön taivas, erilleen tutkan säteestä ja VHF- ja AIS-antenneista.
+  Antennien väli mitataan tarkasti ja syötetään moduulille. Omistaja päättää paikat.
+- **Liitäntä:** UM982 antaa NMEA 0183- ja Unicoren omat viestit sarjaliitännästä. Oma node S7
+  (SH-ESP32) muuntaa ne NMEA 2000 -viesteiksi (129025, 129026, 129029, 126992, 127250, 127251,
+  127257) ja välittää RTK-korjaukset moduulille. Liitäntöjen ja virrankulutuksen tarkat arvot
+  **⚠ tarkista** moduulin käyttöohjeesta.
+- **RTK-korjaukset:** navigointiin riittää tavallinen GNSS-tarkkuus (SBAS, metrin luokkaa), joten RTK
+  on lisä, esim. ankkurivahtiin ja tarkkaan ajoon [arvio]. Lähteet:
+  - **Maanmittauslaitoksen FINPOS-RTK myönnetään vain tutkimukseen ja testaukseen,** kolmeksi
+    kuukaudeksi kerrallaan, ei tuotantokäyttöön ([MML FINPOS RTK](https://www.maanmittauslaitos.fi/en/finpos/rtk)).
+    **FINPOS DGNSS on maksuton** rekisteröitymällä.
+  - Kaupalliset RTK-verkot: HxGN SmartNet, Geotrim Trimnet, Karera RTKnet, Topcon TopNet (hinnat
+    **⚠ ei tiedossa**).
+  - Yhteisöpohjainen RTK2Go (ilmainen NTRIP-palvelu; ehdot ja tukiasemien kattavuus **⚠ tarkista**).
+  - Korjaukset kulkevat 4G-modeemin (RUT240) ja verkon kautta: NTRIP-asiakas Signal K -palvelimella
+    tai S7:ssä → RTCM moduulille.
+- **Vikatilat:** GNSS-katkos (esim. sillan alla, häirintä) vie sijainnin ja suunnan yhtä aikaa.
+  Autopilotti kytkeytyy silloin pois ja hälyttää. Jos autopilotin halutaan jatkavan katkon yli,
+  tarvitaan magneettinen varasuunta-anturi (N-14). Simrad saa sijainnin samasta lähteestä; erillinen
+  varavastaanotin (esim. AIS-laitteen oma GPS) **⚠ tarkista**.
 
 ## 4. Väylät erillään
 
@@ -558,8 +592,8 @@ käyttöönottoa.**
    päätevastukset päihin, syöttö keskelle.
 5. **Instanssitaulukko ja yksilölliset tunnukset** omille nodeille ja PDM:ille ennen kuin niitä on
    enemmän kuin pari.
-6. **Lisättäväksi listaan harkintaan:** kompassi / suunta-anturi (autopilotti ja tutka tarvitsevat)
-   ja kaiku. Omistajat päättävät.
+6. **Lisättäväksi listaan harkintaan:** kaiku. Suunnan antaa UM982 (kaksi antennia); erillinen
+   magneettinen suunta-anturi vain varalle. Omistajat päättävät.
 
 ## 8. Avoimet kysymykset
 
@@ -586,7 +620,9 @@ käyttöönottoa.**
 - [ ] Nodejaon sijainnit (kohta 3.11): säiliöt, keittiö (kaasuhälytin), hytit, PVG 32 ja hydrauliikkasäiliö, pilssihälytin
 - [ ] Laitteiden mallit ja LEN-arvot: GNSS (valmis vai `node3`), AIS B, tuulianturi,
   peräsinkulma-anturi, polttoainemittarit.
-- [ ] Tuleeko kompassi / suunta-anturi ja kaiku listaan (ehdotus N-14, N-15)?
+- [x] Suunta-anturi: UM982 kahdella antennilla antaa suunnan [omistaja 2026-11-08]
+- [ ] Tuleeko kaiku listaan (N-15), ja tarvitaanko magneettinen varasuunta-anturi autopilotille?
+- [ ] UM982: antennien paikat ja väli (vähintään noin 1 m, kölin suuntaisesti), moduulikortin malli, RTK-korjausten lähde (kohta 3.12)
 - [ ] Simrad NSS7 vai NSS9 evo3; tarvitseeko oma monitoiminäyttö oman CAN-liitännän (toimii ilman Pi:tä)?
 - [ ] Kattopaneelin mitat ja komentosillan PDM:ien paikka (paneelikaapeli enintään 10 m)
 - [ ] VHF Sailor RT2048:n liitäntä (NMEA 0183 vai N2K) ja tarvitseeko se GPS-sijainnin DSC:lle.

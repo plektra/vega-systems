@@ -122,7 +122,7 @@ Väylävirta ilmoitetaan LEN-lukuna (1 LEN = 50 mA); laitteiden LEN-arvot **⚠ 
 | Polttoainemittari(t) | Polttoainejärjestelmä on keskeneräinen |
 | Peräsimen asentoanturi | Liittyy ohjaukseen ja autopilottiin, ks. [hydraulics/requirements.md](../hydraulics/requirements.md) |
 | Tuulimittari | |
-| GPS/GNSS | |
+| GPS/GNSS | **Unicore UM982 ja kaksi antennia** (sijainti, RTK ja suunta) [omistaja 2026-11-08]; oma node S7 → NMEA 2000, ks. [design/nmea2000-network.md](design/nmea2000-network.md#312-gnss-ja-suunta-um982-lisätty-2026-11-08) |
 
 ### 3.4 Maston ja katon varustelu
 
@@ -134,7 +134,7 @@ kaapeloinnin ja kiinnitysten suunnittelua varten; laitteiden tehot ovat kohdissa
 | VHF-antenni | masto | koaksiaali VHF:lle (Sailor RT2048) | |
 | FM-antenni | masto | koaksiaali FM-radiolle | |
 | AIS-antenni | masto | koaksiaali AIS-laitteelle | AIS luokka B (kohta 3.2) [omistaja 2026-10-29] |
-| GPS/GNSS-antenni | luultavasti katto | NMEA 2000 (kohta 3.3) tai koaksiaali | |
+| GNSS-antennit, 2 kpl (UM982) | katto | 2 koaksiaalia moduulille | Antennien väli vähintään noin 30 cm, mieluiten 1 m tai enemmän, kölin suuntaisesti [arvio]; paikat auki [omistaja 2026-11-08] |
 | Mastovalo | masto | 24 V | Osa kulkuvaloja (10 W) [omistaja 2026-10-29] |
 | Ankkurivalo | masto | 24 V, enintään 5 W | Olemassa (kohta 3.2) |
 | Kulkuvalot | katto | 24 V | Olemassa (kohta 3.2) |

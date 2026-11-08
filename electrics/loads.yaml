@@ -526,14 +526,15 @@ dc_loads:
     source: "[omistaja 2026-10-29]"
 
   - id: N2K_GNSS
-    name: GPS/GNSS-vastaanotin, NMEA 2000
-    location: null
+    name: GNSS/RTK Unicore UM982 (2 antennia) ja oma node S7, NMEA 2000
+    location: komentosilta, antennit katolla
     status: planned
     circuit: "KH-20"            # alustava, ks. design/circuit-list.md
     voltage_V: 24
     power_W: null
     use_h_per_day: 24
-    source: "[omistaja 2026-10-29]"
+    source: "[omistaja 2026-10-29], [omistaja 2026-11-08]"
+    notes: "UM982 antaa myös suunnan (heading); virrankulutus ⚠ tarkista käyttöohjeesta"
 
   # Lämmitys [omistaja 2026-10-29], ks. heating/current-system.md. Jokaiseen tilaan tulee
   # konvektori (ei sähköä) tai puhallinkonvektori (24 V:n puhallin); valinta auki.
