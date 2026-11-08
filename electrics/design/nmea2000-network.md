@@ -352,10 +352,27 @@ Omistajien suunnitelma: GNSS/RTK toteutetaan **Unicore UM982** -moduulilla ja ka
   datalehdestä.
 - **Moduulikortti:** ehdokas [AliExpress 1005007998167643](https://www.aliexpress.com/item/1005007998167643.html)
   [omistaja 2026-11-08]; tiedot **⚠ ei tiedossa** (sivu ei avautunut 2026-11-08).
-- **Liitäntä:** UM982 antaa NMEA 0183- ja Unicoren omat viestit sarjaliitännästä. Oma node S7
-  (SH-ESP32) muuntaa ne NMEA 2000 -viesteiksi (129025, 129026, 129029, 126992, 127250, 127251,
-  127257) ja välittää RTK-korjaukset moduulille. Liitäntöjen ja virrankulutuksen tarkat arvot
-  **⚠ tarkista** moduulin käyttöohjeesta.
+- **Moduulin sähköiset tiedot** [datalehti UM982 User Manual R1.3 (kiinankielinen, 2023-09), omistajan PDF
+  2026-11-08, luettu tekstinä]:
+  - syöttö VCC **3,0–3,6 V** (tyyp. 3,3 V), aaltoisuus enintään 50 mV; virta tyyp. 180 mA, enintään
+    300 mA; teho 600 mW (kahdella antennilla 10 Hz sijainti, RTK ja suunta). Käynnistyksessä
+    syöksyvirta, nousuaika 100 µs–1 ms ja monotoninen; seuraava käynnistys aikaisintaan 500 ms
+    virran katkeamisen jälkeen.
+  - **3 × UART, LVTTL 3,3 V** (sopii suoraan ESP32:n tuloihin); I²C, SPI ja CAN ovat varattuja
+    eivätkä toimi. Tilalähdöt PVT_STAT, RTK_STAT ja ERR_STAT, lisäksi PPS ja EVENT.
+  - datamuodot NMEA 0183 ja Unicoren omat; korjaukset RTCM 3.x sisään; päivitys 20 Hz.
+  - **aktiiviset antennit:** LNA-vahvistus 18–36 dB (tyyp. 30 dB); antennien syöttö (ANT_BIAS)
+    tuodaan moduulin ulkopuolelta, ja valmistaja suosittelee sille **erillistä jännitekiskoa** ja
+    ESD- ja TVS-suojausta, jotta antennijohdon ylijännite ei rikkoisi moduulia.
+  - lämpötila −40…+85 °C.
+  - Noden S7 (SH-ESP32) 3,3 V:n kisko ei välttämättä riitä 300 mA:n lisäkuormaan, **⚠ tarkista**;
+    oma 3,3 V:n regulaattori ja antennien syöttö lisäkortille, ellei valmis UM982-kortti sisällä niitä.
+- **⚠ E6-tuki riippuu moduulin versiosta.** R1.3-ohjeen signaalilistassa Galileo on vain E1, E5a ja
+  E5b (pääantenni) sekä E1 ja E5b (sivuantenni), **ei E6:ta**. Uudemmat ohjeet (R1.7, R1.9) ja
+  Unicoren tuotesivu mainitsevat E6:n ja E6-HAS:n. Ennen ostoa varmistetaan myyjältä, että kortin
+  UM982 ja laiteohjelmisto tukevat E6:ta ja HAS:ia. R1.3:n PPP-tarkkuus (vaaka 5 cm, pysty 10 cm,
+  konvergenssi 20 min) koskee todennäköisesti BeiDoun B2b-PPP:tä, joka toimii vain Aasian ja
+  Tyynenmeren alueella [arvio, **⚠ tarkista**].
 - **Tarkkuuskorjaukset: Galileo E6-HAS** [omistaja 2026-11-08]. Galileo High Accuracy Service on
   maksuton, ja korjaukset tulevat suoraan satelliiteista E6-B-signaalissa, joten nettiyhteyttä ei
   tarvita. Initial Service (käytössä 24.1.2023 alkaen): vaakatarkkuus alle 20 cm (95 %), pystytarkkuus
@@ -632,6 +649,7 @@ käyttöönottoa.**
 - [ ] Tuleeko kaiku listaan (N-15), ja tarvitaanko magneettinen varasuunta-anturi autopilotille?
 - [x] UM982:n antennit: komentosillan katolle keskelle, kölilinjan suuntaisesti noin 1,5–2,0 m:n välein [omistaja 2026-11-08]
 - [x] Tarkkuuskorjaukset: Galileo E6-HAS [omistaja 2026-11-08]
+- [ ] **UM982: varmista myyjältä E6- ja HAS-tuki** (R1.3-ohjeessa ei E6:ta); kortin 3,3 V:n syöttö ja antennien syöttö
 - [ ] UM982: moduulikortin malli (ehdokas [AliExpress 1005007998167643](https://www.aliexpress.com/item/1005007998167643.html) [omistaja 2026-11-08]; sivu ei avautunut istunnosta, joten liitännät, antennit, syöttö ja hinta **⚠ ei tiedossa**), laiteohjelmiston E6-HAS-tuki ja signaaliryhmä 3 6 kahden antennin suunnan kanssa; E6-taajuutta tukevat antennit
 - [ ] Simrad NSS7 vai NSS9 evo3; tarvitseeko oma monitoiminäyttö oman CAN-liitännän (toimii ilman Pi:tä)?
 - [ ] Kattopaneelin mitat ja komentosillan PDM:ien paikka (paneelikaapeli enintään 10 m)
