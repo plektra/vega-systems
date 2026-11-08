@@ -221,6 +221,30 @@ Välimuotona avoin valmis ESP32-laitteisto (Hat Labs), johon tehdään vain oma 
 | Hydrauliikan anturit ja valvonta | **oma** (ESP32-PDM tai oma node) | valmista tuotetta ei ole; Vegan oma logiikka ja hälytysrajat |
 | Tehonjako ja kytkimet | **oma ESP32-PDM** (päätetty 2026-10-31) | jo pitkällä omana projektina |
 
+**SH-ESP32 vai oma vastaava kortti (lisätty 2026-11-08)? Suositus [arvio]: SH-ESP32 ja tarvittaessa oma
+lisäkortti (HAT) anturien sovitukseen.**
+
+- SH-ESP32 (32,63 € [omistaja 2026-11-08]) tarjoaa valmiina sen, mikä omassa kortissa on työläintä
+  ja riskialtteinta: 8–32 V:n syötön ylijännitesuojineen, erotetun CAN-liitännän (ISO1050), ESD-
+  ja EMC-suunnittelun (README: suunniteltu olemaan häiritsemättä VHF:ää ja GPS:ää) sekä valmiin
+  ohjelmistotuen (SensESP, NMEA2000-kirjasto) ja dokumentaation ([SH-ESP32-hardware](https://github.com/hatlabs/SH-ESP32-hardware)).
+- Oma ohjainkortti maksaisi piirilevytehtaalla osina ehkä saman verran tai vähemmän, mutta
+  suunnittelu, prototyypit ja testaus vievät viikkoja, ja virheet näkyvät vasta veneessä. ESP32-PDM:n
+  kokemus näyttää, kuinka paljon pelkkä syöttö-, CAN- ja suojaussuunnittelu vaatii.
+- **Vegan omat tarpeet** (MAX9924-kierrostulo, 4–20 mA -tulot, jännitejakajat, releet) tehdään
+  **SH-ESP32:n päälle tulevalle lisäkortille**. Hat Labs julkaisee siihen valmiin KiCad-pohjan
+  (`SH-ESP-HAT-Blank`, `SH-ESP-HAT-Proto`). Lisäkortti on yksinkertainen, eikä siinä ole syöttöä
+  eikä CAN-väylää.
+- **Oma täysi kortti kannattaa vasta,** jos nodeja tarvitaan kymmeniä, kotelo tai liittimet eivät
+  sovi, tai jos ESP32-PDM:n jaetuista piirilevylohkoista (ohjain, syöttö, CAN) halutaan tehdä
+  anturinode samalla suunnittelulla. Silloin ESP32-PDM:n 24 V:n väyläkysymys (kohta 5.1) pitää
+  ratkaista ensin.
+- **Huom. syöttö ja maadoitus (kohta 5.5a):** SH-ESP32:n ohjainpuoli saa virtansa omasta
+  8–32 V:n tulostaan, ja vain CAN-puoli on erotettu. Akkuun tai runkoon kytketyt anturit:
+  syöttö veneen 24 V:sta (oikea tapa). Kelluvat anturit: syöttö voidaan ottaa myös väylästä
+  (NET-S ja NET-C), jolloin erotus ohitetaan, mikä on hyväksyttävää vain, jos mikään anturi ei
+  koske runkoon [arvio].
+
 **Omien laitteiden hinta ei ole vain osien hinta [arvio]:**
 
 - **Ylläpito ja henkilöriippuvuus.** Omat laitteet tarvitsevat ohjelmistopäivitykset, dokumentaation
