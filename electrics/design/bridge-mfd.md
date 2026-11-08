@@ -84,7 +84,7 @@ Kattopaneeli                               Konehuone
 | Sivu | Sisältö | Toteutus |
 |---|---|---|
 | **Navigointi** | nopeus (SOG/STW), suunta (COG/HDG), syvyys, tuuli, peräsinkulma, kierrokset, sijainti, AIS-lähimmät | oma mittarisivu tai KIP-kojelauta upotettuna |
-| **Kartta** | kartta, oma reitti, AIS-kohteet | Freeboard-SK (Signal K:n karttasovellus) upotettuna; Simrad on pääkarttanäyttö |
+| **Kartta** (valinnainen) | kartta, oma reitti, AIS-kohteet | Freeboard-SK (Signal K:n karttasovellus) upotettuna. Pääkarttana on navigointitietokoneen noin 20":n OpenCPN-näyttö ja Simrad [omistaja 2026-11-08], joten tämä sivu on lähinnä varalla |
 | **Kamera: komentosilta** | yksi kamera koko ruudulla | go2rtc WebRTC |
 | **Kamera: konehuone** | sama | sama |
 | **Kamera: masto** | sama | sama |

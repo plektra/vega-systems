@@ -74,7 +74,8 @@ tai Signal K:n kautta.
 | N-01 | Signal K -palvelin (Raspberry Pi 5) ja Waveshare 2-CH CAN HAT (eristetty) | konehuone | N2K kanavalla `can0`; toinen kanava vapaana (varalla tai väylän testaukseen) | kuuntelee kaikkea; lähettää tarvittaessa (esim. hälytykset, kytkinkomennot 127502) | olemassa (liitäntä auki) | [omistaja 2026-10-29] |
 | N-02 | Victron Cerbo GX, VE.Can-portti | konehuone | N2K (VE.Can → NMEA 2000 -kaapeli) | akut 127506/127508, invertteri ja lataus; vaihtoehtoisesti tiedot Signal K:hon verkon (MQTT) kautta, jolloin N2K-liitäntää ei tarvita | suunniteltu (Cerbo päätetty 2026-10-31) | [decisions 2026-10-31](../../decisions.md), [inverter-bms](inverter-bms.md) |
 | N-03 | Koneen anturinode (ESP32): kierrokset, öljynpaine, jäähdytysnesteen lämpötila, käyttötunnit | konehuone | node | 127488, 127489 | ehdotus; koneessa ei todennäköisesti ole väylää [omistaja 2026-11-08], joten J1939-yhdyskäytävää (esim. Maretron J2K100) ei tarvita | [omistaja 2026-11-08] |
-| N-04 | Itse toteutettu monitoiminäyttö (navigointitietokone ja näyttö) | komentosillan kattopaneeli | Signal K:n kautta (Ethernet); oma N2K-liitäntä valinnainen (kohta 5.6a); toteutus [bridge-mfd](bridge-mfd.md) | – | omistajan lista | [omistaja 2026-11-08] |
+| N-04 | Itse toteutettu monitoiminäyttö | komentosillan kattopaneeli | Signal K:n kautta (Ethernet); oma N2K-liitäntä valinnainen (kohta 5.6a); toteutus [bridge-mfd](bridge-mfd.md) | – | omistajan lista | [omistaja 2026-11-08] |
+| N-07 | Navigointitietokone ja noin 20":n näyttö, OpenCPN | komentosilta (paikka **⚠**) | Signal K:n kautta (Ethernet); valinnaisesti oma erotettu N2K-liitäntä (kohta 3.13) | lukee sijainnin, suunnan, AIS:n, syvyyden ja tuulen; voi lähettää reittipisteet autopilotille (129283, 129284, 129285) | omistajan suunnitelma | [omistaja 2026-11-08] |
 | N-06 | Monitoiminäyttö Simrad NSS7 evo3 tai NSS9 evo3 (luultavasti) | komentosillan kattopaneeli | N2K Micro-C, 1 LEN; syöttö omasta 24 V:n piiristä (10–31,2 V); Ethernet tutkalle | kuuntelee navigointi- ja moottoritietoja, ohjaa autopilottia, jos Simrad-yhteensopiva | omistajan lista | [omistaja 2026-11-08], [datalehti Simrad NSS evo3](https://simrad-yachting.com/simrad/series/nss-evo3) |
 | N-05 | Väylän valvontanode (jännite väylän kaukaisessa päässä, virheet) | runkoväylän pää | node | 127751 (DC-jännite/virta) tai Signal K | ehdotus | kohta 5.6 |
 
@@ -391,6 +392,37 @@ Omistajien suunnitelma: GNSS/RTK toteutetaan **Unicore UM982** -moduulilla ja ka
   tarvitaan magneettinen varasuunta-anturi (N-14). Simrad saa sijainnin samasta lähteestä; erillinen
   varavastaanotin (esim. AIS-laitteen oma GPS) **⚠ tarkista**.
 
+### 3.13 Navigointitietokone ja OpenCPN (lisätty 2026-11-08)
+
+Komentosillalle tulee navigointitietokone, jossa on noin 20":n näyttö ja ohjelmistona
+lähtökohtaisesti OpenCPN [omistaja 2026-11-08]. Komentosillalla on siis kolme näyttöä:
+
+| Näyttö | Tehtävä | Tiedot |
+|---|---|---|
+| Navigointitietokone, noin 20", OpenCPN | reittisuunnittelu ja pääkartta (iso näyttö) | Signal K tai oma N2K-liitäntä |
+| Simrad NSS evo3 (kattopaneeli) | kartta ja mittarit, autopilotin ohjaus | suoraan N2K:sta |
+| Oma monitoiminäyttö (kattopaneeli) | kamerat, hydrauliikka, sähkö, hälytykset, PDM-ohjaus | Signal K ([bridge-mfd](bridge-mfd.md)) |
+
+**Tietojen reitti [arvio]:**
+
+- **Ensisijaisesti Signal K:n kautta:** OpenCPN lukee Signal K -palvelimen tietovirran
+  (NMEA 0183 TCP:llä tai Signal K -yhteydellä) Ethernetin yli. Kaikki väylän ja nodejen
+  tiedot ovat silloin käytettävissä, eikä OpenCPN:ää tarvitse liittää väylään.
+- **Vaihtoehto: oma erotettu N2K-liitäntä,** jos navigoinnin halutaan toimivan, vaikka
+  konehuoneen Pi tai verkko on alhaalla. OpenCPN 5.8 ja uudemmat lukevat NMEA 2000:ta suoraan
+  (Linuxissa SocketCAN-liitännällä tai Actisense-sovittimella) (**⚠ tarkista** käytössä olevasta
+  versiosta). Sovittimen pitää olla erotettu (kohta 5.4), esim. samanlainen kuin Pi:n CAN HAT.
+  Simrad on joka tapauksessa riippumaton varanavigointi.
+- **Autopilotti:** OpenCPN voi lähettää aktiivisen reitin tai reittipisteen autopilotille
+  (N2K 129283/129284/129285 tai NMEA 0183 APB/RMB Signal K:n kautta). Se, ottaako valittava
+  autopilotti ohjauksen näistä vastaan, **⚠ tarkista** autopilotin valinnan yhteydessä.
+
+**Laitteisto [arvio]:** tietokone ja näyttö valitsematta. Huomioitavaa: 24 V:n syöttö (useimmat
+näytöt ja minitietokoneet ovat 12 V tai 19 V → DC-DC-muunnin), näytön kirkkaus ja himmennys
+yöajoon (kuten [bridge-mfd 4.4](bridge-mfd.md#44-näyttölaite)), ja tietokone, joka kestää virran
+katkeamisen (SSD, automaattinen käynnistys). Navigointitietokoneen ja oman monitoiminäytön voi
+myöhemmin toteuttaa samalla tietokoneella, mutta erillisinä ne varmistavat toisiaan.
+
 ## 4. Väylät erillään
 
 | Väylä | Nopeus | Laitteet | Liitos muihin |
@@ -642,6 +674,7 @@ käyttöönottoa.**
 - [x] Cerbo GX vai Cerbo GX MK2: MK2 hyvä ajatus [omistaja 2026-11-08]
 - [ ] Liitetäänkö Cerbo N2K:hon (MK2:n portti 1) vai vain verkon kautta Signal K:hon.
 - [ ] Muunnin 24→12 V: malli, hinta ja erotus (ehdokkaat kohdassa 5.1).
+- [ ] Navigointitietokone (N-07): tietokone, näyttö ja paikka; liittyykö OpenCPN väylään suoraan vai vain Signal K:n kautta
 - [ ] Nodejaon sijainnit (kohta 3.11): säiliöt, keittiö (kaasuhälytin), hytit, PVG 32 ja hydrauliikkasäiliö, pilssihälytin
 - [ ] Laitteiden mallit ja LEN-arvot: GNSS (valmis vai `node3`), AIS B, tuulianturi,
   peräsinkulma-anturi, polttoainemittarit.

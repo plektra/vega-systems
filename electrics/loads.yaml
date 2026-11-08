@@ -387,7 +387,7 @@ dc_loads:
     notes: "Halogeeni, käsikäyttöinen (vipu katon läpi), vanha ja todennäköisesti neuvostovalmisteinen, ei tyyppikilpeä [omistaja 2026-10-30]. Halogeeni säilyy, LED hylätty (päätös 2026-10-30). Polttimo Philips 24 V 250 W projektori- ja piirtoheitinhalogeeni [omistaja 2026-10-31], malli Philips 7748S 24V eli EHJ / A1/223, kanta G6.35, 9400 lm [omistaja 2026-11-03]; käyttöikä 50 h. Ei jäänestolämmitintä; käynnistysvirta noin 100–160 A hetkellisesti. Ks. design/searchlight-deicing.md"
 
   - id: NAV_COMPUTER
-    name: Navigointitietokone ja oma näyttö
+    name: Navigointitietokone ja noin 20":n näyttö (OpenCPN)
     location: komentosilta
     status: planned
     circuit: "KS-08"            # alustava, ks. design/circuit-list.md
@@ -395,7 +395,18 @@ dc_loads:
     power_W: null                  # ⚠ ei tiedossa; laitteita ei valittu
     use_h_per_day: null            # ajossa; ankkurissa mahdollisesti ankkurivahti
     source: "[omistaja 2026-10-29]"
-    notes: "Itse toteutettu monitoiminäyttö komentosillan kattopaneelissa ruorin yläpuolella [omistaja 2026-11-08]"
+    notes: "OpenCPN lähtökohtaisesti; noin 20 tuuman näyttö [omistaja 2026-11-08]. Tietokone ja näyttö valitsematta"
+
+  - id: BRIDGE_MFD
+    name: Itse toteutettu monitoiminäyttö (panel-Pi ja näyttö)
+    location: komentosilta, kattopaneeli
+    status: planned
+    circuit: null                  # ⚠ ei vielä piirilistalla
+    voltage_V: 24
+    power_W: null                  # ⚠ ei tiedossa; näyttöä ei valittu (kirkas 10–15 tuuman näyttö ja Pi 5)
+    use_h_per_day: null            # ajossa
+    source: "[omistaja 2026-11-08]"
+    notes: "Ks. electrics/design/bridge-mfd.md"
 
   - id: MFD_SIMRAD
     name: Monitoiminäyttö Simrad NSS7 evo3 tai NSS9 evo3 (luultavasti)

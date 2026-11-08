@@ -77,13 +77,15 @@ Kytkentä **⚠ tarkista** ESP32-PDM-projektin kanssa.
 | KS-05 | Työvalo eteen | 4,2 A (100 W) | 6 A | 1,5 mm² | 6010 | |
 | KS-06 | Työvalo taakse | 4,2 A (100 W) | 6 A | 1,5 mm² | 6010 | |
 | KS-07 | Hakuvalo | 10,4 A (250 W), käynnistysvirta noin 100–160 A | 16 A, C- tai D-käyrä **⚠ tarkista** käynnistysvirtaa vasten | 2,5 mm² (3 m) | ei: **rele** (päätetty 2026-10-31), kelaa ohjaa vipukytkin (suositus) tai 6050 | Käynnistysvirta: [searchlight-deicing.md](searchlight-deicing.md#3-ohjaus-ja-kytkentä) |
-| KS-08 | Navigointitietokone ja näyttö | **⚠ ei tiedossa** | laitteen mukaan | 3 % | 6010 | |
+| KS-08 | Navigointitietokone ja noin 20":n näyttö (OpenCPN) [omistaja 2026-11-08] | **⚠ ei tiedossa** | laitteen mukaan | 3 % | 6010 | Tietokone ja näyttö valitsematta |
 | KS-09 | AIS, luokka B | noin 0,1 A (3 W, **⚠ arvio**) | 2 A | 1,5 mm² | 6050 | |
 | KS-10 | Tutka | **⚠ ei tiedossa** | valmistajan ohjeen mukaan | 3 %, mastoon | 6010 tai hc | Laite valitsematta |
 | KS-11 | Atlas-kirkasnäkölasi (oma invertteri) | **⚠ ei tiedossa** | laitteen mukaan | | 6010 | |
 | KS-12 | Tuulilasinpyyhkijät | **⚠ ei tiedossa** | laitteen mukaan | | 6010 | Moottori: käynnistysvirta |
 | KS-13 | FM-radio (12 V:n muunnin) | alle 1 A (**⚠ arvio**) | 2 A | 1,5 mm² | 6050 | |
 | KS-14 | Tuulilasin huurunpoistopuhallin | **⚠ ei tiedossa** | laitteen mukaan | | 6010 | |
+| KS-15 | Monitoiminäyttö Simrad NSS7/NSS9 evo3 (kattopaneeli) [omistaja 2026-11-08] | noin 0,8 A (20 W, **⚠ tarkista**) | 3 A (7") tai 5 A (9") valmistajan suosituksen mukaan | 1,5 mm² | 6050 | Lisätty 2026-11-08 |
+| KS-16 | Oma monitoiminäyttö (panel-Pi ja näyttö, kattopaneeli) [omistaja 2026-11-08] | **⚠ ei tiedossa** | laitteen mukaan | 1,5 mm² | 6050 | Lisätty 2026-11-08, [bridge-mfd](bridge-mfd.md) |
 
 KS:n kuormat yhtä aikaa: valot noin 35 A (sisä-, kansi- ja työvalot sekä hakuvalo) ja elektroniikka, eli
 PJ-04:n 60 A riittää (**⚠ arvio**, tarkistetaan, kun tutka ja navigointitietokone valitaan).
@@ -135,7 +137,7 @@ tarkastaa sähköalan ammattilainen.**
 
 | | 6050 | 6010 | hc |
 |---|---|---|---|
-| KS | 2 | 10 (tutka mukaan lukematta) | – (hakuvalo releellä) |
+| KS | 4 (Simrad ja oma näyttö lisätty 2026-11-08) | 10 (tutka mukaan lukematta) | – (hakuvalo releellä) |
 | KH | 3 + 5 puhallinkonvektoria | 3 | – |
 | Pilssipumppujen pakotettu käyttö | – | – | 3 |
 | **Yhteensä** | **noin 10** | **noin 13** | **noin 3** |
