@@ -301,7 +301,7 @@ dc_loads:
     notes: "Turvallisuuskriittinen: kohokytkinpiiri suoraan akulta pääkytkimen ohi omalla sulakkeella; ei saa jäädä alijännitekatkaisun taakse. Pumppu itsessään ei ole automaattinen; kohokytkimet ovat jo asennettuina. ESP32-PDM:ää käytetään vain käsin pakotettuun käyttöön (rinnan kohokytkimen kanssa) [omistaja 2026-10-30]. Omistajan aiempi arvio noin 12 A vastaa Max Draw -arvoa."
 
   - id: HYD_CONTROL
-    name: Hydrauliikan ohjaus (PDM, PVE-ohjausyksiköt, BAV-713:n kelat, anturit)
+    name: Hydrauliikan ohjaus (PVG 32:n PVE-ohjausyksiköt, sallintarele, anturinode)
     location: konehuone
     status: planned
     circuit: "KH-08"            # alustava, ks. design/circuit-list.md

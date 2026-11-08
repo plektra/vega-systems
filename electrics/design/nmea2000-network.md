@@ -161,7 +161,7 @@ väylään ja Signal K:hon ([pressure-monitoring](../../hydraulics/design/pressu
 | 1B2 | Ohjauspaine | 0–250 bar | 130314 | ehdotus | sama |
 | – | Öljynpinta, suodattimen paine-ero | % / kytkin | 127505 / 127501 | auki (TBD) | [requirements §10.1](../../hydraulics/requirements.md#101-anturit) |
 | – | PVEH:n vikasignaali, joystickin asento | digitaali / analogia | Signal K | suunniteltu | [bow-thruster-control](../../hydraulics/design/bow-thruster-control.md) |
-| – | Ohjauslähdöt: PVEO, BAV-713:n kelat, PVEH:n sallintarele | PDM-lähdöt | 127502 | suunniteltu | [schematic](../../hydraulics/schematic.md) |
+| – | Ohjauslähdöt: PVEH:n sallintarele (keulapotkuri); PVEO vinssille ja painepesurille (myöhemmin, päälle/pois) | PDM-lähtö tai suora kytkin | 127502 | suunniteltu | [schematic](../../hydraulics/schematic.md) |
 
 **Keulapotkurin ohjaus ei kulje väylän kautta.** Joystick ohjaa PVEH:ta suoraan johdotettuna;
 PDM vain valvoo ja voi pudottaa sallinnan ([bow-thruster-control 4](../../hydraulics/design/bow-thruster-control.md#4-suositus-arvio-suora-joystick-ja-esp32-pdm-valvojana)).
@@ -301,10 +301,20 @@ Sijainnit, joita ei vielä tiedetä (säiliöt, keittiö, hytit, ohjausventtiili
 | PDM KS-1…3 (4-kanavaiset) | komentosilta, alle 10 m kattopaneelista | KS-01…KS-14 (valot, AIS, FM-radio, pyyhkijät, huurunpoisto, navigointitietokone) | kattopaneelin kytkimet |
 | PDM KH-1…3 (4-kanavaiset) | konehuone, KH | KH-01…KH-07 (pumput, puhaltimet, valaistus, puhallinkonvektorit) | konehuoneen kytkimet |
 | PDM hc-1…2 (suurivirta) | lähellä TK-kiskoa | pilssipumppujen pakotettu käyttö (N-25: lähtö näkee myös kohokytkimen käynnistämän pumpun) | – |
-| **PDM Hydrauliikka** (4-kanavainen) | konehuone, PVG 32:n lähellä **⚠** | PVEO (vinssi), BAV-713:n kelat, PVEH:n sallintarele, hälytyssummeri konehuoneessa | hydrauliikan kytkimet |
+**Hydrauliikka ei tarvitse omaa PDM-korttia** [korjattu 2026-11-08]. Keulapotkurin
+proportionaaliventtiiliä (PVEH) ohjataan suoraan analogisesti joystickilla
+([bow-thruster-control 4](../../hydraulics/design/bow-thruster-control.md#4-suositus-arvio-suora-joystick-ja-esp32-pdm-valvojana)),
+eikä BAV-713:a enää ole (PVG 32, päätös 2026-10-27). Sähköisiä lähtöjä jää vähän:
 
-**⚠ Piirilistan PDM-kanavalaskelmassa ei ole hydrauliikan lähtöjä.** Tarvitaan siis
-todennäköisesti yksi 4-kanavainen kortti lisää (noin 7 + 2) [laskelma].
+- **PVEH:n sallintareleen kela** (pieni virta): yksi 6050-kanava KH-kortilta. PDM voi vain pudottaa
+  sallinnan hälytyksestä, ei ohjata potkuria.
+- **PVEO vinssille ja painepesurille** (myöhemmin, päälle/pois): suoraan kytkimillä
+  ([kaavio 2A1](../../hydraulics/schematic.md)) tai kahdella KH-kanavalla, jos ne halutaan etäohjaukseen
+  ja valvontaan.
+
+KH-kortteihin (3 × 4 = 12 kanavaa, tarve noin 11 puhallinkonvektorit mukaan lukien,
+[piirilista](circuit-list.md#pdm-kanavien-tarve-laskelma--arvio)) mahtuu sallintarele. Neljäs KH-kortti tarvitaan vasta,
+jos sekä puhallinkonvektorit että molemmat PVEO:t tulevat PDM:lle [laskelma].
 
 #### Suoraan väylään liittyvät valmiit laitteet
 
@@ -318,7 +328,7 @@ todennäköisesti yksi 4-kanavainen kortti lisää (noin 7 + 2) [laskelma].
 | Kaiku ja loki (ehdotus) | pohja |
 | Peräsinkulma-anturi (autopilotin mukana) | peräsinakseli |
 
-**Yhteensä [arvio]:** 6–7 omaa anturinodea, noin 9 PDM-korttia ja 8–10 valmista laitetta, eli
+**Yhteensä [arvio]:** 6–7 omaa anturinodea, noin 8 PDM-korttia ja 8–10 valmista laitetta, eli
 noin 25 väylälaitetta. Raja on 50 laitetta (kohta 5.2), ja väylävirran arvio (kohta 3.9) pysyy
 noin 1,5 A:ssa.
 

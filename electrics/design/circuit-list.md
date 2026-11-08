@@ -140,9 +140,10 @@ tarkastaa sähköalan ammattilainen.**
 | Pilssipumppujen pakotettu käyttö | – | – | 3 |
 | **Yhteensä** | **noin 10** | **noin 13** | **noin 3** |
 
-Neljän kanavan kortteja tarvitaan noin 6 ja suurivirtakortteja (2 kanavaa) noin 2. **⚠ Hydrauliikan
-lähdöt (PVEO, BAV-713:n kelat, PVEH:n sallintarele) puuttuvat laskelmasta**; ne vievät todennäköisesti
-yhden 4-kanavaisen kortin lisää, ks. [nmea2000-network 3.11](nmea2000-network.md#311-nodejako-lisätty-2026-11-08) (lisätty 2026-11-08). Ilman
+Neljän kanavan kortteja tarvitaan noin 6 ja suurivirtakortteja (2 kanavaa) noin 2. Hydrauliikasta
+PDM:lle tulee vain PVEH:n sallintareleen kela (yksi 6050-kanava KH:lle, mahtuu nykyisiin kortteihin) ja
+myöhemmin mahdollisesti vinssin ja painepesurin PVEO:t; keulapotkuria ohjataan suoraan joystickilla, ks.
+[nmea2000-network 3.11](nmea2000-network.md#311-nodejako-lisätty-2026-11-08) (2026-11-08). Ilman
 puhallinkonvektoreita 4-kanavaisia kortteja riittää noin 5. Jokaiseen kanavaan tulee lisäksi
 johdonsuoja (päätös 2026-10-31).
 
