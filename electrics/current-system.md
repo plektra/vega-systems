@@ -158,7 +158,8 @@ Siihen tulee ainakin:
   monitoiminäyttö**.
 
 Väylä- ja kaapelointisuunnitelma paneelille: [design/nmea2000-network.md](design/nmea2000-network.md#56a-komentosillan-kattopaneeli-lisätty-2026-11-08).
-Paneelin mitat, materiaali ja kytkimien määrä **⚠ ei tiedossa**.
+Paneelin mitat, materiaali ja kytkimien määrä **⚠ ei tiedossa**. Oman monitoiminäytön toteutus:
+[design/bridge-mfd.md](design/bridge-mfd.md).
 
 ## 4. Valvonta, verkot ja tehonjako
 

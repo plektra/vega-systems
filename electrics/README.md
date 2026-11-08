@@ -13,6 +13,7 @@ DC ja AC, akut, lataus, tehonjako sekä linkit valvonta- ja ohjauselektroniikkaa
 | [design/house-battery.md](design/house-battery.md) | Käyttöakuston koko ja itse kootut LiFePO4-kennot |
 | [design/dc-distribution.md](design/dc-distribution.md) | Sähkönjako: rakenne, PDM, miinus ja sulaketyyppi päätetty (2026-10-31); kaapelit ja keskusten paikat auki |
 | [design/inverter-bms.md](design/inverter-bms.md) | Invertterilaturin ja BMS:n yhteensopivuus: Mastervolt vai Victron, REC vai JK |
+| [design/bridge-mfd.md](design/bridge-mfd.md) | Oma monitoiminäyttö komentosillalle: sivut (kamerat, hydrauliikka, navigointi ym.), kioskiselain ja kuorisovellus, näyttölaite (selvitys, ei päätetty) |
 | [design/nmea2000-network.md](design/nmea2000-network.md) | NMEA 2000- ja CAN-väylät: kaikkien anturien, nodejen ja ohjainten luettelo, väylien erottelu, luotettavan väylän säännöt ja vikatilat (selvitys, ei päätetty) |
 | [design/circuit-list.md](design/circuit-list.md) | Piirilista: piirien tunnukset, johdonsuojat, alustavat kaapelikoot ja PDM-kanavat (luonnos) |
 | [design/searchlight-deicing.md](design/searchlight-deicing.md) | Hakuvalon jäänpoisto: halogeeni ja suojahuppu (päätetty), taustana lämmitysvaihtoehdot |
