@@ -1,6 +1,6 @@
 # Painemittaus: analogiset mittarit, digitaaliset anturit ja mittausliittimet
 
-> **Tila:** ehdotus 2026-10-23, päivitetty 2026-10-26 ja **2026-11-03 (mittauspisteet päivitetty PVH57:lle ja PVG 32:lle; BPV-perustelut poistettu)**, ei päätetty; imupuolen mittarit 1G2 ja 2G2 päätetty 2026-10-28. Nykyiset mittarit [omistaja 2026-10-23]. Hinnat ovat
+> **Tila:** ehdotus 2026-10-23, päivitetty 2026-10-26 ja **2026-11-03 (mittauspisteet päivitetty PVH57:lle ja PVG 32:lle; BPV-perustelut poistettu)** sekä 2026-11-09 (anturien valinta ja asennus), ei päätetty; imupuolen mittarit 1G2 ja 2G2 päätetty 2026-10-28. Nykyiset mittarit [omistaja 2026-10-23]. Hinnat ovat
 > arvioita.
 
 Liittyy: [vaatimukset §10.1](../requirements.md#101-anturit), [kaaviot](../schematic.md),
@@ -108,6 +108,59 @@ imulinjassa ole valmiita mittausliitäntöjä: PVH57:n imulaipan mittausaukosta 
 - **Mittausliitin:** jos imupuolelle halutaan pikaliitin (1T2), tarkista, että liitin on tiivis myös
   alipaineessa (**⚠ tarkista valmistajalta**). Muuten kiinteä mittari tai anturi on varmempi.
 
+## Anturien valinta ja asennus (lisätty 2026-11-09)
+
+**Riittävätkö halvat (esim. Aliexpressin) 4–20 mA -anturit?** Kyllä valvontaan, kun asennus tehdään
+alla kuvatulla tavalla. Anturit 2B2, 1B2 ja 2B1 ovat valvontaa, lokitusta ja hälytyksiä varten, ja
+analogiset mittarit 1G1, 2G1, 1G2 ja 2G2 jäävät rinnalle. Anturin vika vie siis vain lukeman tai
+antaa väärän hälytyksen. Ainoa ohjaava toiminto on 2B2:n vedon valvonta, joka voi katkaista PVE:iden
+virran. Väärä lukema pysäyttää silloin keulapotkurin tai vinssin eikä käynnistä mitään, mikä on
+turvallinen vikasuunta. [arvio]
+
+**Halpojen anturien todelliset riskit** [arvio, yleinen kokemus; ei mitattu]:
+
+| Riski | Mitä se tarkoittaa Vegalla |
+|---|---|
+| Rungon tai kalvon vuoto tai halkeama 250–280 barissa | **Merkittävin riski.** 1B2:n vuoto vie ohjauksen, ja kuumaan koneeseen suihkuava öljy on palovaara. Valmistuslaatua ei voi tietää etukäteen. |
+| Paineiskut ja väsyminen | Venttiilin sulkeutuminen tai keulapotkurin pysähtyminen voi nostaa paineen hetkellisesti yli paineenrajoituksen asetuksen. Halvan anturin ylipainekesto on usein vain 1,5–2 × mittausalue, ja ohut kalvo väsyy painevaihtelusta. |
+| Kierre ja tiivistys | "G1/4" voi olla NPT- tai kartiokierre ilman tiivistepintaa. Imupuolella (2B1) vuoto imee ilmaa. |
+| Tarkkuus ja lämpöryömintä | Luvattu ±0,5 % on käytännössä usein ±1–2 % mittausalueesta. 2B2:lle ja 1B2:lle tämä riittää. 2B1:llä (−1…+1 bar, varoitus 0 bar) ero on noin ±0,02–0,05 bar, mikä on rajoilla mutta käyttökelpoinen, kun nollapiste tarkistetaan. |
+| Kosteus ja korroosio | Liittimen ilmoitettu IP65 ei aina pidä paikkaansa veneen konehuoneessa. |
+
+**Ostokriteerit:**
+
+- Ruostumaton runko ja **hitsattu metallikalvo** (ei keraamista kalvoa), suora **BSPP-kierre**
+  tiivistealuslevyllä tai O-renkaalla.
+- **Ylipainekesto vähintään 2 × mittausalue ja murtopaine ilmoitettu.** 2B2: 0–400 bar, 1B2:
+  0–250 bar (ylipainekesto ≥ 500 bar). Jos myyjä ei kerro murtopainetta, älä osta.
+- 2-johtiminen 4–20 mA, syöttöjännitealue, joka kattaa noden S2 24 V:n silmukat.
+
+**Asennus:**
+
+- **Kuristin (snubber, noin 0,5–0,8 mm:n reikä) anturin eteen.** Se vaimentaa paineiskut ja rajoittaa
+  vuotoa, jos anturi hajoaa. **1B2:ssa pakollinen.** [arvio]
+- **Sulkuventtiili tai mittausliitin anturin haaraan**, jotta rikkinäisen anturin voi eristää ja
+  vaihtaa ajon aikana. **Ohjauspiirin (1B2) haara on turvallisuuskriittinen: pätevän henkilön pitää
+  tarkistaa se ennen rakentamista.**
+- **Lukeminen nodessa S2:** mittavastus noin 150 Ω (4–20 mA → noin 0,6–3 V) ja erillinen AD-muunnin
+  (esim. ADS1115), koska ESP32:n oma AD-muunnin on epälineaarinen. **Alle 3,8 mA tai yli 20,5 mA
+  tulkitaan anturiviaksi eikä paineeksi.** [arvio] Ks. [nmea2000-network 3.11](../../electrics/design/nmea2000-network.md#311-nodejako-lisätty-2026-11-08).
+- **Käyttöönotossa** lukemat verrataan analogisiin mittareihin. 2B1:n nollapiste tarkistetaan kone
+  sammutettuna: säiliön öljypatsaan pitää näkyä pienenä ylipaineena (noin +0,09 bar, kun öljypinta on
+  1 m pumpun yläpuolella), ks. kohta [Imupaineen mittaus](#imupaineen-mittaus).
+
+**Hintaluokat** [arvio, hintoja ei tarkistettu]:
+
+| Vaihtoehto | Hinta / kpl | Milloin |
+|---|---|---|
+| Nimetön anturi (Aliexpress) | noin 15–30 € | Valvontakohdat (2B2, 2B1), kun kuristin ja sulkuventtiili ovat paikallaan |
+| Kiinalainen teollisuusmerkki, jolla on oikea datalehti (murtopaine, kalvon materiaali) | noin 30–60 € | Hyvä kompromissi |
+| Merkkianturi (esim. Danfoss MBS 3000, WIKA A-10, Trafag), myös käytettynä tai ylijäämänä | noin 60–150 € | 1B2, jos ohjauspiiriin halutaan varma anturi |
+
+**Suositus:** halpa tai datalehdellinen kiinalainen anturi kohtiin 2B2 ja 2B1. Kohtaan 1B2 kelpaa
+sama anturi, jos haaraan asennetaan kuristin ja sulkuventtiili. Muuten kannattaa ottaa merkkianturi.
+Kolmen anturin hintaero on noin 100–300 € [arvio]. **Ei päätetty.**
+
 ## Suositus
 
 1. **Digitaalinen anturi 2B2 P2:n lähtöön.** Se valvoo keulapotkuria ja vinssiä: jos paine jää
@@ -124,6 +177,6 @@ Analogiset 1G1 ja 2G1 jäävät, jotta paineen näkee myös ilman sähköä tai 
 ## Avoimet kysymykset
 
 - [ ] Hyväksytäänkö ehdotus (2B2, 1B2, mittausliittimet, 3G2)?
-- [ ] Anturien malli ja liitäntä (4–20 mA vai 0,5–4,5 V). ESP32-PDM:ssä ei ole 4–20 mA -tuloja, joten anturit tulevat hydrauliikan omaan anturinodeen S2 (ehdotus 2026-11-08, [nmea2000-network 3.11](../../electrics/design/nmea2000-network.md#311-nodejako-lisätty-2026-11-08))
+- [ ] Anturien malli ja liitäntä (4–20 mA vai 0,5–4,5 V). Valintaperusteet: [Anturien valinta ja asennus](#anturien-valinta-ja-asennus-lisätty-2026-11-09); mallia ei ole valittu. ESP32-PDM:ssä ei ole 4–20 mA -tuloja, joten anturit tulevat hydrauliikan omaan anturinodeen S2 (ehdotus 2026-11-08, [nmea2000-network 3.11](../../electrics/design/nmea2000-network.md#311-nodejako-lisätty-2026-11-08))
 - [ ] Signal K -polut ja NMEA 2000 -lähetys (PGN 130314, paineen lähdeluokka ⚠ tarkista)
 - [ ] 1G1:n ja 2G1:n mittausalueet ja kunto
