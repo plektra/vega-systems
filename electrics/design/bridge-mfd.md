@@ -110,6 +110,13 @@ asetustiedostona, jolloin uuden sivun lisäys ei vaadi koodimuutosta.
 - **Yötila:** himmennys ja tumma / punainen teema yhdellä painikkeella, ja automaattisesti
   auringonlaskun mukaan (Signal K laskee ajan sijainnista). Näytön taustavalon himmennys
   laitteiston kautta (**⚠ tarkista** valitusta näytöstä, esim. DDC/CI tai PWM).
+- **Ulkoasu: OpenBridge** [omistaja 2026-11-11]: [openbridge.no](https://www.openbridge.no/) on
+  avoin, norjalainen suunnittelujärjestelmä (design system) aluksen komentosillan
+  käyttöliittymille: yhtenäiset värit, kuvakkeet ja komponentit sekä valmiit päivä-, hämärä- ja
+  yöpaletit. Sitä kannattaa käyttää kuorisovelluksen ja omien sivujen (hydrauliikka, sähkö)
+  pohjana, jolloin yötila ja hälytysten värit ovat merenkulun käytäntöjen mukaisia eikä niitä
+  tarvitse suunnitella itse [arvio]. Lisenssi ja web-komponenttien käyttökelpoisuus
+  **⚠ tarkista**.
 - **Oletussivu** käynnistyksessä ja paluu siihen, kun näyttöön ei ole koskettu hetkeen
   (valinnainen).
 
@@ -156,6 +163,8 @@ HDMI) ovat selvästi tavallisia näyttöjä kalliimpia.
 - [ ] Omistajat: selainpohjainen kuorisovellus (suositus A) vai pelkät valmiit sovellukset (B)?
 - [ ] Panel-Pi: nykyinen kioski-Pi vai uusi Pi 5; oma CAN HAT ja paikallinen Signal K varalle?
 - [ ] Näytön koko, kirkkaus ja malli; kosketus vai pelkät painikkeet
+- [ ] OpenBridge-suunnittelujärjestelmän lisenssi ja web-komponentit: käytetäänkö suoraan vai vain
+  ulkoasun mallina ([4.3](#43-käyttö))
 - [ ] Sivujen järjestys ja oletussivu; mitä muita sivuja tarvitaan
 - [ ] Hälytyssummerin paikka ja ohjaus (näytön kautta vai PDM-lähtö)
 - [ ] Frigaten versio ja go2rtc:n WebRTC-tuki; kameroiden alivirrat
