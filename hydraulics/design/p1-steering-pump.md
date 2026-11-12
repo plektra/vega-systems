@@ -185,6 +185,32 @@ hyötysuhde 92 %, kierrosrajat datalehti Salami 2PE s. 6]:
   uraholkki sopivat. Muunkin valmistajan ryhmän 2 pumppu käy, jos koko, akseli, laippa,
   pyörimissuunta ja suurin kierrosluku (≥ 3000 rpm) täsmäävät.
 
+#### Vaihtoehto: ryhmän 3 pumppu 20 cm³
+
+Pienin ryhmän 3 koko on noin 20 cm³ (Salami 3PE-21: 20,6 cm³, 3000 rpm [datalehti Salami 2PE -luettelo s. 7]).
+Etu: **vanha ryhmän 3 tukilaakeri ja kannake voivat sopia**, jos vanhan P2:n laippa ja akseli ovat
+eurooppalaista ryhmän 3 standardia (**⚠ tarkista** vanhasta pumpusta: pulttijako 98,4 × 128,1 mm,
+ohjuri Ø50,8 mm, kartio 1:8, kiila 4 mm).
+
+Ehdokas: [Hydrauliikkakauppa.fi 30C20X146](https://www.hydrauliikkakauppa.fi/tuote/hammaspyorapumppu-3-sarja-25-cm%c2%b3-laippaliitanta/), 20 cm³, 3000 rpm, kartio 1:8 ja 4 mm:n kiila,
+pulttijako 98,4 × 128,1, ohjuri Ø50,8; 240 € (alv 0 %: 191,24 €), varastossa [datalehti
+Hydrauliikkakauppa.fi 2026-11-12]. Valmistaja, paineet ja imuaukon koko **⚠ ei tiedossa**.
+
+| Koko | Tuotto, kone 700 rpm | Tuotto, kone 2400 rpm | Imuletkun nopeus (32 mm) | Imupaine kylmänä (5 °C), 32 mm × 3,2 m, HVLP 32 |
+|---|---|---|---|---|
+| 2PE 16,6 cm³ | 13,3 l/min | 45 l/min | 0,94 m/s | −0,15 bar |
+| **3-sarja 20 cm³** | **16,0 l/min** | 55 l/min | 1,14 m/s | noin −0,22 bar (arvio) |
+| 3-sarja 25 cm³ | 20,0 l/min | 68 l/min | 1,41 m/s | noin −0,33 bar (arvio), **yli Salamin −0,3 barin rajan** |
+
+[laskelma: välitys 1:1,24, volumetrinen hyötysuhde 92 %; imupaine skaalattu 16,6 cm³:n laskelmasta,
+oletuksena sama 3/4":n imuaukko, joten ryhmän 3 isommalla aukolla tulos on parempi. Ryhmän 3
+pumpun oma imupaineraja **⚠ ei tiedossa**.]
+
+- **20 cm³ sopii:** orbitrolin nimellisvirtaus 16 l/min täyttyy tyhjäkäynnillä, ja imu pysyy rajan
+  sisällä 3,2 m:n letkulla. Imulinjaa ei pidä pidentää 5 metriin.
+- **25 cm³ on liian suuri:** imu menee kylmänä suurilla kierroksilla rajan yli, ja ohjaus ei
+  tarvitse lisää virtausta.
+
 ### Vikatilanteet (ohjaus)
 
 | Vika | Seuraus | Suoja |
