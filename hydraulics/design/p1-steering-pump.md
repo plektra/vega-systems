@@ -159,6 +159,32 @@ Ehdotus:
    jos sen kiinnitys koneeseen sopii (**⚠ tarkista** veneellä).
 4. Vanha ryhmän 3 tukilaakeri jää käyttämättä (voi myydä, jos sille ei löydy käyttöä).
 
+### Uuden P1:n kierrostilavuus
+
+Vanhaan pumppuun ei saa uutta akselia, joten P1 vaihdetaan uuteen [omistaja 2026-11-12].
+Laskelma nykyisellä välityksellä 1:1,24 [laskelma; tyhjäkäynti 700 rpm on arvio, volumetrinen
+hyötysuhde 92 %, kierrosrajat datalehti Salami 2PE s. 6]:
+
+| Koko | Suurin kierrosluku | Tuotto, kone 700 rpm (P1 870 rpm) | Tuotto, kone 2400 rpm (P1 2980 rpm) | Virtausnopeus 32 mm:n imuletkussa 2400 rpm:llä |
+|---|---|---|---|---|
+| 2PE 13,8 | 3500 rpm | 11,0 l/min | 37,8 l/min | 0,78 m/s |
+| **2PE 16 (16,6 cm³)** | 3000 rpm | **13,3 l/min** | 45,4 l/min | 0,94 m/s |
+| 2PE 19 (19,4 cm³) | 3000 rpm | 15,5 l/min | 53,1 l/min | 1,10 m/s |
+
+- **Suositus: 16,6 cm³ (sama kuin ennen).** Tyhjäkäynnillä 13,3 l/min riittää pyörittämään
+  orbitrolia (158,4 cm³/r) noin 80 kierrosta minuutissa, ja kaikki imu- ja kierroslaskelmat
+  pysyvät ennallaan.
+- 19,4 cm³ toisi tyhjäkäynnille noin 2 l/min lisää, mutta imuletkun virtausnopeus ylittää
+  suosituksen 1 m/s suurilla kierroksilla, kierrosraja on sama 3000 rpm, ja jatkuva paine on
+  220 bar. Hyöty on pieni.
+- 13,8 cm³ antaisi kierrosmarginaalia (raja 3500 rpm), mutta tyhjäkäynnin tuotto putoaa noin
+  11 l/min:iin ja ohjaus hidastuu satamassa.
+- Orbitrolin nimellisvirtaus 16 l/min saavutettaisiin tyhjäkäynnillä vasta noin 20 cm³:llä, jota
+  2PE-sarjassa ei ole 3000 rpm:n rajalla.
+- Akseliksi kartio 1:8 (Salamin koodi 28) ja eurooppalainen laippa, jotta ryhmän 2 tukilaakeri ja
+  uraholkki sopivat. Muunkin valmistajan ryhmän 2 pumppu käy, jos koko, akseli, laippa,
+  pyörimissuunta ja suurin kierrosluku (≥ 3000 rpm) täsmäävät.
+
 ### Vikatilanteet (ohjaus)
 
 | Vika | Seuraus | Suoja |
@@ -181,5 +207,5 @@ Ehdotus:
 - [x] Tukilaakeri: vanha oli ryhmän 3 P2:n, ei sovi P1:lle; tarvitaan uusi ryhmän 2 tukilaakeri ja kannake [omistaja 2026-11-05]
 - [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; tukilaakeriyksikön uraholkkiin sopii alkuperäinen **akseli 28** (kartio 1:8, kiila 3,2 mm); suora kiila-akseli ei sovi (2026-11-06). Tarvitaan vetävä hammaspyörä akselilla 28
 - [ ] Tukilaakeri: Salamin laakeroitu laippa (CP/CS) vai erillinen laakeripukki ja kytkin
-- [ ] Tarjous vetävästä hammaspyörästä (akseli 28), vertailuksi uudesta 2PE16D-P28P1:stä sekä ryhmän 2 tukilaakerista ja uraholkista: **kysely lähetetty Fluiconnectolle 2026-11-06** [omistaja 2026-11-06], samalla kysytty, ovatko he yhä Salamin maahantuoja; odotetaan vastausta
+- [ ] Tarjous vetävästä hammaspyörästä (akseli 28), vertailuksi uudesta 2PE16D-P28P1:stä sekä ryhmän 2 tukilaakerista ja uraholkista: kysely lähetetty Fluiconnectolle 2026-11-06 [omistaja 2026-11-06]. **Vanhaan pumppuun ei saa uutta akselia, joten hankitaan uusi P1** [omistaja 2026-11-12], ks. [Uuden P1:n kierrostilavuus](#uuden-p1n-kierrostilavuus)
 - [ ] Kannake: tehdäänkö uusi vai muokataanko vanha

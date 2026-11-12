@@ -165,7 +165,7 @@ osia voi kysyä Fluiconnectolta, joka on ainakin aiemmin ollut Salamin maahantuo
 | 6.4 | Kaksoispainemittari (vakuumi ja paine) −1…+1,5 bar, glyseriinitäytteinen, Ø63 mm, takaliitäntä | 1 | 1G2, kiinteä, mittaritauluun; pelkkä −1…0 bar:n alipainemittari ei näyttäisi pysähdyksissä olevaa pientä ylipainetta (öljypinta vähintään 1 m pumpun yläpuolella) | 🛒 päätetty | noin 15–40 € [arvio] | sama, [pressure-monitoring](design/pressure-monitoring.md#imupaineen-mittaus), [päätös 2026-10-28](../decisions.md) |
 | 6.5 | Tukilaakeri (outboard bearing), Salami ryhmä 2 | 1 | vanha tukilaakeri oli ryhmän 3 P2:n eikä sovi; malli **⚠ ei tiedossa** | 🛒 | **⚠ ei tiedossa** | [omistaja 2026-11-05], [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli) |
 | 6.6 | Kannake tukilaakerille ja P1:lle | 1 | uusi tai vanhan muokkaus | 🛒 | **⚠ ei tiedossa** | sama |
-| 6.7 | P1:n käyttöakseli | 1 | nykyinen katkaistu tandem-käyttöä varten; vertaa uuden 2PE16-pumpun hintaan | ❓ | **⚠ ei tiedossa** | sama |
+| 6.7 | **Uusi P1-pumppu**, ryhmä 2, 16,6 cm³ (esim. Salami 2PE16D-P28P1), kartioakseli 1:8 ja eurooppalainen laippa tukilaakerin uraholkkia varten | 1 | vanhaan pumppuun ei saa uutta akselia [omistaja 2026-11-12]; koon perustelu [p1-steering-pump](design/p1-steering-pump.md#uuden-p1n-kierrostilavuus) | 🛒 | **⚠ ei tiedossa** | sama |
 
 ## Imupuolen kaksoispainemittarit
 
