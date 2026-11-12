@@ -27,7 +27,7 @@ Se tarvitsee vain syötön ja ohjausjännitteen, jota kara seuraa.
 | Syöttö U | 22–30 V (Vegan 24 V käy) | [datalehti PVG 32 520L0344 s. 15–18](../../datasheets/README.md) |
 | Ohjaussignaali | **suhteessa syöttöön:** keskiasento 0,5 × U, täysi isku 0,25 × U (suunta 1) tai 0,75 × U (suunta 2) | sama |
 | Vikavalvonta | kara pysähtyy ja vikasignaali aktivoituu, jos signaali on alueen 15–85 % × U ulkopuolella (myös johdon katketessa) | sama |
-| Liitin | Hirschmann DIN, 4-napainen: syöttö, signaali, maa, vikasignaali | sama |
+| Liitin | Hirschmann DIN, 4-napainen: syöttö, signaali, maa, vikasignaali. Vegan PVE:issä **Hirschmann GDM** (DIN 43650 / EN 175301-803 muoto A), kiinnitysruuvi M3 × 35 [omistaja 2026-11-03, 2026-11-12], ks. [hankintalista 4.17](../procurement.md) | sama |
 | Signaalitulon impedanssi | **⚠ ei tiedossa** (vaikuttaa potentiometrin arvoon) | tarkista 520L0344:stä |
 | Virrankulutus | **⚠ ei tiedossa** | sama |
 | Vikanastan tyyppi ja kuormitettavuus | **⚠ ei tiedossa** | sama |
