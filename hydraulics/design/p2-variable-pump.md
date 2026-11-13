@@ -514,7 +514,7 @@ orbitrolin T ────┘
 U11:n ja PVH57:n vuotolinjat ─────────────────────────────────────────────────────────────── suoraan säiliöön
 ```
 
-- **P1:n paluu kulkee aina uuden suodattimen läpi,** kun kone käy (14–37 l/min,
+- **P1:n paluu kulkee aina uuden suodattimen läpi,** kun kone käy (vanhalla 16,6 cm³:n P1:llä 14–37 l/min, uudella 20 cm³:n P1:llä noin 16–55 l/min [laskelma 2026-11-13],
   [p1-steering-pump](p1-steering-pump.md)). Se puhdistaa säiliön öljyä jatkuvasti, vaikka PVH57
   olisi valmiustilassa lähes ilman virtausta [arvio].
 - **Nykyinen suodatin jää toiseksi vaiheeksi** halvalla selluloosaelementillä. Siitä on hyötyä

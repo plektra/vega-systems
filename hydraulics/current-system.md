@@ -6,8 +6,8 @@
 > jossa myös tämän dokumentin aiempi päivityshistoria). Nykyinen suunnitelma: P1 hihnavetoisena
 > ohjaukselle; P2 = Vickers PVH57 (ostettu 2026-11-01) PTO:lta HRC 150 -kytkimellä; venttiileinä
 > Danfoss PVG 32 (ostettu 2026-11-02, saapui 2026-11-03, karat liikkuvat ja palaavat keskelle).
-> **2026-11-05:** P1 tarvitsee uuden ryhmän 2 tukilaakerin ja kannakkeen, mahdollisesti uuden
-> käyttöakselin (oli tandemina vanhan P2:n perässä).
+> **2026-11-13:** P1 vaihdetaan ryhmän 3 pumppuun 20 cm³ (30C20X146); vanha ryhmän 3 tukilaakeri
+> ja kannake käytetään (päätös 2026-11-13).
 > Päätökset: [decisions.md](../decisions.md). Kohdat, joissa on merkintä **⚠ tarkista**, pitää
 > tarkistaa veneellä.
 >
@@ -25,7 +25,7 @@
 | Vaihteisto | Advance 300 on **asennettu ja linjattu** potkuriakseliin, ja akselille on uusi laakeripukki |
 | Pääkone | Asennetaan takaisin ja linjataan vaihteistoon |
 | Hydrauliikka | **Molemmat pumput irrotettu**; muu järjestelmä (säiliö, venttiilit, orbitroli, sylinteri, letkut) on paikallaan [omistaja 2026-10-23]. Pumppuja ei asenneta ennen kuin kone on linjattu. |
-| Suunnitelma: ohjauspumppu | Pieni vakiotilavuuspumppu (P1, 16,6 cm³) palaa koneen etupäähän, kahden kiilahihnan vetämänä kuten ennenkin. **Vain ohjaukselle.** |
+| Suunnitelma: ohjauspumppu | Pieni vakiotilavuuspumppu (P1, **uusi 20 cm³**, päätös 2026-11-13) palaa koneen etupäähän, kahden kiilahihnan vetämänä kuten ennenkin. **Vain ohjaukselle.** |
 | Suunnitelma: apupiirin pumppu | **Vickers PVH57** (PVH57C-LAF-1S-10-C12V-31, 57,4 cm³, säätötilavuuksinen aksiaalimäntäpumppu, LS-säädin, pyörimissuunta L) **suoraan Advance 300:n voimanulosotosta (PTO)** omalla SAE C -kannakkeella [päätös 2026-10-27; ostettu ja noudettu 2026-11-01, 150 €; ks. [p2-variable-pump.md](design/p2-variable-pump.md)]. Venttiileiksi **Danfoss PVG 32** -proportionaaliventtiilipöytä (ykkösvaihtoehto, päätös 2026-10-27; ostettu 2026-11-02, 200 € + rahti 39,90 €; saapui 2026-11-03), ks. [aux-circuit-ls-clean-sheet.md](design/aux-circuit-ls-clean-sheet.md). (Aiempi alustava suunnitelma Parker F1-61 + BPV on arkistoitu: [archive/p2-pump-options.md](design/archive/p2-pump-options.md).) |
 | Advance 300:n PTO | **Välitys 1:1, käyttö ensiöakselilta** (pyörii aina kun kone käy, myös vapaalla). **Ei omaa kytkintä.** Nimellisteho **0,044 kW/rpm**, eli vakiomomenttiraja **≈ 420 Nm** (35 kW 800 rpm:llä, 110 kW 2500 rpm:llä). Ulostulo on **sileä Ø48 mm:n kiila-akseli** ilman pumppulaippaa. |
 | Suunnitelma: PTO-voimansiirto | PTO-akseli → **HRC 150 -joustokytkin** (Taper Lock 2012 -holkit 48 mm / 1 1/4") → P2 [päätös 2026-10-27, korvaa Spidex 48/60:n]. Pumppu on **omalla, runkoon kiinnitetyllä kannakkeella**, joten PTO-akselille ei tule pumpun painoa eikä sivukuormaa. **Ei PTO-kytkintä** [päätös 2026-10-23]. |
@@ -40,7 +40,7 @@
 ### Suunniteltu voimansiirto
 
 ```
-                 ┌── 2 kiilahihnaa, 1:1,24 ── P1 16,6 cm³ ── ohjauspiiri (orbitroli + sylinteri)
+                 ┌── 2 kiilahihnaa, 1:1,24 ── P1 20 cm³ ── ohjauspiiri (orbitroli + sylinteri)
  CAT 3126B ──────┤
   (etupää)       │
                  └── vauhtipyörä ── Advance 300 ── potkuriakseli
@@ -224,12 +224,12 @@ suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestel
 
 | Pumppu | Merkki | Kierrostilavuus | Arvot (kaavio) | Tuotto koneen 800 / 1800 / 2500 rpm:llä* | Syöttää |
 |---|---|---|---|---|---|
-| P1 | Salami **2PE16D-P28P1** (ryhmä 2, kartioakseli 1:8, laippa P1) | 16,6 cm³/r | 250 bar jatkuva / 280 ajoittainen / 300 huippu; **max 3000 rpm**, min 400 rpm [datalehti Salami 2PE] | 16,5 / 37,1 / 51,5 l/min | Ohjaus |
+| P1 | **Uusi (päätös 2026-11-13): ryhmän 3 hammaspyöräpumppu 30C20X146** (kartioakseli 1:8, kiila 4 mm, pulttijako 98,4 × 128,1, ohjuri Ø50,8). Vanha Salami 2PE16D-P28P1 (16,6 cm³) poistuu: akseli katkaistu | 20 cm³/r | **max 3000 rpm**; paineet **⚠ ei tiedossa** [datalehti Hydrauliikkakauppa.fi] | 19,8 / 44,6 / 62,0 l/min | Ohjaus |
 | P2 | Salami **3PB33D-P38P2**, hammaspyörä (ryhmä 3) | 33,5 cm³/r | 250 bar, 30–80 l/min | 33,2 / 74,8 / 103,8 l/min | Apupiiri (liian pieni PTO:lle, ks. §0) |
 | P3 | Vanhasta voimayksiköstä; moottori 24 V, 2,5 kW | **⚠ ei tiedossa** | | | Varaohjaus |
 
 \* Laskettu hihnavälityksellä 1:1,24 ja 100 %:n volumetrisella hyötysuhteella. Koneen 2500 rpm:llä
-pumput pyörivät noin 3100 rpm. **P1:n (2PE16D) suurin sallittu kierrosnopeus on 3000 rpm**
+pumput pyörivät noin 3100 rpm. **P1:n suurin sallittu kierrosnopeus on 3000 rpm** (sekä vanha 2PE16D että uusi 30C20X146)
 [datalehti Salami 2PE], eli hihnavetoisena koneen kierrokset saavat olla enintään noin **2420 rpm**.
 Koneen suurin kierrosluku on noin **2400 rpm** [omistaja 2026-10-22], jolloin P1 pyörii noin 2980 rpm:
 **juuri ja juuri rajan sisällä**. **Välitystä ei muuteta** (päätös 2026-10-23); pienempi välitys
@@ -239,11 +239,11 @@ myös 2400 rpm:llä.) Salamin 2PE-sarjan käyttöehdot: imupaine 0,7–2,5 bar a
 viskositeetti vähintään 12 cSt (suositus 17–65 cSt, käynnistys enintään 800 cSt), öljy −15…+85 °C
 (NBR-tiivisteet).
 
-**P1:n asennus:** P1 oli alun perin tandemina vanhan P2:n (ryhmä 3) perässä samalla akselilla.
-Vanha tukilaakeri on ryhmän 3 eikä sovi P1:lle (ryhmä 2), joten P1 tarvitsee **uuden tukilaakerin
-ja kannakkeen**. P1:n käyttöakseli on **katkaistu** tandem-käyttöä varten, joten uusi akseli on
-mahdollisesti tarpeen [omistaja 2026-11-05]. Salamin maahantuojana on ainakin aiemmin toiminut
-Fluiconnecto (**⚠ tarkista**). Ks. [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli).
+**P1:n asennus:** P1 oli alun perin tandemina vanhan P2:n (ryhmä 3) perässä samalla akselilla, ja
+sen akseli on katkaistu [omistaja 2026-11-05]. Uutta akselia ei saa [omistaja 2026-11-12], joten
+**P1 vaihdetaan ryhmän 3 pumppuun 20 cm³**, joka sopii vanhaan ryhmän 3 tukilaakeriin ja
+kannakkeeseen (mitat täsmäävät [omistaja 2026-11-13], päätös 2026-11-13). Uuden pumpun
+imupaineraja ja imuaukon koko **⚠ ei tiedossa**; tämän osion Salamin käyttöehdot koskevat vanhaa P1:tä. Ks. [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli).
 
 ### 3.3 Piiri 1 — Ohjaus
 
@@ -403,8 +403,9 @@ Avoimet:
 - [ ] Anturit: öljyn lämpötila ja P2:n imupaine (malli, ESP32/Signal K -liitäntä)
 - [x] Imupaineen mittarit: kiinteät kaksoispainemittarit 1G2 (P1) ja 2G2 (P2) mittaritauluun (päätös 2026-10-28)
 - [ ] Mittaritaulun paikka konehuoneessa ja mittausletkujen reititys
-- [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23]
-- [ ] P1:n tukilaakeri (ryhmä 2) ja kannake hankittava; käyttöakseli katkaistu, uusi mahdollisesti tarpeen [omistaja 2026-11-05], ks. [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli)
+- [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23] (vanha pumppu)
+- [ ] Uuden P1:n (30C20X146) imuaukon koko, liitännät, paineluokka ja imupaineraja
+- [x] P1:n tukilaakeri ja kannake: vanhat ryhmän 3 osat käytetään uuden ryhmän 3 pumpun kanssa (päätös 2026-11-13)
 - [ ] **Käyttöönoton säädöt:** PVH57:n paineenrajoitin 120 → 250 bariin mittarilla 2G1 (ks. [p2-variable-pump](design/p2-variable-pump.md#säätö-käyttöönotossa-ilman-virtausmittaria)); orbitrolin paineenrajoitus pienimpään arvoon, jolla peräsin kääntyy ääriasentoihin ajossa, kuitenkin enintään sylinterin ja letkujen painearvon
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (malli vahvistettu EC100:ksi [omistaja 2026-10-27]; vetojen määrä ⚠, ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
 - [ ] Muutokset vuoden 2021 jälkeen, joita blogi ei kata

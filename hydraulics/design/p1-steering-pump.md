@@ -1,7 +1,7 @@
 # Ohjauspumppu P1: imulinja ja muutokset P2-remontin yhteydessä
 
 > **Tila:** selvitys 2026-10-23. **Päätetty 2026-10-23: kohdat 1, 3, 4 ja 5** (32 mm:n imulinja,
-> täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohta 6: välitystä ei muuteta; kohta 7 avoinna. **2026-11-05:** P1 tarvitsee uuden ryhmän 2 tukilaakerin ja kannakkeen, mahdollisesti myös uuden käyttöakselin (ks. [kohta 7](#tukilaakeri-kannake-ja-käyttöakseli)) [omistaja 2026-11-05]. Imulinjan mitat [omistaja 2026-10-23],
+> täysiaukkoinen palloventtiili, HVLP 32 -öljy, imupaineen mittaus käyttöönotossa); kohta 6: välitystä ei muuteta. **Päätetty 2026-11-13: uusi P1 on ryhmän 3 pumppu 20 cm³ (30C20X146), ja vanha ryhmän 3 tukilaakeri ja kannake käytetään** (kohta 7, [Uuden P1:n kierrostilavuus](#uuden-p1n-kierrostilavuus)). Imulaskelmat alla on tehty vanhalle 16,6 cm³:n pumpulle; 20 cm³:n arvio on erikseen. **2026-11-05:** P1 tarvitsee uuden ryhmän 2 tukilaakerin ja kannakkeen, mahdollisesti myös uuden käyttöakselin (ks. [kohta 7](#tukilaakeri-kannake-ja-käyttöakseli)) [omistaja 2026-11-05]. Imulinjan mitat [omistaja 2026-10-23],
 > laskelmat [laskelma]. 2026-10-28: 32 mm:n täysiaukkoinen palloventtiili on jo olemassa P2:n nykyisessä imulinjassa säiliön ulosotolla ja jää P1:lle [omistaja 2026-10-28]. 2026-10-26: öljypinta vähintään 1 m pumppujen yläpuolella [omistaja], joten laskelman oletus pätee. Ohjaus on turvallisuuskriittinen: **pätevän henkilön pitää tarkistaa
 > ohjauspiirin muutokset ennen rakentamista.**
 
@@ -12,7 +12,7 @@ Liittyy: [current-system §3.3](../current-system.md#33-piiri-1--ohjaus),
 
 | Kohde | Arvo | Lähde |
 |---|---|---|
-| Pumppu | Salami 2PE16D-P28P1, 16,6 cm³, max 3000 rpm | [datalehti Salami 2PE] |
+| Pumppu | **Uusi (päätös 2026-11-13): ryhmän 3 hammaspyöräpumppu 30C20X146, 20 cm³, max 3000 rpm, kartio 1:8 ja 4 mm:n kiila**; paineet, imuaukko ja imupaineraja **⚠ ei tiedossa**. Vanha: Salami 2PE16D-P28P1, 16,6 cm³, max 3000 rpm (akseli katkaistu, ei korjata) | [datalehti Hydrauliikkakauppa.fi 2026-11-12], [datalehti Salami 2PE] |
 | Aiempi asennus | Tandemina vanhan kiinteätilavuuksisen P2:n (Salami 3PB33D, ryhmä 3) perässä samalla akselilla; tukilaakeri oli P2:n (ryhmä 3) | [omistaja 2026-11-05] |
 | Käyttöakseli | Katkaistu tandem-käyttöä varten; uusi akseli mahdollisesti tarpeen | [omistaja 2026-11-05] |
 | Veto | 2 kiilahihnaa, kone:pumppu 1:1,24 | [blogi 2017-07-04] |
@@ -92,7 +92,7 @@ koska säiliö on silloin tyhjä ja auki.
 | 4 | **HV 32 -öljy** koko järjestelmään (jo suositeltu P2:n takia) | Suurin yksittäinen parannus P1:n imuun kylmänä. Huom. HV 32 ohenee noin 70 °C:ssa alle P1:n 12 cSt:n minimin, joten lämpötilahälytys 70 °C pysyy ([vaatimukset](../requirements.md)). | Öljy vaihdetaan joka tapauksessa |
 | 5 | **Imupaineen tarkistus käyttöönotossa:** kiinteä kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritaulussa, mittauspiste P1:n imuaukolla (päätös 2026-10-28; aiemmin alipainemittari −1…0 bar), ja koeajo kylmänä 700 ja 1800 rpm:llä | Laskelma perustuu oletettuun säiliön korkeuteen ja liitinhäviöihin. Mittaus kertoo todellisen marginaalin. | Mittari ~20–40 € (arvio) |
 | 6 | **Hihnavälitys:** ~~pienennetäänkö 1:1,15:een~~ **ei muuteta** (päätös 2026-10-23) | P1 pyörii nyt 2400 rpm:llä noin 2980 rpm (raja 3000). Imun kannalta muutos on pieni. | Hihnapyörä |
-| 7 | **Hihnaveto, tukilaakeri, kannake ja käyttöakseli:** P1 tarvitsee **uuden ryhmän 2 tukilaakerin ja sille kannakkeen**, koska vanha tukilaakeri oli ryhmän 3 P2:n eikä sovi P1:lle. **Käyttöakseli on katkaistu tandem-käyttöä varten**, joten uusi akseli on mahdollisesti tarpeen [omistaja 2026-11-05]. Lisäksi hihnojen kireys yhdelle pumpulle. Ks. [alla](#tukilaakeri-kannake-ja-käyttöakseli). | Hammaspyöräpumpun akseli ei kestä hihnan sivukuormaa ilman tukilaakeria. Ohjauksen ainoa pumppu, hihnan katkeaminen = ohjaus vain hätäjärjestelmillä | Tukilaakeri, kannake ja ehkä akseli: **⚠ ei tiedossa** |
+| 7 | **Hihnaveto, tukilaakeri ja kannake:** ~~uusi ryhmän 2 tukilaakeri ja kannake~~. **Päätetty 2026-11-13:** P1 vaihdetaan ryhmän 3 pumppuun (20 cm³), jolloin **vanha ryhmän 3 tukilaakeri ja kannake käyvät** (mitat täsmäävät [omistaja 2026-11-13]). Hihnojen kireys tarkistetaan yhdelle pumpulle. | Hammaspyöräpumpun akseli ei kestä hihnan sivukuormaa ilman tukilaakeria. Ohjauksen ainoa pumppu, hihnan katkeaminen = ohjaus vain hätäjärjestelmillä | Pumppu 240 €; tukilaakeri ja kannake olemassa |
 
 **Päätetty 2026-10-23: 1 + 3 + 4 + 5** ([päätösloki](../../decisions.md)).
 Alkuperäinen suositus: Kohta 1 maksaa lähes vain liittimet, koska letku, säiliön ulosotto ja
@@ -171,7 +171,7 @@ hyötysuhde 92 %, kierrosrajat datalehti Salami 2PE s. 6]:
 | **2PE 16 (16,6 cm³)** | 3000 rpm | **13,3 l/min** | 45,4 l/min | 0,94 m/s |
 | 2PE 19 (19,4 cm³) | 3000 rpm | 15,5 l/min | 53,1 l/min | 1,10 m/s |
 
-- **Suositus: 16,6 cm³ (sama kuin ennen).** Tyhjäkäynnillä 13,3 l/min riittää pyörittämään
+- **Suositus ryhmän 2 pumpuksi: 16,6 cm³** (ei valittu; ks. ryhmän 3 vaihtoehto alla). Tyhjäkäynnillä 13,3 l/min riittää pyörittämään
   orbitrolia (158,4 cm³/r) noin 80 kierrosta minuutissa, ja kaikki imu- ja kierroslaskelmat
   pysyvät ennallaan.
 - 19,4 cm³ toisi tyhjäkäynnille noin 2 l/min lisää, mutta imuletkun virtausnopeus ylittää
@@ -185,7 +185,9 @@ hyötysuhde 92 %, kierrosrajat datalehti Salami 2PE s. 6]:
   uraholkki sopivat. Muunkin valmistajan ryhmän 2 pumppu käy, jos koko, akseli, laippa,
   pyörimissuunta ja suurin kierrosluku (≥ 3000 rpm) täsmäävät.
 
-#### Vaihtoehto: ryhmän 3 pumppu 20 cm³
+#### Vaihtoehto: ryhmän 3 pumppu 20 cm³ (valittu 2026-11-13)
+
+**Päätetty 2026-11-13: tämä vaihtoehto ([päätösloki](../../decisions.md)).** Vanhan P2:n laippa ja akseli täsmäävät [omistaja 2026-11-13].
 
 Pienin ryhmän 3 koko on noin 20 cm³ (Salami 3PE-21: 20,6 cm³, 3000 rpm [datalehti Salami 2PE -luettelo s. 7]).
 Etu: **vanha ryhmän 3 tukilaakeri ja kannake voivat sopia**, jos vanhan P2:n laippa ja akseli ovat
@@ -231,7 +233,10 @@ pumpun oma imupaineraja **⚠ ei tiedossa**.]
 - [ ] Hankinta: uusi 32 mm:n letkukara + 3/4" BSP -liitin P1:n imuaukkoon (vanhaan letkuun) ja 3/4" T-kappale 1/4"-sivuaukolla mittausta varten (ks. [pressure-monitoring](pressure-monitoring.md#imupaineen-mittaus)) ja kaksoispainemittari 1G2 (−1…+1,5 bar) mittaritauluun, ks. [hankintalista](../procurement.md)
 - [x] Hihnavälitys pysyy 1:1,24 (päätös 2026-10-23)
 - [x] Tukilaakeri: vanha oli ryhmän 3 P2:n, ei sovi P1:lle; tarvitaan uusi ryhmän 2 tukilaakeri ja kannake [omistaja 2026-11-05]
-- [ ] P1:n käyttöakseli: katkaistu tandem-käyttöä varten; tukilaakeriyksikön uraholkkiin sopii alkuperäinen **akseli 28** (kartio 1:8, kiila 3,2 mm); suora kiila-akseli ei sovi (2026-11-06). Tarvitaan vetävä hammaspyörä akselilla 28
-- [ ] Tukilaakeri: Salamin laakeroitu laippa (CP/CS) vai erillinen laakeripukki ja kytkin
-- [ ] Tarjous vetävästä hammaspyörästä (akseli 28), vertailuksi uudesta 2PE16D-P28P1:stä sekä ryhmän 2 tukilaakerista ja uraholkista: kysely lähetetty Fluiconnectolle 2026-11-06 [omistaja 2026-11-06]. **Vanhaan pumppuun ei saa uutta akselia, joten hankitaan uusi P1** [omistaja 2026-11-12], ks. [Uuden P1:n kierrostilavuus](#uuden-p1n-kierrostilavuus)
-- [ ] Kannake: tehdäänkö uusi vai muokataanko vanha
+- [x] ~~P1:n käyttöakseli: katkaistu tandem-käyttöä varten; tukilaakeriyksikön uraholkkiin sopii alkuperäinen **akseli 28** (kartio 1:8, kiila 3,2 mm); suora kiila-akseli ei sovi (2026-11-06). Tarvitaan vetävä hammaspyörä akselilla 28~~ uusi pumppu (päätös 2026-11-13)
+- [x] Tukilaakeri: vanha ryhmän 3 tukilaakeri käytetään (päätös 2026-11-13)
+- [x] ~~Tarjous vetävästä hammaspyörästä (akseli 28), vertailuksi uudesta 2PE16D-P28P1:stä sekä ryhmän 2 tukilaakerista ja uraholkista: kysely lähetetty Fluiconnectolle 2026-11-06 [omistaja 2026-11-06]. **Vanhaan pumppuun ei saa uutta akselia, joten hankitaan uusi P1** [omistaja 2026-11-12], ks. [Uuden P1:n kierrostilavuus](#uuden-p1n-kierrostilavuus)~~ ei tarvita (päätös 2026-11-13)
+- [x] Kannake: vanha käytetään (päätös 2026-11-13)
+- [ ] Uuden P1:n (30C20X146) paineluokka (orbitrolin paineenrajoitus enintään 170 bar), imuaukon koko ja kierre, imupaineraja ja pienin viskositeetti: kysy myyjältä tai tarkista pumpusta
+- [ ] Liitännät: laippa- vai kierreliitännät (tuotesivulla ristiriita) ja sen mukaan imun ja paineen liittimet (hankintalista 6.2–6.3)
+- [ ] Vanhan tukilaakerin uraholkki: sopiiko suoraan uuden pumpun akseliin (kartio 1:8, kiila 4 mm), kunto ja laakerien kunto

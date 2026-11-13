@@ -41,7 +41,7 @@ Hydraulipumput on irrotettu, kun konetta linjataan uuteen Advance 300 -vaihteist
 järjestelmä (säiliö, venttiilit, orbitroli, sylinteri, letkut) on paikallaan.
 Suunnitelmassa on kaksi piiriä:
 
-- **Ohjaus:** 16,6 cm³:n hammaspyöräpumppu P1 koneen etupäästä hihnavedolla, syöttää orbitrolia ja
+- **Ohjaus:** 20 cm³:n hammaspyöräpumppu P1 (ryhmä 3, päätös 2026-11-13) koneen etupäästä hihnavedolla, syöttää orbitrolia ja
   ohjaussylinteriä; imulinja 32 mm.
 - **Apupiiri:** Vickers PVH57 -säätötilavuuspumppu (57,4 cm³, LS-säädin; **ostettu 2026-11-01**)
   vaihteiston PTO:lta HRC 150 -joustokytkimellä, ilman PTO-kytkintä; 50 mm:n imulinja ja

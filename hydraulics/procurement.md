@@ -1,6 +1,6 @@
 # Hydrauliikan hankintalista
 
-> **Tila:** päivitetty 2026-11-13 (P1: uusi pumppu, vaihtoehdot A ja B, rivit 6.5–6.9); 2026-11-12 (PVE-liittimien GDM-kiinnitysruuvit M3 × 35, rivi 4.17); 2026-11-05 (P1:n tukilaakeri, kannake ja mahdollinen akseli, rivit 6.5–6.7); 2026-11-03 (PVG 32 saapui, rungon koodit tulkittu: pumppumoduuli 157B5111, peruslohkot 157B6200 ilman PVLP-paikkoja; karat liikkuvat ja palaavat keskelle); 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €; PVE-liittimet mukana); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28 (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32, päätökset 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
+> **Tila:** päivitetty 2026-11-13 (P1: päätetty vaihtoehto B, ryhmän 3 pumppu 30C20X146 ja vanha tukilaakeri, rivit 6.5–6.9); 2026-11-12 (PVE-liittimien GDM-kiinnitysruuvit M3 × 35, rivi 4.17); 2026-11-05 (P1:n tukilaakeri, kannake ja mahdollinen akseli, rivit 6.5–6.7); 2026-11-03 (PVG 32 saapui, rungon koodit tulkittu: pumppumoduuli 157B5111, peruslohkot 157B6200 ilman PVLP-paikkoja; karat liikkuvat ja palaavat keskelle); 2026-11-02 (PVG 32 ostettu, 200 € + rahti 39,90 €; PVE-liittimet mukana); 2026-11-01 (PVH57 ostettu, 150 €); koottu 2026-10-28 (P2 = Vickers PVH57, venttiileinä Danfoss PVG 32, päätökset 2026-10-27). Luvut ja koodit ovat lähdedokumenteista; tarkemmat perustelut
 > linkeissä. Hinnat ovat jälleenmyyjien hintoja tai arvioita, ja ne on merkitty. Päivitä lista, kun
 > osa ostetaan, löytyy veneeltä tai suunnitelma muuttuu.
 > Arkistoitujen varavaihtoehtojen (FXDC + LS-purku, LS + on/off) osia ei ole listalla. Ne tulevat
@@ -161,25 +161,22 @@ siirretään P2:n vanhaan 32 mm:n letkuun ja ulosottoon.
 tukilaakerin ja kannakkeen [omistaja 2026-11-05]. Kaksi vaihtoehtoa, perustelut
 [p1-steering-pump](design/p1-steering-pump.md#uuden-p1n-kierrostilavuus):
 
-- **A, ryhmä 2, 16,6 cm³:** pienin imukuorma; tarvitaan uusi ryhmän 2 tukilaakeri, uraholkki ja kannake.
-- **B, ryhmä 3, 20 cm³:** täysi orbitrolin virtaus tyhjäkäynnillä; **vanha ryhmän 3 tukilaakeri ja
-  kannake voivat käydä**, jos vanhan P2:n laippa ja akseli ovat eurooppalaista ryhmän 3 standardia
-  (pulttijako 98,4 × 128,1 mm, ohjuri Ø50,8 mm, kartio 1:8, kiila 4 mm; **⚠ tarkista** veneellä).
-  Imulinja pidetään noin 3,2 metrissä.
-
-Suositus: **B, jos vanhan tukilaakerin mitat täsmäävät** (halvin), muuten A.
+**Päätetty 2026-11-13: vaihtoehto B** ([päätösloki](../decisions.md)): ryhmän 3 pumppu 20 cm³ ja
+vanha ryhmän 3 tukilaakeri ja kannake, koska mitat täsmäävät (pulttijako 98,4 × 128,1 mm, ohjuri
+Ø50,8 mm, kartio 1:8, kiila 4 mm) [omistaja 2026-11-13]. Imulinja pidetään noin 3,2 metrissä.
+Vaihtoehto A (ryhmän 2 pumppu, uusi tukilaakeri ja kannake) hylätty; rivit 6.5–6.7 yliviivattu.
 
 | # | Osa | Määrä | Tiedot | Tila | Hinta | Lähde |
 |---|---|---|---|---|---|---|
 | 6.1 | 32 mm:n imuletku, säiliöulosotto ja täysiaukkoinen palloventtiili | – | P2:n nykyinen imulinja | ✅ | – | [omistaja 2026-10-28] |
-| 6.2 | Letkukara 32 mm ja 3/4" BSP -liitin P1:n imuaukkoon | 1 | | 🛒 | pieni | [p1-steering-pump](design/p1-steering-pump.md#avoimet-kysymykset) |
-| 6.3 | 3/4":n T-kappale, jossa 1/4":n sivuaukko | 1 | letkukaran ja P1:n imuaukon väliin; BSPP ja tiivistealuslevy | 🛒 | pieni | sama |
+| 6.2 | Letkukara 32 mm ja liitin P1:n imuaukkoon | 1 | uuden pumpun (30C20X146) imuaukon koko ja liitäntätapa **⚠ tarkista** (vanhassa 3/4" BSP) | 🛒 | pieni | [p1-steering-pump](design/p1-steering-pump.md#avoimet-kysymykset) |
+| 6.3 | T-kappale imuaukon kokoisena, jossa 1/4":n sivuaukko | 1 | koko uuden pumpun mukaan (**⚠ tarkista**); letkukaran ja P1:n imuaukon väliin; BSPP ja tiivistealuslevy | 🛒 | pieni | sama |
 | 6.4 | Kaksoispainemittari (vakuumi ja paine) −1…+1,5 bar, glyseriinitäytteinen, Ø63 mm, takaliitäntä | 1 | 1G2, kiinteä, mittaritauluun; pelkkä −1…0 bar:n alipainemittari ei näyttäisi pysähdyksissä olevaa pientä ylipainetta (öljypinta vähintään 1 m pumpun yläpuolella) | 🛒 päätetty | noin 15–40 € [arvio] | sama, [pressure-monitoring](design/pressure-monitoring.md#imupaineen-mittaus), [päätös 2026-10-28](../decisions.md) |
-| 6.5 | **A:** uusi P1-pumppu, ryhmä 2, 16,6 cm³, kartioakseli 1:8, eurooppalainen laippa, myötäpäivään (esim. Salami 2PE16D-P28P1) | 1 | myyjä ja hinta auki; kysely Fluiconnectolle 2026-11-06 | ❓ | **⚠ ei tiedossa** | [omistaja 2026-11-12], [p1-steering-pump](design/p1-steering-pump.md#uuden-p1n-kierrostilavuus) |
-| 6.6 | **A:** tukilaakeri ryhmän 2 pumpulle (esim. SU2-tyyppi), lähtöakseli kiilalla hihnapyörälle | 1 | pumppulaippa eurooppalainen 71,5 × 96, keskitys Ø36,5 | ❓ | noin 95–100 € (EP-hydrauliikka, hakutulos 2026-11-06, **⚠ tarkista**) | [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli) |
-| 6.7 | **A:** uraholkki ryhmä 2, 14 hammasta, 1:8-kartioreikä, kiila 3,2 mm | 1 | pumpun ja tukilaakerin väliin | ❓ | noin 7–16 € (hakutulokset 2026-11-06, **⚠ tarkista**) | sama |
-| 6.8 | **B:** uusi P1-pumppu, ryhmä 3, 20 cm³, kartioakseli 1:8 ja 4 mm:n kiila, pulttijako 98,4 × 128,1, ohjuri Ø50,8, myötäpäivään: [Hydrauliikkakauppa.fi 30C20X146](https://www.hydrauliikkakauppa.fi/tuote/hammaspyorapumppu-3-sarja-25-cm%c2%b3-laippaliitanta/) (valmistaja ⚠ ei tiedossa) | 1 | ei 25 cm³:n versiota (imu kylmänä yli rajan). Laippa- vai kierreliitännät **⚠ tarkista** kaupasta; liitinkoot ⚠ | ❓ | **240 €** (191,24 € alv 0 %), varastossa [Hydrauliikkakauppa.fi 2026-11-12] | [datasheets](../datasheets/README.md), [p1-steering-pump](design/p1-steering-pump.md#vaihtoehto-ryhmän-3-pumppu-20-cm³) |
-| 6.9 | Kannake P1:lle ja tukilaakerille | 1 | **B:** vanha kannake ja ryhmän 3 tukilaakeri, jos mitat täsmäävät; **A:** uusi tai vanhan muokkaus. Lisäksi hihnapyörä tukilaakerin lähtöakselille, jos vanha ei sovi | ❓ | **⚠ ei tiedossa** | [omistaja 2026-11-05] |
+| 6.5 | ~~**A:** uusi P1-pumppu, ryhmä 2, 16,6 cm³, kartioakseli 1:8, eurooppalainen laippa, myötäpäivään (esim. Salami 2PE16D-P28P1)~~ | 1 | myyjä ja hinta auki; kysely Fluiconnectolle 2026-11-06 | ❌ hylätty 2026-11-13 | **⚠ ei tiedossa** | [omistaja 2026-11-12], [p1-steering-pump](design/p1-steering-pump.md#uuden-p1n-kierrostilavuus) |
+| 6.6 | ~~**A:** tukilaakeri ryhmän 2 pumpulle (esim. SU2-tyyppi), lähtöakseli kiilalla hihnapyörälle~~ | 1 | pumppulaippa eurooppalainen 71,5 × 96, keskitys Ø36,5 | ❌ hylätty 2026-11-13 | noin 95–100 € (EP-hydrauliikka, hakutulos 2026-11-06, **⚠ tarkista**) | [p1-steering-pump](design/p1-steering-pump.md#tukilaakeri-kannake-ja-käyttöakseli) |
+| 6.7 | ~~**A:** uraholkki ryhmä 2, 14 hammasta, 1:8-kartioreikä, kiila 3,2 mm~~ | 1 | pumpun ja tukilaakerin väliin | ❌ hylätty 2026-11-13 | noin 7–16 € (hakutulokset 2026-11-06, **⚠ tarkista**) | sama |
+| 6.8 | **Uusi P1-pumppu (päätetty 2026-11-13)**, ryhmä 3, 20 cm³, kartioakseli 1:8 ja 4 mm:n kiila, pulttijako 98,4 × 128,1, ohjuri Ø50,8, myötäpäivään: [Hydrauliikkakauppa.fi 30C20X146](https://www.hydrauliikkakauppa.fi/tuote/hammaspyorapumppu-3-sarja-25-cm%c2%b3-laippaliitanta/) (valmistaja ⚠ ei tiedossa) | 1 | ei 25 cm³:n versiota (imu kylmänä yli rajan). Laippa- vai kierreliitännät **⚠ tarkista** kaupasta; liitinkoot ⚠ | 🛒 päätetty | **240 €** (191,24 € alv 0 %), varastossa [Hydrauliikkakauppa.fi 2026-11-12] | [datasheets](../datasheets/README.md), [p1-steering-pump](design/p1-steering-pump.md#vaihtoehto-ryhmän-3-pumppu-20-cm³) |
+| 6.9 | Kannake ja tukilaakeri P1:lle | 1 | vanha ryhmän 3 tukilaakeri ja kannake, mitat täsmäävät [omistaja 2026-11-13]; hihnapyörä ja uraholkki vanhat (**⚠ tarkista** kunto ja sopivuus uuteen pumppuun) | ✅ | – | [päätös 2026-11-13](../decisions.md) |
 
 ## Imupuolen kaksoispainemittarit
 
@@ -229,7 +226,7 @@ PVG 32 -ratkaisussa nämä jäävät käyttämättä: CETOP-pohjalaatta (Flowfit
 Rexroth OD15 ja 2/2-patruunaventtiili, Marchesini VMP. Jos PVG 32:n koestus epäonnistuu,
 osa niistä tarvitaan varavaihtoehdoissa, joten **ne kannattaa myydä vasta, kun PVG 32 on koestettu**.
 
-Lisäksi vanha P2 (Salami 3PB33D) ja vanha P1 (Salami 2PE16D-P28P1, akseli katkaistu) jäävät käyttämättä [omistaja 2026-11-05, 2026-11-12]. Vanha ryhmän 3 tukilaakeri jää käyttöön, jos P1:ksi valitaan ryhmän 3 pumppu (rivi 6.8).
+Lisäksi vanha P2 (Salami 3PB33D) ja vanha P1 (Salami 2PE16D-P28P1, akseli katkaistu) jäävät käyttämättä [omistaja 2026-11-05, 2026-11-12]. Vanha ryhmän 3 tukilaakeri jää käyttöön uuden P1:n kanssa (päätös 2026-11-13).
 
 ## Ennen tilaamista selvitettävät
 
@@ -238,7 +235,8 @@ Lisäksi vanha P2 (Salami 3PB33D) ja vanha P1 (Salami 2PE16D-P28P1, akseli katka
 - [x] PVH57:n laippa- ja porttikoot: imu 2", lähtö 1" (SAE code 61), vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]; tarkista pumpusta ennen tilausta
 - [ ] Veneellä: 50 mm:n palloventtiili ja sen kierre (2.1–2.4), 50 mm:n imuletku ja sen pituus (2.5), nykyisen 3/4":n painelinjan kunto (3.2), 2G1:n mittausalue (4.5), säiliön vapaat aukot vuotolinjoille (3.7)
 - [ ] Veneellä: onko säiliö maalattu sisältä, ja onko käytettävä jarrunpuhdistin klooriton ([puhdistus](#säiliön-puhdistus-hitsauksen-yhteydessä))
-- [ ] P1, vaihtoehto A vai B (6.5–6.9): mittaa vanhasta P2:sta ja sen tukilaakerista pulttijako (98,4 × 128,1?), ohjuri (Ø50,8?), akselin kartio (1:8?) ja kiila (4 mm?); tarkista 30C20X146:n liitännät kaupasta
+- [x] P1: vaihtoehto B, mitat täsmäävät (päätös 2026-11-13)
+- [ ] Uuden P1:n (30C20X146) liitännät (laippa vai kierre), imuaukon koko ja paineluokka ennen tilausta (6.2, 6.3, 6.8)
 - [ ] Taper Lock -holkkien koodit ja HRC 150:n napatyyppi (1.2–1.5)
 - [ ] Jäähdyttimen asennus ja paluusuodattimen malli (5.3–5.9)
 - [x] Imupuolelle kiinteät kaksoispainemittarit molempiin pumppuihin, mittaritauluun (päätös 2026-10-28)

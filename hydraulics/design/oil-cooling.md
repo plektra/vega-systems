@@ -171,6 +171,9 @@ koneen ollessa sammutettuna (vaatisi oman merivesipumpun).
    mutta se **tehdään uusiksi suoraan säiliöön** [omistaja 2026-10-27], joten kotelo ei saa
    paluulinjan vastapainetta. Virtaus on noin 15–75 l/min (P1:n paluu kierrosten mukaan ja
    apupiirin paluu kuorman mukaan); suuremmat piikit kulkevat ohitusventtiilin kautta.
+   **2026-11-13:** uusi P1 (20 cm³) palauttaa suurilla kierroksilla noin 55 l/min (vanha noin
+   45 l/min) [laskelma]; jäähdyttimen ja suodattimen vastapaine pitää tarkistaa tällä virralla
+   (orbitrolin T-linjan raja 25 bar, **⚠ tarkista**).
 2. **Ohitusventtiili** (takaiskuventtiili) jäähdyttimen rinnalle, avautuu noin 3–4 barissa. Suojaa
    jäähdytintä kylmältä, paksulta öljyltä ja virtapiikeiltä.
 3. **Merivesi** koneen merivesipiiristä **rinnakkaishaarana, jonka virtaus on rajoitettu**, ks.
