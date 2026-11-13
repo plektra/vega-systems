@@ -158,8 +158,8 @@ siirretään P2:n vanhaan 32 mm:n letkuun ja ulosottoon.
 
 **P1 vaihdetaan uuteen pumppuun:** vanhaan Salami 2PE16D-P28P1:een ei saa uutta akselia
 [omistaja 2026-11-12]. P1 oli ennen tandemina vanhan ryhmän 3 P2:n perässä, joten se tarvitsee oman
-tukilaakerin ja kannakkeen [omistaja 2026-11-05]. Kaksi vaihtoehtoa, perustelut
-[p1-steering-pump](design/p1-steering-pump.md#uuden-p1n-kierrostilavuus):
+tukilaakerin ja kannakkeen [omistaja 2026-11-05]. Vaihtoehtojen vertailu:
+[p1-steering-pump](design/p1-steering-pump.md#uuden-p1n-kierrostilavuus).
 
 **Päätetty 2026-11-13: vaihtoehto B** ([päätösloki](../decisions.md)): ryhmän 3 pumppu 20 cm³ ja
 vanha ryhmän 3 tukilaakeri ja kannake, koska mitat täsmäävät (pulttijako 98,4 × 128,1 mm, ohjuri
