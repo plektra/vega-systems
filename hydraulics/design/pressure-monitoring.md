@@ -53,8 +53,9 @@ imulinjassa ole valmiita mittausliitäntöjä: PVH57:n imulaipan mittausaukosta 
 
 **Liitäntä:** imuletkun ja pumpun väliin lyhyt **välikappale, jossa on 1/4" BSP -sivuaukko**:
 
-- **P1 (32 mm):** uuden letkukaran ja 3/4" BSP -liittimen väliin 3/4" BSP -T-kappale, jonka
-  sivuhaarassa 1/4" BSP -supistus. Kaikki vakio-osia.
+- **P1 (32 mm):** ~~3/4" BSP -T-kappale letkukaran ja imuaukon väliin~~. Uusi P1 (päätös 2026-11-13)
+  on laippaliitäntäinen, ja imulaippa otetaan vanhasta P2:sta [omistaja 2026-11-13]. Mittausaukko porataan ja
+  kierteytetään laippaan (1/4" BSP) tai tehdään välikappale laipan ja letkun väliin (**⚠ tarkista**).
 - **P2 (50 mm):** lyhyt teräsputki (Ø50, noin 100–150 mm) letkukaroilla tai letkuliittimellä
   molemmissa päissä ja siihen hitsattu 1/4" BSP -hitsausmuhvi; tai valmis 2" T-kappale
   1/4"-sivuaukolla. Asennetaan Parkerin imuliittimen ja letkun väliin.

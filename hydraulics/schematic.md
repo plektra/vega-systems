@@ -25,7 +25,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | Tunnus | Osa | Tiedot | Lähde |
 |---|---|---|---|
 | 1M1 | Pääkone CAT 3126B, 2 kiilahihnaa | välitys 1:1,24; kone 700–2400 rpm | [blogi 2017-07-04], [omistaja 2026-10-22] |
-| 1P1 | Ohjauspumppu, ryhmä 3, 30C20X146 (päätös 2026-11-13) | 20 cm³/r, max 3000 rpm, kartio 1:8; imupaineraja ja imuaukko **⚠ ei tiedossa** | [datalehti Hydrauliikkakauppa.fi], [päätös 2026-11-13](../decisions.md) |
+| 1P1 | Ohjauspumppu, ryhmä 3, 30C20X146 (päätös 2026-11-13) | 20 cm³/r, max 3000 rpm, max 250 bar, kartio 1:8, laippaliitännät (vanhan P2:n laipat) [omistaja 2026-11-13]; imupaineraja **⚠ ei tiedossa** | [datalehti Hydrauliikkakauppa.fi], [päätös 2026-11-13](../decisions.md) |
 | 1V5 | Imulinjan palloventtiili | täysiaukkoinen 32 mm, auki ajossa; olemassa P2:n nykyisessä imulinjassa säiliön ulosotolla, jää P1:lle; imu 32 mm (päätös 2026-10-23; nyt 25 mm × 3,2 m) | [p1-steering-pump.md](design/p1-steering-pump.md), [omistaja 2026-10-28] |
 | 1V7 | P1:n vastaventtiili | ennen T-haaraa, jossa P1 ja P3 yhdistyvät | [omistaja 2026-10-23] |
 | 1V1 | Kolmitievirtauksensäätöventtiili Marchesini RPF3 | vakiovirtaus CF 20 l/min orbitrolille pumpun kierroksista riippumatta, ylimäärä EF paluuseen; koko 1/2" [omistaja 2026-10-23] | [datalehti RPF3] |
@@ -36,7 +36,7 @@ pätevän henkilön pitää tarkistaa kaavio ennen rakentamista.
 | 1P2, 1M2 | Varapumppu P3, sähkömoottori 24 V 2,5 kW | kytketty T-haaraan oman vastaventtiilin kautta [omistaja 2026-10-23]; kierrostilavuus **⚠ ei tiedossa** | [blogi 2017-04-01] |
 | 1V4 | P3:n vastaventtiili | ennen T-haaraa → RPF3 | [omistaja 2026-10-23] |
 | – | Piirin 1 painelinjat | **1/2"** (P1/P3 → RPF3 → orbitroli → sylinteri) | [omistaja 2026-10-23] |
-| 1G2 | P1:n imupaineen kaksoispainemittari | −1…+1,5 bar, mittauspiste P1:n imuaukolla (3/4":n T), mittari mittaritaulussa 1/4":n letkulla | [päätös 2026-10-28](../decisions.md) |
+| 1G2 | P1:n imupaineen kaksoispainemittari | −1…+1,5 bar, mittauspiste P1:n imulaipassa (liitäntä **⚠ tarkista**; aiemmin 3/4":n T), mittari mittaritaulussa 1/4":n letkulla | [päätös 2026-10-28](../decisions.md) |
 | 1V6 | P3:n imun palloventtiili | imu 3/4" | [blogi 2017-04-10] |
 | 1Z1 | Säiliö Flowfit 100 l | 80 l öljyä | [blogi 2017-07-04] |
 

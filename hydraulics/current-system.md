@@ -224,7 +224,7 @@ suuntaventtiili ja vuotava sylinteri) korvattiin 2017 **kahden piirin järjestel
 
 | Pumppu | Merkki | Kierrostilavuus | Arvot (kaavio) | Tuotto koneen 800 / 1800 / 2500 rpm:llä* | Syöttää |
 |---|---|---|---|---|---|
-| P1 | **Uusi (päätös 2026-11-13): ryhmän 3 hammaspyöräpumppu 30C20X146** (kartioakseli 1:8, kiila 4 mm, pulttijako 98,4 × 128,1, ohjuri Ø50,8). Vanha Salami 2PE16D-P28P1 (16,6 cm³) poistuu: akseli katkaistu | 20 cm³/r | **max 3000 rpm**; paineet **⚠ ei tiedossa** [datalehti Hydrauliikkakauppa.fi] | 19,8 / 44,6 / 62,0 l/min | Ohjaus |
+| P1 | **Uusi (päätös 2026-11-13): ryhmän 3 hammaspyöräpumppu 30C20X146** (kartioakseli 1:8, kiila 4 mm, pulttijako 98,4 × 128,1, ohjuri Ø50,8). Vanha Salami 2PE16D-P28P1 (16,6 cm³) poistuu: akseli katkaistu | 20 cm³/r | **max 3000 rpm**, **max 250 bar**, laippaliitännät (laipat vanhasta P2:sta) [omistaja 2026-11-13]; [datalehti Hydrauliikkakauppa.fi] | 19,8 / 44,6 / 62,0 l/min | Ohjaus |
 | P2 | Salami **3PB33D-P38P2**, hammaspyörä (ryhmä 3) | 33,5 cm³/r | 250 bar, 30–80 l/min | 33,2 / 74,8 / 103,8 l/min | Apupiiri (liian pieni PTO:lle, ks. §0) |
 | P3 | Vanhasta voimayksiköstä; moottori 24 V, 2,5 kW | **⚠ ei tiedossa** | | | Varaohjaus |
 
@@ -404,7 +404,8 @@ Avoimet:
 - [x] Imupaineen mittarit: kiinteät kaksoispainemittarit 1G2 (P1) ja 2G2 (P2) mittaritauluun (päätös 2026-10-28)
 - [ ] Mittaritaulun paikka konehuoneessa ja mittausletkujen reititys
 - [x] P1:n imuaukko: 3/4" [omistaja 2026-10-23] (vanha pumppu)
-- [ ] Uuden P1:n (30C20X146) imuaukon koko, liitännät, paineluokka ja imupaineraja
+- [x] Uuden P1:n liitännät ja paine: laippa (vanhan P2:n laipat), max 250 bar [omistaja 2026-11-13]
+- [ ] Uuden P1:n imupaineraja ja uraholkin kunto (käytetty noin 100 h)
 - [x] P1:n tukilaakeri ja kannake: vanhat ryhmän 3 osat käytetään uuden ryhmän 3 pumpun kanssa (päätös 2026-11-13)
 - [ ] **Käyttöönoton säädöt:** PVH57:n paineenrajoitin 120 → 250 bariin mittarilla 2G1 (ks. [p2-variable-pump](design/p2-variable-pump.md#säätö-käyttöönotossa-ilman-virtausmittaria)); orbitrolin paineenrajoitus pienimpään arvoon, jolla peräsin kääntyy ääriasentoihin ajossa, kuitenkin enintään sylinterin ja letkujen painearvon
 - [ ] Öljynjäähdytys: Bowman EC100 paluulinjaan, merivesi koneen piiristä (malli vahvistettu EC100:ksi [omistaja 2026-10-27]; vetojen määrä ⚠, ks. [oil-cooling.md](design/oil-cooling.md#avoimet-kysymykset))
