@@ -1,6 +1,6 @@
 # NMEA 2000 ja CAN-väylät: laiteluettelo ja luotettava väylä
 
-> **Tila:** Selvitys ja laiteluettelon ensimmäinen versio, aloitettu 2026-11-07, päivitetty 2026-11-08 (Pi:n CAN-HAT, ei koneen väylää, Cerbo GX MK2, 12 V harkinnassa). **Mitään ei ole
+> **Tila:** Selvitys ja laiteluettelon ensimmäinen versio, aloitettu 2026-11-07, päivitetty 2026-11-13 (vaihteen paineanturit; 2026-11-08: Pi:n CAN-HAT, ei koneen väylää, Cerbo GX MK2, 12 V harkinnassa). **Mitään ei ole
 > päätetty.** Luettelossa on omistajien kertomat laitteet, muiden dokumenttien jo suunnittelemat
 > anturit ja Clauden ehdotukset; sarake *Tila* kertoo, kumpi on kyseessä. Luettelo täydentyy, kun
 > laitteita valitaan.
@@ -99,6 +99,7 @@ tai Signal K:n kautta.
 |---|---|---|---|---|---|---|
 | (N-03) | Kierrokset: **vauhtipyörän kotelossa on valmis paikka magneettianturille, mutta anturia ei ole** [omistaja 2026-11-08]; suositus [arvio] asentaa siihen magneettinen tai Hall-kierrosanturi, joka laskee käynnistyshammaskehän hampaita (hammaskehässä **126 hammasta**, SAE No. 3 -kotelo [omistaja 2026-11-08, koneen manuaali]; anturipaikan kierteen koko **⚠ ei tiedossa**). Taajuus = 126 × rpm / 60: käynnistyksessä noin 150 rpm → noin 315 Hz, tyhjäkäynti 700 rpm → 1 470 Hz, suurin 2400 rpm → 5 040 Hz [laskelma]; ESP32:n pulssilaskuri (PCNT) riittää hyvin. Varavaihtoehto laturin W-liitäntä (epätarkempi, riippuu hihnasta ja välityksestä); öljynpaine ja jäähdytysnesteen lämpötila (omat anturit; nykyisten mittarien anturien rinnalle kytkeminen voi vääristää mittarien lukemia **⚠ tarkista**), käyttötunnit laskettuna kierroksista. Polttoaineen kulutus vain erillisellä virtausmittarilla | CAT 3126B | node | 127488, 127489 | ehdotus | [omistaja 2026-11-08] |
 | N-20 | Koneen ja vaihteiston lisäanturit: vaihteiston öljynpaine ja -lämpötila, pakosarjan tai pakokaasun lämpötila, merivesivirtaus / impellerihälytys | konehuone | node | 127493, 130312/130316 | ehdotus | – |
+| N-20b | **Vaihteen asento ja kytkinpaine** Q06-suuntaventtiilin lisäulostuloista (M14×1,5, nyt tulpattu): paineanturi tai painekytkin ulostuloihin *ahead oil* (7) ja *astern oil* (14), valinnaisesti työpaine (8) ja voitelupaine (12). Ks. [Vaihteen paineanturit](#vaihteen-paineanturit-lisätty-2026-11-13) | vaihteisto | node | 127493 (vaihde ja öljynpaine), 130316 | ehdotus | [omistaja 2026-11-13], [manuaali Advance Q06, s. 5–6] |
 | (N-30) | Konehuoneen lämpötila ja kosteus (BME280) | konehuone | `node1` | 130311 | olemassa | [vega-n2k-node1] |
 
 Kierroslukitusta hydrauliikka ei enää tarvitse (PVH57, [requirements §10.2](../../hydraulics/requirements.md#102-ohjaus)),
@@ -133,6 +134,53 @@ Pyöräytä konetta koko kierros ennen käynnistystä, ettei kärki osu heittäv
 
 **Kaapeli:** suojattu parikaapeli, suojavaippa maahan vain noden päässä; erillään käynnistysmoottorin
 ja laturin kaapeleista.
+
+#### Vaihteen paineanturit (lisätty 2026-11-13)
+
+**Idea, ei päätetty.** Advance 300:n suuntaventtiilissä (Q06) on ohjeen mukaan M14×1,5-ulostulot
+paineantureille ja ulkoiselle ohjaukselle ([vessel](../../vessel/README.md#voimansiirto),
+[manuaali Advance Q06, s. 5–6]). Nykyisin vaihdetta ja kierroksia ohjataan ohjaamosta **yhdellä
+vivulla vaijereilla** [omistaja 2026-11-13], eikä ohjaamossa ole tietoa vaihteen asennosta tai
+kytkinpaineesta.
+
+| Ulostulo (Q06) | Anturi | Mitä saadaan |
+|---|---|---|
+| 7 *ahead oil* ja 14 *astern oil* | painekytkin tai paineanturi kumpaankin | **vaihteen asento** (AHEAD / STOP / ASTERN) ja tieto siitä, onko kytkin todella kiinni; **hälytys luistavasta kytkimestä** (paine jää matalaksi); **kytkeytymisaika** (ohjeen mukaan noin 3–6 s) |
+| 8 *stand-by working oil* | paineanturi | työpaineen trendi: hidas lasku viittaa ohjeen vianetsinnän mukaan suodattimeen, öljytasoon, pumppuun tai vuotoon |
+| 12 *lubricant* | paineanturi (valinnainen) | voitelupaine |
+
+**Käyttötapoja:**
+
+- Vaihteen asento ja kytkinpaine kattopaneeliin tai MFD:lle ([bridge-mfd](bridge-mfd.md)).
+- Merkkivalo "kytkin kiinni". Ohjeen mukaan kierroksia nostetaan vasta, kun paine on noussut
+  nimellisarvoon. Yhden vivun vaijeriohjauksessa kierrokset nousevat samalla liikkeellä, joten
+  merkkivalosta on hyötyä, kun vipua viedään nopeasti eteenpäin [arvio].
+- Mahdollinen käynnistyksen esto, kun vaihde on päällä (paine 7:ssä tai 14:ssä). Vaatii sähköisen
+  kytkennän käynnistyspiiriin, joten **pätevän henkilön pitää tarkistaa se**.
+- Vaihtoehto myöhemmin: Q06:sta on saatavana samanmittainen **solenoidiversio** sähköistä
+  vaihteenohjausta varten [manuaali Advance Q06, s. 7]. Se ei ole suunnitelmissa, ja nykyinen
+  vaijeriohjaus toimii.
+
+**Kytkentä ja osat** [arvio]:
+
+- Anturit: 0–25 tai 0–40 barin paineanturi (0,5–4,5 V tai 4–20 mA, noin 10–30 €/kpl) tai
+  painekytkin (noin 20 €). Painemittarin alue on 0–2,5 MPa (25 bar) [manuaali Advance Q06, s. 10].
+  Hinnat ovat arvioita, **⚠ ei tarkistettu**.
+- Sovitin M14×1,5 → anturin kierre (yleensä G1/4 tai 1/4" NPT) ja kuparitiiviste 14 (Q06:n
+  osaluettelossa Q20-03).
+- Mittaus konehuoneen nodella (N-20:n kanssa samaan nodeen).
+
+**Varaukset:**
+
+- **Kytkinpaineen nimellisarvo ⚠ ei tiedossa** (ei Q06:n ohjeessa). Se tarvitaan painekytkimen ja
+  hälytyksen rajaksi. Arvo löytyy merivaihteen manuaalista, tai sen voi lukea nykyisestä mittarista
+  ajossa.
+- **Ulostuloista ei oteta öljyä muihin laitteisiin.** Öljy on vaihteiston oman pumpun öljyä, ja
+  paineen lasku luistattaa kytkintä.
+- **Vikatilanne:** vuotava tai irtoava anturiliitos voi pudottaa kytkinpaineen, jolloin vaihde
+  irtoaa ja propulsio menetetään. Käytä vain kunnollisia sovittimia ja tiivisteitä, älä pitkää
+  letkua ohjaamoon (sähköinen anturi), ja tarkista liitokset ensimmäisellä koeajolla. Liitokset ja
+  mahdollinen käynnistyksen esto **pitää tarkistuttaa pätevällä henkilöllä** ennen käyttöä.
 
 ### 3.4 Sähköjärjestelmä
 
