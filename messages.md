@@ -16,7 +16,7 @@ arvot.
 
 **Kerran tehtävät:**
 
-1. **Hyväksy kutsu.** GitHub lähettää sinulle sähköpostin "invited you to collaborate on
+1. ✅ *Tehty 2026-11-13 (kutsu hyväksytty).* **Hyväksy kutsu.** GitHub lähettää sinulle sähköpostin "invited you to collaborate on
    plektra/vega-library". Avaa se ja paina **Accept invitation**. Kutsun löytää myös osoitteesta
    [github.com/plektra/vega-library/invitations](https://github.com/plektra/vega-library/invitations).
 2. **Lisää repo Claude Codeen mobiilisovelluksessa:**
