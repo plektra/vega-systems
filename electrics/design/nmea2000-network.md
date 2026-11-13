@@ -172,9 +172,9 @@ kytkinpaineesta.
 
 **Varaukset:**
 
-- **Kytkinpaineen nimellisarvo ⚠ ei tiedossa** (ei Q06:n ohjeessa). Se tarvitaan painekytkimen ja
-  hälytyksen rajaksi. Arvo löytyy merivaihteen manuaalista, tai sen voi lukea nykyisestä mittarista
-  ajossa.
+- **Kytkinpaine on 1,2–1,4 MPa (12–14 bar)** ja STOP-asennossa 0,3–0,6 MPa (3–6 bar); voitelupaine
+  0,05–0,3 MPa [manuaali Advance 300, s. 36, 39]. Painekytkimen raja "kytkin kiinni" voisi olla noin 10 bar ja
+  hälytysraja noin 11 bar, kun vaihde on päällä [arvio, **⚠ tarkista** ajossa mittarista].
 - **Ulostuloista ei oteta öljyä muihin laitteisiin.** Öljy on vaihteiston oman pumpun öljyä, ja
   paineen lasku luistattaa kytkintä.
 - **Vikatilanne:** vuotava tai irtoava anturiliitos voi pudottaa kytkinpaineen, jolloin vaihde

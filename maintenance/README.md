@@ -2,7 +2,7 @@
 
 > **Tämä tiedosto on generoitu** tiedostosta [consumables.yaml](consumables.yaml) komennolla
 > `python3 maintenance/render.py`. Älä muokkaa taulukoita käsin: muuta YAML-tiedostoa ja aja
-> komento uudelleen. Päivitetty 2026-11-05.
+> komento uudelleen. Päivitetty 2026-11-13.
 
 Lista kaikista kuluvista ja määräajoin vaihdettavista osista ja nesteistä järjestelmittäin:
 malli, mitat, määrä, vaihtoväli, edellinen vaihto ja seuraava ajankohta. Tuntemattomat tiedot
@@ -60,11 +60,13 @@ Ei myöhässä olevia eikä pian erääntyviä kohteita (kirjattujen vaihtojen p
 
 | Kohde | Työ | Tuote / osanumero | Mitat | Määrä | Väli | Edellinen | Seuraava | Lähde |
 |---|---|---|---|---|---|---|---|---|
-| **Vaihteistoöljy (Advance 300)** <br>`GBX-OIL` | vaihto | **⚠ ei tiedossa** | – | – | **⚠ ei tiedossa** | – | ei kirjattua vaihtoa | – |
+| **Vaihteistoöljy (Advance 300)** <br>`GBX-OIL` | vaihto | SAE 30 (API CC/SD); kuumassa ilmastossa SAE 40 | – | 20 kg | 5000 h | – | Ensimmäinen vaihto 50 käyttötunnin jälkeen (myös suodattimien puhdistus), sen jälkeen "check and renew oil" huoltoluokassa 3 eli joka 5000 h. Öljyn pinta tarkistetaan päivittäin mittatikusta. | [manuaali Advance 300, s. 36, 52, 54–55] |
+| **Vaihteiston esisuodatin ja rakosuodatin (puhdistus)** <br>`GBX-FILTER` | tarkistus | rakosuodatin (coil-type filter) `ШГ36A-12-200` | – | 1 esisuodatin, 1 suodatinpanos | 1000 h | – | Ensimmäinen puhdistus 50 käyttötunnin jälkeen. | [manuaali Advance 300, s. 54–55, 90] |
 
 **Huomiot**
 
-- `GBX-OIL`: Öljytyyppi, määrä ja vaihtoväli ⚠ ei tiedossa: käyttöohje puuttuu (ks. datasheets/README.md). Tieto haetaan vaihteiston kilvestä tai jälleenmyyjältä.
+- `GBX-OIL`: 20 kg on noin 23 l (arvio, tiheys 0,88 kg/l), joten volume_l jätetty tyhjäksi. Täyttö huohottimen aukosta mittatikun ylämerkkiin. Öljyn lämpötila enintään 80 °C. 5000 h on valmistajan pisin väli; ajokausittain tai vuosittain vaihtaminen on vapaa-ajan käytössä tavallista (arvio, ei ohjeesta). ⚠ tarkista vaihteiston kilvestä, ettei siinä ole muuta öljysuositusta.
+- `GBX-FILTER`: Huoltoluokka 2 (joka 1000 h): suodatinpanoksen ja hydrauliohjauksen puhdistus, tulotiivisteiden ja kytkimien tarkastus tarkastusaukosta. Panos on puhdistettava, ei kertakäyttöinen. Osanumero luettu skannauksesta (kyrillinen "ШГ") ⚠ tarkista.
 
 ## Hydrauliikka
 

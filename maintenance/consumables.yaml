@@ -228,20 +228,46 @@ items:
     system: gearbox
     action: replace
     name: Vaihteistoöljy (Advance 300)
-    product: null
+    product: SAE 30 (API CC/SD); kuumassa ilmastossa SAE 40
     part_number: null
     size: null
-    quantity: null
+    quantity: 20 kg
     volume_l: null
-    interval_h: null
+    interval_h: 5000
     interval_months: null
-    due_note: null
+    due_note: >-
+      Ensimmäinen vaihto 50 käyttötunnin jälkeen (myös suodattimien puhdistus), sen jälkeen
+      "check and renew oil" huoltoluokassa 3 eli joka 5000 h. Öljyn pinta tarkistetaan päivittäin
+      mittatikusta.
     onboard_spares: null
     history: []
     notes: >-
-      Öljytyyppi, määrä ja vaihtoväli ⚠ ei tiedossa: käyttöohje puuttuu (ks.
-      datasheets/README.md). Tieto haetaan vaihteiston kilvestä tai jälleenmyyjältä.
-    source: null
+      20 kg on noin 23 l (arvio, tiheys 0,88 kg/l), joten volume_l jätetty tyhjäksi. Täyttö
+      huohottimen aukosta mittatikun ylämerkkiin. Öljyn lämpötila enintään 80 °C. 5000 h on
+      valmistajan pisin väli; ajokausittain tai vuosittain vaihtaminen on vapaa-ajan käytössä
+      tavallista (arvio, ei ohjeesta). ⚠ tarkista vaihteiston kilvestä, ettei siinä ole muuta
+      öljysuositusta.
+    source: "[manuaali Advance 300, s. 36, 52, 54–55]"
+
+  - id: GBX-FILTER
+    system: gearbox
+    action: inspect
+    name: Vaihteiston esisuodatin ja rakosuodatin (puhdistus)
+    product: rakosuodatin (coil-type filter)
+    part_number: "ШГ36A-12-200"
+    size: null
+    quantity: 1 esisuodatin, 1 suodatinpanos
+    volume_l: null
+    interval_h: 1000
+    interval_months: null
+    due_note: Ensimmäinen puhdistus 50 käyttötunnin jälkeen.
+    onboard_spares: null
+    history: []
+    notes: >-
+      Huoltoluokka 2 (joka 1000 h): suodatinpanoksen ja hydrauliohjauksen puhdistus, tulotiivisteiden
+      ja kytkimien tarkastus tarkastusaukosta. Panos on puhdistettava, ei kertakäyttöinen.
+      Osanumero luettu skannauksesta (kyrillinen "ШГ") ⚠ tarkista.
+    source: "[manuaali Advance 300, s. 54–55, 90]"
 
   # --- Hydrauliikka ------------------------------------------------------------------------
 

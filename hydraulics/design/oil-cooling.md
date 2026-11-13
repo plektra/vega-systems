@@ -295,7 +295,10 @@ merivesivirtaus on silloin 50 l/min (2 m/s; ylitys kuluttaa putkia eroosiolla). 
   meriveden lämpötilaa vain noin 1–2 °C, mikä ei haittaa kumpaakaan.
 - **Haaraa ei kytketä merivaihteen jäähdyttimen rinnalle**, vaikka sen painehäviö ajaisi virtausta
   haaraan ilman erillistä kuristusta: se veisi vettä merivaihteen jäähdytykseltä.
-- Merivaihteen jäähdyttimen vaatima merivesivirtaus kannattaa tarkistaa Advance 300:n ohjeesta.
+- Merivaihteen jäähdytin tarvitsee vähintään **3 t/h eli noin 50 l/min** merivettä [manuaali Advance 300, s. 36].
+  Merivesipumpun tuotoksi on arvioitu noin 70 l/min koneen 650 rpm:llä (**⚠ vahvistamatta**, ks.
+  [vessel](../../vessel/README.md)), joten virtaus riittää jo tyhjäkäynnillä, jos arvio pitää. EC100-haara
+  ei saa pudottaa merivaihteen virtausta tämän alle [laskelma].
   **⚠ Tarkista.**
 
 **Merivesivirtauksen varmistaminen:** Caterpillar-huolto tai varaosakirja (merivesipumpun malli ja
@@ -323,7 +326,7 @@ koneella ei suositella, koska kone jää silloin ilman jäähdytystä.
 - [x] Koneen merivesipumpun tuotto: noin 70 l/min 650 rpm:llä [omistaja 2026-10-22]
 - [x] 650 rpm on koneen kierrosluku; pumppu on koneen etupään voimanulosotossa kiinteällä välityksellä
 - [ ] Vahvista merivesipumpun tuotto (verkkohaun arvo ~70 l/min 650 rpm) ja välityssuhde
-- [ ] Merivaihteen (Advance 300) jäähdyttimen vaatima merivesivirtaus
+- [x] Merivaihteen (Advance 300) jäähdyttimen vaatima merivesivirtaus: vähintään 3 t/h (50 l/min) [manuaali Advance 300, s. 36]
 - [ ] Rinnakkaishaaran virtauksenrajoitus: vakiovirtausventtiili vai säädettävä venttiili
 - [x] Merivaihde jäähdytetään samasta merivesipiiristä omalla lämmönvaihtimellaan
 - [ ] Paluulinjojen yhdistäminen ja ohitusventtiilin valinta
