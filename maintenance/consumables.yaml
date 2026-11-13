@@ -245,9 +245,11 @@ items:
       20 kg on noin 23 l (arvio, tiheys 0,88 kg/l), joten volume_l jätetty tyhjäksi. Täyttö
       huohottimen aukosta mittatikun ylämerkkiin. Öljyn lämpötila enintään 80 °C. 5000 h on
       valmistajan pisin väli; ajokausittain tai vuosittain vaihtaminen on vapaa-ajan käytössä
-      tavallista (arvio, ei ohjeesta). ⚠ tarkista vaihteiston kilvestä, ettei siinä ole muuta
-      öljysuositusta.
-    source: "[manuaali Advance 300, s. 36, 52, 54–55]"
+      tavallista (arvio, ei ohjeesta). Tyyppikilvessä ei ole öljysuositusta [omistaja 2026-11-13],
+      joten noudatetaan huolto-ohjetta. Nykyaikainen vastine API CC/SD:lle on yksiasteinen SAE 30
+      -dieselmoottoriöljy, API CF tai uudempi (tulkinta, ei ohjeesta). Vältä energiansäästöluokiteltuja
+      henkilöautoöljyjä märkien monilevykytkinten takia (yleistieto).
+    source: "[manuaali Advance 300, s. 36, 52, 54–55], [omistaja 2026-11-13]"
 
   - id: GBX-FILTER
     system: gearbox
