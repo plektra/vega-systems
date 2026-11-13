@@ -239,5 +239,6 @@ pumpun oma imupaineraja **⚠ ei tiedossa**.]
 - [x] Kannake: vanha käytetään (päätös 2026-11-13)
 - [x] Uuden P1:n liitännät ja paine: laippaliitännät, laipat vanhasta P2:sta; max 250 bar, riittää orbitrolin paineenrajoitukselle (enintään 170 bar) [omistaja 2026-11-13]
 - [ ] Uuden P1:n imupaineraja ja pienin viskositeetti: kysy myyjältä
+- [ ] P1:n painelinja: jos käytetään vanha 3/4":n P-linja, tarvitaan sovitenippa [omistaja 2026-11-13]; linja on myös suunniteltu P2:lle ([hankintalista 3.2 ja 6.10](../procurement.md))
 - [ ] Imupaineen mittauspiste 1G2 imulaippaan (mittausaukko tai välikappale), kun 3/4":n T-kappaletta ei enää käytetä
 - [ ] Vanhan tukilaakerin uraholkki: tarkista kunto ja sopivuus uuden pumpun akseliin (kartio 1:8, kiila 4 mm). Käytetty vain noin 100 h [omistaja 2026-11-13]

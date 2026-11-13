@@ -177,6 +177,7 @@ Vaihtoehto A (ryhmän 2 pumppu, uusi tukilaakeri ja kannake) hylätty; rivit 6.5
 | 6.7 | ~~**A:** uraholkki ryhmä 2, 14 hammasta, 1:8-kartioreikä, kiila 3,2 mm~~ | 1 | pumpun ja tukilaakerin väliin | ❌ hylätty 2026-11-13 | noin 7–16 € (hakutulokset 2026-11-06, **⚠ tarkista**) | sama |
 | 6.8 | **Uusi P1-pumppu (päätetty 2026-11-13)**, ryhmä 3, 20 cm³, kartioakseli 1:8 ja 4 mm:n kiila, pulttijako 98,4 × 128,1, ohjuri Ø50,8, myötäpäivään, **laippaliitännät, max 250 bar** [omistaja 2026-11-13]: [Hydrauliikkakauppa.fi 30C20X146](https://www.hydrauliikkakauppa.fi/tuote/hammaspyorapumppu-3-sarja-25-cm%c2%b3-laippaliitanta/) (valmistaja ⚠ ei tiedossa) | 1 | ei 25 cm³:n versiota (imu kylmänä yli rajan). laipat vanhasta P2:sta [omistaja 2026-11-13] | 🛒 päätetty | **240 €** (191,24 € alv 0 %), varastossa [Hydrauliikkakauppa.fi 2026-11-12] | [datasheets](../datasheets/README.md), [p1-steering-pump](design/p1-steering-pump.md#vaihtoehto-ryhmän-3-pumppu-20-cm³) |
 | 6.9 | Kannake ja tukilaakeri P1:lle | 1 | vanha ryhmän 3 tukilaakeri ja kannake, mitat täsmäävät [omistaja 2026-11-13]; hihnapyörä ja uraholkki vanhat; uraholkki käytetty vain noin 100 h [omistaja 2026-11-13], kunto ja sopivuus **⚠ tarkista** | ✅ | – | [päätös 2026-11-13](../decisions.md) |
+| 6.10 | Sovitenippa P1:n painelaippaan | 1 | tarvitaan, jos P1:lle otetaan vanha 3/4":n P-linja [omistaja 2026-11-13]; koko ja kierre **⚠ tarkista**. **Huom.** sama 3/4":n linja on varattu P2:lle (rivi 3.2), joten valitse kumpi pumppu sen saa | ❓ | pieni | [omistaja 2026-11-13] |
 
 ## Imupuolen kaksoispainemittarit
 
@@ -238,6 +239,7 @@ Lisäksi vanha P2 (Salami 3PB33D) ja vanha P1 (Salami 2PE16D-P28P1, akseli katka
 - [x] P1: vaihtoehto B, mitat täsmäävät (päätös 2026-11-13)
 - [x] Uuden P1:n liitännät: laippa, laipat vanhasta P2:sta; max 250 bar [omistaja 2026-11-13]
 - [ ] Uraholkin kunto ja 1G2:n mittausliitäntä imulaippaan (6.3, 6.9)
+- [ ] P1:n painelinja: vanha 3/4":n P-linja ja sovitenippa (6.10) vai vanha 1/2":n linja; vanha 3/4":n linja on nyt suunniteltu P2:lle (3.2)
 - [ ] Taper Lock -holkkien koodit ja HRC 150:n napatyyppi (1.2–1.5)
 - [ ] Jäähdyttimen asennus ja paluusuodattimen malli (5.3–5.9)
 - [x] Imupuolelle kiinteät kaksoispainemittarit molempiin pumppuihin, mittaritauluun (päätös 2026-10-28)
