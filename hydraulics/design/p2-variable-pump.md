@@ -7,7 +7,7 @@
 > on siirretty arkistoon ([archive/p2-fxdc-ls-unloading](archive/p2-fxdc-ls-unloading.md)), samoin
 > F1-61-selvitys ([archive/p2-pump-options](archive/p2-pump-options.md)). Pumpun tiedot: selvitys
 > 2026-10-25, asennusmitat ja porttikoot Eatonin luettelosta 2026-10-28, keskitys Ø127 ja Eatonin
-> jalkakannake 2026-11-01.
+> jalkakannake 2026-11-01. 2026-11-14: [kannakkeen paikka](#kannakkeen-paikka-kuorikytkin-ja-konepeti-2026-11-14): pumpun alle tuleva jalka ei mahdu potkuriakselin kuorikytkimen takia; selvitetään kiinnitystä vasemmalta konepetiin.
 > Pätevän henkilön pitää tarkistaa säätöarvot, LS-kytkentä, kannake ja ohjauslogiikka ennen
 > rakentamista.
 
@@ -197,6 +197,38 @@ FB-C4-10:n mitat kelpaavat kuitenkin malliksi: keskitysreiän toleranssi, 1/2-13
 ja levyn paksuus (Eatonilla noin 20–23 mm, meillä 10 mm:n teräslevy jäykisteineen).
 Laserleikattu reikä ei yleensä osu suoraan 0,1 mm:n toleranssiin: leikkaa reikä hieman
 pienemmäksi ja avarra se, tai pyydä leikkaajalta mittatarkka reikä **⚠ tarkista leikkaajalta**.
+
+### Kannakkeen paikka: kuorikytkin ja konepeti (2026-11-14)
+
+**Tilanne [omistaja 2026-11-14]:** potkuriakseli (Ø90) liittyy merivaihteen lähtöakseliin
+kuorikytkimellä (vähintään noin Ø160 **⚠ mittaa**) samassa kohdassa pituussuunnassa kuin pumppu.
+Omistajan FreeCAD-mallissa potkuriakselin keskiö on noin 203 mm sivussa ja 155 mm alempana kuin
+pumpun akseli, perästä katsottuna oikealla. Konepeti jatkuu pumpun kohdalle; sen yläpinta on noin
+240 mm PTO-akselin alapuolella, ja PTO:n alla pedissä on kaukalo vaihteiston öljypohjalle
+([vessel](../../vessel/README.md)).
+
+**Seuraus [laskelma]:** pumpun alle tuleva jalka ja pukit eivät mahdu. Ø160-kytkimellä luonnoksen
+pohjalevyn reunaan jäisi noin 13 mm ja sivutukeen noin 8 mm, ja oikean puolen pukit osuisivat
+kytkimen kohdalle. Pumppu itse mahtuu: sen rungosta ja pulttikuvion ympärille rajatusta
+laippalevystä (x ≈ −85 mm) kytkimeen jää noin 55–58 mm.
+
+**Selvitettävä ratkaisu:** kannake kiinnitetään **perästä katsottuna pumpun vasemmalle puolelle**,
+poispäin kytkimestä [omistajan ehdotus 2026-11-14]. SAE C -laippa sallii pumpun pitämisen nykyisessä
+asennossa. Koska peti on 240 mm akselin alapuolella ja kaukalo on pumpun alla, kannake on
+**kulmapilari** konepedin vasemmalle reunalle kaukalon viereen:
+
+- laippalevy jatkuu alas ja vasemmalle pedin yläpintaan (pumpun paino ja reaktiomomentti
+  vaikuttavat levyn tasossa, joten levy on niille jäykkä);
+- pumpun vasemmalle sivulle pitkittäinen pystylevy laipasta taaksepäin (vähintään noin 150 mm,
+  pumpun painopisteen yli), joka kantaa keikkumisen eteen ja taakse;
+- jalkalevy pedin päälle, 4 × M12 8.8 ja Ø15-reiät, pulttien väli pituussuunnassa mahdollisimman suuri.
+
+Kuormat pulteille [laskelma, oletukset: pumppu ja kannake 46 kg, kolminkertainen isku,
+reaktiomomentti 254 Nm, painopiste noin 150 mm pulttilinjasta sivussa, pulttiväli sivusuunnassa
+noin 90 mm]: momentti noin 450 Nm → noin 2,5 kN vetoa pulttia kohti. M12 8.8:n esikiristysvoima on
+noin 38 kN, joten pultit riittävät. Kapea jalka pedin päällä on jäykkyyden heikoin kohta, joten
+jalan pituus ja rivat ratkaisevat. Mitoitus tehdään, kun kaukalon reuna ja pedin leveys on mitattu.
+Pätevän henkilön pitää tarkistaa lopullinen kannake.
 
 ### Riittääkö 10 mm:n teräslevy [laskelma]
 
@@ -606,6 +638,7 @@ nykyisen rinnalle.
 - [ ] Danfoss (Vickers): saako PVH57-mobiilia pyörittää yli 2400 rpm pienemmällä iskulla; valmiustilan häviöteho; kotelon suurin paine
 - [x] PVH57:n asennusmitat: laippa, imu 2", lähtö 1", vuoto 3/4-16 UNF, LS 9/16-18 UNF [Eatonin luettelo V-PUPI-TM008-E1 s. 20–22, 2026-10-28]. M-2206-S on osaluettelo eikä sisällä mittoja.
 - [ ] Pumpusta (pumppu nyt omistajilla 2026-11-01): kumpi pääportti on imu (2" = reikäväli 77,8 × 42,9 mm, 1" = 52,4 × 26,2 mm), onko ylempi vuotoportti avattu, paino
+- [ ] Veneellä kannakkeen paikkaa varten: kuorikytkimen halkaisija pultinkantoineen, pituus ja etäisyys vaihteiston takapinnasta; kaukalon vasemman reunan etäisyys PTO-akselista sivusuunnassa ja pedin yläpinnan leveys sen vasemmalla puolella; pedin ainepaksuus ja ylettyykö pultteihin alta; vaihteiston vasemman kiinnitysjalan ja putkien paikka
 - [ ] Pumpun paino vaa'alla (kannakkeen laskelma olettaa 36 kg) ja painopisteen paikka laipasta, esim. tasapainottamalla pyöröraudan päällä
 - [ ] Pumpusta: keskitysolakkeen halkaisija työntömitalla. Koodin mukaan pitäisi olla **127,0 mm** (SAE C); 125,0 mm tarkoittaisi metristä M-laippaa. Samalla reikäneliö: 114,5 mm (SAE C) vai 113,1 mm (ISO)
 - [ ] Pumpun kilvestä sarjanumero ja akselin mitat (halkaisija 1 1/4", kiilaura) kytkimen holkkien tilausta varten
