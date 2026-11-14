@@ -212,23 +212,23 @@ pohjalevyn reunaan jäisi noin 13 mm ja sivutukeen noin 8 mm, ja oikean puolen p
 kytkimen kohdalle. Pumppu itse mahtuu: sen rungosta ja pulttikuvion ympärille rajatusta
 laippalevystä (x ≈ −85 mm) kytkimeen jää noin 55–58 mm.
 
-**Selvitettävä ratkaisu:** kannake kiinnitetään **perästä katsottuna pumpun vasemmalle puolelle**,
-poispäin kytkimestä [omistajan ehdotus 2026-11-14]. SAE C -laippa sallii pumpun pitämisen nykyisessä
-asennossa. Koska peti on 240 mm akselin alapuolella ja kaukalo on pumpun alla, kannake on
-**kulmapilari** konepedin vasemmalle reunalle kaukalon viereen:
+**Selvitettävä ratkaisu:** kannake tuetaan **perästä katsottuna pumpun vasemmalta puolelta**
+konepetiin, poispäin kytkimestä [omistajan ehdotus 2026-11-14]. Omistajan hahmotelman mukaan
+kaukalon vasen reuna on vain noin 80 mm PTO-akselista vasemmalle, joten **pedin vasen palkki on
+suoraan kannakkeen vasemman sivulevyn alla** (sivulevy noin 105–115 mm akselista).
 
-- laippalevy jatkuu alas ja vasemmalle pedin yläpintaan (pumpun paino ja reaktiomomentti
-  vaikuttavat levyn tasossa, joten levy on niille jäykkä);
-- pumpun vasemmalle sivulle pitkittäinen pystylevy laipasta taaksepäin (vähintään noin 150 mm,
-  pumpun painopisteen yli), joka kantaa keikkumisen eteen ja taakse;
-- jalkalevy pedin päälle, 4 × M12 8.8 ja Ø15-reiät, pulttien väli pituussuunnassa mahdollisimman suuri.
+- **Kehto säilyy:** laippalevy, pohjalevy ja molemmat sivulevyt. Umpinainen kehto tukee myös pumpun
+  oikean puolen; pelkkä laippalevy ja yksi pitkittäinen levy jäisivät väännössä niin joustaviksi,
+  että ominaistaajuus olisi noin 30 Hz eli koneen kierrosalueella [laskelma, karkea].
+- **Oikealle puolelle ei tule pukkeja.** Kehdon oikea puoli on uloke kaukalon päällä.
+- **Vasemmalle pukki pedin päälle:** noin 125 mm korkea (kehdon pohjasta pedin pintaan, joka on
+  noin 240 mm akselin alapuolella). Jalkalevy ulottuu noin 85–250 mm akselista vasemmalle, ja siinä on 4 × M12 8.8
+  Ø15-rei'issä; pulttien väli pituussuunnassa vähintään noin 150 mm. Korkeus säädetään välilevyillä.
+- **Kuorikytkimen välys:** Ø160-kytkimellä kehdon oikeaan reunaan (±115,5 mm) jää noin 13 mm.
+  Kavenna kehdon oikea puoli pumpun rungon leveyteen ja nosta pohjalevyä niin paljon kuin pumppu
+  sallii, jolloin välystä jää noin 40–50 mm [laskelma]. Kytkimen todellinen halkaisija **⚠ mittaa**.
 
-Kuormat pulteille [laskelma, oletukset: pumppu ja kannake 46 kg, kolminkertainen isku,
-reaktiomomentti 254 Nm, painopiste noin 150 mm pulttilinjasta sivussa, pulttiväli sivusuunnassa
-noin 90 mm]: momentti noin 450 Nm → noin 2,5 kN vetoa pulttia kohti. M12 8.8:n esikiristysvoima on
-noin 38 kN, joten pultit riittävät. Kapea jalka pedin päällä on jäykkyyden heikoin kohta, joten
-jalan pituus ja rivat ratkaisevat. Mitoitus tehdään, kun kaukalon reuna ja pedin leveys on mitattu.
-Pätevän henkilön pitää tarkistaa lopullinen kannake.
+Kuormat pulteille [laskelma, oletukset: pumppu ja kannake 46 kg, kolminkertainen isku, reaktiomomentti 254 Nm, pumpun painopiste noin 165 mm pulttiryhmän keskeltä sivussa, pulttiväli sivusuunnassa noin 110 mm]: momentti noin 480 Nm → noin 2,2 kN vetoa pulttia kohti. M12 8.8:n esikiristysvoima on noin 38 kN, joten pultit riittävät. Pätevän henkilön pitää tarkistaa lopullinen kannake.
 
 ### Riittääkö 10 mm:n teräslevy [laskelma]
 
