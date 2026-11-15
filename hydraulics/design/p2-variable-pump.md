@@ -345,9 +345,14 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
 3. **Lopullinen linjaus, pumppu ja kytkin paikallaan.** Kannake liu'utetaan paikalleen
    kumielementti valmiiksi PTO:n navassa (ks. [HRC 150:n asennus](#kannakkeen-paikka-kuorikytkin-ja-konepeti-2026-11-14)),
    joten linjaus mitataan elementti paikallaan. Pumpun paino ja kannakkeen taipuma ovat mukana.
-   - **Mittaus:** säteissuuntainen siirtymä viivaimella ja rakotulkilla tai mittakellolla napojen
-     ulkokehältä neljästä kohdasta (ylä, ala, sivut); kulmavirhe napojen välin erotuksena neljästä
-     kohdasta (työntömitta tai rakotulkki); napojen väli noin 40,5 mm ±0,9.
+   - **Mittaus ilman yläpuolta [2026-11-15]:** yläripa estää mittauksen ylhäältä, joten mitataan
+     alhaalta ja oikealta sivulta. Siirtymä: viivain napojen ulkokehää vasten ja rakotulkki
+     (navat samaa kokoa, joten alapuolen lukema = pystysiirtymä, oikean sivun = vaakasiirtymä).
+     Kulmavirhe: viivain tiiviisti PTO:n navan kehää vasten ja rako pumpun navan kehän etu- ja
+     takareunaan; raon erotus / 33,5 mm = kulmavirhe, 0,5° ≈ 0,29 mm [laskelma]. Pyöritä
+     konetta vauhtipyörästä 180° (PTO pyörii koneen mukana) ja mittaa samoista kohdista
+     uudelleen; keskiarvo poistaa napojen heiton. Napojen väli noin 40,5 mm ±0,9 alhaalta ja
+     oikealta. 50 mm:n yläripa jättää napojen välisen raon lähes kokonaan näkyviin ylhäältä.
    - **Korkeus ja pystykulma:** välilevyt jalan alle; etu- ja takapulttien välilevyjen erotus
      kääntää pumppua pystysuunnassa (pulttiväli pituussuunnassa noin 230 mm). Jalkalevyyn 2–4
      M10-**nostoruuvia**, joilla kannake nostetaan välilevyjen vaihdon ajaksi (kannake ja pumppu
