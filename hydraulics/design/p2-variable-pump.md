@@ -238,15 +238,17 @@ suoraan kannakkeen vasemman sivulevyn alla** (sivulevy noin 105–115 mm akselis
   noin 240 mm akselin alapuolella). Jalkalevy ulottuu noin 85–250 mm akselista vasemmalle, ja siinä on 4 × M12 8.8
   Ø15-rei'issä; pulttien väli pituussuunnassa vähintään noin 150 mm. Korkeus säädetään välilevyillä.
 - **HRC 150:n asennus [laskelma, 2026-11-15]:** pumpun napa (noin Ø150) ei mahdu laippalevyn
-  Ø127-reiän läpi, ja sen ja laippalevyn väliin jää vain noin 12,5 mm, joten pumpun puolelle tulee
-  **F-napa** (holkin ruuvit kytkimen puolelta). Löysättyjä napoja voi liu'uttaa erilleen vain noin
-  34 mm, kun kumielementin asennus vaatii noin 40 mm **⚠ mittaa kytkimestä**. Asennusjärjestys:
-  (1) PTO:n napa akselille ja kiristys; (2) pumppu kannakkeeseen pöydällä, pumpun F-napa akselin pään
-  tasalle ja kiristys; (3) kumielementti PTO:n napaan; (4) kannake pumppuineen pedille noin 50 mm
-  taemmas ja liu'utus eteen, pultit ja linjaus. Kumielementin vaihto käänteisesti: jalan pultit irti
-  ja kannake noin 50 mm taaksepäin. Siksi **alustalevy noin 50 mm jalkaa pidemmäksi taaksepäin** ja
-  letkuihin noin 50 mm joustoa. Yläripa ja vasemman sivulevyn jatke ohittavat PTO:n navan
-  liu'utettaessa (ripa vähintään 85 mm akselista, sivulevy 105 mm; navan säde 75 mm).
+  Ø127-reiän läpi, ja sen ja laippalevyn väliin jää vain noin 12,5 mm. Akseleiden päiden väli on
+  kuitenkin 40,5 mm ja napa 33,5 mm, joten **navat asennetaan kannakkeen ollessa paikallaan ja
+  linjattuna** akseleiden välistä: (1) PTO:n **H-napa** akselille ja taakse vaihteistoa kohti;
+  (2) pumpun **F-napa** pumpun akselille akselin pään tasalle ja holkin ruuvit kiinni edestä
+  (napojen väliin jää noin 62 mm); (3) kumielementti pumpun navan kynsiin; (4) PTO:n napa eteen
+  elementtiin, napojen väli 40,5 mm, ja holkin ruuvit kiinni vaihteiston puolelta (tilaa noin
+  21–26 mm **⚠ mittaa, mahtuuko kuusiokoloavain**). **Kumielementin vaihto:** PTO:n napaa voi
+  siirtää vain noin 21 mm, mikä ei riitä elementin irrottamiseen **⚠ mittaa kytkimestä**, joten jalan pultit irrotetaan ja kannake
+  pumppuineen liu'utetaan noin 50 mm taaksepäin. Siksi **alustalevy noin 50 mm jalkaa pidemmäksi
+  taaksepäin** ja letkuihin noin 50 mm joustoa. Yläripa ja vasemman sivulevyn jatke ohittavat
+  PTO:n navan (ripa vähintään 85 mm akselista, sivulevy 105 mm; navan säde 75 mm).
 - **Kuorikytkimen välys [laskelma, 2026-11-15]:** pumpun ääriviivan (Eatonin mittakuva omistajan
   mallissa) mukaan pumpun oikea alanurkka on noin 90 mm akselista kytkimen puolelle ja noin 70 mm
   akselin alapuolella; pumpun ja Ø160-kytkimen väliin jää noin 61 mm. Pohjalevyn oikea reuna
@@ -342,31 +344,32 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
    3. Kannake takaisin sovitteen varaan, ja alustalevyyn porataan reiät jalan Ø15-reikien kautta
       **keskelle** (porausholkki Ø15/Ø10,2) ja kierteitetään M12. Hitsauksen veto ei silloin
       vaikuta reikien paikkaan, ja jalan reikiin jää ±1,5 mm säätövaraa joka suuntaan.
-3. **Lopullinen linjaus, pumppu ja kytkin paikallaan.** Kannake liu'utetaan paikalleen
-   kumielementti valmiiksi PTO:n navassa (ks. [HRC 150:n asennus](#kannakkeen-paikka-kuorikytkin-ja-konepeti-2026-11-14)),
-   joten linjaus mitataan elementti paikallaan. Pumpun paino ja kannakkeen taipuma ovat mukana.
-   - **Mittaus ilman yläpuolta [2026-11-15]:** yläripa estää mittauksen ylhäältä, joten mitataan
-     alhaalta ja oikealta sivulta. Siirtymä: viivain napojen ulkokehää vasten ja rakotulkki
-     (navat samaa kokoa, joten alapuolen lukema = pystysiirtymä, oikean sivun = vaakasiirtymä).
-     Kulmavirhe: viivain tiiviisti PTO:n navan kehää vasten ja rako pumpun navan kehän etu- ja
-     takareunaan; raon erotus / 33,5 mm = kulmavirhe, 0,5° ≈ 0,29 mm [laskelma]. Napojen väli noin 40,5 mm ±0,9 alhaalta ja
-     oikealta. 50 mm:n yläripa jättää napojen välisen raon lähes kokonaan näkyviin ylhäältä.
-   - **Mittaustulokset säädöiksi [laskelma, 2026-11-15]:** jalan etupultit ovat lähes pumpun navan
-     alla (etupultit noin y = 121 mm, takapultit noin 351 mm, navan keskikohta noin 112 mm), joten
-     etupään säätö siirtää napaa ≈ 1:1 ja takapään säätö kääntää kulmaa. Takapään muutos ≈
-     6,9 × navan etu- ja takareunan raon erotus (pulttien väli 230 mm / navan pituus 33,5 mm).
+3. **Lopullinen linjaus pelkistä akseleista, pumppu paikallaan [2026-11-15].** Linjaus tehdään
+   ennen napojen asennusta; navat oletetaan koneistetuiksi suoriksi [omistaja 2026-11-15], joten
+   akseleiden linjaus on sama kuin napojen. Pumpun paino ja kannakkeen taipuma ovat mukana.
+   - **Mittaus alhaalta ja oikealta:** viivain PTO-akselin (Ø48) pintaa vasten ja rako pumpun
+     akseliin (Ø31,75) työntömitalla tai rakotulkilla. Säteiden ero on **8,125 mm**; poikkeama
+     siitä on siirtymä. Kulma: rako kahdesta kohdasta pumpun akselilla noin 40 mm:n välein
+     (akselia näkyvissä 46 mm laippalevyn edessä); 0,5° ≈ 0,35 mm / 40 mm [laskelma]. Kiilaura
+     käännetään pois mittauskohdasta. Vaihtoehto: sorvattu Ø48-holkki pumpun akselille, jolloin
+     viivain lepää molempien akseleiden päällä.
+   - **Mittaustulokset säädöiksi [laskelma, 2026-11-15]:** jalan etupultit ovat lähes mittauskohtien
+     alla (etupultit noin y = 121 mm, takapultit noin 351 mm, mittauskohdat pumpun akselilla noin
+     y = 100–140 mm), joten etupään säätö siirtää pumpun akselia ≈ 1:1 ja takapään säätö kääntää kulmaa. Takapään muutos ≈
+     pulttien väli / mittauskohtien väli × raon erotus: 230 / 40 ≈ 5,8, kun mitataan pumpun akselilta 40 mm:n välein.
      Korjaa ensin kulma takapäästä (pystysuunnassa välilevyillä, vaakasuunnassa reikien
-     välyksessä), sitten siirtymä etupäästä. Esimerkki: takareunan rako 0,10 mm suurempi →
-     takavälilevyjä ohennetaan noin 0,7 mm; jos napa jää sitten 0,15 mm liian alas,
+     välyksessä), sitten siirtymä etupäästä. Esimerkki: takimmaisen mittauskohdan rako 0,10 mm suurempi →
+     takavälilevyjä ohennetaan noin 0,6 mm; jos akseli jää sitten 0,15 mm liian alas,
      etuvälilevyjä paksunnetaan 0,15 mm. Jos pulttien paikka muuttuu, kerroin on pulttien
-     pituussuuntainen väli / 33,5 mm.
+     pituussuuntainen väli / mittauskohtien väli.
    - **Korkeus ja pystykulma:** välilevyt jalan alle; etu- ja takapulttien välilevyjen erotus
      kääntää pumppua pystysuunnassa (pulttiväli pituussuunnassa noin 230 mm). Jalkalevyyn 2–4
      M10-**nostoruuvia**, joilla kannake nostetaan välilevyjen vaihdon ajaksi (kannake ja pumppu
      noin 56 kg).
    - **Sivusuunta ja vaakakulma:** jalkaa siirretään Ø15-reikien välyksen rajoissa. Hienosäätöön
      voi hitsata alustalevyn sivuille kaksi korvaketta, joissa on M10-**työntöruuvit**.
-   - Kiristä pultit ristiin noin 80 Nm, mittaa uudelleen.
+   - Kiristä pultit ristiin noin 80 Nm, mittaa uudelleen. Asenna sitten navat ja kumielementti
+     kannakkeen ollessa paikallaan (ks. HRC 150:n asennus yllä).
 4. **Merkitse paikka.** Piirrä jalan reunat alustalevyyn ja merkitse välilevypinot paikoittain.
    Kumielementin vaihdossa kannake liu'utetaan noin 50 mm taaksepäin ja takaisin; merkeillä ja
    samoilla välilevyillä linjaus palautuu nopeasti, ja se tarkistetaan mittaamalla.
