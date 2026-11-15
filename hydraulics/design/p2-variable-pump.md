@@ -363,11 +363,7 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      käännä holkkia akselilla 180°, mittaa uudelleen ja käytä keskiarvoa; holkin epäkeskeisyys
      kumoutuu. Ilman holkkia: Ø8-poranterän varsi ja 0,125 mm:n rakotulkki mittapalana viivaimen
      ja pumpun akselin välissä (8,125 mm).
-   - **Tarkin vaihtoehto: mittakello PTO-akselilla.** Kaulus tai magneettijalka PTO-akseliin,
-     varsi akseleiden välin yli ja kärki pumpun akselin pintaan; konetta käännetään
-     vauhtipyörästä, ja lukemat otetaan neljässä asennossa (siirtymä = lukemien erotus / 2) ja
-     toisesta kohdasta pumpun akselilla kulmaa varten. Kello mahtuu kiertämään ylärivan alta
-     (ripa vähintään 85 mm akselista).
+   - Mittakello PTO-akselilla ei mahdu akseleiden väliin [omistaja 2026-11-16], joten sitä ei käytetä.
    - **Mittaustulokset säädöiksi [laskelma]:** jalan etupultit ovat lähes mittauskohtien alla
      (etupultit noin y = 121 mm, takapultit noin 351 mm, mittauskohdat noin y = 100–140 mm), joten
      etupään säätö siirtää pumpun akselia ≈ 1:1 ja takapään säätö kääntää kulmaa. Takapään muutos
