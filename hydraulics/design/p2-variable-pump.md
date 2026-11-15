@@ -351,6 +351,15 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      Kulmavirhe: viivain tiiviisti PTO:n navan kehää vasten ja rako pumpun navan kehän etu- ja
      takareunaan; raon erotus / 33,5 mm = kulmavirhe, 0,5° ≈ 0,29 mm [laskelma]. Napojen väli noin 40,5 mm ±0,9 alhaalta ja
      oikealta. 50 mm:n yläripa jättää napojen välisen raon lähes kokonaan näkyviin ylhäältä.
+   - **Mittaustulokset säädöiksi [laskelma, 2026-11-15]:** jalan etupultit ovat lähes pumpun navan
+     alla (etupultit noin y = 121 mm, takapultit noin 351 mm, navan keskikohta noin 112 mm), joten
+     etupään säätö siirtää napaa ≈ 1:1 ja takapään säätö kääntää kulmaa. Takapään muutos ≈
+     6,9 × navan etu- ja takareunan raon erotus (pulttien väli 230 mm / navan pituus 33,5 mm).
+     Korjaa ensin kulma takapäästä (pystysuunnassa välilevyillä, vaakasuunnassa reikien
+     välyksessä), sitten siirtymä etupäästä. Esimerkki: takareunan rako 0,10 mm suurempi →
+     takavälilevyjä ohennetaan noin 0,7 mm; jos napa jää sitten 0,15 mm liian alas,
+     etuvälilevyjä paksunnetaan 0,15 mm. Jos pulttien paikka muuttuu, kerroin on pulttien
+     pituussuuntainen väli / 33,5 mm.
    - **Korkeus ja pystykulma:** välilevyt jalan alle; etu- ja takapulttien välilevyjen erotus
      kääntää pumppua pystysuunnassa (pulttiväli pituussuunnassa noin 230 mm). Jalkalevyyn 2–4
      M10-**nostoruuvia**, joilla kannake nostetaan välilevyjen vaihdon ajaksi (kannake ja pumppu
