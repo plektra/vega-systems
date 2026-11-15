@@ -353,7 +353,17 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      akseliin (Ø31,75) työntömitalla tai rakotulkilla. Säteiden ero on **8,125 mm**; poikkeama
      siitä on siirtymä. Kulma: rako kahdesta kohdasta pumpun akselilla noin 40 mm:n välein
      (akselia näkyvissä 46 mm laippalevyn edessä); 0,5° ≈ 0,35 mm / 40 mm [laskelma]. Kiilaura
-     käännetään pois mittauskohdasta.
+     käännetään pois mittauskohdasta ja kiila irrotetaan PTO-akselilta.
+   - **Suositeltu apuväline: sorvattu holkki pumpun akselille [2026-11-16]:** sisähalkaisija
+     Ø31,75 (H7), ulkohalkaisija **Ø48** kuten PTO-akseli, pituus noin 40 mm, alumiinia tai
+     terästä (3D-tuloste ei ole riittävän tarkka). Silloin ohut teräsviivain lepää molempien
+     akseleiden päällä alhaalta ja oikealta, ja rako mitataan rakotulkilla ilman 8,125 mm:n
+     vähennystä.
+   - **Tarkin vaihtoehto: mittakello PTO-akselilla.** Kaulus tai magneettijalka PTO-akseliin,
+     varsi akseleiden välin yli ja kärki pumpun akselin pintaan; konetta käännetään
+     vauhtipyörästä, ja lukemat otetaan neljässä asennossa (siirtymä = lukemien erotus / 2) ja
+     toisesta kohdasta pumpun akselilla kulmaa varten. Kello mahtuu kiertämään ylärivan alta
+     (ripa vähintään 85 mm akselista).
    - **Mittaustulokset säädöiksi [laskelma]:** jalan etupultit ovat lähes mittauskohtien alla
      (etupultit noin y = 121 mm, takapultit noin 351 mm, mittauskohdat noin y = 100–140 mm), joten
      etupään säätö siirtää pumpun akselia ≈ 1:1 ja takapään säätö kääntää kulmaa. Takapään muutos
