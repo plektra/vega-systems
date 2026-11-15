@@ -237,8 +237,11 @@ suoraan kannakkeen vasemman sivulevyn alla** (sivulevy noin 105–115 mm akselis
 - **Vasemmalle pukki pedin päälle:** noin 125 mm korkea (kehdon pohjasta pedin pintaan, joka on
   noin 240 mm akselin alapuolella). Jalkalevy ulottuu noin 85–250 mm akselista vasemmalle, ja siinä on 4 × M12 8.8
   Ø15-rei'issä; pulttien väli pituussuunnassa vähintään noin 150 mm. Korkeus säädetään välilevyillä.
-- **HRC 150:n asennus [laskelma, 2026-11-15]:** pumpun napa (noin Ø150) ei mahdu laippalevyn
-  Ø127-reiän läpi, ja sen ja laippalevyn väliin jää vain noin 12,5 mm, joten pumpun puolelle tulee
+- **HRC 150:n asennus [laskelma, 2026-11-15]:** napa on kynsineen noin 70 mm pitkä (holkkiosa
+  33,5 mm ja kynnet noin elementin leveyden verran **⚠ tarkista kytkimestä**), joten se ei mahdu
+  akseleiden väliin (40,5 mm), eikä napoja voi asentaa kannakkeen ollessa paikallaan. Pumpun napa
+  (noin Ø150) ei mahdu myöskään laippalevyn Ø127-reiän läpi, ja sen ja laippalevyn väliin jää vain
+  noin 12,5 mm, joten pumpun puolelle tulee
   **F-napa** (holkin ruuvit kytkimen puolelta). Löysättyjä napoja voi liu'uttaa erilleen vain noin
   34 mm, kun kumielementin asennus vaatii noin 40 mm **⚠ mittaa kytkimestä**. Asennusjärjestys:
   (1) PTO:n napa akselille ja kiristys; (2) pumppu kannakkeeseen pöydällä, pumpun F-napa akselin pään
@@ -367,9 +370,11 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
    - **Sivusuunta ja vaakakulma:** jalkaa siirretään Ø15-reikien välyksen rajoissa. Hienosäätöön
      voi hitsata alustalevyn sivuille kaksi korvaketta, joissa on M10-**työntöruuvit**.
    - Kiristä pultit ristiin noin 80 Nm, mittaa uudelleen.
-4. **Merkitse paikka.** Piirrä jalan reunat alustalevyyn ja merkitse välilevypinot paikoittain.
-   Kumielementin vaihdossa kannake liu'utetaan noin 50 mm taaksepäin ja takaisin; merkeillä ja
-   samoilla välilevyillä linjaus palautuu nopeasti, ja se tarkistetaan mittaamalla.
+4. **Vasteet ja merkinnät.** Kun linjaus on valmis, kiinnitä alustalevyyn **sivuohjain** jalan
+   toiselle sivulle ja **pituussuuntainen vaste** jalan eteen (esim. hitsatut tai pultatut
+   lattapalat), ja merkitse välilevypinot paikoittain. Kumielementin vaihdossa kannake liu'utetaan
+   noin 50 mm taaksepäin ja takaisin vasteita vasten, jolloin linjaus palautuu ilman uutta
+   säätöä; tarkista se silti mittaamalla.
 5. **Tarkista linjaus** ensimmäisen lämpimän koeajon jälkeen ja vesillelaskun jälkeen (runko muuttaa
    muotoaan nostettuna, ks. [vessel](../../vessel/README.md)).
 
