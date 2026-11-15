@@ -304,8 +304,8 @@ ja kuluttaisi kytkintä. Siksi:
 
 ### Pumpun kohdistus
 
-Lisätty 2026-11-01 [omistajan ehdotus 2026-11-01, arvio]. Kohdistus tehdään kahdessa vaiheessa:
-ensin kannakkeen paikka tulostetulla sovitteella, sitten lopullinen linjaus oikealla pumpulla.
+Lisätty 2026-11-01 [omistajan ehdotus 2026-11-01, arvio], päivitetty 2026-11-15 konepetiin hitsattavalle alustalevylle. Kohdistus tehdään kahdessa vaiheessa:
+ensin alustalevyn paikka tulostetulla sovitteella, sitten lopullinen linjaus oikealla pumpulla.
 
 **HRC 150:n sallimat virheet:** säteissuuntainen siirtymä 0,4 mm, kulmavirhe 1°, aksiaalinen
 0,9 mm (Fennerin HRC-taulukko [Scribdissä](https://www.scribd.com/document/430712108/HRC-Coupling),
@@ -332,19 +332,34 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      viilaamalla tai hiomalla.
    - Pyöritä sovitetta PTO-akselin ympäri ja katso, heittääkö Ø127-olake. Heitto kertoo
      tulostusvirheestä.
-2. **Hitsaa ensin, kohdista vasta sitten.** Hitsaus vetää enemmän kuin 0,2 mm. Hitsaa runkoon
-   kiinnitysalustat (pukit), ja pulttaa kannake niihin. Kannakkeen jalkaan **pitkittäiset
-   reiät** sivusuuntaiseen säätöön ja korkeuden säätöön **välilevyt** (ruostumattomat
-   säätölevyt, esim. 0,1–1 mm).
-3. **Lopullinen linjaus oikealla pumpulla.** Pumppu paikallaan, kytkinnavat akseleilla ilman
-   elastista välikappaletta. Pumpun paino ja kannakkeen taipuma ovat silloin mukana, joten
-   taipuma kompensoituu välilevyillä.
-   - Säteissuuntainen siirtymä: viivain tai mittakello napojen ulkokehää vasten neljässä
-     kohdassa (ylä, ala, sivut).
-   - Kulmavirhe: napojen välin erotus neljässä kohdassa rakotulkilla.
-   - Kiristä pultit, mittaa uudelleen ja tarkista linjaus koeajon jälkeen.
-4. **Taipuma:** laskettu 0,2 mm koskee ripoja vailla olevaa 10 mm:n levyä. Rivoilla se jää
-   noin sadasosamillimetreihin [laskelma]. Kummassakin tapauksessa vaiheen 3 linjaus kattaa sen.
+2. **Alustalevy petiin: hitsaa ensin, poraa vasta sitten [päivitetty 2026-11-15].** Hitsaus vetää
+   enemmän kuin 0,2 mm, joten pulttireiät tehdään vasta hitsauksen jälkeen kannakkeen jalan
+   mukaan:
+   1. Kannake sovitteen varassa paikalleen, alustalevy jalan alla ja välissä noin 2 mm:n
+      välilevypino (säätövaraa kumpaankin suuntaan). Piirrä alustalevyn ääriviiva petiin.
+   2. Kannake pois ja alustalevy petiin hitsaamalla **ilman reikiä**: lyhyet hitsit vuorotellen
+      eri puolille, tasaisuus tarkistetaan viivaimella.
+   3. Kannake takaisin sovitteen varaan, ja alustalevyyn porataan reiät jalan Ø15-reikien kautta
+      **keskelle** (porausholkki Ø15/Ø10,2) ja kierteitetään M12. Hitsauksen veto ei silloin
+      vaikuta reikien paikkaan, ja jalan reikiin jää ±1,5 mm säätövaraa joka suuntaan.
+3. **Lopullinen linjaus, pumppu ja kytkin paikallaan.** Kannake liu'utetaan paikalleen
+   kumielementti valmiiksi PTO:n navassa (ks. [HRC 150:n asennus](#kannakkeen-paikka-kuorikytkin-ja-konepeti-2026-11-14)),
+   joten linjaus mitataan elementti paikallaan. Pumpun paino ja kannakkeen taipuma ovat mukana.
+   - **Mittaus:** säteissuuntainen siirtymä viivaimella ja rakotulkilla tai mittakellolla napojen
+     ulkokehältä neljästä kohdasta (ylä, ala, sivut); kulmavirhe napojen välin erotuksena neljästä
+     kohdasta (työntömitta tai rakotulkki); napojen väli noin 40,5 mm ±0,9.
+   - **Korkeus ja pystykulma:** välilevyt jalan alle; etu- ja takapulttien välilevyjen erotus
+     kääntää pumppua pystysuunnassa (pulttiväli pituussuunnassa noin 230 mm). Jalkalevyyn 2–4
+     M10-**nostoruuvia**, joilla kannake nostetaan välilevyjen vaihdon ajaksi (kannake ja pumppu
+     noin 56 kg).
+   - **Sivusuunta ja vaakakulma:** jalkaa siirretään Ø15-reikien välyksen rajoissa. Hienosäätöön
+     voi hitsata alustalevyn sivuille kaksi korvaketta, joissa on M10-**työntöruuvit**.
+   - Kiristä pultit ristiin noin 80 Nm, mittaa uudelleen.
+4. **Merkitse paikka.** Piirrä jalan reunat alustalevyyn ja merkitse välilevypinot paikoittain.
+   Kumielementin vaihdossa kannake liu'utetaan noin 50 mm taaksepäin ja takaisin; merkeillä ja
+   samoilla välilevyillä linjaus palautuu nopeasti, ja se tarkistetaan mittaamalla.
+5. **Tarkista linjaus** ensimmäisen lämpimän koeajon jälkeen ja vesillelaskun jälkeen (runko muuttaa
+   muotoaan nostettuna, ks. [vessel](../../vessel/README.md)).
 
 ## Miten LS-linjaa käytetään
 
