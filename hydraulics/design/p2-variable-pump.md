@@ -354,11 +354,15 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      siitä on siirtymä. Kulma: rako kahdesta kohdasta pumpun akselilla noin 40 mm:n välein
      (akselia näkyvissä 46 mm laippalevyn edessä); 0,5° ≈ 0,35 mm / 40 mm [laskelma]. Kiilaura
      käännetään pois mittauskohdasta ja kiila irrotetaan PTO-akselilta.
-   - **Suositeltu apuväline: sorvattu holkki pumpun akselille [2026-11-16]:** sisähalkaisija
-     Ø31,75 (H7), ulkohalkaisija **Ø48** kuten PTO-akseli, pituus noin 40 mm, alumiinia tai
-     terästä (3D-tuloste ei ole riittävän tarkka). Silloin ohut teräsviivain lepää molempien
-     akseleiden päällä alhaalta ja oikealta, ja rako mitataan rakotulkilla ilman 8,125 mm:n
-     vähennystä.
+   - **Apuväline: holkki pumpun akselille [2026-11-16]:** sisähalkaisija Ø31,75, ulkohalkaisija
+     noin **Ø48** kuten PTO-akseli, pituus noin 40 mm; viivain lepää silloin molempien akseleiden
+     päällä. **3D-tuloste riittää** [arvio, tarkkuus noin ±0,05 mm]: tulosta pystyyn, vähintään 4–5
+     kehää tai 100 % täyttö, sisäreikä noin 0,2 mm pieneksi ja sovitus akselille tiukaksi
+     liukusovitteeksi, ensimmäisen kerroksen levenemä hiotaan pois. Mittaa holkin todellinen
+     ulkohalkaisija ja käytä oikeana rakona (48 − ulkohalkaisija) / 2. **Kääntömittaus:** mittaa,
+     käännä holkkia akselilla 180°, mittaa uudelleen ja käytä keskiarvoa; holkin epäkeskeisyys
+     kumoutuu. Ilman holkkia: Ø8-poranterän varsi ja 0,125 mm:n rakotulkki mittapalana viivaimen
+     ja pumpun akselin välissä (8,125 mm).
    - **Tarkin vaihtoehto: mittakello PTO-akselilla.** Kaulus tai magneettijalka PTO-akseliin,
      varsi akseleiden välin yli ja kärki pumpun akselin pintaan; konetta käännetään
      vauhtipyörästä, ja lukemat otetaan neljässä asennossa (siirtymä = lukemien erotus / 2) ja
