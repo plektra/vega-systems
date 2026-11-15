@@ -217,28 +217,31 @@ konepetiin, poispäin kytkimestä [omistajan ehdotus 2026-11-14]. Omistajan hahm
 kaukalon vasen reuna on vain noin 80 mm PTO-akselista vasemmalle, joten **pedin vasen palkki on
 suoraan kannakkeen vasemman sivulevyn alla** (sivulevy noin 105–115 mm akselista).
 
-- **Kehto säilyy:** laippalevy, pohjalevy ja molemmat sivulevyt. Umpinainen kehto tukee myös pumpun
-  oikean puolen; pelkkä laippalevy ja yksi pitkittäinen levy jäisivät väännössä niin joustaviksi,
-  että ominaistaajuus olisi noin 30 Hz eli koneen kierrosalueella [laskelma, karkea].
-- **Oikealle puolelle ei tule pukkeja.** Kehdon oikea puoli on uloke kaukalon päällä.
+- **Keikkumisen kantaa kaksi vaakalevyä [laskelma, korjattu 2026-11-15]:** pumpun painopiste on noin
+  150 mm laipan takana, joten keikkuminen eteen ja taakse on voimapari laippalevyn ylä- ja
+  alareunassa. Se viedään vasemmalle tuelle levyillä, jotka kantavat sen omassa tasossaan:
+  **pohjalevy** alareunassa ja uusi **yläripa** (10 mm, noin 70 mm syvä) laippalevyn yläreunassa
+  vaihteiston puolella koko leveydeltä. Ominaistaajuus noin 200 Hz [arvio]; ilman yläripaa noin
+  60 Hz, eli koneen herätteiden alueella. Aiempi perustelu, että oikea sivulevy tekisi kehdosta
+  umpinaisen ja jäykän, oli väärä: sivulevy siirtää momentin vain pohjalevylle, joka vääntyy yhtä
+  helposti kuin laippalevy.
+- **Oikea sivulevy jätetään pois** [omistaja 2026-11-15]. Oikealle puolelle ei tule pukkeja eikä
+  sivulevyä; laippalevyn oikea reuna rajataan noin 95 mm:iin akselista (pulttikuvio ja aluslaatat ±76 mm).
 - **Vasemmalle pukki pedin päälle:** noin 125 mm korkea (kehdon pohjasta pedin pintaan, joka on
   noin 240 mm akselin alapuolella). Jalkalevy ulottuu noin 85–250 mm akselista vasemmalle, ja siinä on 4 × M12 8.8
   Ø15-rei'issä; pulttien väli pituussuunnassa vähintään noin 150 mm. Korkeus säädetään välilevyillä.
-- **Kuorikytkimen välys ja viisto [laskelma, 2026-11-15]:** ilman muutoksia kehdon oikeaan
-  alakulmaan jää Ø160-kytkimestä vain noin 12 mm. Pumpun ääriviivan (Eatonin mittakuva omistajan
+- **Kuorikytkimen välys [laskelma, 2026-11-15]:** pumpun ääriviivan (Eatonin mittakuva omistajan
   mallissa) mukaan pumpun oikea alanurkka on noin 90 mm akselista kytkimen puolelle ja noin 70 mm
-  akselin alapuolella, ja pumpun ja Ø160-kytkimen väliin jää noin 61 mm. Kehdon oikea alakulma
-  leikataan **45°:n viistoksi**, jonka 10 mm:n levy yhdistää pohjalevyn ja oikean sivulevyn
-  (sisäpinta pohjalevyllä 47 mm akselista oikealle, sivulevyllä 59 mm akselin alapuolella). Silloin pumpun
-  nurkkaan jää vähintään noin 10 mm ja **kannakkeesta kytkimeen noin 40 mm (Ø160) tai noin 20 mm
-  (Ø200)**. Omistajan arvion mukaan kytkin on alle Ø200 [omistaja 2026-11-15]; halkaisija
-  pultinkantoineen **⚠ mittaa**.
+  akselin alapuolella; pumpun ja Ø160-kytkimen väliin jää noin 61 mm. Pohjalevyn oikea reuna
+  rajataan noin 88 mm:iin akselista, jolloin kannakkeesta kytkimeen jää **noin 40 mm (Ø160) tai
+  noin 20 mm (Ø200)**. Omistajan arvion mukaan kytkin on alle Ø200 [omistaja 2026-11-15];
+  halkaisija pultinkantoineen **⚠ mittaa**.
+- **Ylärivan ja HRC 150:n väli:** kytkimen säde on 75 mm ja laippalevyn yläreuna noin 95 mm akselin
+  yläpuolella, joten yläripa jää noin 10 mm kytkimen yläpuolelle. Korota laippalevyä noin 15 mm
+  (väli noin 25 mm). Yläripaa voi käyttää kytkimen suojakotelon kiinnitykseen.
 - **LS-säädin on kytkimen puolella:** pumpun edestä (akselin päästä) katsottuna säädin on
-  vasemmalla [omistaja 2026-11-15], eli perästä katsottuna oikealla, kytkimen puolella. Eatonin mittakuva on
-  tähän nähden peilikuva. Säädinlohko on noin 70–175 mm akselin yläpuolella ja ulottuu noin
-  103 mm akselista sivulle; kehdon oikean sivulevyn yläpää jää vain noin 2–3 mm sen alapuolelle.
-  Tarkista pumpusta, ettei sivulevy osu lohkoon ja että LS-liitäntään ja säätöruuveihin pääsee
-  käsiksi; tarvittaessa sivulevyn yläosa leikataan matalammaksi **⚠ tarkista**.
+  vasemmalla [omistaja 2026-11-15], eli perästä katsottuna oikealla. Eatonin mittakuva on tähän
+  nähden peilikuva. Koska oikeaa sivulevyä ei tule, kannake ei ole säätimen tiellä.
 
 Kuormat pulteille [laskelma, oletukset: pumppu ja kannake 46 kg, kolminkertainen isku, reaktiomomentti 254 Nm, pumpun painopiste noin 165 mm pulttiryhmän keskeltä sivussa, pulttiväli sivusuunnassa noin 110 mm]: momentti noin 480 Nm → noin 2,2 kN vetoa pulttia kohti. M12 8.8:n esikiristysvoima on noin 38 kN, joten pultit riittävät. Pätevän henkilön pitää tarkistaa lopullinen kannake.
 
