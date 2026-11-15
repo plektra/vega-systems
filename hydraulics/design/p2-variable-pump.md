@@ -349,28 +349,35 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
 3. **Lopullinen linjaus pelkistä akseleista, pumppu paikallaan, ennen napoja [omistajan ehdotus
    2026-11-15].** Navat oletetaan koneistetuiksi suoriksi [omistaja 2026-11-15], joten
    akseleiden linjaus on sama kuin napojen. Pumpun paino ja kannakkeen taipuma ovat mukana.
-   - **Mittaus alhaalta ja oikealta:** viivain PTO-akselin (Ø48) pintaa vasten ja rako pumpun
-     akseliin (Ø31,75) työntömitalla tai rakotulkilla. Säteiden ero on **8,125 mm**; poikkeama
-     siitä on siirtymä. Kulma: rako kahdesta kohdasta pumpun akselilla noin 40 mm:n välein
-     (akselia näkyvissä 46 mm laippalevyn edessä); 0,5° ≈ 0,35 mm / 40 mm [laskelma]. Kiilaura
-     käännetään pois mittauskohdasta ja kiila irrotetaan PTO-akselilta.
-   - **Apuväline: holkki pumpun akselille [2026-11-16]:** sisähalkaisija Ø31,75, ulkohalkaisija
-     noin **Ø48** kuten PTO-akseli, pituus noin 40 mm; viivain lepää silloin molempien akseleiden
-     päällä. **3D-tuloste riittää** [arvio, tarkkuus noin ±0,05 mm]: tulosta pystyyn, vähintään 4–5
-     kehää tai 100 % täyttö, sisäreikä noin 0,2 mm pieneksi ja sovitus akselille tiukaksi
-     liukusovitteeksi, ensimmäisen kerroksen levenemä hiotaan pois. Mittaa holkin todellinen
-     ulkohalkaisija ja käytä oikeana rakona (48 − ulkohalkaisija) / 2. **Kääntömittaus:** mittaa,
-     käännä holkkia akselilla 180°, mittaa uudelleen ja käytä keskiarvoa; holkin epäkeskeisyys
-     kumoutuu. Ilman holkkia: Ø8-poranterän varsi ja 0,125 mm:n rakotulkki mittapalana viivaimen
-     ja pumpun akselin välissä (8,125 mm).
-   - Mittakello PTO-akselilla ei mahdu akseleiden väliin [omistaja 2026-11-16], joten sitä ei käytetä.
-   - **Mittaustulokset säädöiksi [laskelma]:** jalan etupultit ovat lähes mittauskohtien alla
-     (etupultit noin y = 121 mm, takapultit noin 351 mm, mittauskohdat noin y = 100–140 mm), joten
-     etupään säätö siirtää pumpun akselia ≈ 1:1 ja takapään säätö kääntää kulmaa. Takapään muutos
-     ≈ pulttien väli / mittauskohtien väli × raon erotus = 230 / 40 ≈ 5,8 × erotus. Korjaa ensin
-     kulma takapäästä, sitten siirtymä etupäästä. Esimerkki: takimmaisen mittauskohdan rako
-     0,10 mm suurempi → takavälilevyjä ohennetaan noin 0,6 mm; jos akseli jää sitten 0,15 mm
-     liian alas, etuvälilevyjä paksunnetaan 0,15 mm.
+   - **Ensisijainen menetelmä: kehämittaus tulostetulla varrella [omistajan ehdotus 2026-11-16]:**
+     halkaistu, ruuvilla (M5) kiristettävä tulostettu kaulus pumpun akselille ja siitä jäykkä
+     varsi (vähintään noin 10 × 15 mm, rivoitettu) akseleiden välin yli PTO-akselin päälle. Varressa
+     kaksi mittauskärkeä noin 35–40 mm:n päässä toisistaan, noin 2–3 mm PTO-akselin pinnasta.
+     Pumpun akselia pyöritetään käsin, ja rako kärjen ja PTO-akselin välissä mitataan rakotulkilla
+     ylhäältä (Y), alhaalta (A), vasemmalta (V) ja oikealta (O); yläpuolen rako mitataan sivulta.
+     Kummankin kärjen kohdalla PTO-akselin pystysiirtymä pumpun akseliin nähden = (Y − A) / 2 ja
+     vaakasiirtymä = (V − O) / 2; kulma = kärkien siirtymien erotus / kärkien väli. Kauluksen
+     ulkomuoto ja epäkeskeisyys eivät vaikuta, koska kärki kiertää pumpun akselin keskiön ympäri;
+     vain kauluksen kiinnitys akseliin on tärkeä. Varren taipuma painovoimasta vääristää
+     pystylukemaa taipuman verran, joten varsi tehdään lyhyeksi ja jäykäksi ja rakotulkki
+     työnnetään kevyesti. Kiila irrotetaan PTO-akselilta. Varsi kiertää noin 30–40 mm:n säteellä,
+     ylärivan alla (ripa ≥ 85 mm). Mittakello ei mahdu akseleiden väliin [omistaja 2026-11-16].
+   - **Vaihtoehto: viivain ja holkki pumpun akselille [2026-11-16]:** tulostettu holkki
+     (sisähalkaisija Ø31,75, ulkohalkaisija noin Ø48 kuten PTO-akseli, pituus noin 40 mm), jolloin
+     ohut teräsviivain lepää molempien akseleiden päällä alhaalta ja oikealta ja rako mitataan
+     rakotulkilla. Tulosta pystyyn, vähintään 4–5 kehää tai 100 % täyttö, sisäreikä noin 0,2 mm
+     pieneksi ja sovitus tiukaksi liukusovitteeksi. Mittaa holkin todellinen ulkohalkaisija ja
+     käytä oikeana rakona (48 − ulkohalkaisija) / 2; mittaa, käännä holkkia 180° ja käytä
+     keskiarvoa (holkin epäkeskeisyys kumoutuu). Ilman holkkia: Ø8-poranterän varsi ja 0,125 mm:n
+     rakotulkki mittapalana viivaimen ja pumpun akselin välissä (säteiden ero 8,125 mm).
+   - **Lukemat säädöiksi [laskelma]:** laske lukemista PTO-akselin siirtymä pumpun akseliin
+     nähden jalan etupulttien kohdalla (noin y = 121 mm) ja takapulttien kohdalla (noin y = 351 mm):
+     siirtymä mittauskohdassa + kulma × matka mittauskohdasta pulttilinjalle. Siirrä kannaketta
+     kummassakin pulttilinjassa sen verran PTO-akselin suuntaan (pystysuunnassa välilevyillä,
+     sivusuunnassa reikien välyksessä). Etupultit ovat lähellä kytkintä, joten etupää
+     korjaa pääosin siirtymän ja takapää kulman; 0,1° kulmavirhe vastaa takapulttien kohdalla noin
+     0,4 mm:n säätöä (pulttien väli 230 mm). Jos pulttien paikka muuttuu, käytä todellisia
+     etäisyyksiä.
    - **Korkeus ja pystykulma** välilevyillä; jalkalevyyn 2–4 M10-**nostoruuvia** välilevyjen
      vaihtoon (kannake ja pumppu noin 56 kg). **Sivusuunta ja vaakakulma** Ø15-reikien
      välyksessä; hienosäätöön M10-**työntöruuvit** alustalevyn sivuille hitsatuissa korvakkeissa.
