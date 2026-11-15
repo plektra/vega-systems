@@ -225,6 +225,13 @@ suoraan kannakkeen vasemman sivulevyn alla** (sivulevy noin 105–115 mm akselis
   60 Hz, eli koneen herätteiden alueella. Aiempi perustelu, että oikea sivulevy tekisi kehdosta
   umpinaisen ja jäykän, oli väärä: sivulevy siirtää momentin vain pohjalevylle, joka vääntyy yhtä
   helposti kuin laippalevy.
+- **Vasen sivulevy jatkuu vaihteiston puolelle** ylärivan etureunaan asti (noin 70 mm
+  laippalevyn etupinnasta) [omistajan ehdotus 2026-11-15]. Yläripa hitsataan suoraan sivulevyyn,
+  jolloin voima kulkee sivulevyn tasossa pukille eikä laippalevyn heikossa suunnassa. Pukki ja
+  jalkalevy voivat jatkua samalla eteenpäin (pidempi pulttiväli). Ylärivasta, sivulevyn jatkeesta ja
+  laippalevystä tulee kehys kytkimen suojakotelolle. Tarkista, ettei vaihteiston takakannen
+  pultteja, PTO:n laakeripesää tai putkia ole jatkeen kohdalla, ja että Taper Lock -holkkien
+  ruuveihin ylettyy **⚠ tarkista**.
 - **Oikea sivulevy jätetään pois** [omistaja 2026-11-15]. Oikealle puolelle ei tule pukkeja eikä
   sivulevyä; laippalevyn oikea reuna rajataan noin 95 mm:iin akselista (pulttikuvio ja aluslaatat ±76 mm).
 - **Vasemmalle pukki pedin päälle:** noin 125 mm korkea (kehdon pohjasta pedin pintaan, joka on
