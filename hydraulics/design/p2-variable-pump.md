@@ -349,9 +349,7 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      alhaalta ja oikealta sivulta. Siirtymä: viivain napojen ulkokehää vasten ja rakotulkki
      (navat samaa kokoa, joten alapuolen lukema = pystysiirtymä, oikean sivun = vaakasiirtymä).
      Kulmavirhe: viivain tiiviisti PTO:n navan kehää vasten ja rako pumpun navan kehän etu- ja
-     takareunaan; raon erotus / 33,5 mm = kulmavirhe, 0,5° ≈ 0,29 mm [laskelma]. Pyöritä
-     konetta vauhtipyörästä 180° (PTO pyörii koneen mukana) ja mittaa samoista kohdista
-     uudelleen; keskiarvo poistaa napojen heiton. Napojen väli noin 40,5 mm ±0,9 alhaalta ja
+     takareunaan; raon erotus / 33,5 mm = kulmavirhe, 0,5° ≈ 0,29 mm [laskelma]. Napojen väli noin 40,5 mm ±0,9 alhaalta ja
      oikealta. 50 mm:n yläripa jättää napojen välisen raon lähes kokonaan näkyviin ylhäältä.
    - **Korkeus ja pystykulma:** välilevyt jalan alle; etu- ja takapulttien välilevyjen erotus
      kääntää pumppua pystysuunnassa (pulttiväli pituussuunnassa noin 230 mm). Jalkalevyyn 2–4
