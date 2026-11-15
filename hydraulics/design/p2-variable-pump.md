@@ -237,6 +237,16 @@ suoraan kannakkeen vasemman sivulevyn alla** (sivulevy noin 105–115 mm akselis
 - **Vasemmalle pukki pedin päälle:** noin 125 mm korkea (kehdon pohjasta pedin pintaan, joka on
   noin 240 mm akselin alapuolella). Jalkalevy ulottuu noin 85–250 mm akselista vasemmalle, ja siinä on 4 × M12 8.8
   Ø15-rei'issä; pulttien väli pituussuunnassa vähintään noin 150 mm. Korkeus säädetään välilevyillä.
+- **HRC 150:n asennus [laskelma, 2026-11-15]:** pumpun napa (noin Ø150) ei mahdu laippalevyn
+  Ø127-reiän läpi, ja sen ja laippalevyn väliin jää vain noin 12,5 mm, joten pumpun puolelle tulee
+  **F-napa** (holkin ruuvit kytkimen puolelta). Löysättyjä napoja voi liu'uttaa erilleen vain noin
+  34 mm, kun kumielementin asennus vaatii noin 40 mm **⚠ mittaa kytkimestä**. Asennusjärjestys:
+  (1) PTO:n napa akselille ja kiristys; (2) pumppu kannakkeeseen pöydällä, pumpun F-napa akselin pään
+  tasalle ja kiristys; (3) kumielementti PTO:n napaan; (4) kannake pumppuineen pedille noin 50 mm
+  taemmas ja liu'utus eteen, pultit ja linjaus. Kumielementin vaihto käänteisesti: jalan pultit irti
+  ja kannake noin 50 mm taaksepäin. Siksi **alustalevy noin 50 mm jalkaa pidemmäksi taaksepäin** ja
+  letkuihin noin 50 mm joustoa. Yläripa ja vasemman sivulevyn jatke ohittavat PTO:n navan
+  liu'utettaessa (ripa vähintään 85 mm akselista, sivulevy 105 mm; navan säde 75 mm).
 - **Kuorikytkimen välys [laskelma, 2026-11-15]:** pumpun ääriviivan (Eatonin mittakuva omistajan
   mallissa) mukaan pumpun oikea alanurkka on noin 90 mm akselista kytkimen puolelle ja noin 70 mm
   akselin alapuolella; pumpun ja Ø160-kytkimen väliin jää noin 61 mm. Pohjalevyn oikea reuna
