@@ -429,7 +429,7 @@ Venttiilit ovat Danfoss PVG 32 ([aux-circuit-ls-clean-sheet](aux-circuit-ls-clea
 
 | # | Osa | Huom. |
 |---|---|---|
-| 1 | **HRC 150 -joustokytkin** (päätös 2026-10-27): kaksi napaa Taper Lock -holkeille (F tai H asennuksen mukaan) ja elastinen välikappale | ks. alla |
+| 1 | **HRC 150 -joustokytkin** (päätös 2026-10-27): kaksi F-napaa Taper Lock -holkeille (suositus 2026-11-16, ks. [hankintalista 1.2](../procurement.md)) ja elastinen välikappale | ks. alla |
 | 2 | Taper Lock 2012 -kartioholkit: **48 mm** (PTO) ja **1 1/4"** (pumppu, 31,75 mm), kiilaurat | vakio-osia, ei koneistusta; **⚠ tarkista** koodit ja 48 mm:n holkin kiilauran syvyys |
 | 3 | Kannake SAE C -nelireikälaipalle | ei vielä tehty; tapa: 10 mm:n teräslevy, laserleikkaus ja hitsaus. Pumppu noin 36 kg; laippa Ø127 mm:n keskitys ja 114,5 mm:n reikäneliö, ks. [tekniset tiedot](#tekniset-tiedot) |
 | 4 | Imuliitin: 2" SAE code 61 -laippa (UNC-pultit), O-rengas ja letkuliitin 50 mm:n letkuun | 2" = 50,8 mm, joten supistusta ei tarvita |
