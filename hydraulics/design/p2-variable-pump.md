@@ -361,7 +361,16 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      vain kauluksen kiinnitys akseliin on tärkeä. Varren taipuma painovoimasta vääristää
      pystylukemaa taipuman verran, joten varsi tehdään lyhyeksi ja jäykäksi ja rakotulkki
      työnnetään kevyesti. Kiila irrotetaan PTO-akselilta. Varsi kiertää noin 30–40 mm:n säteellä,
-     ylärivan alla (ripa ≥ 85 mm). Mittakello ei mahdu akseleiden väliin [omistaja 2026-11-16].
+     ylärivan alla (ripa ≥ 85 mm).
+   - **Vaihtoehto: mittakello, kun yläripa hitsataan vasta linjauksen jälkeen [omistajan ehdotus
+     2026-11-16]:** ylärivan kanssa mittakello ei mahdu kiertämään. Kannake hitsataan ensin ilman
+     yläripaa; ripattoman kannakkeen taipuma pumpun painosta on kytkimen kohdalla noin 0,02 mm ja
+     0,02° [laskelma, karkea], joten linjauksen voi tehdä ilman ripaa. Yläripa hitsataan
+     **pöydällä vaiheessa 4**, kun kannake on irti navan asennusta varten: kannake jäykkää alustaa
+     vasten, lyhyet hitsit vuorotellen rivan kummaltakin puolelta. Hitsi voi kallistaa
+     laippalevyä kymmenyksiä millimetrejä **⚠ arvio**, joten **linjaus tarkistetaan napojen kehältä
+     kannakkeen palattua** ja korjataan välilevyillä (korkeus ja pystykulma) tai ohuella
+     välilevyllä sivuohjaimen ja jalan välissä (sivusuunta ja vaakakulma).
    - **Vaihtoehto: viivain ja holkki pumpun akselille [2026-11-16]:** tulostettu holkki
      (sisähalkaisija Ø31,75, ulkohalkaisija noin Ø48 kuten PTO-akseli, pituus noin 40 mm), jolloin
      ohut teräsviivain lepää molempien akseleiden päällä alhaalta ja oikealta ja rako mitataan
