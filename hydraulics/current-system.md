@@ -86,7 +86,7 @@
    [p2-variable-pump](design/p2-variable-pump.md#sopivuus-vegaan-laskelma). (Aiemmat suunnitelmat:
    mekaaninen PTO-kytkin ja F1-61 + BPV, ks. [arkisto](design/archive/p2-pump-options.md).)
 7. **Voimansiirron vaatimukset:**
-   - **Kytkin:** HRC 150, Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu); nimellismomentti
+   - **Kytkin:** HRC 150, **F-navat molemmille puolille** (päätös 2026-11-16), Taper Lock 2012 -holkit 48 mm (PTO) ja 1 1/4" (pumppu); nimellismomentti
      jälleenmyyjien mukaan noin 600 Nm **⚠ vahvista**; mitoittava momentti käyttökertoimineen noin
      430 Nm 250 barissa [laskelma].
    - **LS-kytkentä ja ohjaus:** pumpun LS-portti PVG 32:n LS-porttiin; ei erillistä purkuventtiiliä,
@@ -97,7 +97,7 @@
    - **Linjaus:** vaihteisto on kiinnitetty jäykästi runkoon [blogi 2021-02-08], kuten myös
      pumppukannake. Linjaus kytkimen ja pumpun asennuspiirustuksen toleransseihin: HRC 150 sallii noin 0,4 mm
      siirtymää ja 1° kulmavirhettä **⚠ tarkista valmistajan luettelosta**, tavoite ≤ 0,2 mm, ks.
-     [pumpun kohdistus](design/p2-variable-pump.md#pumpun-kohdistus). Tarkista linjaus uudelleen koeajon jälkeen.
+     [pumpun kohdistus](design/p2-variable-pump.md#pumpun-kohdistus). Linjaus mitataan pelkistä akseleista mittakellolla ja tulostetulla kehämittaustyökalulla, paikka lukitaan alustalevyn vasteilla, ja kannakkeen yläripa hitsataan vasta linjauksen jälkeen (päätös 2026-11-16). Tarkista linjaus uudelleen koeajon jälkeen.
    - **Tila:** kytkin (halkaisija 150 mm) + pumppu (noin 36 kg). Tarkista tila suhteessa runkoon,
      vaihteistoon ja potkuriakselin laakeriin.
    - **Suojakotelo** pyörivälle kytkimelle on pakollinen.

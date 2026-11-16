@@ -349,7 +349,10 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
 3. **Lopullinen linjaus pelkistä akseleista, pumppu paikallaan, ennen napoja [omistajan ehdotus
    2026-11-15].** Navat oletetaan koneistetuiksi suoriksi [omistaja 2026-11-15], joten
    akseleiden linjaus on sama kuin napojen. Pumpun paino ja kannakkeen taipuma ovat mukana.
-   - **Ensisijainen menetelmä: kehämittaus tulostetulla varrella [omistajan ehdotus 2026-11-16]:**
+   - **Päätös 2026-11-16: mitataan kahdella menetelmällä,** omalla mittakellolla ja tulostetulla
+     kehämittaustyökalulla; tulosten pitää täsmätä. Mittakellon vuoksi **yläripa hitsataan vasta
+     linjauksen jälkeen** (ks. mittakello alla).
+   - **Kehämittaus tulostetulla varrella [omistajan ehdotus 2026-11-16]:**
      halkaistu, ruuvilla (M5) kiristettävä tulostettu kaulus pumpun akselille ja siitä jäykkä
      varsi (vähintään noin 10 × 15 mm, rivoitettu) akseleiden välin yli PTO-akselin päälle. Varressa
      kaksi mittauskärkeä noin 35–40 mm:n päässä toisistaan, noin 2–3 mm PTO-akselin pinnasta.
@@ -362,8 +365,7 @@ toissijaisia lähteitä **⚠ tarkista valmistajan luettelosta**). Tavoitteeksi 
      pystylukemaa taipuman verran, joten varsi tehdään lyhyeksi ja jäykäksi ja rakotulkki
      työnnetään kevyesti. Kiila irrotetaan PTO-akselilta. Varsi kiertää noin 30–40 mm:n säteellä,
      ylärivan alla (ripa ≥ 85 mm).
-   - **Vaihtoehto: mittakello, kun yläripa hitsataan vasta linjauksen jälkeen [omistajan ehdotus
-     2026-11-16]:** ylärivan kanssa mittakello ei mahdu kiertämään. Kannake hitsataan ensin ilman
+   - **Mittakello, yläripa hitsataan vasta linjauksen jälkeen [päätös 2026-11-16]:** ylärivan kanssa mittakello ei mahdu kiertämään. Kannake hitsataan ensin ilman
      yläripaa; ripattoman kannakkeen taipuma pumpun painosta on kytkimen kohdalla noin 0,02 mm ja
      0,02° [laskelma, karkea], joten linjauksen voi tehdä ilman ripaa. Yläripa hitsataan
      **pöydällä vaiheessa 4**, kun kannake on irti navan asennusta varten: kannake jäykkää alustaa
@@ -438,7 +440,7 @@ Venttiilit ovat Danfoss PVG 32 ([aux-circuit-ls-clean-sheet](aux-circuit-ls-clea
 
 | # | Osa | Huom. |
 |---|---|---|
-| 1 | **HRC 150 -joustokytkin** (päätös 2026-10-27): kaksi F-napaa Taper Lock -holkeille (suositus 2026-11-16, ks. [hankintalista 1.2](../procurement.md)) ja elastinen välikappale | ks. alla |
+| 1 | **HRC 150 -joustokytkin** (päätös 2026-10-27): kaksi F-napaa Taper Lock -holkeille (päätös 2026-11-16, ks. [hankintalista 1.2](../procurement.md)) ja elastinen välikappale | ks. alla |
 | 2 | Taper Lock 2012 -kartioholkit: **48 mm** (PTO) ja **1 1/4"** (pumppu, 31,75 mm), kiilaurat | vakio-osia, ei koneistusta; **⚠ tarkista** koodit ja 48 mm:n holkin kiilauran syvyys |
 | 3 | Kannake SAE C -nelireikälaipalle | ei vielä tehty; tapa: 10 mm:n teräslevy, laserleikkaus ja hitsaus. Pumppu noin 36 kg; laippa Ø127 mm:n keskitys ja 114,5 mm:n reikäneliö, ks. [tekniset tiedot](#tekniset-tiedot) |
 | 4 | Imuliitin: 2" SAE code 61 -laippa (UNC-pultit), O-rengas ja letkuliitin 50 mm:n letkuun | 2" = 50,8 mm, joten supistusta ei tarvita |
@@ -738,7 +740,9 @@ nykyisen rinnalle.
 - [ ] Pumpusta: keskitysolakkeen halkaisija työntömitalla. Koodin mukaan pitäisi olla **127,0 mm** (SAE C); 125,0 mm tarkoittaisi metristä M-laippaa. Samalla reikäneliö: 114,5 mm (SAE C) vai 113,1 mm (ISO)
 - [ ] Pumpun kilvestä sarjanumero ja akselin mitat (halkaisija 1 1/4", kiilaura) kytkimen holkkien tilausta varten
 - [x] Akselikytkin PVH57:lle: HRC 150 + Taper Lock 2012 -holkit (päätös 2026-10-27)
-- [ ] HRC 150: valmistajan luettelosta nimellismomentti, sallitut linjausvirheet ja pituus kannakkeen suunnitteluun; F- vai H-navat asennustilan mukaan
+- [ ] HRC 150: valmistajan luettelosta nimellismomentti, sallitut linjausvirheet ja navan kokonaispituus kynsineen
+- [x] F- vai H-navat: F molemmille puolille (päätös 2026-11-16)
+- [ ] Kehämittaustyökalun suunnittelu ja tulostus (kaulus pumpun akselille Ø31,75, varsi ja kaksi mittauskärkeä noin 2–3 mm PTO-akselin pinnasta); mittakellon kiinnitys PTO-akseliin ja sen mahtuminen kiertämään ilman yläripaa
 - [ ] Taper Lock 2012 -holkit 48 mm ja 1 1/4": koodit, hinta ja kiilauran syvyys 48 mm:n holkissa (PTO-akselin kiila)
 - [x] Paluusuodattimen suodatusaste vs. 16/14/12 (aiemmin 17/15/13): nykyinen OMTF112C10NA2 on 10 µm, arviolta selluloosa nominaalinen, **ei riitä** sellaisenaan [omistaja 2026-10-26]
 - [x] ~~Lasikuituelementti: virtauskesto, kun P1:n paluu kulkee samasta suodattimesta~~ OMTF112F10 (55 l/min) liian pieni; ehdokas OMTF171F10NA1 (157 l/min), ks. [Paluusuodattimen vaihto](#paluusuodattimen-vaihto-omtf171f10na1)
